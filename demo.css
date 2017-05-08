@@ -1,0 +1,71 @@
+:root {
+  /* color palette from http://www.colourlovers.com/palette/580974/Adrift_in_Dreams */
+  --primrose: #CFF09E;
+  --moss-green: #A8DBA8;
+  --silver-tree: #79BD9A;
+  --ming: #3B8686;
+  --deep-sea-green: #0B486B;
+}
+
+body {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.page-test {
+  min-height: 400px;
+}
+
+ul {
+  margin: 0;
+  padding: 20px;
+}
+
+li {
+  font-size: 12px;
+  margin-bottom: 5px;
+  list-style: none;
+  text-align: left;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5 {
+  text-align: center;
+  cursor: default;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+
+.box1 {
+  color: var(--deep-sea-green);
+  background-color: var(--primrose);
+}
+
+.box2 {
+  color: var(--deep-sea-green);
+  background-color: var(--moss-green);
+}
+
+.box3 {
+  color: var(--deep-sea-green);
+  background-color: var(--silver-tree);
+}
+
+.box4 {
+  color: var(--primrose);
+  background-color: var(--ming);
+}
+
+.box5 {
+  color: var(--primrose);
+  background-color: var(--deep-sea-green);
+}

@@ -1,0 +1,123 @@
+:root {
+  --gutter: 20px;
+  --min-row-height: var(--gutter);
+  --vertical-gutter: var(--gutter);
+  --page-margin: 50px;
+  --max-width: 1280px;
+  --columns: 12;
+
+  --small-max-column-width: calc(100vw - var(--page-margin) * 2 - var(--gutter) * (var(--columns) - 1)) / var(--columns);
+  --max-column-width: calc((var(--max-width) - var(--page-margin) * 2 - var(--gutter) * (var(--columns) - 1)) / var(--columns)); 
+}
+
+.gl-grid-root {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.gl-grid-content {
+  box-sizing: border-box;
+  margin-left: var(--page-margin);
+  margin-right: calc(var(--page-margin) - var(--gutter));
+  max-width: var(--max-width);
+}
+
+.gl-grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.gl-grid.gl-grid--vertical {
+  flex-flow: column;
+  align-content: stretch;
+}
+
+/* add `gl-grid__item--grow` to stretch */
+.gl-grid__item--grow {
+  flex-grow: 1;
+  align-self: stretch;
+}
+
+@for $i from 1 to 12 {
+  /* grid item sizing */
+  .gl-grid > .gl-grid__item--$i {
+    margin-right: var(--gutter);
+  }
+  .gl-grid > .gl-grid__item--$i,
+  .gl-grid > .gl-grid__item--$(i)fr {
+    box-sizing: border-box;
+    margin-bottom: var(--vertical-gutter);
+    width: calc(var(--small-max-column-width) * $i + (var(--gutter) * ($i - 1)));
+  }
+
+  .gl-grid:not(.gl-grid--vertical) > .gl-grid__item--$i.gl-grid__item--no-margin {
+    margin-right: 0;
+  }
+
+  .gl-grid.gl-grid--vertical > .gl-grid__item--$i.gl-grid__item--no-margin {
+    margin-bottom: 0;
+  }
+
+  /* grid item offset */
+  .gl-grid > .gl-grid__item--offset-$i {
+    margin-left: calc(var(--small-max-column-width) * $i + (var(--gutter) * $i));
+  }
+
+  /* nested grid item */
+  .gl-grid.gl-grid__item--$i {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: calc(var(--small-max-column-width) * $i + (var(--gutter) * $i));
+  }
+  /**
+   *
+  * The following allows an alternative (fraction-based) layout. For instance, if we have 4 items
+  * all evenly distributed we would add the `gl-grid__item--1fr` to each child.
+  *
+  * Different proportions can be specified by using different child `fr` sizes
+  *
+  * The number of fractions allowed is unrelated to the number of columns this layout supports but
+  * there is no reason to change it either
+  */
+  .gl-grid__item--$(i)fr {
+    flex: $i;
+  }
+
+  /* limit growth at max size 1200px = 1280px(content-width) - 50px(margin-left) - 30px(margin-right) */
+  @media (min-width: 1200px) {
+    .gl-grid > .gl-grid__item--$i {
+      width: calc(var(--max-column-width) * $i + (var(--gutter) * ($i - 1)));
+    }
+    .gl-grid > .gl-grid__item--offset-$i {
+      margin-left: calc(var(--max-column-width) * $i + (var(--gutter) * $i));
+    }
+    .gl-grid.gl-grid__item--$i {
+      width: calc(var(--max-column-width) * $i + (var(--gutter) * $i));
+    }
+  }
+
+}
+
+/* vertical align */
+.gl-grid--middle {
+  align-items: center;
+}
+
+.gl-grid--bottom {
+  align-items: flex-end;
+}
+
+.gl-grid.gl-grid--center {
+  justify-content: center;
+}
+
+.gl-grid.gl-grid--right {
+  justify-content: flex-end;
+}
