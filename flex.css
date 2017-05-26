@@ -4,10 +4,10 @@
   --vertical-gutter: var(--gutter);
   --page-margin: 50px;
   --max-width: 1280px;
+  --min-width: 400px;
   --columns: 12;
-
   --small-max-column-width: calc(100vw - var(--page-margin) * 2 - var(--gutter) * (var(--columns) - 1)) / var(--columns);
-  --max-column-width: calc((var(--max-width) - var(--page-margin) * 2 - var(--gutter) * (var(--columns) - 1)) / var(--columns)); 
+  --max-column-width: calc((var(--max-width) - var(--page-margin) * 2 - var(--gutter) * (var(--columns) - 1)) / var(--columns));
 }
 
 .gl-grid-root {
@@ -21,6 +21,7 @@
   margin-left: var(--page-margin);
   margin-right: calc(var(--page-margin) - var(--gutter));
   max-width: var(--max-width);
+  min-width: var(--min-width);
 }
 
 .gl-grid {
@@ -31,24 +32,42 @@
   align-items: flex-start;
 }
 
+.gl-grid--margin {
+  margin-bottom: var(--gutter);
+}
+
 .gl-grid.gl-grid--vertical {
   flex-flow: column;
   align-content: stretch;
 }
 
-/* add `gl-grid__item--grow` to stretch */
-.gl-grid__item--grow {
+/* add `gl-grid__item--stretch` to stretch */
+
+.gl-grid__item--stretch {
   flex-grow: 1;
   align-self: stretch;
 }
 
+.gl-grid__item--top {
+  align-self: flex-start;
+}
+
+.gl-grid__item--middle {
+  align-self: center;
+}
+
+.gl-grid__item--bottom {
+  align-self: flex-end;
+}
+
 @for $i from 1 to 12 {
   /* grid item sizing */
+
   .gl-grid > .gl-grid__item--$i {
     margin-right: var(--gutter);
   }
-  .gl-grid > .gl-grid__item--$i,
-  .gl-grid > .gl-grid__item--$(i)fr {
+
+  .gl-grid > .gl-grid__item--$i, .gl-grid > .gl-grid__item--$(i)fr {
     box-sizing: border-box;
     margin-bottom: var(--vertical-gutter);
     width: calc(var(--small-max-column-width) * $i + (var(--gutter) * ($i - 1)));
@@ -60,14 +79,12 @@
 
   .gl-grid.gl-grid--vertical > .gl-grid__item--$i.gl-grid__item--no-margin {
     margin-bottom: 0;
-  }
+  }/* grid item offset */
 
-  /* grid item offset */
   .gl-grid > .gl-grid__item--offset-$i {
     margin-left: calc(var(--small-max-column-width) * $i + (var(--gutter) * $i));
-  }
+  }/* nested grid item */
 
-  /* nested grid item */
   .gl-grid.gl-grid__item--$i {
     display: flex;
     flex-flow: row;
@@ -75,9 +92,7 @@
     margin-right: 0;
     margin-bottom: 0;
     width: calc(var(--small-max-column-width) * $i + (var(--gutter) * $i));
-  }
-  /**
-   *
+  }/**
   * The following allows an alternative (fraction-based) layout. For instance, if we have 4 items
   * all evenly distributed we would add the `gl-grid__item--1fr` to each child.
   *
@@ -86,26 +101,32 @@
   * The number of fractions allowed is unrelated to the number of columns this layout supports but
   * there is no reason to change it either
   */
+
   .gl-grid__item--$(i)fr {
     flex: $i;
-  }
+  }/* limit growth at max size 1280px */
 
-  /* limit growth at max size 1200px = 1280px(content-width) - 50px(margin-left) - 30px(margin-right) */
-  @media (min-width: 1200px) {
+  @media (min-width: 1280px) {
     .gl-grid > .gl-grid__item--$i {
       width: calc(var(--max-column-width) * $i + (var(--gutter) * ($i - 1)));
     }
+
     .gl-grid > .gl-grid__item--offset-$i {
       margin-left: calc(var(--max-column-width) * $i + (var(--gutter) * $i));
     }
+
     .gl-grid.gl-grid__item--$i {
       width: calc(var(--max-column-width) * $i + (var(--gutter) * $i));
     }
   }
-
 }
 
 /* vertical align */
+
+.gl-grid--top {
+  align-items: flex-start;
+}
+
 .gl-grid--middle {
   align-items: center;
 }

@@ -1,8 +1,7 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="dist/flex.build.css">
-  <link rel="stylesheet" type="text/css" href="demo.css">
-  <script src="/reload/reload.js"></script> 
+  <link rel="stylesheet" type="text/css" href="storybook/storybook.css">
 </head>
 
 <body class="gl-grid-root">
@@ -10,9 +9,9 @@
       <h1>Auto Flow</h1>
       <div class="gl-grid">
         <div class="gl-grid__item--1 box1">A</div>
-        <div class="gl-grid__item--2 box2" style="height: 100px">B</div>
+        <div class="gl-grid__item--2 box2">B</div>
         <div class="gl-grid__item--4 box3">C</div>
-        <div class="gl-grid__item--3 box4 gl-grid__item--grow">D</div>
+        <div class="gl-grid__item--3 box4">D</div>
         <div class="gl-grid__item--2 box5">E</div>
 
         <div class="gl-grid__item--2 box1">A</div>
@@ -195,15 +194,15 @@
       <h1>Header / Footer</h1>
       <div class="gl-grid gl-grid--vertical page-test">
         <div class="gl-grid__item--12 box3" style="height: 80px">Header</div>
-        <div class="gl-grid__item--12 box1 gl-grid__item--grow">Content</div>
+        <div class="gl-grid__item--12 box1 gl-grid__item--stretch">Content</div>
         <div class="gl-grid__item--12 box3 gl-grid__item--no-margin" style="height: 60px">Footer</div>
       </div>
 
       <h1>Layout Example</h1>
       <div class="gl-grid gl-grid--vertical page-test">
         <div class="gl-grid__item--12 box3">Header</div>
-        <div class="gl-grid__item--12 gl-grid__item--grow gl-grid">
-          <div class="gl-grid__item--2 gl-grid__item--grow box1">
+        <div class="gl-grid__item--12 gl-grid__item--stretch gl-grid">
+          <div class="gl-grid__item--2 gl-grid__item--stretch box1">
             <ul>
               <li>Item 1</li>
               <li>Item 2</li>
@@ -213,7 +212,7 @@
               <li>Item 6</li>
             </ul>
           </div>
-          <div class="gl-grid__item--9 gl-grid__item--offset-1 gl-grid__item--grow box2">
+          <div class="gl-grid__item--9 gl-grid__item--offset-1 gl-grid__item--stretch box2">
             <div class="gl-grid gl-grid__item--9 ">
               <div class="gl-grid__item--4 box3">C</div>
               <div class="gl-grid gl-grid__item--5">

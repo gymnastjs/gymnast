@@ -1,4 +1,5 @@
-# Flexbox 12-Column Layout System
+[![CircleCI](https://circleci.com/gh/obartra/flexgrid/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/flexgrid/tree/master)
+# ☁️ Flexbox 12-Column Layout System
 
 ## Rationale
 
@@ -85,7 +86,7 @@ The grid shrinks when the browser window is smaller than 1280px and locks at tha
 
 `.gl-grid-root` defines the full-width container in which `.gl-grid-content` will fit. This results in a page layout limited to 1280px centered.
 
-If you want an element to stretch to the size of its row / column you need to add the `.gl-grid__item--grow` class:
+If you want an element to stretch to the size of its row / column you need to add the `.gl-grid__item--stretch` class:
 
 ```html
 <body class="gl-grid gl-grid--vertical">
@@ -94,7 +95,7 @@ If you want an element to stretch to the size of its row / column you need to ad
       <div class="gl-grid gl-grid__item--12 gl-grid--center">Centered Title</div>
     </div>
   </header>
-  <main class="gl-grid-root gl-grid__item--grow">
+  <main class="gl-grid-root gl-grid__item--stretch">
     <div class="gl-grid-content">
       <div class="gl-grid gl-grid__item--12">Content goes here</div>
     </div>

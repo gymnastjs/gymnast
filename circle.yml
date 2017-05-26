@@ -1,0 +1,21 @@
+machine:
+  node:
+    version: 7.10.0
+general:
+  artifacts:
+    - "dist"
+    - "coverage"
+dependencies:
+  cache_directories:
+    - node_modules
+  post:
+    - yarn build
+test:
+  override:
+    - yarn lint
+deployment:
+  publish:
+    owner: obartra
+    branch: master
+    commands:
+      - yarn deploy-storybook

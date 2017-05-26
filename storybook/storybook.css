@@ -9,6 +9,8 @@
 
 body {
   font-weight: bold;
+  margin: 0;
+  padding: 50px 0 0 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 

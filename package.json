@@ -7,19 +7,57 @@
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
-    "cross-env": "4.0.0",
-    "cssnano": "3.10.0",
-    "express": "4.15.2",
-    "nodemon": "1.11.0",
+    "@kadira/storybook-deployer": "1.2.0",
+    "babel-eslint": "7.2.3",
+    "css-loader": "0.28.3",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.0.1",
+    "eslint-config-prettier": "2.1.1",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-jsx-a11y": "5.0.3",
+    "eslint-plugin-react": "7.0.1",
+    "husky": "0.13.3",
+    "lint-staged": "3.5.0",
+    "npm-run-all": "4.0.2",
+    "perfectionist": "2.4.0",
     "postcss-cli": "3.2.0",
+    "postcss-cssnext": "2.11.0",
     "postcss-for": "2.1.1",
-    "reload": "1.1.3"
+    "postcss-loader": "2.0.5",
+    "prettier": "1.3.1",
+    "style-loader": "0.18.1",
+    "stylelint": "7.10.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "format:js",
+      "git add"
+    ],
+    "*.css": [
+      "format:css",
+      "git add"
+    ]
   },
   "scripts": {
-    "start": "node server.js | yarn watch",
-    "watch": "nodemon -e css --watch *.css --ignore dist/ -x \"yarn build:dev\"",
-    "build": "yarn build:dev && yarn build:prod",
-    "build:dev": "postcss -c postcss.config.js -o dist/flex.build.css flex.css",
-    "build:prod": "cross-env NODE_ENV=production postcss -c postcss.config.js -o dist/flex.min.css flex.css"
+    "lint:js": "eslint src stories storybook",
+    "deploy-storybook": "storybook-to-ghpages",
+    "lint:css": "stylelint *.css",
+    "format:css": "./scripts/formatcss.sh",
+    "format:js": "prettier --write --single-quote --no-semi --trailing-comma es5",
+    "format-all": "npm-run-all --parallel format-all:*",
+    "format-all:js": "git ls-files *.js | xargs yarn format:js",
+    "format-all:css": "git ls-files *.css | xargs yarn format:css",
+    "lint": "npm-run-all --parallel lint:*",
+    "precommit": "lint-staged",
+    "build": "postcss -c postcss.config.js -o dist/flex.build.css flex.css",
+    "start": "start-storybook -p 9001 -c storybook"
+  },
+  "dependencies": {
+    "@storybook/addon-knobs": "3.0.0-alpha.0",
+    "@storybook/react": "3.0.0-alpha.0",
+    "prop-types": "15.5.10",
+    "proptypes": "1.0.0",
+    "react": "15.5.4",
+    "react-dom": "15.5.4"
   }
 }
