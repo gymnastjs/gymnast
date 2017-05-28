@@ -19,3 +19,4 @@ deployment:
     branch: master
     commands:
       - yarn deploy-storybook
+      - git add docs/ -f && git commit --amend --no-edit --no-verify
