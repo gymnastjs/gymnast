@@ -39,7 +39,6 @@
   },
   "scripts": {
     "lint:js": "eslint src stories storybook",
-    "deploy-storybook": "build-storybook -c storybook -o \"$PWD/docs\"",
     "lint:css": "stylelint *.css",
     "format:css": "./scripts/formatcss.sh",
     "format:js": "prettier --write --single-quote --no-semi --trailing-comma es5",

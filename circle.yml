@@ -3,8 +3,8 @@ machine:
     version: 7.10.0
 general:
   artifacts:
+    - "docs"
     - "dist"
-    - "coverage"
 dependencies:
   cache_directories:
     - node_modules
@@ -18,5 +18,10 @@ deployment:
     owner: obartra
     branch: master
     commands:
-      - yarn deploy-storybook
-      - git add docs/ -f && git commit --amend --no-edit --no-verify
+      - ./node_modules/.bin/build-storybook -c storybook -o "$PWD/docs"
+      - |
+        git config user.email "flexgrid@ci.com"
+        git config user.name "FlexGrid Docs CI"
+        git add docs/ -f
+        git commit --amend --no-edit --no-verify
+        git push origin master
