@@ -1,17 +1,19 @@
 import React from 'react'
+import { WithNotes } from '@storybook/addon-notes'
 import { number } from '@storybook/addon-knobs'
 import story from './story'
 import Grid from '../../src/grid'
 import { times } from '../../src/utils'
 import Box from '../box'
 
-story.addWithInfo(
-  'Sizing',
-  'Any number from 1-12 defines the number of columns that each item takes',
-  () => {
-    const size = number('Size', 12, { range: true, min: 1, max: 12 })
+const notes =
+  'Any number from 1-12 defines the number of columns that each item takes'
 
-    return (
+story.add('Sizing', () => {
+  const size = number('Size', 12, { range: true, min: 1, max: 12 })
+
+  return (
+    <WithNotes notes={notes}>
       <div className="gl-grid-root">
         <div className="gl-grid-content">
           <Grid>
@@ -34,6 +36,6 @@ story.addWithInfo(
           </Grid>
         </div>
       </div>
-    )
-  }
-)
+    </WithNotes>
+  )
+})

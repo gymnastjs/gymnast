@@ -1,12 +1,14 @@
 import React from 'react'
+import { WithNotes } from '@storybook/addon-notes'
 import story from './story'
 import Grid from '../../src/grid'
 import Box from '../box'
 
-story.addWithInfo(
-  'Offset',
-  'Adding an offset creates an empty number of columns between the current item and the previous one',
-  () => (
+const notes =
+  'Adding an offset creates an empty number of columns between the current item and the previous one'
+
+story.add('Offset', () => (
+  <WithNotes notes={notes}>
     <div className="gl-grid-root">
       <div className="gl-grid-content">
         <Grid>
@@ -33,5 +35,5 @@ story.addWithInfo(
         </Grid>
       </div>
     </div>
-  )
-)
+  </WithNotes>
+))
