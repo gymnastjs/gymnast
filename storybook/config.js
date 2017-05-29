@@ -1,10 +1,11 @@
-import { configure } from '@storybook/react'
+import { configure, setAddon } from '@storybook/react'
+import infoAddon from '@storybook/addon-info'
 import './storybook.css'
 
-function loadStories() {
+setAddon(infoAddon)
+
+configure(() => {
   /* eslint-disable global-require */
   require('../stories/index.js')
   /* eslint-enable global-require */
-}
-
-configure(loadStories, module)
+}, module)

@@ -10,6 +10,7 @@
     "@storybook/addon-storyshots": "3.0.0-alpha.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "css-loader": "0.28.3",
     "eslint": "3.19.0",
@@ -63,10 +64,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@storybook/addon-info": "3.0.0-alpha.0",
     "@storybook/addon-knobs": "3.0.0-alpha.0",
     "@storybook/react": "3.0.0-alpha.0",
     "prop-types": "15.5.10",
-    "proptypes": "1.0.0",
     "react": "15.5.4",
     "react-dom": "15.5.4"
   }

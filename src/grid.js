@@ -1,4 +1,12 @@
 import React from 'react'
 import GridHOC from './grid.hoc'
 
-export default GridHOC(props => <div {...props} />)
+class Grid extends React.PureComponent {
+  static displayName = 'Grid'
+
+  render() {
+    return <div {...this.props} />
+  }
+}
+
+export default GridHOC(Grid)
