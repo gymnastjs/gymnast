@@ -20,7 +20,7 @@
   box-sizing: border-box;
   margin-left: var(--page-margin);
   margin-right: calc(var(--page-margin) - var(--gutter));
-  max-width: var(--max-width);
+  max-width: calc(var(--max-width) - var(--page-margin) * 2 + var(--gutter));
   min-width: var(--min-width);
 }
 
