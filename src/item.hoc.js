@@ -39,21 +39,21 @@ export default function Item(Component, defaults = {}) {
 
   withItem.prototype.defaultProps = extend(
     {
-      className: '',
-      size: '',
       align: undefined,
+      className: undefined,
       grid: false,
-      offset: '',
+      offset: undefined,
+      size: undefined,
     },
     defaults
   )
 
   withItem.prototype.propTypes = {
-    className: PropTypes.string,
     align: PropTypes.Symbol,
+    className: PropTypes.string,
     grid: PropTypes.bool,
-    size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     offset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }
 
   return withItem
