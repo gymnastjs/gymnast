@@ -14,7 +14,7 @@ dependencies:
   post:
     - yarn build
 test:
-  override:
+  pre:
     - yarn lint
 deployment:
   publish:
