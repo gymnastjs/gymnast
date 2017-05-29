@@ -12,15 +12,6 @@
     prop-types "^15.5.8"
     react-inspector "^2.0.0"
 
-"@storybook/addon-info@3.0.0-alpha.0":
-  version "3.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.0.0-alpha.0.tgz#6851a63630e3195dd88e3472abf8892fc50ab28c"
-  dependencies:
-    babel-runtime "^6.23.0"
-    markdown-to-react-components "^0.2.1"
-    prop-types "^15.5.8"
-    react-addons-create-fragment "^15.5.3"
-
 "@storybook/addon-knobs@3.0.0-alpha.0":
   version "3.0.0-alpha.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-3.0.0-alpha.0.tgz#d373ee40e8647f92e2a394aa562cedfb44e01617"
@@ -39,6 +30,14 @@
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.0.0-rc.2.tgz#b63ae28ba2aa9c9d3abfb4095de079f56ad15ca0"
   dependencies:
     "@storybook/addons" "^3.0.0-rc.2"
+
+"@storybook/addon-notes@3.0.0-alpha.0":
+  version "3.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-3.0.0-alpha.0.tgz#e2f68058e3b87ca0002b3f9a8776c0fc10e688aa"
+  dependencies:
+    babel-runtime "^6.23.0"
+  optionalDependencies:
+    "@types/react" "^15.0.24"
 
 "@storybook/addon-storyshots@3.0.0-alpha.0":
   version "3.0.0-alpha.0"
@@ -148,6 +147,10 @@
     react-modal "^1.7.6"
     react-split-pane "^0.1.63"
     redux "^3.6.0"
+
+"@types/react@^15.0.24":
+  version "15.0.25"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.25.tgz#d396949cccc9a90b61755def9781e5aced9b2261"
 
 JSONStream@^0.8.4:
   version "0.8.4"
@@ -2733,7 +2736,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.4, fbjs@^0.8.9:
+fbjs@^0.8.9:
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.12.tgz#10b5d92f76d45575fd63a217d4ea02bea2f8ed04"
   dependencies:
@@ -3120,10 +3123,6 @@ hawk@~3.1.3:
     cryptiles "2.x.x"
     hoek "2.x.x"
     sntp "1.x.x"
-
-he@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -4247,17 +4246,6 @@ map-obj@^1.0.0, map-obj@^1.0.1:
 map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
-
-markdown-to-react-components@^0.2.1:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/markdown-to-react-components/-/markdown-to-react-components-0.2.4.tgz#e2854edc4ff0fe9e360282e8b1c3e5637d57c3db"
-  dependencies:
-    he "^1.1.0"
-    marked "^0.3.3"
-
-marked@^0.3.3:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
 material-colors@^1.2.1:
   version "1.2.5"
@@ -5652,14 +5640,6 @@ rc@^1.1.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
-
-react-addons-create-fragment@^15.5.3:
-  version "15.5.4"
-  resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.5.4.tgz#048acb2f332a3f450beae0be66824ed91e66e122"
-  dependencies:
-    fbjs "^0.8.4"
-    loose-envify "^1.3.1"
-    object-assign "^4.1.0"
 
 react-color@^2.11.4:
   version "2.11.7"

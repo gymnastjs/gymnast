@@ -1,5 +1,6 @@
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
+import { WithNotes } from '@storybook/addon-notes'
 import story from './story'
 import Grid from '../../src/grid'
 import { times } from '../../src/utils'
@@ -7,10 +8,11 @@ import { ALIGN } from '../../src/values'
 import Box from '../box'
 import { getBoxType } from '../utils'
 
-story.addWithInfo(
-  'Auto Flow',
-  'When adding elements that exceed the number of columns available, they will overflow to the next row',
-  () => (
+const notes =
+  'When adding elements that exceed the number of columns available, they will overflow to the next row'
+
+story.add('Auto Flow', () => (
+  <WithNotes notes={notes}>
     <div className="gl-grid-root">
       <div className="gl-grid-content">
         <Grid>
@@ -32,5 +34,5 @@ story.addWithInfo(
         </Grid>
       </div>
     </div>
-  )
-)
+  </WithNotes>
+))

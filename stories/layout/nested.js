@@ -1,12 +1,14 @@
 import React from 'react'
+import { WithNotes } from '@storybook/addon-notes'
 import story from './story'
 import Grid from '../../src/grid'
 import Box from '../box'
 
-story.addWithInfo(
-  'Nested',
-  "Nested items respect the parent columns size so they don't create a new set of columns within them (they reuse their parents)",
-  () => (
+const notes =
+  "Nested items respect the parent columns size so they don't create a new set of columns within them (they reuse their parents)"
+
+story.add('Nested', () => (
+  <WithNotes notes={notes}>
     <div className="gl-grid-root">
       <div className="gl-grid-content">
         <Grid margin>
@@ -46,5 +48,5 @@ story.addWithInfo(
         </Grid>
       </div>
     </div>
-  )
-)
+  </WithNotes>
+))
