@@ -12,23 +12,38 @@ const typeMap = {
 }
 const types = Object.keys(typeMap)
 
-const Box = ItemHOC(({ type, value = type, children, className, ...props }) => {
-  if (!(type in typeMap)) {
-    throw new Error(`Invalid box type, valid values are: ${types.join(', ')}`)
+class Box extends React.PureComponent {
+  static defaultProps = {
+    children: undefined,
+    className: undefined,
+    value: undefined,
   }
 
-  const classes = compact([className, `box${typeMap[type]}`])
+  static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]),
+    className: PropTypes.string,
+    type: PropTypes.string.isRequired,
+    value: PropTypes.string,
+  }
 
-  return <div className={classes.join(' ')} {...props}>{children || value}</div>
-})
+  static displayName = 'Box'
 
-Box.prototype.defaultProps = {
-  className: '',
+  render() {
+    const { type, value = type, children, className, ...props } = this.props
+
+    if (!(type in typeMap)) {
+      throw new Error(`Invalid box type, valid values are: ${types.join(', ')}`)
+    }
+
+    const classes = compact([className, `box${typeMap[type]}`])
+
+    return (
+      <div className={classes.join(' ')} {...props}>{children || value}</div>
+    )
+  }
 }
 
-Box.prototype.propTypes = {
-  className: PropTypes.string,
-  type: PropTypes.string.isRequired,
-}
-
-export default Box
+export default ItemHOC(Box)

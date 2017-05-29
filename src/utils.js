@@ -6,10 +6,6 @@ export function compact(array = []) {
   return array.filter(el => !!el)
 }
 
-export function extend(...args) {
-  return Object.assign({}, ...args)
-}
-
 export function noop() {}
 
 export function times(number = 0, callback = noop) {
