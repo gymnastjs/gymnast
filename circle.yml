@@ -3,7 +3,6 @@ machine:
     version: 7.10.0
 general:
   artifacts:
-    - "docs"
     - "dist"
   branches:
     ignore:
@@ -21,13 +20,15 @@ deployment:
     owner: obartra
     branch: master
     commands:
-      - ./node_modules/.bin/build-storybook -c storybook -o "$PWD/../docs"
+      - ./node_modules/.bin/build-storybook -c storybook -o "$PWD/../temp"
       - |
         git config user.email "flexgrid@ci.com"
         git config user.name "FlexGrid Docs CI"
+        cp circle.yml ../temp
+        cp -R dist ../temp
         rm -rf *
-        mv ../docs/* .
-        rm -rf ../docs
+        mv ../temp/* .
+        rm -rf ../temp
         git add -A -f
         git commit -m "Publish StoryBook" --no-verify
         git push -f origin master:gh-pages

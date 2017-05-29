@@ -1,15 +1,17 @@
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
+import { WithNotes } from '@storybook/addon-notes'
 import story from './story'
 import Grid from '../../src/grid'
 import { times } from '../../src/utils'
 import Box from '../box'
 import { getBoxType } from '../utils'
 
-story.addWithInfo(
-  'Fraction',
-  'Fraction-based layout allows to split the space without gutters for and without respecting the columns.',
-  () => (
+const notes =
+  'Fraction-based layout allows to split the space without gutters for and without respecting the columns'
+
+story.add('Fraction', () => (
+  <WithNotes notes={notes}>
     <div className="gl-grid-root">
       <div className="gl-grid-content">
         <h1>nth</h1>
@@ -81,5 +83,5 @@ story.addWithInfo(
         </Grid>
       </div>
     </div>
-  )
-)
+  </WithNotes>
+))

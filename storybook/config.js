@@ -1,8 +1,5 @@
-import { configure, setAddon } from '@storybook/react'
-import infoAddon from '@storybook/addon-info'
+import { configure } from '@storybook/react'
 import './storybook.css'
-
-setAddon(infoAddon)
 
 configure(() => {
   /* eslint-disable global-require */
