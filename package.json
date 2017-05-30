@@ -7,7 +7,7 @@
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
-    "@storybook/addon-storyshots": "3.0.0-alpha.0",
+    "@storybook/addon-storyshots": "3.0.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-plugin-transform-class-properties": "6.24.1",
