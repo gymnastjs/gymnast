@@ -1,5 +1,7 @@
 [![CircleCI](https://circleci.com/gh/obartra/flexgrid/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/flexgrid/tree/master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/obartra/flexgrid.svg)](https://greenkeeper.io/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 # ☁️ FlexGrid
 
 12-column layout with Flexbox

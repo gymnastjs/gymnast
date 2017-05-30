@@ -12,7 +12,9 @@
     "babel-jest": "20.0.3",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "commitizen": "2.9.6",
     "css-loader": "0.28.3",
+    "cz-conventional-changelog": "^2.0.0",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-prettier": "2.1.1",
@@ -51,6 +53,7 @@
   },
   "scripts": {
     "build": "postcss -c postcss.config.js -o dist/flex.build.css flex.css",
+    "commit": "git-cz",
     "format-all:css": "git ls-files *.css | xargs yarn format:css",
     "format-all:js": "git ls-files *.js | xargs yarn format:js",
     "format-all": "npm-run-all --parallel format-all:*",
@@ -70,5 +73,10 @@
     "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-dom": "15.5.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
