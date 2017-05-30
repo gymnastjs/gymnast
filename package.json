@@ -7,13 +7,13 @@
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
-    "@storybook/addon-storyshots": "3.0.0-alpha.0",
+    "@storybook/addon-storyshots": "3.0.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "commitizen": "2.9.6",
-    "css-loader": "0.28.3",
+    "css-loader": "0.28.4",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
@@ -23,7 +23,7 @@
     "eslint-plugin-react": "7.0.1",
     "husky": "0.13.4",
     "jest": "20.0.4",
-    "lint-staged": "3.5.0",
+    "lint-staged": "3.5.1",
     "npm-run-all": "4.0.2",
     "perfectionist": "2.4.0",
     "postcss-cli": "4.0.0",
@@ -67,9 +67,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@storybook/addon-knobs": "3.0.0-alpha.0",
-    "@storybook/addon-notes": "3.0.0-alpha.0",
-    "@storybook/react": "3.0.0-alpha.0",
+    "@storybook/addon-knobs": "3.0.0",
+    "@storybook/addon-notes": "3.0.0",
+    "@storybook/react": "3.0.0",
     "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-dom": "15.5.4"
