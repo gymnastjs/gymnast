@@ -1,6 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compact, getDisplayName, getJustify, getAlignment } from './utils'
+import {
+  compact,
+  getDisplayName,
+  getJustify,
+  getAlignment,
+  range,
+} from './utils'
 import { ALIGN, JUSTIFY } from './values'
 
 export default function Grid(Component) {
@@ -53,8 +59,8 @@ export default function Grid(Component) {
       className: PropTypes.string,
       justify: PropTypes.oneOf(Object.values(JUSTIFY)),
       margin: PropTypes.bool,
-      offset: PropTypes.number,
-      size: PropTypes.number,
+      offset: PropTypes.oneOf(range(0, 11)),
+      size: PropTypes.oneOf(range(1, 12)),
       stretch: PropTypes.bool,
     }
 
