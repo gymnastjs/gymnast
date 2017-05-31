@@ -4,7 +4,7 @@ import { compact, getDisplayName } from './utils'
 import { ALIGN } from './values'
 
 function getAlignment(value) {
-  const prefix = 'gl-grid__item--'
+  const prefix = 'col--'
 
   switch (value) {
     case ALIGN.TOP:
@@ -13,8 +13,6 @@ function getAlignment(value) {
       return `${prefix}middle`
     case ALIGN.BOTTOM:
       return `${prefix}bottom`
-    case ALIGN.STRETCH:
-      return `${prefix}stretch`
     default:
       return ''
   }
@@ -26,13 +24,18 @@ export default function Item(Component) {
       const { className, size, offset, grid, align, ...props } = this.props
       const classes = compact([
         className,
-        size && `gl-grid__item--${size}`,
-        grid && `gl-grid`,
-        offset && `gl-grid__item--offset-${offset}`,
+        size ? `col-${size}` : 'col',
+        grid && 'grid',
         getAlignment(align),
       ])
 
-      return <Component {...props} className={classes.join(' ')} />
+      return (
+        <Component
+          {...props}
+          className={classes.join(' ')}
+          data-push-left={`off-${offset}`}
+        />
+      )
     }
 
     static displayName = getDisplayName(
@@ -43,7 +46,7 @@ export default function Item(Component) {
       align: undefined,
       className: undefined,
       grid: false,
-      offset: undefined,
+      offset: 0,
       size: undefined,
     }
 
@@ -51,8 +54,8 @@ export default function Item(Component) {
       align: PropTypes.symbol,
       className: PropTypes.string,
       grid: PropTypes.bool,
-      offset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      offset: PropTypes.number,
+      size: PropTypes.number,
     }
   }
 }

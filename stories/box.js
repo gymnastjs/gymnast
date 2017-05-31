@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ItemHOC from '../src/item.hoc'
 import { compact } from '../src/utils'
+import ItemHOC from '../src/item.hoc'
 
 const typeMap = {
   A: 1,
@@ -15,7 +15,8 @@ const types = Object.keys(typeMap)
 class Box extends React.PureComponent {
   static defaultProps = {
     children: undefined,
-    className: undefined,
+    nest: false,
+    style: {},
     value: undefined,
   }
 
@@ -24,7 +25,8 @@ class Box extends React.PureComponent {
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
     ]),
-    className: PropTypes.string,
+    nest: PropTypes.bool,
+    style: PropTypes.shape({}),
     type: PropTypes.string.isRequired,
     value: PropTypes.string,
   }
@@ -32,16 +34,20 @@ class Box extends React.PureComponent {
   static displayName = 'Box'
 
   render() {
-    const { type, value = type, children, className, ...props } = this.props
+    const { type, value = type, children, style, nest, ...props } = this.props
 
     if (!(type in typeMap)) {
       throw new Error(`Invalid box type, valid values are: ${types.join(', ')}`)
     }
 
-    const classes = compact([className, `box${typeMap[type]}`])
+    const classes = compact([`box${typeMap[type]}`, nest && 'grid'])
 
     return (
-      <div className={classes.join(' ')} {...props}>{children || value}</div>
+      <div {...props}>
+        <div className={classes.join(' ')} style={style}>
+          {children || value}
+        </div>
+      </div>
     )
   }
 }

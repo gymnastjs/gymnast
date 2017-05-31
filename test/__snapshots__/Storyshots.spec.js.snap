@@ -1,69 +1,230 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Grid Auto Flow 1`] = `
+exports[`Storyshots Grid Align 1`] = `
 <div
-  className="gl-grid-root"
+  className="gl-layout-root"
 >
   <div
-    className="gl-grid-content"
+    className="gl-layout-content"
   >
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        A
-      </div>
-      <div
-        className="gl-grid__item--2 gl-grid__item--stretch box2"
-      >
-        B
-      </div>
-      <div
-        className="gl-grid__item--4 box3"
-      >
-        C
-      </div>
-      <div
-        className="gl-grid__item--3 box4"
-      >
-        D
-      </div>
-      <div
-        className="gl-grid__item--2 box5"
-        style={
-          Object {
-            "height": 100,
+        <div
+          className="box1"
+          style={
+            Object {
+              "height": 300,
+            }
           }
-        }
-      >
-        E
+        >
+           
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box1"
+        className="col-2 col--top"
+        data-push-left="off-0"
       >
-        A
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          TOP
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box2"
+        className="col-2 col--middle"
+        data-push-left="off-0"
       >
-        B
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          MIDDLE
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box3"
+        className="col-2 col--bottom"
+        data-push-left="off-0"
       >
-        C
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          BOTTOM
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box4"
+        className="col-2 col--middle"
+        data-push-left="off-0"
       >
-        D
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          MIDDLE
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box5"
+        className="col-2"
+        data-push-left="off-0"
       >
-        E
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          DEFAULT
+        </div>
+      </div>
+      <div
+        className="col-1"
+        data-push-left="off-0"
+      >
+        <div
+          className="box1"
+          style={
+            Object {
+              "height": 300,
+            }
+          }
+        >
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Auto Flow 1`] = `
+<div
+  className="gl-layout-root"
+>
+  <div
+    className="gl-layout-content"
+  >
+    <div
+      className="grid grid--stretch"
+      data-push-left="off-0"
+    >
+      <div
+        className="col-1"
+        data-push-left="off-0"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          A
+        </div>
+      </div>
+      <div
+        className="col-2"
+        data-push-left="off-0"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          B
+        </div>
+      </div>
+      <div
+        className="col-4"
+        data-push-left="off-0"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          C
+        </div>
+      </div>
+      <div
+        className="col-3"
+        data-push-left="off-0"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          D
+        </div>
+      </div>
+      <div
+        className="col-2"
+        data-push-left="off-0"
+      >
+        <div
+          className="box5"
+          style={
+            Object {
+              "height": 100,
+            }
+          }
+        >
+          E
+        </div>
+      </div>
+      <div
+        className="col-2"
+        data-push-left="off-0"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          A
+        </div>
+      </div>
+      <div
+        className="col-2"
+        data-push-left="off-0"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          B
+        </div>
+      </div>
+      <div
+        className="col-2"
+        data-push-left="off-0"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          C
+        </div>
+      </div>
+      <div
+        className="col-2"
+        data-push-left="off-0"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          D
+        </div>
+      </div>
+      <div
+        className="col-2"
+        data-push-left="off-0"
+      >
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          E
+        </div>
       </div>
     </div>
   </div>
@@ -72,295 +233,653 @@ exports[`Storyshots Grid Auto Flow 1`] = `
 
 exports[`Storyshots Grid Fraction 1`] = `
 <div
-  className="gl-grid-root"
+  className="gl-layout-root"
 >
   <div
-    className="gl-grid-content"
+    className="gl-layout-content"
   >
     <h1>
       nth
     </h1>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box1"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 8
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 8
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 8
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box4"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 8
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box5"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 8
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box1"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 8
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 8
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 8
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 7
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 7
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box4"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 7
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box5"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 7
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box1"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 7
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 7
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 7
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 6
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box4"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 6
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box5"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 6
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box1"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 6
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 6
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 6
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box4"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 5
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box5"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 5
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box1"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 5
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 5
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 5
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box5"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 4
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 4
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box1"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 4
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 4
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 4
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 4
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 4
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 4
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box1"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 3
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 3
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 3
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 3
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 3
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 3
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 2
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 2
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 2
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 2
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 1
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 1
+        </div>
       </div>
     </div>
     <h1>
-      1 - 2
+      8 - auto
     </h1>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box1"
+        className="col-8"
+        data-push-left="off-0"
       >
-        1 / 3
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          8
+        </div>
       </div>
       <div
-        className="gl-grid__item--2fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        2 / 3
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          12 - 8 = 4
+        </div>
       </div>
     </div>
     <h1>
-      4 - 1 - 1
+      6 - 1/2 - 1/2
     </h1>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--4fr box3"
+        className="col-6"
+        data-push-left="off-0"
       >
-        4 / 6
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          6
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box4"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 6
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          (12 - 6) / 2 = 3
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box5"
+        className="col"
+        data-push-left="off-0"
       >
-        1 / 6
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          (12 - 6) / 2 = 3
+        </div>
       </div>
     </div>
     <h1>
       Custom
     </h1>
     <div
-      className="gl-grid gl-grid--margin gl-grid__item--12"
+      className="grid col-12"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1fr box1"
+        className="col"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box2"
+        className="col"
+        data-push-left="off-0"
       >
-        2
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          2
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box3"
+        className="col"
+        data-push-left="off-0"
       >
-        3
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          3
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box4"
+        className="col"
+        data-push-left="off-0"
       >
-        4
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          4
+        </div>
       </div>
       <div
-        className="gl-grid__item--1fr box5"
+        className="col"
+        data-push-left="off-0"
       >
-        5
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          5
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
+      data-push-left="off-0"
+    >
+      <div
+        className="col-6"
+        data-push-left="off-0"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          6 (fixed)
+        </div>
+      </div>
+      <div
+        className="col"
+        data-push-left="off-0"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          2
+        </div>
+      </div>
+      <div
+        className="col"
+        data-push-left="off-0"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          3
+        </div>
+      </div>
+      <div
+        className="col"
+        data-push-left="off-0"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          4
+        </div>
+      </div>
+      <div
+        className="col"
+        data-push-left="off-0"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          5
+        </div>
+      </div>
+      <div
+        className="col"
+        data-push-left="off-0"
+      >
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          6
+        </div>
       </div>
     </div>
   </div>
@@ -369,135 +888,216 @@ exports[`Storyshots Grid Fraction 1`] = `
 
 exports[`Storyshots Grid Nested 1`] = `
 <div
-  className="gl-grid-root"
+  className="gl-layout-root"
 >
   <div
-    className="gl-grid-content"
+    className="gl-layout-content"
   >
     <div
-      className="gl-grid gl-grid--margin"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--6 gl-grid box1"
+        className="col-6 grid"
+        data-push-left="off-0"
       >
         <div
-          className="gl-grid__item--3 box3"
+          className="box1 grid"
+          style={Object {}}
         >
-          C
-        </div>
-        <div
-          className="gl-grid__item--3 box4"
-        >
-          D
+          <div
+            className="col-3"
+            data-push-left="off-0"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              C
+            </div>
+          </div>
+          <div
+            className="col-3"
+            data-push-left="off-0"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              D
+            </div>
+          </div>
         </div>
       </div>
       <div
-        className="gl-grid__item--6 gl-grid box2"
+        className="col-6 grid"
+        data-push-left="off-0"
       >
         <div
-          className="gl-grid__item--3 box4"
+          className="box2 grid"
+          style={Object {}}
         >
-          D
-        </div>
-        <div
-          className="gl-grid__item--3 box5"
-        >
-          E
+          <div
+            className="col-3"
+            data-push-left="off-0"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              D
+            </div>
+          </div>
+          <div
+            className="col-3"
+            data-push-left="off-0"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              E
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--6 gl-grid box1"
+        className="col-6 grid"
+        data-push-left="off-0"
       >
         <div
-          className="gl-grid__item--3 gl-grid__item--offset-3 box4"
+          className="box1 grid"
+          style={Object {}}
         >
-          D
+          <div
+            className="col-3"
+            data-push-left="off-3"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              D
+            </div>
+          </div>
         </div>
       </div>
       <div
-        className="gl-grid__item--6 gl-grid box2"
+        className="col-6 grid"
+        data-push-left="off-0"
       >
         <div
-          className="gl-grid__item--1 box4"
+          className="box2 grid"
+          style={Object {}}
         >
-          D
-        </div>
-        <div
-          className="gl-grid__item--1 gl-grid__item--offset-4 box5"
-        >
-          E
+          <div
+            className="col-1"
+            data-push-left="off-0"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              D
+            </div>
+          </div>
+          <div
+            className="col-1"
+            data-push-left="off-4"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              E
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div
-      className="gl-grid gl-grid--margin"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--6 gl-grid box2"
+        className="col-6 grid"
+        data-push-left="off-0"
       >
         <div
-          className="gl-grid__item--1 box4"
+          className="box2 grid"
+          style={Object {}}
         >
-          D
-        </div>
-        <div
-          className="gl-grid__item--1 box5"
-        >
-          E
-        </div>
-        <div
-          className="gl-grid__item--1 box4"
-        >
-          D
-        </div>
-        <div
-          className="gl-grid__item--1 box5"
-        >
-          E
-        </div>
-        <div
-          className="gl-grid__item--1 box4"
-        >
-          D
-        </div>
-        <div
-          className="gl-grid__item--1 box5"
-        >
-          E
-        </div>
-        <div
-          className="gl-grid__item--1 box4"
-        >
-          D
-        </div>
-        <div
-          className="gl-grid__item--1 box5"
-        >
-          E
-        </div>
-        <div
-          className="gl-grid__item--1 box4"
-        >
-          D
-        </div>
-        <div
-          className="gl-grid__item--1 box5"
-        >
-          E
-        </div>
-        <div
-          className="gl-grid__item--1 box4"
-        >
-          D
-        </div>
-        <div
-          className="gl-grid__item--1 box5"
-        >
-          E
+          <div
+            className="col-1"
+            data-push-left="off-0"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              1
+            </div>
+          </div>
+          <div
+            className="col-1"
+            data-push-left="off-0"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              2
+            </div>
+          </div>
+          <div
+            className="col-1"
+            data-push-left="off-0"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              3
+            </div>
+          </div>
+          <div
+            className="col-1"
+            data-push-left="off-0"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              4
+            </div>
+          </div>
+          <div
+            className="col-1"
+            data-push-left="off-0"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              5
+            </div>
+          </div>
+          <div
+            className="col-1"
+            data-push-left="off-0"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              6
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -507,89 +1107,182 @@ exports[`Storyshots Grid Nested 1`] = `
 
 exports[`Storyshots Grid Offset 1`] = `
 <div
-  className="gl-grid-root"
+  className="gl-layout-root"
 >
   <div
-    className="gl-grid-content"
+    className="gl-layout-content"
   >
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        +0
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          +0
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-7 box1"
+        className="col-1"
+        data-push-left="off-7"
       >
-        +7
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          +7
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-1 box2"
+        className="col-1"
+        data-push-left="off-1"
       >
-        +1
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          +1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-5 box2"
+        className="col-1"
+        data-push-left="off-5"
       >
-        +5
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          +5
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-1 box2"
+        className="col-1"
+        data-push-left="off-1"
       >
-        +1
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          +1
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-2 box3"
+        className="col-1"
+        data-push-left="off-2"
       >
-        +2
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          +2
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-3 box3"
+        className="col-1"
+        data-push-left="off-3"
       >
-        +3
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          +3
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-3 box3"
+        className="col-1"
+        data-push-left="off-3"
       >
-        +3
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          +3
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-3 box4"
+        className="col-1"
+        data-push-left="off-3"
       >
-        +3
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          +3
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-1 box4"
+        className="col-1"
+        data-push-left="off-1"
       >
-        +1
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          +1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-5 box4"
+        className="col-1"
+        data-push-left="off-5"
       >
-        +5
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          +5
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1 gl-grid__item--offset-4 box5"
+        className="col-1"
+        data-push-left="off-4"
       >
-        +4
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          +4
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid"
+      data-push-left="off-0"
+    >
+      <div
+        className="col-1"
+        data-push-left="off-0"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          +0
+        </div>
       </div>
     </div>
   </div>
@@ -598,173 +1291,347 @@ exports[`Storyshots Grid Offset 1`] = `
 
 exports[`Storyshots Grid Sizing 1`] = `
 <div
-  className="gl-grid-root"
+  className="gl-layout-root"
 >
   <div
-    className="gl-grid-content"
+    className="gl-layout-content"
   >
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
       <div
-        className="gl-grid__item--1 box1"
+        className="col-1"
+        data-push-left="off-0"
       >
-        1
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--2 box2"
+        className="col-2"
+        data-push-left="off-0"
       >
-        2
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          2
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box2"
+        className="col-2"
+        data-push-left="off-0"
       >
-        2
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          2
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box2"
+        className="col-2"
+        data-push-left="off-0"
       >
-        2
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          2
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box2"
+        className="col-2"
+        data-push-left="off-0"
       >
-        2
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          2
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box2"
+        className="col-2"
+        data-push-left="off-0"
       >
-        2
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          2
+        </div>
       </div>
       <div
-        className="gl-grid__item--2 box2"
+        className="col-2"
+        data-push-left="off-0"
       >
-        2
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          2
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--3 box3"
+        className="col-3"
+        data-push-left="off-0"
       >
-        3
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          3
+        </div>
       </div>
       <div
-        className="gl-grid__item--3 box3"
+        className="col-3"
+        data-push-left="off-0"
       >
-        3
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          3
+        </div>
       </div>
       <div
-        className="gl-grid__item--3 box3"
+        className="col-3"
+        data-push-left="off-0"
       >
-        3
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          3
+        </div>
       </div>
       <div
-        className="gl-grid__item--3 box3"
+        className="col-3"
+        data-push-left="off-0"
       >
-        3
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          3
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--4 box4"
+        className="col-4"
+        data-push-left="off-0"
       >
-        4
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          4
+        </div>
       </div>
       <div
-        className="gl-grid__item--4 box4"
+        className="col-4"
+        data-push-left="off-0"
       >
-        4
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          4
+        </div>
       </div>
       <div
-        className="gl-grid__item--4 box4"
+        className="col-4"
+        data-push-left="off-0"
       >
-        4
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          4
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--6 box5"
+        className="col-6"
+        data-push-left="off-0"
       >
-        6
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          6
+        </div>
       </div>
       <div
-        className="gl-grid__item--6 box5"
+        className="col-6"
+        data-push-left="off-0"
       >
-        6
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          6
+        </div>
       </div>
     </div>
     <div
-      className="gl-grid"
+      className="grid"
+      data-push-left="off-0"
     >
       <div
-        className="gl-grid__item--12 box1"
+        className="col-12"
+        data-push-left="off-0"
       >
-        12
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          12
+        </div>
       </div>
     </div>
   </div>

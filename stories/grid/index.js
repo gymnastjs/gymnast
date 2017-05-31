@@ -1,3 +1,4 @@
+import './align'
 import './autoflow'
 import './fraction'
 import './nested'

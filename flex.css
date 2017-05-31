@@ -10,135 +10,141 @@
   --max-column-width: calc((var(--max-width) - var(--page-margin) * 2 - var(--gutter) * (var(--columns) - 1)) / var(--columns));
 }
 
-.gl-grid-root {
+.gl-layout-root {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.gl-grid-content {
+.gl-layout-content {
   box-sizing: border-box;
-  margin-left: var(--page-margin);
-  margin-right: calc(var(--page-margin) - var(--gutter));
-  max-width: calc(var(--max-width) - var(--page-margin) * 2 + var(--gutter));
+  margin-left: calc(var(--page-margin) + (var(--gutter) / 2));
+  margin-right: var(--page-margin);
+  width: calc(var(--max-width) - var(--page-margin) * 2);
   min-width: var(--min-width);
 }
 
-.gl-grid {
+[class*=grid] {
   box-sizing: border-box;
   display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-flow: row wrap;
+  margin: 0 calc(-1 * var(--gutter) / 2);
 }
 
-.gl-grid--margin {
-  margin-bottom: var(--gutter);
+[class*=col-],[class^=col] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: 0 calc(var(--gutter) / 2) var(--gutter);
 }
 
-.gl-grid.gl-grid--vertical {
-  flex-flow: column;
-  align-content: stretch;
+[class^=col] {
+  flex: 1 1 0%;
 }
 
-/* add `gl-grid__item--stretch` to stretch */
-
-.gl-grid__item--stretch {
-  flex-grow: 1;
-  align-self: stretch;
+[class^=grid][class*=col-],[class^=grid][class^=col] {
+  margin: 0;
+  padding: 0
 }
 
-.gl-grid__item--top {
-  align-self: flex-start;
+.grid--no-margin {
+  margin: 0;
 }
 
-.gl-grid__item--middle {
-  align-self: center;
+.grid--no-margin > [class*=col] {
+  padding: 0;
 }
 
-.gl-grid__item--bottom {
-  align-self: flex-end;
+[class*=grid-][class*=-noWrap] {
+  flex-wrap: nowrap;
 }
 
-@for $i from 1 to 12 {
-  /* grid item sizing */
-
-  .gl-grid > .gl-grid__item--$i {
-    margin-right: var(--gutter);
-  }
-
-  .gl-grid > .gl-grid__item--$i, .gl-grid > .gl-grid__item--$(i)fr {
-    box-sizing: border-box;
-    margin-bottom: var(--vertical-gutter);
-    width: calc(var(--small-max-column-width) * $i + (var(--gutter) * ($i - 1)));
-  }
-
-  .gl-grid:not(.gl-grid--vertical) > .gl-grid__item--$i.gl-grid__item--no-margin {
-    margin-right: 0;
-  }
-
-  .gl-grid.gl-grid--vertical > .gl-grid__item--$i.gl-grid__item--no-margin {
-    margin-bottom: 0;
-  }/* grid item offset */
-
-  .gl-grid > .gl-grid__item--offset-$i {
-    margin-left: calc(var(--small-max-column-width) * $i + (var(--gutter) * $i));
-  }/* nested grid item */
-
-  .gl-grid.gl-grid__item--$i {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    margin-right: 0;
-    margin-bottom: 0;
-    width: calc(var(--small-max-column-width) * $i + (var(--gutter) * $i));
-  }/**
-  * The following allows an alternative (fraction-based) layout. For instance, if we have 4 items
-  * all evenly distributed we would add the `gl-grid__item--1fr` to each child.
-  *
-  * Different proportions can be specified by using different child `fr` sizes
-  *
-  * The number of fractions allowed is unrelated to the number of columns this layout supports but
-  * there is no reason to change it either
-  */
-
-  .gl-grid__item--$(i)fr {
-    flex: $i;
-  }/* limit growth at max size 1280px */
-
-  @media (min-width: 1280px) {
-    .gl-grid > .gl-grid__item--$i {
-      width: calc(var(--max-column-width) * $i + (var(--gutter) * ($i - 1)));
-    }
-
-    .gl-grid > .gl-grid__item--offset-$i {
-      margin-left: calc(var(--max-column-width) * $i + (var(--gutter) * $i));
-    }
-
-    .gl-grid.gl-grid__item--$i {
-      width: calc(var(--max-column-width) * $i + (var(--gutter) * $i));
-    }
-  }
-}
-
-/* vertical align */
-
-.gl-grid--top {
-  align-items: flex-start;
-}
-
-.gl-grid--middle {
-  align-items: center;
-}
-
-.gl-grid--bottom {
-  align-items: flex-end;
-}
-
-.gl-grid.gl-grid--center {
+[class*=grid-][class*=-center] {
   justify-content: center;
 }
 
-.gl-grid.gl-grid--right {
+[class*=grid-][class*=-right] {
   justify-content: flex-end;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+[class*=grid-][class*=-top] {
+  align-items: flex-start;
+}
+
+[class*=grid-][class*=-middle] {
+  align-items: center;
+}
+
+[class*=grid-][class*=-bottom] {
+  align-items: flex-end;
+}
+
+[class*=grid-][class*=-column] {
+  flex-direction: column
+}
+
+[class*=grid-][class*=-column]>[class*=col-] {
+  flex-basis: auto
+}
+
+[class*=grid-][class*=-column-reverse] {
+  flex-direction: column-reverse
+}
+
+[class*=grid-][class*=-spaceBetween] {
+  justify-content: space-between
+}
+
+[class*=grid-][class*=-spaceAround] {
+  justify-content: space-around
+}
+
+.grid--stretch > [class*=col] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid--stretch > [class*=col] > * {
+  flex: 1 0 100%;
+}
+
+[class*=grid-][class*=-noBottom] > [class*=col] {
+  padding-bottom: 0
+}
+
+[class*=col-][class*=-top] {
+  align-self: flex-start
+}
+
+[class*=col-][class*=-middle] {
+  align-self: center
+}
+
+[class*=col-][class*=-bottom] {
+  align-self: flex-end
+}
+
+@for $i from 1 to 11 {
+  [class*=grid-$(i)] > [class*=col-],[class*=grid-$(i)] > [class^=col] {
+    flex-basis: calc((1 / $i) * 100%);
+    max-width: calc((1 / $i) * 100%);
+  }
+}
+
+@for $i from 1 to 12 {
+  [class*=grid] > [class*=col-$(i)] {
+    flex-basis: calc(($i / 12) * 100%);
+    max-width: calc(($i / 12) * 100%);
+  }
+}
+
+@for $i from 0 to 11 {
+  [class*=grid] > [data-push-left*=off-$(i)] {
+    margin-left: calc($i / 12 * 100%);
+  }
+
+  [class*=grid] > [data-push-right*=off-0] {
+    margin-right: calc($i / 12 * 100%);
+  }
 }

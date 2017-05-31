@@ -25,3 +25,7 @@ This project uses [StoryBook](https://github.com/storybooks/storybook), the conf
 ## CSS Usage
 
 To use the standalone CSS files run `yarn build`, the `/dist` folder contains the built css artifacts. Usage details are available [here](./CSS.md)
+
+## Contributing
+
+Contributions are welcome! To standardize the commit format this project uses [commitizen](https://github.com/commitizen/cz-cli) with [conventional changelog](https://github.com/commitizen/cz-conventional-changelog). Instead of using git, to commit changes run `yarn commit`.

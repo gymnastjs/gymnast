@@ -14,8 +14,8 @@ story.add('Sizing', () => {
 
   return (
     <WithNotes notes={notes}>
-      <div className="gl-grid-root">
-        <div className="gl-grid-content">
+      <div className="gl-layout-root">
+        <div className="gl-layout-content">
           <Grid>
             {times(12, i => <Box key={i} size={1} type="A" value="1" />)}
           </Grid>
