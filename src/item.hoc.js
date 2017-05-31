@@ -9,7 +9,7 @@ export default function Item(Component) {
       const { className, size, offset, grid, align, ...props } = this.props
       const classes = compact([
         className,
-        getAlignment(align, 'col--'),
+        getAlignment(align, 'col'),
         grid && 'grid',
         offset && `col--offset-${offset}`,
         size ? `col-${size}` : 'col',
