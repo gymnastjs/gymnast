@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compact, getDisplayName, getAlignment } from './utils'
+import { compact, getDisplayName, getAlignment, range } from './utils'
 import { ALIGN } from './values'
 
 export default function Item(Component) {
@@ -34,8 +34,8 @@ export default function Item(Component) {
       align: PropTypes.oneOf(Object.values(ALIGN)),
       className: PropTypes.string,
       grid: PropTypes.bool,
-      offset: PropTypes.number,
-      size: PropTypes.number,
+      offset: PropTypes.oneOf(range(0, 11)),
+      size: PropTypes.oneOf(range(1, 12)),
     }
 
     static ALIGN = ALIGN
