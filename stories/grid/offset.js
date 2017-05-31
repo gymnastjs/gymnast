@@ -9,7 +9,7 @@ const notes =
   'Adding an offset creates an empty number of columns between the current item and the previous one'
 
 story.add('Offset', () => {
-  const margin = boolean('Include margin', true)
+  const margin = boolean('Margin', true)
   const offset = number('Offset', 0, { range: true, min: 0, max: 11 })
 
   return (

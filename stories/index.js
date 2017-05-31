@@ -1,2 +1,2 @@
-import '../flex.css'
+import '../src/flex.css'
 import './grid'

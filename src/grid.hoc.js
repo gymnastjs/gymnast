@@ -1,26 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compact, getDisplayName } from './utils'
+import { compact, getDisplayName, getJustify, getAlignment } from './utils'
 
 export default function Grid(Component) {
   return class withGrid extends React.PureComponent {
     render() {
-      const { className, size, offset, margin, stretch, ...props } = this.props
+      const {
+        align,
+        bottom,
+        className,
+        justify,
+        margin,
+        offset,
+        size,
+        stretch,
+        ...props
+      } = this.props
       const classes = compact([
+        !bottom && 'grid--no-bottom',
+        !margin && 'grid--no-margin',
         'grid',
         className,
-        !margin && 'grid--no-margin',
-        size && `col-${size}`,
+        getAlignment(align, 'grid--'),
+        getJustify(justify, 'grid--'),
+        offset && `col--offset-${offset}`,
+        `col-${size}`,
         stretch && 'grid--stretch',
       ])
 
-      return (
-        <Component
-          {...props}
-          className={classes.join(' ')}
-          data-push-left={`off-${offset}`}
-        />
-      )
+      return <Component {...props} className={classes.join(' ')} />
     }
 
     static displayName = getDisplayName(
@@ -28,15 +36,21 @@ export default function Grid(Component) {
     )
 
     static defaultProps = {
+      align: undefined,
+      bottom: true,
       className: undefined,
+      justify: undefined,
       margin: true,
       offset: 0,
-      size: undefined,
+      size: 12,
       stretch: false,
     }
 
     static propTypes = {
+      align: PropTypes.symbol,
+      bottom: PropTypes.bool,
       className: PropTypes.string,
+      justify: PropTypes.symbol,
       margin: PropTypes.bool,
       offset: PropTypes.number,
       size: PropTypes.number,

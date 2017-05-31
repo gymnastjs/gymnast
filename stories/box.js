@@ -40,7 +40,10 @@ class Box extends React.PureComponent {
       throw new Error(`Invalid box type, valid values are: ${types.join(', ')}`)
     }
 
-    const classes = compact([`box${typeMap[type]}`, nest && 'grid'])
+    const classes = compact([
+      `box${typeMap[type]}`,
+      nest && 'grid grid--no-bottom',
+    ])
 
     return (
       <div {...props}>

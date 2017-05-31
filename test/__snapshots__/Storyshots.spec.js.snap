@@ -1,106 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Grid Align 1`] = `
-<div
-  className="gl-layout-root"
->
-  <div
-    className="gl-layout-content"
-  >
-    <div
-      className="grid"
-      data-push-left="off-0"
-    >
-      <div
-        className="col-1"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={
-            Object {
-              "height": 300,
-            }
-          }
-        >
-           
-        </div>
-      </div>
-      <div
-        className="col-2 col--top"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          TOP
-        </div>
-      </div>
-      <div
-        className="col-2 col--middle"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          MIDDLE
-        </div>
-      </div>
-      <div
-        className="col-2 col--bottom"
-        data-push-left="off-0"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          BOTTOM
-        </div>
-      </div>
-      <div
-        className="col-2 col--middle"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          MIDDLE
-        </div>
-      </div>
-      <div
-        className="col-2"
-        data-push-left="off-0"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          DEFAULT
-        </div>
-      </div>
-      <div
-        className="col-1"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={
-            Object {
-              "height": 300,
-            }
-          }
-        >
-           
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Grid Auto Flow 1`] = `
 <div
   className="gl-layout-root"
@@ -109,12 +8,10 @@ exports[`Storyshots Grid Auto Flow 1`] = `
     className="gl-layout-content"
   >
     <div
-      className="grid grid--stretch"
-      data-push-left="off-0"
+      className="grid col-12 grid--stretch"
     >
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -125,7 +22,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -136,7 +32,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-4"
-        data-push-left="off-0"
       >
         <div
           className="box3"
@@ -147,7 +42,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-3"
-        data-push-left="off-0"
       >
         <div
           className="box4"
@@ -158,7 +52,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box5"
@@ -173,7 +66,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -184,7 +76,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -195,7 +86,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box3"
@@ -206,7 +96,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box4"
@@ -217,7 +106,6 @@ exports[`Storyshots Grid Auto Flow 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box5"
@@ -239,441 +127,400 @@ exports[`Storyshots Grid Fraction 1`] = `
     className="gl-layout-content"
   >
     <h1>
-      nth
+      Auto Size
     </h1>
     <div
       className="grid col-12"
-      data-push-left="off-0"
+    />
+    <div
+      className="grid col-12"
     >
       <div
         className="col"
-        data-push-left="off-0"
       >
         <div
           className="box1"
-          style={Object {}}
-        >
-          1 / 8
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 8
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 8
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          1 / 8
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          1 / 8
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          1 / 8
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 8
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 8
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid col-12"
-      data-push-left="off-0"
-    >
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 7
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 7
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          1 / 7
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          1 / 7
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          1 / 7
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 7
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 7
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid col-12"
-      data-push-left="off-0"
-    >
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 6
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          1 / 6
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          1 / 6
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          1 / 6
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 6
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 6
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid col-12"
-      data-push-left="off-0"
-    >
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          1 / 5
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          1 / 5
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          1 / 5
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 5
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 5
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid col-12"
-      data-push-left="off-0"
-    >
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          1 / 4
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          1 / 4
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 4
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 4
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid col-12"
-      data-push-left="off-0"
-    >
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          1 / 3
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 3
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 3
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid col-12"
-      data-push-left="off-0"
-    >
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          1 / 2
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          1 / 2
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid col-12"
-      data-push-left="off-0"
-    >
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
           style={Object {}}
         >
           1 / 1
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 2
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 2
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 3
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 3
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 3
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 4
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 4
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 4
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 4
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 5
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 6
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 7
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          1 / 8
+        </div>
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          1 / 8
         </div>
       </div>
     </div>
@@ -682,11 +529,9 @@ exports[`Storyshots Grid Fraction 1`] = `
     </h1>
     <div
       className="grid col-12"
-      data-push-left="off-0"
     >
       <div
         className="col-8"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -697,7 +542,6 @@ exports[`Storyshots Grid Fraction 1`] = `
       </div>
       <div
         className="col"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -712,11 +556,9 @@ exports[`Storyshots Grid Fraction 1`] = `
     </h1>
     <div
       className="grid col-12"
-      data-push-left="off-0"
     >
       <div
         className="col-6"
-        data-push-left="off-0"
       >
         <div
           className="box3"
@@ -727,7 +569,6 @@ exports[`Storyshots Grid Fraction 1`] = `
       </div>
       <div
         className="col"
-        data-push-left="off-0"
       >
         <div
           className="box4"
@@ -738,7 +579,6 @@ exports[`Storyshots Grid Fraction 1`] = `
       </div>
       <div
         className="col"
-        data-push-left="off-0"
       >
         <div
           className="box5"
@@ -753,71 +593,12 @@ exports[`Storyshots Grid Fraction 1`] = `
     </h1>
     <div
       className="grid col-12"
-      data-push-left="off-0"
-    >
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          1
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          2
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          3
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          4
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          5
-        </div>
-      </div>
-    </div>
+    />
     <div
       className="grid col-12"
-      data-push-left="off-0"
     >
       <div
         className="col-6"
-        data-push-left="off-0"
       >
         <div
           className="box3"
@@ -826,59 +607,71 @@ exports[`Storyshots Grid Fraction 1`] = `
           6 (fixed)
         </div>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Horizontal Align 1`] = `
+<div
+  className="gl-layout-root"
+>
+  <div
+    className="gl-layout-content"
+  >
+    <div
+      className="grid grid--left col-12"
+    >
       <div
-        className="col"
-        data-push-left="off-0"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          2
-        </div>
-      </div>
-      <div
-        className="col"
-        data-push-left="off-0"
+        className="col-2"
       >
         <div
           className="box2"
           style={Object {}}
         >
-          3
+          LEFT
         </div>
       </div>
+    </div>
+    <div
+      className="grid grid--center col-12"
+    >
       <div
-        className="col"
-        data-push-left="off-0"
+        className="col-2"
       >
         <div
           className="box3"
           style={Object {}}
         >
-          4
+          CENTER
         </div>
       </div>
+    </div>
+    <div
+      className="grid grid--right col-12"
+    >
       <div
-        className="col"
-        data-push-left="off-0"
+        className="col-2"
       >
         <div
           className="box4"
           style={Object {}}
         >
-          5
+          RIGHT
         </div>
       </div>
+    </div>
+    <div
+      className="grid col-12"
+    >
       <div
-        className="col"
-        data-push-left="off-0"
+        className="col-2"
       >
         <div
           className="box5"
           style={Object {}}
         >
-          6
+          DEFAULT
         </div>
       </div>
     </div>
@@ -894,20 +687,17 @@ exports[`Storyshots Grid Nested 1`] = `
     className="gl-layout-content"
   >
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
-        className="col-6 grid"
-        data-push-left="off-0"
+        className="grid col-6"
       >
         <div
-          className="box1 grid"
+          className="box1 grid grid--no-bottom"
           style={Object {}}
         >
           <div
-            className="col-3"
-            data-push-left="off-0"
+            className="col-6"
           >
             <div
               className="box3"
@@ -917,8 +707,7 @@ exports[`Storyshots Grid Nested 1`] = `
             </div>
           </div>
           <div
-            className="col-3"
-            data-push-left="off-0"
+            className="col-6"
           >
             <div
               className="box4"
@@ -930,16 +719,14 @@ exports[`Storyshots Grid Nested 1`] = `
         </div>
       </div>
       <div
-        className="col-6 grid"
-        data-push-left="off-0"
+        className="grid col-6"
       >
         <div
-          className="box2 grid"
+          className="box2 grid grid--no-bottom"
           style={Object {}}
         >
           <div
             className="col-3"
-            data-push-left="off-0"
           >
             <div
               className="box4"
@@ -949,8 +736,7 @@ exports[`Storyshots Grid Nested 1`] = `
             </div>
           </div>
           <div
-            className="col-3"
-            data-push-left="off-0"
+            className="col--offset-6 col-3"
           >
             <div
               className="box5"
@@ -963,20 +749,17 @@ exports[`Storyshots Grid Nested 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
-        className="col-6 grid"
-        data-push-left="off-0"
+        className="grid col-6"
       >
         <div
-          className="box1 grid"
+          className="box1 grid grid--no-bottom"
           style={Object {}}
         >
           <div
-            className="col-3"
-            data-push-left="off-3"
+            className="col--offset-3 col-6"
           >
             <div
               className="box4"
@@ -988,16 +771,14 @@ exports[`Storyshots Grid Nested 1`] = `
         </div>
       </div>
       <div
-        className="col-6 grid"
-        data-push-left="off-0"
+        className="grid col-6"
       >
         <div
-          className="box2 grid"
+          className="box2 grid grid--no-bottom"
           style={Object {}}
         >
           <div
-            className="col-1"
-            data-push-left="off-0"
+            className="col-4"
           >
             <div
               className="box4"
@@ -1007,8 +788,7 @@ exports[`Storyshots Grid Nested 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
-            data-push-left="off-4"
+            className="col--offset-4 col-4"
           >
             <div
               className="box5"
@@ -1021,20 +801,17 @@ exports[`Storyshots Grid Nested 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
-        className="col-6 grid"
-        data-push-left="off-0"
+        className="grid col-6"
       >
         <div
-          className="box2 grid"
+          className="box2 grid grid--no-bottom"
           style={Object {}}
         >
           <div
             className="col-1"
-            data-push-left="off-0"
           >
             <div
               className="box1"
@@ -1045,7 +822,6 @@ exports[`Storyshots Grid Nested 1`] = `
           </div>
           <div
             className="col-1"
-            data-push-left="off-0"
           >
             <div
               className="box2"
@@ -1056,7 +832,6 @@ exports[`Storyshots Grid Nested 1`] = `
           </div>
           <div
             className="col-1"
-            data-push-left="off-0"
           >
             <div
               className="box3"
@@ -1067,7 +842,6 @@ exports[`Storyshots Grid Nested 1`] = `
           </div>
           <div
             className="col-1"
-            data-push-left="off-0"
           >
             <div
               className="box4"
@@ -1078,7 +852,6 @@ exports[`Storyshots Grid Nested 1`] = `
           </div>
           <div
             className="col-1"
-            data-push-left="off-0"
           >
             <div
               className="box5"
@@ -1089,7 +862,6 @@ exports[`Storyshots Grid Nested 1`] = `
           </div>
           <div
             className="col-1"
-            data-push-left="off-0"
           >
             <div
               className="box1"
@@ -1113,12 +885,10 @@ exports[`Storyshots Grid Offset 1`] = `
     className="gl-layout-content"
   >
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1128,8 +898,7 @@ exports[`Storyshots Grid Offset 1`] = `
         </div>
       </div>
       <div
-        className="col-1"
-        data-push-left="off-7"
+        className="col--offset-7 col-1"
       >
         <div
           className="box1"
@@ -1140,12 +909,10 @@ exports[`Storyshots Grid Offset 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
-        className="col-1"
-        data-push-left="off-1"
+        className="col--offset-1 col-1"
       >
         <div
           className="box2"
@@ -1155,8 +922,7 @@ exports[`Storyshots Grid Offset 1`] = `
         </div>
       </div>
       <div
-        className="col-1"
-        data-push-left="off-5"
+        className="col--offset-5 col-1"
       >
         <div
           className="box2"
@@ -1166,8 +932,7 @@ exports[`Storyshots Grid Offset 1`] = `
         </div>
       </div>
       <div
-        className="col-1"
-        data-push-left="off-1"
+        className="col--offset-1 col-1"
       >
         <div
           className="box2"
@@ -1178,12 +943,10 @@ exports[`Storyshots Grid Offset 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
-        className="col-1"
-        data-push-left="off-2"
+        className="col--offset-2 col-1"
       >
         <div
           className="box3"
@@ -1193,8 +956,7 @@ exports[`Storyshots Grid Offset 1`] = `
         </div>
       </div>
       <div
-        className="col-1"
-        data-push-left="off-3"
+        className="col--offset-3 col-1"
       >
         <div
           className="box3"
@@ -1204,8 +966,7 @@ exports[`Storyshots Grid Offset 1`] = `
         </div>
       </div>
       <div
-        className="col-1"
-        data-push-left="off-3"
+        className="col--offset-3 col-1"
       >
         <div
           className="box3"
@@ -1216,12 +977,10 @@ exports[`Storyshots Grid Offset 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
-        className="col-1"
-        data-push-left="off-3"
+        className="col--offset-3 col-1"
       >
         <div
           className="box4"
@@ -1231,8 +990,7 @@ exports[`Storyshots Grid Offset 1`] = `
         </div>
       </div>
       <div
-        className="col-1"
-        data-push-left="off-1"
+        className="col--offset-1 col-1"
       >
         <div
           className="box4"
@@ -1242,8 +1000,7 @@ exports[`Storyshots Grid Offset 1`] = `
         </div>
       </div>
       <div
-        className="col-1"
-        data-push-left="off-5"
+        className="col--offset-5 col-1"
       >
         <div
           className="box4"
@@ -1254,12 +1011,10 @@ exports[`Storyshots Grid Offset 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
-        className="col-1"
-        data-push-left="off-4"
+        className="col--offset-4 col-1"
       >
         <div
           className="box5"
@@ -1270,12 +1025,10 @@ exports[`Storyshots Grid Offset 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1297,12 +1050,10 @@ exports[`Storyshots Grid Sizing 1`] = `
     className="gl-layout-content"
   >
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1313,7 +1064,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1324,7 +1074,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1335,7 +1084,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1346,7 +1094,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1357,7 +1104,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1368,7 +1114,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1379,7 +1124,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1390,7 +1134,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1401,7 +1144,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1412,7 +1154,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1423,7 +1164,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-1"
-        data-push-left="off-0"
       >
         <div
           className="box1"
@@ -1434,12 +1174,10 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -1450,7 +1188,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -1461,7 +1198,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -1472,7 +1208,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -1483,7 +1218,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -1494,7 +1228,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-2"
-        data-push-left="off-0"
       >
         <div
           className="box2"
@@ -1505,12 +1238,10 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
         className="col-3"
-        data-push-left="off-0"
       >
         <div
           className="box3"
@@ -1521,7 +1252,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-3"
-        data-push-left="off-0"
       >
         <div
           className="box3"
@@ -1532,7 +1262,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-3"
-        data-push-left="off-0"
       >
         <div
           className="box3"
@@ -1543,7 +1272,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-3"
-        data-push-left="off-0"
       >
         <div
           className="box3"
@@ -1554,12 +1282,10 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
         className="col-4"
-        data-push-left="off-0"
       >
         <div
           className="box4"
@@ -1570,7 +1296,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-4"
-        data-push-left="off-0"
       >
         <div
           className="box4"
@@ -1581,7 +1306,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-4"
-        data-push-left="off-0"
       >
         <div
           className="box4"
@@ -1592,12 +1316,10 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
     >
       <div
         className="col-6"
-        data-push-left="off-0"
       >
         <div
           className="box5"
@@ -1608,7 +1330,6 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
       <div
         className="col-6"
-        data-push-left="off-0"
       >
         <div
           className="box5"
@@ -1619,18 +1340,190 @@ exports[`Storyshots Grid Sizing 1`] = `
       </div>
     </div>
     <div
-      className="grid"
-      data-push-left="off-0"
+      className="grid col-12"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="box1"
+          style={Object {}}
+        >
+          Auto
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid col-12"
     >
       <div
         className="col-12"
-        data-push-left="off-0"
       >
         <div
           className="box1"
           style={Object {}}
         >
           12
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Vertical Align 1`] = `
+<div
+  className="gl-layout-root"
+>
+  <div
+    className="gl-layout-content"
+  >
+    <h1>
+      Item Align
+    </h1>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="col-1"
+      >
+        <div
+          className="box1"
+          style={
+            Object {
+              "height": 300,
+            }
+          }
+        >
+           
+        </div>
+      </div>
+      <div
+        className="col--top col-2"
+      >
+        <div
+          className="box2"
+          style={Object {}}
+        >
+          TOP
+        </div>
+      </div>
+      <div
+        className="col--middle col-2"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          MIDDLE
+        </div>
+      </div>
+      <div
+        className="col--bottom col-2"
+      >
+        <div
+          className="box4"
+          style={Object {}}
+        >
+          BOTTOM
+        </div>
+      </div>
+      <div
+        className="col--middle col-2"
+      >
+        <div
+          className="box3"
+          style={Object {}}
+        >
+          MIDDLE
+        </div>
+      </div>
+      <div
+        className="col-2"
+      >
+        <div
+          className="box5"
+          style={Object {}}
+        >
+          DEFAULT
+        </div>
+      </div>
+      <div
+        className="col-1"
+      >
+        <div
+          className="box1"
+          style={
+            Object {
+              "height": 300,
+            }
+          }
+        >
+           
+        </div>
+      </div>
+    </div>
+    <h1>
+      Grid Align
+    </h1>
+    <div
+      className="grid col-12"
+    >
+      <div
+        className="grid grid--top col-4"
+        style={
+          Object {
+            "height": 300,
+          }
+        }
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="box3"
+            style={Object {}}
+          >
+            TOP
+          </div>
+        </div>
+      </div>
+      <div
+        className="grid grid--middle col-4"
+        style={
+          Object {
+            "height": 300,
+          }
+        }
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="box3"
+            style={Object {}}
+          >
+            MIDDLE
+          </div>
+        </div>
+      </div>
+      <div
+        className="grid grid--bottom col-4"
+        style={
+          Object {
+            "height": 300,
+          }
+        }
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="box3"
+            style={Object {}}
+          >
+            BOTTOM
+          </div>
         </div>
       </div>
     </div>

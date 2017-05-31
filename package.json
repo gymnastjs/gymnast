@@ -52,14 +52,14 @@
     }
   },
   "scripts": {
-    "build": "postcss -c postcss.config.js -o dist/flex.build.css flex.css",
+    "build": "postcss -c postcss.config.js -o dist/flex.build.css src/flex.css",
     "commit": "git-cz",
     "format-all:css": "git ls-files *.css | xargs yarn format:css",
     "format-all:js": "git ls-files *.js | xargs yarn format:js",
     "format-all": "npm-run-all --parallel format-all:*",
     "format:css": "./scripts/formatcss.sh",
     "format:js": "prettier --write --single-quote --no-semi --trailing-comma es5",
-    "lint:css": "stylelint *.css",
+    "lint:css": "stylelint src/*.css stories/*.css",
     "lint:js": "eslint src stories storybook",
     "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",

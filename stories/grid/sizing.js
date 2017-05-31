@@ -31,6 +31,9 @@ story.add('Sizing', () => {
           <Grid>
             {times(2, i => <Box key={i} size={6} type="E" value="6" />)}
           </Grid>
+          <Grid size={12}>
+            <Box type="A" value="Auto" />
+          </Grid>
           <Grid>
             <Box size={size} type="A" value={`${size}`} />
           </Grid>

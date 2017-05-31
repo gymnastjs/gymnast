@@ -4,4 +4,8 @@ export const ALIGN = {
   BOTTOM: Symbol('ALIGN_BOTTOM'),
 }
 
-export default ALIGN
+export const JUSTIFY = {
+  LEFT: Symbol('JUSTIFY_LEFT'),
+  CENTER: Symbol('JUSTIFY_CENTER'),
+  RIGHT: Symbol('JUSTIFY_RIGHT'),
+}

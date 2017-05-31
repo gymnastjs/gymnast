@@ -1,22 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compact, getDisplayName } from './utils'
-import { ALIGN } from './values'
-
-function getAlignment(value) {
-  const prefix = 'col--'
-
-  switch (value) {
-    case ALIGN.TOP:
-      return `${prefix}top`
-    case ALIGN.MIDDLE:
-      return `${prefix}middle`
-    case ALIGN.BOTTOM:
-      return `${prefix}bottom`
-    default:
-      return ''
-  }
-}
+import { compact, getDisplayName, getAlignment } from './utils'
 
 export default function Item(Component) {
   return class withItem extends React.PureComponent {
@@ -24,18 +8,13 @@ export default function Item(Component) {
       const { className, size, offset, grid, align, ...props } = this.props
       const classes = compact([
         className,
-        size ? `col-${size}` : 'col',
+        getAlignment(align, 'col--'),
         grid && 'grid',
-        getAlignment(align),
+        offset && `col--offset-${offset}`,
+        size ? `col-${size}` : 'col',
       ])
 
-      return (
-        <Component
-          {...props}
-          className={classes.join(' ')}
-          data-push-left={`off-${offset}`}
-        />
-      )
+      return <Component {...props} className={classes.join(' ')} />
     }
 
     static displayName = getDisplayName(
