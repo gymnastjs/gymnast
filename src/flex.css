@@ -24,24 +24,25 @@
   min-width: var(--min-width);
 }
 
-[class*=grid] {
+.grid {
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   margin: 0 calc(-1 * var(--gutter) / 2);
 }
 
-[class*=col-],[class^=col] {
+[class*=col-],.col {
   box-sizing: border-box;
   flex: 0 0 auto;
   padding: 0 calc(var(--gutter) / 2) var(--gutter);
 }
 
-[class^=col] {
+.col {
   flex: 1 1 0%;
 }
 
-[class^=grid][class*=col-],[class^=grid][class^=col] {
+.grid[class*=col-],
+.grid.col {
   margin: 0;
   padding: 0
 }
@@ -54,50 +55,35 @@
   padding: 0;
 }
 
-[class*=grid-][class*=-noWrap] {
-  flex-wrap: nowrap;
+.grid--left {
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin-right: auto;
 }
 
-[class*=grid-][class*=-center] {
+.grid--center {
   justify-content: center;
 }
 
-[class*=grid-][class*=-right] {
+.grid--right {
   justify-content: flex-end;
   align-self: flex-end;
   margin-left: auto;
 }
 
-[class*=grid-][class*=-top] {
+.grid--top {
+  align-content: flex-start;
   align-items: flex-start;
 }
 
-[class*=grid-][class*=-middle] {
+.grid--middle {
+  align-content: center;
   align-items: center;
 }
 
-[class*=grid-][class*=-bottom] {
+.grid--bottom {
+  align-content: flex-end;
   align-items: flex-end;
-}
-
-[class*=grid-][class*=-column] {
-  flex-direction: column
-}
-
-[class*=grid-][class*=-column]>[class*=col-] {
-  flex-basis: auto
-}
-
-[class*=grid-][class*=-column-reverse] {
-  flex-direction: column-reverse
-}
-
-[class*=grid-][class*=-spaceBetween] {
-  justify-content: space-between
-}
-
-[class*=grid-][class*=-spaceAround] {
-  justify-content: space-around
 }
 
 .grid--stretch > [class*=col] {
@@ -109,42 +95,31 @@
   flex: 1 0 100%;
 }
 
-[class*=grid-][class*=-noBottom] > [class*=col] {
-  padding-bottom: 0
+.grid--no-bottom > [class*=col] {
+  padding-bottom: 0;
 }
 
-[class*=col-][class*=-top] {
-  align-self: flex-start
+.col--top {
+  align-self: flex-start;
 }
 
-[class*=col-][class*=-middle] {
-  align-self: center
+.col--middle {
+  align-self: center;
 }
 
-[class*=col-][class*=-bottom] {
-  align-self: flex-end
-}
-
-@for $i from 1 to 11 {
-  [class*=grid-$(i)] > [class*=col-],[class*=grid-$(i)] > [class^=col] {
-    flex-basis: calc((1 / $i) * 100%);
-    max-width: calc((1 / $i) * 100%);
-  }
+.col--bottom {
+  align-self: flex-end;
 }
 
 @for $i from 1 to 12 {
-  [class*=grid] > [class*=col-$(i)] {
+  .col-$(i) {
     flex-basis: calc(($i / 12) * 100%);
     max-width: calc(($i / 12) * 100%);
   }
 }
 
 @for $i from 0 to 11 {
-  [class*=grid] > [data-push-left*=off-$(i)] {
+  .col--offset-$(i) {
     margin-left: calc($i / 12 * 100%);
-  }
-
-  [class*=grid] > [data-push-right*=off-0] {
-    margin-right: calc($i / 12 * 100%);
   }
 }

@@ -11,14 +11,15 @@ const notes =
   'When adding elements that exceed the number of columns available, they will overflow to the next row'
 
 story.add('Auto Flow', () => {
-  const stretch = boolean('Stretch height', true)
-  const margin = boolean('Include margin', true)
+  const stretch = boolean('Stretch', true)
+  const margin = boolean('Margin', true)
+  const bottom = boolean('Bottom', true)
 
   return (
     <WithNotes notes={notes}>
       <div className="gl-layout-root">
         <div className="gl-layout-content">
-          <Grid stretch={stretch} margin={margin}>
+          <Grid stretch={stretch} margin={margin} bottom={bottom}>
             <Box size={1} type="A" />
             <Box size={2} type="B" />
             <Box size={4} type="C" />
