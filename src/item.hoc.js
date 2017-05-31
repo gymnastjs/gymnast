@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact, getDisplayName, getAlignment } from './utils'
+import { ALIGN } from './values'
 
 export default function Item(Component) {
   return class withItem extends React.PureComponent {
@@ -30,11 +31,13 @@ export default function Item(Component) {
     }
 
     static propTypes = {
-      align: PropTypes.symbol,
+      align: PropTypes.oneOf(Object.values(ALIGN)),
       className: PropTypes.string,
       grid: PropTypes.bool,
       offset: PropTypes.number,
       size: PropTypes.number,
     }
+
+    static ALIGN = ALIGN
   }
 }

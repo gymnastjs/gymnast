@@ -1,13 +1,9 @@
 :root {
   --gutter: 20px;
-  --min-row-height: var(--gutter);
   --vertical-gutter: var(--gutter);
   --page-margin: 50px;
   --max-width: 1280px;
   --min-width: 400px;
-  --columns: 12;
-  --small-max-column-width: calc(100vw - var(--page-margin) * 2 - var(--gutter) * (var(--columns) - 1)) / var(--columns);
-  --max-column-width: calc((var(--max-width) - var(--page-margin) * 2 - var(--gutter) * (var(--columns) - 1)) / var(--columns));
 }
 
 .gl-layout-root {
@@ -18,9 +14,9 @@
 
 .gl-layout-content {
   box-sizing: border-box;
-  margin-left: calc(var(--page-margin) + (var(--gutter) / 2));
-  margin-right: var(--page-margin);
-  width: calc(var(--max-width) - var(--page-margin) * 2);
+  margin-left: calc(var(--page-margin) - (var(--gutter) / 2));
+  margin-right: calc(var(--page-margin) - (var(--gutter) / 2));
+  width: calc(var(--max-width) - (var(--page-margin) - (var(--gutter) / 2)) * 2);
   min-width: var(--min-width);
 }
 
@@ -31,20 +27,19 @@
   margin: 0 calc(-1 * var(--gutter) / 2);
 }
 
-[class*=col-],.col {
+[class*=col-], .col {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding: 0 calc(var(--gutter) / 2) var(--gutter);
+  padding: 0 calc(var(--gutter) / 2) var(--vertical-gutter);
 }
 
 .col {
   flex: 1 1 0%;
 }
 
-.grid[class*=col-],
-.grid.col {
+.grid[class*=col-], .grid.col {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .grid--no-margin {

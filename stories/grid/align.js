@@ -5,8 +5,8 @@ import { WithNotes } from '@storybook/addon-notes'
 import story from './story'
 import { times } from '../../src/utils'
 import Grid from '../../src/grid'
+import Item from '../../src/item'
 import Box from '../box'
-import { ALIGN, JUSTIFY } from '../../src/values'
 
 const notes =
   'Alignment defaults to top but middle and bottom are also available'
@@ -46,10 +46,10 @@ story.add('Vertical Align', () => {
           <h1>Item Align</h1>
           <Grid margin={margin} stretch={stretch}>
             <ReferenceColumn height={height} />
-            <Box size={2} type="B" value="TOP" align={ALIGN.TOP} />
-            <Box size={2} type="C" value="MIDDLE" align={ALIGN.MIDDLE} />
-            <Box size={2} type="D" value="BOTTOM" align={ALIGN.BOTTOM} />
-            <Box size={2} type="C" value="MIDDLE" align={ALIGN.MIDDLE} />
+            <Box size={2} type="B" value="TOP" align={Item.ALIGN.TOP} />
+            <Box size={2} type="C" value="MIDDLE" align={Item.ALIGN.MIDDLE} />
+            <Box size={2} type="D" value="BOTTOM" align={Item.ALIGN.BOTTOM} />
+            <Box size={2} type="C" value="MIDDLE" align={Item.ALIGN.MIDDLE} />
             <Box size={2} type="E" value="DEFAULT" />
             <ReferenceColumn height={height} />
           </Grid>
@@ -59,7 +59,7 @@ story.add('Vertical Align', () => {
               size={4}
               margin={margin}
               stretch={stretch}
-              align={ALIGN.TOP}
+              align={Grid.ALIGN.TOP}
               style={{ height }}
             >
               {times(items, i => (
@@ -70,7 +70,7 @@ story.add('Vertical Align', () => {
               size={4}
               margin={margin}
               stretch={stretch}
-              align={ALIGN.MIDDLE}
+              align={Grid.ALIGN.MIDDLE}
               style={{ height }}
             >
               {times(items, i => (
@@ -81,7 +81,7 @@ story.add('Vertical Align', () => {
               size={4}
               margin={margin}
               stretch={stretch}
-              align={ALIGN.BOTTOM}
+              align={Grid.ALIGN.BOTTOM}
               style={{ height }}
             >
               {times(items, i => (
@@ -108,13 +108,13 @@ story.add('Horizontal Align', () => {
     <WithNotes notes={notes}>
       <div className="gl-layout-root">
         <div className="gl-layout-content">
-          <Grid size={size} margin={margin} justify={JUSTIFY.LEFT}>
+          <Grid size={size} margin={margin} justify={Grid.JUSTIFY.LEFT}>
             <Box size={2} type="B" value="LEFT" />
           </Grid>
-          <Grid size={size} margin={margin} justify={JUSTIFY.CENTER}>
+          <Grid size={size} margin={margin} justify={Grid.JUSTIFY.CENTER}>
             <Box size={2} type="C" value="CENTER" />
           </Grid>
-          <Grid size={size} margin={margin} justify={JUSTIFY.RIGHT}>
+          <Grid size={size} margin={margin} justify={Grid.JUSTIFY.RIGHT}>
             <Box size={2} type="D" value="RIGHT" />
           </Grid>
           <Grid size={size} margin={margin}>
