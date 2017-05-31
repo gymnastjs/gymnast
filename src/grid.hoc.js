@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact, getDisplayName, getJustify, getAlignment } from './utils'
+import { ALIGN, JUSTIFY } from './values'
 
 export default function Grid(Component) {
   return class withGrid extends React.PureComponent {
@@ -47,14 +48,17 @@ export default function Grid(Component) {
     }
 
     static propTypes = {
-      align: PropTypes.symbol,
+      align: PropTypes.oneOf(Object.values(ALIGN)),
       bottom: PropTypes.bool,
       className: PropTypes.string,
-      justify: PropTypes.symbol,
+      justify: PropTypes.oneOf(Object.values(JUSTIFY)),
       margin: PropTypes.bool,
       offset: PropTypes.number,
       size: PropTypes.number,
       stretch: PropTypes.bool,
     }
+
+    static ALIGN = ALIGN
+    static JUSTIFY = JUSTIFY
   }
 }

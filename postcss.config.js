@@ -1,5 +1,5 @@
 const postcssFor = require('postcss-for')
-const cssnano = require('cssnano')()
+const cssnano = require('cssnano')
 const next = require('postcss-cssnext')
 
 module.exports = {
@@ -10,6 +10,6 @@ module.exports = {
         autoprefixer: false,
       },
     }),
-    cssnano,
+    cssnano(),
   ],
 }
