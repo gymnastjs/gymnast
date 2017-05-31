@@ -17,24 +17,26 @@ export function times(number = 0, callback = noop) {
 export function getAlignment(value, prefix) {
   switch (value) {
     case ALIGN.TOP:
-      return `${prefix}top`
+      return `${prefix}--top`
     case ALIGN.MIDDLE:
-      return `${prefix}middle`
+      return `${prefix}--middle`
     case ALIGN.BOTTOM:
-      return `${prefix}bottom`
+      return `${prefix}--bottom`
     default:
       return ''
   }
 }
 
-export function getJustify(value, prefix) {
+export function getJustify(value) {
+  const prefix = 'grid'
+
   switch (value) {
     case JUSTIFY.LEFT:
-      return `${prefix}left`
+      return `${prefix}--left`
     case JUSTIFY.CENTER:
-      return `${prefix}center`
+      return `${prefix}--center`
     case JUSTIFY.RIGHT:
-      return `${prefix}right`
+      return `${prefix}--right`
     default:
       return ''
   }
