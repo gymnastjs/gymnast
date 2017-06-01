@@ -1,9 +1,10 @@
 :root {
-  --gutter: 20px;
+  --base: 8px;
+  --gutter: calc(var(--base) * 3);
   --vertical-gutter: var(--gutter);
-  --page-margin: 50px;
-  --max-width: 1280px;
-  --min-width: 400px;
+  --page-margin: calc(var(--base) * 6);
+  --max-width: calc(var(--base) * 160); /* 1280px */
+  --min-width: calc(var(--base) * 50); /* 400px */
 }
 
 .gl-layout-root {

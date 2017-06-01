@@ -22,6 +22,11 @@ section {
   min-height: 400px;
 }
 
+h2 {
+  margin: 0 20px;
+  text-align: left;
+}
+
 ul {
   margin: 0;
   padding: 20px;
@@ -34,9 +39,10 @@ li {
   text-align: left;
 }
 
-.box1, .box2, .box3, .box4, .box5 {
-  text-align: center;
+[class*=box] {
   cursor: default;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
