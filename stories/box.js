@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from '../src/utils'
+import Grid from '../src/grid'
 import ItemHOC from '../src/item.hoc'
 
 const typeMap = {
@@ -48,7 +49,9 @@ class Box extends React.PureComponent {
     return (
       <div {...props}>
         <div className={classes.join(' ')} style={style}>
-          {children || value}
+          <Grid align={Grid.ALIGN.MIDDLE} justify={Grid.JUSTIFY.CENTER}>
+            {children || value}
+          </Grid>
         </div>
       </div>
     )
