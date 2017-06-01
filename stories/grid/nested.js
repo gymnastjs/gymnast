@@ -5,6 +5,7 @@ import { number } from '@storybook/addon-knobs'
 import story from './story'
 import Grid from '../../src/grid'
 import { times } from '../../src/utils'
+import Root from '../root'
 import Box from '../box'
 import { getBoxType } from '../utils'
 
@@ -16,41 +17,39 @@ story.add('Nested', () => {
 
   return (
     <WithNotes notes={notes}>
-      <div className="gl-layout-root">
-        <div className="gl-layout-content">
-          <Grid>
-            <Box size={6} type="A" grid nest>
-              <Box size={6} type="C" />
-              <Box size={6} type="D" />
-            </Box>
-            <Box size={6} type="B" grid nest>
-              <Box size={3} type="D" />
-              <Box size={3} type="E" offset={6} />
-            </Box>
-          </Grid>
-          <Grid>
-            <Box size={6} type="A" grid nest>
-              <Box size={6} offset={3} type="D" />
-            </Box>
-            <Box size={6} type="B" grid nest>
-              <Box size={4} type="D" />
-              <Box size={4} offset={4} type="E" />
-            </Box>
-          </Grid>
-          <Grid>
-            <Box size={6} type="B" grid nest>
-              {times(items, index => (
-                <Box
-                  key={index}
-                  size={1}
-                  type={getBoxType(index)}
-                  value={`${index % 12 + 1}`}
-                />
-              ))}
-            </Box>
-          </Grid>
-        </div>
-      </div>
+      <Root>
+        <Grid>
+          <Box size={6} type="A" grid nest>
+            <Box size={6} type="C" />
+            <Box size={6} type="D" />
+          </Box>
+          <Box size={6} type="B" grid nest>
+            <Box size={3} type="D" />
+            <Box size={3} type="E" offset={6} />
+          </Box>
+        </Grid>
+        <Grid>
+          <Box size={6} type="A" grid nest>
+            <Box size={6} offset={3} type="D" />
+          </Box>
+          <Box size={6} type="B" grid nest>
+            <Box size={4} type="D" />
+            <Box size={4} offset={4} type="E" />
+          </Box>
+        </Grid>
+        <Grid>
+          <Box size={6} type="B" grid nest>
+            {times(items, index =>
+              <Box
+                key={index}
+                size={1}
+                type={getBoxType(index)}
+                value={`${index % 12 + 1}`}
+              />
+            )}
+          </Box>
+        </Grid>
+      </Root>
     </WithNotes>
   )
 })

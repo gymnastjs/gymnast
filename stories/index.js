@@ -1,3 +1,4 @@
-import '../src/flex.css'
+import '../src/index.css'
 import './grid'
 import './components'
+import './layout'
