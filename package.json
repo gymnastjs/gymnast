@@ -49,7 +49,10 @@
   "jest": {
     "moduleNameMapper": {
       "\\.css$": "<rootDir>/test/__mocks__/styleMock.js"
-    }
+    },
+    "setupFiles": [
+      "<rootDir>/test/setup.js"
+    ]
   },
   "scripts": {
     "build": "postcss -c postcss.config.js -o dist/flex.build.css src/flex.css",
@@ -70,6 +73,7 @@
     "@storybook/addon-knobs": "3.0.0",
     "@storybook/addon-notes": "3.0.0",
     "@storybook/react": "3.0.0",
+    "babel-polyfill": "^6.23.0",
     "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-dom": "15.5.4"
