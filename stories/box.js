@@ -1,5 +1,5 @@
+// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
 import { compact } from '../src/utils'
 import Grid from '../src/grid'
 import ItemHOC from '../src/item.hoc'
@@ -14,25 +14,21 @@ const typeMap = {
 const types = Object.keys(typeMap)
 
 class Box extends React.PureComponent {
+  static displayName = 'Box'
+
   static defaultProps = {
-    children: undefined,
     nest: false,
     style: {},
     value: undefined,
   }
 
-  static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
-    ]),
-    nest: PropTypes.bool,
-    style: PropTypes.shape({}),
-    type: PropTypes.string.isRequired,
-    value: PropTypes.string,
+  props: {
+    type: string,
+    style: Object,
+    children: any,
+    value?: string,
+    nest?: boolean,
   }
-
-  static displayName = 'Box'
 
   render() {
     const { type, value = type, children, style, nest, ...props } = this.props

@@ -1,8 +1,8 @@
 {
   "extends": [
-      "airbnb",
-      "prettier",
-      "prettier/react"
+    "airbnb",
+    "prettier",
+    "prettier/react"
   ],
   "parserOptions": {
     "ecmaVersion": 2016,
@@ -16,7 +16,8 @@
     "browser": true
   },
   "plugins": [
-    "react"
+    "react",
+    "flowtype"
   ],
   "settings": {
     "react": {
@@ -26,6 +27,7 @@
   "parser": "babel-eslint",
   "rules": {
     "react/jsx-filename-extension": 0,
-    "import/no-extraneous-dependencies": 0
+    "import/no-extraneous-dependencies": 0,
+    "flowtype/define-flow-type": 2
   }
 }

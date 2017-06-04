@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { WithNotes } from '@storybook/addon-notes'
 import { number } from '@storybook/addon-knobs'
