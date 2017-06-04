@@ -1,4 +1,5 @@
-export function getBoxType(index, offset = 0) {
+// @flow
+export function getBoxType(index: number, offset: number = 0) {
   const types = ['A', 'B', 'C', 'D', 'E']
 
   return types[(index + offset) % types.length]

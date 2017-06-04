@@ -1,5 +1,5 @@
+// @flow
 import React from 'react'
-import PropType from 'prop-types'
 import { boolean, number } from '@storybook/addon-knobs'
 import { WithNotes } from '@storybook/addon-notes'
 import story from './story'
@@ -11,7 +11,7 @@ import Box from '../box'
 const notes =
   'Alignment defaults to top but middle and bottom are also available'
 
-function ReferenceColumn({ height }) {
+function ReferenceColumn({ height }: { height: number }) {
   return (
     <Box
       size={1}
@@ -22,10 +22,6 @@ function ReferenceColumn({ height }) {
       }}
     />
   )
-}
-
-ReferenceColumn.prototype.propTypes = {
-  height: PropType.number.isRequired,
 }
 
 story.add('Vertical Align', () => {

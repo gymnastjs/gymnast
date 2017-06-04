@@ -18,9 +18,11 @@
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-prettier": "2.1.1",
+    "eslint-plugin-flowtype": "^2.34.0",
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-react": "7.0.1",
+    "flow-bin": "0.47.0",
     "husky": "0.13.4",
     "jest": "20.0.4",
     "lint-staged": "3.5.1",
@@ -64,13 +66,13 @@
     "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",
     "start": "start-storybook -p 9001 -c storybook",
-    "test": "jest"
+    "test": "jest",
+    "flow": "flow"
   },
   "dependencies": {
     "@storybook/addon-knobs": "3.0.0",
     "@storybook/addon-notes": "3.0.0",
     "@storybook/react": "3.0.0",
-    "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-dom": "15.5.4"
   },
