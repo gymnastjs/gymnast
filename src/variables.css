@@ -6,5 +6,7 @@
   --max-width: calc(var(--base) * 160); /* 1280px */
   --min-width: calc(var(--base) * 50); /* 400px */
 
-  --page-content-width: calc(var(--max-width) - (var(--page-margin) - (var(--gutter) / 2)) * 2);
+  --page-content-width: calc(
+    var(--max-width) - (var(--page-margin) - (var(--gutter) / 2)) * 2
+  );
 }
