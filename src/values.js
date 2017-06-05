@@ -9,3 +9,9 @@ export const JUSTIFY = {
   CENTER: Symbol('JUSTIFY_CENTER'),
   RIGHT: Symbol('JUSTIFY_RIGHT'),
 }
+
+export const SIZE = {
+  AUTO: Symbol('SIZE_AUTO'),
+  STRETCH: Symbol('SIZE_STRETCH'),
+  FIT: Symbol('SIZE_FIT'),
+}

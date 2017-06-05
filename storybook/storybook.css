@@ -7,6 +7,14 @@
   --deep-sea-green: #0B486B;
 }
 
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 body {
   font-weight: bold;
   margin: 0;

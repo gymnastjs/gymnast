@@ -1,0 +1,33 @@
+:root {
+  --primrose: #CFF09E;
+  --moss-green: #A8DBA8;
+  --silver-tree: #79BD9A;
+  --ming: #3B8686;
+  --deep-sea-green: #0B486B;
+}
+
+.holy-grail {
+  & h1, & h2, & .nav > *, & .content > *, & .ads > * {
+    margin: 10px;
+  }
+
+  & .header, & .footer {
+    color: var(--deep-sea-green);
+    background-color: var(--primrose);
+  }
+
+  & .nav {
+    color: var(--deep-sea-green);
+    background-color: var(--moss-green);
+  }
+
+  & .content {
+    color: var(--deep-sea-green);
+    background-color: var(--silver-tree);
+  }
+
+  & .ads {
+    color: var(--primrose);
+    background-color: var(--ming);
+  }
+}

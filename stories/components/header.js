@@ -4,6 +4,7 @@ import { WithNotes } from '@storybook/addon-notes'
 import { number } from '@storybook/addon-knobs'
 import story from './story'
 import Grid from '../../src/grid'
+import Layout from '../../src/layout'
 import { times } from '../../src/utils'
 import Box from '../box'
 
@@ -14,8 +15,8 @@ story.add('Header', () => {
 
   return (
     <WithNotes notes={notes}>
-      <div className="gl-layout-root">
-        <div className="gl-layout-content">
+      <Layout size={Layout.SIZE.AUTO}>
+        <Grid>
           <Grid stretch>
             <Box size={2} type="A" value="Go Back" />
             <Box size={6} type="B">
@@ -26,14 +27,14 @@ story.add('Header', () => {
           </Grid>
           <Grid>
             <Grid size={10}>
-              {times(items, i => (
+              {times(items, i =>
                 <Box size={1} type="A" key={i} value={`${i + 1}`} />
-              ))}
+              )}
             </Grid>
             <Box size={2} type="B" />
           </Grid>
-        </div>
-      </div>
+        </Grid>
+      </Layout>
     </WithNotes>
   )
 })

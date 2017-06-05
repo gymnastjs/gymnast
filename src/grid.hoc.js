@@ -1,13 +1,7 @@
 // @flow
 import React from 'react'
-import {
-  compact,
-  getDisplayName,
-  getJustify,
-  getAlignment,
-  type Offset,
-  type Size,
-} from './utils'
+import { compact, getDisplayName, getJustify, getAlignment } from './utils'
+import { type Offset, type Size } from './types'
 import { ALIGN, JUSTIFY } from './values'
 
 export default function Grid(Component: any) {
@@ -17,10 +11,11 @@ export default function Grid(Component: any) {
       bottom?: boolean,
       className?: string,
       justify?: Symbol,
-      stretch?: boolean,
       margin?: boolean,
-      offset: Offset,
-      size: Size,
+      offset?: Offset,
+      root?: boolean,
+      size?: Size,
+      stretch?: boolean,
     }
 
     static defaultProps = {
@@ -30,6 +25,7 @@ export default function Grid(Component: any) {
       justify: undefined,
       margin: true,
       offset: 0,
+      root: false,
       size: 12,
       stretch: false,
     }
@@ -42,6 +38,7 @@ export default function Grid(Component: any) {
         justify,
         margin,
         offset,
+        root,
         size,
         stretch,
         ...props
@@ -50,12 +47,13 @@ export default function Grid(Component: any) {
         !bottom && 'grid--no-bottom',
         !margin && 'grid--no-margin',
         'grid',
+        `col-${String(size)}`,
         className,
         getAlignment(align, 'grid'),
         getJustify(justify),
-        offset && `col--offset-${offset}`,
-        `col-${String(size)}`,
+        offset && `col--offset-${String(offset)}`,
         stretch && 'grid--stretch',
+        root && 'grid--root',
       ])
 
       return <Component {...props} className={classes.join(' ')} />
@@ -64,6 +62,7 @@ export default function Grid(Component: any) {
     static displayName = `withGrid(${getDisplayName(Component)})`
 
     static ALIGN = ALIGN
+
     static JUSTIFY = JUSTIFY
   }
 }

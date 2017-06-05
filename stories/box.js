@@ -2,6 +2,7 @@
 import React from 'react'
 import { compact } from '../src/utils'
 import Grid from '../src/grid'
+import Item from '../src/item'
 import ItemHOC from '../src/item.hoc'
 
 const typeMap = {
@@ -21,6 +22,8 @@ class Box extends React.PureComponent {
     style: {},
     value: undefined,
   }
+
+  static ALIGN = Item.ALIGN
 
   props: {
     type: string,

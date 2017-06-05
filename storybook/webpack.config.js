@@ -1,12 +1,22 @@
-const path = require('path')
+const { resolve } = require('path')
 
 module.exports = {
   module: {
     rules: [
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader', 'postcss-loader'],
-        include: path.resolve(__dirname, '../'),
+        include: resolve(__dirname, '../'),
+        use: [
+          'style-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: resolve(__dirname, '../scripts/postcss.config.js'),
+              },
+            },
+          },
+        ],
       },
     ],
   },

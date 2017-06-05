@@ -48,11 +48,3 @@ export function getJustify(value: Symbol | void) {
       return ''
   }
 }
-
-export function range(from: number, to: number) {
-  return times(to - from + 1).map((value, index) => index + from)
-}
-
-type zeroThroughEleven = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
-export type Offset = zeroThroughEleven
-export type Size = zeroThroughEleven | 12

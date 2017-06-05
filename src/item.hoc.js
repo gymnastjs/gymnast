@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
-import { compact, getDisplayName, getAlignment, type Size } from './utils'
+import { compact, getDisplayName, getAlignment } from './utils'
+import { type Size } from './types'
 import { ALIGN } from './values'
 
 export default function Item(Component: any) {
