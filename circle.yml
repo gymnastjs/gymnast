@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 7.10.0
+    version: 8.0.0
 general:
   artifacts:
     - "dist"
@@ -10,25 +10,22 @@ general:
 dependencies:
   cache_directories:
     - node_modules
+  override:
+    - yarn
   post:
     - yarn build
 test:
   pre:
     - yarn lint
+  override:
+    - yarn test
 deployment:
   publish:
     owner: obartra
     branch: master
     commands:
-      - ./node_modules/.bin/build-storybook -c storybook -o "$PWD/../temp"
-      - |
-        git config user.email "flexgrid@ci.com"
-        git config user.name "FlexGrid Docs CI"
-        cp circle.yml ../temp
-        cp -R dist ../temp
-        rm -rf *
-        mv ../temp/* .
-        rm -rf ../temp
-        git add -A -f
-        git commit -m "Publish StoryBook" --no-verify
-        git push -f origin master:gh-pages
+      - ./scripts/deploystorybook.sh
+  dev:
+    branch: /^(?!.*(master|gh-pages)).+$/
+    commands:
+      - ./scripts/deploystorybook.sh

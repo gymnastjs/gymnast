@@ -2421,7 +2421,7 @@ exports[`Storyshots Layout Holy Grail 1`] = `
           </h2>
         </div>
         <div
-          className="grid col-8 content"
+          className="grid col-8 content grid--top"
         >
           <h2>
             Content
