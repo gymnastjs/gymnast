@@ -26,7 +26,7 @@ story.add('Holy Grail', () => {
           <Layout>
             <Grid root>
               <Grid size={2} className="nav"><h2>Nav</h2></Grid>
-              <Grid size={8} className="content">
+              <Grid size={8} className="content" align={Grid.ALIGN.TOP}>
                 <h2>Content</h2>
                 {includeText && <p>{LoremIpsum}</p>}
               </Grid>
