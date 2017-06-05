@@ -1,0 +1,52 @@
+{
+  "name": "colorguard",
+  "version": "1.2.0",
+  "description": "Keep a watchful eye on your css colors",
+  "main": "index.js",
+  "preferGlobal": true,
+  "scripts": {
+    "lint": "jshint .",
+    "test": "npm run lint && tape test/*.js | tap-spec"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "index.js"
+  ],
+  "bin": "./bin/colorguard",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SlexAxton/css-colorguard.git"
+  },
+  "keywords": [
+    "css",
+    "colors",
+    "lint",
+    "csslint",
+    "postcss",
+    "postcss-plugin"
+  ],
+  "author": "Alex Sexton <alexsexton@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SlexAxton/css-colorguard/issues"
+  },
+  "homepage": "https://github.com/SlexAxton/css-colorguard",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "color-diff": "^0.1.3",
+    "log-symbols": "^1.0.2",
+    "object-assign": "^4.0.1",
+    "pipetteur": "^2.0.0",
+    "plur": "^2.0.0",
+    "postcss": "^5.0.4",
+    "postcss-reporter": "^1.2.1",
+    "text-table": "^0.2.0",
+    "yargs": "^1.2.6"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.0"
+  }
+}
