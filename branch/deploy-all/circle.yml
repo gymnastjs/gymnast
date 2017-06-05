@@ -24,54 +24,8 @@ deployment:
     owner: obartra
     branch: master
     commands:
-      - |
-        # Setup git for later commits
-        git config user.email "$CIRCLE_USERNAME@flexgrid.ci" && git config user.name "FlexGrid CI ($CIRCLE_BRANCH)"
-        # Build StoryBook in the `../temp` folder
-        ./node_modules/.bin/build-storybook -c storybook -o "$PWD/../temp"
-        # Copy circle.yml as well to ensure last config is used
-        cp circle.yml ../temp && cp .gitignore ../temp
-
-        # Switch to gh-pages branch
-        git reset --hard HEAD
-        git checkout -b gh-pages
-        git fetch origin/gh-pages
-        git reset --hard origin/gh-pages
-        # Remove current content (except for branch folders)
-        rm * & rm -rf static
-        # Copy prior content to `/`
-        mv ../temp/* .
-        # Cleanup temp folder
-        rm -rf ../temp
-        # Commit changes
-        git add -A -f
-        git commit -m "Publish StoryBook to '/'" --no-verify
-        git push origin gh-pages
+      - ./scripts/deploystorybook.sh
   dev:
     branch: /^(?!.*(master|gh-pages)).+$/
     commands:
-      - |
-        # Setup git for later commits
-        git config user.email "$CIRCLE_USERNAME@flexgrid.ci" && git config user.name "FlexGrid CI ($CIRCLE_BRANCH)"
-        # Build StoryBook in the `../temp` folder
-        ./node_modules/.bin/build-storybook -c storybook -o "$PWD/../temp"
-        # Copy circle.yml as well to ensure last config is used
-        cp circle.yml ../temp && cp .gitignore ../temp
-
-        # Switch to gh-pages branch
-        git reset --hard HEAD
-        git checkout -b gh-pages
-        git fetch origin/gh-pages
-        git reset --hard origin/gh-pages
-        # Remove current content (except for branch folders)
-        rm -rf "branch/$CIRCLE_BRANCH"
-        # Copy prior content to a folder with the current branch name
-        mkdir -p "branch/$CIRCLE_BRANCH"
-        mv ../temp/* "branch/$CIRCLE_BRANCH"
-        # Cleanup temp folder
-        rm -rf ../temp
-        # Commit changes
-        git add -A -f
-        git commit -m "Publish StoryBook to '/branch/$CIRCLE_BRANCH'" --no-verify
-        git push origin gh-pages
-
+      - ./scripts/deploystorybook.sh
