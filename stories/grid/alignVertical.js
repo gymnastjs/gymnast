@@ -4,6 +4,7 @@ import { boolean, number } from '@storybook/addon-knobs'
 import { WithNotes } from '@storybook/addon-notes'
 import story from './story'
 import { times } from '../../src/utils'
+import getMarginSelect from '../margin'
 import Grid from '../../src/grid'
 import Root from '../root'
 import Box from '../box'
@@ -26,7 +27,7 @@ function ReferenceColumn({ height }: { height: number }) {
 
 story.add('Vertical Align', () => {
   const stretch = boolean('Stretch', false)
-  const margin = boolean('Margin', true)
+  const margin = getMarginSelect()
   const items = number('Items', 1, { range: true, min: 1, max: 5 })
   const height = number('Height', 300, {
     range: true,
@@ -40,7 +41,7 @@ story.add('Vertical Align', () => {
     <WithNotes notes={notes}>
       <Root>
         <h1>Item Align</h1>
-        <Grid margin={margin} stretch={stretch}>
+        <Grid {...margin} stretch={stretch}>
           <ReferenceColumn height={height} />
           <Box size={2} type="B" value="TOP" align={TOP} />
           <Box size={2} type="C" value="MIDDLE" align={MIDDLE} />
@@ -53,7 +54,7 @@ story.add('Vertical Align', () => {
         <Grid>
           <Grid
             size={4}
-            margin={margin}
+            {...margin}
             stretch={stretch}
             align={Grid.ALIGN.TOP}
             style={{ height }}
@@ -62,7 +63,7 @@ story.add('Vertical Align', () => {
           </Grid>
           <Grid
             size={4}
-            margin={margin}
+            {...margin}
             stretch={stretch}
             align={Grid.ALIGN.MIDDLE}
             style={{ height }}
@@ -73,7 +74,7 @@ story.add('Vertical Align', () => {
           </Grid>
           <Grid
             size={4}
-            margin={margin}
+            {...margin}
             stretch={stretch}
             align={Grid.ALIGN.BOTTOM}
             style={{ height }}

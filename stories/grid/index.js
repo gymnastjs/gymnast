@@ -1,3 +1,4 @@
+// @flow
 import './alignHorizontal'
 import './alignVertical'
 import './autoflow'

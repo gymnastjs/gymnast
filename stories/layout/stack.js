@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { WithNotes } from '@storybook/addon-notes'
 import { number } from '@storybook/addon-knobs'
@@ -15,7 +16,7 @@ const { AUTO } = Layout.SIZE
 function getStaticSection(index) {
   return (
     <Layout size={AUTO} key={index}>
-      <Grid margin={false}>
+      <Grid margin={Grid.MARGIN.NONE}>
         <Box
           size={12}
           type={getBoxType(index)}
@@ -47,7 +48,7 @@ story.add('Stack', () => {
 
   return (
     <WithNotes notes={notes}>
-      <Layout root>
+      <Layout>
         {times(sections, index => getSection(index, subSections))}
       </Layout>
     </WithNotes>

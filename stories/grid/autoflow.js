@@ -8,6 +8,7 @@ import Layout from '../../src/layout'
 import { times } from '../../src/utils'
 import Box from '../box'
 import { getBoxType } from '../utils'
+import getMarginSelect from '../margin'
 
 const notes =
   'When adding elements that exceed the number of columns available, they will overflow to the next row'
@@ -15,14 +16,13 @@ const notes =
 story.add('Auto Flow', () => {
   const props = {
     stretch: boolean('Stretch', true),
-    margin: boolean('Margin', true),
-    bottom: boolean('Bottom', true),
+    ...getMarginSelect(),
   }
 
   return (
     <WithNotes notes={notes}>
       <Layout size={Layout.SIZE.AUTO}>
-        <Grid {...props}>
+        <Grid {...props} root>
           <Box size={1} type="A" />
           <Box size={2} type="B" />
           <Box size={4} type="C" />

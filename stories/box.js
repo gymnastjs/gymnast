@@ -44,7 +44,7 @@ class Box extends React.PureComponent {
 
     const classes = compact([
       styles[`box${typeMap[type]}`],
-      nest && `${layout.grid} ${layout.noBottom}`,
+      nest && `${layout.grid} ${layout.gridMarginNoBottom}`,
     ])
 
     return (

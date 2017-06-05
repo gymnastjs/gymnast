@@ -1,8 +1,11 @@
 // @flow
-import { ALIGN, JUSTIFY } from './values'
+import { ALIGN, JUSTIFY, MARGIN_SIZE, MARGIN } from './values'
 import styles from './index.css'
 
-const noop = () => null
+/* eslint-disable no-unused-vars */
+const noop = (...params: any[]) => null
+/* eslint-enable no-unused-vars */
+const isProd = process.env.NODE_ENV === 'production'
 
 export function getDisplayName(WrappedComponent: {
   displayName?: string,
@@ -35,6 +38,40 @@ export function getAlignment(value: Symbol | void, prefix: string) {
   }
 }
 
+function getMarginSizeClassName(size: Symbol) {
+  switch (size) {
+    case MARGIN_SIZE.DOUBLE:
+      return 'Double'
+    case MARGIN_SIZE.HALF:
+      return 'Half'
+    case MARGIN_SIZE.DEFAULT:
+    // intentional fall through
+    default:
+      return ''
+  }
+}
+
+export function getMargin(value: Symbol, size: Symbol, prefix: string) {
+  if (size === MARGIN_SIZE.NONE || value === MARGIN.NONE) {
+    return styles[`${prefix}MarginNone`]
+  }
+
+  const marginSize = getMarginSizeClassName(size)
+
+  switch (value) {
+    case MARGIN.HORIZONTAL:
+      return styles[`${prefix}MarginHorizontal${marginSize}`]
+    case MARGIN.VERTICAL:
+      return styles[`${prefix}MarginVertical${marginSize}`]
+    case MARGIN.DEFAULT:
+      return size === MARGIN_SIZE.DEFAULT
+        ? ''
+        : styles[`${prefix}Margin${marginSize}`]
+    default:
+      return ''
+  }
+}
+
 export function getJustify(value: Symbol | void) {
   const prefix = 'grid'
 
@@ -49,3 +86,11 @@ export function getJustify(value: Symbol | void) {
       return ''
   }
 }
+
+/* eslint-disable no-console */
+export const log = {
+  error: isProd ? noop : console.error.bind(console),
+  warn: isProd ? noop : console.warn.bind(console),
+  info: isProd ? noop : console.log.bind(console),
+}
+/* eslint-enable no-console */
