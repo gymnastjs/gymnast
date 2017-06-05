@@ -27,7 +27,6 @@
     "jest": "20.0.4",
     "lint-staged": "3.6.0",
     "npm-run-all": "4.0.2",
-    "perfectionist": "2.4.0",
     "postcss-cli": "4.0.0",
     "postcss-cssnext": "2.11.0",
     "postcss-for": "2.1.1",
@@ -41,12 +40,8 @@
     "stylelint": "7.10.1"
   },
   "lint-staged": {
-    "*.js": [
-      "format:js",
-      "git add"
-    ],
-    "*.css": [
-      "format:css",
+    "*.{js,css}": [
+      "format",
       "git add"
     ]
   },
@@ -58,11 +53,8 @@
   "scripts": {
     "build": "postcss -c scripts/postcss.config.js -o dist/flex.build.css src/index.css",
     "commit": "git-cz",
-    "format-all:css": "git ls-files *.css | xargs yarn format:css",
-    "format-all:js": "git ls-files *.js | xargs yarn format:js",
-    "format-all": "npm-run-all --parallel format-all:*",
-    "format:css": "./scripts/formatcss.sh",
-    "format:js": "prettier --write --single-quote --no-semi --trailing-comma es5",
+    "format-all": "git ls-files {,**/**/}*.{js,css} | xargs yarn format",
+    "format": "prettier --write --single-quote --no-semi --trailing-comma es5",
     "lint:css": "stylelint src/*.css stories/*.css",
     "lint:flow": "flow",
     "lint:js": "eslint src stories storybook",
