@@ -3,6 +3,7 @@ import React from 'react'
 import { compact, getDisplayName, getAlignment } from './utils'
 import { type Size } from './types'
 import { ALIGN } from './values'
+import styles from './index.css'
 
 export default function Item(Component: any) {
   return class withItem extends React.PureComponent {
@@ -27,9 +28,9 @@ export default function Item(Component: any) {
       const classes = compact([
         className,
         getAlignment(align, 'col'),
-        grid && 'grid',
-        offset && `col--offset-${offset}`,
-        size ? `col-${size}` : 'col',
+        grid && styles.grid,
+        offset && styles[`colOffset-${offset}`],
+        size ? styles[`col-${size}`] : styles.col,
       ])
 
       return <Component {...props} className={classes.join(' ')} />

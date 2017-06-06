@@ -4,7 +4,7 @@
   flex-flow: row wrap;
   margin: 0 calc(-1 * var(--gutter) / 2);
 
-  &.col-12.grid--root {
+  &.col-12.gridRoot {
     padding-left: var(--page-margin);
     padding-right: var(--page-margin);
     min-width: var(--min-width);
@@ -25,67 +25,67 @@
   padding: 0;
 }
 
-.grid--no-margin {
+.noMargin {
   margin: 0;
 }
 
-.grid--no-margin > [class*=col] {
+.noMargin > [class*=col] {
   padding: 0;
 }
 
-.grid--left {
+.gridLeft {
   justify-content: flex-start;
   align-self: flex-start;
   margin-right: auto;
 }
 
-.grid--center {
+.gridCenter {
   justify-content: center;
 }
 
-.grid--right {
+.gridRight {
   justify-content: flex-end;
   align-self: flex-end;
   margin-left: auto;
 }
 
-.grid--top {
+.gridTop {
   align-content: flex-start;
   align-items: flex-start;
 }
 
-.grid--middle {
+.gridMiddle {
   align-content: center;
   align-items: center;
 }
 
-.grid--bottom {
+.gridBottom {
   align-content: flex-end;
   align-items: flex-end;
 }
 
-.grid--stretch > [class*=col] {
+.gridStretch > [class*=col] {
   display: flex;
   flex-wrap: wrap;
 }
 
-.grid--stretch > [class*=col] > * {
+.gridStretch > [class*=col] > * {
   flex: 1 0 100%;
 }
 
-.grid--no-bottom > [class*=col] {
+.noBottom > [class*=col] {
   padding-bottom: 0;
 }
 
-.col--top {
+.colTop {
   align-self: flex-start;
 }
 
-.col--middle {
+.colMiddle {
   align-self: center;
 }
 
-.col--bottom {
+.colBottom {
   align-self: flex-end;
 }
 
@@ -97,7 +97,7 @@
 }
 
 @for $i from 0 to 11 {
-  .col--offset-$(i) {
+  .colOffset-$(i) {
     margin-left: calc($i / 12 * 100%);
   }
 }

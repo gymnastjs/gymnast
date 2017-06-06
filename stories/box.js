@@ -4,6 +4,8 @@ import { compact } from '../src/utils'
 import Grid from '../src/grid'
 import Item from '../src/item'
 import ItemHOC from '../src/item.hoc'
+import layout from '../src/index.css'
+import styles from './stories.css'
 
 const typeMap = {
   A: 1,
@@ -41,8 +43,8 @@ class Box extends React.PureComponent {
     }
 
     const classes = compact([
-      `box${typeMap[type]}`,
-      nest && 'grid grid--no-bottom',
+      styles[`box${typeMap[type]}`],
+      nest && `${layout.grid} ${layout.noBottom}`,
     ])
 
     return (
