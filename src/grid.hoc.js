@@ -2,6 +2,7 @@
 import React from 'react'
 import { compact, getDisplayName, getJustify, getAlignment } from './utils'
 import { type Offset, type Size } from './types'
+import styles from './index.css'
 import { ALIGN, JUSTIFY } from './values'
 
 export default function Grid(Component: any) {
@@ -44,16 +45,16 @@ export default function Grid(Component: any) {
         ...props
       } = this.props
       const classes = compact([
-        !bottom && 'grid--no-bottom',
-        !margin && 'grid--no-margin',
-        'grid',
-        `col-${String(size)}`,
+        styles.grid,
         className,
+        !bottom && styles.noBottom,
+        !margin && styles.noMargin,
         getAlignment(align, 'grid'),
         getJustify(justify),
-        offset && `col--offset-${String(offset)}`,
-        stretch && 'grid--stretch',
-        root && 'grid--root',
+        root && styles.gridRoot,
+        offset && styles[`colOffset-${offset}`],
+        styles[`col-${String(size)}`],
+        stretch && styles.gridStretch,
       ])
 
       return <Component {...props} className={classes.join(' ')} />
