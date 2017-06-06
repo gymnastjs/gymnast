@@ -2,17 +2,18 @@
 import React from 'react'
 import { compact, getDisplayName } from './utils'
 import { SIZE } from './values'
+import styles from './index.css'
 
 function getSize(size: Symbol | void) {
   const prefix = 'layout'
 
   switch (size) {
     case SIZE.AUTO:
-      return `${prefix}--auto`
+      return styles[`${prefix}Auto`]
     case SIZE.STRETCH:
-      return `${prefix}--stretch`
+      return styles[`${prefix}Stretch`]
     case SIZE.FIT:
-      return `${prefix}--fit`
+      return styles[`${prefix}Fit`]
     default:
       return ''
   }
@@ -32,7 +33,7 @@ export default function Layout(Component: any) {
 
     render() {
       const { className, size, ...props } = this.props
-      const classes = compact(['layout', className, getSize(size)])
+      const classes = compact([styles.layout, className, getSize(size)])
 
       return <Component {...props} className={classes.join(' ')} />
     }
