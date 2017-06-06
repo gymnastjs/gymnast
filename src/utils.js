@@ -1,5 +1,6 @@
 // @flow
 import { ALIGN, JUSTIFY } from './values'
+import styles from './index.css'
 
 const noop = () => null
 
@@ -24,11 +25,11 @@ export function times(
 export function getAlignment(value: Symbol | void, prefix: string) {
   switch (value) {
     case ALIGN.TOP:
-      return `${prefix}--top`
+      return styles[`${prefix}Top`]
     case ALIGN.MIDDLE:
-      return `${prefix}--middle`
+      return styles[`${prefix}Middle`]
     case ALIGN.BOTTOM:
-      return `${prefix}--bottom`
+      return styles[`${prefix}Bottom`]
     default:
       return ''
   }
@@ -39,11 +40,11 @@ export function getJustify(value: Symbol | void) {
 
   switch (value) {
     case JUSTIFY.LEFT:
-      return `${prefix}--left`
+      return styles[`${prefix}Left`]
     case JUSTIFY.CENTER:
-      return `${prefix}--center`
+      return styles[`${prefix}Center`]
     case JUSTIFY.RIGHT:
-      return `${prefix}--right`
+      return styles[`${prefix}Right`]
     default:
       return ''
   }

@@ -1,5 +1,5 @@
 import { configure } from '@storybook/react'
-import './storybook.css'
+import '../stories/stories.css'
 
 configure(() => {
   /* eslint-disable global-require */

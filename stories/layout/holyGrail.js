@@ -5,7 +5,7 @@ import story from './story'
 import Grid from '../../src/grid'
 import Layout from '../../src/layout'
 import LoremIpsum from './loremIpsum'
-import './holyGrail.css'
+import styles from './holyGrail.css'
 
 const { FIT, AUTO } = Layout.SIZE
 const notes =
@@ -16,8 +16,8 @@ story.add('Holy Grail', () => {
 
   return (
     <WithNotes notes={notes}>
-      <Layout size={FIT} className="holy-grail">
-        <Layout size={AUTO} className="header">
+      <Layout size={FIT} className={styles.holyGrail}>
+        <Layout size={AUTO} className={styles.header}>
           <Grid root>
             <h1>Header</h1>
           </Grid>
@@ -25,15 +25,15 @@ story.add('Holy Grail', () => {
         <Layout>
           <Layout>
             <Grid root>
-              <Grid size={2} className="nav"><h2>Nav</h2></Grid>
-              <Grid size={8} className="content" align={Grid.ALIGN.TOP}>
+              <Grid size={2} className={styles.nav}><h2>Nav</h2></Grid>
+              <Grid size={8} className={styles.content} align={Grid.ALIGN.TOP}>
                 <h2>Content</h2>
                 {includeText && <p>{LoremIpsum}</p>}
               </Grid>
-              <Grid size={2} className="ads"><h2>Ads</h2></Grid>
+              <Grid size={2} className={styles.ads}><h2>Ads</h2></Grid>
             </Grid>
           </Layout>
-          <Layout size={AUTO} className="footer">
+          <Layout size={AUTO} className={styles.footer}>
             <Grid root>
               <h1>Footer</h1>
             </Grid>
