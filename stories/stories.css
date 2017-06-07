@@ -7,7 +7,7 @@
   --deep-sea-green: #0B486B;
 }
 
-#root {
+:global(#root) {
   position: absolute;
   top: 0;
   left: 0;

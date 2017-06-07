@@ -1,3 +1,5 @@
+@import "./grid";
+
 .layout {
   box-sizing: border-box;
   display: flex;
@@ -7,15 +9,15 @@
   overflow-y: auto;
   flex: 1;
 
-  &.layout--auto {
+  &.layoutAuto {
     flex: initial;
   }
 
-  &.layout--stretch {
+  &.layoutStretch {
     height: 100%;
   }
 
-  &.layout--fit {
+  &.layoutFit {
     min-height: 100%;
   }
 
