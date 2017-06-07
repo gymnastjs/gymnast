@@ -21,13 +21,16 @@ fi
 # Ensure all required variables are defined
 DEFAULT_USERNAME='[unknown user]'
 DEFAULT_BRANCH='default'
+BASE_URL='https://obartra.github.io/flexgrid'
 USER=${CIRCLE_USERNAME:-$DEFAULT_USERNAME}
 BRANCH=${CIRCLE_BRANCH:-$DEFAULT_BRANCH}
 
 if [ "$CIRCLE_BRANCH" = 'master' ]; then
   TARGET_PATH='.'
+  TARGET_URL=BASE_URL
 else
   TARGET_PATH="./branch/$BRANCH"
+  TARGET_URL="$BASE_URL/branch/$BRANCH"
 fi
 
 # Set git user
@@ -46,6 +49,7 @@ git reset --hard HEAD
 git checkout -b gh-pages
 git fetch origin gh-pages
 git reset --hard origin/gh-pages
+git clean -xdf
 
 # Remove current content (except for branch folders)
 if [ "$CIRCLE_BRANCH" = 'master' ]; then
@@ -62,6 +66,11 @@ mv ../temp/* $TARGET_PATH
 rm -rf ../temp
 
 # Commit changes
-git add -A -f
-git commit -m "Publish StoryBook to '$TARGET_PATH'" --no-verify
-git push origin gh-pages
+if [ -z $(git status --porcelain) ];
+then
+  echo "Nothing to commit, everything is clean ✨"
+else
+  git add -A -f
+  git commit -m "docs(storybook): $USER updated '$TARGET_URL'" --no-verify
+  git push origin gh-pages
+fi
