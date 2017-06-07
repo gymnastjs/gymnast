@@ -6,7 +6,7 @@
   --deep-sea-green: #0B486B;
 }
 
-.holy-grail {
+.holyGrail {
   & h1, & h2, & .nav > *, & .content > *, & .ads > * {
     margin: 10px;
   }
