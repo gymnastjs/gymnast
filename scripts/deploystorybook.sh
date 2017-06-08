@@ -21,7 +21,7 @@ fi
 # Ensure all required variables are defined
 DEFAULT_USERNAME='[unknown user]'
 DEFAULT_BRANCH='default'
-BASE_URL='https://obartra.github.io/flexgrid'
+BASE_URL='https://obartra.github.io/reflex'
 USER=${CIRCLE_USERNAME:-$DEFAULT_USERNAME}
 BRANCH=${CIRCLE_BRANCH:-$DEFAULT_BRANCH}
 
@@ -34,7 +34,7 @@ else
 fi
 
 # Set git user
-git config user.email "$USER@flexgrid.ci" && git config user.name "FlexGrid CI ($BRANCH)"
+git config user.email "$USER@reflex.ci" && git config user.name "Reflex CI ($BRANCH)"
 
 # Build StoryBook in the `../temp` folder
 ./node_modules/.bin/build-storybook -c storybook -o "$PWD/../temp"
