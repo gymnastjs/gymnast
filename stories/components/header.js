@@ -16,7 +16,7 @@ story.add('Header', () => {
   return (
     <WithExtensions notes={notes}>
       <Layout size={Layout.SIZE.AUTO}>
-        <Grid>
+        <Grid root>
           <Grid stretch>
             <Box size={2} type="A" value="Go Back" />
             <Box size={6} type="B">
