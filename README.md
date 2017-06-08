@@ -3,6 +3,8 @@
 
 # ☁️ FlexGrid
 
+[![Join the chat at https://gitter.im/react-reflex/Lobby](https://badges.gitter.im/react-reflex/Lobby.svg)](https://gitter.im/react-reflex/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 12-column layout with Flexbox
 
 ## Demo
