@@ -5,10 +5,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/obartra/flexgrid"
+    "url": "https://github.com/obartra/reflex"
   },
   "bugs": {
-    "url": "https://github.com/obartra/flexgrid/issues"
+    "url": "https://github.com/obartra/reflex/issues"
   },
   "author": "Oscar Bartra",
   "license": "MIT",

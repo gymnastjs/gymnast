@@ -1,18 +1,19 @@
-[![CircleCI](https://circleci.com/gh/obartra/flexgrid/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/flexgrid/tree/master)
+# ☁️ Reflex
+
+[![CircleCI](https://circleci.com/gh/obartra/reflex/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/reflex/tree/master)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Join the chat at https://gitter.im/react-reflex/Lobby](https://badges.gitter.im/react-reflex/Lobby.svg)](https://gitter.im/react-reflex/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-# ☁️ FlexGrid
-
-12-column layout with Flexbox
+Flexbox React 12-column layout system
 
 ## Demo
 
-Check out the build [here](https://obartra.github.io/flexgrid)
+Check out the build [here](https://obartra.github.io/reflex)
 
 ## Setup
 
 ```bash
-$ yarn && yarn start
+yarn && yarn start
 ```
 
 And then open `localhost:9001`
@@ -34,7 +35,7 @@ To standardize the commit format this project uses [commitizen](https://github.c
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars3.githubusercontent.com/u/3877773?v=3" width="100px;"/><br /><sub>Oscar Bartra</sub>](http://obartra.github.io)<br />[🐛](https://github.com/obartra/flexgrid/issues?q=author%3Aobartra "Bug reports") [💻](https://github.com/obartra/flexgrid/commits?author=obartra "Code") [📖](https://github.com/obartra/flexgrid/commits?author=obartra "Documentation") [👀](#review-obartra "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/8746094?v=3" width="100px;"/><br /><sub>Andrew Hansen</sub>](https://github.com/arahansen)<br />[💬](#question-arahansen "Answering Questions") [🐛](https://github.com/obartra/flexgrid/issues?q=author%3Aarahansen "Bug reports") [💻](https://github.com/obartra/flexgrid/commits?author=arahansen "Code") [👀](#review-arahansen "Reviewed Pull Requests") |
+| [<img src="https://avatars3.githubusercontent.com/u/3877773?v=3" width="100px;"/><br /><sub>Oscar Bartra</sub>](http://obartra.github.io)<br />[🐛](https://github.com/obartra/reflex/issues?q=author%3Aobartra "Bug reports") [💻](https://github.com/obartra/reflex/commits?author=obartra "Code") [📖](https://github.com/obartra/reflex/commits?author=obartra "Documentation") [👀](#review-obartra "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/8746094?v=3" width="100px;"/><br /><sub>Andrew Hansen</sub>](https://github.com/arahansen)<br />[💬](#question-arahansen "Answering Questions") [🐛](https://github.com/obartra/reflex/issues?q=author%3Aarahansen "Bug reports") [💻](https://github.com/obartra/reflex/commits?author=arahansen "Code") [👀](#review-arahansen "Reviewed Pull Requests") |
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
