@@ -1,43 +1,52 @@
 // @flow
 import React from 'react'
-import { compact, getDisplayName, getJustify, getAlignment } from './utils'
+import {
+  compact,
+  getAlignment,
+  getDisplayName,
+  getJustify,
+  getMargin,
+  log,
+} from './utils'
 import { type Offset, type Size } from './types'
 import styles from './index.css'
-import { ALIGN, JUSTIFY } from './values'
+import { ALIGN, JUSTIFY, MARGIN, MARGIN_SIZE } from './values'
+
+export type Props = {
+  align?: Symbol,
+  className?: string,
+  justify?: Symbol,
+  margin: Symbol,
+  marginSize: Symbol,
+  offset: Offset,
+  root?: boolean,
+  size?: Size,
+  stretch?: boolean,
+}
 
 export default function Grid(Component: any) {
   return class withGrid extends React.PureComponent {
-    props: {
-      align?: Symbol,
-      bottom?: boolean,
-      className?: string,
-      justify?: Symbol,
-      margin?: boolean,
-      offset?: Offset,
-      root?: boolean,
-      size?: Size,
-      stretch?: boolean,
-    }
+    props: Props
 
     static defaultProps = {
       align: undefined,
-      bottom: true,
       className: undefined,
       justify: undefined,
-      margin: true,
+      margin: MARGIN.DEFAULT,
+      marginSize: MARGIN_SIZE.DEFAULT,
       offset: 0,
       root: false,
-      size: 12,
+      size: undefined,
       stretch: false,
     }
 
     render() {
       const {
         align,
-        bottom,
         className,
         justify,
         margin,
+        marginSize,
         offset,
         root,
         size,
@@ -45,17 +54,22 @@ export default function Grid(Component: any) {
         ...props
       } = this.props
       const classes = compact([
-        styles.grid,
         className,
-        !bottom && styles.noBottom,
-        !margin && styles.noMargin,
+        getMargin(margin, marginSize, 'grid'),
         getAlignment(align, 'grid'),
         getJustify(justify),
-        root && styles.gridRoot,
         offset && styles[`colOffset-${offset}`],
-        styles[`col-${String(size)}`],
+        root && styles.gridRoot,
+        size && styles[`col-${String(size)}`],
         stretch && styles.gridStretch,
+        styles.grid,
       ])
+
+      if (size && offset) {
+        log.error(
+          '"Grid" (unlike "Item") cannot simultaneously have size and offset'
+        )
+      }
 
       return <Component {...props} className={classes.join(' ')} />
     }
@@ -63,7 +77,8 @@ export default function Grid(Component: any) {
     static displayName = `withGrid(${getDisplayName(Component)})`
 
     static ALIGN = ALIGN
-
+    static MARGIN = MARGIN
+    static MARGIN_SIZE = MARGIN_SIZE
     static JUSTIFY = JUSTIFY
   }
 }
