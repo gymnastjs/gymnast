@@ -20,6 +20,7 @@
   position: relative;
   margin: 0 auto;
   height: 100%;
+  pointer-events: none;
   max-width: calc(var(--max-width) - var(--page-margin) * 2);
   background-color: transparent;
   background-image: linear-gradient(

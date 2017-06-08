@@ -7,7 +7,7 @@ exports[`Storyshots Components Header 1`] = `
       className="layout layoutAuto"
     >
       <div
-        className="grid"
+        className="gridRoot grid"
       >
         <div
           className="gridStretch grid"
@@ -190,173 +190,177 @@ exports[`Storyshots Components Pagination 1`] = `
       className="layout layoutStretch"
     >
       <div
-        className="gridRoot col-12 grid"
+        className="gridRoot grid"
       >
         <div
-          className="col-1"
+          className="col-12 grid"
         >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              &lt;
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                &lt;
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              1
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box2"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box2"
+              style={Object {}}
             >
-              ...
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                ...
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              5
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                5
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              6
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                6
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              7
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                7
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              8
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                8
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              9
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                9
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              10
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                10
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box2"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box2"
+              style={Object {}}
             >
-              ...
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                ...
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              20
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                20
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="col-1"
-        >
           <div
-            className="box1"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={Object {}}
             >
-              &gt;
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                &gt;
+              </div>
             </div>
           </div>
         </div>
@@ -2495,13 +2499,13 @@ exports[`Storyshots Layout Stack 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutStretch"
+      className="layout layoutAuto"
     >
       <div
-        className="layout layoutAuto"
+        className="gridRoot grid"
       >
         <div
-          className="gridMarginNone grid"
+          className="grid"
         >
           <div
             className="col-12"
@@ -2519,26 +2523,48 @@ exports[`Storyshots Layout Stack 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="layout layoutStretch"
+    >
       <div
-        className="layout layoutStretch"
+        className="gridRoot grid"
       >
-        <div>
-          <h1>
-            SubSection 
-            1
-          </h1>
+        <div
+          className="grid"
+        >
+          <div
+            className="col-12"
+          >
+            <h1>
+              SubSection 
+              1
+            </h1>
+          </div>
         </div>
-        <div>
-          <h1>
-            SubSection 
-            2
-          </h1>
+        <div
+          className="grid"
+        >
+          <div
+            className="col-12"
+          >
+            <h1>
+              SubSection 
+              2
+            </h1>
+          </div>
         </div>
-        <div>
-          <h1>
-            SubSection 
-            3
-          </h1>
+        <div
+          className="grid"
+        >
+          <div
+            className="col-12"
+          >
+            <h1>
+              SubSection 
+              3
+            </h1>
+          </div>
         </div>
       </div>
     </div>
@@ -2600,7 +2626,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
             className="gridRoot grid"
           >
             <div
-              className="content gridTop col-12 grid"
+              className="content gridTop grid"
             >
               <h2>
                 Content

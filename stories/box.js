@@ -14,8 +14,6 @@ const typeMap = {
   D: 4,
   E: 5,
 }
-const types = Object.keys(typeMap)
-
 class Box extends React.PureComponent {
   static displayName = 'Box'
 
@@ -28,7 +26,7 @@ class Box extends React.PureComponent {
   static ALIGN = Item.ALIGN
 
   props: {
-    type: string,
+    type: 'A' | 'B' | 'C' | 'D' | 'E',
     style: Object,
     children: any,
     value?: string,
@@ -37,11 +35,6 @@ class Box extends React.PureComponent {
 
   render() {
     const { type, value = type, children, style, nest, ...props } = this.props
-
-    if (!(type in typeMap)) {
-      throw new Error(`Invalid box type, valid values are: ${types.join(', ')}`)
-    }
-
     const classes = compact([
       styles[`box${typeMap[type]}`],
       nest && `${layout.grid} ${layout.gridMarginNoBottom}`,

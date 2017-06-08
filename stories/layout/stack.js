@@ -7,6 +7,7 @@ import Grid from '../../src/grid'
 import Layout from '../../src/layout'
 import { times } from '../../src/utils'
 import { getBoxType } from '../utils'
+import Item from '../../src/item'
 import Box from '../box'
 
 const notes =
@@ -16,12 +17,14 @@ const { AUTO } = Layout.SIZE
 function getStaticSection(index) {
   return (
     <Layout size={AUTO} key={index}>
-      <Grid margin={Grid.MARGIN.NONE}>
-        <Box
-          size={12}
-          type={getBoxType(index)}
-          value={`Section ${index + 1}`}
-        />
+      <Grid root>
+        <Grid>
+          <Box
+            size={12}
+            type={getBoxType(index)}
+            value={`Section ${index + 1}`}
+          />
+        </Grid>
       </Grid>
     </Layout>
   )
@@ -30,7 +33,13 @@ function getStaticSection(index) {
 function getContainerSection(index, subsections) {
   return (
     <Layout key={index}>
-      {times(subsections, i => <div key={i}><h1>SubSection {i + 1}</h1></div>)}
+      <Grid root>
+        {times(subsections, i =>
+          <Grid key={i}>
+            <Item size={12}><h1>SubSection {i + 1}</h1></Item>
+          </Grid>
+        )}
+      </Grid>
     </Layout>
   )
 }
@@ -48,9 +57,7 @@ story.add('Stack', () => {
 
   return (
     <WithExtensions notes={notes}>
-      <Layout>
-        {times(sections, index => getSection(index, subSections))}
-      </Layout>
+      {times(sections, index => getSection(index, subSections))}
     </WithExtensions>
   )
 })

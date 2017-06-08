@@ -39,7 +39,7 @@ story.add('Two Sections', () => {
           </Layout>
           <Layout>
             <Grid root>
-              <Grid size={12} className={styles.content} align={Grid.ALIGN.TOP}>
+              <Grid className={styles.content} align={Grid.ALIGN.TOP}>
                 <h2>Content</h2>
                 {includeText && <p>{LoremIpsum}</p>}
               </Grid>
