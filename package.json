@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "Flexbox-based column layout system",
   "main": "index.js",
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/obartra/flexgrid"
+  },
+  "bugs": {
+    "url": "https://github.com/obartra/flexgrid/issues"
+  },
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
     "@storybook/addon-storyshots": "3.0.0",
+    "all-contributors-cli": "4.3.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-plugin-transform-class-properties": "6.24.1",
@@ -54,6 +61,8 @@
   "scripts": {
     "build": "postcss -c scripts/postcss.config.js -o dist/flex.build.css src/index.css",
     "commit": "git-cz",
+    "contributors:add": "all-contributors add",
+    "contributors:gen": "all-contributors generate",
     "format-all": "git ls-files {,**/**/}*.{js,css} | xargs yarn format",
     "format": "prettier --write --single-quote --no-semi --trailing-comma es5",
     "lint:css": "stylelint src/*.css stories/*.css",

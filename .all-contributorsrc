@@ -1,0 +1,35 @@
+{
+  "projectName": "flexgrid",
+  "projectOwner": "obartra",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "obartra",
+      "name": "Oscar Bartra",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3877773?v=3",
+      "profile": "http://obartra.github.io",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "arahansen",
+      "name": "Andrew Hansen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/8746094?v=3",
+      "profile": "https://github.com/arahansen",
+      "contributions": [
+        "question",
+        "bug",
+        "code",
+        "review"
+      ]
+    }
+  ]
+}
