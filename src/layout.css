@@ -22,7 +22,7 @@
   }
 
   & > .grid {
-    max-width: var(--page-content-width);
+    max-width: var(--max-width);
   }
 
   & > * {

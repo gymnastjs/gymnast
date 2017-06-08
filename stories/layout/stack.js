@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
-import { WithNotes } from '@storybook/addon-notes'
 import { number } from '@storybook/addon-knobs'
+import WithExtensions from '../withExtensions'
 import story from './story'
 import Grid from '../../src/grid'
 import Layout from '../../src/layout'
@@ -47,10 +47,10 @@ story.add('Stack', () => {
   const sections = number('Sections', 2, { range: true, min: 2, max: 10 })
 
   return (
-    <WithNotes notes={notes}>
+    <WithExtensions notes={notes}>
       <Layout>
         {times(sections, index => getSection(index, subSections))}
       </Layout>
-    </WithNotes>
+    </WithExtensions>
   )
 })

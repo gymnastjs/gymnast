@@ -1,13 +1,13 @@
 // @flow
 import React from 'react'
 import { boolean, number } from '@storybook/addon-knobs'
-import { WithNotes } from '@storybook/addon-notes'
 import story from './story'
 import { times } from '../../src/utils'
 import getMarginSelect from '../margin'
 import Grid from '../../src/grid'
 import Root from '../root'
 import Box from '../box'
+import WithExtensions from '../withExtensions'
 
 const notes =
   'Alignment defaults to top but middle and bottom are also available'
@@ -38,7 +38,7 @@ story.add('Vertical Align', () => {
   const { TOP, MIDDLE, BOTTOM } = Box.ALIGN
 
   return (
-    <WithNotes notes={notes}>
+    <WithExtensions notes={notes}>
       <Root>
         <h1>Item Align</h1>
         <Grid {...margin} stretch={stretch}>
@@ -85,6 +85,6 @@ story.add('Vertical Align', () => {
           </Grid>
         </Grid>
       </Root>
-    </WithNotes>
+    </WithExtensions>
   )
 })

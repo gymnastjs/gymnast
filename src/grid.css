@@ -3,11 +3,10 @@
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  margin: 0 calc(-1 * var(--gutter) / 2);
 
   &.gridRoot {
-    padding-left: var(--page-margin);
-    padding-right: var(--page-margin);
+    padding-left: calc(var(--page-margin) - var(--gutter) / 2);
+    padding-right: calc(var(--page-margin) - var(--gutter) / 2);
     min-width: var(--min-width);
   }
 }
@@ -52,6 +51,11 @@
   padding-bottom: calc(var(--vertical-gutter) * 2);
 }
 
+.gridMarginHorizontal > [class*=col], .gridMarginHorizontalHalf > .col {
+  padding-left: calc(var(--gutter) / 2);
+  padding-right: calc(var(--gutter) / 2);
+}
+
 .gridMarginHorizontalHalf > [class*=col], .gridMarginHorizontalHalf > .col {
   padding-left: calc(var(--gutter) / 4);
   padding-right: calc(var(--gutter) / 4);
@@ -64,6 +68,10 @@
 
 .gridMarginVerticalHalf > [class*=col], .gridMarginVerticalHalf > .col {
   padding-bottom: calc(var(--gutter) / 2);
+}
+
+.gridMarginVertical {
+  padding-bottom: var(--gutter);
 }
 
 .gridMarginVerticalDouble > [class*=col], .gridMarginVerticalDouble > .col {

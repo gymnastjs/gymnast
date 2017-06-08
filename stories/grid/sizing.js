@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
-import { WithNotes } from '@storybook/addon-notes'
 import { number } from '@storybook/addon-knobs'
+import WithExtensions from '../withExtensions'
 import story from './story'
 import Grid from '../../src/grid'
 import Root from '../root'
@@ -15,7 +15,7 @@ story.add('Sizing', () => {
   const size = number('Size', 12, { range: true, min: 1, max: 12 })
 
   return (
-    <WithNotes notes={notes}>
+    <WithExtensions notes={notes}>
       <Root>
         <Grid>
           {times(12, i => <Box key={i} size={1} type="A" value="1" />)}
@@ -39,6 +39,6 @@ story.add('Sizing', () => {
           <Box size={size} type="A" value={`${size}`} />
         </Grid>
       </Root>
-    </WithNotes>
+    </WithExtensions>
   )
 })

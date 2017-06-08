@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { number, boolean } from '@storybook/addon-knobs'
-import { WithNotes } from '@storybook/addon-notes'
+import WithExtensions from '../withExtensions'
 import story from './story'
 import Grid from '../../src/grid'
 import Layout from '../../src/layout'
@@ -20,7 +20,7 @@ story.add('Auto Flow', () => {
   }
 
   return (
-    <WithNotes notes={notes}>
+    <WithExtensions notes={notes}>
       <Layout size={Layout.SIZE.AUTO}>
         <Grid {...props} root>
           <Box size={1} type="A" />
@@ -39,6 +39,6 @@ story.add('Auto Flow', () => {
           )}
         </Grid>
       </Layout>
-    </WithNotes>
+    </WithExtensions>
   )
 })
