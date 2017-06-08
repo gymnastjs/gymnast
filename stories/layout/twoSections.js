@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
-import { WithNotes } from '@storybook/addon-notes'
 import { boolean } from '@storybook/addon-knobs'
+import WithExtensions from '../withExtensions'
 import story from './story'
 import Grid from '../../src/grid'
 import Item from '../../src/item'
@@ -17,7 +17,7 @@ story.add('Two Sections', () => {
   const includeText = boolean('Show text', false)
 
   return (
-    <WithNotes notes={notes}>
+    <WithExtensions notes={notes}>
       <Layout size={FIT} className={styles.twoSections}>
         <Layout size={AUTO} className={styles.header}>
           <Grid root>
@@ -52,6 +52,6 @@ story.add('Two Sections', () => {
           </Layout>
         </Layout>
       </Layout>
-    </WithNotes>
+    </WithExtensions>
   )
 })

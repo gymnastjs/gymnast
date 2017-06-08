@@ -1,80 +1,211 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Components Header 1`] = `
-<div
-  className="layout layoutAuto"
->
-  <div
-    className="grid"
-  >
+<div>
+  <div>
     <div
-      className="gridStretch grid"
+      className="layout layoutAuto"
     >
       <div
-        className="col-2"
+        className="grid"
       >
         <div
-          className="box1"
-          style={Object {}}
+          className="gridStretch grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-2"
           >
-            Go Back
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                Go Back
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-6"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                <h2>
+                  Page Title
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-2"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                Action 1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-2"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                Action 2
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col-6"
-      >
         <div
-          className="box2"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-10 grid"
           >
-            <h2>
-              Page Title
-            </h2>
+            <div
+              className="col-1"
+            >
+              <div
+                className="box1"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  1
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-1"
+            >
+              <div
+                className="box1"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  2
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-1"
+            >
+              <div
+                className="box1"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-1"
+            >
+              <div
+                className="box1"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  4
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-1"
+            >
+              <div
+                className="box1"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  5
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-1"
+            >
+              <div
+                className="box1"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  6
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div
-        className="col-2"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-2"
           >
-            Action 1
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-2"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            Action 2
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                B
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components Pagination 1`] = `
+<div>
+  <div>
     <div
-      className="grid"
+      className="layout layoutStretch"
     >
       <div
-        className="col-10 grid"
+        className="gridRoot col-12 grid"
       >
+        <div
+          className="col-1"
+        >
+          <div
+            className="box1"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              &lt;
+            </div>
+          </div>
+        </div>
         <div
           className="col-1"
         >
@@ -93,41 +224,13 @@ exports[`Storyshots Components Header 1`] = `
           className="col-1"
         >
           <div
-            className="box1"
+            className="box2"
             style={Object {}}
           >
             <div
               className="gridMiddle gridCenter grid"
             >
-              2
-            </div>
-          </div>
-        </div>
-        <div
-          className="col-1"
-        >
-          <div
-            className="box1"
-            style={Object {}}
-          >
-            <div
-              className="gridMiddle gridCenter grid"
-            >
-              3
-            </div>
-          </div>
-        </div>
-        <div
-          className="col-1"
-        >
-          <div
-            className="box1"
-            style={Object {}}
-          >
-            <div
-              className="gridMiddle gridCenter grid"
-            >
-              4
+              ...
             </div>
           </div>
         </div>
@@ -159,198 +262,103 @@ exports[`Storyshots Components Header 1`] = `
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col-2"
-      >
         <div
-          className="box2"
-          style={Object {}}
+          className="col-1"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="box1"
+            style={Object {}}
           >
-            B
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              7
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components Pagination 1`] = `
-<div
-  className="layout layoutStretch"
->
-  <div
-    className="gridRoot col-12 grid"
-  >
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-1"
         >
-          &lt;
+          <div
+            className="box1"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              8
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-1"
         >
-          1
+          <div
+            className="box1"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              9
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box2"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-1"
         >
-          ...
+          <div
+            className="box1"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              10
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-1"
         >
-          5
+          <div
+            className="box2"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              ...
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-1"
         >
-          6
+          <div
+            className="box1"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              20
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-1"
         >
-          7
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
-        <div
-          className="gridMiddle gridCenter grid"
-        >
-          8
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
-        <div
-          className="gridMiddle gridCenter grid"
-        >
-          9
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
-        <div
-          className="gridMiddle gridCenter grid"
-        >
-          10
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box2"
-        style={Object {}}
-      >
-        <div
-          className="gridMiddle gridCenter grid"
-        >
-          ...
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
-        <div
-          className="gridMiddle gridCenter grid"
-        >
-          20
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-1"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
-        <div
-          className="gridMiddle gridCenter grid"
-        >
-          &gt;
+          <div
+            className="box1"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              &gt;
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -359,153 +367,157 @@ exports[`Storyshots Components Pagination 1`] = `
 `;
 
 exports[`Storyshots Grid Auto Flow 1`] = `
-<div
-  className="layout layoutAuto"
->
-  <div
-    className="gridRoot gridStretch grid"
-  >
+<div>
+  <div>
     <div
-      className="col-1"
+      className="layout layoutAuto"
     >
       <div
-        className="box1"
-        style={Object {}}
+        className="gridRoot gridStretch grid"
       >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-1"
         >
-          A
+          <div
+            className="box1"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              A
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-2"
-    >
-      <div
-        className="box2"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-2"
         >
-          B
+          <div
+            className="box2"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              B
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-4"
-    >
-      <div
-        className="box3"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-4"
         >
-          C
+          <div
+            className="box3"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              C
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-3"
-    >
-      <div
-        className="box4"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-3"
         >
-          D
+          <div
+            className="box4"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              D
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-2"
-    >
-      <div
-        className="box5"
-        style={
-          Object {
-            "height": 100,
-          }
-        }
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-2"
         >
-          E
+          <div
+            className="box5"
+            style={
+              Object {
+                "height": 100,
+              }
+            }
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              E
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-2"
-    >
-      <div
-        className="box1"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-2"
         >
-          A
+          <div
+            className="box1"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              A
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-2"
-    >
-      <div
-        className="box2"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-2"
         >
-          B
+          <div
+            className="box2"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              B
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-2"
-    >
-      <div
-        className="box3"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-2"
         >
-          C
+          <div
+            className="box3"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              C
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-2"
-    >
-      <div
-        className="box4"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-2"
         >
-          D
+          <div
+            className="box4"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              D
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-2"
-    >
-      <div
-        className="box5"
-        style={Object {}}
-      >
         <div
-          className="gridMiddle gridCenter grid"
+          className="col-2"
         >
-          E
+          <div
+            className="box5"
+            style={Object {}}
+          >
+            <div
+              className="gridMiddle gridCenter grid"
+            >
+              E
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -514,658 +526,662 @@ exports[`Storyshots Grid Auto Flow 1`] = `
 `;
 
 exports[`Storyshots Grid Fraction 1`] = `
-<div
-  className="layout layoutStretch"
->
-  <div
-    className="gridRoot grid"
-  >
-    <h1>
-      Auto Size
-    </h1>
+<div>
+  <div>
     <div
-      className="grid"
-    />
-    <div
-      className="grid"
+      className="layout layoutStretch"
     >
       <div
-        className="col"
+        className="gridRoot grid"
       >
+        <h1>
+          Auto Size
+        </h1>
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
+        />
+        <div
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1 / 1
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 1
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1 / 2
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 2
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 2
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col"
-      >
         <div
-          className="box2"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1 / 2
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 3
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 3
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 3
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1 / 3
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 4
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 4
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 4
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 4
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col"
-      >
         <div
-          className="box2"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1 / 3
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 5
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 5
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 5
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 5
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 5
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col"
-      >
         <div
-          className="box3"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1 / 3
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 6
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 6
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 6
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 6
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 6
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 6
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1 / 4
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 7
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 7
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 7
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 7
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 7
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 7
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 7
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col"
-      >
         <div
-          className="box2"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1 / 4
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 8
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 8
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 8
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 8
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 8
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 8
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 8
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1 / 8
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col"
-      >
+        <h1>
+          8 - auto
+        </h1>
         <div
-          className="box3"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-8"
           >
-            1 / 4
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                8
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                12 - 8 = 4
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col"
-      >
+        <h1>
+          6 - 1/2 - 1/2
+        </h1>
         <div
-          className="box4"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-6"
           >
-            1 / 4
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                6
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                (12 - 6) / 2 = 3
+              </div>
+            </div>
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                (12 - 6) / 2 = 3
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col"
-      >
+        <h1>
+          Custom
+        </h1>
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
+        />
+        <div
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-6"
           >
-            1 / 5
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 5
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 5
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 5
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 5
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 6
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 6
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 6
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 6
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 6
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 6
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 7
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 7
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 7
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 7
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 7
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 7
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 7
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 8
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 8
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 8
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 8
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 8
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 8
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 8
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1 / 8
-          </div>
-        </div>
-      </div>
-    </div>
-    <h1>
-      8 - auto
-    </h1>
-    <div
-      className="grid"
-    >
-      <div
-        className="col-8"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            8
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            12 - 8 = 4
-          </div>
-        </div>
-      </div>
-    </div>
-    <h1>
-      6 - 1/2 - 1/2
-    </h1>
-    <div
-      className="grid"
-    >
-      <div
-        className="col-6"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            6
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            (12 - 6) / 2 = 3
-          </div>
-        </div>
-      </div>
-      <div
-        className="col"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            (12 - 6) / 2 = 3
-          </div>
-        </div>
-      </div>
-    </div>
-    <h1>
-      Custom
-    </h1>
-    <div
-      className="grid"
-    />
-    <div
-      className="grid"
-    >
-      <div
-        className="col-6"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            6 (fixed)
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                6 (fixed)
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1175,80 +1191,84 @@ exports[`Storyshots Grid Fraction 1`] = `
 `;
 
 exports[`Storyshots Grid Horizontal Align 1`] = `
-<div
-  className="layout layoutStretch"
->
-  <div
-    className="gridRoot grid"
-  >
+<div>
+  <div>
     <div
-      className="gridLeft col-12 grid"
+      className="layout layoutStretch"
     >
       <div
-        className="col-2"
+        className="gridRoot grid"
       >
         <div
-          className="box2"
-          style={Object {}}
+          className="gridLeft col-12 grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-2"
           >
-            LEFT
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                LEFT
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="gridCenter col-12 grid"
-    >
-      <div
-        className="col-2"
-      >
         <div
-          className="box3"
-          style={Object {}}
+          className="gridCenter col-12 grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-2"
           >
-            CENTER
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                CENTER
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="gridRight col-12 grid"
-    >
-      <div
-        className="col-2"
-      >
         <div
-          className="box4"
-          style={Object {}}
+          className="gridRight col-12 grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-2"
           >
-            RIGHT
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                RIGHT
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="col-12 grid"
-    >
-      <div
-        className="col-2"
-      >
         <div
-          className="box5"
-          style={Object {}}
+          className="col-12 grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-2"
           >
-            DEFAULT
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                DEFAULT
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1258,264 +1278,268 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
 `;
 
 exports[`Storyshots Grid Nested 1`] = `
-<div
-  className="layout layoutStretch"
->
-  <div
-    className="gridRoot grid"
-  >
+<div>
+  <div>
     <div
-      className="grid"
+      className="layout layoutStretch"
     >
       <div
-        className="grid col-6"
+        className="gridRoot grid"
       >
         <div
-          className="box1 grid gridMarginNoBottom"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="grid col-6"
           >
             <div
-              className="col-6"
+              className="box1 grid gridMarginNoBottom"
+              style={Object {}}
             >
               <div
-                className="box3"
-                style={Object {}}
+                className="gridMiddle gridCenter grid"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-6"
                 >
-                  C
+                  <div
+                    className="box3"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      C
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-6"
+                >
+                  <div
+                    className="box4"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      D
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            className="grid col-6"
+          >
             <div
-              className="col-6"
+              className="box2 grid gridMarginNoBottom"
+              style={Object {}}
             >
               <div
-                className="box4"
-                style={Object {}}
+                className="gridMiddle gridCenter grid"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-3"
                 >
-                  D
+                  <div
+                    className="box4"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      D
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="colOffset-6 col-3"
+                >
+                  <div
+                    className="box5"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      E
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="grid col-6"
-      >
         <div
-          className="box2 grid gridMarginNoBottom"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="grid col-6"
           >
             <div
-              className="col-3"
+              className="box1 grid gridMarginNoBottom"
+              style={Object {}}
             >
               <div
-                className="box4"
-                style={Object {}}
+                className="gridMiddle gridCenter grid"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="colOffset-3 col-6"
                 >
-                  D
+                  <div
+                    className="box4"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      D
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            className="grid col-6"
+          >
             <div
-              className="colOffset-6 col-3"
+              className="box2 grid gridMarginNoBottom"
+              style={Object {}}
             >
               <div
-                className="box5"
-                style={Object {}}
+                className="gridMiddle gridCenter grid"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-4"
                 >
-                  E
+                  <div
+                    className="box4"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      D
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="colOffset-4 col-4"
+                >
+                  <div
+                    className="box5"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      E
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="grid col-6"
-      >
         <div
-          className="box1 grid gridMarginNoBottom"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="grid col-6"
           >
             <div
-              className="colOffset-3 col-6"
+              className="box2 grid gridMarginNoBottom"
+              style={Object {}}
             >
               <div
-                className="box4"
-                style={Object {}}
+                className="gridMiddle gridCenter grid"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-1"
                 >
-                  D
+                  <div
+                    className="box1"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      1
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="grid col-6"
-      >
-        <div
-          className="box2 grid gridMarginNoBottom"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            <div
-              className="col-4"
-            >
-              <div
-                className="box4"
-                style={Object {}}
-              >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-1"
                 >
-                  D
+                  <div
+                    className="box2"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      2
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              className="colOffset-4 col-4"
-            >
-              <div
-                className="box5"
-                style={Object {}}
-              >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-1"
                 >
-                  E
+                  <div
+                    className="box3"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      3
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="grid col-6"
-      >
-        <div
-          className="box2 grid gridMarginNoBottom"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            <div
-              className="col-1"
-            >
-              <div
-                className="box1"
-                style={Object {}}
-              >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-1"
                 >
-                  1
+                  <div
+                    className="box4"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      4
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              className="col-1"
-            >
-              <div
-                className="box2"
-                style={Object {}}
-              >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-1"
                 >
-                  2
+                  <div
+                    className="box5"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      5
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              className="col-1"
-            >
-              <div
-                className="box3"
-                style={Object {}}
-              >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="col-1"
                 >
-                  3
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-1"
-            >
-              <div
-                className="box4"
-                style={Object {}}
-              >
-                <div
-                  className="gridMiddle gridCenter grid"
-                >
-                  4
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-1"
-            >
-              <div
-                className="box5"
-                style={Object {}}
-              >
-                <div
-                  className="gridMiddle gridCenter grid"
-                >
-                  5
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-1"
-            >
-              <div
-                className="box1"
-                style={Object {}}
-              >
-                <div
-                  className="gridMiddle gridCenter grid"
-                >
-                  6
+                  <div
+                    className="box1"
+                    style={Object {}}
+                  >
+                    <div
+                      className="gridMiddle gridCenter grid"
+                    >
+                      6
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1528,214 +1552,218 @@ exports[`Storyshots Grid Nested 1`] = `
 `;
 
 exports[`Storyshots Grid Offset 1`] = `
-<div
-  className="layout layoutStretch"
->
-  <div
-    className="gridRoot grid"
-  >
+<div>
+  <div>
     <div
-      className="grid"
+      className="layout layoutStretch"
     >
       <div
-        className="col-1"
+        className="gridRoot grid"
       >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-1"
           >
-            +0
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +0
+              </div>
+            </div>
+          </div>
+          <div
+            className="colOffset-7 col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +7
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="colOffset-7 col-1"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="colOffset-1 col-1"
           >
-            +7
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +1
+              </div>
+            </div>
+          </div>
+          <div
+            className="colOffset-5 col-1"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +5
+              </div>
+            </div>
+          </div>
+          <div
+            className="colOffset-1 col-1"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +1
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="colOffset-1 col-1"
-      >
         <div
-          className="box2"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="colOffset-2 col-1"
           >
-            +1
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +2
+              </div>
+            </div>
+          </div>
+          <div
+            className="colOffset-3 col-1"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +3
+              </div>
+            </div>
+          </div>
+          <div
+            className="colOffset-3 col-1"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +3
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="colOffset-5 col-1"
-      >
         <div
-          className="box2"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="colOffset-3 col-1"
           >
-            +5
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +3
+              </div>
+            </div>
+          </div>
+          <div
+            className="colOffset-1 col-1"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +1
+              </div>
+            </div>
+          </div>
+          <div
+            className="colOffset-5 col-1"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +5
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="colOffset-1 col-1"
-      >
         <div
-          className="box2"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="colOffset-4 col-1"
           >
-            +1
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +4
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="colOffset-2 col-1"
-      >
         <div
-          className="box3"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-1"
           >
-            +2
-          </div>
-        </div>
-      </div>
-      <div
-        className="colOffset-3 col-1"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            +3
-          </div>
-        </div>
-      </div>
-      <div
-        className="colOffset-3 col-1"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            +3
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="colOffset-3 col-1"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            +3
-          </div>
-        </div>
-      </div>
-      <div
-        className="colOffset-1 col-1"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            +1
-          </div>
-        </div>
-      </div>
-      <div
-        className="colOffset-5 col-1"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            +5
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="colOffset-4 col-1"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            +4
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col-1"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            +0
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                +0
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1745,442 +1773,446 @@ exports[`Storyshots Grid Offset 1`] = `
 `;
 
 exports[`Storyshots Grid Sizing 1`] = `
-<div
-  className="layout layoutStretch"
->
-  <div
-    className="gridRoot grid"
-  >
+<div>
+  <div>
     <div
-      className="grid"
+      className="layout layoutStretch"
     >
       <div
-        className="col-1"
+        className="gridRoot grid"
       >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-1"
           >
-            1
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                1
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col-1"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-2"
           >
-            1
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                2
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-2"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                2
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-2"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                2
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-2"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                2
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-2"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                2
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-2"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                2
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col-1"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-3"
           >
-            1
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                3
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-3"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                3
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-3"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                3
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-3"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                3
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col-1"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-4"
           >
-            1
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                4
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-4"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                4
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-4"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                4
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col-1"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-6"
           >
-            1
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                6
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-6"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                6
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col-1"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col"
           >
-            1
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                Auto
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="col-1"
-      >
         <div
-          className="box1"
-          style={Object {}}
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-12"
           >
-            1
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-1"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-1"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-1"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-1"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-1"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            1
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col-2"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            2
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-2"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            2
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-2"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            2
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-2"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            2
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-2"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            2
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-2"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            2
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col-3"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            3
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-3"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            3
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-3"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            3
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-3"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            3
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col-4"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            4
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-4"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            4
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-4"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            4
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col-6"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            6
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-6"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            6
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            Auto
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="grid"
-    >
-      <div
-        className="col-12"
-      >
-        <div
-          className="box1"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            12
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                12
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -2190,196 +2222,200 @@ exports[`Storyshots Grid Sizing 1`] = `
 `;
 
 exports[`Storyshots Grid Vertical Align 1`] = `
-<div
-  className="layout layoutStretch"
->
-  <div
-    className="gridRoot grid"
-  >
-    <h1>
-      Item Align
-    </h1>
+<div>
+  <div>
     <div
-      className="grid"
+      className="layout layoutStretch"
     >
       <div
-        className="col-1"
+        className="gridRoot grid"
       >
+        <h1>
+          Item Align
+        </h1>
         <div
-          className="box1"
-          style={
-            Object {
-              "height": 300,
-            }
-          }
+          className="grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
-          >
-             
-          </div>
-        </div>
-      </div>
-      <div
-        className="colTop col-2"
-      >
-        <div
-          className="box2"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            TOP
-          </div>
-        </div>
-      </div>
-      <div
-        className="colMiddle col-2"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            MIDDLE
-          </div>
-        </div>
-      </div>
-      <div
-        className="colBottom col-2"
-      >
-        <div
-          className="box4"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            BOTTOM
-          </div>
-        </div>
-      </div>
-      <div
-        className="colMiddle col-2"
-      >
-        <div
-          className="box3"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            MIDDLE
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-2"
-      >
-        <div
-          className="box5"
-          style={Object {}}
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-            DEFAULT
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-1"
-      >
-        <div
-          className="box1"
-          style={
-            Object {
-              "height": 300,
-            }
-          }
-        >
-          <div
-            className="gridMiddle gridCenter grid"
-          >
-             
-          </div>
-        </div>
-      </div>
-    </div>
-    <h1>
-      Grid Align
-    </h1>
-    <div
-      className="grid"
-    >
-      <div
-        className="gridTop col-4 grid"
-        style={
-          Object {
-            "height": 300,
-          }
-        }
-      >
-        <div
-          className="col-12"
-        >
-          <div
-            className="box3"
-            style={Object {}}
+            className="col-1"
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="box1"
+              style={
+                Object {
+                  "height": 300,
+                }
+              }
             >
-              TOP
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                 
+              </div>
+            </div>
+          </div>
+          <div
+            className="colTop col-2"
+          >
+            <div
+              className="box2"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                TOP
+              </div>
+            </div>
+          </div>
+          <div
+            className="colMiddle col-2"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                MIDDLE
+              </div>
+            </div>
+          </div>
+          <div
+            className="colBottom col-2"
+          >
+            <div
+              className="box4"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                BOTTOM
+              </div>
+            </div>
+          </div>
+          <div
+            className="colMiddle col-2"
+          >
+            <div
+              className="box3"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                MIDDLE
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-2"
+          >
+            <div
+              className="box5"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                DEFAULT
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-1"
+          >
+            <div
+              className="box1"
+              style={
+                Object {
+                  "height": 300,
+                }
+              }
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                 
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="gridMiddle col-4 grid"
-        style={
-          Object {
-            "height": 300,
-          }
-        }
-      >
+        <h1>
+          Grid Align
+        </h1>
         <div
-          className="col-12"
+          className="grid"
         >
           <div
-            className="box3"
-            style={Object {}}
+            className="gridTop col-4 grid"
+            style={
+              Object {
+                "height": 300,
+              }
+            }
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="col-12"
             >
-              MIDDLE
+              <div
+                className="box3"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  TOP
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        className="gridBottom col-4 grid"
-        style={
-          Object {
-            "height": 300,
-          }
-        }
-      >
-        <div
-          className="col-12"
-        >
           <div
-            className="box3"
-            style={Object {}}
+            className="gridMiddle col-4 grid"
+            style={
+              Object {
+                "height": 300,
+              }
+            }
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="col-12"
             >
-              BOTTOM
+              <div
+                className="box3"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  MIDDLE
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="gridBottom col-4 grid"
+            style={
+              Object {
+                "height": 300,
+              }
+            }
+          >
+            <div
+              className="col-12"
+            >
+              <div
+                className="box3"
+                style={Object {}}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  BOTTOM
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2390,61 +2426,65 @@ exports[`Storyshots Grid Vertical Align 1`] = `
 `;
 
 exports[`Storyshots Layout Holy Grail 1`] = `
-<div
-  className="layout holyGrail layoutFit"
->
-  <div
-    className="layout header layoutAuto"
-  >
+<div>
+  <div>
     <div
-      className="gridRoot grid"
-    >
-      <h1>
-        Header
-      </h1>
-    </div>
-  </div>
-  <div
-    className="layout layoutStretch"
-  >
-    <div
-      className="layout layoutStretch"
+      className="layout holyGrail layoutFit"
     >
       <div
-        className="gridRoot grid"
+        className="layout header layoutAuto"
       >
         <div
-          className="nav col-2 grid"
+          className="gridRoot grid"
         >
-          <h2>
-            Nav
-          </h2>
-        </div>
-        <div
-          className="content gridTop col-8 grid"
-        >
-          <h2>
-            Content
-          </h2>
-        </div>
-        <div
-          className="ads col-2 grid"
-        >
-          <h2>
-            Ads
-          </h2>
+          <h1>
+            Header
+          </h1>
         </div>
       </div>
-    </div>
-    <div
-      className="layout footer layoutAuto"
-    >
       <div
-        className="gridRoot grid"
+        className="layout layoutStretch"
       >
-        <h1>
-          Footer
-        </h1>
+        <div
+          className="layout layoutStretch"
+        >
+          <div
+            className="gridRoot grid"
+          >
+            <div
+              className="nav col-2 grid"
+            >
+              <h2>
+                Nav
+              </h2>
+            </div>
+            <div
+              className="content gridTop col-8 grid"
+            >
+              <h2>
+                Content
+              </h2>
+            </div>
+            <div
+              className="ads col-2 grid"
+            >
+              <h2>
+                Ads
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          className="layout footer layoutAuto"
+        >
+          <div
+            className="gridRoot grid"
+          >
+            <h1>
+              Footer
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2452,125 +2492,133 @@ exports[`Storyshots Layout Holy Grail 1`] = `
 `;
 
 exports[`Storyshots Layout Stack 1`] = `
-<div
-  className="layout layoutStretch"
->
-  <div
-    className="layout layoutAuto"
-  >
+<div>
+  <div>
     <div
-      className="gridMarginNone grid"
+      className="layout layoutStretch"
     >
       <div
-        className="col-12"
+        className="layout layoutAuto"
       >
         <div
-          className="box1"
-          style={Object {}}
+          className="gridMarginNone grid"
         >
           <div
-            className="gridMiddle gridCenter grid"
+            className="col-12"
           >
-            Section 1
+            <div
+              className="box1"
+              style={Object {}}
+            >
+              <div
+                className="gridMiddle gridCenter grid"
+              >
+                Section 1
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="layout layoutStretch"
-  >
-    <div>
-      <h1>
-        SubSection 
-        1
-      </h1>
-    </div>
-    <div>
-      <h1>
-        SubSection 
-        2
-      </h1>
-    </div>
-    <div>
-      <h1>
-        SubSection 
-        3
-      </h1>
+      <div
+        className="layout layoutStretch"
+      >
+        <div>
+          <h1>
+            SubSection 
+            1
+          </h1>
+        </div>
+        <div>
+          <h1>
+            SubSection 
+            2
+          </h1>
+        </div>
+        <div>
+          <h1>
+            SubSection 
+            3
+          </h1>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Storyshots Layout Two Sections 1`] = `
-<div
-  className="layout twoSections layoutFit"
->
-  <div
-    className="layout header layoutAuto"
-  >
+<div>
+  <div>
     <div
-      className="gridRoot grid"
-    >
-      <h1>
-        Header
-      </h1>
-    </div>
-  </div>
-  <div
-    className="layout layoutStretch"
-  >
-    <div
-      className="layout top layoutAuto"
+      className="layout twoSections layoutFit"
     >
       <div
-        className="gridRoot grid"
+        className="layout header layoutAuto"
       >
         <div
-          className="grid"
+          className="gridRoot grid"
         >
-          <div
-            className="colOffset-2 col-6"
-          >
-            <input
-              placeholder="Some search here"
-              type="text"
-            />
-          </div>
-          <div
-            className="col-2"
-          >
-            <button>
-              Search
-            </button>
-          </div>
+          <h1>
+            Header
+          </h1>
         </div>
       </div>
-    </div>
-    <div
-      className="layout layoutStretch"
-    >
       <div
-        className="gridRoot grid"
+        className="layout layoutStretch"
       >
         <div
-          className="content gridTop col-12 grid"
+          className="layout top layoutAuto"
         >
-          <h2>
-            Content
-          </h2>
+          <div
+            className="gridRoot grid"
+          >
+            <div
+              className="grid"
+            >
+              <div
+                className="colOffset-2 col-6"
+              >
+                <input
+                  placeholder="Some search here"
+                  type="text"
+                />
+              </div>
+              <div
+                className="col-2"
+              >
+                <button>
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      className="layout footer layoutAuto"
-    >
-      <div
-        className="gridRoot grid"
-      >
-        <h1>
-          Footer
-        </h1>
+        <div
+          className="layout layoutStretch"
+        >
+          <div
+            className="gridRoot grid"
+          >
+            <div
+              className="content gridTop col-12 grid"
+            >
+              <h2>
+                Content
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          className="layout footer layoutAuto"
+        >
+          <div
+            className="gridRoot grid"
+          >
+            <h1>
+              Footer
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { WithNotes } from '@storybook/addon-notes'
+import WithExtensions from '../withExtensions'
 import story from './story'
 import Grid from '../../src/grid'
 import Root from '../root'
@@ -16,7 +16,7 @@ story.add('Offset', () => {
   const offset = number('Offset', 0, { range: true, min: 0, max: 11 })
 
   return (
-    <WithNotes notes={notes}>
+    <WithExtensions notes={notes}>
       <Root>
         <Grid {...margin}>
           <Box size={1} type="A" value="+0" />
@@ -44,6 +44,6 @@ story.add('Offset', () => {
           <Box size={1} offset={offset} type="A" value={`+${offset}`} />
         </Grid>
       </Root>
-    </WithNotes>
+    </WithExtensions>
   )
 })

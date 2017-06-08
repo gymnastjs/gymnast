@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
-import { WithNotes } from '@storybook/addon-notes'
 import { number } from '@storybook/addon-knobs'
+import WithExtensions from '../withExtensions'
 import story from './story'
 import Grid from '../../src/grid'
 import { times } from '../../src/utils'
@@ -16,7 +16,7 @@ story.add('Nested', () => {
   const items = number('Items', 6, { range: true, min: 1, max: 24 })
 
   return (
-    <WithNotes notes={notes}>
+    <WithExtensions notes={notes}>
       <Root>
         <Grid>
           <Box size={6} type="A" grid nest>
@@ -50,6 +50,6 @@ story.add('Nested', () => {
           </Box>
         </Grid>
       </Root>
-    </WithNotes>
+    </WithExtensions>
   )
 })

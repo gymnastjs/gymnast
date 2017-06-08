@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
-import { WithNotes } from '@storybook/addon-notes'
 import { boolean } from '@storybook/addon-knobs'
+import WithExtensions from '../withExtensions'
 import story from './story'
 import Grid from '../../src/grid'
 import Layout from '../../src/layout'
@@ -16,7 +16,7 @@ story.add('Holy Grail', () => {
   const includeText = boolean('Show text', false)
 
   return (
-    <WithNotes notes={notes}>
+    <WithExtensions notes={notes}>
       <Layout size={FIT} className={styles.holyGrail}>
         <Layout size={AUTO} className={styles.header}>
           <Grid root>
@@ -41,6 +41,6 @@ story.add('Holy Grail', () => {
           </Layout>
         </Layout>
       </Layout>
-    </WithNotes>
+    </WithExtensions>
   )
 })
