@@ -3,6 +3,12 @@
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
+  "files.associations": {
+    ".all-contributorsrc": "json",
+    ".babelrc": "json",
+    ".eslintrc": "json",
+    ".stylelintrc": "json"
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "flow.enabled": true,
