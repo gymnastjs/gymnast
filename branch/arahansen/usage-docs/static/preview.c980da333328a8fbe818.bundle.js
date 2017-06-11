@@ -13927,7 +13927,7 @@ var _configStories2 = _interopRequireDefault(_configStories);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var stories = (0, _configStories2.default)('Grid', module);
+var stories = (0, _configStories2.default)('Layout', module);
 exports.default = stories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(69)(module)))
 
@@ -46933,4 +46933,4 @@ module.exports = __webpack_require__(631);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.37164e56d9b0572304c5.bundle.js.map
+//# sourceMappingURL=preview.c980da333328a8fbe818.bundle.js.map
