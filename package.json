@@ -42,9 +42,11 @@
     "postcss-loader": "2.0.5",
     "postcss-nesting": "4.0.1",
     "prettier": "1.4.2",
+    "react-element-to-jsx-string": "https://github.com/arahansen/react-element-to-jsx-string#6daa99e0b70c74cc1fac4233a7dfdb6753f186cf",
     "react-test-renderer": "15.5.4",
     "regenerator-runtime": "0.10.5",
     "screener-storybook": "0.7.2",
+    "storybook-addon-jsx": "https://github.com/arahansen/storybook-addon-jsx#e8f70b5e60d4a707a6d45073b3921d0fd86d962a",
     "style-loader": "0.18.2",
     "stylelint": "7.10.1"
   },

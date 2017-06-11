@@ -1,4 +1,7 @@
-import { configure } from '@storybook/react'
+import { configure, setAddon } from '@storybook/react'
+import JSXAddon from 'storybook-addon-jsx'
+
+setAddon(JSXAddon)
 
 configure(() => {
   /* eslint-disable global-require */
