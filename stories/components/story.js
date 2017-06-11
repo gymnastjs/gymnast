@@ -1,9 +1,6 @@
 // @flow
-import { storiesOf } from '@storybook/react'
-import { withKnobs } from '@storybook/addon-knobs'
+import configStories from '../configStories'
 
-const stories = storiesOf('Components', module)
-
-stories.addDecorator(withKnobs)
+const stories = configStories('Components', module)
 
 export default stories

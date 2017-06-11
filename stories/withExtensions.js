@@ -4,7 +4,7 @@ import { WithNotes } from '@storybook/addon-notes'
 import { boolean } from '@storybook/addon-knobs'
 import style from './designGrid.css'
 
-export default class withExtensions extends React.PureComponent {
+export default class WithExtensions extends React.PureComponent {
   static defaultProps = {
     notes: '',
     className: '',
