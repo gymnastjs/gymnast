@@ -13882,6 +13882,12 @@ var _react = __webpack_require__(446);
 
 var _addonKnobs = __webpack_require__(30);
 
+function unwrapDisplayNameFromHOC() {
+  var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+  return (name.match(/(?:\(([^()]+)\))/) || [])[1] || name;
+}
+
 var configStories = function configStories(storiesOfName, storiesModule) {
   var stories = (0, _react.storiesOf)(storiesOfName, storiesModule);
 
@@ -13893,12 +13899,7 @@ var configStories = function configStories(storiesOfName, storiesModule) {
       useBooleanShorthandSyntax: true,
       skip: 1, // assumes each story will have a WithExtensions wrapper, this config option skips that wrapper
       displayName: function displayName(element) {
-        return (
-          /* eslint-disable no-underscore-dangle */
-          element.type.__WRAPPED_COMPONENT_DISPLAY_NAME__ ||
-          /* eslint-enable no-underscore-dangle */
-          element.type.displayName || element.type.name || element.type
-        );
+        return unwrapDisplayNameFromHOC(element.type.displayName) || element.type.displayName || element.type.name || element.type;
       }
     });
   };
@@ -35510,7 +35511,7 @@ function Item(Component) {
     className: undefined,
     grid: false,
     offset: 0
-  }, _class.displayName = 'withItem(' + (0, _utils.getDisplayName)(Component) + ')', _class.__WRAPPED_COMPONENT_DISPLAY_NAME__ = (0, _utils.getDisplayName)(Component), _class.ALIGN = _values.ALIGN, _temp;
+  }, _class.displayName = 'withItem(' + (0, _utils.getDisplayName)(Component) + ')', _class.ALIGN = _values.ALIGN, _temp;
 }
 
 /***/ }),
@@ -38399,7 +38400,7 @@ function Grid(Component) {
     root: false,
     size: undefined,
     stretch: false
-  }, _class.displayName = 'withGrid(' + (0, _utils.getDisplayName)(Component) + ')', _class.__WRAPPED_COMPONENT_DISPLAY_NAME__ = (0, _utils.getDisplayName)(Component), _class.ALIGN = _values.ALIGN, _class.MARGIN = _values.MARGIN, _class.MARGIN_SIZE = _values.MARGIN_SIZE, _class.JUSTIFY = _values.JUSTIFY, _temp;
+  }, _class.displayName = 'withGrid(' + (0, _utils.getDisplayName)(Component) + ')', _class.ALIGN = _values.ALIGN, _class.MARGIN = _values.MARGIN, _class.MARGIN_SIZE = _values.MARGIN_SIZE, _class.JUSTIFY = _values.JUSTIFY, _temp;
 }
 
 /***/ }),
@@ -38486,7 +38487,7 @@ function Layout(Component) {
   }(_react2.default.PureComponent), _class.defaultProps = {
     className: undefined,
     size: _values.SIZE.STRETCH
-  }, _class.displayName = 'withLayout(' + (0, _utils.getDisplayName)(Component) + ')', _class.__WRAPPED_COMPONENT_DISPLAY_NAME__ = (0, _utils.getDisplayName)(Component), _class.SIZE = _values.SIZE, _temp;
+  }, _class.displayName = 'withLayout(' + (0, _utils.getDisplayName)(Component) + ')', _class.SIZE = _values.SIZE, _temp;
 }
 
 /***/ }),
@@ -46933,4 +46934,4 @@ module.exports = __webpack_require__(631);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.c980da333328a8fbe818.bundle.js.map
+//# sourceMappingURL=preview.e783ffb5e6165cb5a937.bundle.js.map
