@@ -1,11 +1,8 @@
 // @flow
 import React from 'react'
-import { compact } from '../src/utils'
-import Grid from '../src/grid'
-import Item from '../src/item'
-import ItemHOC from '../src/item.hoc'
-import layout from '../src/index.css'
+import { Grid, Item, ItemHOC, utils } from '../../src'
 import styles from './stories.css'
+import layout from '../../src/index.css'
 
 const typeMap = {
   A: 1,
@@ -35,7 +32,7 @@ class Box extends React.PureComponent {
 
   render() {
     const { type, value = type, children, style, nest, ...props } = this.props
-    const classes = compact([
+    const classes = utils.compact([
       styles[`box${typeMap[type]}`],
       nest && `${layout.grid} ${layout.gridMarginNoBottom}`,
     ])

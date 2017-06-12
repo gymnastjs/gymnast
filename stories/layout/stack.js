@@ -1,14 +1,8 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import WithExtensions from '../withExtensions'
-import story from './story'
-import Grid from '../../src/grid'
-import Layout from '../../src/layout'
-import { times } from '../../src/utils'
-import { getBoxType } from '../utils'
-import Item from '../../src/item'
-import Box from '../box'
+import { Grid, Layout, Item, utils } from '../../src'
+import { WithExtensions, Box, getBoxType } from '../core'
 
 const notes =
   'A layout component defaults to vertically stacking elements, taking the full width and optionally sizing to fit or stretching elements'
@@ -34,7 +28,7 @@ function getContainerSection(index, subsections) {
   return (
     <Layout key={index}>
       <Grid root>
-        {times(subsections, i =>
+        {utils.times(subsections, i =>
           <Grid key={i}>
             <Item size={12}><h1>SubSection {i + 1}</h1></Item>
           </Grid>
@@ -51,13 +45,13 @@ function getSection(index, subsections) {
   return getContainerSection(index, subsections)
 }
 
-story.add('Stack', () => {
+export default function() {
   const subSections = number('Subsections', 3, { range: true, min: 1, max: 20 })
   const sections = number('Sections', 2, { range: true, min: 2, max: 10 })
 
   return (
     <WithExtensions notes={notes}>
-      {times(sections, index => getSection(index, subSections))}
+      {utils.times(sections, index => getSection(index, subSections))}
     </WithExtensions>
   )
-})
+}

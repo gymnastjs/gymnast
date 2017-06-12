@@ -1,19 +1,13 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import WithExtensions from '../withExtensions'
-import story from './story'
-import Grid from '../../src/grid'
-import { times } from '../../src/utils'
-import Root from '../root'
-import Box from '../box'
-import { getBoxType } from '../utils'
+import { Grid, utils } from '../../src'
+import { WithExtensions, Root, Box, getBoxType } from '../core'
 
-const notes =
-  "Nested items respect the parent columns size so they don't create a new set of columns within them (they reuse their parents)"
-
-story.add('Nested', () => {
+export default function() {
   const items = number('Items', 6, { range: true, min: 1, max: 24 })
+  const notes =
+    "Nested items respect the parent columns size so they don't create a new set of columns within them (they reuse their parents)"
 
   return (
     <WithExtensions notes={notes}>
@@ -39,7 +33,7 @@ story.add('Nested', () => {
         </Grid>
         <Grid>
           <Box size={6} type="B" grid nest>
-            {times(items, index =>
+            {utils.times(items, index =>
               <Box
                 key={index}
                 size={1}
@@ -52,4 +46,4 @@ story.add('Nested', () => {
       </Root>
     </WithExtensions>
   )
-})
+}

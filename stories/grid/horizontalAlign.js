@@ -1,16 +1,10 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import story from './story'
-import Grid from '../../src/grid'
-import getMarginSelect from '../margin'
-import Root from '../root'
-import Box from '../box'
-import WithExtensions from '../withExtensions'
+import { Grid } from '../../src'
+import { getMarginSelect, Root, Box, WithExtensions } from '../core'
 
-const notes = 'Horizontal alignment allows left, right or center align'
-
-story.add('Horizontal Align', () => {
+export default function() {
   const margin = getMarginSelect()
   const size = number('Width', 12, {
     range: true,
@@ -18,6 +12,7 @@ story.add('Horizontal Align', () => {
     max: 12,
     step: 1,
   })
+  const notes = 'Horizontal alignment allows left, right or center align'
 
   return (
     <WithExtensions notes={notes}>
@@ -37,4 +32,4 @@ story.add('Horizontal Align', () => {
       </Root>
     </WithExtensions>
   )
-})
+}

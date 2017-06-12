@@ -1,16 +1,12 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import WithExtensions from '../withExtensions'
-import story from './story'
-import Root from '../root'
-import Box from '../box'
-import Grid from '../../src/grid'
+import { Grid } from '../../src'
+import { WithExtensions, Root, Box } from '../core'
 
-const notes = 'Showcases the rendering of a pagination component'
-
-story.add('Pagination', () => {
+export default function() {
   const size = number('Size', 12, { range: true, min: 7, max: 12 })
+  const notes = 'Showcases the rendering of a pagination component'
 
   return (
     <WithExtensions notes={notes}>
@@ -32,4 +28,4 @@ story.add('Pagination', () => {
       </Root>
     </WithExtensions>
   )
-})
+}

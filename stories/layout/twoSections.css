@@ -1,4 +1,4 @@
-@import './variables.css';
+@import "../../src/variables";
 
 .twoSections {
   & h1, & h2, & .nav > *, & .content > *, & .ads > * {

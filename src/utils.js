@@ -7,11 +7,23 @@ const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
 
-export function getDisplayName(WrappedComponent: {
-  displayName?: string,
-  name?: string,
-}): string {
-  return WrappedComponent.displayName || WrappedComponent.name || 'Component'
+type StringOrWrappedComponent =
+  | string
+  | {
+      displayName?: string,
+      name?: string,
+    }
+
+export function getDisplayName(
+  WrappedComponent: StringOrWrappedComponent
+): string {
+  const defaultName = 'Component'
+
+  if (typeof WrappedComponent !== 'string') {
+    return WrappedComponent.displayName || WrappedComponent.name || defaultName
+  }
+
+  return WrappedComponent || defaultName
 }
 
 export function compact(array: any[] = []) {
@@ -85,6 +97,16 @@ export function getJustify(value: Symbol | void) {
     default:
       return ''
   }
+}
+
+export function fromPairs(pairs: [string, any][]): Object {
+  return pairs.reduce(
+    (acc, [key, value]) => ({
+      ...acc,
+      [key]: value,
+    }),
+    {}
+  )
 }
 
 /* eslint-disable no-console */

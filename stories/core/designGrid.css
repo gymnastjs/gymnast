@@ -1,4 +1,4 @@
-@import '../src/variables.css';
+@import "../../src/variables";
 
 :root {
   --colWidth: calc(var(--page-content-width) / 12 - var(--gutter));

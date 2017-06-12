@@ -1,17 +1,12 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import WithExtensions from '../withExtensions'
-import story from './story'
-import Grid from '../../src/grid'
-import Layout from '../../src/layout'
-import { times } from '../../src/utils'
-import Box from '../box'
+import { Grid, Layout, utils } from '../../src'
+import { WithExtensions, Box } from '../core'
 
-const notes = 'Showcases the rendering of a header and subheader'
-
-story.add('Header', () => {
+export default function() {
   const items = number('Items', 6, { range: true, min: 1, max: 12 })
+  const notes = 'Showcases the rendering of a header and subheader'
 
   return (
     <WithExtensions notes={notes}>
@@ -27,7 +22,7 @@ story.add('Header', () => {
           </Grid>
           <Grid>
             <Grid size={10}>
-              {times(items, i =>
+              {utils.times(items, i =>
                 <Box size={1} type="A" key={i} value={`${i + 1}`} />
               )}
             </Grid>
@@ -37,4 +32,4 @@ story.add('Header', () => {
       </Layout>
     </WithExtensions>
   )
-})
+}
