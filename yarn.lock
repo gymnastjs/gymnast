@@ -6190,9 +6190,9 @@ react-dom@~15.4.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
-"react-element-to-jsx-string@https://github.com/arahansen/react-element-to-jsx-string#6daa99e0b70c74cc1fac4233a7dfdb6753f186cf":
-  version "10.0.0"
-  resolved "https://github.com/arahansen/react-element-to-jsx-string#6daa99e0b70c74cc1fac4233a7dfdb6753f186cf"
+react-element-to-jsx-string@10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/react-element-to-jsx-string/-/react-element-to-jsx-string-10.1.0.tgz#bdb06c176655771fdc6b0ef872001abb4aaf8941"
   dependencies:
     collapse-white-space "^1.0.0"
     is-plain-object "^2.0.1"
@@ -6998,12 +6998,13 @@ stealthy-require@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
 
-"storybook-addon-jsx@https://github.com/arahansen/storybook-addon-jsx#e8f70b5e60d4a707a6d45073b3921d0fd86d962a":
-  version "4.1.0"
-  resolved "https://github.com/arahansen/storybook-addon-jsx#e8f70b5e60d4a707a6d45073b3921d0fd86d962a"
+storybook-addon-jsx@4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/storybook-addon-jsx/-/storybook-addon-jsx-4.1.1.tgz#e45b07d4cd6f1c122ad50263c00b65f5114a8f6f"
   dependencies:
     react "^15.5.4"
     react-copy-to-clipboard "4.3.1"
+    react-element-to-jsx-string "10.1.0"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
