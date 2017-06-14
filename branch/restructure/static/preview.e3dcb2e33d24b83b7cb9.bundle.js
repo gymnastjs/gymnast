@@ -42188,27 +42188,15 @@ module.exports = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vesti
 "use strict";
 
 
-Object.defineProperty(exports, '__esModule', {
-  value: true,
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 
 var _fill2 = __webpack_require__(922);
 
 var _fill3 = _interopRequireDefault(_fill2);
 
-var _typeof = typeof Symbol === 'function' &&
-  typeof Symbol.iterator === 'symbol'
-  ? function(obj) {
-      return typeof obj;
-    }
-  : function(obj) {
-      return obj &&
-        typeof Symbol === 'function' &&
-        obj.constructor === Symbol &&
-        obj !== Symbol.prototype
-        ? 'symbol'
-        : typeof obj;
-    };
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 exports.default = reactElementToJSXString;
 
@@ -42236,9 +42224,7 @@ var _traverse = __webpack_require__(1076);
 
 var _traverse2 = _interopRequireDefault(_traverse);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var escape = function escape(s) {
   return s.replace(/"/g, '&quot;');
@@ -42248,31 +42234,23 @@ var defaultFunctionValue = function defaultFunctionValue(fn) {
 };
 
 function reactElementToJSXString(ReactElement) {
-  var _ref = arguments.length > 1 && arguments[1] !== undefined
-    ? arguments[1]
-    : {},
-    displayName = _ref.displayName,
-    _ref$filterProps = _ref.filterProps,
-    filterProps = _ref$filterProps === undefined ? [] : _ref$filterProps,
-    _ref$showDefaultProps = _ref.showDefaultProps,
-    showDefaultProps = _ref$showDefaultProps === undefined
-      ? true
-      : _ref$showDefaultProps,
-    _ref$showFunctions = _ref.showFunctions,
-    showFunctions = _ref$showFunctions === undefined
-      ? false
-      : _ref$showFunctions,
-    _ref$functionValue = _ref.functionValue,
-    functionValue = _ref$functionValue === undefined
-      ? defaultFunctionValue
-      : _ref$functionValue,
-    _ref$tabStop = _ref.tabStop,
-    tabStop = _ref$tabStop === undefined ? 2 : _ref$tabStop,
-    _ref$useBooleanShorth = _ref.useBooleanShorthandSyntax,
-    useBooleanShorthandSyntax = _ref$useBooleanShorth === undefined
-      ? true
-      : _ref$useBooleanShorth,
-    maxInlineAttributesLineLength = _ref.maxInlineAttributesLineLength;
+  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      displayName = _ref.displayName,
+      _ref$filterProps = _ref.filterProps,
+      filterProps = _ref$filterProps === undefined ? [] : _ref$filterProps,
+      _ref$showDefaultProps = _ref.showDefaultProps,
+      showDefaultProps = _ref$showDefaultProps === undefined ? true : _ref$showDefaultProps,
+      _ref$showFunctions = _ref.showFunctions,
+      showFunctions = _ref$showFunctions === undefined ? false : _ref$showFunctions,
+      _ref$functionValue = _ref.functionValue,
+      functionValue = _ref$functionValue === undefined ? defaultFunctionValue : _ref$functionValue,
+      _ref$tabStop = _ref.tabStop,
+      tabStop = _ref$tabStop === undefined ? 2 : _ref$tabStop,
+      _ref$useBooleanShorth = _ref.useBooleanShorthandSyntax,
+      useBooleanShorthandSyntax = _ref$useBooleanShorth === undefined ? true : _ref$useBooleanShorth,
+      maxInlineAttributesLineLength = _ref.maxInlineAttributesLineLength,
+      _ref$sortProps = _ref.sortProps,
+      sortProps = _ref$sortProps === undefined ? true : _ref$sortProps;
 
   var getDisplayName = displayName || getDefaultDisplayName;
 
@@ -42280,49 +42258,36 @@ function reactElementToJSXString(ReactElement) {
 
   function toJSXString(_ref2) {
     var _ref2$ReactElement = _ref2.ReactElement,
-      Element = _ref2$ReactElement === undefined ? null : _ref2$ReactElement,
-      _ref2$lvl = _ref2.lvl,
-      lvl = _ref2$lvl === undefined ? 0 : _ref2$lvl,
-      _ref2$inline = _ref2.inline,
-      inline = _ref2$inline === undefined ? false : _ref2$inline;
+        Element = _ref2$ReactElement === undefined ? null : _ref2$ReactElement,
+        _ref2$lvl = _ref2.lvl,
+        lvl = _ref2$lvl === undefined ? 0 : _ref2$lvl,
+        _ref2$inline = _ref2.inline,
+        inline = _ref2$inline === undefined ? false : _ref2$inline;
 
     if (typeof Element === 'string' || typeof Element === 'number') {
       return Element;
     } else if (!(0, _react.isValidElement)(Element)) {
-      throw new Error(
-        'react-element-to-jsx-string: Expected a ReactElement,\ngot `' +
-          (typeof Element === 'undefined' ? 'undefined' : _typeof(Element)) +
-          '`'
-      );
+      throw new Error('react-element-to-jsx-string: Expected a ReactElement,\ngot `' + (typeof Element === 'undefined' ? 'undefined' : _typeof(Element)) + '`');
     }
 
     var tagName = getDisplayName(Element);
 
     var out = '<' + tagName;
-    var props = formatProps(
-      Element.props,
-      getDefaultProps(Element),
-      inline,
-      lvl
-    );
+    var props = formatProps(Element.props, getDefaultProps(Element), inline, sortProps, lvl);
     var attributes = [];
-    var children = _react2.default.Children
-      .toArray(Element.props.children)
-      .filter(onlyMeaningfulChildren);
+    var children = _react2.default.Children.toArray(Element.props.children).filter(onlyMeaningfulChildren);
 
     if (Element.ref !== null) {
       attributes.push(getJSXAttribute('ref', Element.ref, inline, lvl));
     }
 
-    if (
-      Element.key !== null &&
-      // React automatically add key=".X" when there are some children
-      !/^\./.test(Element.key)
-    ) {
+    if (Element.key !== null &&
+    // React automatically add key=".X" when there are some children
+    !/^\./.test(Element.key)) {
       attributes.push(getJSXAttribute('key', Element.key, inline, lvl));
     }
 
-    attributes = attributes.concat(props).filter(function(_ref3) {
+    attributes = attributes.concat(props).filter(function (_ref3) {
       var name = _ref3.name;
       return filterProps.indexOf(name) === -1;
     });
@@ -42330,7 +42295,7 @@ function reactElementToJSXString(ReactElement) {
     var outMultilineAttr = out;
     var outInlineAttr = out;
     var containsMultilineAttr = false;
-    attributes.forEach(function(attribute) {
+    attributes.forEach(function (attribute) {
       var isMultilineAttr = false;
       if (['plainObject', 'array', 'function'].indexOf(attribute.type) > -1) {
         isMultilineAttr = attribute.value.indexOf('\n') > -1;
@@ -42354,15 +42319,7 @@ function reactElementToJSXString(ReactElement) {
 
     outMultilineAttr += '\n' + spacer(lvl, tabStop);
 
-    if (
-      shouldRenderMultilineAttr(
-        attributes,
-        outInlineAttr,
-        containsMultilineAttr,
-        inline,
-        lvl
-      )
-    ) {
+    if (shouldRenderMultilineAttr(attributes, outInlineAttr, containsMultilineAttr, inline, lvl)) {
       out = outMultilineAttr;
     } else {
       out = outInlineAttr;
@@ -42379,10 +42336,7 @@ function reactElementToJSXString(ReactElement) {
       if (typeof children === 'string') {
         out += children;
       } else {
-        out += children
-          .reduce(mergePlainStringChildren, [])
-          .map(recurse({ lvl: lvl, inline: inline }))
-          .join('\n' + spacer(lvl, tabStop));
+        out += children.reduce(mergePlainStringChildren, []).map(recurse({ lvl: lvl, inline: inline })).join('\n' + spacer(lvl, tabStop));
       }
       if (!inline) {
         out += '\n';
@@ -42400,18 +42354,8 @@ function reactElementToJSXString(ReactElement) {
     return out;
   }
 
-  function shouldRenderMultilineAttr(
-    attributes,
-    inlineAttributeString,
-    containsMultilineAttr,
-    inline,
-    lvl
-  ) {
-    return (
-      (isInlineAttributeTooLong(attributes, inlineAttributeString, lvl) ||
-        containsMultilineAttr) &&
-      !inline
-    );
+  function shouldRenderMultilineAttr(attributes, inlineAttributeString, containsMultilineAttr, inline, lvl) {
+    return (isInlineAttributeTooLong(attributes, inlineAttributeString, lvl) || containsMultilineAttr) && !inline;
   }
 
   function isInlineAttributeTooLong(attributes, inlineAttributeString, lvl) {
@@ -42420,31 +42364,30 @@ function reactElementToJSXString(ReactElement) {
       // whether or not to render multiline attributes based on the number of attributes
       return attributes.length > 1;
     } else {
-      return (
-        spacer(lvl, tabStop).length + inlineAttributeString.length >
-        maxInlineAttributesLineLength
-      );
+      return spacer(lvl, tabStop).length + inlineAttributeString.length > maxInlineAttributesLineLength;
     }
   }
 
-  function formatProps(props, defaultProps, inline, lvl) {
+  function formatProps(props, defaultProps, inline, sortProps, lvl) {
     var formatted = Object.keys(props).filter(noChildren);
 
     if (useBooleanShorthandSyntax) {
-      formatted = formatted.filter(function(key) {
+      formatted = formatted.filter(function (key) {
         return noFalse(props[key], defaultProps[key]);
       });
     }
 
     if (!showDefaultProps) {
-      formatted = formatted.filter(function(key) {
-        return typeof defaultProps[key] === 'undefined'
-          ? typeof props[key] !== 'undefined'
-          : defaultProps[key] !== props[key];
+      formatted = formatted.filter(function (key) {
+        return typeof defaultProps[key] === 'undefined' ? typeof props[key] !== 'undefined' : defaultProps[key] !== props[key];
       });
     }
 
-    return formatted.sort().map(function(propName) {
+    if (sortProps) {
+      formatted = formatted.sort();
+    }
+
+    return formatted.map(function (propName) {
       return getJSXAttribute(propName, props[propName], inline, lvl);
     });
   }
@@ -42453,9 +42396,7 @@ function reactElementToJSXString(ReactElement) {
     return {
       name: name,
       type: getValueType(value),
-      value: formatJSXAttribute(value, inline, lvl)
-        .replace(/'?<__reactElementToJSXString__Wrapper__>/g, '')
-        .replace(/<\/__reactElementToJSXString__Wrapper__>'?/g, ''),
+      value: formatJSXAttribute(value, inline, lvl).replace(/'?<__reactElementToJSXString__Wrapper__>/g, '').replace(/<\/__reactElementToJSXString__Wrapper__>'?/g, '')
     };
   }
 
@@ -42464,10 +42405,7 @@ function reactElementToJSXString(ReactElement) {
       return '"' + escape(propValue) + '"';
     }
 
-    if (
-      (typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue)) ===
-      'symbol'
-    ) {
+    if ((typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue)) === 'symbol') {
       return '{' + propValue.toString() + '}';
     }
 
@@ -42497,11 +42435,8 @@ function reactElementToJSXString(ReactElement) {
   function formatValue(value, inline, lvl) {
     var wrapper = '__reactElementToJSXString__Wrapper__';
     if (isFunction(value)) {
-      return functionValue(
-        showFunctions === false && functionValue === defaultFunctionValue
-          ? function noRefCheck() {} // eslint-disable-line prefer-arrow-callback
-          : value
-      );
+      return functionValue(showFunctions === false && functionValue === defaultFunctionValue ? function noRefCheck() {} // eslint-disable-line prefer-arrow-callback
+      : value);
     }
 
     if ((0, _react.isValidElement)(value)) {
@@ -42512,37 +42447,22 @@ function reactElementToJSXString(ReactElement) {
       //   // <div a={{b: <div />}} />
       // we then remove the whole wrapping
       // otherwise, the element would be surrounded by quotes: <div a={{b: '<div />'}} />
-      return (
-        '<' +
-        wrapper +
-        '>' +
-        toJSXString({
-          ReactElement: value,
-          inline: true,
-        }) +
-        '</' +
-        wrapper +
-        '>'
-      );
+      return '<' + wrapper + '>' + toJSXString({
+        ReactElement: value,
+        inline: true
+      }) + '</' + wrapper + '>';
     } else if ((0, _isPlainObject2.default)(value) || Array.isArray(value)) {
-      return (
-        '<' +
-        wrapper +
-        '>' +
-        stringifyObject(value, inline, lvl) +
-        '</' +
-        wrapper +
-        '>'
-      );
+      return '<' + wrapper + '>' + stringifyObject(value, inline, lvl) + '</' + wrapper + '>';
     }
 
     return value;
   }
 
   function recurse(_ref4) {
-    var lvl = _ref4.lvl, inline = _ref4.inline;
+    var lvl = _ref4.lvl,
+        inline = _ref4.inline;
 
-    return function(Element) {
+    return function (Element) {
       return toJSXString({ ReactElement: Element, lvl: lvl, inline: inline });
     };
   }
@@ -42550,7 +42470,7 @@ function reactElementToJSXString(ReactElement) {
   function stringifyObject(obj, inline, lvl) {
     if (Object.keys(obj).length > 0 || obj.length > 0) {
       // eslint-disable-next-line array-callback-return
-      obj = (0, _traverse2.default)(obj).map(function(value) {
+      obj = (0, _traverse2.default)(obj).map(function (value) {
         if ((0, _react.isValidElement)(value) || this.isLeaf) {
           this.update(formatValue(value, inline, lvl));
         }
@@ -42562,29 +42482,18 @@ function reactElementToJSXString(ReactElement) {
     var stringified = (0, _stringifyObject2.default)(obj);
 
     if (inline) {
-      return (0, _collapseWhiteSpace2.default)(stringified)
-        .replace(/{ /g, '{')
-        .replace(/ }/g, '}')
-        .replace(/\[ /g, '[')
-        .replace(/ ]/g, ']');
+      return (0, _collapseWhiteSpace2.default)(stringified).replace(/{ /g, '{').replace(/ }/g, '}').replace(/\[ /g, '[').replace(/ ]/g, ']');
     }
 
     // Replace tabs with spaces, and add necessary indentation in front of each new line
-    return stringified
-      .replace(/\\\'/g, "'")
-      .replace(/\t/g, spacer(1, tabStop))
-      .replace(/\n([^$])/g, '\n' + spacer(lvl + 1, tabStop) + '$1');
+    return stringified.replace(/\\\'/g, "'").replace(/\t/g, spacer(1, tabStop)).replace(/\n([^$])/g, '\n' + spacer(lvl + 1, tabStop) + '$1');
   }
 }
 
 function getDefaultDisplayName(ReactElement) {
-  return (
-    ReactElement.type.displayName ||
-    ReactElement.type.name || // function name
-    (typeof ReactElement.type === 'function' // function without a name, you should provide one
-      ? 'No Display Name'
-      : ReactElement.type)
-  );
+  return ReactElement.type.displayName || ReactElement.type.name || ( // function name
+  typeof ReactElement.type === 'function' // function without a name, you should provide one
+  ? 'No Display Name' : ReactElement.type);
 }
 
 function getDefaultProps(ReactElement) {
@@ -42608,9 +42517,7 @@ function mergePlainStringChildren(prev, cur) {
 }
 
 function spacer(times, tabStop) {
-  return times === 0
-    ? ''
-    : (0, _fill3.default)(new Array(times * tabStop), ' ').join('');
+  return times === 0 ? '' : (0, _fill3.default)(new Array(times * tabStop), ' ').join('');
 }
 
 function noChildren(propName) {
@@ -42622,12 +42529,7 @@ function noFalse(propValue, defaultValue) {
 }
 
 function onlyMeaningfulChildren(children) {
-  return (
-    children !== true &&
-    children !== false &&
-    children !== null &&
-    children !== ''
-  );
+  return children !== true && children !== false && children !== null && children !== '';
 }
 
 
@@ -47205,4 +47107,4 @@ module.exports = __webpack_require__(622);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.beeebb7f01ed06af5ee0.bundle.js.map
+//# sourceMappingURL=preview.e3dcb2e33d24b83b7cb9.bundle.js.map
