@@ -12685,7 +12685,13 @@ var noop = function noop() {
 var isProd = "production" === 'production';
 
 function getDisplayName(WrappedComponent) {
-  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+  var defaultName = 'Component';
+
+  if (typeof WrappedComponent !== 'string') {
+    return WrappedComponent.displayName || WrappedComponent.name || defaultName;
+  }
+
+  return WrappedComponent || 'Component';
 }
 
 function compact() {
@@ -47199,4 +47205,4 @@ module.exports = __webpack_require__(622);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.0f30139a1f6afddad2aa.bundle.js.map
+//# sourceMappingURL=preview.beeebb7f01ed06af5ee0.bundle.js.map
