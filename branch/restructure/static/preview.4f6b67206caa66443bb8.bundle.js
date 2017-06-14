@@ -12691,7 +12691,7 @@ function getDisplayName(WrappedComponent) {
     return WrappedComponent.displayName || WrappedComponent.name || defaultName;
   }
 
-  return WrappedComponent || 'Component';
+  return WrappedComponent || defaultName;
 }
 
 function compact() {
@@ -47107,4 +47107,4 @@ module.exports = __webpack_require__(622);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.e3dcb2e33d24b83b7cb9.bundle.js.map
+//# sourceMappingURL=preview.4f6b67206caa66443bb8.bundle.js.map
