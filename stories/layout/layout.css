@@ -1,6 +1,12 @@
 @import "../core/variables.css";
 
 .page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
   & h1, & h2, & .nav > *, & .content > *, & .ads > * {
     margin: 10px;
   }
@@ -15,6 +21,10 @@
   & input {
     outline: 1px solid var(--axonBlack);
     border: 0;
+  }
+
+  & .main {
+    margin-top: 57px; /* header height, hard coded offset */
   }
 
   & button {

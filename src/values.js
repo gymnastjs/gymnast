@@ -10,10 +10,10 @@ export const JUSTIFY = {
   RIGHT: Symbol('JUSTIFY_RIGHT'),
 }
 
-export const SIZE = {
-  AUTO: Symbol('SIZE_AUTO'),
-  FIT: Symbol('SIZE_FIT'),
-  STRETCH: Symbol('SIZE_STRETCH'),
+export const LAYOUT = {
+  PARENT: Symbol('LAYOUT_PARENT'),
+  AUTO: Symbol('LAYOUT_AUTO'),
+  STRETCH: Symbol('LAYOUT_STRETCH'),
 }
 
 export const MARGIN = {
@@ -28,4 +28,15 @@ export const MARGIN_SIZE = {
   DEFAULT: Symbol('MARGIN_SIZE_DEFAULT'),
   DOUBLE: Symbol('MARGIN_SIZE_DOUBLE'),
   HALF: Symbol('MARGIN_SIZE_HALF'),
+}
+
+export const FIXED_POSITION = {
+  NONE: Symbol('AUTO_FLOW'),
+  TOP: Symbol('TOP'),
+  BOTTOM: Symbol('BOTTOM'),
+}
+
+export const OVERFLOW = {
+  AUTO: Symbol('SCROLLBARS'),
+  NONE: Symbol('OVERFLOW'),
 }
