@@ -1,7 +1,6 @@
 // @flow
 import React from 'react'
-import Grid from '../src/grid'
-import Layout from '../src/layout'
+import { Grid, Layout } from '../../src'
 
 export default function Root(props: Grid.Props) {
   return (

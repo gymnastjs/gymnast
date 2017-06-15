@@ -370,7 +370,7 @@ exports[`Storyshots Components Pagination 1`] = `
 </div>
 `;
 
-exports[`Storyshots Grid Auto Flow 1`] = `
+exports[`Storyshots Grid Autoflow 1`] = `
 <div>
   <div>
     <div

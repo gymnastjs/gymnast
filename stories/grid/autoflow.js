@@ -1,23 +1,16 @@
 // @flow
 import React from 'react'
 import { number, boolean } from '@storybook/addon-knobs'
-import WithExtensions from '../withExtensions'
-import story from './story'
-import Grid from '../../src/grid'
-import Layout from '../../src/layout'
-import { times } from '../../src/utils'
-import Box from '../box'
-import { getBoxType } from '../utils'
-import getMarginSelect from '../margin'
+import { Grid, Layout, utils } from '../../src'
+import { WithExtensions, Box, getBoxType, getMarginSelect } from '../core'
 
-const notes =
-  'When adding elements that exceed the number of columns available, they will overflow to the next row'
-
-story.add('Auto Flow', () => {
+export default function() {
   const props = {
     stretch: boolean('Stretch', true),
     ...getMarginSelect(),
   }
+  const notes =
+    'When adding elements that exceed the number of columns available, they will overflow to the next row'
 
   return (
     <WithExtensions notes={notes}>
@@ -34,11 +27,12 @@ story.add('Auto Flow', () => {
               height: 100,
             }}
           />
-          {times(number('items', 5, { range: true, min: 0, max: 100 }), index =>
-            <Box size={2} key={index} type={getBoxType(index)} />
+          {utils.times(
+            number('items', 5, { range: true, min: 0, max: 100 }),
+            index => <Box size={2} key={index} type={getBoxType(index)} />
           )}
         </Grid>
       </Layout>
     </WithExtensions>
   )
-})
+}

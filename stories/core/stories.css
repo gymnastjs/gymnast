@@ -1,19 +1,4 @@
-:root {
-  /* color palette from http://www.colourlovers.com/palette/580974/Adrift_in_Dreams */
-  --primrose: #CFF09E;
-  --moss-green: #A8DBA8;
-  --silver-tree: #79BD9A;
-  --ming: #3B8686;
-  --deep-sea-green: #0B486B;
-}
-
-:global(#root) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+@import "../../src/variables";
 
 body {
   font-weight: bold;

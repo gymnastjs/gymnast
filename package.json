@@ -13,7 +13,7 @@
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
-    "@storybook/addon-storyshots": "3.0.0",
+    "@storybook/addon-storyshots": "3.1.2",
     "all-contributors-cli": "4.3.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -29,26 +29,27 @@
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-react": "7.0.1",
-    "flow-bin": "0.47.0",
+    "flow-bin": "0.48.0",
     "husky": "0.13.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "20.0.4",
-    "lint-staged": "3.6.0",
+    "lint-staged": "3.6.1",
     "npm-run-all": "4.0.2",
-    "postcss-cli": "4.0.0",
+    "postcss-cli": "4.1.0",
     "postcss-cssnext": "2.11.0",
     "postcss-for": "2.1.1",
     "postcss-import": "10.0.0",
     "postcss-loader": "2.0.5",
     "postcss-nesting": "4.0.1",
-    "prettier": "1.4.2",
+    "prettier": "1.4.4",
     "react-element-to-jsx-string": "10.1.0",
+    "raw-loader": "0.5.1",
     "react-test-renderer": "15.5.4",
     "regenerator-runtime": "0.10.5",
     "screener-storybook": "0.7.2",
     "storybook-addon-jsx": "4.1.1",
     "style-loader": "0.18.2",
-    "stylelint": "7.10.1"
+    "stylelint": "7.11.0"
   },
   "lint-staged": {
     "*.{js,css}": [
@@ -58,7 +59,8 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.css$": "identity-obj-proxy"
+      "^.+\\.css$": "identity-obj-proxy",
+      "^.+\\.txt$": "identity-obj-proxy"
     }
   },
   "scripts": {
@@ -69,7 +71,7 @@
     "format-all": "git ls-files {,**/**/}*.{js,css} | xargs yarn format",
     "format": "prettier --write --single-quote --no-semi --trailing-comma es5",
     "lint:css": "stylelint src/*.css stories/*.css",
-    "lint:flow": "flow",
+    "lint:flow": "flow stop && flow",
     "lint:js": "eslint src stories storybook",
     "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",
@@ -80,8 +82,8 @@
   },
   "dependencies": {
     "@storybook/addon-knobs": "3.0.1",
-    "@storybook/addon-notes": "3.0.0",
-    "@storybook/react": "3.0.1",
+    "@storybook/addon-notes": "3.1.2",
+    "@storybook/react": "3.1.3",
     "react": "15.5.4",
     "react-dom": "15.5.4"
   },

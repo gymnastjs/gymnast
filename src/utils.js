@@ -1,17 +1,21 @@
 // @flow
 import { ALIGN, JUSTIFY, MARGIN_SIZE, MARGIN } from './values'
 import styles from './index.css'
+import { type Component } from './types'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
 
-export function getDisplayName(WrappedComponent: {
-  displayName?: string,
-  name?: string,
-}): string {
-  return WrappedComponent.displayName || WrappedComponent.name || 'Component'
+export function getDisplayName(WrappedComponent: string | Component): string {
+  const defaultName = 'Component'
+
+  if (typeof WrappedComponent !== 'string') {
+    return WrappedComponent.displayName || WrappedComponent.name || defaultName
+  }
+
+  return WrappedComponent || defaultName
 }
 
 export function compact(array: any[] = []) {
@@ -85,6 +89,16 @@ export function getJustify(value: Symbol | void) {
     default:
       return ''
   }
+}
+
+export function fromPairs(pairs: [string, any][]): Object {
+  return pairs.reduce(
+    (acc, [key, value]) => ({
+      ...acc,
+      [key]: value,
+    }),
+    {}
+  )
 }
 
 /* eslint-disable no-console */

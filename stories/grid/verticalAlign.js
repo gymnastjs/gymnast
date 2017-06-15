@@ -1,16 +1,8 @@
 // @flow
 import React from 'react'
 import { boolean, number } from '@storybook/addon-knobs'
-import story from './story'
-import { times } from '../../src/utils'
-import getMarginSelect from '../margin'
-import Grid from '../../src/grid'
-import Root from '../root'
-import Box from '../box'
-import WithExtensions from '../withExtensions'
-
-const notes =
-  'Alignment defaults to top but middle and bottom are also available'
+import { Grid, utils } from '../../src'
+import { getMarginSelect, Root, Box, WithExtensions } from '../core'
 
 function ReferenceColumn({ height }: { height: number }) {
   return (
@@ -25,7 +17,7 @@ function ReferenceColumn({ height }: { height: number }) {
   )
 }
 
-story.add('Vertical Align', () => {
+export default function() {
   const stretch = boolean('Stretch', false)
   const margin = getMarginSelect()
   const items = number('Items', 1, { range: true, min: 1, max: 5 })
@@ -36,6 +28,8 @@ story.add('Vertical Align', () => {
     step: 25,
   })
   const { TOP, MIDDLE, BOTTOM } = Box.ALIGN
+  const notes =
+    'Alignment defaults to top but middle and bottom are also available'
 
   return (
     <WithExtensions notes={notes}>
@@ -59,7 +53,9 @@ story.add('Vertical Align', () => {
             align={Grid.ALIGN.TOP}
             style={{ height }}
           >
-            {times(items, i => <Box size={12} key={i} type="C" value="TOP" />)}
+            {utils.times(items, i =>
+              <Box size={12} key={i} type="C" value="TOP" />
+            )}
           </Grid>
           <Grid
             size={4}
@@ -68,7 +64,7 @@ story.add('Vertical Align', () => {
             align={Grid.ALIGN.MIDDLE}
             style={{ height }}
           >
-            {times(items, i =>
+            {utils.times(items, i =>
               <Box size={12} key={i} type="C" value="MIDDLE" />
             )}
           </Grid>
@@ -79,7 +75,7 @@ story.add('Vertical Align', () => {
             align={Grid.ALIGN.BOTTOM}
             style={{ height }}
           >
-            {times(items, i =>
+            {utils.times(items, i =>
               <Box size={12} key={i} type="C" value="BOTTOM" />
             )}
           </Grid>
@@ -87,4 +83,4 @@ story.add('Vertical Align', () => {
       </Root>
     </WithExtensions>
   )
-})
+}

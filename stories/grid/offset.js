@@ -1,19 +1,14 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import WithExtensions from '../withExtensions'
-import story from './story'
-import Grid from '../../src/grid'
-import Root from '../root'
-import getMarginSelect from '../margin'
-import Box from '../box'
+import { Grid } from '../../src'
+import { WithExtensions, Root, getMarginSelect, Box } from '../core'
 
-const notes =
-  'Adding an offset creates an empty number of columns between the current item and the previous one'
-
-story.add('Offset', () => {
+export default function() {
   const margin = getMarginSelect()
   const offset = number('Offset', 0, { range: true, min: 0, max: 11 })
+  const notes =
+    'Adding an offset creates an empty number of columns between the current item and the previous one'
 
   return (
     <WithExtensions notes={notes}>
@@ -46,4 +41,4 @@ story.add('Offset', () => {
       </Root>
     </WithExtensions>
   )
-})
+}

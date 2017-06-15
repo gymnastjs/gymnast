@@ -1,29 +1,22 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import WithExtensions from '../withExtensions'
-import story from './story'
-import Root from '../root'
-import Grid from '../../src/grid'
-import { times } from '../../src/utils'
-import Box from '../box'
-import getMarginSelect from '../margin'
-import { getBoxType } from '../utils'
+import { Grid, utils } from '../../src'
+import { WithExtensions, Root, Box, getMarginSelect, getBoxType } from '../core'
 
-const notes =
-  'Fraction-based layout allows to divide the available space without without respecting the columns'
-
-story.add('Fraction', () => {
+export default function() {
   const margin = getMarginSelect()
   const items = number('Items', 0, { range: true, min: 0, max: 5 })
+  const notes =
+    'Fraction-based layout allows to divide the available space without without respecting the columns'
 
   return (
     <WithExtensions notes={notes}>
       <Root>
         <h1>Auto Size</h1>
-        {times(9, size =>
+        {utils.times(9, size =>
           <Grid {...margin} key={size}>
-            {times(size + items, i =>
+            {utils.times(size + items, i =>
               <Box
                 key={i}
                 type={getBoxType(i, 0)}
@@ -48,17 +41,17 @@ story.add('Fraction', () => {
 
         <h1>Custom</h1>
         <Grid {...margin}>
-          {times(items, index =>
+          {utils.times(items, index =>
             <Box key={index} type={getBoxType(index)} value={`${index + 1}`} />
           )}
         </Grid>
         <Grid {...margin}>
           <Box size={6} type="C" value="6 (fixed)" />
-          {times(items, index =>
+          {utils.times(items, index =>
             <Box key={index} type={getBoxType(index)} value={`${index + 2}`} />
           )}
         </Grid>
       </Root>
     </WithExtensions>
   )
-})
+}

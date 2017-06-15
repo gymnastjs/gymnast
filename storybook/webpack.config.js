@@ -1,8 +1,15 @@
 const { resolve } = require('path')
 
 module.exports = {
+  node: {
+    fs: 'empty',
+  },
   module: {
     rules: [
+      {
+        test: /\.txt$/,
+        use: 'raw-loader',
+      },
       {
         test: /\.css$/,
         include: resolve(__dirname, '../'),
