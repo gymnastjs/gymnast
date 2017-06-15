@@ -1,22 +1,14 @@
 // @flow
 import { ALIGN, JUSTIFY, MARGIN_SIZE, MARGIN } from './values'
 import styles from './index.css'
+import { type Component } from './types'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
 
-type StringOrWrappedComponent =
-  | string
-  | {
-      displayName?: string,
-      name?: string,
-    }
-
-export function getDisplayName(
-  WrappedComponent: StringOrWrappedComponent
-): string {
+export function getDisplayName(WrappedComponent: string | Component): string {
   const defaultName = 'Component'
 
   if (typeof WrappedComponent !== 'string') {
