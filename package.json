@@ -75,7 +75,7 @@
     "lint:js": "eslint src stories storybook",
     "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",
-    "start": "start-storybook -p 9001 -c storybook",
+    "start": "start-storybook -p 9001 -s ./stories/static -c storybook",
     "test:unit": "jest",
     "test:image": "screener-storybook --conf screener.config.js",
     "test": "npm-run-all --parallel test:*"

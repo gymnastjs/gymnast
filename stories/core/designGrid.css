@@ -1,4 +1,5 @@
 @import "../../src/variables";
+@import "./variables.css";
 
 :root {
   --colWidth: calc(var(--page-content-width) / 12 - var(--gutter));
@@ -26,7 +27,7 @@
   background-image: linear-gradient(
     90deg,
     transparent var(--colWidth),
-    color(var(--blueBerry) alpha(0.1)) var(--gutter)
+    color(var(--bolt) alpha(0.1)) var(--gutter)
   );
   background-size: calc(var(--colWidth) + var(--gutter)) 1px;
 
@@ -37,7 +38,7 @@
     bottom: 0;
     width: var(--page-margin);
     height: 100%;
-    background-color: color(var(--canary) alpha(0.15));
+    background-color: color(var(--axonGold) alpha(0.15));
   }
 
   &:before {
@@ -55,7 +56,7 @@
     background-image: linear-gradient(
       90deg,
       transparent var(--col),
-      color(var(--blueBerry) alpha(0.1)) var(--gutter)
+      color(var(--bolt) alpha(0.1)) var(--gutter)
     );
     background-size: calc(var(--col) + var(--gutter)) 1px;
   }

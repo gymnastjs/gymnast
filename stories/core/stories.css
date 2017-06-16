@@ -1,10 +1,20 @@
-@import "../../src/variables";
+@import "./variables.css";
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('/fonts/Geometria-Light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
 
 body {
-  font-weight: bold;
   margin: 0;
   padding: 50px 0 0 0;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  font-weight: 100;
+  font-family: Geometria, Arial, Helvetica, sans-serif;
 }
 
 section {
@@ -35,31 +45,25 @@ li {
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-radius: 5px;
   width: 100%;
 }
 
 .box1 {
-  color: var(--deep-sea-green);
-  background-color: var(--primrose);
+  color: var(--axonGold);
+  background-color: var(--axonBlack);
 }
 
 .box2 {
-  color: var(--deep-sea-green);
-  background-color: var(--moss-green);
+  color: var(--bolt);
+  background-color: var(--nomuraGray);
 }
 
 .box3 {
-  color: var(--deep-sea-green);
-  background-color: var(--silver-tree);
+  color: var(--axonBlack);
+  background-color: var(--axonGold);
 }
 
 .box4 {
-  color: var(--primrose);
-  background-color: var(--ming);
-}
-
-.box5 {
-  color: var(--primrose);
-  background-color: var(--deep-sea-green);
+  color: var(--nomuraGray);
+  background-color: var(--bolt);
 }

@@ -14,7 +14,7 @@ export default function() {
         <Grid root>
           <Grid stretch>
             <Box size={2} type="A" value="Go Back" />
-            <Box size={6} type="B">
+            <Box size={6} type="A">
               <h2>Page Title</h2>
             </Box>
             <Box size={2} type="C" value="Action 1" />
@@ -26,7 +26,7 @@ export default function() {
                 <Box size={1} type="A" key={i} value={`${i + 1}`} />
               )}
             </Grid>
-            <Box size={2} type="B" />
+            <Box size={2} type="A" />
           </Grid>
         </Grid>
       </Layout>

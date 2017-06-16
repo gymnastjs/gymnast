@@ -9,12 +9,4 @@
   --page-content-width: calc(
     var(--max-width) - (var(--page-margin) - (var(--gutter) / 2)) * 2
   );
-
-  --blueBerry: #1054a3;
-  --canary: #fee65e;
-  --primrose: #CFF09E;
-  --moss-green: #A8DBA8;
-  --silver-tree: #79BD9A;
-  --ming: #3B8686;
-  --deep-sea-green: #0B486B;
 }

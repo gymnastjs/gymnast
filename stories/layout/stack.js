@@ -2,7 +2,8 @@
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { Grid, Layout, Item, utils } from '../../src'
-import { WithExtensions, Box, getBoxType } from '../core'
+import { WithExtensions, Box } from '../core'
+import style from './layout.css'
 
 const notes =
   'A layout component defaults to vertically stacking elements, taking the full width and optionally sizing to fit or stretching elements'
@@ -13,11 +14,7 @@ function getStaticSection(index) {
     <Layout size={AUTO} key={index}>
       <Grid root>
         <Grid>
-          <Box
-            size={12}
-            type={getBoxType(index)}
-            value={`Section ${index + 1}`}
-          />
+          <Box size={12} type="C" value={`Section ${index + 1}`} />
         </Grid>
       </Grid>
     </Layout>
@@ -51,7 +48,9 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      {utils.times(sections, index => getSection(index, subSections))}
+      <div className={style.page}>
+        {utils.times(sections, index => getSection(index, subSections))}
+      </div>
     </WithExtensions>
   )
 }

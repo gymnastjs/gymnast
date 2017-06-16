@@ -1,0 +1,53 @@
+@import "../core/variables.css";
+
+.page {
+  & h1, & h2, & .nav > *, & .content > *, & .ads > * {
+    margin: 10px;
+  }
+
+  & input, & button {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+
+  & input {
+    outline: 1px solid var(--axonBlack);
+    border: 0;
+  }
+
+  & button {
+    border-radius: 0;
+    border: 0;
+    color: var(--axonBlack);
+    background-color: var(--axonGold);
+  }
+
+  & .header, & .footer {
+    color: var(--axonGold);
+    background-color: var(--axonBlack);
+  }
+
+  & .nav {
+    color: var(--nomuraGray);
+    background-color: var(--bolt);
+  }
+
+  & .content {
+    color: var(--bolt);
+    background-color: var(--nomuraGray);
+  }
+
+  & .ads {
+    color: var(--axonBlack);
+    background-color: var(--axonGold);
+  }
+
+  & .top {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    color: var(--nomuraGray);
+    background-color: var(--bolt);
+  }
+}
