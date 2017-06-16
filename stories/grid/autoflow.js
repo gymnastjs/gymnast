@@ -14,7 +14,7 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      <Layout size={Layout.SIZE.AUTO}>
+      <Layout type={Layout.TYPE.PARENT}>
         <Grid {...props} root>
           <Box size={1} type="A" value="1" />
           <Box size={2} type="A" value="2" />

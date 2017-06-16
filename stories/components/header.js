@@ -10,7 +10,7 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      <Layout size={Layout.SIZE.AUTO}>
+      <Layout type={Layout.TYPE.PARENT}>
         <Grid root>
           <Grid stretch>
             <Box size={2} type="A" value="Go Back" />

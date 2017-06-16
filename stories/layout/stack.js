@@ -7,13 +7,13 @@ import style from './layout.css'
 
 const notes =
   'A layout component defaults to vertically stacking elements, taking the full width and optionally sizing to fit or stretching elements'
-const { AUTO } = Layout.SIZE
+const { AUTO, PARENT } = Layout.TYPE
 
 function getStaticSection(index) {
   return (
-    <Layout size={AUTO} key={index}>
+    <Layout type={AUTO} key={index}>
       <Grid root>
-        <Grid>
+        <Grid margin={Grid.MARGIN.NONE}>
           <Box size={12} type="C" value={`Section ${index + 1}`} />
         </Grid>
       </Grid>
@@ -23,7 +23,7 @@ function getStaticSection(index) {
 
 function getContainerSection(index, subsections) {
   return (
-    <Layout key={index}>
+    <Layout key={index} type={PARENT} overflow={Layout.OVERFLOW.AUTO}>
       <Grid root>
         {utils.times(subsections, i =>
           <Grid key={i}>
@@ -48,9 +48,13 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      <div className={style.page}>
+      <Layout
+        type={PARENT}
+        className={style.page}
+        overflow={Layout.OVERFLOW.AUTO}
+      >
         {utils.times(sections, index => getSection(index, subSections))}
-      </div>
+      </Layout>
     </WithExtensions>
   )
 }

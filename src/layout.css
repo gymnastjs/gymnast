@@ -1,32 +1,35 @@
-@import "./variables";
-@import "./grid";
-
-.layout {
+.parent, .auto, .stretch {
   box-sizing: border-box;
+  width: 100%;
+}
+
+.parent {
+  align-items: center;
   display: flex;
   flex-flow: column;
-  align-items: center;
-  width: 100%;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.overflow {
   overflow-y: auto;
-  flex: 1;
+}
 
-  &.layoutAuto {
-    flex: initial;
-  }
+.auto {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
 
-  &.layoutStretch {
-    height: 100%;
-  }
+.stretch {
+  flex-grow: 1;
+}
 
-  &.layoutFit {
-    min-height: 100%;
-  }
+.fixedTop {
+  position: fixed;
+  top: 0;
+}
 
-  & > .grid {
-    max-width: var(--max-width);
-  }
-
-  & > * {
-    flex: 1;
-  }
+.fixedBottom {
+  position: fixed;
+  bottom: 0;
 }

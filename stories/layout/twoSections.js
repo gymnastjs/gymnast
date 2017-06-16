@@ -5,7 +5,8 @@ import { Grid, Item, Layout } from '../../src'
 import { WithExtensions, loremIpsum } from '../core'
 import styles from './layout.css'
 
-const { FIT, AUTO } = Layout.SIZE
+const { PARENT, AUTO, STRETCH } = Layout.TYPE
+const { TOP } = Layout.FIXED_POSITION
 
 export default function() {
   const includeText = boolean('Show text', false)
@@ -14,14 +15,14 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      <Layout size={FIT} className={styles.page}>
-        <Layout size={AUTO} className={styles.header}>
+      <Layout type={PARENT} className={styles.page}>
+        <Layout className={styles.header} fixed={TOP}>
           <Grid root>
             <h1>Header</h1>
           </Grid>
         </Layout>
-        <Layout>
-          <Layout size={AUTO} className={styles.top}>
+        <Layout type={PARENT} className={styles.main}>
+          <Layout type={AUTO} className={styles.top}>
             <Grid root>
               <Grid>
                 <Item size={6} offset={2}>
@@ -33,7 +34,7 @@ export default function() {
               </Grid>
             </Grid>
           </Layout>
-          <Layout>
+          <Layout type={STRETCH}>
             <Grid root>
               <Grid className={styles.content} align={Grid.ALIGN.TOP}>
                 <h2>Content</h2>
@@ -41,7 +42,7 @@ export default function() {
               </Grid>
             </Grid>
           </Layout>
-          <Layout size={AUTO} className={styles.footer}>
+          <Layout type={AUTO} className={styles.footer}>
             <Grid root>
               <h1>Footer</h1>
             </Grid>

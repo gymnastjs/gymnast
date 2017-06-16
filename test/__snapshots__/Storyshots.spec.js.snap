@@ -4,7 +4,7 @@ exports[`Storyshots Components Header 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutAuto"
+      className="layout parent"
     >
       <div
         className="gridRoot grid"
@@ -187,7 +187,7 @@ exports[`Storyshots Components Pagination 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutStretch"
+      className="layout parent"
     >
       <div
         className="gridRoot grid"
@@ -374,7 +374,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutAuto"
+      className="layout parent"
     >
       <div
         className="gridRoot gridStretch grid"
@@ -533,7 +533,7 @@ exports[`Storyshots Grid Fraction 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutStretch"
+      className="layout parent"
     >
       <div
         className="gridRoot grid"
@@ -1198,7 +1198,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutStretch"
+      className="layout parent"
     >
       <div
         className="gridRoot grid"
@@ -1285,7 +1285,7 @@ exports[`Storyshots Grid Nested 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutStretch"
+      className="layout parent"
     >
       <div
         className="gridRoot grid"
@@ -1559,7 +1559,7 @@ exports[`Storyshots Grid Offset 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutStretch"
+      className="layout parent"
     >
       <div
         className="gridRoot grid"
@@ -1780,7 +1780,7 @@ exports[`Storyshots Grid Sizing 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutStretch"
+      className="layout parent"
     >
       <div
         className="gridRoot grid"
@@ -2229,7 +2229,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
 <div>
   <div>
     <div
-      className="layout layoutStretch"
+      className="layout parent"
     >
       <div
         className="gridRoot grid"
@@ -2433,10 +2433,10 @@ exports[`Storyshots Layout Holy Grail 1`] = `
 <div>
   <div>
     <div
-      className="layout page layoutFit"
+      className="layout page parent"
     >
       <div
-        className="layout header layoutAuto"
+        className="layout header auto fixedTop"
       >
         <div
           className="gridRoot grid"
@@ -2447,47 +2447,43 @@ exports[`Storyshots Layout Holy Grail 1`] = `
         </div>
       </div>
       <div
-        className="layout layoutStretch"
+        className="layout main stretch"
       >
         <div
-          className="layout layoutStretch"
+          className="gridRoot grid"
         >
           <div
-            className="gridRoot grid"
+            className="nav col-2 grid"
           >
-            <div
-              className="nav col-2 grid"
-            >
-              <h2>
-                Nav
-              </h2>
-            </div>
-            <div
-              className="content gridTop col-8 grid"
-            >
-              <h2>
-                Content
-              </h2>
-            </div>
-            <div
-              className="ads col-2 grid"
-            >
-              <h2>
-                Ads
-              </h2>
-            </div>
+            <h2>
+              Nav
+            </h2>
+          </div>
+          <div
+            className="content gridTop col-8 grid"
+          >
+            <h2>
+              Content
+            </h2>
+          </div>
+          <div
+            className="ads col-2 grid"
+          >
+            <h2>
+              Ads
+            </h2>
           </div>
         </div>
+      </div>
+      <div
+        className="layout footer auto"
+      >
         <div
-          className="layout footer layoutAuto"
+          className="gridRoot grid"
         >
-          <div
-            className="gridRoot grid"
-          >
-            <h1>
-              Footer
-            </h1>
-          </div>
+          <h1>
+            Footer
+          </h1>
         </div>
       </div>
     </div>
@@ -2499,16 +2495,16 @@ exports[`Storyshots Layout Stack 1`] = `
 <div>
   <div>
     <div
-      className="page"
+      className="layout page parent overflow"
     >
       <div
-        className="layout layoutAuto"
+        className="layout auto"
       >
         <div
           className="gridRoot grid"
         >
           <div
-            className="grid"
+            className="gridMarginNone grid"
           >
             <div
               className="col-12"
@@ -2528,7 +2524,7 @@ exports[`Storyshots Layout Stack 1`] = `
         </div>
       </div>
       <div
-        className="layout layoutStretch"
+        className="layout parent overflow"
       >
         <div
           className="gridRoot grid"
@@ -2580,10 +2576,10 @@ exports[`Storyshots Layout Two Sections 1`] = `
 <div>
   <div>
     <div
-      className="layout page layoutFit"
+      className="layout page parent"
     >
       <div
-        className="layout header layoutAuto"
+        className="layout header auto fixedTop"
       >
         <div
           className="gridRoot grid"
@@ -2594,10 +2590,10 @@ exports[`Storyshots Layout Two Sections 1`] = `
         </div>
       </div>
       <div
-        className="layout layoutStretch"
+        className="layout main parent"
       >
         <div
-          className="layout top layoutAuto"
+          className="layout top auto"
         >
           <div
             className="gridRoot grid"
@@ -2624,7 +2620,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
           </div>
         </div>
         <div
-          className="layout layoutStretch"
+          className="layout stretch"
         >
           <div
             className="gridRoot grid"
@@ -2639,7 +2635,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
           </div>
         </div>
         <div
-          className="layout footer layoutAuto"
+          className="layout footer auto"
         >
           <div
             className="gridRoot grid"

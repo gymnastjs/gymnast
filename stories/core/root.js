@@ -4,7 +4,7 @@ import { Grid, Layout } from '../../src'
 
 export default function Root(props: Grid.Props) {
   return (
-    <Layout size={Layout.SIZE.STRETCH}>
+    <Layout type={Layout.TYPE.PARENT}>
       <Grid {...props} root />
     </Layout>
   )
