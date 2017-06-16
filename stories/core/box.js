@@ -9,7 +9,6 @@ const typeMap = {
   B: 2,
   C: 3,
   D: 4,
-  E: 5,
 }
 class Box extends React.PureComponent {
   static displayName = 'Box'
@@ -23,7 +22,7 @@ class Box extends React.PureComponent {
   static ALIGN = Item.ALIGN
 
   props: {
-    type: 'A' | 'B' | 'C' | 'D' | 'E',
+    type: 'A' | 'B' | 'C' | 'D',
     style: Object,
     children: any,
     value?: string,

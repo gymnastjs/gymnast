@@ -16,16 +16,16 @@ export default function() {
           {utils.times(12, i => <Box key={i} size={1} type="A" value="1" />)}
         </Grid>
         <Grid>
-          {utils.times(6, i => <Box key={i} size={2} type="B" value="2" />)}
+          {utils.times(6, i => <Box key={i} size={2} type="A" value="2" />)}
         </Grid>
         <Grid>
-          {utils.times(4, i => <Box key={i} size={3} type="C" value="3" />)}
+          {utils.times(4, i => <Box key={i} size={3} type="A" value="3" />)}
         </Grid>
         <Grid>
-          {utils.times(3, i => <Box key={i} size={4} type="D" value="4" />)}
+          {utils.times(3, i => <Box key={i} size={4} type="A" value="4" />)}
         </Grid>
         <Grid>
-          {utils.times(2, i => <Box key={i} size={6} type="E" value="6" />)}
+          {utils.times(2, i => <Box key={i} size={6} type="A" value="6" />)}
         </Grid>
         <Grid>
           <Box type="A" value="Auto" />

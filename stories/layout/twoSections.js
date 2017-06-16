@@ -3,7 +3,7 @@ import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
 import { Grid, Item, Layout } from '../../src'
 import { WithExtensions, loremIpsum } from '../core'
-import styles from './twoSections.css'
+import styles from './layout.css'
 
 const { FIT, AUTO } = Layout.SIZE
 
@@ -14,7 +14,7 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      <Layout size={FIT} className={styles.twoSections}>
+      <Layout size={FIT} className={styles.page}>
         <Layout size={AUTO} className={styles.header}>
           <Grid root>
             <h1>Header</h1>

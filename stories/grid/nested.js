@@ -2,7 +2,7 @@
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { Grid, utils } from '../../src'
-import { WithExtensions, Root, Box, getBoxType } from '../core'
+import { WithExtensions, Root, Box } from '../core'
 
 export default function() {
   const items = number('Items', 6, { range: true, min: 1, max: 24 })
@@ -13,33 +13,28 @@ export default function() {
     <WithExtensions notes={notes}>
       <Root>
         <Grid>
-          <Box size={6} type="A" grid nest>
-            <Box size={6} type="C" />
-            <Box size={6} type="D" />
+          <Box size={6} type="B" grid nest>
+            <Box size={6} type="A" />
+            <Box size={6} type="A" />
           </Box>
           <Box size={6} type="B" grid nest>
-            <Box size={3} type="D" />
-            <Box size={3} type="E" offset={6} />
+            <Box size={3} type="A" />
+            <Box size={3} type="A" offset={6} />
           </Box>
         </Grid>
         <Grid>
-          <Box size={6} type="A" grid nest>
-            <Box size={6} offset={3} type="D" />
+          <Box size={6} type="B" grid nest>
+            <Box size={6} offset={3} type="A" />
           </Box>
           <Box size={6} type="B" grid nest>
-            <Box size={4} type="D" />
-            <Box size={4} offset={4} type="E" />
+            <Box size={4} type="A" />
+            <Box size={4} offset={4} type="A" />
           </Box>
         </Grid>
         <Grid>
           <Box size={6} type="B" grid nest>
             {utils.times(items, index =>
-              <Box
-                key={index}
-                size={1}
-                type={getBoxType(index)}
-                value={`${index % 12 + 1}`}
-              />
+              <Box key={index} size={1} type="A" value={`${index % 12 + 1}`} />
             )}
           </Box>
         </Grid>

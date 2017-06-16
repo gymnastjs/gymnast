@@ -37,11 +37,11 @@ export default function() {
         <h1>Item Align</h1>
         <Grid {...margin} stretch={stretch}>
           <ReferenceColumn height={height} />
-          <Box size={2} type="B" value="TOP" align={TOP} />
-          <Box size={2} type="C" value="MIDDLE" align={MIDDLE} />
-          <Box size={2} type="D" value="BOTTOM" align={BOTTOM} />
-          <Box size={2} type="C" value="MIDDLE" align={MIDDLE} />
-          <Box size={2} type="E" value="DEFAULT" />
+          <Box size={2} type="A" value="TOP" align={TOP} />
+          <Box size={2} type="A" value="MIDDLE" align={MIDDLE} />
+          <Box size={2} type="A" value="BOTTOM" align={BOTTOM} />
+          <Box size={2} type="A" value="MIDDLE" align={MIDDLE} />
+          <Box size={2} type="C" value="DEFAULT" />
           <ReferenceColumn height={height} />
         </Grid>
         <h1>Grid Align</h1>

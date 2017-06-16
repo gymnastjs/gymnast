@@ -18,16 +18,16 @@ export default function() {
     <WithExtensions notes={notes}>
       <Root>
         <Grid size={size} {...margin} justify={Grid.JUSTIFY.LEFT}>
-          <Box size={2} type="B" value="LEFT" />
+          <Box size={2} type="A" value="LEFT" />
         </Grid>
         <Grid size={size} {...margin} justify={Grid.JUSTIFY.CENTER}>
-          <Box size={2} type="C" value="CENTER" />
+          <Box size={2} type="A" value="CENTER" />
         </Grid>
         <Grid size={size} {...margin} justify={Grid.JUSTIFY.RIGHT}>
-          <Box size={2} type="D" value="RIGHT" />
+          <Box size={2} type="A" value="RIGHT" />
         </Grid>
         <Grid size={size} {...margin}>
-          <Box size={2} type="E" value="DEFAULT" />
+          <Box size={2} type="C" value="DEFAULT" />
         </Grid>
       </Root>
     </WithExtensions>
