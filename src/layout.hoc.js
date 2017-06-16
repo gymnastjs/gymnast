@@ -1,8 +1,8 @@
 // @flow
 import React from 'react'
-import { compact, getDisplayName } from './utils'
-import { LAYOUT, FIXED_POSITION, OVERFLOW } from './values'
-import styles from './layout.css'
+import { compact, getDisplayName, getMargin } from './utils'
+import { LAYOUT, FIXED_POSITION, OVERFLOW, MARGIN, MARGIN_SIZE } from './values'
+import styles from './index.css'
 
 function getLayout(layout: Symbol | void): string {
   switch (layout) {
@@ -45,35 +45,45 @@ export default function Layout(Component: any) {
   return class withGrid extends React.PureComponent {
     props: {
       className?: String,
-      type?: Symbol,
       fixed?: Symbol,
+      marginSize?: Symbol,
       overflow?: Symbol,
+      type?: Symbol,
     }
 
     static defaultProps = {
       className: undefined,
-      type: LAYOUT.AUTO,
       fixed: FIXED_POSITION.NONE,
+      marginSize: MARGIN_SIZE.NONE,
       overflow: OVERFLOW.NONE,
+      type: LAYOUT.AUTO,
     }
 
     render() {
-      const { className, type, fixed, overflow, ...props } = this.props
-      const classes = compact([
-        styles.layout,
+      const {
         className,
-        getLayout(type),
+        fixed,
+        marginSize,
+        overflow,
+        type,
+        ...props
+      } = this.props
+      const classes = compact([
+        className,
         getFixed(fixed),
+        getLayout(type),
+        getMargin(MARGIN.VERTICAL, marginSize, 'layout'),
         getOverflow(overflow),
+        styles.layout,
       ])
 
       return <Component {...props} className={classes.join(' ')} />
     }
 
     static displayName = `withLayout(${getDisplayName(Component)})`
-
-    static TYPE = LAYOUT
     static FIXED_POSITION = FIXED_POSITION
+    static MARGIN_SIZE = MARGIN_SIZE
     static OVERFLOW = OVERFLOW
+    static TYPE = LAYOUT
   }
 }

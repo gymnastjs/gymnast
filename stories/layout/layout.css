@@ -23,9 +23,16 @@
     border: 0;
   }
 
+  /* header heights, hard coded offsets */
+
   & .main {
-    margin-top: 57px; /* header height, hard coded offset */
+    margin-top: 57px;
   }
+
+  &.hasSubheader .main {
+    margin-top: 165px;
+  }
+  /* end of hard coded offsets */
 
   & button {
     border-radius: 0;
@@ -44,7 +51,7 @@
     background-color: var(--bolt);
   }
 
-  & .content {
+  & .subheader, & .content {
     color: var(--bolt);
     background-color: var(--nomuraGray);
   }
