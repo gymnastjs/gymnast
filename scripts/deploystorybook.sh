@@ -37,7 +37,7 @@ fi
 git config user.email "$USER@reflex.ci" && git config user.name "Reflex CI ($BRANCH)"
 
 # Build StoryBook in the `../temp` folder
-./node_modules/.bin/build-storybook -c storybook -o "$PWD/../temp"
+./node_modules/.bin/build-storybook -c storybook -s ./stories/static -o "$PWD/../temp"
 
 # Copy circle.yml to ensure last config is used
 cp circle.yml ../temp
@@ -49,7 +49,7 @@ git reset --hard HEAD
 git checkout -b gh-pages
 git fetch origin gh-pages
 git reset --hard origin/gh-pages
-git clean -xdf
+git clean -xdfq
 
 # Remove current content (except for branch folders)
 if [ "$CIRCLE_BRANCH" = 'master' ]; then
@@ -66,8 +66,7 @@ mv ../temp/* $TARGET_PATH
 rm -rf ../temp
 
 # Commit changes
-if [ -z $(git status --porcelain) ];
-then
+if [ -z $(git status --porcelain) ]; then
   echo "Nothing to commit, everything is clean ✨"
 else
   git add -A -f
