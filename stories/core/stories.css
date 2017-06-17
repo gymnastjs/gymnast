@@ -1,12 +1,5 @@
 @import "./variables.css";
 
-@font-face {
-  font-family: 'Geometria';
-  src: url('/fonts/Geometria-Light.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
 body {
   margin: 0;
   padding: 50px 0 0 0;

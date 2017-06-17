@@ -22,12 +22,12 @@ export default function() {
             <Box size={2} type="D" value="Action 2" />
           </Grid>
           <Grid>
-            <Grid size={10}>
+            <Grid size={6}>
               {times(items, i =>
                 <Box size={1} type="A" key={i} value={`${i + 1}`} />
               )}
             </Grid>
-            <Box size={2} type="A" />
+            <Box size={6} type="A" />
           </Grid>
         </Grid>
       </Layout>

@@ -75,7 +75,7 @@ exports[`Storyshots Components Header 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="gridMargin col-10 grid"
+            className="gridMargin col-6 grid"
           >
             <div
               className="col-1"
@@ -163,7 +163,7 @@ exports[`Storyshots Components Header 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col-6"
           >
             <div
               className="box1"
