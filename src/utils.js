@@ -1,7 +1,6 @@
 // @flow
-import { ALIGN, JUSTIFY, MARGIN_SIZE, MARGIN } from './values'
 import styles from './index.css'
-import { type Component } from './types'
+import { type Component, type Margin, type MarginSize } from './types'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
@@ -29,65 +28,35 @@ export function times(
   return Array.from(Array(number)).map((value, index) => callback(index))
 }
 
-export function getAlignment(value: Symbol | void, prefix: string) {
-  switch (value) {
-    case ALIGN.TOP:
-      return styles[`${prefix}Top`]
-    case ALIGN.MIDDLE:
-      return styles[`${prefix}Middle`]
-    case ALIGN.BOTTOM:
-      return styles[`${prefix}Bottom`]
-    default:
-      return ''
-  }
-}
-
-function getMarginSizeClassName(size: Symbol | void) {
+function getMarginSizeClassName(size: MarginSize | void) {
   switch (size) {
-    case MARGIN_SIZE.DOUBLE:
-      return 'Double'
-    case MARGIN_SIZE.HALF:
+    case 'half':
       return 'Half'
-    case MARGIN_SIZE.DEFAULT:
-    // intentional fall through
+    case 'double':
+      return 'Double'
     default:
       return ''
   }
 }
 
 export function getMargin(
-  value: Symbol | void,
-  size: Symbol | void,
+  value: Margin | void,
+  size: MarginSize | void,
   prefix: string
 ) {
-  if (size === MARGIN_SIZE.NONE || value === MARGIN.NONE) {
+  if (value === 'none') {
     return styles[`${prefix}MarginNone`]
   }
 
   const marginSize = getMarginSizeClassName(size)
 
   switch (value) {
-    case MARGIN.HORIZONTAL:
+    case 'horizontal':
       return styles[`${prefix}MarginHorizontal${marginSize}`]
-    case MARGIN.VERTICAL:
+    case 'vertical':
       return styles[`${prefix}MarginVertical${marginSize}`]
-    case MARGIN.DEFAULT:
+    case 'all':
       return styles[`${prefix}Margin${marginSize}`]
-    default:
-      return ''
-  }
-}
-
-export function getJustify(value: Symbol | void) {
-  const prefix = 'grid'
-
-  switch (value) {
-    case JUSTIFY.LEFT:
-      return styles[`${prefix}Left`]
-    case JUSTIFY.CENTER:
-      return styles[`${prefix}Center`]
-    case JUSTIFY.RIGHT:
-      return styles[`${prefix}Right`]
     default:
       return ''
   }

@@ -10,9 +10,9 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      <Layout type={Layout.TYPE.PARENT}>
+      <Layout type="parent">
         <Grid root>
-          <Grid stretch>
+          <Grid align="stretch">
             <Box size={2} type="A" value="Go Back" />
             <Box size={6} type="A">
               <h2>Page Title</h2>

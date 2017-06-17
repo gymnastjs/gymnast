@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid, Item, ItemHOC, utils } from '../../src'
+import { Grid, ItemHOC, utils } from '../../src'
 import styles from './stories.css'
 import layout from '../../src/index.css'
 
@@ -15,15 +15,13 @@ class Box extends React.PureComponent {
 
   static defaultProps = {
     nest: false,
-    style: {},
+    style: undefined,
     value: undefined,
   }
 
-  static ALIGN = Item.ALIGN
-
   props: {
     type: 'A' | 'B' | 'C' | 'D',
-    style: Object,
+    style?: Object,
     children: any,
     value?: string,
     nest?: boolean,
@@ -39,7 +37,7 @@ class Box extends React.PureComponent {
     return (
       <div {...props}>
         <div className={classes.join(' ')} style={style}>
-          <Grid align={Grid.ALIGN.MIDDLE} justify={Grid.JUSTIFY.CENTER}>
+          <Grid align="middle" justify="center">
             {children || value}
           </Grid>
         </div>

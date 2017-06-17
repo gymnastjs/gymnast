@@ -1,24 +1,27 @@
 // @flow
 import React from 'react'
-import { compact, getDisplayName, getAlignment } from './utils'
-import { type Size } from './types'
-import { ALIGN } from './values'
+import { compact, getDisplayName } from './utils'
+import type { Size, AlignItem, Offset } from './types'
 import styles from './index.css'
+
+const alignClasses = {
+  top: styles.colTop,
+  middle: styles.colMiddle,
+  bottom: styles.colBottom,
+}
 
 export default function Item(Component: any) {
   return class withItem extends React.PureComponent {
     props: {
       size?: Size,
-      align?: Symbol,
+      align?: AlignItem,
       className?: string,
       grid?: boolean,
-      offset?: number,
+      offset?: Offset,
     }
 
     static defaultProps = {
-      align: undefined,
       size: 0,
-      className: undefined,
       grid: false,
       offset: 0,
     }
@@ -27,7 +30,7 @@ export default function Item(Component: any) {
       const { className, size, offset, grid, align, ...props } = this.props
       const classes = compact([
         className,
-        getAlignment(align, 'col'),
+        align && alignClasses[align],
         grid && styles.grid,
         offset && styles[`colOffset-${offset}`],
         size ? styles[`col-${size}`] : styles.col,
@@ -37,7 +40,5 @@ export default function Item(Component: any) {
     }
 
     static displayName = `withItem(${getDisplayName(Component)})`
-
-    static ALIGN = ALIGN
   }
 }

@@ -27,7 +27,6 @@ export default function() {
     max: 500,
     step: 25,
   })
-  const { TOP, MIDDLE, BOTTOM } = Box.ALIGN
   const notes =
     'Alignment defaults to top but middle and bottom are also available'
 
@@ -35,12 +34,12 @@ export default function() {
     <WithExtensions notes={notes}>
       <Root>
         <h1>Item Align</h1>
-        <Grid {...margin} stretch={stretch}>
+        <Grid {...margin} align={stretch && 'stretch'}>
           <ReferenceColumn height={height} />
-          <Box size={2} type="A" value="TOP" align={TOP} />
-          <Box size={2} type="A" value="MIDDLE" align={MIDDLE} />
-          <Box size={2} type="A" value="BOTTOM" align={BOTTOM} />
-          <Box size={2} type="A" value="MIDDLE" align={MIDDLE} />
+          <Box size={2} type="A" value="TOP" align="top" />
+          <Box size={2} type="A" value="MIDDLE" align="middle" />
+          <Box size={2} type="A" value="BOTTOM" align="bottom" />
+          <Box size={2} type="A" value="MIDDLE" align="middle" />
           <Box size={2} type="C" value="DEFAULT" />
           <ReferenceColumn height={height} />
         </Grid>
@@ -49,8 +48,7 @@ export default function() {
           <Grid
             size={4}
             {...margin}
-            stretch={stretch}
-            align={Grid.ALIGN.TOP}
+            align={stretch ? 'stretch' : 'top'}
             style={{ height }}
           >
             {utils.times(items, i =>
@@ -60,8 +58,7 @@ export default function() {
           <Grid
             size={4}
             {...margin}
-            stretch={stretch}
-            align={Grid.ALIGN.MIDDLE}
+            align={stretch ? 'stretch' : 'middle'}
             style={{ height }}
           >
             {utils.times(items, i =>
@@ -71,8 +68,7 @@ export default function() {
           <Grid
             size={4}
             {...margin}
-            stretch={stretch}
-            align={Grid.ALIGN.BOTTOM}
+            align={stretch ? 'stretch' : 'bottom'}
             style={{ height }}
           >
             {utils.times(items, i =>

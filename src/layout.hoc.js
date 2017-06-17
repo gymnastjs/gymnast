@@ -1,41 +1,35 @@
 // @flow
 import React from 'react'
 import { compact, getDisplayName, getMargin } from './utils'
-import { LAYOUT, FIXED_POSITION, OVERFLOW, MARGIN, MARGIN_SIZE } from './values'
+import type { Margin, MarginSize, Overflow, Fixed, LayoutType } from './types'
 import styles from './index.css'
 
-function getLayout(layout: Symbol | void): string {
+function getLayout(layout: LayoutType): string {
   switch (layout) {
-    case LAYOUT.PARENT:
+    case 'parent':
       return styles.parent
-    case LAYOUT.STRETCH:
+    case 'stretch':
       return styles.stretch
-    case LAYOUT.AUTO:
-    /* intentional fall through */
     default:
       return styles.auto
   }
 }
 
-function getFixed(fixed: Symbol | void): string {
+function getFixed(fixed: Fixed): string {
   switch (fixed) {
-    case FIXED_POSITION.TOP:
+    case 'top':
       return styles.fixedTop
-    case FIXED_POSITION.BOTTOM:
+    case 'bottom':
       return styles.fixedBottom
-    case FIXED_POSITION.NONE:
-    /* intentional fall through */
     default:
       return ''
   }
 }
 
-function getOverflow(overflow: Symbol | void): string {
+function getOverflow(overflow: Overflow): string {
   switch (overflow) {
-    case OVERFLOW.AUTO:
+    case 'scrollbars':
       return styles.overflow
-    case OVERFLOW.NONE:
-    /* intentional fall through */
     default:
       return ''
   }
@@ -45,24 +39,22 @@ export default function Layout(Component: any) {
   return class withGrid extends React.PureComponent {
     props: {
       className?: String,
-      fixed?: Symbol,
-      marginSize?: Symbol,
-      overflow?: Symbol,
-      type?: Symbol,
+      fixed?: Fixed,
+      margin?: Margin,
+      marginSize?: MarginSize,
+      overflow?: Overflow,
+      type?: LayoutType,
     }
 
     static defaultProps = {
-      className: undefined,
-      fixed: FIXED_POSITION.NONE,
-      marginSize: MARGIN_SIZE.NONE,
-      overflow: OVERFLOW.NONE,
-      type: LAYOUT.AUTO,
+      margin: 'none',
     }
 
     render() {
       const {
         className,
         fixed,
+        margin,
         marginSize,
         overflow,
         type,
@@ -72,7 +64,7 @@ export default function Layout(Component: any) {
         className,
         getFixed(fixed),
         getLayout(type),
-        getMargin(MARGIN.VERTICAL, marginSize, 'layout'),
+        getMargin(margin, marginSize, 'layout'),
         getOverflow(overflow),
         styles.layout,
       ])
@@ -81,9 +73,5 @@ export default function Layout(Component: any) {
     }
 
     static displayName = `withLayout(${getDisplayName(Component)})`
-    static FIXED_POSITION = FIXED_POSITION
-    static MARGIN_SIZE = MARGIN_SIZE
-    static OVERFLOW = OVERFLOW
-    static TYPE = LAYOUT
   }
 }
