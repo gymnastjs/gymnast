@@ -39514,18 +39514,18 @@ exports.default = function () {
             { root: true },
             _react2.default.createElement(
               _src.Grid,
-              null,
-              _react2.default.createElement(_core.Box, { size: 10, type: 'D' }),
-              _react2.default.createElement(_core.Box, { size: 2, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 12, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 6, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 6, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 4, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 4, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 4, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 4, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 4, type: 'B' }),
-              _react2.default.createElement(_core.Box, { size: 4, type: 'B' })
+              { stretch: true },
+              _react2.default.createElement(_core.Box, { size: 10, type: 'D', style: SIZE.TALL }),
+              _react2.default.createElement(_core.Box, { size: 2, type: 'B', style: SIZE.SMALL }),
+              _react2.default.createElement(_core.Box, { size: 12, type: 'B', style: SIZE.MEDIUM }),
+              _react2.default.createElement(_core.Box, { size: 6, type: 'B', style: SIZE.SMALL }),
+              _react2.default.createElement(_core.Box, { size: 6, type: 'B', style: SIZE.SMALL }),
+              _react2.default.createElement(_core.Box, { size: 4, type: 'B', style: SIZE.TALL }),
+              _react2.default.createElement(_core.Box, { size: 4, type: 'B', style: SIZE.TALL }),
+              _react2.default.createElement(_core.Box, { size: 4, type: 'B', style: SIZE.TALL }),
+              _react2.default.createElement(_core.Box, { size: 4, type: 'B', style: SIZE.TALL }),
+              _react2.default.createElement(_core.Box, { size: 4, type: 'B', style: SIZE.TALL }),
+              _react2.default.createElement(_core.Box, { size: 4, type: 'B', style: SIZE.TALL })
             )
           )
         ),
@@ -39566,6 +39566,12 @@ var _Layout$TYPE = _src.Layout.TYPE,
     AUTO = _Layout$TYPE.AUTO,
     STRETCH = _Layout$TYPE.STRETCH;
 var TOP = _src.Layout.FIXED_POSITION.TOP;
+
+var SIZE = {
+  TALL: { height: 200 },
+  MEDIUM: { height: 150 },
+  SMALL: undefined
+};
 
 /***/ }),
 /* 711 */
@@ -47193,4 +47199,4 @@ module.exports = __webpack_require__(623);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.6d6c55df938015500c04.bundle.js.map
+//# sourceMappingURL=preview.e1ee4d9f02d077e00a9c.bundle.js.map
