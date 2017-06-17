@@ -42,7 +42,7 @@ export function getAlignment(value: Symbol | void, prefix: string) {
   }
 }
 
-function getMarginSizeClassName(size: Symbol) {
+function getMarginSizeClassName(size: Symbol | void) {
   switch (size) {
     case MARGIN_SIZE.DOUBLE:
       return 'Double'
@@ -55,7 +55,11 @@ function getMarginSizeClassName(size: Symbol) {
   }
 }
 
-export function getMargin(value: Symbol, size: Symbol, prefix: string) {
+export function getMargin(
+  value: Symbol | void,
+  size: Symbol | void,
+  prefix: string
+) {
   if (size === MARGIN_SIZE.NONE || value === MARGIN.NONE) {
     return styles[`${prefix}MarginNone`]
   }
@@ -68,9 +72,7 @@ export function getMargin(value: Symbol, size: Symbol, prefix: string) {
     case MARGIN.VERTICAL:
       return styles[`${prefix}MarginVertical${marginSize}`]
     case MARGIN.DEFAULT:
-      return size === MARGIN_SIZE.DEFAULT
-        ? ''
-        : styles[`${prefix}Margin${marginSize}`]
+      return styles[`${prefix}Margin${marginSize}`]
     default:
       return ''
   }
