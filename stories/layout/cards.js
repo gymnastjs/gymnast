@@ -4,8 +4,6 @@ import { Grid, Layout } from '../../src'
 import { Box, WithExtensions } from '../core'
 import styles from './layout.css'
 
-const { PARENT, AUTO, STRETCH } = Layout.TYPE
-const { TOP } = Layout.FIXED_POSITION
 const SIZE = {
   TALL: { height: 200 },
   MEDIUM: { height: 150 },
@@ -18,8 +16,8 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      <Layout type={PARENT} className={`${styles.page} ${styles.hasSubheader}`}>
-        <Layout fixed={TOP}>
+      <Layout type="parent" className={`${styles.page} ${styles.hasSubheader}`}>
+        <Layout fixed="top">
           <Layout className={styles.header}>
             <Grid root>
               <h1>Header</h1>
@@ -27,9 +25,10 @@ export default function() {
           </Layout>
           <Layout
             className={styles.subheader}
-            marginSize={Layout.MARGIN_SIZE.DEFAULT}
+            margin="vertical"
+            marginSize="half"
           >
-            <Grid root margin={Grid.MARGIN.HORIZONTAL}>
+            <Grid root margin="horizontal">
               <Box size={2} type="C" />
               <Box size={2} type="C" />
               <Box size={2} type="C" />
@@ -39,10 +38,10 @@ export default function() {
             </Grid>
           </Layout>
         </Layout>
-        <Layout type={PARENT} className={styles.main}>
-          <Layout type={STRETCH} marginSize={Layout.MARGIN_SIZE.DEFAULT}>
+        <Layout type="parent" className={styles.main}>
+          <Layout type="stretch">
             <Grid root>
-              <Grid stretch>
+              <Grid align="stretch">
                 <Box size={10} type="D" style={SIZE.TALL} />
                 <Box size={2} type="B" style={SIZE.SMALL} />
                 <Box size={12} type="B" style={SIZE.MEDIUM} />
@@ -57,7 +56,7 @@ export default function() {
               </Grid>
             </Grid>
           </Layout>
-          <Layout type={AUTO} className={styles.footer}>
+          <Layout className={styles.footer}>
             <Grid root>
               <h1>Footer</h1>
             </Grid>

@@ -17,13 +17,13 @@ export default function() {
   return (
     <WithExtensions notes={notes}>
       <Root>
-        <Grid size={size} {...margin} justify={Grid.JUSTIFY.LEFT}>
+        <Grid size={size} {...margin} justify="left">
           <Box size={2} type="A" value="LEFT" />
         </Grid>
-        <Grid size={size} {...margin} justify={Grid.JUSTIFY.CENTER}>
+        <Grid size={size} {...margin} justify="center">
           <Box size={2} type="A" value="CENTER" />
         </Grid>
-        <Grid size={size} {...margin} justify={Grid.JUSTIFY.RIGHT}>
+        <Grid size={size} {...margin} justify="right">
           <Box size={2} type="A" value="RIGHT" />
         </Grid>
         <Grid size={size} {...margin}>

@@ -1,27 +1,38 @@
 // @flow
 import React from 'react'
+import { compact, getDisplayName, getMargin, log } from './utils'
 import {
-  compact,
-  getAlignment,
-  getDisplayName,
-  getJustify,
-  getMargin,
-  log,
-} from './utils'
-import { type Offset, type Size } from './types'
+  type AlignGrid,
+  type Justify,
+  type Margin,
+  type MarginSize,
+  type Offset,
+  type Size,
+} from './types'
 import styles from './index.css'
-import { ALIGN, JUSTIFY, MARGIN, MARGIN_SIZE } from './values'
 
 export type Props = {
-  align?: Symbol,
+  align?: AlignGrid,
   className?: string,
-  justify?: Symbol,
-  margin: Symbol,
-  marginSize: Symbol,
+  justify?: Justify,
+  margin: Margin,
+  marginSize: MarginSize,
   offset: Offset,
   root?: boolean,
   size?: Size,
-  stretch?: boolean,
+}
+
+const alignClasses = {
+  top: 'gridTop',
+  middle: 'gridMiddle',
+  bottom: 'gridBottom',
+  stretch: 'gridStretch',
+}
+
+const justifyClasses = {
+  left: 'gridLeft',
+  center: 'gridCenter',
+  right: 'gridRight',
 }
 
 export default function Grid(Component: any) {
@@ -32,12 +43,11 @@ export default function Grid(Component: any) {
       align: undefined,
       className: undefined,
       justify: undefined,
-      margin: MARGIN.DEFAULT,
-      marginSize: MARGIN_SIZE.DEFAULT,
+      margin: 'all',
+      marginSize: undefined,
       offset: 0,
       root: false,
       size: undefined,
-      stretch: false,
     }
 
     render() {
@@ -50,18 +60,16 @@ export default function Grid(Component: any) {
         offset,
         root,
         size,
-        stretch,
         ...props
       } = this.props
       const classes = compact([
+        align && styles[alignClasses[align]],
         className,
         getMargin(margin, marginSize, 'grid'),
-        getAlignment(align, 'grid'),
-        getJustify(justify),
+        justify && styles[justifyClasses[justify]],
         offset && styles[`colOffset-${offset}`],
         root && styles.gridRoot,
         size && styles[`col-${String(size)}`],
-        stretch && styles.gridStretch,
         styles.grid,
       ])
 
@@ -75,10 +83,5 @@ export default function Grid(Component: any) {
     }
 
     static displayName = `withGrid(${getDisplayName(Component)})`
-
-    static ALIGN = ALIGN
-    static MARGIN = MARGIN
-    static MARGIN_SIZE = MARGIN_SIZE
-    static JUSTIFY = JUSTIFY
   }
 }

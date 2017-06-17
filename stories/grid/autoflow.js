@@ -6,7 +6,7 @@ import { WithExtensions, Box, getMarginSelect } from '../core'
 
 export default function() {
   const props = {
-    stretch: boolean('Stretch', true),
+    align: boolean('Stretch', true) && 'stretch',
     ...getMarginSelect(),
   }
   const notes =
@@ -14,7 +14,7 @@ export default function() {
 
   return (
     <WithExtensions notes={notes}>
-      <Layout type={Layout.TYPE.PARENT}>
+      <Layout type="parent">
         <Grid {...props} root>
           <Box size={1} type="A" value="1" />
           <Box size={2} type="A" value="2" />
@@ -22,7 +22,7 @@ export default function() {
           <Box size={3} type="A" value="4" />
           <Box
             size={2}
-            type="A"
+            type="C"
             value="5"
             style={{
               height: 100,

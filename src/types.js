@@ -12,3 +12,18 @@ export type Component =
       name?: string,
     }
   | Function
+
+export type AlignItem = 'bottom' | 'middle' | 'top' | void
+export type AlignGrid = AlignItem | 'stretch'
+
+export type Justify = 'left' | 'center' | 'right' | void
+
+export type Margin = 'none' | 'all' | 'horizontal' | 'vertical' | void
+
+export type MarginSize = 'half' | 'double' | void
+
+export type Fixed = 'top' | 'bottom' | void
+
+export type Overflow = 'scrollbars' | void
+
+export type LayoutType = 'parent' | 'stretch' | void
