@@ -14,18 +14,18 @@ export default function Item(Component: any) {
   return class withItem extends React.PureComponent {
     props: {
       size?: Size,
-      align?: AlignItem,
+      align?: AlignItem | '',
       className?: string,
       grid?: boolean,
       offset?: Offset,
     }
 
     static defaultProps = {
-      align: undefined,
-      size: undefined,
+      align: '',
+      size: 0,
       className: undefined,
       grid: false,
-      offset: undefined,
+      offset: 0,
     }
 
     render() {
