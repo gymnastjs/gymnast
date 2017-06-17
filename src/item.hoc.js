@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { compact, getDisplayName } from './utils'
-import { type Size, type AlignItem, type Offset } from './types'
+import type { Size, AlignItem, Offset } from './types'
 import styles from './index.css'
 
 const alignClasses = {
@@ -14,16 +14,14 @@ export default function Item(Component: any) {
   return class withItem extends React.PureComponent {
     props: {
       size?: Size,
-      align?: AlignItem | '',
+      align?: AlignItem,
       className?: string,
       grid?: boolean,
       offset?: Offset,
     }
 
     static defaultProps = {
-      align: '',
       size: 0,
-      className: undefined,
       grid: false,
       offset: 0,
     }

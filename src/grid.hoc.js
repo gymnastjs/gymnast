@@ -1,13 +1,13 @@
 // @flow
 import React from 'react'
 import { compact, getDisplayName, getMargin, log } from './utils'
-import {
-  type AlignGrid,
-  type Justify,
-  type Margin,
-  type MarginSize,
-  type Offset,
-  type Size,
+import type {
+  AlignGrid,
+  Justify,
+  Margin,
+  MarginSize,
+  Offset,
+  Size,
 } from './types'
 import styles from './index.css'
 
@@ -40,14 +40,9 @@ export default function Grid(Component: any) {
     props: Props
 
     static defaultProps = {
-      align: undefined,
-      className: undefined,
-      justify: undefined,
       margin: 'all',
-      marginSize: undefined,
       offset: 0,
       root: false,
-      size: undefined,
     }
 
     render() {

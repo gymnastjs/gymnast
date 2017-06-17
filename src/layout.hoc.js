@@ -1,13 +1,7 @@
 // @flow
 import React from 'react'
 import { compact, getDisplayName, getMargin } from './utils'
-import {
-  type Margin,
-  type MarginSize,
-  type Overflow,
-  type Fixed,
-  type LayoutType,
-} from './types'
+import type { Margin, MarginSize, Overflow, Fixed, LayoutType } from './types'
 import styles from './index.css'
 
 function getLayout(layout: LayoutType): string {
@@ -53,12 +47,7 @@ export default function Layout(Component: any) {
     }
 
     static defaultProps = {
-      className: undefined,
-      fixed: undefined,
       margin: 'none',
-      marginSize: undefined,
-      overflow: undefined,
-      type: undefined,
     }
 
     render() {
