@@ -55,7 +55,7 @@ git clean -xdfq
 # Remove current content (except for branch folders)
 if [ "$CIRCLE_BRANCH" = 'master' ]; then
   mv branch $TEMP_PATH
-  rm -rf .
+  rm -rf *
 else
   rm -rf $TARGET_PATH
   mkdir -p $TARGET_PATH
