@@ -1,6 +1,6 @@
 // @flow
 import styles from './index.css'
-import { type Component, type Margin, type MarginSize } from './types'
+import type { Component, Margin, MarginSize } from './types'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
@@ -15,17 +15,6 @@ export function getDisplayName(WrappedComponent: string | Component): string {
   }
 
   return WrappedComponent || defaultName
-}
-
-export function compact(array: any[] = []) {
-  return array.filter(el => !!el)
-}
-
-export function times(
-  number: number = 0,
-  callback: (index: number) => any = noop
-) {
-  return Array.from(Array(number)).map((value, index) => callback(index))
 }
 
 function getMarginSizeClassName(size: MarginSize | void) {
@@ -60,16 +49,6 @@ export function getMargin(
     default:
       return ''
   }
-}
-
-export function fromPairs(pairs: [string, any][]): Object {
-  return pairs.reduce(
-    (acc, [key, value]) => ({
-      ...acc,
-      [key]: value,
-    }),
-    {}
-  )
 }
 
 /* eslint-disable no-console */

@@ -1,7 +1,8 @@
 // @flow
 import React from 'react'
+import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, utils } from '../../src'
+import { Grid } from '../../src'
 import { WithExtensions, Root, Box } from '../core'
 
 export default function() {
@@ -13,19 +14,19 @@ export default function() {
     <WithExtensions notes={notes}>
       <Root>
         <Grid>
-          {utils.times(12, i => <Box key={i} size={1} type="A" value="1" />)}
+          {times(12, i => <Box key={i} size={1} type="A" value="1" />)}
         </Grid>
         <Grid>
-          {utils.times(6, i => <Box key={i} size={2} type="A" value="2" />)}
+          {times(6, i => <Box key={i} size={2} type="A" value="2" />)}
         </Grid>
         <Grid>
-          {utils.times(4, i => <Box key={i} size={3} type="A" value="3" />)}
+          {times(4, i => <Box key={i} size={3} type="A" value="3" />)}
         </Grid>
         <Grid>
-          {utils.times(3, i => <Box key={i} size={4} type="A" value="4" />)}
+          {times(3, i => <Box key={i} size={4} type="A" value="4" />)}
         </Grid>
         <Grid>
-          {utils.times(2, i => <Box key={i} size={6} type="A" value="6" />)}
+          {times(2, i => <Box key={i} size={6} type="A" value="6" />)}
         </Grid>
         <Grid>
           <Box type="A" value="Auto" />

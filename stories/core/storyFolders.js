@@ -1,6 +1,6 @@
 // @flow
 
-import { utils } from '../../src'
+import { fromPairs } from 'lodash'
 
 const { readdirSync, lstatSync } = require('fs')
 const { join } = require('path')
@@ -20,7 +20,7 @@ type keyFunctionPair = {
  * makes this API less clean
  */
 function loadTest(folder: string): keyFunctionPair {
-  return utils.fromPairs(
+  return fromPairs(
     readdirSync(join(__dirname, folder))
       .map(filename => join(__dirname, folder, filename))
       .filter(filepath => !lstatSync(filepath).isDirectory())
@@ -32,7 +32,7 @@ function loadTest(folder: string): keyFunctionPair {
 }
 
 function loadWebpack(folder: Function): keyFunctionPair {
-  return utils.fromPairs(
+  return fromPairs(
     folder.keys().map(filename => [filename, folder(filename).default])
   )
 }
