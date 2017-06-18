@@ -24,6 +24,7 @@ DEFAULT_BRANCH='default'
 BASE_URL='https://obartra.github.io/reflex'
 USER=${CIRCLE_USERNAME:-$DEFAULT_USERNAME}
 BRANCH=${CIRCLE_BRANCH:-$DEFAULT_BRANCH}
+TEMP_PATH="$PWD/../temp"
 
 if [ "$CIRCLE_BRANCH" = 'master' ]; then
   TARGET_PATH='.'
@@ -37,12 +38,12 @@ fi
 git config user.email "$USER@reflex.ci" && git config user.name "Reflex CI ($BRANCH)"
 
 # Build StoryBook in the `../temp` folder
-./node_modules/.bin/build-storybook -c storybook -s ./stories/static -o "$PWD/../temp"
+./node_modules/.bin/build-storybook -c storybook -s ./stories/static -o $TEMP_PATH
 
 # Copy circle.yml to ensure last config is used
-cp circle.yml ../temp
+cp circle.yml $TEMP_PATH
 # Copy .gitignore to avoid commiting unnecessary files
-cp .gitignore ../temp
+cp .gitignore $TEMP_PATH
 
 # Switch to gh-pages branch
 git reset --hard HEAD
@@ -53,7 +54,8 @@ git clean -xdfq
 
 # Remove current content (except for branch folders)
 if [ "$CIRCLE_BRANCH" = 'master' ]; then
-  rm * & rm -rf static
+  mv branch $TEMP_PATH
+  rm -rf .
 else
   rm -rf $TARGET_PATH
   mkdir -p $TARGET_PATH
@@ -63,7 +65,7 @@ fi
 mv ../temp/* $TARGET_PATH
 
 # Cleanup temp folder
-rm -rf ../temp
+rm -rf $TEMP_PATH
 
 # Commit changes
 if [ -z $(git status --porcelain) ]; then
