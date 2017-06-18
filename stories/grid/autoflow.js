@@ -1,7 +1,8 @@
 // @flow
 import React from 'react'
+import { times } from 'lodash'
 import { number, boolean } from '@storybook/addon-knobs'
-import { Grid, Layout, utils } from '../../src'
+import { Grid, Layout } from '../../src'
 import { WithExtensions, Box, getMarginSelect } from '../core'
 
 export default function() {
@@ -28,10 +29,8 @@ export default function() {
               height: 100,
             }}
           />
-          {utils.times(
-            number('items', 5, { range: true, min: 0, max: 100 }),
-            index =>
-              <Box size={2} key={index} type="A" value={`${index + 6}`} />
+          {times(number('items', 5, { range: true, min: 0, max: 100 }), index =>
+            <Box size={2} key={index} type="A" value={`${index + 6}`} />
           )}
         </Grid>
       </Layout>

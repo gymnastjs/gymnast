@@ -1,7 +1,8 @@
 // @flow
 import React from 'react'
+import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, utils } from '../../src'
+import { Grid } from '../../src'
 import { WithExtensions, Root, Box, getMarginSelect } from '../core'
 
 export default function() {
@@ -14,9 +15,9 @@ export default function() {
     <WithExtensions notes={notes}>
       <Root>
         <h1>Auto Size</h1>
-        {utils.times(9, size =>
+        {times(9, size =>
           <Grid {...margin} key={size}>
-            {utils.times(size + items, i =>
+            {times(size + items, i =>
               <Box key={i} type="A" value={`1 / ${size + items}`} />
             )}
           </Grid>
@@ -37,13 +38,13 @@ export default function() {
 
         <h1>Custom</h1>
         <Grid {...margin}>
-          {utils.times(items, index =>
+          {times(items, index =>
             <Box key={index} type="A" value={`${index + 1}`} />
           )}
         </Grid>
         <Grid {...margin}>
           <Box size={6} type="A" value="6 (fixed)" />
-          {utils.times(items, index =>
+          {times(items, index =>
             <Box key={index} type="A" value={`${index + 2}`} />
           )}
         </Grid>

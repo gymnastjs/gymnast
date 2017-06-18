@@ -1,7 +1,8 @@
 // @flow
 import React from 'react'
+import { times } from 'lodash'
 import { boolean, number } from '@storybook/addon-knobs'
-import { Grid, utils } from '../../src'
+import { Grid } from '../../src'
 import { getMarginSelect, Root, Box, WithExtensions } from '../core'
 
 function ReferenceColumn({ height }: { height: number }) {
@@ -51,9 +52,7 @@ export default function() {
             align={stretch ? 'stretch' : 'top'}
             style={{ height }}
           >
-            {utils.times(items, i =>
-              <Box size={12} key={i} type="C" value="TOP" />
-            )}
+            {times(items, i => <Box size={12} key={i} type="C" value="TOP" />)}
           </Grid>
           <Grid
             size={4}
@@ -61,7 +60,7 @@ export default function() {
             align={stretch ? 'stretch' : 'middle'}
             style={{ height }}
           >
-            {utils.times(items, i =>
+            {times(items, i =>
               <Box size={12} key={i} type="C" value="MIDDLE" />
             )}
           </Grid>
@@ -71,7 +70,7 @@ export default function() {
             align={stretch ? 'stretch' : 'bottom'}
             style={{ height }}
           >
-            {utils.times(items, i =>
+            {times(items, i =>
               <Box size={12} key={i} type="C" value="BOTTOM" />
             )}
           </Grid>

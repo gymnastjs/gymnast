@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
-import { compact, getDisplayName, getMargin, log } from './utils'
+import { compact } from 'lodash'
+import { getDisplayName, getMargin, log } from './utils'
 import type {
   AlignGrid,
   Justify,

@@ -1,7 +1,8 @@
 // @flow
 import React from 'react'
+import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Layout, Item, utils } from '../../src'
+import { Grid, Layout, Item } from '../../src'
 import { WithExtensions, Box } from '../core'
 import style from './layout.css'
 
@@ -24,7 +25,7 @@ function getContainerSection(index, subsections) {
   return (
     <Layout key={index} type="parent" overflow="scrollbars">
       <Grid root>
-        {utils.times(subsections, i =>
+        {times(subsections, i =>
           <Grid key={i}>
             <Item size={12}><h1>SubSection {i + 1}</h1></Item>
           </Grid>
@@ -48,7 +49,7 @@ export default function() {
   return (
     <WithExtensions notes={notes}>
       <Layout type="parent" className={style.page}>
-        {utils.times(sections, index => getSection(index, subSections))}
+        {times(sections, index => getSection(index, subSections))}
       </Layout>
     </WithExtensions>
   )

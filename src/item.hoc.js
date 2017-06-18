@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
-import { compact, getDisplayName } from './utils'
+import { compact } from 'lodash'
+import { getDisplayName } from './utils'
 import type { Size, AlignItem, Offset } from './types'
 import styles from './index.css'
 

@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
-import { compact, getDisplayName, getMargin } from './utils'
+import { compact } from 'lodash'
+import { getDisplayName, getMargin } from './utils'
 import type { Margin, MarginSize, Overflow, Fixed, LayoutType } from './types'
 import styles from './index.css'
 
