@@ -15,10 +15,9 @@ dependencies:
   post:
     - yarn build
 test:
-  pre:
-    - yarn lint
   override:
-    - yarn test
+    - scripts/citests.sh:
+        parallel: true
 deployment:
   publish:
     owner: obartra
