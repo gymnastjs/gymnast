@@ -13,7 +13,7 @@ exports[`Storyshots Components Header 1`] = `
           className="gridStretch gridMargin grid"
         >
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -27,7 +27,7 @@ exports[`Storyshots Components Header 1`] = `
             </div>
           </div>
           <div
-            className="col-6"
+            className="col col-6"
           >
             <div
               className="box1"
@@ -43,7 +43,7 @@ exports[`Storyshots Components Header 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box3"
@@ -57,7 +57,7 @@ exports[`Storyshots Components Header 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box4"
@@ -78,21 +78,7 @@ exports[`Storyshots Components Header 1`] = `
             className="gridMargin col-6 grid"
           >
             <div
-              className="col-1"
-            >
-              <div
-                className="box1"
-                style={undefined}
-              >
-                <div
-                  className="gridMiddle gridMargin gridCenter grid"
-                >
-                  1
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-1"
+              className="col col-2"
             >
               <div
                 className="box1"
@@ -106,21 +92,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="col-1"
-            >
-              <div
-                className="box1"
-                style={undefined}
-              >
-                <div
-                  className="gridMiddle gridMargin gridCenter grid"
-                >
-                  3
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-1"
+              className="col col-2"
             >
               <div
                 className="box1"
@@ -134,21 +106,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="col-1"
-            >
-              <div
-                className="box1"
-                style={undefined}
-              >
-                <div
-                  className="gridMiddle gridMargin gridCenter grid"
-                >
-                  5
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-1"
+              className="col col-2"
             >
               <div
                 className="box1"
@@ -161,9 +119,51 @@ exports[`Storyshots Components Header 1`] = `
                 </div>
               </div>
             </div>
+            <div
+              className="col col-2"
+            >
+              <div
+                className="box1"
+                style={undefined}
+              >
+                <div
+                  className="gridMiddle gridMargin gridCenter grid"
+                >
+                  8
+                </div>
+              </div>
+            </div>
+            <div
+              className="col col-2"
+            >
+              <div
+                className="box1"
+                style={undefined}
+              >
+                <div
+                  className="gridMiddle gridMargin gridCenter grid"
+                >
+                  10
+                </div>
+              </div>
+            </div>
+            <div
+              className="col col-2"
+            >
+              <div
+                className="box1"
+                style={undefined}
+              >
+                <div
+                  className="gridMiddle gridMargin gridCenter grid"
+                >
+                  12
+                </div>
+              </div>
+            </div>
           </div>
           <div
-            className="col-6"
+            className="col col-6"
           >
             <div
               className="box1"
@@ -196,7 +196,7 @@ exports[`Storyshots Components Pagination 1`] = `
           className="gridMargin col-12 grid"
         >
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -210,7 +210,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -224,7 +224,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -238,7 +238,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -252,7 +252,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -266,7 +266,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -280,7 +280,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -294,7 +294,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -308,7 +308,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -322,7 +322,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -336,7 +336,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -350,7 +350,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box2"
@@ -380,7 +380,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
         className="gridStretch gridMargin gridRoot grid"
       >
         <div
-          className="col-1"
+          className="col col-1"
         >
           <div
             className="box1"
@@ -394,7 +394,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-2"
+          className="col col-2"
         >
           <div
             className="box1"
@@ -408,7 +408,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-4"
+          className="col col-4"
         >
           <div
             className="box1"
@@ -422,7 +422,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-3"
+          className="col col-3"
         >
           <div
             className="box1"
@@ -436,7 +436,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-2"
+          className="col col-2"
         >
           <div
             className="box3"
@@ -454,7 +454,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-2"
+          className="col col-2"
         >
           <div
             className="box1"
@@ -468,7 +468,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-2"
+          className="col col-2"
         >
           <div
             className="box1"
@@ -482,7 +482,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-2"
+          className="col col-2"
         >
           <div
             className="box1"
@@ -496,7 +496,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-2"
+          className="col col-2"
         >
           <div
             className="box1"
@@ -510,7 +510,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           </div>
         </div>
         <div
-          className="col-2"
+          className="col col-2"
         >
           <div
             className="box1"
@@ -548,7 +548,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -566,7 +566,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -580,7 +580,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -598,7 +598,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -612,7 +612,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -626,7 +626,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -644,7 +644,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -658,7 +658,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -672,7 +672,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -686,7 +686,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -704,7 +704,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -718,7 +718,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -732,7 +732,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -746,7 +746,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -760,7 +760,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -778,7 +778,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -792,7 +792,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -806,7 +806,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -820,7 +820,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -834,7 +834,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -848,7 +848,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -866,7 +866,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -880,7 +880,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -894,7 +894,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -908,7 +908,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -922,7 +922,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -936,7 +936,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -950,7 +950,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -968,7 +968,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -982,7 +982,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -996,7 +996,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1010,7 +1010,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1024,7 +1024,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1038,7 +1038,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1052,7 +1052,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1066,7 +1066,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1087,7 +1087,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-8"
+            className="col col-8"
           >
             <div
               className="box1"
@@ -1101,7 +1101,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1122,7 +1122,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-6"
+            className="col col-6"
           >
             <div
               className="box1"
@@ -1136,7 +1136,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1150,7 +1150,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -1174,7 +1174,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-6"
+            className="col col-6"
           >
             <div
               className="box1"
@@ -1207,7 +1207,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="gridMargin gridLeft col-12 grid"
         >
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -1225,7 +1225,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="gridMargin gridCenter col-12 grid"
         >
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -1243,7 +1243,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="gridMargin gridRight col-12 grid"
         >
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -1261,7 +1261,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="gridMargin col-12 grid"
         >
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box3"
@@ -1272,6 +1272,259 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
               >
                 DEFAULT
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Margin 1`] = `
+<div>
+  <div>
+    <div
+      className="parent layoutMarginNone layout"
+    >
+      <div
+        className="gridMargin gridRoot grid"
+      >
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-4"
+        >
+          <div
+            className="box3"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              Item
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
+            </div>
+          </div>
+        </div>
+        <div
+          className="col col-2"
+        >
+          <div
+            className="box1"
+            style={undefined}
+          >
+            <div
+              className="gridMiddle gridMargin gridCenter grid"
+            >
+              global
             </div>
           </div>
         </div>
@@ -1294,7 +1547,7 @@ exports[`Storyshots Grid Nested 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="grid col-6"
+            className="grid col col-6"
           >
             <div
               className="box2 grid gridMarginNoBottom"
@@ -1304,7 +1557,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 className="gridMiddle gridMargin gridCenter grid"
               >
                 <div
-                  className="col-6"
+                  className="col col-6"
                 >
                   <div
                     className="box1"
@@ -1318,7 +1571,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   </div>
                 </div>
                 <div
-                  className="col-6"
+                  className="col col-6"
                 >
                   <div
                     className="box1"
@@ -1335,7 +1588,7 @@ exports[`Storyshots Grid Nested 1`] = `
             </div>
           </div>
           <div
-            className="grid col-6"
+            className="grid col col-6"
           >
             <div
               className="box2 grid gridMarginNoBottom"
@@ -1345,7 +1598,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 className="gridMiddle gridMargin gridCenter grid"
               >
                 <div
-                  className="col-3"
+                  className="col col-3"
                 >
                   <div
                     className="box1"
@@ -1359,79 +1612,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   </div>
                 </div>
                 <div
-                  className="colOffset-6 col-3"
-                >
-                  <div
-                    className="box1"
-                    style={undefined}
-                  >
-                    <div
-                      className="gridMiddle gridMargin gridCenter grid"
-                    >
-                      A
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="gridMargin grid"
-        >
-          <div
-            className="grid col-6"
-          >
-            <div
-              className="box2 grid gridMarginNoBottom"
-              style={undefined}
-            >
-              <div
-                className="gridMiddle gridMargin gridCenter grid"
-              >
-                <div
-                  className="colOffset-3 col-6"
-                >
-                  <div
-                    className="box1"
-                    style={undefined}
-                  >
-                    <div
-                      className="gridMiddle gridMargin gridCenter grid"
-                    >
-                      A
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="grid col-6"
-          >
-            <div
-              className="box2 grid gridMarginNoBottom"
-              style={undefined}
-            >
-              <div
-                className="gridMiddle gridMargin gridCenter grid"
-              >
-                <div
-                  className="col-4"
-                >
-                  <div
-                    className="box1"
-                    style={undefined}
-                  >
-                    <div
-                      className="gridMiddle gridMargin gridCenter grid"
-                    >
-                      A
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="colOffset-4 col-4"
+                  className="colOffset-6 col col-3"
                 >
                   <div
                     className="box1"
@@ -1452,7 +1633,7 @@ exports[`Storyshots Grid Nested 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="grid col-6"
+            className="grid col col-6"
           >
             <div
               className="box2 grid gridMarginNoBottom"
@@ -1462,7 +1643,79 @@ exports[`Storyshots Grid Nested 1`] = `
                 className="gridMiddle gridMargin gridCenter grid"
               >
                 <div
-                  className="col-1"
+                  className="colOffset-3 col col-6"
+                >
+                  <div
+                    className="box1"
+                    style={undefined}
+                  >
+                    <div
+                      className="gridMiddle gridMargin gridCenter grid"
+                    >
+                      A
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="grid col col-6"
+          >
+            <div
+              className="box2 grid gridMarginNoBottom"
+              style={undefined}
+            >
+              <div
+                className="gridMiddle gridMargin gridCenter grid"
+              >
+                <div
+                  className="col col-4"
+                >
+                  <div
+                    className="box1"
+                    style={undefined}
+                  >
+                    <div
+                      className="gridMiddle gridMargin gridCenter grid"
+                    >
+                      A
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="colOffset-4 col col-4"
+                >
+                  <div
+                    className="box1"
+                    style={undefined}
+                  >
+                    <div
+                      className="gridMiddle gridMargin gridCenter grid"
+                    >
+                      A
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="gridMargin grid"
+        >
+          <div
+            className="grid col col-6"
+          >
+            <div
+              className="box2 grid gridMarginNoBottom"
+              style={undefined}
+            >
+              <div
+                className="gridMiddle gridMargin gridCenter grid"
+              >
+                <div
+                  className="col col-1"
                 >
                   <div
                     className="box1"
@@ -1476,7 +1729,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   </div>
                 </div>
                 <div
-                  className="col-1"
+                  className="col col-1"
                 >
                   <div
                     className="box1"
@@ -1490,7 +1743,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   </div>
                 </div>
                 <div
-                  className="col-1"
+                  className="col col-1"
                 >
                   <div
                     className="box1"
@@ -1504,7 +1757,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   </div>
                 </div>
                 <div
-                  className="col-1"
+                  className="col col-1"
                 >
                   <div
                     className="box1"
@@ -1518,7 +1771,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   </div>
                 </div>
                 <div
-                  className="col-1"
+                  className="col col-1"
                 >
                   <div
                     className="box1"
@@ -1532,7 +1785,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   </div>
                 </div>
                 <div
-                  className="col-1"
+                  className="col col-1"
                 >
                   <div
                     className="box1"
@@ -1568,7 +1821,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1582,7 +1835,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="colOffset-7 col-1"
+            className="colOffset-7 col col-1"
           >
             <div
               className="box1"
@@ -1600,7 +1853,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="colOffset-1 col-1"
+            className="colOffset-1 col col-1"
           >
             <div
               className="box1"
@@ -1614,7 +1867,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="colOffset-5 col-1"
+            className="colOffset-5 col col-1"
           >
             <div
               className="box1"
@@ -1628,7 +1881,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="colOffset-1 col-1"
+            className="colOffset-1 col col-1"
           >
             <div
               className="box1"
@@ -1646,7 +1899,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="colOffset-2 col-1"
+            className="colOffset-2 col col-1"
           >
             <div
               className="box1"
@@ -1660,7 +1913,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="colOffset-3 col-1"
+            className="colOffset-3 col col-1"
           >
             <div
               className="box1"
@@ -1674,7 +1927,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="colOffset-3 col-1"
+            className="colOffset-3 col col-1"
           >
             <div
               className="box1"
@@ -1692,7 +1945,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="colOffset-3 col-1"
+            className="colOffset-3 col col-1"
           >
             <div
               className="box1"
@@ -1706,7 +1959,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="colOffset-1 col-1"
+            className="colOffset-1 col col-1"
           >
             <div
               className="box1"
@@ -1720,7 +1973,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="colOffset-5 col-1"
+            className="colOffset-5 col col-1"
           >
             <div
               className="box1"
@@ -1738,7 +1991,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="colOffset-4 col-1"
+            className="colOffset-4 col col-1"
           >
             <div
               className="box1"
@@ -1756,7 +2009,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1789,7 +2042,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1803,7 +2056,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1817,7 +2070,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1831,7 +2084,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1845,7 +2098,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1859,7 +2112,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1873,7 +2126,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1887,7 +2140,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1901,7 +2154,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1915,7 +2168,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1929,7 +2182,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1943,7 +2196,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -1961,7 +2214,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -1975,7 +2228,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -1989,7 +2242,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -2003,7 +2256,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -2017,7 +2270,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -2031,7 +2284,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box1"
@@ -2049,7 +2302,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-3"
+            className="col col-3"
           >
             <div
               className="box1"
@@ -2063,7 +2316,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-3"
+            className="col col-3"
           >
             <div
               className="box1"
@@ -2077,7 +2330,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-3"
+            className="col col-3"
           >
             <div
               className="box1"
@@ -2091,7 +2344,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-3"
+            className="col col-3"
           >
             <div
               className="box1"
@@ -2109,7 +2362,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-4"
+            className="col col-4"
           >
             <div
               className="box1"
@@ -2123,7 +2376,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-4"
+            className="col col-4"
           >
             <div
               className="box1"
@@ -2137,7 +2390,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-4"
+            className="col col-4"
           >
             <div
               className="box1"
@@ -2155,7 +2408,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-6"
+            className="col col-6"
           >
             <div
               className="box1"
@@ -2169,7 +2422,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="col-6"
+            className="col col-6"
           >
             <div
               className="box1"
@@ -2187,7 +2440,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col"
+            className="col colAuto"
           >
             <div
               className="box1"
@@ -2205,7 +2458,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-12"
+            className="col col-12"
           >
             <div
               className="box1"
@@ -2241,7 +2494,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
           className="gridMargin grid"
         >
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -2259,7 +2512,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="colTop col-2"
+            className="colTop col col-2"
           >
             <div
               className="box1"
@@ -2273,7 +2526,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="colMiddle col-2"
+            className="colMiddle col col-2"
           >
             <div
               className="box1"
@@ -2287,7 +2540,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="colBottom col-2"
+            className="colBottom col col-2"
           >
             <div
               className="box1"
@@ -2301,7 +2554,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="colMiddle col-2"
+            className="colMiddle col col-2"
           >
             <div
               className="box1"
@@ -2315,7 +2568,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="col-2"
+            className="col col-2"
           >
             <div
               className="box3"
@@ -2329,7 +2582,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="col-1"
+            className="col col-1"
           >
             <div
               className="box1"
@@ -2362,7 +2615,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="col-12"
+              className="col col-12"
             >
               <div
                 className="box3"
@@ -2385,7 +2638,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="col-12"
+              className="col col-12"
             >
               <div
                 className="box3"
@@ -2408,7 +2661,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="col-12"
+              className="col col-12"
             >
               <div
                 className="box3"
@@ -2456,7 +2709,7 @@ exports[`Storyshots Layout Cards 1`] = `
             className="gridMarginHorizontal gridRoot grid"
           >
             <div
-              className="col-2"
+              className="col col-2"
             >
               <div
                 className="box3"
@@ -2470,7 +2723,7 @@ exports[`Storyshots Layout Cards 1`] = `
               </div>
             </div>
             <div
-              className="col-2"
+              className="col col-2"
             >
               <div
                 className="box3"
@@ -2484,7 +2737,7 @@ exports[`Storyshots Layout Cards 1`] = `
               </div>
             </div>
             <div
-              className="col-2"
+              className="col col-2"
             >
               <div
                 className="box3"
@@ -2498,7 +2751,7 @@ exports[`Storyshots Layout Cards 1`] = `
               </div>
             </div>
             <div
-              className="col-2"
+              className="col col-2"
             >
               <div
                 className="box3"
@@ -2512,7 +2765,7 @@ exports[`Storyshots Layout Cards 1`] = `
               </div>
             </div>
             <div
-              className="col-2"
+              className="col col-2"
             >
               <div
                 className="box3"
@@ -2526,7 +2779,7 @@ exports[`Storyshots Layout Cards 1`] = `
               </div>
             </div>
             <div
-              className="col-2"
+              className="col col-2"
             >
               <div
                 className="box3"
@@ -2555,7 +2808,7 @@ exports[`Storyshots Layout Cards 1`] = `
               className="gridStretch gridMargin grid"
             >
               <div
-                className="col-10"
+                className="col col-10"
               >
                 <div
                   className="box4"
@@ -2573,7 +2826,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-2"
+                className="col col-2"
               >
                 <div
                   className="box2"
@@ -2587,7 +2840,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-12"
+                className="col col-12"
               >
                 <div
                   className="box2"
@@ -2605,7 +2858,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-6"
+                className="col col-6"
               >
                 <div
                   className="box2"
@@ -2619,7 +2872,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-6"
+                className="col col-6"
               >
                 <div
                   className="box2"
@@ -2633,7 +2886,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-4"
+                className="col col-4"
               >
                 <div
                   className="box2"
@@ -2651,7 +2904,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-4"
+                className="col col-4"
               >
                 <div
                   className="box2"
@@ -2669,7 +2922,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-4"
+                className="col col-4"
               >
                 <div
                   className="box2"
@@ -2687,7 +2940,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-4"
+                className="col col-4"
               >
                 <div
                   className="box2"
@@ -2705,7 +2958,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-4"
+                className="col col-4"
               >
                 <div
                   className="box2"
@@ -2723,7 +2976,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="col-4"
+                className="col col-4"
               >
                 <div
                   className="box2"
@@ -2838,7 +3091,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="gridMarginNone grid"
           >
             <div
-              className="col-12"
+              className="col col-12"
             >
               <div
                 className="box3"
@@ -2864,7 +3117,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="gridMargin grid"
           >
             <div
-              className="col-12"
+              className="col col-12"
             >
               <h1>
                 SubSection 
@@ -2876,7 +3129,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="gridMargin grid"
           >
             <div
-              className="col-12"
+              className="col col-12"
             >
               <h1>
                 SubSection 
@@ -2888,7 +3141,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="gridMargin grid"
           >
             <div
-              className="col-12"
+              className="col col-12"
             >
               <h1>
                 SubSection 
@@ -2933,7 +3186,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
               className="gridMargin grid"
             >
               <div
-                className="colOffset-2 col-6"
+                className="colOffset-2 col col-6"
               >
                 <input
                   placeholder="Some search here"
@@ -2941,7 +3194,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
                 />
               </div>
               <div
-                className="col-2"
+                className="col col-2"
               >
                 <button>
                   Search
