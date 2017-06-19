@@ -41,22 +41,22 @@ li {
   width: 100%;
 }
 
-.box1 {
+.colors1, .box1 {
   color: var(--axonGold);
   background-color: var(--axonBlack);
 }
 
-.box2 {
+.colors2, .box2 {
   color: var(--bolt);
   background-color: var(--nomuraGray);
 }
 
-.box3 {
+.colors3, .box3 {
   color: var(--axonBlack);
   background-color: var(--axonGold);
 }
 
-.box4 {
+.colors4, .box4 {
   color: var(--nomuraGray);
   background-color: var(--bolt);
 }

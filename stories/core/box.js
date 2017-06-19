@@ -1,9 +1,7 @@
 // @flow
 import React from 'react'
-import { compact } from 'lodash'
 import { Grid, ItemHOC } from '../../src'
 import styles from './stories.css'
-import layout from '../../src/index.css'
 
 const typeMap = {
   A: 1,
@@ -15,7 +13,6 @@ class Box extends React.PureComponent {
   static displayName = 'Box'
 
   static defaultProps = {
-    nest: false,
     style: undefined,
     value: undefined,
   }
@@ -25,19 +22,14 @@ class Box extends React.PureComponent {
     style?: Object,
     children: any,
     value?: string,
-    nest?: boolean,
   }
 
   render() {
-    const { type, value = type, children, style, nest, ...props } = this.props
-    const classes = compact([
-      styles[`box${typeMap[type]}`],
-      nest && `${layout.grid} ${layout.gridMarginNoBottom}`,
-    ])
+    const { type, value = type, children, style, ...props } = this.props
 
     return (
       <div {...props}>
-        <div className={classes.join(' ')} style={style}>
+        <div className={styles[`box${typeMap[type]}`]} style={style}>
           <Grid align="middle" justify="center">
             {children || value}
           </Grid>

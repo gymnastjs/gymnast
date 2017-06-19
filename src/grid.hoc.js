@@ -41,7 +41,6 @@ export default function Grid(Component: any) {
     props: Props
 
     static defaultProps = {
-      margin: 'all',
       offset: 0,
       root: false,
     }
@@ -66,6 +65,7 @@ export default function Grid(Component: any) {
         offset && styles[`colOffset-${offset}`],
         root && styles.gridRoot,
         size && styles[`col-${String(size)}`],
+        size && styles.col,
         styles.grid,
       ])
 
