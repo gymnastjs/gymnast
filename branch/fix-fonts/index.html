@@ -36,11 +36,82 @@
             background-color: #eee
           }
         </style>
-        
+        <style>
+  /* overrides default storybook styles */
+
+  @font-face {
+    font-family: 'Geometria';
+    src: url('https://obartra.github.io/reflex/fonts/Geometria-Light.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Klartext';
+    src: url('https://obartra.github.io/reflex/fonts/KlartextMono-Light.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  * {
+    font-family: Geometria, Arial;
+    border-radius: 0;
+    color: #1D1F21;
+  }
+
+  li:focus,
+  a:focus {
+    outline: none;
+  }
+
+  input[type="text"],
+  select,
+  button,
+  h3 {
+    border: none !important;
+    outline: 1px solid #1D1F21 !important;
+  }
+
+  pre,
+  pre * {
+    font-family: "Klartext", AndaleMono, monospace;
+    font-size: 14px;
+  }
+
+  .Pane>div>div {
+    border-radius: 0 !important;
+  }
+
+  h3 {
+    font-family: Geometria, Arial !important;
+    height: 15px;
+  }
+
+  div[data-reactroot]>div {
+    background-color: #efefef !important;
+  }
+
+  div[role="tablist"] a[role="tab"] button {
+    color: #1D1F21 !important;
+    border-radius: 0 !important;
+    padding: 2px 5px !important;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus,
+  input:hover,
+  textarea:hover,
+  select:hover {
+    outline-offset: 0 !important;
+    outline-width: 2px !important;
+  }
+</style>
+
       </head>
       <body style="margin: 0;">
         <div id="root"></div>
-        <script src="static/manager.c91afd7979879aad81c0.bundle.js"></script>
+        <script src="static/manager.9a4ec6a0e12d12b7667b.bundle.js"></script>
       </body>
     </html>
   
