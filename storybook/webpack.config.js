@@ -11,6 +11,17 @@ module.exports = {
         use: 'raw-loader',
       },
       {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'markdown-loader',
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         include: resolve(__dirname, '../'),
         use: [

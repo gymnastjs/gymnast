@@ -3,14 +3,13 @@ import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
 import { Grid, Layout } from '../../src'
-import { WithExtensions, Box } from '../core'
+import { Box } from '../core'
 
 export default function() {
   const items = number('Items', 6, { range: true, min: 1, max: 6 })
-  const notes = 'Showcases the rendering of a header and subheader'
 
   return (
-    <WithExtensions notes={notes}>
+    <div>
       <Layout type="parent">
         <Grid root>
           <Grid align="stretch">
@@ -48,6 +47,6 @@ export default function() {
           </Grid>
         </Grid>
       </Layout>
-    </WithExtensions>
+    </div>
   )
 }
