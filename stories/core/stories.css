@@ -31,7 +31,7 @@ li {
   text-align: left;
 }
 
-[class*=box] {
+.box1, .box2, .box3, .box4 {
   cursor: default;
   display: flex;
   justify-content: center;
