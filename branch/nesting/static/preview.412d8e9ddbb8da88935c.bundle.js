@@ -58425,7 +58425,7 @@ exports = module.exports = __webpack_require__(207)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face{font-family:Geometria;src:url(/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h2{margin:0 20px;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}.stories__box1___su-2w,.stories__box2___3rvyF,.stories__box3___PrERQ,.stories__box4___33WAn{cursor:default;display:flex;justify-content:center;box-sizing:border-box;padding-top:20px;padding-bottom:20px;width:100%}.stories__box1___su-2w,.stories__colors1___2-Ky6{color:gold;background-color:#1d1f21}.stories__box2___3rvyF,.stories__colors2___1SuTj{color:#1469cc;background-color:#efefef}.stories__box3___PrERQ,.stories__colors3___3CI2k{color:#1d1f21;background-color:gold}.stories__box4___33WAn,.stories__colors4___qaX1J{color:#efefef;background-color:#1469cc}", ""]);
+exports.push([module.i, "@font-face{font-family:Geometria;src:url(https://obartra.github.io/reflex/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h2{margin:0 20px;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}.stories__box1___su-2w,.stories__box2___3rvyF,.stories__box3___PrERQ,.stories__box4___33WAn{cursor:default;display:flex;justify-content:center;box-sizing:border-box;padding-top:20px;padding-bottom:20px;width:100%}.stories__box1___su-2w,.stories__colors1___2-Ky6{color:gold;background-color:#1d1f21}.stories__box2___3rvyF,.stories__colors2___1SuTj{color:#1469cc;background-color:#efefef}.stories__box3___PrERQ,.stories__colors3___3CI2k{color:#1d1f21;background-color:gold}.stories__box4___33WAn,.stories__colors4___qaX1J{color:#efefef;background-color:#1469cc}", ""]);
 
 // exports
 exports.locals = {
@@ -64338,4 +64338,4 @@ module.exports = __webpack_require__(624);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.0382f030f60dc6cff6c8.bundle.js.map
+//# sourceMappingURL=preview.412d8e9ddbb8da88935c.bundle.js.map
