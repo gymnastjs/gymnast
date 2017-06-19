@@ -314,7 +314,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(204);
+var _defineProperty = __webpack_require__(205);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -1644,7 +1644,7 @@ Object.defineProperty(exports, 'LayoutHOC', {
   }
 });
 
-var _utils = __webpack_require__(202);
+var _utils = __webpack_require__(203);
 
 var srcUtils = _interopRequireWildcard(_utils);
 
@@ -2272,7 +2272,7 @@ module.exports = Function.prototype.bind || implementation;
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(213);
+var freeGlobal = __webpack_require__(214);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -22112,7 +22112,7 @@ module.exports = setInnerHTML;
 
 exports.__esModule = true;
 
-var _from = __webpack_require__(203);
+var _from = __webpack_require__(204);
 
 var _from2 = _interopRequireDefault(_from);
 
@@ -22475,7 +22475,7 @@ module.exports = (
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject    = __webpack_require__(25)
-  , dPs         = __webpack_require__(206)
+  , dPs         = __webpack_require__(207)
   , enumBugKeys = __webpack_require__(97)
   , IE_PROTO    = __webpack_require__(100)('IE_PROTO')
   , Empty       = function(){ /* empty */ }
@@ -25027,7 +25027,7 @@ module.exports = function(KEY, exec){
 /* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(218),
+var isFunction = __webpack_require__(219),
     isLength = __webpack_require__(169);
 
 /**
@@ -25112,7 +25112,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(222)(content, options);
+var update = __webpack_require__(223)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -29159,6 +29159,46 @@ var EVENT_ID = exports.EVENT_ID = ADDON_ID + '/action-event';
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.linkTo = exports.action = exports.getStorybook = exports.configure = exports.addDecorator = exports.setAddon = exports.storiesOf = undefined;
+
+var _utilDeprecate = __webpack_require__(1076);
+
+var _utilDeprecate2 = _interopRequireDefault(_utilDeprecate);
+
+var _addonActions = __webpack_require__(200);
+
+var _addonLinks = __webpack_require__(224);
+
+var _preview = __webpack_require__(440);
+
+var previewApi = _interopRequireWildcard(_preview);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var storiesOf = exports.storiesOf = previewApi.storiesOf;
+
+// NOTE export these to keep backwards compatibility
+var setAddon = exports.setAddon = previewApi.setAddon;
+var addDecorator = exports.addDecorator = previewApi.addDecorator;
+var configure = exports.configure = previewApi.configure;
+var getStorybook = exports.getStorybook = previewApi.getStorybook;
+
+var action = exports.action = (0, _utilDeprecate2.default)(_addonActions.action, '@storybook/react action is deprecated. See: https://github.com/storybooks/storybook/tree/master/addon/actions');
+
+var linkTo = exports.linkTo = (0, _utilDeprecate2.default)(_addonLinks.linkTo, '@storybook/react linkTo is deprecated. See: https://github.com/storybooks/storybook/tree/master/addon/links');
+
+/***/ }),
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.setInitialStory = setInitialStory;
 exports.setError = setError;
 exports.clearError = clearError;
@@ -29199,7 +29239,7 @@ function selectStory(kind, story) {
 }
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29276,19 +29316,19 @@ var log = exports.log = {
 };
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = { "default": __webpack_require__(243), __esModule: true };
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = { "default": __webpack_require__(247), __esModule: true };
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(77)('meta')
@@ -29346,7 +29386,7 @@ var meta = module.exports = {
 };
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP       = __webpack_require__(26)
@@ -29364,7 +29404,7 @@ module.exports = __webpack_require__(29) ? Object.defineProperties : function de
 };
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports) {
 
 /*
@@ -29446,7 +29486,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pSlice = Array.prototype.slice;
@@ -29546,7 +29586,7 @@ function objEquiv(a, b, opts) {
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports) {
 
 exports = module.exports = stringify
@@ -29579,10 +29619,10 @@ function serializer(replacer, cycleReplacer) {
 
 
 /***/ }),
-/* 210 */,
 /* 211 */,
 /* 212 */,
-/* 213 */
+/* 213 */,
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -29593,8 +29633,8 @@ module.exports = freeGlobal;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
-/* 214 */,
-/* 215 */
+/* 215 */,
+/* 216 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
@@ -29622,9 +29662,9 @@ module.exports = isIndex;
 
 
 /***/ }),
-/* 216 */,
 /* 217 */,
-/* 218 */
+/* 218 */,
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(71),
@@ -29667,7 +29707,7 @@ module.exports = isFunction;
 
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29685,8 +29725,8 @@ module.exports = {
 
 
 /***/ }),
-/* 220 */,
-/* 221 */
+/* 221 */,
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -29700,7 +29740,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(222)(content, options);
+var update = __webpack_require__(223)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -29717,7 +29757,7 @@ if(false) {
 }
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -30076,7 +30116,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30107,7 +30147,7 @@ var ADDON_ID = exports.ADDON_ID = 'storybook/links';
 var EVENT_ID = exports.EVENT_ID = ADDON_ID + '/link-event';
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30134,11 +30174,11 @@ exports.default = createChannel;
 
 var _global = __webpack_require__(88);
 
-var _channels = __webpack_require__(225);
+var _channels = __webpack_require__(226);
 
 var _channels2 = _interopRequireDefault(_channels);
 
-var _jsonStringifySafe = __webpack_require__(209);
+var _jsonStringifySafe = __webpack_require__(210);
 
 var _jsonStringifySafe2 = _interopRequireDefault(_jsonStringifySafe);
 
@@ -30237,7 +30277,7 @@ function createChannel(_ref) {
 }
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30384,46 +30424,6 @@ var Channel = function () {
 }();
 
 exports.default = Channel;
-
-/***/ }),
-/* 226 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.linkTo = exports.action = exports.getStorybook = exports.configure = exports.addDecorator = exports.setAddon = exports.storiesOf = undefined;
-
-var _utilDeprecate = __webpack_require__(1076);
-
-var _utilDeprecate2 = _interopRequireDefault(_utilDeprecate);
-
-var _addonActions = __webpack_require__(200);
-
-var _addonLinks = __webpack_require__(223);
-
-var _preview = __webpack_require__(440);
-
-var previewApi = _interopRequireWildcard(_preview);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var storiesOf = exports.storiesOf = previewApi.storiesOf;
-
-// NOTE export these to keep backwards compatibility
-var setAddon = exports.setAddon = previewApi.setAddon;
-var addDecorator = exports.addDecorator = previewApi.addDecorator;
-var configure = exports.configure = previewApi.configure;
-var getStorybook = exports.getStorybook = previewApi.getStorybook;
-
-var action = exports.action = (0, _utilDeprecate2.default)(_addonActions.action, '@storybook/react action is deprecated. See: https://github.com/storybooks/storybook/tree/master/addon/actions');
-
-var linkTo = exports.linkTo = (0, _utilDeprecate2.default)(_addonLinks.linkTo, '@storybook/react linkTo is deprecated. See: https://github.com/storybooks/storybook/tree/master/addon/links');
 
 /***/ }),
 /* 227 */
@@ -31622,7 +31622,7 @@ var global         = __webpack_require__(18)
   , DESCRIPTORS    = __webpack_require__(29)
   , $export        = __webpack_require__(22)
   , redefine       = __webpack_require__(153)
-  , META           = __webpack_require__(205).KEY
+  , META           = __webpack_require__(206).KEY
   , $fails         = __webpack_require__(44)
   , shared         = __webpack_require__(101)
   , setToStringTag = __webpack_require__(76)
@@ -51980,11 +51980,11 @@ var _addons = __webpack_require__(42);
 
 var _addons2 = _interopRequireDefault(_addons);
 
-var _channelPostmessage = __webpack_require__(224);
+var _channelPostmessage = __webpack_require__(225);
 
 var _channelPostmessage2 = _interopRequireDefault(_channelPostmessage);
 
-var _qs = __webpack_require__(219);
+var _qs = __webpack_require__(220);
 
 var _qs2 = _interopRequireDefault(_qs);
 
@@ -52008,7 +52008,7 @@ var _init = __webpack_require__(657);
 
 var _init2 = _interopRequireDefault(_init);
 
-var _actions = __webpack_require__(201);
+var _actions = __webpack_require__(202);
 
 var _reducer = __webpack_require__(658);
 
@@ -52083,7 +52083,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _lodash = __webpack_require__(50);
 
-var _utils = __webpack_require__(202);
+var _utils = __webpack_require__(203);
 
 var _index = __webpack_require__(137);
 
@@ -52179,7 +52179,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _lodash = __webpack_require__(50);
 
-var _utils = __webpack_require__(202);
+var _utils = __webpack_require__(203);
 
 var _index = __webpack_require__(137);
 
@@ -52226,7 +52226,7 @@ function Item(Component) {
             size = _props.size,
             props = _objectWithoutProperties(_props, ['align', 'className', 'grid', 'margin', 'marginSize', 'offset', 'size']);
 
-        var classes = (0, _lodash.compact)([align && alignClasses[align], className, (0, _utils.getMargin)(margin, marginSize, 'item'), (margin || marginSize) && _index2.default.marginDefined, grid && _index2.default.grid, offset && _index2.default['colOffset-' + offset], size ? _index2.default['col-' + size] : _index2.default.col]);
+        var classes = (0, _lodash.compact)([align && alignClasses[align], className, (0, _utils.getMargin)(margin, marginSize, 'col'), (margin || marginSize) && _index2.default.margin, grid && _index2.default.grid, offset && _index2.default['colOffset-' + offset], _index2.default.col, size ? _index2.default['col-' + size] : _index2.default.colAuto]);
 
         return _react2.default.createElement(Component, _extends({}, props, { className: classes.join(' ') }));
       }
@@ -52263,7 +52263,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _lodash = __webpack_require__(50);
 
-var _utils = __webpack_require__(202);
+var _utils = __webpack_require__(203);
 
 var _index = __webpack_require__(137);
 
@@ -53338,7 +53338,7 @@ window.STORYBOOK_REACT_CLASSES = {};
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; /* eslint-disable global-require, no-underscore-dangle */
 
 
-var _react = __webpack_require__(226);
+var _react = __webpack_require__(201);
 
 var _storybookAddonJsx = __webpack_require__(1061);
 
@@ -53353,8 +53353,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }, module);
 
 if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object') {
-  window.__screener_storybook__ = __webpack_require__(226).getStorybook();
+  window.__screener_storybook__ = __webpack_require__(201).getStorybook();
 }
+
+if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object') window.__screener_storybook__ = __webpack_require__(201).getStorybook();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(72)(module)))
 
 /***/ }),
@@ -53586,7 +53588,7 @@ var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _deepEqual = __webpack_require__(208);
+var _deepEqual = __webpack_require__(209);
 
 var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
@@ -53732,7 +53734,7 @@ var _toConsumableArray2 = __webpack_require__(86);
 
 var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-var _from = __webpack_require__(203);
+var _from = __webpack_require__(204);
 
 var _from2 = _interopRequireDefault(_from);
 
@@ -53743,7 +53745,7 @@ var _addons = __webpack_require__(42);
 
 var _addons2 = _interopRequireDefault(_addons);
 
-var _jsonStringifySafe = __webpack_require__(209);
+var _jsonStringifySafe = __webpack_require__(210);
 
 var _jsonStringifySafe2 = _interopRequireDefault(_jsonStringifySafe);
 
@@ -53839,7 +53841,7 @@ var _KnobStore = __webpack_require__(630);
 
 var _KnobStore2 = _interopRequireDefault(_KnobStore);
 
-var _deepEqual = __webpack_require__(208);
+var _deepEqual = __webpack_require__(209);
 
 var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
@@ -54190,7 +54192,7 @@ var _addons = __webpack_require__(42);
 
 var _addons2 = _interopRequireDefault(_addons);
 
-var _ = __webpack_require__(223);
+var _ = __webpack_require__(224);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54219,7 +54221,7 @@ var _addons = __webpack_require__(42);
 
 var _addons2 = _interopRequireDefault(_addons);
 
-var _ = __webpack_require__(223);
+var _ = __webpack_require__(224);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54490,7 +54492,7 @@ var _createClass3 = _interopRequireDefault(_createClass2);
 
 var _global = __webpack_require__(88);
 
-var _actions = __webpack_require__(201);
+var _actions = __webpack_require__(202);
 
 var _ = __webpack_require__(440);
 
@@ -54688,7 +54690,7 @@ var _key_events = __webpack_require__(138);
 
 var _key_events2 = _interopRequireDefault(_key_events);
 
-var _actions = __webpack_require__(201);
+var _actions = __webpack_require__(202);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54709,7 +54711,7 @@ var _extends3 = _interopRequireDefault(_extends2);
 
 exports.default = reducer;
 
-var _actions = __webpack_require__(201);
+var _actions = __webpack_require__(202);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -56391,7 +56393,7 @@ function ReferenceColumn(_ref) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 
-var _react = __webpack_require__(226);
+var _react = __webpack_require__(201);
 
 var _addonKnobs = __webpack_require__(31);
 
@@ -56566,7 +56568,7 @@ var _src = __webpack_require__(30);
 
 var _core = __webpack_require__(32);
 
-var _layout = __webpack_require__(221);
+var _layout = __webpack_require__(222);
 
 var _layout2 = _interopRequireDefault(_layout);
 
@@ -56678,7 +56680,7 @@ var _src = __webpack_require__(30);
 
 var _core = __webpack_require__(32);
 
-var _layout = __webpack_require__(221);
+var _layout = __webpack_require__(222);
 
 var _layout2 = _interopRequireDefault(_layout);
 
@@ -56726,7 +56728,7 @@ var _src = __webpack_require__(30);
 
 var _core = __webpack_require__(32);
 
-var _layout = __webpack_require__(221);
+var _layout = __webpack_require__(222);
 
 var _layout2 = _interopRequireDefault(_layout);
 
@@ -56897,7 +56899,7 @@ var _src = __webpack_require__(30);
 
 var _core = __webpack_require__(32);
 
-var _layout = __webpack_require__(221);
+var _layout = __webpack_require__(222);
 
 var _layout2 = _interopRequireDefault(_layout);
 
@@ -56936,7 +56938,7 @@ module.exports = { "default": __webpack_require__(767), __esModule: true };
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(204);
+var _defineProperty = __webpack_require__(205);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -58114,7 +58116,7 @@ $export($export.S, 'Number', {
 
 var $export = __webpack_require__(22);
 // 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-$export($export.S + $export.F * !__webpack_require__(29), 'Object', {defineProperties: __webpack_require__(206)});
+$export($export.S + $export.F * !__webpack_require__(29), 'Object', {defineProperties: __webpack_require__(207)});
 
 /***/ }),
 /* 771 */
@@ -58122,7 +58124,7 @@ $export($export.S + $export.F * !__webpack_require__(29), 'Object', {definePrope
 
 // 19.1.2.5 Object.freeze(O)
 var isObject = __webpack_require__(41)
-  , meta     = __webpack_require__(205).onFreeze;
+  , meta     = __webpack_require__(206).onFreeze;
 
 __webpack_require__(134)('freeze', function($freeze){
   return function freeze(it){
@@ -58135,12 +58137,12 @@ __webpack_require__(134)('freeze', function($freeze){
 /* 773 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(207)(undefined);
+exports = module.exports = __webpack_require__(208)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.index__auto___2QNKU,.index__parent___KsfTQ,.index__stretch___26rqN{box-sizing:border-box;width:100%;padding:24px}.index__parent___KsfTQ{align-items:center;display:flex;flex-flow:column;flex-grow:1;height:100%}.index__overflow___2m7Al{overflow-y:auto}.index__auto___2QNKU{flex-grow:0;flex-shrink:0}.index__stretch___26rqN{flex-grow:1}.index__fixedTop___3ooQE{position:fixed;top:0}.index__fixedBottom___Vlytu{position:fixed;bottom:0}.index__layoutMarginNone___2KcIe{padding:0}.index__layoutMarginVerticalHalf___1C4NJ{padding-top:12px;padding-bottom:12px}.index__layoutMarginVerticalDouble___2fV-I{padding-top:48px;padding-bottom:48px}.index__marginDefined___1e8sj.index__itemMarginNone___14mTf{padding:0}.index__marginDefined___1e8sj.index__itemMarginHalf___1aXvp{padding:0 6px 12px}.index__marginDefined___1e8sj.index__itemMarginDouble___cPweU{padding:0 24px 48px}.index__marginDefined___1e8sj.index__itemMarginHorizontal___27ZWm{padding:0 12px}.index__marginDefined___1e8sj.index__itemMarginHorizontalHalf___1sY6F{padding:0 6px}.index__marginDefined___1e8sj.index__itemMarginHorizontalDouble___3Greq{padding:0 24px}.index__marginDefined___1e8sj.index__itemMarginVerticalHalf___rCdsS{padding:0;padding-bottom:12px}.index__marginDefined___1e8sj.index__itemMarginVertical___3ybpi{padding:0;padding-bottom:24px}.index__marginDefined___1e8sj.index__itemMarginVerticalDouble___3TzNZ{padding:0;padding-bottom:48px}.index__grid___3o92u{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%;max-width:1224px}.index__grid___3o92u.index__gridRoot___2yv4B{padding-left:36px;padding-right:36px;margin:auto;min-width:400px}.index__col___2zEJs,[class*=col-]{box-sizing:border-box;padding:0 12px 24px}.index__col___2zEJs{flex:1 1 0%}.index__grid___3o92u[class*=col]{margin:0;padding:0}.index__gridMarginDefault___1-GuA{\n  /* intentionally empty */}.index__gridMarginNone___15nv2>[class*=col]:not(.index__marginDefined___1e8sj){padding:0}.index__gridMarginHalf___2UVD7>[class*=col]:not(.index__marginDefined___1e8sj){padding:0 6px 12px}.index__gridMarginDouble___2jvSR>[class*=col]:not(.index__marginDefined___1e8sj){padding:0 24px 48px}.index__gridMarginHorizontal___1AVVu>[class*=col]:not(.index__marginDefined___1e8sj){padding:0 12px}.index__gridMarginHorizontalHalf___HaYMH>[class*=col]:not(.index__marginDefined___1e8sj){padding:0 6px}.index__gridMarginHorizontalDouble___Vi26I>[class*=col]:not(.index__marginDefined___1e8sj){padding:0 24px}.index__gridMarginVerticalHalf___3sBvy>[class*=col]:not(.index__marginDefined___1e8sj){padding:0;padding-bottom:12px}.index__gridMarginVertical___1PzFD>[class*=col]:not(.index__marginDefined___1e8sj){padding:0;padding-bottom:24px}.index__gridMarginVerticalDouble___3X65A>[class*=col]:not(.index__marginDefined___1e8sj){padding:0;padding-bottom:48px}.index__gridLeft___2v7wJ{justify-content:flex-start;align-self:flex-start;margin-right:auto}.index__gridCenter___3WTNr{justify-content:center}.index__gridRight___2Fziq{justify-content:flex-end;align-self:flex-end;margin-left:auto}.index__gridTop___1_Fgu{align-content:flex-start;align-items:flex-start}.index__gridMiddle___2P0Lc{align-content:center;align-items:center}.index__gridBottom___15NEl{align-content:flex-end;align-items:flex-end}.index__gridStretch___3vwRq>[class*=col]{display:flex;flex-wrap:wrap}.index__gridStretch___3vwRq>[class*=col]>*{flex:1 0 100%}.index__colTop___ZGAy_{align-self:flex-start}.index__colMiddle___1MVmp{align-self:center}.index__colBottom___FFVuc{align-self:flex-end}.index__col-1___3SZ7I{flex-basis:8.33333%;max-width:8.33333%}.index__col-2___3LN0q{flex-basis:16.66667%;max-width:16.66667%}.index__col-3___857_F{flex-basis:25%;max-width:25%}.index__col-4___28_Er{flex-basis:33.33333%;max-width:33.33333%}.index__col-5___HFTfB{flex-basis:41.66667%;max-width:41.66667%}.index__col-6___2nvTS{flex-basis:50%;max-width:50%}.index__col-7___27zG0{flex-basis:58.33333%;max-width:58.33333%}.index__col-8___D1EUq{flex-basis:66.66667%;max-width:66.66667%}.index__col-9___1M1wL{flex-basis:75%;max-width:75%}.index__col-10___3xqXO{flex-basis:83.33333%;max-width:83.33333%}.index__col-11___17kMH{flex-basis:91.66667%;max-width:91.66667%}.index__col-12___1E-nn{flex-basis:100%;max-width:100%}.index__colOffset-0___1cbi1{margin-left:0}.index__colOffset-1___2tUJT{margin-left:8.33333%}.index__colOffset-2___1Ac_G{margin-left:16.66667%}.index__colOffset-3___1TE06{margin-left:25%}.index__colOffset-4___puH9r{margin-left:33.33333%}.index__colOffset-5___3cA4j{margin-left:41.66667%}.index__colOffset-6___3KDTO{margin-left:50%}.index__colOffset-7___36QOn{margin-left:58.33333%}.index__colOffset-8___1q1IS{margin-left:66.66667%}.index__colOffset-9___3qsUM{margin-left:75%}.index__colOffset-10___3wlrO{margin-left:83.33333%}.index__colOffset-11___1JXw-{margin-left:91.66667%}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.index__auto___2QNKU,.index__parent___KsfTQ,.index__stretch___26rqN{box-sizing:border-box;width:100%;padding:24px}.index__parent___KsfTQ{align-items:center;display:flex;flex-flow:column;flex-grow:1;height:100%}.index__overflow___2m7Al{overflow-y:auto}.index__auto___2QNKU{flex-grow:0;flex-shrink:0}.index__stretch___26rqN{flex-grow:1}.index__fixedTop___3ooQE{position:fixed;top:0}.index__fixedBottom___Vlytu{position:fixed;bottom:0}.index__layoutMarginNone___2KcIe{padding:0}.index__layoutMarginVerticalHalf___1C4NJ{padding-top:12px;padding-bottom:12px}.index__layoutMarginVerticalDouble___2fV-I{padding-top:48px;padding-bottom:48px}.index__col___2zEJs{box-sizing:border-box;padding:0 12px 24px}.index__colAuto___YjXrt{flex:1 1 0%}.index__colTop___ZGAy_{align-self:flex-start}.index__colMiddle___1MVmp{align-self:center}.index__colBottom___FFVuc{align-self:flex-end}.index__col-1___3SZ7I{flex-basis:8.33333%;max-width:8.33333%}.index__col-2___3LN0q{flex-basis:16.66667%;max-width:16.66667%}.index__col-3___857_F{flex-basis:25%;max-width:25%}.index__col-4___28_Er{flex-basis:33.33333%;max-width:33.33333%}.index__col-5___HFTfB{flex-basis:41.66667%;max-width:41.66667%}.index__col-6___2nvTS{flex-basis:50%;max-width:50%}.index__col-7___27zG0{flex-basis:58.33333%;max-width:58.33333%}.index__col-8___D1EUq{flex-basis:66.66667%;max-width:66.66667%}.index__col-9___1M1wL{flex-basis:75%;max-width:75%}.index__col-10___3xqXO{flex-basis:83.33333%;max-width:83.33333%}.index__col-11___17kMH{flex-basis:91.66667%;max-width:91.66667%}.index__col-12___1E-nn{flex-basis:100%;max-width:100%}.index__colOffset-0___1cbi1{margin-left:0}.index__colOffset-1___2tUJT{margin-left:8.33333%}.index__colOffset-2___1Ac_G{margin-left:16.66667%}.index__colOffset-3___1TE06{margin-left:25%}.index__colOffset-4___puH9r{margin-left:33.33333%}.index__colOffset-5___3cA4j{margin-left:41.66667%}.index__colOffset-6___3KDTO{margin-left:50%}.index__colOffset-7___36QOn{margin-left:58.33333%}.index__colOffset-8___1q1IS{margin-left:66.66667%}.index__colOffset-9___3qsUM{margin-left:75%}.index__colOffset-10___3wlrO{margin-left:83.33333%}.index__colOffset-11___1JXw-{margin-left:91.66667%}.index__margin___1QuL4.index__colMarginNone___3mHBo{padding:0}.index__margin___1QuL4.index__colMarginHalf___DslVI{padding:0 6px 12px}.index__margin___1QuL4.index__colMarginDouble___3JaTA{padding:0 24px 48px}.index__margin___1QuL4.index__colMarginHorizontal___3doaN{padding:0 12px}.index__margin___1QuL4.index__colMarginHorizontalHalf___1eCI0{padding:0 6px}.index__margin___1QuL4.index__colMarginHorizontalDouble___1mM8z{padding:0 24px}.index__margin___1QuL4.index__colMarginVerticalHalf___1LmL0{padding:0;padding-bottom:12px}.index__margin___1QuL4.index__colMarginVertical___b63_h{padding:0;padding-bottom:24px}.index__margin___1QuL4.index__colMarginVerticalDouble___38aWi{padding:0;padding-bottom:48px}.index__grid___3o92u{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%;max-width:1224px}.index__grid___3o92u.index__gridRoot___2yv4B{padding-left:36px;padding-right:36px;margin:auto;min-width:400px}.index__grid___3o92u.index__col___2zEJs{margin:0;padding:0}.index__gridMarginDefault___1-GuA{\n  /* intentionally empty */}.index__gridMarginNone___15nv2>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0}.index__gridMarginHalf___2UVD7>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0 6px 12px}.index__gridMarginDouble___2jvSR>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0 24px 48px}.index__gridMarginHorizontal___1AVVu>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0 12px}.index__gridMarginHorizontalHalf___HaYMH>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0 6px}.index__gridMarginHorizontalDouble___Vi26I>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0 24px}.index__gridMarginVerticalHalf___3sBvy>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0;padding-bottom:12px}.index__gridMarginVertical___1PzFD>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0;padding-bottom:24px}.index__gridMarginVerticalDouble___3X65A>.index__col___2zEJs:not(.index__margin___1QuL4){padding:0;padding-bottom:48px}.index__gridLeft___2v7wJ{justify-content:flex-start;align-self:flex-start;margin-right:auto}.index__gridCenter___3WTNr{justify-content:center}.index__gridRight___2Fziq{justify-content:flex-end;align-self:flex-end;margin-left:auto}.index__gridTop___1_Fgu{align-content:flex-start;align-items:flex-start}.index__gridMiddle___2P0Lc{align-content:center;align-items:center}.index__gridBottom___15NEl{align-content:flex-end;align-items:flex-end}.index__gridStretch___3vwRq>.index__col___2zEJs{display:flex;flex-wrap:wrap}.index__gridStretch___3vwRq>.index__col___2zEJs>*{flex:1 0 100%}", ""]);
 
 // exports
 exports.locals = {
@@ -58153,36 +58155,8 @@ exports.locals = {
 	"layoutMarginNone": "index__layoutMarginNone___2KcIe",
 	"layoutMarginVerticalHalf": "index__layoutMarginVerticalHalf___1C4NJ",
 	"layoutMarginVerticalDouble": "index__layoutMarginVerticalDouble___2fV-I",
-	"marginDefined": "index__marginDefined___1e8sj",
-	"itemMarginNone": "index__itemMarginNone___14mTf",
-	"itemMarginHalf": "index__itemMarginHalf___1aXvp",
-	"itemMarginDouble": "index__itemMarginDouble___cPweU",
-	"itemMarginHorizontal": "index__itemMarginHorizontal___27ZWm",
-	"itemMarginHorizontalHalf": "index__itemMarginHorizontalHalf___1sY6F",
-	"itemMarginHorizontalDouble": "index__itemMarginHorizontalDouble___3Greq",
-	"itemMarginVerticalHalf": "index__itemMarginVerticalHalf___rCdsS",
-	"itemMarginVertical": "index__itemMarginVertical___3ybpi",
-	"itemMarginVerticalDouble": "index__itemMarginVerticalDouble___3TzNZ",
-	"grid": "index__grid___3o92u",
-	"gridRoot": "index__gridRoot___2yv4B",
 	"col": "index__col___2zEJs",
-	"gridMarginDefault": "index__gridMarginDefault___1-GuA",
-	"gridMarginNone": "index__gridMarginNone___15nv2",
-	"gridMarginHalf": "index__gridMarginHalf___2UVD7",
-	"gridMarginDouble": "index__gridMarginDouble___2jvSR",
-	"gridMarginHorizontal": "index__gridMarginHorizontal___1AVVu",
-	"gridMarginHorizontalHalf": "index__gridMarginHorizontalHalf___HaYMH",
-	"gridMarginHorizontalDouble": "index__gridMarginHorizontalDouble___Vi26I",
-	"gridMarginVerticalHalf": "index__gridMarginVerticalHalf___3sBvy",
-	"gridMarginVertical": "index__gridMarginVertical___1PzFD",
-	"gridMarginVerticalDouble": "index__gridMarginVerticalDouble___3X65A",
-	"gridLeft": "index__gridLeft___2v7wJ",
-	"gridCenter": "index__gridCenter___3WTNr",
-	"gridRight": "index__gridRight___2Fziq",
-	"gridTop": "index__gridTop___1_Fgu",
-	"gridMiddle": "index__gridMiddle___2P0Lc",
-	"gridBottom": "index__gridBottom___15NEl",
-	"gridStretch": "index__gridStretch___3vwRq",
+	"colAuto": "index__colAuto___YjXrt",
 	"colTop": "index__colTop___ZGAy_",
 	"colMiddle": "index__colMiddle___1MVmp",
 	"colBottom": "index__colBottom___FFVuc",
@@ -58233,14 +58207,43 @@ exports.locals = {
 	"colOffset-10": "index__colOffset-10___3wlrO",
 	"colOffset10": "index__colOffset-10___3wlrO",
 	"colOffset-11": "index__colOffset-11___1JXw-",
-	"colOffset11": "index__colOffset-11___1JXw-"
+	"colOffset11": "index__colOffset-11___1JXw-",
+	"margin": "index__margin___1QuL4",
+	"colMarginNone": "index__colMarginNone___3mHBo",
+	"colMarginHalf": "index__colMarginHalf___DslVI",
+	"colMarginDouble": "index__colMarginDouble___3JaTA",
+	"colMarginHorizontal": "index__colMarginHorizontal___3doaN",
+	"colMarginHorizontalHalf": "index__colMarginHorizontalHalf___1eCI0",
+	"colMarginHorizontalDouble": "index__colMarginHorizontalDouble___1mM8z",
+	"colMarginVerticalHalf": "index__colMarginVerticalHalf___1LmL0",
+	"colMarginVertical": "index__colMarginVertical___b63_h",
+	"colMarginVerticalDouble": "index__colMarginVerticalDouble___38aWi",
+	"grid": "index__grid___3o92u",
+	"gridRoot": "index__gridRoot___2yv4B",
+	"gridMarginDefault": "index__gridMarginDefault___1-GuA",
+	"gridMarginNone": "index__gridMarginNone___15nv2",
+	"gridMarginHalf": "index__gridMarginHalf___2UVD7",
+	"gridMarginDouble": "index__gridMarginDouble___2jvSR",
+	"gridMarginHorizontal": "index__gridMarginHorizontal___1AVVu",
+	"gridMarginHorizontalHalf": "index__gridMarginHorizontalHalf___HaYMH",
+	"gridMarginHorizontalDouble": "index__gridMarginHorizontalDouble___Vi26I",
+	"gridMarginVerticalHalf": "index__gridMarginVerticalHalf___3sBvy",
+	"gridMarginVertical": "index__gridMarginVertical___1PzFD",
+	"gridMarginVerticalDouble": "index__gridMarginVerticalDouble___3X65A",
+	"gridLeft": "index__gridLeft___2v7wJ",
+	"gridCenter": "index__gridCenter___3WTNr",
+	"gridRight": "index__gridRight___2Fziq",
+	"gridTop": "index__gridTop___1_Fgu",
+	"gridMiddle": "index__gridMiddle___2P0Lc",
+	"gridBottom": "index__gridBottom___15NEl",
+	"gridStretch": "index__gridStretch___3vwRq"
 };
 
 /***/ }),
 /* 774 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(207)(undefined);
+exports = module.exports = __webpack_require__(208)(undefined);
 // imports
 
 
@@ -58257,12 +58260,12 @@ exports.locals = {
 /* 775 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(207)(undefined);
+exports = module.exports = __webpack_require__(208)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "@font-face{font-family:Geometria;src:url(/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h2{margin:0 20px;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}[class*=box]{cursor:default;display:flex;justify-content:center;box-sizing:border-box;padding-top:20px;padding-bottom:20px;width:100%}.stories__box1___su-2w{color:gold;background-color:#1d1f21}.stories__box2___3rvyF{color:#1469cc;background-color:#efefef}.stories__box3___PrERQ{color:#1d1f21;background-color:gold}.stories__box4___33WAn{color:#efefef;background-color:#1469cc}", ""]);
+exports.push([module.i, "@font-face{font-family:Geometria;src:url(/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h2{margin:0 20px;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}.stories__box1___su-2w,.stories__box2___3rvyF,.stories__box3___PrERQ,.stories__box4___33WAn{cursor:default;display:flex;justify-content:center;box-sizing:border-box;padding-top:20px;padding-bottom:20px;width:100%}.stories__box1___su-2w{color:gold;background-color:#1d1f21}.stories__box2___3rvyF{color:#1469cc;background-color:#efefef}.stories__box3___PrERQ{color:#1d1f21;background-color:gold}.stories__box4___33WAn{color:#efefef;background-color:#1469cc}", ""]);
 
 // exports
 exports.locals = {
@@ -58276,7 +58279,7 @@ exports.locals = {
 /* 776 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(207)(undefined);
+exports = module.exports = __webpack_require__(208)(undefined);
 // imports
 
 
@@ -58806,7 +58809,7 @@ module.exports = baseFill;
 
 var eq = __webpack_require__(168),
     isArrayLike = __webpack_require__(135),
-    isIndex = __webpack_require__(215),
+    isIndex = __webpack_require__(216),
     isObject = __webpack_require__(49);
 
 /**
@@ -63489,7 +63492,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(222)(content, options);
+var update = __webpack_require__(223)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -63520,7 +63523,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(222)(content, options);
+var update = __webpack_require__(223)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -64202,4 +64205,4 @@ module.exports = __webpack_require__(623);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.d9afb32907dd51124de8.bundle.js.map
+//# sourceMappingURL=preview.b944117b10fdfe3e51bc.bundle.js.map
