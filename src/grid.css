@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./item";
 
 .grid {
   box-sizing: border-box;
@@ -15,74 +16,57 @@
   }
 }
 
-[class*=col-], .col {
-  box-sizing: border-box;
-  padding: 0 calc(var(--gutter) / 2) var(--vertical-gutter);
-}
-
-.col {
-  flex: 1 1 0%;
-}
-
-.grid[class*=col-], .grid.col {
+.grid.col {
   margin: 0;
   padding: 0;
-}
-
-.gridMarginHorizontal,
-.gridMarginHorizontalDouble,
-.gridMarginHorizontalHalf,
-.gridMarginNone,
-.gridMarginVertical,
-.gridMarginVerticalDouble,
-.gridMarginVerticalHalf {
-  margin: 0;
-
-  & > [class*=col-], & > .col {
-    padding: 0;
-  }
 }
 
 .gridMarginDefault {
   /* intentionally empty */
 }
 
-.gridMarginHalf > [class*=col], .gridMarginHalf > .col {
+.gridMarginNone > .col:not(.margin) {
+  padding: 0;
+}
+
+.gridMarginHalf > .col:not(.margin) {
+  padding-top: 0;
   padding-left: calc(var(--gutter) / 4);
   padding-right: calc(var(--gutter) / 4);
   padding-bottom: calc(var(--vertical-gutter) / 2);
 }
 
-.gridMarginDouble > [class*=col], .gridMarginDouble > .col {
+.gridMarginDouble > .col:not(.margin) {
+  padding-top: 0;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
   padding-bottom: calc(var(--vertical-gutter) * 2);
 }
 
-.gridMarginHorizontal > [class*=col], .gridMarginHorizontal > .col {
-  padding-left: calc(var(--gutter) / 2);
-  padding-right: calc(var(--gutter) / 2);
+.gridMarginHorizontal > .col:not(.margin) {
+  padding: 0 calc(var(--gutter) / 2);
 }
 
-.gridMarginHorizontalHalf > [class*=col], .gridMarginHorizontalHalf > .col {
-  padding-left: calc(var(--gutter) / 4);
-  padding-right: calc(var(--gutter) / 4);
+.gridMarginHorizontalHalf > .col:not(.margin) {
+  padding: 0 calc(var(--gutter) / 4);
 }
 
-.gridMarginHorizontalDouble > [class*=col], .gridMarginHorizontalDouble > .col {
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+.gridMarginHorizontalDouble > .col:not(.margin) {
+  padding: 0 var(--gutter);
 }
 
-.gridMarginVerticalHalf > [class*=col], .gridMarginVerticalHalf > .col {
+.gridMarginVerticalHalf > .col:not(.margin) {
+  padding: 0;
   padding-bottom: calc(var(--gutter) / 2);
 }
 
-.gridMarginVertical {
+.gridMarginVertical > .col:not(.margin) {
+  padding: 0;
   padding-bottom: var(--gutter);
 }
 
-.gridMarginVerticalDouble > [class*=col], .gridMarginVerticalDouble > .col {
+.gridMarginVerticalDouble > .col:not(.margin) {
+  padding: 0;
   padding-bottom: calc(var(--gutter) * 2);
 }
 
@@ -117,36 +101,11 @@
   align-items: flex-end;
 }
 
-.gridStretch > [class*=col] {
+.gridStretch > .col {
   display: flex;
   flex-wrap: wrap;
 }
 
-.gridStretch > [class*=col] > * {
+.gridStretch > .col > * {
   flex: 1 0 100%;
-}
-
-.colTop {
-  align-self: flex-start;
-}
-
-.colMiddle {
-  align-self: center;
-}
-
-.colBottom {
-  align-self: flex-end;
-}
-
-@for $i from 1 to 12 {
-  .col-$(i) {
-    flex-basis: calc(($i / 12) * 100%);
-    max-width: calc(($i / 12) * 100%);
-  }
-}
-
-@for $i from 0 to 11 {
-  .colOffset-$(i) {
-    margin-left: calc($i / 12 * 100%);
-  }
 }

@@ -14,13 +14,16 @@ const marginMap = {
   Vertical: 'vertical',
 }
 
-export default function getMarginSelect() {
+export default function getMarginSelect(
+  marginTitle: string = 'Margin',
+  marginSizeTitle: string = 'Margin Size'
+) {
   const marginStr = select(
-    'Margin',
+    marginTitle,
     ['Default', 'Horizontal', 'None', 'Vertical'],
     'Default'
   )
-  const marginSizeStr = select('Margin Size', ['Default', 'Double', 'Half'])
+  const marginSizeStr = select(marginSizeTitle, ['Default', 'Double', 'Half'])
 
   return {
     margin: marginMap[marginStr],
