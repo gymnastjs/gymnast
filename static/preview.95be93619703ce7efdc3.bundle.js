@@ -58263,7 +58263,7 @@ exports = module.exports = __webpack_require__(207)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face{font-family:Geometria;src:url(/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h2{margin:0 20px;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}.stories__box1___su-2w,.stories__box2___3rvyF,.stories__box3___PrERQ,.stories__box4___33WAn{cursor:default;display:flex;justify-content:center;box-sizing:border-box;padding-top:20px;padding-bottom:20px;width:100%}.stories__box1___su-2w{color:gold;background-color:#1d1f21}.stories__box2___3rvyF{color:#1469cc;background-color:#efefef}.stories__box3___PrERQ{color:#1d1f21;background-color:gold}.stories__box4___33WAn{color:#efefef;background-color:#1469cc}", ""]);
+exports.push([module.i, "@font-face{font-family:Geometria;src:url(https://obartra.github.io/reflex/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h2{margin:0 20px;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}.stories__box1___su-2w,.stories__box2___3rvyF,.stories__box3___PrERQ,.stories__box4___33WAn{cursor:default;display:flex;justify-content:center;box-sizing:border-box;padding-top:20px;padding-bottom:20px;width:100%}.stories__box1___su-2w{color:gold;background-color:#1d1f21}.stories__box2___3rvyF{color:#1469cc;background-color:#efefef}.stories__box3___PrERQ{color:#1d1f21;background-color:gold}.stories__box4___33WAn{color:#efefef;background-color:#1469cc}", ""]);
 
 // exports
 exports.locals = {
@@ -64203,4 +64203,4 @@ module.exports = __webpack_require__(623);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.53e6e98d7d938626d394.bundle.js.map
+//# sourceMappingURL=preview.95be93619703ce7efdc3.bundle.js.map
