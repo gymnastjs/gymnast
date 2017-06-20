@@ -57261,7 +57261,8 @@ exports.default = function () {
             { align: 'stretch' },
             _react2.default.createElement(
               _src.Grid,
-              { size: 1, className: _layout2.default.nav },
+              { size: 1, className: _layout2.default.nav, align: 'top' },
+              _react2.default.createElement(_src.Item, { size: 12 }),
               _react2.default.createElement(
                 _src.Item,
                 { size: 12 },
@@ -57303,91 +57304,83 @@ exports.default = function () {
             ),
             _react2.default.createElement(
               _src.Grid,
-              {
-                size: 7,
-                className: _layout2.default.content,
-                align: 'top',
-                margin: 'horizontal'
-              },
+              { size: 7, className: _layout2.default.content, align: 'top' },
+              _react2.default.createElement(_src.Item, { size: 12 }),
               _react2.default.createElement(
-                _src.Grid,
-                { size: 12 },
-                _react2.default.createElement(
-                  P,
-                  null,
-                  'Text A'
-                ),
-                _react2.default.createElement(
-                  Card,
-                  { height: 140 },
-                  'First Block'
-                ),
-                _react2.default.createElement(
-                  Card,
-                  null,
-                  'Second Block'
-                ),
-                _react2.default.createElement(
-                  P,
-                  null,
-                  'Text B'
-                ),
-                _react2.default.createElement(
-                  Card,
-                  null,
-                  'Another Block'
-                ),
-                _react2.default.createElement(
-                  P,
-                  null,
-                  'Text C'
-                ),
-                _react2.default.createElement(
-                  Card,
-                  null,
-                  'Another Block'
-                ),
-                _react2.default.createElement(
-                  P,
-                  null,
-                  'Text D'
-                ),
-                _react2.default.createElement(
-                  Card,
-                  null,
-                  'Another Block'
-                ),
-                _react2.default.createElement(
-                  P,
-                  null,
-                  'Text E'
-                ),
-                _react2.default.createElement(
-                  Card,
-                  null,
-                  'Another Block'
-                ),
-                _react2.default.createElement(
-                  P,
-                  null,
-                  'Text F'
-                ),
-                _react2.default.createElement(
-                  Card,
-                  { height: 210 },
-                  'Final Block'
-                ),
-                _react2.default.createElement(
-                  Card,
-                  null,
-                  'Ok last one'
-                ),
-                _react2.default.createElement(
-                  P,
-                  null,
-                  text,
-                  '...'
-                )
+                P,
+                null,
+                'Text A'
+              ),
+              _react2.default.createElement(
+                Card,
+                { height: 140 },
+                'First Block'
+              ),
+              _react2.default.createElement(
+                Card,
+                null,
+                'Second Block'
+              ),
+              _react2.default.createElement(
+                P,
+                null,
+                'Text B'
+              ),
+              _react2.default.createElement(
+                Card,
+                null,
+                'Another Block'
+              ),
+              _react2.default.createElement(
+                P,
+                null,
+                'Text C'
+              ),
+              _react2.default.createElement(
+                Card,
+                null,
+                'Another Block'
+              ),
+              _react2.default.createElement(
+                P,
+                null,
+                'Text D'
+              ),
+              _react2.default.createElement(
+                Card,
+                null,
+                'Another Block'
+              ),
+              _react2.default.createElement(
+                P,
+                null,
+                'Text E'
+              ),
+              _react2.default.createElement(
+                Card,
+                null,
+                'Another Block'
+              ),
+              _react2.default.createElement(
+                P,
+                null,
+                'Text F'
+              ),
+              _react2.default.createElement(
+                Card,
+                { height: 210 },
+                'Final Block'
+              ),
+              _react2.default.createElement(
+                Card,
+                null,
+                'Ok last one'
+              ),
+              _react2.default.createElement(
+                P,
+                null,
+                _core.loremIpsum.substr(0, 250),
+                '...'
               )
             ),
             _react2.default.createElement(
@@ -57397,9 +57390,14 @@ exports.default = function () {
                 _src.Grid,
                 { size: 12, className: _layout2.default.clippy },
                 _react2.default.createElement(
-                  _src.Item,
-                  { className: _stories.colors1 },
-                  'Clippys Castle'
+                  _src.Grid,
+                  { size: 12, align: 'top', className: _stories.colors1 },
+                  _react2.default.createElement(_src.Item, { size: 12 }),
+                  _react2.default.createElement(
+                    _src.Item,
+                    null,
+                    'Side bar'
+                  )
                 )
               )
             )
@@ -57467,8 +57465,6 @@ function Card(_ref) {
     )
   );
 }
-
-var text = (_core.loremIpsum || '').substr(0, 250);
 
 /***/ }),
 /* 717 */
@@ -65121,4 +65117,4 @@ module.exports = __webpack_require__(625);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.ef1cb77ca1c8a28c6a0b.bundle.js.map
+//# sourceMappingURL=preview.10a5e6242297535b3a52.bundle.js.map
