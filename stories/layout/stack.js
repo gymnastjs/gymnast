@@ -3,11 +3,8 @@ import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
 import { Grid, Layout, Item } from '../../src'
-import { WithExtensions, Box } from '../core'
+import { Box } from '../core'
 import style from './layout.css'
-
-const notes =
-  'A layout component defaults to vertically stacking elements, taking the full width and optionally sizing to fit or stretching elements'
 
 function getStaticSection(index) {
   return (
@@ -47,10 +44,8 @@ export default function() {
   const sections = number('Sections', 2, { range: true, min: 2, max: 10 })
 
   return (
-    <WithExtensions notes={notes}>
-      <Layout type="parent" className={style.page}>
-        {times(sections, index => getSection(index, subSections))}
-      </Layout>
-    </WithExtensions>
+    <Layout type="parent" className={style.page}>
+      {times(sections, index => getSection(index, subSections))}
+    </Layout>
   )
 }

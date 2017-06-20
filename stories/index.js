@@ -1,8 +1,10 @@
 // @flow
+import React from 'react'
+import { each } from 'lodash'
 import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { utils } from '../src'
-import { storyFolders } from './core'
+import { storyFolders, WithExtensions } from './core'
 import '../src/index.css'
 
 /**
@@ -51,10 +53,18 @@ function getName(path) {
   return deKebab(fileName)
 }
 
-Object.keys(storyFolders).forEach(folder => {
+function getNote(path, notes) {
+  return notes[path.replace(/\.js$/, '.md')]
+}
+
+each(storyFolders, (content, folder) => {
   const component = configStories(getName(folder), module)
 
-  Object.keys(storyFolders[folder]).forEach(key =>
-    component.add(getName(key), storyFolders[folder][key])
-  )
+  each(content.stories, (WrappedComponent, key) => {
+    component.add(getName(key), () =>
+      <WithExtensions notes={getNote(key, content.notes)}>
+        <WrappedComponent />
+      </WithExtensions>
+    )
+  })
 })

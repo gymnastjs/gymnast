@@ -9,6 +9,11 @@ type keyFunctionPair = {
   [key: string]: Function,
 }
 
+type storyFolder = {
+  stories: keyFunctionPair,
+  notes: keyFunctionPair,
+}
+
 /**
  * Reads the `/components`, `/grid` and `/layout` subfolder files and adds them to their respective
  * stories
@@ -33,26 +38,46 @@ function loadTest(folder: string): keyFunctionPair {
 
 function loadWebpack(folder: Function): keyFunctionPair {
   return fromPairs(
-    folder.keys().map(filename => [filename, folder(filename).default])
+    folder
+      .keys()
+      .map(filename => [filename, folder(filename).default || folder(filename)])
   )
 }
 
 export const storyFolders: {
-  './components': keyFunctionPair,
-  './layout': keyFunctionPair,
-  './grid': keyFunctionPair,
+  './components': storyFolder,
+  './layout': storyFolder,
+  './grid': storyFolder,
 } = process.env.NODE_ENV !== 'test'
   ? {
-      './components': loadWebpack(
-        require.context('../components', false, /.+\.js$/i)
-      ),
-      './grid': loadWebpack(require.context('../grid', false, /.+\.js$/i)),
-      './layout': loadWebpack(require.context('../layout', false, /.+\.js$/i)),
+      './components': {
+        stories: loadWebpack(
+          require.context('../components', false, /.+\.js$/i)
+        ),
+        notes: loadWebpack(require.context('../components', false, /.+\.md$/i)),
+      },
+      './grid': {
+        stories: loadWebpack(require.context('../grid', false, /.+\.js$/i)),
+        notes: loadWebpack(require.context('../grid', false, /.+\.md$/i)),
+      },
+      './layout': {
+        stories: loadWebpack(require.context('../layout', false, /.+\.js$/i)),
+        notes: loadWebpack(require.context('../layout', false, /.+\.md$/i)),
+      },
     }
   : {
-      './components': loadTest('../components'),
-      './grid': loadTest('../grid'),
-      './layout': loadTest('../layout'),
+      './components': {
+        stories: loadTest('../components'),
+        notes: {},
+      },
+      './grid': {
+        stories: loadTest('../grid'),
+        notes: {},
+      },
+      './layout': {
+        stories: loadTest('../layout'),
+        notes: {},
+      },
     }
 
 export default storyFolders

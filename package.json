@@ -30,10 +30,12 @@
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-react": "7.1.0",
     "flow-bin": "0.48.0",
+    "html-loader": "0.4.5",
     "husky": "0.13.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "20.0.4",
     "lint-staged": "4.0.0",
+    "markdown-loader": "2.0.0",
     "npm-run-all": "4.0.2",
     "postcss-cli": "4.1.0",
     "postcss-cssnext": "2.11.0",
@@ -59,8 +61,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.css$": "identity-obj-proxy",
-      "^.+\\.txt$": "identity-obj-proxy"
+      "^.+\\.(css|txt|md)$": "identity-obj-proxy"
     }
   },
   "scripts": {
