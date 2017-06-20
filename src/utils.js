@@ -1,6 +1,7 @@
 // @flow
+import { uniq } from 'lodash'
 import styles from './index.css'
-import type { Component, Margin, MarginSize } from './types'
+import type { Component, Margin, MarginSize, IndividualSides } from './types'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
@@ -49,6 +50,27 @@ export function getMargin(
     default:
       return ''
   }
+}
+
+const individualSides = ['top', 'right', 'bottom', 'left']
+const sideMaps = {
+  horizontal: ['right', 'left'],
+  vertical: ['top', 'bottom'],
+  all: individualSides,
+  none: [],
+}
+
+export function getSides(sides?: string = ''): Array<IndividualSides> {
+  const allSides = sides.split(' ').reduce((acc, current) => {
+    if (individualSides.includes(current)) {
+      return [...acc, current]
+    } else if (current in sideMaps) {
+      return [...acc, ...sideMaps[current]]
+    }
+    return acc
+  }, [])
+
+  return uniq(allSides)
 }
 
 /* eslint-disable no-console */

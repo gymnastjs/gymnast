@@ -10,15 +10,18 @@ import type {
   Offset,
   Size,
 } from './types'
+import Padding from './padding'
 import styles from './index.css'
 
 export type Props = {
   align?: AlignGrid,
+  children?: Element | Array<Element>,
   className?: string,
   justify?: Justify,
   margin: Margin,
   marginSize: MarginSize,
   offset: Offset,
+  padding?: string | void,
   root?: boolean,
   size?: Size,
 }
@@ -48,11 +51,13 @@ export default function Grid(Component: any) {
     render() {
       const {
         align,
+        children,
         className,
         justify,
         margin,
         marginSize,
         offset,
+        padding,
         root,
         size,
         ...props
@@ -74,8 +79,21 @@ export default function Grid(Component: any) {
           '"Grid" (unlike "Item") cannot simultaneously have size and offset'
         )
       }
+      if (padding) {
+        return (
+          <Component {...props} className={classes.join(' ')}>
+            <Padding direction={padding}>
+              {children}
+            </Padding>
+          </Component>
+        )
+      }
 
-      return <Component {...props} className={classes.join(' ')} />
+      return (
+        <Component {...props} className={classes.join(' ')}>
+          {children}
+        </Component>
+      )
     }
 
     static displayName = `withGrid(${getDisplayName(Component)})`

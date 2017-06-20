@@ -10,7 +10,7 @@ function getStaticSection(index) {
   return (
     <Layout key={index}>
       <Grid root>
-        <Grid margin="none">
+        <Grid margin="horizontal">
           <Box size={12} type="C" value={`Section ${index + 1}`} />
         </Grid>
       </Grid>
@@ -21,7 +21,7 @@ function getStaticSection(index) {
 function getContainerSection(index, subsections) {
   return (
     <Layout key={index} type="parent" overflow="scrollbars">
-      <Grid root>
+      <Grid root align="top">
         {times(subsections, i =>
           <Grid key={i}>
             <Item size={12}><h1>SubSection {i + 1}</h1></Item>
@@ -44,7 +44,7 @@ export default function() {
   const sections = number('Sections', 2, { range: true, min: 2, max: 10 })
 
   return (
-    <Layout type="parent" className={style.page}>
+    <Layout type="parent" className={style.page} style={{ maxHeight: '100%' }}>
       {times(sections, index => getSection(index, subSections))}
     </Layout>
   )

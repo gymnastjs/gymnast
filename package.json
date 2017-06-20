@@ -1,7 +1,7 @@
 {
   "name": "flex",
   "version": "1.0.0",
-  "description": "Flexbox-based column layout system",
+  "description": "Flexbox React 12-column layout system",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -61,8 +61,12 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.(css|txt|md)$": "identity-obj-proxy"
-    }
+      "^.+\\.css$": "identity-obj-proxy",
+      "^.+\\.(md|txt)$": "<rootDir>/test/stringStub.js"
+    },
+    "testMatch": [
+      "**/?(*.)spec.js"
+    ]
   },
   "scripts": {
     "build": "postcss -c scripts/postcss.config.js -o dist/flex.build.css src/index.css",

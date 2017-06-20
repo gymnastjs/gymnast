@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Grid, Layout } from '../../src'
+import { Grid, Item, Layout } from '../../src'
 import { loremIpsum } from '../core'
 import styles from './layout.css'
 
@@ -20,7 +20,9 @@ export default function() {
           <Grid size={2} className={styles.nav}><h2>Nav</h2></Grid>
           <Grid size={8} className={styles.content} align="top">
             <h2>Content</h2>
-            {includeText && <p>{loremIpsum}</p>}
+            <Item size={12}>
+              {includeText && <p>{loremIpsum}</p>}
+            </Item>
           </Grid>
           <Grid size={2} className={styles.ads}><h2>Ads</h2></Grid>
         </Grid>

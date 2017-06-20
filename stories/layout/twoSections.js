@@ -29,18 +29,20 @@ export default function() {
           </Grid>
         </Layout>
         <Layout type="stretch">
-          <Grid root>
-            <Grid className={styles.content} align="top">
+          <Grid root className={styles.content}>
+            <Grid align="top">
               <h2>Content</h2>
-              {includeText && <p>{loremIpsum}</p>}
+              <Item size={12}>
+                {includeText && <p>{loremIpsum}</p>}
+              </Item>
             </Grid>
           </Grid>
         </Layout>
-        <Layout className={styles.footer}>
-          <Grid root>
-            <h1>Footer</h1>
-          </Grid>
-        </Layout>
+      </Layout>
+      <Layout className={styles.footer}>
+        <Grid root>
+          <h1>Footer</h1>
+        </Grid>
       </Layout>
     </Layout>
   )

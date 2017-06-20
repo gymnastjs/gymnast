@@ -25,12 +25,12 @@ export default function() {
           marginSize="half"
         >
           <Grid root margin="horizontal">
-            <Box size={2} type="C" />
-            <Box size={2} type="C" />
-            <Box size={2} type="C" />
-            <Box size={2} type="C" />
-            <Box size={2} type="C" />
-            <Box size={2} type="C" />
+            <Box size={2} type="D" />
+            <Box size={2} type="D" />
+            <Box size={2} type="D" />
+            <Box size={2} type="D" />
+            <Box size={2} type="D" />
+            <Box size={2} type="D" />
           </Grid>
         </Layout>
       </Layout>
@@ -38,7 +38,7 @@ export default function() {
         <Layout type="stretch">
           <Grid root>
             <Grid align="stretch">
-              <Box size={10} type="D" style={SIZE.TALL} />
+              <Box size={10} type="B" style={SIZE.TALL} />
               <Box size={2} type="B" style={SIZE.SMALL} />
               <Box size={12} type="B" style={SIZE.MEDIUM} />
               <Box size={6} type="B" style={SIZE.SMALL} />

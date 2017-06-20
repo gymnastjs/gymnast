@@ -2076,6 +2076,137 @@ exports[`Storyshots Grid Offset 1`] = `
 </div>
 `;
 
+exports[`Storyshots Grid Padding 1`] = `
+<div>
+  <div>
+    <div
+      className="parent layoutMarginNone layout"
+    >
+      <div
+        className="gridRoot grid"
+      >
+        <div
+          className="gridCenter grid"
+        >
+          <div
+            className="col col-12"
+          >
+            <h1>
+              Top Right Padding
+            </h1>
+          </div>
+          <div
+            className="colors2 col-6 col grid"
+          >
+            <div
+              className="padding top right"
+            >
+              <div
+                className="colors3 col col-12"
+              >
+                Content
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="gridCenter grid"
+        >
+          <div
+            className="col col-12"
+          >
+            <h1>
+              All-sides Padding
+            </h1>
+          </div>
+          <div
+            className="colors2 col-6 col grid"
+          >
+            <div
+              className="padding top right bottom left"
+            >
+              <div
+                className="colors3 col col-12"
+              >
+                Content
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="gridCenter grid"
+        >
+          <div
+            className="col col-12"
+          >
+            <h1>
+              No Padding
+            </h1>
+          </div>
+          <div
+            className="colors2 col-6 col grid"
+          >
+            <div
+              className="colors3 col col-12"
+            >
+              Content
+            </div>
+          </div>
+        </div>
+        <div
+          className="gridCenter grid"
+        >
+          <div
+            className="col col-12"
+          >
+            <h1>
+              Bottom Padding
+            </h1>
+          </div>
+          <div
+            className="colors2 col-6 col grid"
+          >
+            <div
+              className="padding bottom"
+            >
+              <div
+                className="colors3 col col-12"
+              >
+                Content
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="gridCenter grid"
+        >
+          <div
+            className="col col-12"
+          >
+            <h1>
+              Top-Right-Left Padding
+            </h1>
+          </div>
+          <div
+            className="colors2 col-6 col grid"
+          >
+            <div
+              className="padding right left top"
+            >
+              <div
+                className="colors3 col col-12"
+              >
+                Content
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Grid Sizing 1`] = `
 <div>
   <div>
@@ -2759,13 +2890,13 @@ exports[`Storyshots Layout Cards 1`] = `
               className="col col-2"
             >
               <div
-                className="box3"
+                className="box4"
                 style={undefined}
               >
                 <div
                   className="gridMiddle gridCenter grid"
                 >
-                  C
+                  D
                 </div>
               </div>
             </div>
@@ -2773,13 +2904,13 @@ exports[`Storyshots Layout Cards 1`] = `
               className="col col-2"
             >
               <div
-                className="box3"
+                className="box4"
                 style={undefined}
               >
                 <div
                   className="gridMiddle gridCenter grid"
                 >
-                  C
+                  D
                 </div>
               </div>
             </div>
@@ -2787,13 +2918,13 @@ exports[`Storyshots Layout Cards 1`] = `
               className="col col-2"
             >
               <div
-                className="box3"
+                className="box4"
                 style={undefined}
               >
                 <div
                   className="gridMiddle gridCenter grid"
                 >
-                  C
+                  D
                 </div>
               </div>
             </div>
@@ -2801,13 +2932,13 @@ exports[`Storyshots Layout Cards 1`] = `
               className="col col-2"
             >
               <div
-                className="box3"
+                className="box4"
                 style={undefined}
               >
                 <div
                   className="gridMiddle gridCenter grid"
                 >
-                  C
+                  D
                 </div>
               </div>
             </div>
@@ -2815,13 +2946,13 @@ exports[`Storyshots Layout Cards 1`] = `
               className="col col-2"
             >
               <div
-                className="box3"
+                className="box4"
                 style={undefined}
               >
                 <div
                   className="gridMiddle gridCenter grid"
                 >
-                  C
+                  D
                 </div>
               </div>
             </div>
@@ -2829,13 +2960,13 @@ exports[`Storyshots Layout Cards 1`] = `
               className="col col-2"
             >
               <div
-                className="box3"
+                className="box4"
                 style={undefined}
               >
                 <div
                   className="gridMiddle gridCenter grid"
                 >
-                  C
+                  D
                 </div>
               </div>
             </div>
@@ -2858,7 +2989,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 className="col col-10"
               >
                 <div
-                  className="box4"
+                  className="box2"
                   style={
                     Object {
                       "height": 200,
@@ -2868,7 +2999,7 @@ exports[`Storyshots Layout Cards 1`] = `
                   <div
                     className="gridMiddle gridCenter grid"
                   >
-                    D
+                    B
                   </div>
                 </div>
               </div>
@@ -3096,6 +3227,9 @@ exports[`Storyshots Layout Holy Grail 1`] = `
             <h2>
               Content
             </h2>
+            <div
+              className="col col-12"
+            />
           </div>
           <div
             className="ads col-2 col grid"
@@ -3122,11 +3256,469 @@ exports[`Storyshots Layout Holy Grail 1`] = `
 </div>
 `;
 
+exports[`Storyshots Layout Report 1`] = `
+<div>
+  <div>
+    <div
+      className="report parent layoutMarginNone layout"
+    >
+      <div
+        className="fixedTop auto layoutMarginNone layout"
+      >
+        <div
+          className="header auto layoutMarginNone layout"
+        >
+          <div
+            className="gridRoot grid"
+          >
+            <div
+              className="colMarginHorizontal margin col col-12"
+            >
+              <h1>
+                Header
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          className="subheader auto layoutMarginNone layout"
+        >
+          <div
+            className="gridMarginHorizontal gridRoot grid"
+          >
+            <div
+              className="col col-12"
+            >
+              <h2>
+                Subheader
+              </h2>
+            </div>
+            <div
+              className="col col-2"
+            >
+              <div
+                className="box3"
+                style={undefined}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  C
+                </div>
+              </div>
+            </div>
+            <div
+              className="col col-2"
+            >
+              <div
+                className="box3"
+                style={undefined}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  C
+                </div>
+              </div>
+            </div>
+            <div
+              className="col col-2"
+            >
+              <div
+                className="box3"
+                style={undefined}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  C
+                </div>
+              </div>
+            </div>
+            <div
+              className="col col-2"
+            >
+              <div
+                className="box3"
+                style={undefined}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  C
+                </div>
+              </div>
+            </div>
+            <div
+              className="colOffset-2 col col-2"
+            >
+              <div
+                className="box3"
+                style={undefined}
+              >
+                <div
+                  className="gridMiddle gridCenter grid"
+                >
+                  C
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="main colors2 parent layoutMarginNone layout"
+      >
+        <div
+          className="stretch layoutMarginNone layout"
+        >
+          <div
+            className="gridRoot grid"
+          >
+            <div
+              className="gridStretch grid"
+            >
+              <div
+                className="gridTop nav col-1 col grid"
+              >
+                <div
+                  className="padding top"
+                >
+                  <div
+                    className="col col-12"
+                  >
+                    <ul>
+                      <li>
+                        Item 1
+                      </li>
+                      <li>
+                        Item 2
+                      </li>
+                      <li>
+                        Item 3
+                      </li>
+                      <li>
+                        Item 4
+                      </li>
+                      <li>
+                        Item 5
+                      </li>
+                      <li>
+                        Item 6
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="gridTop content col-7 col grid"
+              >
+                <div
+                  className="padding top"
+                >
+                  <div
+                    className="col col-12"
+                  >
+                    <p>
+                      Text A
+                    </p>
+                  </div>
+                  <div
+                    className="col col-12"
+                    style={
+                      Object {
+                        "height": 140,
+                      }
+                    }
+                  >
+                    <div
+                      className="card"
+                      style={
+                        Object {
+                          "height": "100%",
+                        }
+                      }
+                    >
+                      <div
+                        className="col col-12"
+                      >
+                        <p>
+                          First Block
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="col col-12"
+                    style={
+                      Object {
+                        "height": 70,
+                      }
+                    }
+                  >
+                    <div
+                      className="card"
+                      style={
+                        Object {
+                          "height": "100%",
+                        }
+                      }
+                    >
+                      <div
+                        className="col col-12"
+                      >
+                        <p>
+                          Second Block
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="col col-12"
+                  >
+                    <p>
+                      Text B
+                    </p>
+                  </div>
+                  <div
+                    className="col col-12"
+                    style={
+                      Object {
+                        "height": 70,
+                      }
+                    }
+                  >
+                    <div
+                      className="card"
+                      style={
+                        Object {
+                          "height": "100%",
+                        }
+                      }
+                    >
+                      <div
+                        className="col col-12"
+                      >
+                        <p>
+                          Another Block
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="col col-12"
+                  >
+                    <p>
+                      Text C
+                    </p>
+                  </div>
+                  <div
+                    className="col col-12"
+                    style={
+                      Object {
+                        "height": 70,
+                      }
+                    }
+                  >
+                    <div
+                      className="card"
+                      style={
+                        Object {
+                          "height": "100%",
+                        }
+                      }
+                    >
+                      <div
+                        className="col col-12"
+                      >
+                        <p>
+                          Another Block
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="col col-12"
+                  >
+                    <p>
+                      Text D
+                    </p>
+                  </div>
+                  <div
+                    className="col col-12"
+                    style={
+                      Object {
+                        "height": 70,
+                      }
+                    }
+                  >
+                    <div
+                      className="card"
+                      style={
+                        Object {
+                          "height": "100%",
+                        }
+                      }
+                    >
+                      <div
+                        className="col col-12"
+                      >
+                        <p>
+                          Another Block
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="col col-12"
+                  >
+                    <p>
+                      Text E
+                    </p>
+                  </div>
+                  <div
+                    className="col col-12"
+                    style={
+                      Object {
+                        "height": 70,
+                      }
+                    }
+                  >
+                    <div
+                      className="card"
+                      style={
+                        Object {
+                          "height": "100%",
+                        }
+                      }
+                    >
+                      <div
+                        className="col col-12"
+                      >
+                        <p>
+                          Another Block
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="col col-12"
+                  >
+                    <p>
+                      Text F
+                    </p>
+                  </div>
+                  <div
+                    className="col col-12"
+                    style={
+                      Object {
+                        "height": 210,
+                      }
+                    }
+                  >
+                    <div
+                      className="card"
+                      style={
+                        Object {
+                          "height": "100%",
+                        }
+                      }
+                    >
+                      <div
+                        className="col col-12"
+                      >
+                        <p>
+                          Final Block
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="col col-12"
+                    style={
+                      Object {
+                        "height": 70,
+                      }
+                    }
+                  >
+                    <div
+                      className="card"
+                      style={
+                        Object {
+                          "height": "100%",
+                        }
+                      }
+                    >
+                      <div
+                        className="col col-12"
+                      >
+                        <p>
+                          Ok last one
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="col col-12"
+                  >
+                    <p>
+                      test-file-stub
+                      ...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="gridMarginHorizontal col-4 col grid"
+              >
+                <div
+                  className="clippy col-12 col grid"
+                >
+                  <div
+                    className="gridTop  colors1 col-12 col grid"
+                  >
+                    <div
+                      className="padding top right bottom left"
+                    >
+                      <div
+                        className="colMarginVertical margin col colAuto"
+                      >
+                        Side bar
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="footer auto layoutMarginNone layout"
+        >
+          <div
+            className="gridRoot grid"
+          >
+            <h1>
+              Footer
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Layout Stack 1`] = `
 <div>
   <div>
     <div
       className="page parent layoutMarginNone layout"
+      style={
+        Object {
+          "maxHeight": "100%",
+        }
+      }
     >
       <div
         className="auto layoutMarginNone layout"
@@ -3135,7 +3727,7 @@ exports[`Storyshots Layout Stack 1`] = `
           className="gridRoot grid"
         >
           <div
-            className="gridMarginNone grid"
+            className="gridMarginHorizontal grid"
           >
             <div
               className="col col-12"
@@ -3158,7 +3750,7 @@ exports[`Storyshots Layout Stack 1`] = `
         className="parent layoutMarginNone overflow layout"
       >
         <div
-          className="gridRoot grid"
+          className="gridTop gridRoot grid"
         >
           <div
             className="grid"
@@ -3254,27 +3846,30 @@ exports[`Storyshots Layout Two Sections 1`] = `
           className="stretch layoutMarginNone layout"
         >
           <div
-            className="gridRoot grid"
+            className="content gridRoot grid"
           >
             <div
-              className="gridTop content grid"
+              className="gridTop grid"
             >
               <h2>
                 Content
               </h2>
+              <div
+                className="col col-12"
+              />
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className="footer auto layoutMarginNone layout"
+      >
         <div
-          className="footer auto layoutMarginNone layout"
+          className="gridRoot grid"
         >
-          <div
-            className="gridRoot grid"
-          >
-            <h1>
-              Footer
-            </h1>
-          </div>
+          <h1>
+            Footer
+          </h1>
         </div>
       </div>
     </div>
