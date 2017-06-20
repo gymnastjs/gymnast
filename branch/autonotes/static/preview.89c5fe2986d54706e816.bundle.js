@@ -58452,85 +58452,85 @@ module.exports = object => {
 /* 785 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Showcases the rendering of a header and subheader</p>\n";
+module.exports = "<h1 id=\"header\">Header</h1>\n<p>Showcases the rendering of a header and subheader</p>\n";
 
 /***/ }),
 /* 786 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Showcases the rendering of a pagination component</p>\n";
+module.exports = "<h1 id=\"pagination\">Pagination</h1>\n<p>Showcases the rendering of a pagination component. Change the size of the overall component to see how resizing works.</p>\n<p>If you enable the grid you can see how the top level grid behaves independently from the inner one.</p>\n";
 
 /***/ }),
 /* 787 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>When adding elements that exceed the number of columns available, they will overflow to the next row</p>\n";
+module.exports = "<h1 id=\"auto-flow\">Auto Flow</h1>\n<p>When adding elements that exceed the number of columns available, they will overflow to the next row automatically.</p>\n<p>Additionally, if <code>stretch</code> is selected all components within that row will stretch vertically to the same height.</p>\n";
 
 /***/ }),
 /* 788 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Fraction-based layout allows to divide the available space without without respecting the columns</p>\n";
+module.exports = "<h1 id=\"fraction\">Fraction</h1>\n<p>Fraction-based layout allows to divide the available space without without respecting the columns.</p>\n<p>If no size is specified it&#39;s assumed to mean &quot;fill the remaining space&quot;. If multiple items with &quot;auto&quot; size are placed within a container they will share the space evenly.</p>\n";
 
 /***/ }),
 /* 789 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Horizontal alignment allows left, right or center align</p>\n";
+module.exports = "<h1 id=\"horizontal-align\">Horizontal Align</h1>\n<p>Horizontal alignment allows left, right or center align of components</p>\n";
 
 /***/ }),
 /* 790 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Allows toggling individual margins as well as global ones</p>\n";
+module.exports = "<h1 id=\"margin\">Margin</h1>\n<p>This example allows toggling individual margins as well as global ones (the ones set by the grid).</p>\n<p>You can, for instance, define no margins globally but assign margin to a specific element within the Grid.</p>\n";
 
 /***/ }),
 /* 791 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Nested items create a new set of 12 columns within them. For instance, a 6-column child that sets its items size to 2-columns is equivalent to 1-column at the parent size (since 6 = 1/2*12).</p>\n<p>Note that nested Grids have no margins unless explicitly set. This is to allow for arbitrarily nested components. When a margin is needed, you can set it manually or use an Item (Items define margins by default).</p>\n<p>Play with the knobs to see the behavior of the different values.</p>\n";
+module.exports = "<h1 id=\"nested-items\">Nested Items</h1>\n<p>Nested items create a new set of 12 columns within them.</p>\n<p>For instance, a 6-column child that sets its items size to 2-columns is equivalent to 1-column at the parent size (since 6 = 1/2*12).</p>\n<p>Note that nested Grids have no margins unless explicitly set. This is to allow for arbitrarily nested components. When a margin is needed, you can set it manually or use an Item (Items define margins by default).</p>\n<p>Play with the knobs to see the behavior of the different values.</p>\n";
 
 /***/ }),
 /* 792 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Adding an offset creates an empty number of columns between the current item and the previous one</p>\n";
+module.exports = "<h1 id=\"offset\">Offset</h1>\n<p>Adding an offset creates an empty number of columns between the current item and the previous one.</p>\n";
 
 /***/ }),
 /* 793 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Any number from 1-12 defines the number of columns that each item takes</p>\n";
+module.exports = "<h1 id=\"sizing\">Sizing</h1>\n<p>Any number from 1-12 defines the number of columns that each item takes</p>\n";
 
 /***/ }),
 /* 794 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Alignment defaults to top but middle and bottom are also available</p>\n";
+module.exports = "<h1 id=\"vertical-align\">Vertical Align</h1>\n<p>Alignment defaults to top but middle and bottom are also available</p>\n";
 
 /***/ }),
 /* 795 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>This example shows a page with multiple cards of different height based off the same top level grid</p>\n";
+module.exports = "<h1 id=\"card-layout\">Card Layout</h1>\n<p>This example shows a page with multiple cards of different height based off the same top level grid</p>\n<p>It has a sticky header. The footer will remain at the bottom if the page height is less than 100% but, as soon as the content exceeds it, it will be pushed below</p>\n";
 
 /***/ }),
 /* 796 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>An implementation of the Holy Grail layout using the grid and layout systems. The maximum content width is limited to the page width and the hight is either the page height or content height, whichever is larger</p>\n";
+module.exports = "<h1 id=\"holy-grail-layout\">Holy Grail Layout</h1>\n<p>An implementation of the Holy Grail layout using the grid and layout systems. The maximum content width is limited to the page width and the hight is either the page height or content height, whichever is larger</p>\n<p>It has a sticky header. The footer will remain at the bottom if the page height is less than 100% but, as soon as the content exceeds it, it will be pushed below</p>\n";
 
 /***/ }),
 /* 797 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>A layout component defaults to vertically stacking elements, taking the full width and optionally sizing to fit or stretching elements</p>\n";
+module.exports = "<h1 id=\"stacked-layout-example\">Stacked Layout Example</h1>\n<p>A layout component defaults to vertically stacking elements, taking the full width and optionally sizing to fit or stretching elements.</p>\n<p>If the contents height exceeds the available space, it will overflow.</p>\n";
 
 /***/ }),
 /* 798 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>This example shows a page divided in 2 horizontal sections of arbitrary height</p>\n";
+module.exports = "<h1 id=\"two-main-sections-layout\">Two Main Sections Layout</h1>\n<p>This example shows a page divided in 2 horizontal sections of arbitrary height.</p>\n<p>It has a sticky header. The footer will remain at the bottom if the page height is less than 100% but, as soon as the content exceeds it, it will be pushed below</p>\n";
 
 /***/ }),
 /* 799 */,
@@ -64471,4 +64471,4 @@ module.exports = __webpack_require__(624);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.2b3aa004ee772d0e37b9.bundle.js.map
+//# sourceMappingURL=preview.89c5fe2986d54706e816.bundle.js.map
