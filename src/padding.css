@@ -1,0 +1,22 @@
+@import "./variables.css";
+
+.padding {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.top {
+  padding-top: var(--gutter);
+}
+
+.right {
+  padding-right: var(--gutter);
+}
+
+.bottom {
+  padding-bottom: var(--gutter);
+}
+
+.left {
+  padding-left: var(--gutter);
+}

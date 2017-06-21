@@ -37,7 +37,7 @@ function getOverflow(overflow: Overflow): string {
 }
 
 export default function Layout(Component: any) {
-  return class withGrid extends React.PureComponent {
+  return class withLayout extends React.PureComponent {
     props: {
       className?: String,
       fixed?: Fixed,

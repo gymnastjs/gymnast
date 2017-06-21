@@ -22,6 +22,8 @@ export type Margin = 'none' | 'all' | 'horizontal' | 'vertical' | void
 
 export type MarginSize = 'half' | 'double' | void
 
+export type IndividualSides = 'top' | 'right' | 'bottom' | 'left'
+
 export type Fixed = 'top' | 'bottom' | void
 
 export type Overflow = 'scrollbars' | void

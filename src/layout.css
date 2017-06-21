@@ -1,17 +1,17 @@
 @import "./variables";
 
-.parent, .auto, .stretch {
+.layout {
+  display: flex;
+  align-self: flex-start;
+  flex-flow: column;
   box-sizing: border-box;
   width: 100%;
   padding: var(--gutter);
 }
 
 .parent {
-  align-items: center;
-  display: flex;
-  flex-flow: column;
   flex-grow: 1;
-  height: 100%;
+  min-height: 100%;
 }
 
 .overflow {
