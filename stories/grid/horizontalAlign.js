@@ -1,11 +1,22 @@
 // @flow
 import React from 'react'
-import { number } from '@storybook/addon-knobs'
+import { number, select } from '@storybook/addon-knobs'
 import { Grid } from '../../src'
-import { getMarginSelect, Root, Box } from '../core'
+import { Root, Box } from '../core'
+
+const justifyType = {
+  Default: undefined,
+  Left: 'left',
+  Center: 'center',
+  Right: 'right',
+}
 
 export default function() {
-  const margin = getMarginSelect()
+  const justify = select(
+    'Horizontal Align',
+    ['Default', 'Left', 'Center', 'Right'],
+    'Default'
+  )
   const size = number('Width', 12, {
     range: true,
     min: 6,
@@ -15,17 +26,20 @@ export default function() {
 
   return (
     <Root>
-      <Grid size={size} {...margin} justify="left">
+      <Grid size={size} justify={justifyType[justify]}>
+        <Box size={2} type="C" value={justify.toUpperCase()} />
+      </Grid>
+      <Grid size={size} justify="left">
         <Box size={2} type="A" value="LEFT" />
       </Grid>
-      <Grid size={size} {...margin} justify="center">
+      <Grid size={size} justify="center">
         <Box size={2} type="A" value="CENTER" />
       </Grid>
-      <Grid size={size} {...margin} justify="right">
+      <Grid size={size} justify="right">
         <Box size={2} type="A" value="RIGHT" />
       </Grid>
-      <Grid size={size} {...margin}>
-        <Box size={2} type="C" value="DEFAULT" />
+      <Grid size={size}>
+        <Box size={2} type="A" value="DEFAULT" />
       </Grid>
     </Root>
   )

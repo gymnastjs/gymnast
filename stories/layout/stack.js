@@ -10,9 +10,7 @@ function getStaticSection(index) {
   return (
     <Layout key={index}>
       <Grid root>
-        <Grid margin="horizontal">
-          <Box size={12} type="C" value={`Section ${index + 1}`} />
-        </Grid>
+        <Box size={12} type="C" value={`Section ${index + 1}`} />
       </Grid>
     </Layout>
   )

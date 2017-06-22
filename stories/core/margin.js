@@ -14,19 +14,34 @@ const marginMap = {
   Vertical: 'vertical',
 }
 
+const marginOptions = ['Default', 'Horizontal', 'None', 'Vertical']
+const marginDefault = 'Default'
+const marginSizeOptions = ['Default', 'Double', 'Half']
+const marginSizeDefault = 'Default'
+
 export default function getMarginSelect(
   marginTitle: string = 'Margin',
-  marginSizeTitle: string = 'Margin Size'
+  marginSizeTitle: string = 'Margin Size',
+  itemMarginTitle: string = 'Items Margin',
+  itemMarginSizeTitle: string = 'Items Margin Size'
 ) {
-  const marginStr = select(
-    marginTitle,
-    ['Default', 'Horizontal', 'None', 'Vertical'],
-    'Default'
+  const marginStr = select(marginTitle, marginOptions, marginDefault)
+  const marginSizeStr = select(
+    marginSizeTitle,
+    marginSizeOptions,
+    marginSizeDefault
   )
-  const marginSizeStr = select(marginSizeTitle, ['Default', 'Double', 'Half'])
+  const itemMarginStr = select(itemMarginTitle, marginOptions, marginDefault)
+  const itemMarginSizeStr = select(
+    itemMarginSizeTitle,
+    marginSizeOptions,
+    marginSizeDefault
+  )
 
   return {
     margin: marginMap[marginStr],
     marginSize: marginSizeMap[marginSizeStr],
+    itemMargin: marginMap[itemMarginStr],
+    itemMarginSize: marginSizeMap[itemMarginSizeStr],
   }
 }

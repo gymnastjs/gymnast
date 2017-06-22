@@ -5,7 +5,6 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { utils } from '../src'
 import { storyFolders, WithExtensions } from './core'
-import '../src/index.css'
 
 /**
  * storyFolders dynamically fetches all files within `/components`, `/grid` and `/layout`. Here we

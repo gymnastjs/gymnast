@@ -18,9 +18,7 @@ export type AlignGrid = AlignItem | 'stretch'
 
 export type Justify = 'left' | 'center' | 'right' | void
 
-export type Margin = 'none' | 'all' | 'horizontal' | 'vertical' | void
-
-export type MarginSize = 'half' | 'double' | void
+export type MarginSizes = 'none' | 'half' | 'single' | 'double' | void
 
 export type IndividualSides = 'top' | 'right' | 'bottom' | 'left'
 

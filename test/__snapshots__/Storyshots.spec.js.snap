@@ -5,37 +5,37 @@ exports[`Storyshots Components Header 1`] = `
   <div>
     <div>
       <div
-        className="parent layoutMarginNone layout"
+        className="parent noMargin layout"
       >
         <div
-          className="gridRoot grid"
+          className="root grid"
         >
           <div
-            className="gridStretch grid"
+            className="noMargin stretchAlign grid"
           >
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   Go Back
                 </div>
               </div>
             </div>
             <div
-              className="col col-6"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   <h2>
                     Page Title
@@ -44,126 +44,126 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box3"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   Action 1
                 </div>
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box4"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   Action 2
                 </div>
               </div>
             </div>
             <div
-              className="col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   1
                 </div>
               </div>
             </div>
             <div
-              className="col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   2
                 </div>
               </div>
             </div>
             <div
-              className="col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   3
                 </div>
               </div>
             </div>
             <div
-              className="col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   4
                 </div>
               </div>
             </div>
             <div
-              className="col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   5
                 </div>
               </div>
             </div>
             <div
-              className="col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   6
                 </div>
               </div>
             </div>
             <div
-              className="col col-6"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   A
                 </div>
@@ -173,40 +173,44 @@ exports[`Storyshots Components Header 1`] = `
         </div>
       </div>
       <div
-        className="parent layoutMarginNone layout"
+        className="parent noMargin layout"
       >
         <div
-          className="gridRoot grid"
+          className="root grid"
         >
-          <h1>
-            With Nested Grids
-          </h1>
           <div
-            className="gridStretch grid"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+          >
+            <h1>
+              With Nested Grids
+            </h1>
+          </div>
+          <div
+            className="noMargin stretchAlign grid"
           >
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   Go Back
                 </div>
               </div>
             </div>
             <div
-              className="col col-6"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   <h2>
                     Page Title
@@ -215,28 +219,28 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box3"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   Action 1
                 </div>
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box4"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   Action 2
                 </div>
@@ -244,87 +248,87 @@ exports[`Storyshots Components Header 1`] = `
             </div>
           </div>
           <div
-            className="col-6 col grid"
+            className="noMargin col col-6 grid"
           >
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   1
                 </div>
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   2
                 </div>
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   3
                 </div>
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   4
                 </div>
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   5
                 </div>
               </div>
             </div>
             <div
-              className="col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   6
                 </div>
@@ -332,17 +336,17 @@ exports[`Storyshots Components Header 1`] = `
             </div>
           </div>
           <div
-            className="col-6 col grid"
+            className="noMargin col col-6 grid"
           >
             <div
-              className="col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
             >
               <div
                 className="box1"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   A
                 </div>
@@ -360,177 +364,177 @@ exports[`Storyshots Components Pagination 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
         <div
-          className="col-12 col grid"
+          className="noMargin col col-12 grid"
         >
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 &lt;
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 ...
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 5
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 6
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 7
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 8
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 9
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 10
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 ...
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 20
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box2"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 &gt;
               </div>
@@ -547,69 +551,69 @@ exports[`Storyshots Grid Autoflow 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridStretch gridRoot grid"
+        className="stretchAlign root grid"
       >
         <div
-          className="col col-1"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               2
             </div>
           </div>
         </div>
         <div
-          className="col col-4"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               3
             </div>
           </div>
         </div>
         <div
-          className="col col-3"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               4
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box3"
@@ -620,77 +624,77 @@ exports[`Storyshots Grid Autoflow 1`] = `
             }
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               5
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               6
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               7
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               8
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               9
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               10
             </div>
@@ -706,29 +710,29 @@ exports[`Storyshots Grid Fraction 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
         <h1>
           Auto Size
         </h1>
         <div
-          className="grid"
+          className="noMargin grid"
         />
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 1
               </div>
@@ -736,31 +740,31 @@ exports[`Storyshots Grid Fraction 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 2
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 2
               </div>
@@ -768,45 +772,45 @@ exports[`Storyshots Grid Fraction 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 3
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 3
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 3
               </div>
@@ -814,59 +818,59 @@ exports[`Storyshots Grid Fraction 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 4
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 4
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 4
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 4
               </div>
@@ -874,73 +878,73 @@ exports[`Storyshots Grid Fraction 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 5
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 5
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 5
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 5
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 5
               </div>
@@ -948,87 +952,87 @@ exports[`Storyshots Grid Fraction 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 6
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 6
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 6
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 6
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 6
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 6
               </div>
@@ -1036,101 +1040,101 @@ exports[`Storyshots Grid Fraction 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 7
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 7
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 7
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 7
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 7
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 7
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 7
               </div>
@@ -1138,115 +1142,115 @@ exports[`Storyshots Grid Fraction 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 8
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 8
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 8
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 8
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 8
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 8
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 8
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1 / 8
               </div>
@@ -1257,31 +1261,31 @@ exports[`Storyshots Grid Fraction 1`] = `
           8 - auto
         </h1>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-8"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-8"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 8
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 12 - 8 = 4
               </div>
@@ -1292,45 +1296,45 @@ exports[`Storyshots Grid Fraction 1`] = `
           6 - 1/2 - 1/2
         </h1>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 6
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 (12 - 6) / 2 = 3
               </div>
             </div>
           </div>
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 (12 - 6) / 2 = 3
               </div>
@@ -1341,20 +1345,20 @@ exports[`Storyshots Grid Fraction 1`] = `
           Custom
         </h1>
         <div
-          className="grid"
+          className="noMargin grid"
         />
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 6 (fixed)
               </div>
@@ -1371,23 +1375,41 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
         <div
-          className="gridLeft col-12 col grid"
+          className="noMargin col col-12 grid"
         >
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+          >
+            <div
+              className="box3"
+              style={undefined}
+            >
+              <div
+                className="noMargin middleAlign centerJustify grid"
+              >
+                DEFAULT
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="noMargin leftJustify col col-12 grid"
+        >
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 LEFT
               </div>
@@ -1395,17 +1417,17 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           </div>
         </div>
         <div
-          className="gridCenter col-12 col grid"
+          className="noMargin centerJustify col col-12 grid"
         >
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 CENTER
               </div>
@@ -1413,17 +1435,17 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           </div>
         </div>
         <div
-          className="gridRight col-12 col grid"
+          className="noMargin rightJustify col col-12 grid"
         >
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 RIGHT
               </div>
@@ -1431,17 +1453,17 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           </div>
         </div>
         <div
-          className="col-12 col grid"
+          className="noMargin col col-12 grid"
         >
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
-              className="box3"
+              className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 DEFAULT
               </div>
@@ -1458,244 +1480,244 @@ exports[`Storyshots Grid Margin 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-4"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
         >
           <div
             className="box3"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               Item
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
           </div>
         </div>
         <div
-          className="col col-2"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
         >
           <div
             className="box1"
             style={undefined}
           >
             <div
-              className="gridMiddle gridCenter grid"
+              className="noMargin middleAlign centerJustify grid"
             >
               global
             </div>
@@ -1711,89 +1733,109 @@ exports[`Storyshots Grid Nested 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
-        <h1>
-          Nested Example
-        </h1>
         <div
-          className="colors2 col-12 col grid"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+        >
+          <h1>
+            Nested Example
+          </h1>
+        </div>
+        <div
+          className="margin singleSize rightMargin leftMargin col col-12 grid"
         >
           <div
-            className="colors1 col-6 col grid"
-            style={
-              Object {
-                "height": 150,
-              }
-            }
+            className="noMargin colors2 col col-12 grid"
           >
             <div
-              className="colors3 col-6 col grid"
+              className="noMargin colors1 col col-6 grid"
+              style={
+                Object {
+                  "height": 150,
+                }
+              }
             >
               <div
-                className="colors4 col col-6"
+                className="noMargin colors3 col col-6 grid"
               >
-                <span
-                  aria-label="random content"
-                  role="img"
+                <div
+                  className="colors4 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
                 >
-                  🐓
-                </span>
+                  <span
+                    aria-label="random content"
+                    role="img"
+                  >
+                    🐓
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <h1>
-          With Offsets
-        </h1>
         <div
-          className="colors2 col-12 col grid"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+        >
+          <h1>
+            With Offsets
+          </h1>
+        </div>
+        <div
+          className="margin singleSize rightMargin leftMargin col col-12 grid"
         >
           <div
-            className="colOffset-3 col col-6"
+            className="noMargin colors2 col col-12 grid"
           >
             <div
-              className="colors1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col col-6"
             >
-              A
+              <div
+                className="colors1"
+              >
+                A
+              </div>
             </div>
-          </div>
-          <div
-            className="col col-4"
-          >
             <div
-              className="colors1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
             >
-              A
+              <div
+                className="colors1"
+              >
+                A
+              </div>
             </div>
-          </div>
-          <div
-            className="colOffset-4 col col-4"
-          >
             <div
-              className="colors1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-4 col col-4"
             >
-              A
+              <div
+                className="colors1"
+              >
+                A
+              </div>
             </div>
           </div>
         </div>
-        <h1>
-          With Overflow
-        </h1>
         <div
-          className="col-12 col grid"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+        >
+          <h1>
+            With Overflow
+          </h1>
+        </div>
+        <div
+          className="noMargin col col-12 grid"
         >
           <div
-            className="gridMarginHorizontal col-6 col grid"
+            className="margin singleSize rightMargin leftMargin col col-6 grid"
           >
             <div
-              className="colors2 col-12 col grid"
+              className="noMargin colors2 col col-12 grid"
             >
               <div
-                className="col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
                   className="colors1"
@@ -1802,7 +1844,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
                   className="colors1"
@@ -1811,7 +1853,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
                   className="colors1"
@@ -1820,7 +1862,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
                   className="colors1"
@@ -1829,7 +1871,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
                   className="colors1"
@@ -1838,7 +1880,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
                   className="colors1"
@@ -1859,37 +1901,37 @@ exports[`Storyshots Grid Offset 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +0
               </div>
             </div>
           </div>
           <div
-            className="colOffset-7 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-7 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +7
               </div>
@@ -1897,45 +1939,45 @@ exports[`Storyshots Grid Offset 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="colOffset-1 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +1
               </div>
             </div>
           </div>
           <div
-            className="colOffset-5 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-5 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +5
               </div>
             </div>
           </div>
           <div
-            className="colOffset-1 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +1
               </div>
@@ -1943,45 +1985,45 @@ exports[`Storyshots Grid Offset 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="colOffset-2 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-2 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +2
               </div>
             </div>
           </div>
           <div
-            className="colOffset-3 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +3
               </div>
             </div>
           </div>
           <div
-            className="colOffset-3 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +3
               </div>
@@ -1989,45 +2031,45 @@ exports[`Storyshots Grid Offset 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="colOffset-3 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +3
               </div>
             </div>
           </div>
           <div
-            className="colOffset-1 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +1
               </div>
             </div>
           </div>
           <div
-            className="colOffset-5 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-5 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +5
               </div>
@@ -2035,17 +2077,17 @@ exports[`Storyshots Grid Offset 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="colOffset-4 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-4 col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +4
               </div>
@@ -2053,17 +2095,17 @@ exports[`Storyshots Grid Offset 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 +0
               </div>
@@ -2080,29 +2122,29 @@ exports[`Storyshots Grid Padding 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
         <div
-          className="gridCenter grid"
+          className="noMargin centerJustify grid"
         >
           <div
-            className="col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
           >
             <h1>
               Top Right Padding
             </h1>
           </div>
           <div
-            className="colors2 col-6 col grid"
+            className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="padding top right"
+              className="padding grid single top right"
             >
               <div
-                className="colors3 col col-12"
+                className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
               >
                 Content
               </div>
@@ -2110,23 +2152,23 @@ exports[`Storyshots Grid Padding 1`] = `
           </div>
         </div>
         <div
-          className="gridCenter grid"
+          className="noMargin centerJustify grid"
         >
           <div
-            className="col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
           >
             <h1>
               All-sides Padding
             </h1>
           </div>
           <div
-            className="colors2 col-6 col grid"
+            className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="padding top right bottom left"
+              className="padding grid single top right bottom left"
             >
               <div
-                className="colors3 col col-12"
+                className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
               >
                 Content
               </div>
@@ -2134,43 +2176,43 @@ exports[`Storyshots Grid Padding 1`] = `
           </div>
         </div>
         <div
-          className="gridCenter grid"
+          className="noMargin centerJustify grid"
         >
           <div
-            className="col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
           >
             <h1>
               No Padding
             </h1>
           </div>
           <div
-            className="colors2 col-6 col grid"
+            className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="colors3 col col-12"
+              className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
             >
               Content
             </div>
           </div>
         </div>
         <div
-          className="gridCenter grid"
+          className="noMargin centerJustify grid"
         >
           <div
-            className="col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
           >
             <h1>
               Bottom Padding
             </h1>
           </div>
           <div
-            className="colors2 col-6 col grid"
+            className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="padding bottom"
+              className="padding grid single bottom"
             >
               <div
-                className="colors3 col col-12"
+                className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
               >
                 Content
               </div>
@@ -2178,23 +2220,23 @@ exports[`Storyshots Grid Padding 1`] = `
           </div>
         </div>
         <div
-          className="gridCenter grid"
+          className="noMargin centerJustify grid"
         >
           <div
-            className="col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
           >
             <h1>
               Top-Right-Left Padding
             </h1>
           </div>
           <div
-            className="colors2 col-6 col grid"
+            className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="padding right left top"
+              className="padding grid single right left top"
             >
               <div
-                className="colors3 col col-12"
+                className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
               >
                 Content
               </div>
@@ -2211,177 +2253,177 @@ exports[`Storyshots Grid Sizing 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 1
               </div>
@@ -2389,87 +2431,87 @@ exports[`Storyshots Grid Sizing 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 2
               </div>
             </div>
           </div>
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 2
               </div>
             </div>
           </div>
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 2
               </div>
             </div>
           </div>
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 2
               </div>
             </div>
           </div>
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 2
               </div>
             </div>
           </div>
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 2
               </div>
@@ -2477,59 +2519,59 @@ exports[`Storyshots Grid Sizing 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 3
               </div>
             </div>
           </div>
           <div
-            className="col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 3
               </div>
             </div>
           </div>
           <div
-            className="col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 3
               </div>
             </div>
           </div>
           <div
-            className="col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 3
               </div>
@@ -2537,45 +2579,45 @@ exports[`Storyshots Grid Sizing 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-4"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 4
               </div>
             </div>
           </div>
           <div
-            className="col col-4"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 4
               </div>
             </div>
           </div>
           <div
-            className="col col-4"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 4
               </div>
@@ -2583,31 +2625,31 @@ exports[`Storyshots Grid Sizing 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 6
               </div>
             </div>
           </div>
           <div
-            className="col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 6
               </div>
@@ -2615,17 +2657,17 @@ exports[`Storyshots Grid Sizing 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col colAuto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col colAuto"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 Auto
               </div>
@@ -2633,17 +2675,17 @@ exports[`Storyshots Grid Sizing 1`] = `
           </div>
         </div>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
           >
             <div
-              className="box1"
+              className="box3"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 12
               </div>
@@ -2660,19 +2702,19 @@ exports[`Storyshots Grid Vertical Align 1`] = `
 <div>
   <div>
     <div
-      className="parent layoutMarginNone layout"
+      className="parent noMargin layout"
     >
       <div
-        className="gridRoot grid"
+        className="root grid"
       >
         <h1>
           Item Align
         </h1>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
@@ -2683,84 +2725,84 @@ exports[`Storyshots Grid Vertical Align 1`] = `
               }
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                  
               </div>
             </div>
           </div>
           <div
-            className="colTop col col-2"
+            className="colTop margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 TOP
               </div>
             </div>
           </div>
           <div
-            className="colMiddle col col-2"
+            className="colMiddle margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 MIDDLE
               </div>
             </div>
           </div>
           <div
-            className="colBottom col col-2"
+            className="colBottom margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 BOTTOM
               </div>
             </div>
           </div>
           <div
-            className="colMiddle col col-2"
+            className="colMiddle margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box1"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 MIDDLE
               </div>
             </div>
           </div>
           <div
-            className="col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
           >
             <div
               className="box3"
               style={undefined}
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                 DEFAULT
               </div>
             </div>
           </div>
           <div
-            className="col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
           >
             <div
               className="box1"
@@ -2771,7 +2813,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
               }
             >
               <div
-                className="gridMiddle gridCenter grid"
+                className="noMargin middleAlign centerJustify grid"
               >
                  
               </div>
@@ -2782,10 +2824,10 @@ exports[`Storyshots Grid Vertical Align 1`] = `
           Grid Align
         </h1>
         <div
-          className="grid"
+          className="noMargin grid"
         >
           <div
-            className="gridTop col-4 col grid"
+            className="noMargin topAlign col col-4 grid"
             style={
               Object {
                 "height": 300,
@@ -2793,14 +2835,14 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
             >
               <div
                 className="box3"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   TOP
                 </div>
@@ -2808,7 +2850,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="gridMiddle col-4 col grid"
+            className="noMargin middleAlign col col-4 grid"
             style={
               Object {
                 "height": 300,
@@ -2816,14 +2858,14 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
             >
               <div
                 className="box3"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   MIDDLE
                 </div>
@@ -2831,7 +2873,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="gridBottom col-4 col grid"
+            className="noMargin bottomAlign col col-4 grid"
             style={
               Object {
                 "height": 300,
@@ -2839,14 +2881,14 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
             >
               <div
                 className="box3"
                 style={undefined}
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="noMargin middleAlign centerJustify grid"
                 >
                   BOTTOM
                 </div>
@@ -2864,16 +2906,16 @@ exports[`Storyshots Layout Cards 1`] = `
 <div>
   <div>
     <div
-      className="page hasSubheader parent layoutMarginNone layout"
+      className="page hasSubheader parent noMargin layout"
     >
       <div
-        className="fixedTop auto layoutMarginNone layout"
+        className="fixedTop auto noMargin layout"
       >
         <div
-          className="header auto layoutMarginNone layout"
+          className="header auto noMargin layout"
         >
           <div
-            className="gridRoot grid"
+            className="root grid"
           >
             <h1>
               Header
@@ -2881,92 +2923,96 @@ exports[`Storyshots Layout Cards 1`] = `
           </div>
         </div>
         <div
-          className="subheader auto layoutMarginVerticalHalf layout"
+          className="subheader auto noMargin layout"
         >
           <div
-            className="gridMarginHorizontal gridRoot grid"
+            className="root grid"
           >
             <div
-              className="col col-2"
+              className="padding grid single top"
             >
               <div
-                className="box4"
-                style={undefined}
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box4"
+                  style={undefined}
                 >
-                  D
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    D
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col col-2"
-            >
               <div
-                className="box4"
-                style={undefined}
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box4"
+                  style={undefined}
                 >
-                  D
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    D
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col col-2"
-            >
               <div
-                className="box4"
-                style={undefined}
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box4"
+                  style={undefined}
                 >
-                  D
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    D
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col col-2"
-            >
               <div
-                className="box4"
-                style={undefined}
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box4"
+                  style={undefined}
                 >
-                  D
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    D
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col col-2"
-            >
               <div
-                className="box4"
-                style={undefined}
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box4"
+                  style={undefined}
                 >
-                  D
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    D
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col col-2"
-            >
               <div
-                className="box4"
-                style={undefined}
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box4"
+                  style={undefined}
                 >
-                  D
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    D
+                  </div>
                 </div>
               </div>
             </div>
@@ -2974,19 +3020,19 @@ exports[`Storyshots Layout Cards 1`] = `
         </div>
       </div>
       <div
-        className="main parent layoutMarginNone layout"
+        className="main parent noMargin layout"
       >
         <div
-          className="stretch layoutMarginNone layout"
+          className="stretch noMargin layout"
         >
           <div
-            className="gridRoot grid"
+            className="root grid"
           >
             <div
-              className="gridStretch grid"
+              className="noMargin stretchAlign grid"
             >
               <div
-                className="col col-10"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-10"
               >
                 <div
                   className="box2"
@@ -2997,28 +3043,28 @@ exports[`Storyshots Layout Cards 1`] = `
                   }
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <div
                   className="box2"
                   style={undefined}
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
               >
                 <div
                   className="box2"
@@ -3029,42 +3075,42 @@ exports[`Storyshots Layout Cards 1`] = `
                   }
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-6"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
               >
                 <div
                   className="box2"
                   style={undefined}
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-6"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
               >
                 <div
                   className="box2"
                   style={undefined}
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
               >
                 <div
                   className="box2"
@@ -3075,14 +3121,14 @@ exports[`Storyshots Layout Cards 1`] = `
                   }
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
               >
                 <div
                   className="box2"
@@ -3093,14 +3139,14 @@ exports[`Storyshots Layout Cards 1`] = `
                   }
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
               >
                 <div
                   className="box2"
@@ -3111,14 +3157,14 @@ exports[`Storyshots Layout Cards 1`] = `
                   }
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
               >
                 <div
                   className="box2"
@@ -3129,14 +3175,14 @@ exports[`Storyshots Layout Cards 1`] = `
                   }
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
               >
                 <div
                   className="box2"
@@ -3147,14 +3193,14 @@ exports[`Storyshots Layout Cards 1`] = `
                   }
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
                 </div>
               </div>
               <div
-                className="col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
               >
                 <div
                   className="box2"
@@ -3165,7 +3211,7 @@ exports[`Storyshots Layout Cards 1`] = `
                   }
                 >
                   <div
-                    className="gridMiddle gridCenter grid"
+                    className="noMargin middleAlign centerJustify grid"
                   >
                     B
                   </div>
@@ -3175,10 +3221,10 @@ exports[`Storyshots Layout Cards 1`] = `
           </div>
         </div>
         <div
-          className="footer auto layoutMarginNone layout"
+          className="footer auto noMargin layout"
         >
           <div
-            className="gridRoot grid"
+            className="root grid"
           >
             <h1>
               Footer
@@ -3195,13 +3241,13 @@ exports[`Storyshots Layout Holy Grail 1`] = `
 <div>
   <div>
     <div
-      className="page parent layoutMarginNone layout"
+      className="page parent noMargin layout"
     >
       <div
-        className="header fixedTop auto layoutMarginNone layout"
+        className="header fixedTop auto noMargin layout"
       >
         <div
-          className="gridRoot grid"
+          className="root grid"
         >
           <h1>
             Header
@@ -3209,42 +3255,46 @@ exports[`Storyshots Layout Holy Grail 1`] = `
         </div>
       </div>
       <div
-        className="main stretch layoutMarginNone layout"
+        className="main stretch noMargin layout"
       >
         <div
-          className="gridRoot grid"
+          className="root grid"
         >
           <div
-            className="nav col-2 col grid"
+            className="margin singleSize rightMargin leftMargin col col-12 grid"
           >
-            <h2>
-              Nav
-            </h2>
-          </div>
-          <div
-            className="gridTop content col-8 col grid"
-          >
-            <h2>
-              Content
-            </h2>
             <div
-              className="col col-12"
-            />
-          </div>
-          <div
-            className="ads col-2 col grid"
-          >
-            <h2>
-              Ads
-            </h2>
+              className="noMargin nav col col-2 grid"
+            >
+              <h2>
+                Nav
+              </h2>
+            </div>
+            <div
+              className="noMargin topAlign content col col-8 grid"
+            >
+              <h2>
+                Content
+              </h2>
+              <div
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              />
+            </div>
+            <div
+              className="noMargin ads col col-2 grid"
+            >
+              <h2>
+                Ads
+              </h2>
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="footer auto layoutMarginNone layout"
+        className="footer auto noMargin layout"
       >
         <div
-          className="gridRoot grid"
+          className="root grid"
         >
           <h1>
             Footer
@@ -3260,106 +3310,114 @@ exports[`Storyshots Layout Report 1`] = `
 <div>
   <div>
     <div
-      className="report parent layoutMarginNone layout"
+      className="report parent noMargin layout"
     >
       <div
-        className="fixedTop auto layoutMarginNone layout"
+        className="fixedTop auto noMargin layout"
       >
         <div
-          className="header auto layoutMarginNone layout"
+          className="header auto noMargin layout"
         >
           <div
-            className="gridRoot grid"
+            className="root grid"
           >
             <div
-              className="colMarginHorizontal margin col col-12"
+              className="padding grid single top bottom"
             >
-              <h1>
-                Header
-              </h1>
+              <div
+                className="margin singleSize rightMargin leftMargin margin col col-12"
+              >
+                <h1>
+                  Header
+                </h1>
+              </div>
             </div>
           </div>
         </div>
         <div
-          className="subheader auto layoutMarginNone layout"
+          className="subheader auto noMargin layout"
         >
           <div
-            className="gridMarginHorizontal gridRoot grid"
+            className="root grid"
           >
             <div
-              className="col col-12"
-            >
-              <h2>
-                Subheader
-              </h2>
-            </div>
-            <div
-              className="col col-2"
+              className="padding grid single top"
             >
               <div
-                className="box3"
-                style={undefined}
+                className="margin singleSize rightMargin leftMargin margin col col-12"
+              >
+                <h2>
+                  Subheader
+                </h2>
+              </div>
+              <div
+                className="margin singleSize rightMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box3"
+                  style={undefined}
                 >
-                  C
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    C
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col col-2"
-            >
               <div
-                className="box3"
-                style={undefined}
+                className="margin singleSize rightMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box3"
+                  style={undefined}
                 >
-                  C
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    C
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col col-2"
-            >
               <div
-                className="box3"
-                style={undefined}
+                className="margin singleSize rightMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box3"
+                  style={undefined}
                 >
-                  C
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    C
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col col-2"
-            >
               <div
-                className="box3"
-                style={undefined}
+                className="margin singleSize rightMargin leftMargin margin col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box3"
+                  style={undefined}
                 >
-                  C
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    C
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="colOffset-2 col col-2"
-            >
               <div
-                className="box3"
-                style={undefined}
+                className="margin singleSize rightMargin leftMargin margin colOffset-2 col col-2"
               >
                 <div
-                  className="gridMiddle gridCenter grid"
+                  className="box3"
+                  style={undefined}
                 >
-                  C
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    C
+                  </div>
                 </div>
               </div>
             </div>
@@ -3367,25 +3425,25 @@ exports[`Storyshots Layout Report 1`] = `
         </div>
       </div>
       <div
-        className="main colors2 parent layoutMarginNone layout"
+        className="main colors2 parent noMargin layout"
       >
         <div
-          className="stretch layoutMarginNone layout"
+          className="stretch noMargin layout"
         >
           <div
-            className="gridRoot grid"
+            className="root grid"
           >
             <div
-              className="gridStretch grid"
+              className="noMargin stretchAlign grid"
             >
               <div
-                className="gridTop nav col-1 col grid"
+                className="noMargin topAlign nav col col-1 grid"
               >
                 <div
-                  className="padding top"
+                  className="padding grid single top"
                 >
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                   >
                     <ul>
                       <li>
@@ -3411,20 +3469,20 @@ exports[`Storyshots Layout Report 1`] = `
                 </div>
               </div>
               <div
-                className="gridTop content col-7 col grid"
+                className="noMargin topAlign content col col-7 grid"
               >
                 <div
-                  className="padding top"
+                  className="padding grid single top"
                 >
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                   >
                     <p>
                       Text A
                     </p>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                     style={
                       Object {
                         "height": 140,
@@ -3440,7 +3498,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                       >
                         <p>
                           First Block
@@ -3449,7 +3507,7 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                     style={
                       Object {
                         "height": 70,
@@ -3465,7 +3523,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                       >
                         <p>
                           Second Block
@@ -3474,14 +3532,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                   >
                     <p>
                       Text B
                     </p>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                     style={
                       Object {
                         "height": 70,
@@ -3497,7 +3555,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                       >
                         <p>
                           Another Block
@@ -3506,14 +3564,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                   >
                     <p>
                       Text C
                     </p>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                     style={
                       Object {
                         "height": 70,
@@ -3529,7 +3587,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                       >
                         <p>
                           Another Block
@@ -3538,14 +3596,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                   >
                     <p>
                       Text D
                     </p>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                     style={
                       Object {
                         "height": 70,
@@ -3561,7 +3619,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                       >
                         <p>
                           Another Block
@@ -3570,14 +3628,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                   >
                     <p>
                       Text E
                     </p>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                     style={
                       Object {
                         "height": 70,
@@ -3593,7 +3651,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                       >
                         <p>
                           Another Block
@@ -3602,14 +3660,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                   >
                     <p>
                       Text F
                     </p>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                     style={
                       Object {
                         "height": 210,
@@ -3625,7 +3683,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                       >
                         <p>
                           Final Block
@@ -3634,7 +3692,7 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                     style={
                       Object {
                         "height": 70,
@@ -3650,7 +3708,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                       >
                         <p>
                           Ok last one
@@ -3659,7 +3717,7 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
                   >
                     <p>
                       test-file-stub
@@ -3669,19 +3727,19 @@ exports[`Storyshots Layout Report 1`] = `
                 </div>
               </div>
               <div
-                className="gridMarginHorizontal col-4 col grid"
+                className="noMargin clippy col col-4 grid"
               >
                 <div
-                  className="clippy col-12 col grid"
+                  className="padding grid half right left"
                 >
                   <div
-                    className="gridTop  colors1 col-12 col grid"
+                    className="margin doubleSize rightMargin leftMargin topAlign  colors1 col col-12 grid"
                   >
                     <div
-                      className="padding top right bottom left"
+                      className="padding grid single top"
                     >
                       <div
-                        className="colMarginVertical margin col colAuto"
+                        className="margin singleSize topMargin bottomMargin margin col colAuto"
                       >
                         Side bar
                       </div>
@@ -3693,10 +3751,10 @@ exports[`Storyshots Layout Report 1`] = `
           </div>
         </div>
         <div
-          className="footer auto layoutMarginNone layout"
+          className="footer auto noMargin layout"
         >
           <div
-            className="gridRoot grid"
+            className="root grid"
           >
             <h1>
               Footer
@@ -3713,7 +3771,7 @@ exports[`Storyshots Layout Stack 1`] = `
 <div>
   <div>
     <div
-      className="page parent layoutMarginNone layout"
+      className="page parent noMargin layout"
       style={
         Object {
           "maxHeight": "100%",
@@ -3721,42 +3779,38 @@ exports[`Storyshots Layout Stack 1`] = `
       }
     >
       <div
-        className="auto layoutMarginNone layout"
+        className="auto noMargin layout"
       >
         <div
-          className="gridRoot grid"
+          className="root grid"
         >
           <div
-            className="gridMarginHorizontal grid"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
           >
             <div
-              className="col col-12"
+              className="box3"
+              style={undefined}
             >
               <div
-                className="box3"
-                style={undefined}
+                className="noMargin middleAlign centerJustify grid"
               >
-                <div
-                  className="gridMiddle gridCenter grid"
-                >
-                  Section 1
-                </div>
+                Section 1
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="parent layoutMarginNone overflow layout"
+        className="parent noMargin overflow layout"
       >
         <div
-          className="gridTop gridRoot grid"
+          className="topAlign root grid"
         >
           <div
-            className="grid"
+            className="noMargin grid"
           >
             <div
-              className="col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
             >
               <h1>
                 SubSection 
@@ -3765,10 +3819,10 @@ exports[`Storyshots Layout Stack 1`] = `
             </div>
           </div>
           <div
-            className="grid"
+            className="noMargin grid"
           >
             <div
-              className="col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
             >
               <h1>
                 SubSection 
@@ -3777,10 +3831,10 @@ exports[`Storyshots Layout Stack 1`] = `
             </div>
           </div>
           <div
-            className="grid"
+            className="noMargin grid"
           >
             <div
-              className="col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
             >
               <h1>
                 SubSection 
@@ -3799,13 +3853,13 @@ exports[`Storyshots Layout Two Sections 1`] = `
 <div>
   <div>
     <div
-      className="page parent layoutMarginNone layout"
+      className="page parent noMargin layout"
     >
       <div
-        className="header fixedTop auto layoutMarginNone layout"
+        className="header fixedTop auto noMargin layout"
       >
         <div
-          className="gridRoot grid"
+          className="root grid"
         >
           <h1>
             Header
@@ -3813,19 +3867,19 @@ exports[`Storyshots Layout Two Sections 1`] = `
         </div>
       </div>
       <div
-        className="main parent layoutMarginNone layout"
+        className="main parent noMargin layout"
       >
         <div
-          className="top auto layoutMarginNone layout"
+          className="top auto noMargin layout"
         >
           <div
-            className="gridRoot grid"
+            className="root grid"
           >
             <div
-              className="grid"
+              className="noMargin grid"
             >
               <div
-                className="colOffset-2 col col-6"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-2 col col-6"
               >
                 <input
                   placeholder="Some search here"
@@ -3833,7 +3887,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
                 />
               </div>
               <div
-                className="col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
               >
                 <button>
                   Search
@@ -3843,29 +3897,29 @@ exports[`Storyshots Layout Two Sections 1`] = `
           </div>
         </div>
         <div
-          className="stretch layoutMarginNone layout"
+          className="stretch noMargin layout"
         >
           <div
-            className="content gridRoot grid"
+            className="content root grid"
           >
             <div
-              className="gridTop grid"
+              className="noMargin topAlign grid"
             >
               <h2>
                 Content
               </h2>
               <div
-                className="col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        className="footer auto layoutMarginNone layout"
+        className="footer auto noMargin layout"
       >
         <div
-          className="gridRoot grid"
+          className="root grid"
         >
           <h1>
             Footer

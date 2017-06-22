@@ -8,102 +8,57 @@
   width: 100%;
   max-width: var(--max-width);
 
-  &.gridRoot {
+  &.root {
     padding-left: calc(var(--page-margin) - var(--gutter) / 2);
     padding-right: calc(var(--page-margin) - var(--gutter) / 2);
     margin: auto;
     min-width: var(--min-width);
   }
-}
 
-.grid.col {
-  margin: 0;
-  padding: 0;
-}
+  &.col {
+    margin: 0;
+    padding: 0;
+  }
 
-.grid:not(.col) {
-  flex-grow: 1;
-}
+  &:not(.col) {
+    flex-grow: 1;
+  }
 
-.gridMarginNone > .col:not(.margin) {
-  padding: 0;
-}
+  &.leftJustify {
+    justify-content: flex-start;
+    margin-right: auto;
+  }
 
-.gridMarginHalf > .col:not(.margin) {
-  padding-top: 0;
-  padding-left: calc(var(--gutter) / 4);
-  padding-right: calc(var(--gutter) / 4);
-  padding-bottom: calc(var(--vertical-gutter) / 2);
-}
+  &.centerJustify {
+    justify-content: center;
+  }
 
-.gridMarginDouble > .col:not(.margin) {
-  padding-top: 0;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-  padding-bottom: calc(var(--vertical-gutter) * 2);
-}
+  &.rightJustify {
+    justify-content: flex-end;
+    margin-left: auto;
+  }
 
-.gridMarginHorizontal > .col:not(.margin) {
-  padding: 0 calc(var(--gutter) / 2);
-}
+  &.topAlign {
+    align-content: flex-start;
+    align-items: flex-start;
+  }
 
-.gridMarginHorizontalHalf > .col:not(.margin) {
-  padding: 0 calc(var(--gutter) / 4);
-}
+  &.middleAlign {
+    align-content: center;
+    align-items: center;
+  }
 
-.gridMarginHorizontalDouble > .col:not(.margin) {
-  padding: 0 var(--gutter);
-}
+  &.bottomAlign {
+    align-content: flex-end;
+    align-items: flex-end;
+  }
 
-.gridMarginVerticalHalf > .col:not(.margin) {
-  padding: 0;
-  padding-bottom: calc(var(--gutter) / 2);
-}
+  &.stretchAlign > .col {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.gridMarginVertical > .col:not(.margin) {
-  padding: 0;
-  padding-bottom: var(--gutter);
-}
-
-.gridMarginVerticalDouble > .col:not(.margin) {
-  padding: 0;
-  padding-bottom: calc(var(--gutter) * 2);
-}
-
-.gridLeft {
-  justify-content: flex-start;
-  margin-right: auto;
-}
-
-.gridCenter {
-  justify-content: center;
-}
-
-.gridRight {
-  justify-content: flex-end;
-  margin-left: auto;
-}
-
-.gridTop {
-  align-content: flex-start;
-  align-items: flex-start;
-}
-
-.gridMiddle {
-  align-content: center;
-  align-items: center;
-}
-
-.gridBottom {
-  align-content: flex-end;
-  align-items: flex-end;
-}
-
-.gridStretch > .col {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.gridStretch > .col > * {
-  flex: 1 0 100%;
+  &.stretchAlign > .col > *, &.stretchAlign > .grid > .col > * {
+    flex: 1 0 100%;
+  }
 }

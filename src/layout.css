@@ -6,7 +6,6 @@
   flex-flow: column;
   box-sizing: border-box;
   width: 100%;
-  padding: var(--gutter);
 }
 
 .parent {

@@ -1,9 +1,10 @@
 // @flow
 import React from 'react'
+import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import { getDisplayName, getMargin } from './utils'
-import type { Margin, MarginSize, Overflow, Fixed, LayoutType } from './types'
-import styles from './index.css'
+import { getDisplayName, getMarginClasses } from './utils'
+import type { MarginSizes, Overflow, Fixed, LayoutType } from './types'
+import styles from './layout.css'
 
 function getLayout(layout: LayoutType): string {
   switch (layout) {
@@ -41,14 +42,26 @@ export default function Layout(Component: any) {
     props: {
       className?: String,
       fixed?: Fixed,
-      margin?: Margin,
-      marginSize?: MarginSize,
+      margin?: string,
+      marginSize?: MarginSizes,
       overflow?: Overflow,
       type?: LayoutType,
     }
 
     static defaultProps = {
-      margin: 'none',
+      marginSize: 'none',
+    }
+
+    static childContextTypes = {
+      margin: PropTypes.string,
+      marginSize: PropTypes.string,
+    }
+
+    getChildContext() {
+      return {
+        margin: 'all',
+        marginSize: 'single',
+      }
     }
 
     render() {
@@ -65,7 +78,7 @@ export default function Layout(Component: any) {
         className,
         getFixed(fixed),
         getLayout(type),
-        getMargin(margin, marginSize, 'layout'),
+        ...getMarginClasses(margin, marginSize),
         getOverflow(overflow),
         styles.layout,
       ])

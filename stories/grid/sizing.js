@@ -29,7 +29,7 @@ export default function() {
         <Box type="A" value="Auto" />
       </Grid>
       <Grid>
-        <Box size={size} type="A" value={`${size}`} />
+        <Box size={size} type="C" value={`${size}`} />
       </Grid>
     </Root>
   )
