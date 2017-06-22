@@ -1,5 +1,863 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Components Cards.base 1`] = `
+<div>
+  <div>
+    <div
+      className="parent noMargin layout"
+    >
+      <div
+        className="root grid"
+      >
+        <div
+          className="noMargin grid"
+        >
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+          >
+            <h1>
+              Consistent Padding
+            </h1>
+          </div>
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-3 grid"
+          >
+            <div
+              className="noMargin colors2 col col-12 grid"
+            >
+              <div
+                className="padding grid single top left right"
+              >
+                <div
+                  className="margin singleSize rightMargin bottomMargin margin colors4 auto col"
+                >
+                  All around padding
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-3 grid"
+          >
+            <div
+              className="noMargin colors2 col col-12 grid"
+            >
+              <div
+                className="noMargin margin auto col"
+              >
+                Full Bleed
+              </div>
+            </div>
+          </div>
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+          >
+            <h1>
+              Mixed Padding
+            </h1>
+          </div>
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-6 grid"
+          >
+            <div
+              className="noMargin colors2 col col-8 grid"
+            >
+              <div
+                className="padding grid single top left right"
+              >
+                <div
+                  className="margin singleSize rightMargin bottomMargin margin auto col"
+                >
+                  Padding
+                </div>
+              </div>
+            </div>
+            <div
+              className="noMargin colors4 col col-4 grid"
+            >
+              <div
+                className="noMargin margin auto col"
+              >
+                No padding
+              </div>
+            </div>
+          </div>
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-6 grid"
+          >
+            <div
+              className="noMargin colors4 col col-4 grid"
+            >
+              <div
+                className="noMargin margin auto col"
+              >
+                No padding
+              </div>
+            </div>
+            <div
+              className="noMargin colors2 col col-4 grid"
+            >
+              <div
+                className="padding grid single top left right"
+              >
+                <div
+                  className="margin singleSize rightMargin bottomMargin margin auto col"
+                >
+                  Padding
+                </div>
+              </div>
+            </div>
+            <div
+              className="noMargin colors4 col col-4 grid"
+            >
+              <div
+                className="noMargin margin auto col"
+              >
+                No padding
+              </div>
+            </div>
+          </div>
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-6 grid"
+          >
+            <div
+              className="noMargin colors4 col col-4 grid"
+            >
+              <div
+                className="noMargin margin auto col"
+              >
+                No padding
+              </div>
+            </div>
+            <div
+              className="noMargin colors2 col col-8 grid"
+            >
+              <div
+                className="padding grid single top left right"
+              >
+                <div
+                  className="margin singleSize rightMargin bottomMargin margin auto col"
+                >
+                  Padding
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-6 grid"
+          >
+            <div
+              className="noMargin colors2 col col-12 grid"
+            >
+              <div
+                className="padding grid single top left right"
+              >
+                <div
+                  className="margin singleSize rightMargin bottomMargin margin auto col"
+                >
+                  Padding
+                </div>
+              </div>
+            </div>
+            <div
+              className="noMargin colors4 col col-12 grid"
+            >
+              <div
+                className="noMargin margin auto col"
+              >
+                No padding
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components Cards.composite 1`] = `
+<div>
+  <div>
+    <div
+      className="parent noMargin layout"
+    >
+      <div
+        className="root grid"
+      >
+        <div
+          className="noMargin grid"
+        >
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+          >
+            <h1>
+              Composite Card
+            </h1>
+          </div>
+          <div
+            className="margin singleSize leftMargin rightMargin bottomMargin col col-12 grid"
+          >
+            <div
+              className="noMargin colors2 col col-12 grid"
+            >
+              <div
+                className="margin singleSize rightMargin bottomMargin margin colors1 col-12 col"
+              >
+                <div
+                  className="padding grid single top left"
+                >
+                  <h2>
+                    Card Title
+                  </h2>
+                </div>
+              </div>
+              <div
+                className="margin singleSize leftMargin rightMargin col col-7 grid"
+              >
+                <div
+                  className="padding grid single top"
+                >
+                  <div
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                  >
+                    <h2>
+                      Section 1
+                    </h2>
+                  </div>
+                  <div
+                    className="noMargin col col-12 grid"
+                  >
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 1
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 3
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 4
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 5
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 6
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                  >
+                    <h2>
+                      Section 2
+                    </h2>
+                  </div>
+                  <div
+                    className="noMargin col col-12 grid"
+                  >
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 1
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                    >
+                      <div
+                        className="box4"
+                        style={undefined}
+                      >
+                        <div
+                          className="noMargin middleAlign centerJustify grid"
+                        >
+                          Box 3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="noMargin topAlign colors4 col col-5 grid"
+              >
+                <div
+                  className="padding grid single left right top"
+                >
+                  <div
+                    className="margin singleSize bottomMargin margin col-12 col"
+                  >
+                    <h3>
+                      Subtitle here
+                    </h3>
+                  </div>
+                  <div
+                    className="noMargin col col-12 grid"
+                  >
+                    <div
+                      className="noMargin colors2 col col-12 grid"
+                    >
+                      <div
+                        className="noMargin colors1 grid"
+                      >
+                        <div
+                          className="padding grid single top right bottom left"
+                        >
+                          <div
+                            className="noMargin margin col-6 col"
+                          >
+                            <h3>
+                              Title
+                            </h3>
+                          </div>
+                          <div
+                            className="noMargin margin right col-6 col"
+                          >
+                            test
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="noMargin col col-12 grid"
+                      >
+                        <div
+                          className="padding grid single top"
+                        >
+                          <div
+                            className="noMargin col col-12 grid"
+                          >
+                            <div
+                              className="padding grid half right left"
+                            >
+                              <div
+                                className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-4 grid"
+                              >
+                                <div
+                                  className="noMargin margin colors4 center col-12 col"
+                                >
+                                  Box 1
+                                </div>
+                              </div>
+                              <div
+                                className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-4 grid"
+                              >
+                                <div
+                                  className="noMargin margin colors4 center col-12 col"
+                                >
+                                  Box 2
+                                </div>
+                              </div>
+                              <div
+                                className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-4 grid"
+                              >
+                                <div
+                                  className="noMargin margin colors4 center col-12 col"
+                                >
+                                  Box 3
+                                </div>
+                              </div>
+                              <div
+                                className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-4 grid"
+                              >
+                                <div
+                                  className="noMargin margin colors4 center col-12 col"
+                                >
+                                  Box 4
+                                </div>
+                              </div>
+                              <div
+                                className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-4 grid"
+                              >
+                                <div
+                                  className="noMargin margin colors4 center col-12 col"
+                                >
+                                  Box 5
+                                </div>
+                              </div>
+                              <div
+                                className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-4 grid"
+                              >
+                                <div
+                                  className="noMargin margin colors4 center col-12 col"
+                                >
+                                  Box 6
+                                </div>
+                              </div>
+                              <div
+                                className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-12 grid"
+                              >
+                                <div
+                                  className="noMargin margin colors4 center col-12 col"
+                                >
+                                  Box 7
+                                </div>
+                              </div>
+                              <div
+                                className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-12 grid"
+                              >
+                                <div
+                                  className="noMargin margin colors4 center col-12 col"
+                                >
+                                  Box 8
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components Cards.filter 1`] = `
+<div>
+  <div>
+    <div
+      className="parent noMargin layout"
+    >
+      <div
+        className="root grid"
+      >
+        <div
+          className="noMargin grid"
+        >
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+          >
+            <h1>
+              Filter List
+            </h1>
+          </div>
+          <div
+            className="noMargin stretchAlign centerJustify col col-12 grid"
+          >
+            <div
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-6 grid"
+            >
+              <div
+                className="margin singleSize bottomMargin grid"
+              >
+                <div
+                  className="noMargin colors1 col col-12 grid"
+                >
+                  <div
+                    className="padding grid single top right left"
+                  >
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-9 col"
+                    >
+                      <h2>
+                        Title
+                      </h2>
+                    </div>
+                    <div
+                      className="noMargin margin right col-3 col"
+                    >
+                      X
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                >
+                  <div
+                    className="padding grid single top"
+                  >
+                    <div
+                      className="margin singleSize rightMargin leftMargin margin col-12 col"
+                    >
+                      <div
+                        className="padding grid half bottom"
+                      >
+                        Filter by...
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
+                    >
+                      <input
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="margin singleSize rightMargin leftMargin colors2 col col-12 grid"
+                >
+                  <div
+                    className="padding grid single top"
+                  >
+                    <div
+                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                    >
+                      <div
+                        className="margin halfSize bottomMargin margin col-6 col"
+                      >
+                        Selected Item Name
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin col-3 col"
+                      >
+                        Some Tag
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
+                      >
+                        x
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                    >
+                      <div
+                        className="margin halfSize bottomMargin margin col-6 col"
+                      >
+                        Selected Item Name
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin col-3 col"
+                      >
+                        Some Tag
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
+                      >
+                        x
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                    >
+                      <div
+                        className="margin halfSize bottomMargin margin col-6 col"
+                      >
+                        Selected Item Name
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin col-3 col"
+                      >
+                        Some Tag
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
+                      >
+                        x
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                    >
+                      <div
+                        className="margin halfSize bottomMargin margin col-6 col"
+                      >
+                        Selected Item Name
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin col-3 col"
+                      >
+                        Some Tag
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
+                      >
+                        x
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                    >
+                      <div
+                        className="margin halfSize bottomMargin margin col-6 col"
+                      >
+                        Selected Item Name
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin col-3 col"
+                      >
+                        Some Tag
+                      </div>
+                      <div
+                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
+                      >
+                        x
+                      </div>
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin leftMargin margin col-12 col"
+                    >
+                      <p>
+                        test-file-stub
+                      </p>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                    >
+                      <button>
+                        Cancel
+                      </button>
+                    </div>
+                    <div
+                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                    >
+                      <button>
+                        Filter
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components Cards.profile 1`] = `
+<div>
+  <div>
+    <div
+      className="parent noMargin layout"
+    >
+      <div
+        className="root grid"
+      >
+        <div
+          className="noMargin grid"
+        >
+          <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+          >
+            <h1>
+              User Profile
+            </h1>
+          </div>
+          <div
+            className="noMargin stretchAlign col col-12 grid"
+          >
+            <div
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-4 grid"
+            >
+              <div
+                className="noMargin colors2 col col-12 grid"
+              >
+                <div
+                  className="noMargin margin auto col"
+                >
+                  Full Bleed
+                </div>
+              </div>
+            </div>
+            <div
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin col col-8 grid"
+            >
+              <div
+                className="margin singleSize bottomMargin grid"
+              >
+                <div
+                  className="noMargin colors2 col col-12 grid"
+                >
+                  <div
+                    className="padding grid single top right left"
+                  >
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-6 col"
+                    >
+                      <h2>
+                        Title
+                      </h2>
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin colOffset-3 col-3 col"
+                    >
+                      Note
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-2 col"
+                    >
+                      Text1
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-2 col"
+                    >
+                      Text2
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-2 col"
+                    >
+                      Text3
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-3 col"
+                    >
+                      Text4
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-3 col"
+                    >
+                      Text5
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-2 col"
+                    >
+                      Text6
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-2 col"
+                    >
+                      Text7
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-2 col"
+                    >
+                      Text8
+                    </div>
+                    <div
+                      className="margin singleSize rightMargin bottomMargin margin col-3 col"
+                    >
+                      Text9
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="noMargin colors2 col col-12 grid"
+              >
+                <div
+                  className="padding grid single top left right"
+                >
+                  <div
+                    className="margin singleSize rightMargin bottomMargin margin col-6 col"
+                  >
+                    Text1
+                  </div>
+                  <div
+                    className="margin singleSize rightMargin bottomMargin margin col-6 col"
+                  >
+                    Text2
+                  </div>
+                  <div
+                    className="margin singleSize rightMargin bottomMargin margin col-6 col"
+                  >
+                    Text3
+                  </div>
+                  <div
+                    className="margin singleSize rightMargin bottomMargin margin col-6 col"
+                  >
+                    Text4
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components Header 1`] = `
 <div>
   <div>
@@ -14,7 +872,7 @@ exports[`Storyshots Components Header 1`] = `
             className="noMargin stretchAlign grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box1"
@@ -28,7 +886,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
             >
               <div
                 className="box1"
@@ -44,7 +902,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box3"
@@ -58,7 +916,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box4"
@@ -72,7 +930,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
             >
               <div
                 className="box1"
@@ -86,7 +944,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
             >
               <div
                 className="box1"
@@ -100,7 +958,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
             >
               <div
                 className="box1"
@@ -114,7 +972,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
             >
               <div
                 className="box1"
@@ -128,7 +986,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
             >
               <div
                 className="box1"
@@ -142,7 +1000,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
             >
               <div
                 className="box1"
@@ -156,7 +1014,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
             >
               <div
                 className="box1"
@@ -179,7 +1037,7 @@ exports[`Storyshots Components Header 1`] = `
           className="root grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
           >
             <h1>
               With Nested Grids
@@ -189,7 +1047,7 @@ exports[`Storyshots Components Header 1`] = `
             className="noMargin stretchAlign grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box1"
@@ -203,7 +1061,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
             >
               <div
                 className="box1"
@@ -219,7 +1077,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box3"
@@ -233,7 +1091,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box4"
@@ -251,7 +1109,7 @@ exports[`Storyshots Components Header 1`] = `
             className="noMargin col col-6 grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box1"
@@ -265,7 +1123,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box1"
@@ -279,7 +1137,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box1"
@@ -293,7 +1151,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box1"
@@ -307,7 +1165,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box1"
@@ -321,7 +1179,7 @@ exports[`Storyshots Components Header 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
             >
               <div
                 className="box1"
@@ -339,7 +1197,7 @@ exports[`Storyshots Components Header 1`] = `
             className="noMargin col col-6 grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
             >
               <div
                 className="box1"
@@ -373,7 +1231,7 @@ exports[`Storyshots Components Pagination 1`] = `
           className="noMargin col col-12 grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -387,7 +1245,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -401,7 +1259,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -415,7 +1273,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -429,7 +1287,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -443,7 +1301,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -457,7 +1315,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -471,7 +1329,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -485,7 +1343,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -499,7 +1357,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -513,7 +1371,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -527,7 +1385,7 @@ exports[`Storyshots Components Pagination 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box2"
@@ -560,7 +1418,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
           className="noMargin stretchAlign grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -574,7 +1432,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -588,7 +1446,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
           >
             <div
               className="box1"
@@ -602,7 +1460,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-3 col"
           >
             <div
               className="box1"
@@ -616,7 +1474,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box3"
@@ -634,7 +1492,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -648,7 +1506,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -662,7 +1520,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -676,7 +1534,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -690,7 +1548,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -729,7 +1587,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -747,7 +1605,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -761,7 +1619,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -779,7 +1637,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -793,7 +1651,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -807,7 +1665,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -825,7 +1683,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -839,7 +1697,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -853,7 +1711,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -867,7 +1725,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -885,7 +1743,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -899,7 +1757,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -913,7 +1771,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -927,7 +1785,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -941,7 +1799,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -959,7 +1817,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -973,7 +1831,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -987,7 +1845,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1001,7 +1859,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1015,7 +1873,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1029,7 +1887,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1047,7 +1905,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1061,7 +1919,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1075,7 +1933,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1089,7 +1947,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1103,7 +1961,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1117,7 +1975,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1131,7 +1989,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1149,7 +2007,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1163,7 +2021,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1177,7 +2035,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1191,7 +2049,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1205,7 +2063,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1219,7 +2077,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1233,7 +2091,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1247,7 +2105,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1268,7 +2126,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-8"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-8 col"
           >
             <div
               className="box1"
@@ -1282,7 +2140,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1303,7 +2161,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <div
               className="box1"
@@ -1317,7 +2175,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1331,7 +2189,7 @@ exports[`Storyshots Grid Fraction 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -1355,7 +2213,7 @@ exports[`Storyshots Grid Fraction 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <div
               className="box1"
@@ -1388,7 +2246,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="noMargin col col-12 grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box3"
@@ -1406,7 +2264,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="noMargin leftJustify col col-12 grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1424,7 +2282,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="noMargin centerJustify col col-12 grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1442,7 +2300,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="noMargin rightJustify col col-12 grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1460,7 +2318,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
           className="noMargin col col-12 grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1493,7 +2351,7 @@ exports[`Storyshots Grid Margin 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1507,7 +2365,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1521,7 +2379,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1535,7 +2393,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1549,7 +2407,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1563,7 +2421,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1577,7 +2435,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1591,7 +2449,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1605,7 +2463,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
           >
             <div
               className="box3"
@@ -1619,7 +2477,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1633,7 +2491,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1647,7 +2505,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1661,7 +2519,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1675,7 +2533,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1689,7 +2547,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1703,7 +2561,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1717,7 +2575,7 @@ exports[`Storyshots Grid Margin 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -1747,7 +2605,7 @@ exports[`Storyshots Grid Nested 1`] = `
         className="root grid"
       >
         <div
-          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
         >
           <h1>
             Nested Example
@@ -1771,7 +2629,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 className="noMargin colors3 col col-6 grid"
               >
                 <div
-                  className="colors4 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors4 col-6 col"
                 >
                   <span
                     aria-label="random content"
@@ -1785,7 +2643,7 @@ exports[`Storyshots Grid Nested 1`] = `
           </div>
         </div>
         <div
-          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
         >
           <h1>
             With Offsets
@@ -1798,7 +2656,7 @@ exports[`Storyshots Grid Nested 1`] = `
             className="noMargin colors2 col col-12 grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col col-6"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col-6 col"
             >
               <div
                 className="colors1"
@@ -1807,7 +2665,7 @@ exports[`Storyshots Grid Nested 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
             >
               <div
                 className="colors1"
@@ -1816,7 +2674,7 @@ exports[`Storyshots Grid Nested 1`] = `
               </div>
             </div>
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-4 col col-4"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-4 col-4 col"
             >
               <div
                 className="colors1"
@@ -1827,7 +2685,7 @@ exports[`Storyshots Grid Nested 1`] = `
           </div>
         </div>
         <div
-          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+          className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
         >
           <h1>
             With Overflow
@@ -1843,7 +2701,7 @@ exports[`Storyshots Grid Nested 1`] = `
               className="noMargin colors2 col col-12 grid"
             >
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="colors1"
@@ -1852,7 +2710,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="colors1"
@@ -1861,7 +2719,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="colors1"
@@ -1870,7 +2728,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="colors1"
@@ -1879,7 +2737,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="colors1"
@@ -1888,7 +2746,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="colors1"
@@ -1918,7 +2776,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -1932,7 +2790,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-7 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-7 col-1 col"
           >
             <div
               className="box1"
@@ -1950,7 +2808,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col-1 col"
           >
             <div
               className="box1"
@@ -1964,7 +2822,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-5 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-5 col-1 col"
           >
             <div
               className="box1"
@@ -1978,7 +2836,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col-1 col"
           >
             <div
               className="box1"
@@ -1996,7 +2854,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-2 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-2 col-1 col"
           >
             <div
               className="box1"
@@ -2010,7 +2868,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col-1 col"
           >
             <div
               className="box1"
@@ -2024,7 +2882,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col-1 col"
           >
             <div
               className="box1"
@@ -2042,7 +2900,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col-1 col"
           >
             <div
               className="box1"
@@ -2056,7 +2914,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-1 col-1 col"
           >
             <div
               className="box1"
@@ -2070,7 +2928,7 @@ exports[`Storyshots Grid Offset 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-5 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-5 col-1 col"
           >
             <div
               className="box1"
@@ -2088,7 +2946,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-4 col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-4 col-1 col"
           >
             <div
               className="box1"
@@ -2106,7 +2964,7 @@ exports[`Storyshots Grid Offset 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2139,14 +2997,14 @@ exports[`Storyshots Grid Padding 1`] = `
           className="margin singleSize rightMargin leftMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
               Top Right Padding
             </h1>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
               Item Top Right Padding
@@ -2159,7 +3017,7 @@ exports[`Storyshots Grid Padding 1`] = `
               className="padding grid single top right"
             >
               <div
-                className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
               >
                 <div
                   className="colors1"
@@ -2173,7 +3031,7 @@ exports[`Storyshots Grid Padding 1`] = `
             className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
             >
               <div
                 className="padding grid single top right"
@@ -2191,14 +3049,14 @@ exports[`Storyshots Grid Padding 1`] = `
           className="margin singleSize rightMargin leftMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
               All-sides Padding
             </h1>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
               Item All-sides Padding
@@ -2211,7 +3069,7 @@ exports[`Storyshots Grid Padding 1`] = `
               className="padding grid single top right bottom left"
             >
               <div
-                className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
               >
                 <div
                   className="colors1"
@@ -2225,7 +3083,7 @@ exports[`Storyshots Grid Padding 1`] = `
             className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
               itemMargin={undefined}
               itemMarginSize={undefined}
             >
@@ -2245,7 +3103,7 @@ exports[`Storyshots Grid Padding 1`] = `
           className="margin singleSize rightMargin leftMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
           >
             <h1>
               No Padding / Item No Padding
@@ -2255,7 +3113,7 @@ exports[`Storyshots Grid Padding 1`] = `
             className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
             >
               <div
                 className="colors1"
@@ -2269,14 +3127,14 @@ exports[`Storyshots Grid Padding 1`] = `
           className="margin singleSize rightMargin leftMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
               Bottom Padding
             </h1>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
               Item Bottom Padding
@@ -2289,7 +3147,7 @@ exports[`Storyshots Grid Padding 1`] = `
               className="padding grid single bottom"
             >
               <div
-                className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
               >
                 <div
                   className="colors1"
@@ -2303,7 +3161,7 @@ exports[`Storyshots Grid Padding 1`] = `
             className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
             >
               <div
                 className="padding grid single bottom"
@@ -2321,14 +3179,14 @@ exports[`Storyshots Grid Padding 1`] = `
           className="margin singleSize rightMargin leftMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
               Top-Right-Left Padding
             </h1>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
               Item Top-Right-Left Padding
@@ -2341,7 +3199,7 @@ exports[`Storyshots Grid Padding 1`] = `
               className="padding grid single right left top"
             >
               <div
-                className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
               >
                 <div
                   className="colors1"
@@ -2355,7 +3213,7 @@ exports[`Storyshots Grid Padding 1`] = `
             className="noMargin colors2 col col-6 grid"
           >
             <div
-              className="colors3 margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
             >
               <div
                 className="padding grid single right left top"
@@ -2388,7 +3246,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2402,7 +3260,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2416,7 +3274,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2430,7 +3288,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2444,7 +3302,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2458,7 +3316,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2472,7 +3330,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2486,7 +3344,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2500,7 +3358,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2514,7 +3372,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2528,7 +3386,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2542,7 +3400,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2560,7 +3418,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -2574,7 +3432,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -2588,7 +3446,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -2602,7 +3460,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -2616,7 +3474,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -2630,7 +3488,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box1"
@@ -2648,7 +3506,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-3 col"
           >
             <div
               className="box1"
@@ -2662,7 +3520,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-3 col"
           >
             <div
               className="box1"
@@ -2676,7 +3534,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-3 col"
           >
             <div
               className="box1"
@@ -2690,7 +3548,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-3"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-3 col"
           >
             <div
               className="box1"
@@ -2708,7 +3566,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
           >
             <div
               className="box1"
@@ -2722,7 +3580,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
           >
             <div
               className="box1"
@@ -2736,7 +3594,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
           >
             <div
               className="box1"
@@ -2754,7 +3612,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <div
               className="box1"
@@ -2768,7 +3626,7 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <div
               className="box1"
@@ -2786,7 +3644,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col auto"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin auto col"
           >
             <div
               className="box1"
@@ -2804,7 +3662,7 @@ exports[`Storyshots Grid Sizing 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
           >
             <div
               className="box3"
@@ -2840,7 +3698,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
           className="noMargin grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2858,7 +3716,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="top margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin top col-2 col"
           >
             <div
               className="box1"
@@ -2872,7 +3730,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="middle margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin middle col-2 col"
           >
             <div
               className="box1"
@@ -2886,7 +3744,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="bottom margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin bottom col-2 col"
           >
             <div
               className="box1"
@@ -2900,7 +3758,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="middle margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin middle col-2 col"
           >
             <div
               className="box1"
@@ -2914,7 +3772,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
           >
             <div
               className="box3"
@@ -2928,7 +3786,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-1"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
               className="box1"
@@ -2961,7 +3819,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
             >
               <div
                 className="box3"
@@ -2984,7 +3842,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
             >
               <div
                 className="box3"
@@ -3007,7 +3865,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             }
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
             >
               <div
                 className="box3"
@@ -3058,7 +3916,7 @@ exports[`Storyshots Layout Cards 1`] = `
               className="padding grid single top"
             >
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="box4"
@@ -3072,7 +3930,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="box4"
@@ -3086,7 +3944,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="box4"
@@ -3100,7 +3958,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="box4"
@@ -3114,7 +3972,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="box4"
@@ -3128,7 +3986,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="box4"
@@ -3158,7 +4016,7 @@ exports[`Storyshots Layout Cards 1`] = `
               className="noMargin stretchAlign grid"
             >
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-10"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-10 col"
               >
                 <div
                   className="box2"
@@ -3176,7 +4034,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
                   className="box2"
@@ -3190,7 +4048,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
               >
                 <div
                   className="box2"
@@ -3208,7 +4066,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
               >
                 <div
                   className="box2"
@@ -3222,7 +4080,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-6"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
               >
                 <div
                   className="box2"
@@ -3236,7 +4094,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
               >
                 <div
                   className="box2"
@@ -3254,7 +4112,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
               >
                 <div
                   className="box2"
@@ -3272,7 +4130,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
               >
                 <div
                   className="box2"
@@ -3290,7 +4148,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
               >
                 <div
                   className="box2"
@@ -3308,7 +4166,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
               >
                 <div
                   className="box2"
@@ -3326,7 +4184,7 @@ exports[`Storyshots Layout Cards 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-4"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
               >
                 <div
                   className="box2"
@@ -3403,7 +4261,7 @@ exports[`Storyshots Layout Holy Grail 1`] = `
                 Content
               </h2>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
               />
             </div>
             <div
@@ -3451,7 +4309,7 @@ exports[`Storyshots Layout Report 1`] = `
               className="padding grid single top bottom"
             >
               <div
-                className="margin singleSize rightMargin leftMargin margin col col-12"
+                className="margin singleSize rightMargin leftMargin margin col-12 col"
               >
                 <h1>
                   Header
@@ -3470,7 +4328,7 @@ exports[`Storyshots Layout Report 1`] = `
               className="padding grid single top"
             >
               <div
-                className="margin singleSize rightMargin leftMargin margin col col-12"
+                className="margin singleSize rightMargin leftMargin margin col-12 col"
               >
                 <h2>
                   Subheader
@@ -3480,10 +4338,10 @@ exports[`Storyshots Layout Report 1`] = `
                 className="noMargin col col-10 grid"
               >
                 <div
-                  className="margin doubleSize rightMargin margin col col-fit"
+                  className="margin doubleSize rightMargin margin col-fit col"
                 >
                   <div
-                    className="margin singleSize rightMargin leftMargin margin col auto"
+                    className="margin singleSize rightMargin leftMargin margin auto col"
                   >
                     <div
                       className="box3"
@@ -3502,10 +4360,10 @@ exports[`Storyshots Layout Report 1`] = `
                   </div>
                 </div>
                 <div
-                  className="margin doubleSize rightMargin margin col col-fit"
+                  className="margin doubleSize rightMargin margin col-fit col"
                 >
                   <div
-                    className="margin singleSize rightMargin leftMargin margin col col-fit"
+                    className="margin singleSize rightMargin leftMargin margin col-fit col"
                   >
                     <div
                       className="box3"
@@ -3524,10 +4382,10 @@ exports[`Storyshots Layout Report 1`] = `
                   </div>
                 </div>
                 <div
-                  className="margin doubleSize rightMargin margin col col-fit"
+                  className="margin doubleSize rightMargin margin col-fit col"
                 >
                   <div
-                    className="margin singleSize rightMargin leftMargin margin col col-fit"
+                    className="margin singleSize rightMargin leftMargin margin col-fit col"
                   >
                     <div
                       className="box3"
@@ -3546,10 +4404,10 @@ exports[`Storyshots Layout Report 1`] = `
                   </div>
                 </div>
                 <div
-                  className="margin doubleSize rightMargin margin col col-fit"
+                  className="margin doubleSize rightMargin margin col-fit col"
                 >
                   <div
-                    className="margin singleSize rightMargin leftMargin margin col col-fit"
+                    className="margin singleSize rightMargin leftMargin margin col-fit col"
                   >
                     <div
                       className="box3"
@@ -3569,7 +4427,7 @@ exports[`Storyshots Layout Report 1`] = `
                 </div>
               </div>
               <div
-                className="margin singleSize rightMargin leftMargin margin col col-2"
+                className="margin singleSize rightMargin leftMargin margin col-2 col"
               >
                 <div
                   className="box3"
@@ -3605,7 +4463,7 @@ exports[`Storyshots Layout Report 1`] = `
                   className="padding grid single top"
                 >
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                   >
                     <ul>
                       <li>
@@ -3637,14 +4495,14 @@ exports[`Storyshots Layout Report 1`] = `
                   className="padding grid single top"
                 >
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                   >
                     <p>
                       Text A
                     </p>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                     style={
                       Object {
                         "height": 140,
@@ -3660,7 +4518,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                       >
                         <p>
                           First Block
@@ -3669,7 +4527,7 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                     style={
                       Object {
                         "height": 70,
@@ -3685,7 +4543,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                       >
                         <p>
                           Second Block
@@ -3694,14 +4552,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                   >
                     <p>
                       Text B
                     </p>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                     style={
                       Object {
                         "height": 70,
@@ -3717,7 +4575,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                       >
                         <p>
                           Another Block
@@ -3726,14 +4584,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                   >
                     <p>
                       Text C
                     </p>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                     style={
                       Object {
                         "height": 70,
@@ -3749,7 +4607,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                       >
                         <p>
                           Another Block
@@ -3758,14 +4616,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                   >
                     <p>
                       Text D
                     </p>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                     style={
                       Object {
                         "height": 70,
@@ -3781,7 +4639,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                       >
                         <p>
                           Another Block
@@ -3790,14 +4648,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                   >
                     <p>
                       Text E
                     </p>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                     style={
                       Object {
                         "height": 70,
@@ -3813,7 +4671,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                       >
                         <p>
                           Another Block
@@ -3822,14 +4680,14 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                   >
                     <p>
                       Text F
                     </p>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                     style={
                       Object {
                         "height": 210,
@@ -3845,7 +4703,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                       >
                         <p>
                           Final Block
@@ -3854,7 +4712,7 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                     style={
                       Object {
                         "height": 70,
@@ -3870,7 +4728,7 @@ exports[`Storyshots Layout Report 1`] = `
                       }
                     >
                       <div
-                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                        className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                       >
                         <p>
                           Ok last one
@@ -3879,7 +4737,7 @@ exports[`Storyshots Layout Report 1`] = `
                     </div>
                   </div>
                   <div
-                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                    className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
                   >
                     <p>
                       test-file-stub
@@ -3901,7 +4759,7 @@ exports[`Storyshots Layout Report 1`] = `
                       className="padding grid single top"
                     >
                       <div
-                        className="margin singleSize topMargin bottomMargin margin col auto"
+                        className="margin singleSize topMargin bottomMargin margin auto col"
                       >
                         Side bar
                       </div>
@@ -3947,7 +4805,7 @@ exports[`Storyshots Layout Stack 1`] = `
           className="root grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
           >
             <div
               className="box3"
@@ -3972,7 +4830,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="noMargin grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
             >
               <h1>
                 SubSection 
@@ -3984,7 +4842,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="noMargin grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
             >
               <h1>
                 SubSection 
@@ -3996,7 +4854,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="noMargin grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
             >
               <h1>
                 SubSection 
@@ -4041,7 +4899,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
               className="noMargin grid"
             >
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-2 col col-6"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-2 col-6 col"
               >
                 <input
                   placeholder="Some search here"
@@ -4049,7 +4907,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
                 />
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-2"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <button>
                   Search
@@ -4071,7 +4929,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
                 Content
               </h2>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col col-12"
+                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
               />
             </div>
           </div>
