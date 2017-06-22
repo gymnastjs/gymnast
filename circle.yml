@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 8.0.0
+    version: 8.1.2
 general:
   artifacts:
     - "dist"
@@ -12,8 +12,6 @@ dependencies:
     - node_modules
   override:
     - yarn
-  post:
-    - yarn build
 test:
   override:
     - scripts/citests.sh:

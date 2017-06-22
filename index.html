@@ -4,7 +4,7 @@
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="storybook-version" content="3.1.3">
+        <meta name="storybook-version" content="3.1.5">
         <meta content="IE=edge" http-equiv="X-UA-Compatible" />
         <title>Storybook</title>
         <style>
@@ -47,6 +47,13 @@
   }
 
   @font-face {
+    font-family: 'Geometria';
+    src: url('https://obartra.github.io/reflex/fonts/Geometria-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
+  }
+
+  @font-face {
     font-family: 'Klartext';
     src: url('https://obartra.github.io/reflex/fonts/KlartextMono-Light.otf') format('opentype');
     font-weight: 100;
@@ -62,7 +69,7 @@
   li:focus,
   a:focus {
     outline: none;
-    font-weight: 900;
+    font-weight: bold;
   }
 
   input[type="text"],
@@ -115,12 +122,16 @@
   .Resizer.horizontal {
     border-top: 1px solid #1D1F21;
   }
+
+  [role="tabpanel"] form div label {
+    white-space: nowrap;
+  }
 </style>
 
       </head>
       <body style="margin: 0;">
         <div id="root"></div>
-        <script src="static/manager.040114f901a08a673a38.bundle.js"></script>
+        <script src="static/manager.6900a217a42ec374cc71.bundle.js"></script>
       </body>
     </html>
   
