@@ -1,5 +1,5 @@
 // @flow
-import { uniq } from 'lodash'
+import { uniq, memoize } from 'lodash'
 import type { Component, IndividualSides, MarginSizes } from './types'
 import marginStyle from './margin.css'
 
@@ -39,17 +39,17 @@ export function getSides(sides?: string = ''): Array<IndividualSides> {
   return uniq(allSides)
 }
 
-export function getMarginClasses(
+const marginSizeClasses = {
+  none: marginStyle.noSize,
+  half: marginStyle.halfSize,
+  single: marginStyle.singleSize,
+  double: marginStyle.doubleSize,
+}
+
+function getMarginClassesRaw(
   margin?: string,
   marginSize?: MarginSizes
 ): Array<string | void> {
-  const marginSizeClasses = {
-    none: marginStyle.noSize,
-    half: marginStyle.halfSize,
-    single: marginStyle.singleSize,
-    double: marginStyle.doubleSize,
-  }
-
   const sides = getSides(margin).map(
     direction => marginStyle[`${direction}Margin`]
   )
@@ -61,6 +61,11 @@ export function getMarginClasses(
 
   return [marginStyle.margin, size, ...sides]
 }
+
+export const getMarginClasses = memoize(
+  getMarginClassesRaw,
+  (margin, marginSize) => `${margin}${marginSize}`
+)
 
 /* eslint-disable no-console */
 export const log = {
