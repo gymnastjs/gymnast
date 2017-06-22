@@ -57776,24 +57776,40 @@ exports.default = function () {
             _src.Grid,
             { size: 10 },
             _react2.default.createElement(
-              _core.Box,
-              { size: 'fit', type: 'C', padding: 'horizontal' },
-              'Lorem'
+              _src.Item,
+              { margin: 'right', marginSize: 'double', size: 'fit' },
+              _react2.default.createElement(
+                _core.Box,
+                { type: 'C', padding: 'horizontal' },
+                'Lorem'
+              )
             ),
             _react2.default.createElement(
-              _core.Box,
-              { size: 'fit', type: 'C', padding: 'horizontal' },
-              'ipsum'
+              _src.Item,
+              { margin: 'right', marginSize: 'double', size: 'fit' },
+              _react2.default.createElement(
+                _core.Box,
+                { size: 'fit', type: 'C', padding: 'horizontal' },
+                'ipsum'
+              )
             ),
             _react2.default.createElement(
-              _core.Box,
-              { size: 'fit', type: 'C', padding: 'horizontal' },
-              'dolor'
+              _src.Item,
+              { margin: 'right', marginSize: 'double', size: 'fit' },
+              _react2.default.createElement(
+                _core.Box,
+                { size: 'fit', type: 'C', padding: 'horizontal' },
+                'dolor'
+              )
             ),
             _react2.default.createElement(
-              _core.Box,
-              { size: 'fit', type: 'C', padding: 'horizontal' },
-              'sit amet, consectetur'
+              _src.Item,
+              { margin: 'right', marginSize: 'double', size: 'fit' },
+              _react2.default.createElement(
+                _core.Box,
+                { size: 'fit', type: 'C', padding: 'horizontal' },
+                'sit amet, consectetur'
+              )
             )
           ),
           _react2.default.createElement(_core.Box, { size: 2, type: 'C' })
@@ -65882,4 +65898,4 @@ module.exports = __webpack_require__(626);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.6891b2cc4cada045551e.bundle.js.map
+//# sourceMappingURL=preview.9b83120c42131d50a13e.bundle.js.map
