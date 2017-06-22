@@ -42,12 +42,20 @@ export default function() {
           <Grid root itemMargin="horizontal" padding="top">
             <Item size={12}><h2>Subheader</h2></Item>
             <Grid size={10}>
-              <Box size="fit" type="C" padding="horizontal">Lorem</Box>
-              <Box size="fit" type="C" padding="horizontal">ipsum</Box>
-              <Box size="fit" type="C" padding="horizontal">dolor</Box>
-              <Box size="fit" type="C" padding="horizontal">
-                sit amet, consectetur
-              </Box>
+              <Item margin="right" marginSize="double" size="fit">
+                <Box type="C" padding="horizontal">Lorem</Box>
+              </Item>
+              <Item margin="right" marginSize="double" size="fit">
+                <Box size="fit" type="C" padding="horizontal">ipsum</Box>
+              </Item>
+              <Item margin="right" marginSize="double" size="fit">
+                <Box size="fit" type="C" padding="horizontal">dolor</Box>
+              </Item>
+              <Item margin="right" marginSize="double" size="fit">
+                <Box size="fit" type="C" padding="horizontal">
+                  sit amet, consectetur
+                </Box>
+              </Item>
             </Grid>
             <Box size={2} type="C" />
           </Grid>

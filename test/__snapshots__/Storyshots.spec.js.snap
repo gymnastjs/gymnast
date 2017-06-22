@@ -3480,73 +3480,89 @@ exports[`Storyshots Layout Report 1`] = `
                 className="noMargin col col-10 grid"
               >
                 <div
-                  className="margin singleSize rightMargin leftMargin margin col col-fit"
+                  className="margin doubleSize rightMargin margin col col-fit"
                 >
                   <div
-                    className="box3"
-                    style={undefined}
+                    className="margin singleSize rightMargin leftMargin margin col auto"
                   >
                     <div
-                      className="noMargin middleAlign centerJustify grid"
+                      className="box3"
+                      style={undefined}
                     >
                       <div
-                        className="padding grid single right left"
+                        className="noMargin middleAlign centerJustify grid"
                       >
-                        Lorem
+                        <div
+                          className="padding grid single right left"
+                        >
+                          Lorem
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  className="margin singleSize rightMargin leftMargin margin col col-fit"
+                  className="margin doubleSize rightMargin margin col col-fit"
                 >
                   <div
-                    className="box3"
-                    style={undefined}
+                    className="margin singleSize rightMargin leftMargin margin col col-fit"
                   >
                     <div
-                      className="noMargin middleAlign centerJustify grid"
+                      className="box3"
+                      style={undefined}
                     >
                       <div
-                        className="padding grid single right left"
+                        className="noMargin middleAlign centerJustify grid"
                       >
-                        ipsum
+                        <div
+                          className="padding grid single right left"
+                        >
+                          ipsum
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  className="margin singleSize rightMargin leftMargin margin col col-fit"
+                  className="margin doubleSize rightMargin margin col col-fit"
                 >
                   <div
-                    className="box3"
-                    style={undefined}
+                    className="margin singleSize rightMargin leftMargin margin col col-fit"
                   >
                     <div
-                      className="noMargin middleAlign centerJustify grid"
+                      className="box3"
+                      style={undefined}
                     >
                       <div
-                        className="padding grid single right left"
+                        className="noMargin middleAlign centerJustify grid"
                       >
-                        dolor
+                        <div
+                          className="padding grid single right left"
+                        >
+                          dolor
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  className="margin singleSize rightMargin leftMargin margin col col-fit"
+                  className="margin doubleSize rightMargin margin col col-fit"
                 >
                   <div
-                    className="box3"
-                    style={undefined}
+                    className="margin singleSize rightMargin leftMargin margin col col-fit"
                   >
                     <div
-                      className="noMargin middleAlign centerJustify grid"
+                      className="box3"
+                      style={undefined}
                     >
                       <div
-                        className="padding grid single right left"
+                        className="noMargin middleAlign centerJustify grid"
                       >
-                        sit amet, consectetur
+                        <div
+                          className="padding grid single right left"
+                        >
+                          sit amet, consectetur
+                        </div>
                       </div>
                     </div>
                   </div>
