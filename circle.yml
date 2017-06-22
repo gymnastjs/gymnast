@@ -12,8 +12,6 @@ dependencies:
     - node_modules
   override:
     - yarn
-  post:
-    - yarn build
 test:
   override:
     - scripts/citests.sh:

@@ -6,8 +6,8 @@ import { Grid } from '../../src'
 import { Root, Box, getMarginSelect } from '../core'
 
 export default function() {
-  const margin = getMarginSelect()
   const items = number('Items', 0, { range: true, min: 0, max: 5 })
+  const margin = getMarginSelect()
 
   return (
     <Root>

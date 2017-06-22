@@ -5,18 +5,60 @@
   width: 100%;
 }
 
-.top {
-  padding-top: var(--gutter);
+.none {
+  padding: 0;
 }
 
-.right {
-  padding-right: var(--gutter);
+.half {
+  &.top {
+    padding-left: calc(var(--vertical-gutter) / 2);
+  }
+
+  &.left {
+    padding-left: calc(var(--gutter) / 2);
+  }
+
+  &.right {
+    padding-right: calc(var(--gutter) / 2);
+  }
+
+  &.bottom {
+    padding-bottom: calc(var(--vertical-gutter) / 2);
+  }
 }
 
-.bottom {
-  padding-bottom: var(--gutter);
+.single {
+  &.top {
+    padding-top: var(--vertical-gutter);
+  }
+
+  &.left {
+    padding-left: var(--gutter);
+  }
+
+  &.right {
+    padding-right: var(--gutter);
+  }
+
+  &.bottom {
+    padding-bottom: var(--vertical-gutter);
+  }
 }
 
-.left {
-  padding-left: var(--gutter);
+.double {
+  &.top {
+    padding-left: calc(var(--vertical-gutter) * 2);
+  }
+
+  &.left {
+    padding-left: calc(var(--gutter) * 2);
+  }
+
+  &.right {
+    padding-right: calc(var(--gutter) * 2);
+  }
+
+  &.bottom {
+    padding-bottom: calc(var(--vertical-gutter) * 2);
+  }
 }

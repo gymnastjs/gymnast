@@ -19,12 +19,8 @@ export default function() {
             <h1>Header</h1>
           </Grid>
         </Layout>
-        <Layout
-          className={styles.subheader}
-          margin="vertical"
-          marginSize="half"
-        >
-          <Grid root margin="horizontal">
+        <Layout className={styles.subheader}>
+          <Grid root margin="horizontal" padding="top">
             <Box size={2} type="D" />
             <Box size={2} type="D" />
             <Box size={2} type="D" />

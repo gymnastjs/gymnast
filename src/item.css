@@ -2,7 +2,6 @@
 
 .col {
   box-sizing: border-box;
-  padding: 0 calc(var(--gutter) / 2) var(--vertical-gutter);
 }
 
 .colAuto {
@@ -31,52 +30,5 @@
 @for $i from 0 to 11 {
   .colOffset-$(i) {
     margin-left: calc($i / 12 * 100%);
-  }
-}
-
-.margin {
-  &.colMarginNone {
-    padding: 0;
-  }
-
-  &.colMarginHalf {
-    padding-top: 0;
-    padding-left: calc(var(--gutter) / 4);
-    padding-right: calc(var(--gutter) / 4);
-    padding-bottom: calc(var(--vertical-gutter) / 2);
-  }
-
-  &.colMarginDouble {
-    padding-top: 0;
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
-    padding-bottom: calc(var(--vertical-gutter) * 2);
-  }
-
-  &.colMarginHorizontal {
-    padding: 0 calc(var(--gutter) / 2);
-  }
-
-  &.colMarginHorizontalHalf {
-    padding: 0 calc(var(--gutter) / 4);
-  }
-
-  &.colMarginHorizontalDouble {
-    padding: 0 var(--gutter);
-  }
-
-  &.colMarginVerticalHalf {
-    padding: 0;
-    padding-bottom: calc(var(--gutter) / 2);
-  }
-
-  &.colMarginVertical {
-    padding: 0;
-    padding-bottom: var(--gutter);
-  }
-
-  &.colMarginVerticalDouble {
-    padding: 0;
-    padding-bottom: calc(var(--gutter) * 2);
   }
 }

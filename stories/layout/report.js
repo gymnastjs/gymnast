@@ -34,12 +34,12 @@ export default function() {
     <Layout type="parent" className={styles.report}>
       <Layout fixed="top">
         <Layout className={styles.header}>
-          <Grid root>
+          <Grid root padding="top bottom">
             <Item size={12} margin="horizontal"><h1>Header</h1></Item>
           </Grid>
         </Layout>
-        <Layout className={styles.subheader} margin="none">
-          <Grid root margin="horizontal">
+        <Layout className={styles.subheader}>
+          <Grid root itemMargin="horizontal" padding="top">
             <Item size={12}><h2>Subheader</h2></Item>
             <Box size={2} type="C" />
             <Box size={2} type="C" />
@@ -87,18 +87,23 @@ export default function() {
                 <Card>Ok last one</Card>
                 <P>{loremIpsum.substr(0, 250)}...</P>
               </Grid>
-              <Grid size={4} margin="horizontal">
-                <Grid size={12} className={styles.clippy}>
-                  <Grid
-                    size={12}
-                    align="top"
-                    className={` ${colors1}`}
-                    padding="all"
-                  >
-                    <Item margin="vertical">
-                      Side bar
-                    </Item>
-                  </Grid>
+              <Grid
+                size={4}
+                className={styles.clippy}
+                padding="horizontal"
+                paddingSize="half"
+              >
+                <Grid
+                  size={12}
+                  align="top"
+                  className={` ${colors1}`}
+                  padding="top"
+                  margin="horizontal"
+                  marginSize="double"
+                >
+                  <Item margin="vertical">
+                    Side bar
+                  </Item>
                 </Grid>
               </Grid>
             </Grid>

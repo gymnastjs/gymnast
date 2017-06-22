@@ -9,6 +9,13 @@
   }
 
   @font-face {
+    font-family: 'Geometria';
+    src: url('https://obartra.github.io/reflex/fonts/Geometria-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
+  }
+
+  @font-face {
     font-family: 'Klartext';
     src: url('https://obartra.github.io/reflex/fonts/KlartextMono-Light.otf') format('opentype');
     font-weight: 100;
@@ -24,7 +31,7 @@
   li:focus,
   a:focus {
     outline: none;
-    font-weight: 900;
+    font-weight: bold;
   }
 
   input[type="text"],
@@ -76,5 +83,9 @@
 
   .Resizer.horizontal {
     border-top: 1px solid #1D1F21;
+  }
+
+  [role="tabpanel"] form div label {
+    white-space: nowrap;
   }
 </style>

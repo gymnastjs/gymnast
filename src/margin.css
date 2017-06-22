@@ -1,0 +1,55 @@
+@import "./variables";
+
+.noMargin {
+  padding: 0;
+}
+
+.margin {
+  padding: 0;
+
+  &.topMargin {
+    padding-top: 0;
+  }
+
+  &.halfSize {
+    &.leftMargin {
+      padding-left: calc(var(--gutter) / 4);
+    }
+
+    &.rightMargin {
+      padding-right: calc(var(--gutter) / 4);
+    }
+
+    &.bottomMargin {
+      padding-bottom: calc(var(--vertical-gutter) / 2);
+    }
+  }
+
+  &.singleSize {
+    &.leftMargin {
+      padding-left: calc(var(--gutter) / 2);
+    }
+
+    &.rightMargin {
+      padding-right: calc(var(--gutter) / 2);
+    }
+
+    &.bottomMargin {
+      padding-bottom: var(--vertical-gutter);
+    }
+  }
+
+  &.doubleSize {
+    &.leftMargin {
+      padding-left: var(--gutter);
+    }
+
+    &.rightMargin {
+      padding-right: var(--gutter);
+    }
+
+    &.bottomMargin {
+      padding-bottom: calc(var(--vertical-gutter) * 2);
+    }
+  }
+}

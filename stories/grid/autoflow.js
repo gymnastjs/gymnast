@@ -6,7 +6,7 @@ import { Grid, Layout } from '../../src'
 import { Box, getMarginSelect } from '../core'
 
 export default function() {
-  const items = number('items', 5, { range: true, min: 0, max: 100 })
+  const items = number('Items', 5, { range: true, min: 0, max: 100 })
   const props = {
     align: boolean('Stretch', true) && 'stretch',
     ...getMarginSelect(),

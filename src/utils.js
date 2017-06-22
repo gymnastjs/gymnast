@@ -1,7 +1,7 @@
 // @flow
 import { uniq } from 'lodash'
-import styles from './index.css'
-import type { Component, Margin, MarginSize, IndividualSides } from './types'
+import type { Component, IndividualSides, MarginSizes } from './types'
+import marginStyle from './margin.css'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
@@ -16,40 +16,6 @@ export function getDisplayName(WrappedComponent: string | Component): string {
   }
 
   return WrappedComponent || defaultName
-}
-
-function getMarginSizeClassName(size: MarginSize | void) {
-  switch (size) {
-    case 'half':
-      return 'Half'
-    case 'double':
-      return 'Double'
-    default:
-      return ''
-  }
-}
-
-export function getMargin(
-  value: Margin | void,
-  size: MarginSize | void,
-  prefix: string
-) {
-  if (value === 'none') {
-    return styles[`${prefix}MarginNone`]
-  }
-
-  const marginSize = getMarginSizeClassName(size)
-
-  switch (value) {
-    case 'horizontal':
-      return styles[`${prefix}MarginHorizontal${marginSize}`]
-    case 'vertical':
-      return styles[`${prefix}MarginVertical${marginSize}`]
-    case 'all':
-      return styles[`${prefix}Margin${marginSize}`]
-    default:
-      return ''
-  }
 }
 
 const individualSides = ['top', 'right', 'bottom', 'left']
@@ -71,6 +37,29 @@ export function getSides(sides?: string = ''): Array<IndividualSides> {
   }, [])
 
   return uniq(allSides)
+}
+
+export function getMarginClasses(
+  margin?: string,
+  marginSize?: MarginSizes
+): Array<string | void> {
+  const marginSizeClasses = {
+    none: marginStyle.noSize,
+    half: marginStyle.halfSize,
+    single: marginStyle.singleSize,
+    double: marginStyle.doubleSize,
+  }
+
+  const sides = getSides(margin).map(
+    direction => marginStyle[`${direction}Margin`]
+  )
+  const size = marginSize && marginSizeClasses[marginSize]
+
+  if (!sides.length) {
+    return [marginStyle.noMargin]
+  }
+
+  return [marginStyle.margin, size, ...sides]
 }
 
 /* eslint-disable no-console */

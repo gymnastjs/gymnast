@@ -13,7 +13,7 @@
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
-    "@storybook/addon-storyshots": "3.1.4",
+    "@storybook/addon-storyshots": "3.1.5",
     "all-contributors-cli": "4.3.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -26,7 +26,7 @@
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-prettier": "2.2.0",
     "eslint-plugin-flowtype": "2.34.0",
-    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-import": "2.5.0",
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-react": "7.1.0",
     "flow-bin": "0.48.0",
@@ -48,7 +48,7 @@
     "react-element-to-jsx-string": "10.1.0",
     "react-test-renderer": "15.6.1",
     "regenerator-runtime": "0.10.5",
-    "screener-storybook": "0.7.10",
+    "screener-storybook": "0.7.11",
     "storybook-addon-jsx": "4.1.1",
     "style-loader": "0.18.2",
     "stylelint": "7.11.1"
@@ -69,7 +69,6 @@
     ]
   },
   "scripts": {
-    "build": "postcss -c scripts/postcss.config.js -o dist/flex.build.css src/index.css",
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:gen": "all-contributors generate",
@@ -86,10 +85,11 @@
     "test": "npm-run-all --parallel test:*"
   },
   "dependencies": {
-    "@storybook/addon-knobs": "3.1.2",
-    "@storybook/addon-notes": "3.1.2",
-    "@storybook/react": "3.1.3",
+    "@storybook/addon-knobs": "3.1.5",
+    "@storybook/addon-notes": "3.1.5",
+    "@storybook/react": "3.1.5",
     "lodash": "4.17.4",
+    "prop-types": "15.5.10",
     "react": "15.6.1",
     "react-dom": "15.6.1"
   },

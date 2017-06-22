@@ -2,7 +2,7 @@
 import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Layout } from '../../src'
+import { Grid, Item, Layout } from '../../src'
 import { Box } from '../core'
 
 export default function() {
@@ -28,7 +28,9 @@ export default function() {
       </Layout>
       <Layout type="parent">
         <Grid root>
-          <h1>With Nested Grids</h1>
+          <Item size={12}>
+            <h1>With Nested Grids</h1>
+          </Item>
           <Grid align="stretch">
             <Box size={2} type="A" value="Go Back" />
             <Box size={6} type="A">
