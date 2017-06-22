@@ -2,22 +2,26 @@
 
 .col {
   box-sizing: border-box;
-}
 
-.colAuto {
-  flex: 1 1 0%;
-}
+  &.col-fit {
+    flex-basis: 0;
+  }
 
-.colTop {
-  align-self: flex-start;
-}
+  &.auto {
+    flex: 1 1 0%;
+  }
 
-.colMiddle {
-  align-self: center;
-}
+  &.top {
+    align-self: flex-start;
+  }
 
-.colBottom {
-  align-self: flex-end;
+  &.middle {
+    align-self: center;
+  }
+
+  &.bottom {
+    align-self: flex-end;
+  }
 }
 
 @for $i from 1 to 12 {

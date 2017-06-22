@@ -39,6 +39,7 @@ li {
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
+  white-space: nowrap;
 }
 
 .colors1, .box1 {
