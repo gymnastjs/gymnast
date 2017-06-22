@@ -31,6 +31,8 @@
 
   &.centerJustify {
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &.rightJustify {

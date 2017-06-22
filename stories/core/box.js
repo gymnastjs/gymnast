@@ -2,6 +2,7 @@
 import React from 'react'
 import { Grid, ItemHOC } from '../../src'
 import styles from './stories.css'
+import type { ItemSize } from '../../src/types'
 
 const typeMap = {
   A: 1,
@@ -21,7 +22,7 @@ class Box extends React.PureComponent {
     type: 'A' | 'B' | 'C' | 'D',
     style?: Object,
     children: any,
-    value?: string,
+    value?: ItemSize,
   }
 
   render() {

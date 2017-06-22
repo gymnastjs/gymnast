@@ -20,7 +20,7 @@ export default function() {
           </Grid>
         </Layout>
         <Layout className={styles.subheader}>
-          <Grid root margin="horizontal" padding="top">
+          <Grid root padding="top">
             <Box size={2} type="D" />
             <Box size={2} type="D" />
             <Box size={2} type="D" />

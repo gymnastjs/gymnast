@@ -1,4 +1,3 @@
-/* eslint-disable */
 if (
   typeof window === 'object' &&
   window.navigator &&
