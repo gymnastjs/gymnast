@@ -25418,10 +25418,9 @@ function handle(e) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.log = undefined;
+exports.log = exports.getMarginClasses = undefined;
 exports.getDisplayName = getDisplayName;
 exports.getSides = getSides;
-exports.getMarginClasses = getMarginClasses;
 
 var _lodash = __webpack_require__(40);
 
@@ -25473,14 +25472,14 @@ function getSides() {
   return (0, _lodash.uniq)(allSides);
 }
 
-function getMarginClasses(margin, marginSize) {
-  var marginSizeClasses = {
-    none: _margin2.default.noSize,
-    half: _margin2.default.halfSize,
-    single: _margin2.default.singleSize,
-    double: _margin2.default.doubleSize
-  };
+var marginSizeClasses = {
+  none: _margin2.default.noSize,
+  half: _margin2.default.halfSize,
+  single: _margin2.default.singleSize,
+  double: _margin2.default.doubleSize
+};
 
+function getMarginClassesRaw(margin, marginSize) {
   var sides = getSides(margin).map(function (direction) {
     return _margin2.default[direction + 'Margin'];
   });
@@ -25492,6 +25491,10 @@ function getMarginClasses(margin, marginSize) {
 
   return [_margin2.default.margin, size].concat(_toConsumableArray(sides));
 }
+
+var getMarginClasses = exports.getMarginClasses = (0, _lodash.memoize)(getMarginClassesRaw, function (margin, marginSize) {
+  return '' + margin + marginSize;
+});
 
 /* eslint-disable no-console */
 var log = exports.log = {
@@ -65756,4 +65759,4 @@ module.exports = __webpack_require__(625);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.0a952896ee5c9997fb82.bundle.js.map
+//# sourceMappingURL=preview.6cf2e736735a9391ca1b.bundle.js.map
