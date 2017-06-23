@@ -18,7 +18,7 @@ export default function() {
       <Layout type="parent" className={styles.main}>
         <Layout className={styles.top}>
           <Grid root>
-            <Grid>
+            <Grid itemMargin="horizontal">
               <Item size={6} offset={2}>
                 <input type="text" placeholder="Some search here" />
               </Item>
@@ -30,8 +30,10 @@ export default function() {
         </Layout>
         <Layout type="stretch">
           <Grid root className={styles.content}>
-            <Grid align="top">
-              <h2>Content</h2>
+            <Grid align="top" padding="top">
+              <Item size={12}>
+                <h2>Content</h2>
+              </Item>
               <Item size={12}>
                 {includeText && <p>{loremIpsum}</p>}
               </Item>

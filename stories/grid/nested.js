@@ -4,7 +4,7 @@ import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
 import { Grid, Item } from '../../src'
 import styles from '../core/stories.css'
-import { Root, getPositionSelect, getMarginSelect } from '../core'
+import { Box, Root, getPositionSelect, getMarginSelect } from '../core'
 
 export default function() {
   const paddingOptions = [
@@ -34,9 +34,7 @@ export default function() {
         <Grid size={12} {...params} className={styles.colors2}>
           <Grid size={6} {...params} className={styles.colors1} style={height}>
             <Grid size={6} {...params} className={styles.colors3}>
-              <Item size={6} className={styles.colors4}>
-                <span role="img" aria-label="random content">🐓</span>
-              </Item>
+              <Item size={6} className={styles.colors4} align="center">A</Item>
             </Grid>
           </Grid>
         </Grid>
@@ -44,13 +42,9 @@ export default function() {
       <Item size={12}><h1>With Offsets</h1></Item>
       <Grid size={12} margin="horizontal">
         <Grid size={12} {...params} className={styles.colors2}>
-          <Item size={6} offset={3}>
-            <div className={styles.colors1}>A</div>
-          </Item>
-          <Item size={4}><div className={styles.colors1}>A</div></Item>
-          <Item size={4} offset={4}>
-            <div className={styles.colors1}>A</div>
-          </Item>
+          <Box size={6} offset={3} type="A" />
+          <Box size={4} type="A" />
+          <Box size={4} offset={4} type="A" />
         </Grid>
       </Grid>
       <Item size={12}><h1>With Overflow</h1></Item>
@@ -58,9 +52,9 @@ export default function() {
         <Grid size={6} margin="horizontal">
           <Grid size={12} {...params} className={styles.colors2}>
             {times(items, index =>
-              <Item size={2} key={index}>
-                <div className={styles.colors1}>{`${index * 2 % 12 + 2}`}</div>
-              </Item>
+              <Box size={2} key={index} type="A">
+                {`${index * 2 % 12 + 2}`}
+              </Box>
             )}
           </Grid>
         </Grid>

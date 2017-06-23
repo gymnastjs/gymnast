@@ -32,7 +32,7 @@ export default function() {
         <Box size={1} offset={4} type="A" value="+4" />
       </Grid>
       <Grid>
-        <Box size={1} offset={offset} type="A" value={`+${offset}`} />
+        <Box size={1} offset={offset} type="C" value={`+${offset}`} />
       </Grid>
     </Root>
   )

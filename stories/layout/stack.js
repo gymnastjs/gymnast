@@ -10,7 +10,12 @@ function getStaticSection(index) {
   return (
     <Layout key={index}>
       <Grid root>
-        <Box size={12} type="C" value={`Section ${index + 1}`} />
+        <Box
+          size={12}
+          type="C"
+          value={`Section ${index + 1}`}
+          margin="horizontal"
+        />
       </Grid>
     </Layout>
   )
@@ -19,7 +24,7 @@ function getStaticSection(index) {
 function getContainerSection(index, subsections) {
   return (
     <Layout key={index} type="parent" overflow="scrollbars">
-      <Grid root align="top">
+      <Grid root align="top" itemMargin="vertical">
         {times(subsections, i =>
           <Grid key={i}>
             <Item size={12}><h1>SubSection {i + 1}</h1></Item>
