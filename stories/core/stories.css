@@ -14,8 +14,8 @@ section {
   margin-bottom: 20px;
 }
 
-h2 {
-  margin: 0 20px;
+h2, h3 {
+  margin: 0;
   text-align: left;
 }
 
@@ -29,6 +29,25 @@ li {
   margin-bottom: 5px;
   list-style: none;
   text-align: left;
+}
+
+input, button {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+input {
+  outline: 1px solid var(--axonBlack);
+  border: 0;
+}
+
+button {
+  border-radius: 0;
+  border: 0;
+  color: var(--axonBlack);
+  background-color: var(--axonGold);
 }
 
 .box1, .box2, .box3, .box4 {

@@ -22,6 +22,18 @@
   &.bottom {
     align-self: flex-end;
   }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
 }
 
 @for $i from 1 to 12 {

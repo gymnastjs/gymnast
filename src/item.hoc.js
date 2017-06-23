@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { getDisplayName, getMarginClasses } from './utils'
-import type { ItemSize, AlignItem, Offset, MarginSizes } from './types'
+import type { ItemSize, AlignItem, Justify, Offset, MarginSizes } from './types'
 import Padding from './padding'
 import styles from './gridItem.css'
 
@@ -14,11 +14,12 @@ export default function Item(Component: any) {
       children?: Element | Array<Element>,
       className?: string,
       grid?: boolean,
+      justify?: Justify,
       margin?: string,
       marginSize?: MarginSizes,
+      offset?: Offset,
       padding?: string,
       paddingSize?: MarginSizes,
-      offset?: Offset,
       size?: ItemSize,
     }
 
@@ -38,23 +39,25 @@ export default function Item(Component: any) {
         children,
         className,
         grid,
+        justify,
         margin = this.context.margin,
         marginSize = this.context.marginSize,
+        offset,
         padding,
         paddingSize,
-        offset,
         size,
         ...props
       } = this.props
       const classes = compact([
-        align && styles[align],
-        className,
         ...getMarginClasses(margin, marginSize),
         (margin || marginSize) && styles.margin,
+        align && styles[align],
+        className,
         grid && styles.grid,
+        justify && styles[justify],
         offset && styles[`colOffset-${offset}`],
-        styles.col,
         size ? styles[`col-${size}`] : styles.auto,
+        styles.col,
       ]).join(' ')
 
       if (padding) {
