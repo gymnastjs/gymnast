@@ -56453,10 +56453,6 @@ exports.default = function () {
     );
   }
 
-  ListItem.prototype.propTypes = {
-    index: _propTypes2.default.number
-  };
-
   return _react2.default.createElement(
     _core.Root,
     null,
@@ -56580,10 +56576,6 @@ exports.default = function () {
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(3);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _src = __webpack_require__(21);
 
@@ -66790,4 +66782,4 @@ module.exports = __webpack_require__(626);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.bd6f4c8ee9b84251b100.bundle.js.map
+//# sourceMappingURL=preview.d6a98f3e13ee41196e33.bundle.js.map
