@@ -56423,15 +56423,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function () {
-  function ListItem() {
+  function ListItem(_ref) {
+    var index = _ref.index;
+
     return _react2.default.createElement(
       _src.Grid,
       {
         size: 12,
-        className: _stories2.default.colors4,
-        margin: 'horizontal',
-        itemMargin: 'bottom',
-        itemMarginSize: 'half'
+        className: index % 2 ? _stories2.default.colors1 : _stories2.default.colors4,
+        padding: index === 0 ? 'bottom' : 'top bottom',
+        paddingSize: 'half',
+        itemMargin: 'none'
       },
       _react2.default.createElement(
         _src.Item,
@@ -56528,16 +56530,17 @@ exports.default = function () {
                 size: 12,
                 className: _stories2.default.colors2,
                 padding: 'top',
-                margin: 'right left'
+                margin: 'right left',
+                marginSize: 'double'
               },
-              _react2.default.createElement(ListItem, null),
-              _react2.default.createElement(ListItem, null),
-              _react2.default.createElement(ListItem, null),
-              _react2.default.createElement(ListItem, null),
-              _react2.default.createElement(ListItem, null),
+              _react2.default.createElement(ListItem, { index: 0 }),
+              _react2.default.createElement(ListItem, { index: 1 }),
+              _react2.default.createElement(ListItem, { index: 2 }),
+              _react2.default.createElement(ListItem, { index: 3 }),
+              _react2.default.createElement(ListItem, { index: 4 }),
               _react2.default.createElement(
                 _src.Item,
-                { size: 12, margin: 'horizontal' },
+                { size: 12, margin: 'none' },
                 _react2.default.createElement(
                   'p',
                   null,
@@ -56546,7 +56549,7 @@ exports.default = function () {
               ),
               _react2.default.createElement(
                 _src.Item,
-                { size: 4 },
+                { size: 4, margin: 'right bottom' },
                 _react2.default.createElement(
                   'button',
                   null,
@@ -56555,7 +56558,7 @@ exports.default = function () {
               ),
               _react2.default.createElement(
                 _src.Item,
-                { size: 4 },
+                { size: 4, margin: 'left bottom' },
                 _react2.default.createElement(
                   'button',
                   null,
@@ -57685,12 +57688,8 @@ exports.default = function () {
             _extends({ size: 6 }, params, { className: _stories2.default.colors3 }),
             _react2.default.createElement(
               _src.Item,
-              { size: 6, className: _stories2.default.colors4 },
-              _react2.default.createElement(
-                'span',
-                { role: 'img', 'aria-label': 'random content' },
-                '\uD83D\uDC13'
-              )
+              { size: 6, className: _stories2.default.colors4, align: 'center' },
+              'A'
             )
           )
         )
@@ -57711,33 +57710,9 @@ exports.default = function () {
       _react2.default.createElement(
         _src.Grid,
         _extends({ size: 12 }, params, { className: _stories2.default.colors2 }),
-        _react2.default.createElement(
-          _src.Item,
-          { size: 6, offset: 3 },
-          _react2.default.createElement(
-            'div',
-            { className: _stories2.default.colors1 },
-            'A'
-          )
-        ),
-        _react2.default.createElement(
-          _src.Item,
-          { size: 4 },
-          _react2.default.createElement(
-            'div',
-            { className: _stories2.default.colors1 },
-            'A'
-          )
-        ),
-        _react2.default.createElement(
-          _src.Item,
-          { size: 4, offset: 4 },
-          _react2.default.createElement(
-            'div',
-            { className: _stories2.default.colors1 },
-            'A'
-          )
-        )
+        _react2.default.createElement(_core.Box, { size: 6, offset: 3, type: 'A' }),
+        _react2.default.createElement(_core.Box, { size: 4, type: 'A' }),
+        _react2.default.createElement(_core.Box, { size: 4, offset: 4, type: 'A' })
       )
     ),
     _react2.default.createElement(
@@ -57760,13 +57735,9 @@ exports.default = function () {
           _extends({ size: 12 }, params, { className: _stories2.default.colors2 }),
           (0, _lodash.times)(items, function (index) {
             return _react2.default.createElement(
-              _src.Item,
-              { size: 2, key: index },
-              _react2.default.createElement(
-                'div',
-                { className: _stories2.default.colors1 },
-                '' + (index * 2 % 12 + 2)
-              )
+              _core.Box,
+              { size: 2, key: index, type: 'A' },
+              '' + (index * 2 % 12 + 2)
             );
           })
         )
@@ -57845,7 +57816,7 @@ exports.default = function () {
     _react2.default.createElement(
       _src.Grid,
       null,
-      _react2.default.createElement(_core.Box, { size: 1, offset: offset, type: 'A', value: '+' + offset })
+      _react2.default.createElement(_core.Box, { size: 1, offset: offset, type: 'C', value: '+' + offset })
     )
   );
 };
@@ -58522,20 +58493,39 @@ exports.default = function () {
           { size: 12, margin: 'horizontal' },
           _react2.default.createElement(
             _src.Grid,
-            { size: 2, className: _layout2.default.nav },
+            {
+              size: 2,
+              className: _layout2.default.nav,
+              padding: 'top',
+              margin: 'horizontal'
+            },
             _react2.default.createElement(
-              'h2',
-              null,
-              'Nav'
+              _src.Item,
+              { size: 12 },
+              _react2.default.createElement(
+                'h2',
+                null,
+                'Nav'
+              )
             )
           ),
           _react2.default.createElement(
             _src.Grid,
-            { size: 8, className: _layout2.default.content, align: 'top' },
+            {
+              size: 8,
+              className: _layout2.default.content,
+              align: 'top',
+              padding: 'top',
+              margin: 'horizontal'
+            },
             _react2.default.createElement(
-              'h2',
-              null,
-              'Content'
+              _src.Item,
+              { size: 12 },
+              _react2.default.createElement(
+                'h2',
+                null,
+                'Content'
+              )
             ),
             _react2.default.createElement(
               _src.Item,
@@ -58549,11 +58539,20 @@ exports.default = function () {
           ),
           _react2.default.createElement(
             _src.Grid,
-            { size: 2, className: _layout2.default.ads },
+            {
+              size: 2,
+              className: _layout2.default.ads,
+              padding: 'top',
+              margin: 'horizontal'
+            },
             _react2.default.createElement(
-              'h2',
-              null,
-              'Ads'
+              _src.Item,
+              { size: 12 },
+              _react2.default.createElement(
+                'h2',
+                null,
+                'Ads'
+              )
             )
           )
         )
@@ -58963,7 +58962,12 @@ function getStaticSection(index) {
     _react2.default.createElement(
       _src.Grid,
       { root: true },
-      _react2.default.createElement(_core.Box, { size: 12, type: 'C', value: 'Section ' + (index + 1) })
+      _react2.default.createElement(_core.Box, {
+        size: 12,
+        type: 'C',
+        value: 'Section ' + (index + 1),
+        margin: 'horizontal'
+      })
     )
   );
 }
@@ -58974,7 +58978,7 @@ function getContainerSection(index, subsections) {
     { key: index, type: 'parent', overflow: 'scrollbars' },
     _react2.default.createElement(
       _src.Grid,
-      { root: true, align: 'top' },
+      { root: true, align: 'top', itemMargin: 'vertical' },
       (0, _lodash.times)(subsections, function (i) {
         return _react2.default.createElement(
           _src.Grid,
@@ -59043,7 +59047,7 @@ exports.default = function () {
           { root: true },
           _react2.default.createElement(
             _src.Grid,
-            null,
+            { itemMargin: 'horizontal' },
             _react2.default.createElement(
               _src.Item,
               { size: 6, offset: 2 },
@@ -59069,11 +59073,15 @@ exports.default = function () {
           { root: true, className: _layout2.default.content },
           _react2.default.createElement(
             _src.Grid,
-            { align: 'top' },
+            { align: 'top', padding: 'top' },
             _react2.default.createElement(
-              'h2',
-              null,
-              'Content'
+              _src.Item,
+              { size: 12 },
+              _react2.default.createElement(
+                'h2',
+                null,
+                'Content'
+              )
             ),
             _react2.default.createElement(
               _src.Item,
@@ -60438,7 +60446,7 @@ exports = module.exports = __webpack_require__(89)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.layout__layout___74Wzo{display:flex;align-self:flex-start;flex-flow:column;box-sizing:border-box;width:100%}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto}.layout__auto___15Qo_{flex-grow:0;flex-shrink:0}.layout__stretch___3Z7Y8{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}.layout__layoutMarginNone___1Iwp0{padding:0}.layout__layoutMarginVerticalHalf___YgPQE{padding-top:12px;padding-bottom:12px}.layout__layoutMarginVerticalDouble___24nnL{padding-top:48px;padding-bottom:48px}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.layout__layout___74Wzo{display:flex;align-self:flex-start;flex-flow:column;box-sizing:border-box;width:100%}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto;overflow-x:hidden}.layout__auto___15Qo_{flex-grow:0;flex-shrink:0}.layout__stretch___3Z7Y8{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}.layout__layoutMarginNone___1Iwp0{padding:0}.layout__layoutMarginVerticalHalf___YgPQE{padding-top:12px;padding-bottom:12px}.layout__layoutMarginVerticalDouble___24nnL{padding-top:48px;padding-bottom:48px}", ""]);
 
 // exports
 exports.locals = {
@@ -60528,7 +60536,7 @@ exports = module.exports = __webpack_require__(89)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}@font-face{font-family:Geometria;src:url(https://obartra.github.io/reflex/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h2,h3{margin:0;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}button,input{width:100%;height:40px;font-size:18px;box-sizing:border-box}input{outline:1px solid #1d1f21;border:0}button{border-radius:0;border:0;color:#1d1f21;background-color:gold}.stories__box1___su-2w,.stories__box2___3rvyF,.stories__box3___PrERQ,.stories__box4___33WAn{cursor:default;display:flex;justify-content:center;box-sizing:border-box;padding-top:20px;padding-bottom:20px;width:100%;white-space:nowrap}.stories__box1___su-2w,.stories__colors1___2-Ky6{color:gold;background-color:#1d1f21}.stories__box2___3rvyF,.stories__colors2___1SuTj{color:#1469cc;background-color:#efefef}.stories__box3___PrERQ,.stories__colors3___3CI2k{color:#1d1f21;background-color:gold}.stories__box4___33WAn,.stories__colors4___qaX1J{color:#efefef;background-color:#1469cc}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}@font-face{font-family:Geometria;src:url(https://obartra.github.io/reflex/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h2,h3{margin:0;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}button,input{width:100%;height:40px;font-size:18px;box-sizing:border-box}input{outline:1px solid #1d1f21;border:0;padding:12px}button{border-radius:0;border:0;color:#1d1f21;background-color:gold}.stories__box1___su-2w,.stories__box2___3rvyF,.stories__box3___PrERQ,.stories__box4___33WAn{cursor:default;display:flex;justify-content:center;box-sizing:border-box;padding-top:20px;padding-bottom:20px;width:100%;white-space:nowrap}.stories__box1___su-2w,.stories__colors1___2-Ky6{color:gold;background-color:#1d1f21}.stories__box2___3rvyF,.stories__colors2___1SuTj{color:#1469cc;background-color:#efefef}.stories__box3___PrERQ,.stories__colors3___3CI2k{color:#1d1f21;background-color:gold}.stories__box4___33WAn,.stories__colors4___qaX1J{color:#efefef;background-color:#1469cc}", ""]);
 
 // exports
 exports.locals = {
@@ -60551,20 +60559,20 @@ exports = module.exports = __webpack_require__(89)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.layout__page___1Y8SH{position:absolute;top:0}.layout__page___1Y8SH .layout__ads___390GC>*,.layout__page___1Y8SH .layout__nav___3UBsE>*,.layout__page___1Y8SH h1,.layout__page___1Y8SH h2{margin:10px}.layout__page___1Y8SH .layout__main___1Phfa{margin-top:57px}.layout__page___1Y8SH.layout__hasSubheader___1rztZ .layout__main___1Phfa{margin-top:189px}.layout__page___1Y8SH{/*end of hard coded offsets*/}.layout__page___1Y8SH .layout__footer___1p2pw,.layout__page___1Y8SH .layout__header___3_0Uy{color:gold;background-color:#1d1f21}.layout__page___1Y8SH .layout__nav___3UBsE{color:#efefef;background-color:#1469cc}.layout__page___1Y8SH .layout__content___13Q1S,.layout__page___1Y8SH .layout__subheader___14Vs0{color:#1469cc;background-color:#efefef}.layout__page___1Y8SH .layout__card___3h6Bg{color:#1d1f21;background-color:#fff}.layout__page___1Y8SH .layout__ads___390GC{color:#1d1f21;background-color:gold}.layout__page___1Y8SH .layout__top___EylaH{padding-top:48px;padding-bottom:48px;color:#efefef;background-color:#1469cc}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.layout__page___1Y8SH{position:absolute;top:0}.layout__page___1Y8SH h2,.layout__page___1Y8SH p{margin:0}.layout__page___1Y8SH h1{margin:10px}.layout__page___1Y8SH .layout__main___1Phfa{margin-top:57px}.layout__page___1Y8SH.layout__hasSubheader___1rztZ .layout__main___1Phfa{margin-top:189px}.layout__page___1Y8SH{/*end of hard coded offsets*/}.layout__page___1Y8SH .layout__footer___1p2pw,.layout__page___1Y8SH .layout__header___3_0Uy{color:gold;background-color:#1d1f21}.layout__page___1Y8SH .layout__nav___3UBsE{color:#efefef;background-color:#1469cc}.layout__page___1Y8SH .layout__content___13Q1S,.layout__page___1Y8SH .layout__subheader___14Vs0{color:#1469cc;background-color:#efefef}.layout__page___1Y8SH .layout__card___3h6Bg{color:#1d1f21;background-color:#fff}.layout__page___1Y8SH .layout__ads___390GC{color:#1d1f21;background-color:gold}.layout__page___1Y8SH .layout__top___EylaH{padding-top:48px;padding-bottom:48px;color:#efefef;background-color:#1469cc}", ""]);
 
 // exports
 exports.locals = {
 	"page": "layout__page___1Y8SH",
-	"ads": "layout__ads___390GC",
-	"nav": "layout__nav___3UBsE",
 	"main": "layout__main___1Phfa",
 	"hasSubheader": "layout__hasSubheader___1rztZ",
 	"footer": "layout__footer___1p2pw",
 	"header": "layout__header___3_0Uy",
+	"nav": "layout__nav___3UBsE",
 	"content": "layout__content___13Q1S",
 	"subheader": "layout__subheader___14Vs0",
 	"card": "layout__card___3h6Bg",
+	"ads": "layout__ads___390GC",
 	"top": "layout__top___EylaH"
 };
 
@@ -60577,7 +60585,7 @@ exports = module.exports = __webpack_require__(89)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.report__report___DHSa3{position:absolute;top:0}.report__report___DHSa3 h1,.report__report___DHSa3 h2{margin:0}.report__report___DHSa3 button{width:100%;height:40px;font-size:18px;box-sizing:border-box;border-radius:0;border:0;color:#1d1f21;background-color:gold}.report__report___DHSa3 .report__main___3MtBR{margin-top:197px}.report__report___DHSa3{/*end of hard coded offsets*/}.report__report___DHSa3 .report__footer___16Gin,.report__report___DHSa3 .report__header___2PloB{color:gold;background-color:#1d1f21}.report__report___DHSa3 .report__nav___1NcPk{color:#efefef;background-color:#1469cc}.report__report___DHSa3 .report__content___1nTgk,.report__report___DHSa3 .report__subheader___2cZwi{color:#1469cc;background-color:#efefef}.report__report___DHSa3 .report__card___3vyG8{color:#1d1f21;background-color:#fff}.report__report___DHSa3 .report__top___2S77I{padding-top:48px;padding-bottom:48px;color:#efefef;background-color:#1469cc}.report__report___DHSa3 li,.report__report___DHSa3 p,.report__report___DHSa3 ul{margin:0;padding:0}.report__report___DHSa3 li{display:block;width:48px;height:48px}.report__report___DHSa3 li:nth-child(odd){color:#1d1f21;background-color:#fff}.report__report___DHSa3 li:nth-child(2n){color:gold;background-color:#1d1f21}.report__report___DHSa3 .report__subheader___2cZwi{color:#efefef;background-color:#1469cc}.report__report___DHSa3 .report__nav___1NcPk{background-color:transparent;color:#1469cc}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.report__report___DHSa3{position:absolute;top:0}.report__report___DHSa3 h1,.report__report___DHSa3 h2{margin:0}.report__report___DHSa3 button{width:100%;height:40px;font-size:18px;box-sizing:border-box;border-radius:0;border:0;color:#1d1f21;background-color:gold}.report__report___DHSa3 .report__main___3MtBR{margin-top:197px}.report__report___DHSa3{/*end of hard coded offsets*/}.report__report___DHSa3 .report__footer___16Gin,.report__report___DHSa3 .report__header___2PloB{color:gold;background-color:#1d1f21}.report__report___DHSa3 .report__nav___1NcPk{color:#efefef;background-color:#1469cc}.report__report___DHSa3 .report__content___1nTgk,.report__report___DHSa3 .report__subheader___2cZwi{color:#1469cc;background-color:#efefef}.report__report___DHSa3 .report__card___3vyG8{color:#1d1f21;background-color:#fff}.report__report___DHSa3 .report__top___2S77I{padding-top:48px;padding-bottom:48px;color:#efefef;background-color:#1469cc}.report__report___DHSa3 li,.report__report___DHSa3 p,.report__report___DHSa3 ul{margin:0;padding:0}.report__report___DHSa3 li{display:block;width:48px;height:31px;text-align:center;padding-top:17px}.report__report___DHSa3 li:nth-child(odd){color:#1d1f21;background-color:#fff}.report__report___DHSa3 li:nth-child(2n){color:gold;background-color:#1d1f21}.report__report___DHSa3 .report__subheader___2cZwi{color:#efefef;background-color:#1469cc}.report__report___DHSa3 .report__nav___1NcPk{background-color:transparent;color:#1469cc}", ""]);
 
 // exports
 exports.locals = {
@@ -66774,4 +66782,4 @@ module.exports = __webpack_require__(626);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.e50fefb9fad91f88fc22.bundle.js.map
+//# sourceMappingURL=preview.d6a98f3e13ee41196e33.bundle.js.map
