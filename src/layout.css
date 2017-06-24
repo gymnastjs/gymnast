@@ -15,6 +15,7 @@
 
 .overflow {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .auto {

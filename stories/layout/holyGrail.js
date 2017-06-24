@@ -18,14 +18,40 @@ export default function() {
       <Layout type="stretch" className={styles.main}>
         <Grid root>
           <Grid size={12} margin="horizontal">
-            <Grid size={2} className={styles.nav}><h2>Nav</h2></Grid>
-            <Grid size={8} className={styles.content} align="top">
-              <h2>Content</h2>
+            <Grid
+              size={2}
+              className={styles.nav}
+              padding="top"
+              margin="horizontal"
+            >
+              <Item size={12}>
+                <h2>Nav</h2>
+              </Item>
+            </Grid>
+            <Grid
+              size={8}
+              className={styles.content}
+              align="top"
+              padding="top"
+              margin="horizontal"
+            >
+              <Item size={12}>
+                <h2>Content</h2>
+              </Item>
               <Item size={12}>
                 {includeText && <p>{loremIpsum}</p>}
               </Item>
             </Grid>
-            <Grid size={2} className={styles.ads}><h2>Ads</h2></Grid>
+            <Grid
+              size={2}
+              className={styles.ads}
+              padding="top"
+              margin="horizontal"
+            >
+              <Item size={12}>
+                <h2>Ads</h2>
+              </Item>
+            </Grid>
           </Grid>
         </Grid>
       </Layout>

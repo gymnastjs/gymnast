@@ -41,6 +41,7 @@ input, button {
 input {
   outline: 1px solid var(--axonBlack);
   border: 0;
+  padding: 12px;
 }
 
 button {

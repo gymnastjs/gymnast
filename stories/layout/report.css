@@ -60,7 +60,9 @@
   & li {
     display: block;
     width: calc(24px * 2);
-    height: calc(24px * 2);
+    height: calc(24px * 2 - 17px);
+    text-align: center;
+    padding-top: 17px;
 
     &:nth-child(2n + 1) {
       color: var(--axonBlack);

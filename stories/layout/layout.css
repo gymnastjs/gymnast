@@ -4,7 +4,11 @@
   position: absolute;
   top: 0;
 
-  & h1, & h2, & .nav > *, & .ads > * {
+  & h2, & p {
+    margin: 0;
+  }
+
+  & h1 {
     margin: 10px;
   }
 

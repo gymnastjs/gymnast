@@ -5,16 +5,18 @@ import { Root, loremIpsum } from '../core'
 import styles from '../core/stories.css'
 
 export default function() {
-  function ListItem() {
+  function ListItem({ index }: { index: number }) {
     return (
       <Grid
         size={12}
-        className={styles.colors4}
-        margin="horizontal"
-        itemMargin="bottom"
-        itemMarginSize="half"
+        className={index % 2 ? styles.colors1 : styles.colors4}
+        padding={index === 0 ? 'bottom' : 'top bottom'}
+        paddingSize="half"
+        itemMargin="none"
       >
-        <Item size={6}>Selected Item Name</Item>
+        <Item size={6}>
+          Selected Item Name
+        </Item>
         <Item size={3}>Some Tag</Item>
         <Item size={1} offset={2} align="right">x</Item>
       </Grid>
@@ -60,17 +62,23 @@ export default function() {
                 className={styles.colors2}
                 padding="top"
                 margin="right left"
+                marginSize="double"
               >
-                <ListItem />
-                <ListItem />
-                <ListItem />
-                <ListItem />
-                <ListItem />
-                <Item size={12} margin="horizontal">
+                <ListItem index={0} />
+                <ListItem index={1} />
+                <ListItem index={2} />
+                <ListItem index={3} />
+                <ListItem index={4} />
+
+                <Item size={12} margin="none">
                   <p>{loremIpsum.substr(0, 100)}</p>
                 </Item>
-                <Item size={4}><button>Cancel</button></Item>
-                <Item size={4}><button>Filter</button></Item>
+                <Item size={4} margin="right bottom">
+                  <button>Cancel</button>
+                </Item>
+                <Item size={4} margin="left bottom">
+                  <button>Filter</button>
+                </Item>
               </Grid>
             </Grid>
           </Grid>

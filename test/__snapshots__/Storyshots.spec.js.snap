@@ -581,122 +581,142 @@ exports[`Storyshots Components Cards.filter 1`] = `
                   </div>
                 </div>
                 <div
-                  className="margin singleSize rightMargin leftMargin colors2 col col-12 grid"
+                  className="margin doubleSize rightMargin leftMargin colors2 col col-12 grid"
                 >
                   <div
                     className="padding grid single top"
                   >
                     <div
-                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                      className="noMargin colors4 col col-12 grid"
                     >
                       <div
-                        className="margin halfSize bottomMargin margin col-6 col"
+                        className="padding grid half bottom"
                       >
-                        Selected Item Name
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin col-3 col"
-                      >
-                        Some Tag
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
-                      >
-                        x
+                        <div
+                          className="noMargin margin col-6 col"
+                        >
+                          Selected Item Name
+                        </div>
+                        <div
+                          className="noMargin margin col-3 col"
+                        >
+                          Some Tag
+                        </div>
+                        <div
+                          className="noMargin margin right colOffset-2 col-1 col"
+                        >
+                          x
+                        </div>
                       </div>
                     </div>
                     <div
-                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                      className="noMargin colors1 col col-12 grid"
                     >
                       <div
-                        className="margin halfSize bottomMargin margin col-6 col"
+                        className="padding grid half top bottom"
                       >
-                        Selected Item Name
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin col-3 col"
-                      >
-                        Some Tag
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
-                      >
-                        x
+                        <div
+                          className="noMargin margin col-6 col"
+                        >
+                          Selected Item Name
+                        </div>
+                        <div
+                          className="noMargin margin col-3 col"
+                        >
+                          Some Tag
+                        </div>
+                        <div
+                          className="noMargin margin right colOffset-2 col-1 col"
+                        >
+                          x
+                        </div>
                       </div>
                     </div>
                     <div
-                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                      className="noMargin colors4 col col-12 grid"
                     >
                       <div
-                        className="margin halfSize bottomMargin margin col-6 col"
+                        className="padding grid half top bottom"
                       >
-                        Selected Item Name
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin col-3 col"
-                      >
-                        Some Tag
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
-                      >
-                        x
+                        <div
+                          className="noMargin margin col-6 col"
+                        >
+                          Selected Item Name
+                        </div>
+                        <div
+                          className="noMargin margin col-3 col"
+                        >
+                          Some Tag
+                        </div>
+                        <div
+                          className="noMargin margin right colOffset-2 col-1 col"
+                        >
+                          x
+                        </div>
                       </div>
                     </div>
                     <div
-                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                      className="noMargin colors1 col col-12 grid"
                     >
                       <div
-                        className="margin halfSize bottomMargin margin col-6 col"
+                        className="padding grid half top bottom"
                       >
-                        Selected Item Name
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin col-3 col"
-                      >
-                        Some Tag
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
-                      >
-                        x
+                        <div
+                          className="noMargin margin col-6 col"
+                        >
+                          Selected Item Name
+                        </div>
+                        <div
+                          className="noMargin margin col-3 col"
+                        >
+                          Some Tag
+                        </div>
+                        <div
+                          className="noMargin margin right colOffset-2 col-1 col"
+                        >
+                          x
+                        </div>
                       </div>
                     </div>
                     <div
-                      className="margin singleSize rightMargin leftMargin colors4 col col-12 grid"
+                      className="noMargin colors4 col col-12 grid"
                     >
                       <div
-                        className="margin halfSize bottomMargin margin col-6 col"
+                        className="padding grid half top bottom"
                       >
-                        Selected Item Name
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin col-3 col"
-                      >
-                        Some Tag
-                      </div>
-                      <div
-                        className="margin halfSize bottomMargin margin right colOffset-2 col-1 col"
-                      >
-                        x
+                        <div
+                          className="noMargin margin col-6 col"
+                        >
+                          Selected Item Name
+                        </div>
+                        <div
+                          className="noMargin margin col-3 col"
+                        >
+                          Some Tag
+                        </div>
+                        <div
+                          className="noMargin margin right colOffset-2 col-1 col"
+                        >
+                          x
+                        </div>
                       </div>
                     </div>
                     <div
-                      className="margin singleSize rightMargin leftMargin margin col-12 col"
+                      className="noMargin margin col-12 col"
                     >
                       <p>
                         test-file-stub
                       </p>
                     </div>
                     <div
-                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                      className="margin singleSize rightMargin bottomMargin margin col-4 col"
                     >
                       <button>
                         Cancel
                       </button>
                     </div>
                     <div
-                      className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
+                      className="margin singleSize leftMargin bottomMargin margin col-4 col"
                     >
                       <button>
                         Filter
@@ -2629,14 +2649,9 @@ exports[`Storyshots Grid Nested 1`] = `
                 className="noMargin colors3 col col-6 grid"
               >
                 <div
-                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors4 col-6 col"
+                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin center colors4 col-6 col"
                 >
-                  <span
-                    aria-label="random content"
-                    role="img"
-                  >
-                    🐓
-                  </span>
+                  A
                 </div>
               </div>
             </div>
@@ -2659,27 +2674,42 @@ exports[`Storyshots Grid Nested 1`] = `
               className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-3 col-6 col"
             >
               <div
-                className="colors1"
+                className="box1"
+                style={undefined}
               >
-                A
+                <div
+                  className="noMargin middleAlign centerJustify grid"
+                >
+                  A
+                </div>
               </div>
             </div>
             <div
               className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-4 col"
             >
               <div
-                className="colors1"
+                className="box1"
+                style={undefined}
               >
-                A
+                <div
+                  className="noMargin middleAlign centerJustify grid"
+                >
+                  A
+                </div>
               </div>
             </div>
             <div
               className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-4 col-4 col"
             >
               <div
-                className="colors1"
+                className="box1"
+                style={undefined}
               >
-                A
+                <div
+                  className="noMargin middleAlign centerJustify grid"
+                >
+                  A
+                </div>
               </div>
             </div>
           </div>
@@ -2704,54 +2734,84 @@ exports[`Storyshots Grid Nested 1`] = `
                 className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
-                  className="colors1"
+                  className="box1"
+                  style={undefined}
                 >
-                  2
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    2
+                  </div>
                 </div>
               </div>
               <div
                 className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
-                  className="colors1"
+                  className="box1"
+                  style={undefined}
                 >
-                  4
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    4
+                  </div>
                 </div>
               </div>
               <div
                 className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
-                  className="colors1"
+                  className="box1"
+                  style={undefined}
                 >
-                  6
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    6
+                  </div>
                 </div>
               </div>
               <div
                 className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
-                  className="colors1"
+                  className="box1"
+                  style={undefined}
                 >
-                  8
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    8
+                  </div>
                 </div>
               </div>
               <div
                 className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
-                  className="colors1"
+                  className="box1"
+                  style={undefined}
                 >
-                  10
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    10
+                  </div>
                 </div>
               </div>
               <div
                 className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
               >
                 <div
-                  className="colors1"
+                  className="box1"
+                  style={undefined}
                 >
-                  12
+                  <div
+                    className="noMargin middleAlign centerJustify grid"
+                  >
+                    12
+                  </div>
                 </div>
               </div>
             </div>
@@ -2967,7 +3027,7 @@ exports[`Storyshots Grid Offset 1`] = `
             className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-1 col"
           >
             <div
-              className="box1"
+              className="box3"
               style={undefined}
             >
               <div
@@ -4248,28 +4308,52 @@ exports[`Storyshots Layout Holy Grail 1`] = `
             className="margin singleSize rightMargin leftMargin col col-12 grid"
           >
             <div
-              className="noMargin nav col col-2 grid"
+              className="margin singleSize rightMargin leftMargin nav col col-2 grid"
             >
-              <h2>
-                Nav
-              </h2>
-            </div>
-            <div
-              className="noMargin topAlign content col col-8 grid"
-            >
-              <h2>
-                Content
-              </h2>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
-              />
+                className="padding grid single top"
+              >
+                <div
+                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                >
+                  <h2>
+                    Nav
+                  </h2>
+                </div>
+              </div>
             </div>
             <div
-              className="noMargin ads col col-2 grid"
+              className="margin singleSize rightMargin leftMargin topAlign content col col-8 grid"
             >
-              <h2>
-                Ads
-              </h2>
+              <div
+                className="padding grid single top"
+              >
+                <div
+                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                >
+                  <h2>
+                    Content
+                  </h2>
+                </div>
+                <div
+                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                />
+              </div>
+            </div>
+            <div
+              className="margin singleSize rightMargin leftMargin ads col col-2 grid"
+            >
+              <div
+                className="padding grid single top"
+              >
+                <div
+                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                >
+                  <h2>
+                    Ads
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -4805,7 +4889,7 @@ exports[`Storyshots Layout Stack 1`] = `
           className="root grid"
         >
           <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+            className="margin singleSize rightMargin leftMargin margin col-12 col"
           >
             <div
               className="box3"
@@ -4830,7 +4914,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="noMargin grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+              className="margin singleSize topMargin bottomMargin margin col-12 col"
             >
               <h1>
                 SubSection 
@@ -4842,7 +4926,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="noMargin grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+              className="margin singleSize topMargin bottomMargin margin col-12 col"
             >
               <h1>
                 SubSection 
@@ -4854,7 +4938,7 @@ exports[`Storyshots Layout Stack 1`] = `
             className="noMargin grid"
           >
             <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+              className="margin singleSize topMargin bottomMargin margin col-12 col"
             >
               <h1>
                 SubSection 
@@ -4899,7 +4983,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
               className="noMargin grid"
             >
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colOffset-2 col-6 col"
+                className="margin singleSize rightMargin leftMargin margin colOffset-2 col-6 col"
               >
                 <input
                   placeholder="Some search here"
@@ -4907,7 +4991,7 @@ exports[`Storyshots Layout Two Sections 1`] = `
                 />
               </div>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-2 col"
+                className="margin singleSize rightMargin leftMargin margin col-2 col"
               >
                 <button>
                   Search
@@ -4925,12 +5009,20 @@ exports[`Storyshots Layout Two Sections 1`] = `
             <div
               className="noMargin topAlign grid"
             >
-              <h2>
-                Content
-              </h2>
               <div
-                className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
-              />
+                className="padding grid single top"
+              >
+                <div
+                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                >
+                  <h2>
+                    Content
+                  </h2>
+                </div>
+                <div
+                  className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+                />
+              </div>
             </div>
           </div>
         </div>
