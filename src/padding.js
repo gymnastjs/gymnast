@@ -12,7 +12,7 @@ export default class Padding extends React.PureComponent {
   }
 
   props: {
-    children?: Element | Array<Element>,
+    children?: React$Element<any>,
     direction?: string | void,
     size?: MarginSizes,
   }

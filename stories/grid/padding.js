@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid, Item } from '../../src'
+import { Grid, Item } from 'reflex'
 import { Root, getMarginSelect, loremIpsum } from '../core'
 import styles from '../core/stories.css'
 
@@ -14,6 +14,16 @@ export default function() {
 
   return (
     <Root>
+      <Grid margin="horizontal">
+        <Item size={12}>
+          <h1>Default (No Padding)</h1>
+        </Item>
+        <Grid size={6} {...params} className={styles.colors2}>
+          <Item size={12} className={styles.colors3}>
+            {text}
+          </Item>
+        </Grid>
+      </Grid>
       <Grid margin="horizontal">
         <Item size={6}>
           <h1>Top Right Padding</h1>
@@ -49,18 +59,8 @@ export default function() {
             {text}
           </Item>
         </Grid>
-        <Grid size={6} className={styles.colors2}>
-          <Item size={12} {...params} className={styles.colors3} padding="all">
-            {text}
-          </Item>
-        </Grid>
-      </Grid>
-      <Grid margin="horizontal">
-        <Item size={12}>
-          <h1>No Padding / Item No Padding</h1>
-        </Item>
         <Grid size={6} {...params} className={styles.colors2}>
-          <Item size={12} className={styles.colors3}>
+          <Item size={12} className={styles.colors3} padding="all">
             {text}
           </Item>
         </Grid>

@@ -8,12 +8,12 @@ Flexbox React 12-column layout system
 
 ## Demo
 
-Check out the build [here](https://obartra.github.io/reflex)
+Check out the demo [here](https://obartra.github.io/reflex). It contains usage examples and mocked page layouts.
 
 ## Setup
 
 ```bash
-yarn && yarn start
+yarn && yarn build && yarn start
 ```
 
 And then open `localhost:9001`

@@ -3057,6 +3057,30 @@ exports[`Storyshots Grid Padding 1`] = `
           className="margin singleSize rightMargin leftMargin grid"
         >
           <div
+            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
+          >
+            <h1>
+              Default (No Padding)
+            </h1>
+          </div>
+          <div
+            className="noMargin colors2 col col-6 grid"
+          >
+            <div
+              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
+            >
+              <div
+                className="colors1"
+              >
+                test-file-stub
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="margin singleSize rightMargin leftMargin grid"
+        >
+          <div
             className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-6 col"
           >
             <h1>
@@ -3144,8 +3168,6 @@ exports[`Storyshots Grid Padding 1`] = `
           >
             <div
               className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
-              itemMargin={undefined}
-              itemMarginSize={undefined}
             >
               <div
                 className="padding grid single top right bottom left"
@@ -3155,30 +3177,6 @@ exports[`Storyshots Grid Padding 1`] = `
                 >
                   test-file-stub
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="margin singleSize rightMargin leftMargin grid"
-        >
-          <div
-            className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin col-12 col"
-          >
-            <h1>
-              No Padding / Item No Padding
-            </h1>
-          </div>
-          <div
-            className="noMargin colors2 col col-6 grid"
-          >
-            <div
-              className="margin singleSize topMargin rightMargin bottomMargin leftMargin margin colors3 col-12 col"
-            >
-              <div
-                className="colors1"
-              >
-                test-file-stub
               </div>
             </div>
           </div>

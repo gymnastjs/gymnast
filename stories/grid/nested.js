@@ -2,7 +2,7 @@
 import React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
-import { Grid, Item } from '../../src'
+import { Grid, Item } from 'reflex'
 import styles from '../core/stories.css'
 import { Box, Root, getPositionSelect, getMarginSelect } from '../core'
 

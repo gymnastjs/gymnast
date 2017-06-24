@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { times } from 'lodash'
-import { Grid, Layout } from '../../src'
+import { Grid, Layout } from 'reflex'
 import { Box, getMarginSelect } from '../core'
 
 export default function() {

@@ -38,6 +38,7 @@ fi
 git config user.email "$USER@reflex.ci" && git config user.name "Reflex CI ($BRANCH)"
 
 # Build StoryBook in the `../temp` folder
+yarn build
 ./node_modules/.bin/build-storybook -c storybook -s ./stories/static -o $TEMP_PATH
 
 # Copy circle.yml to ensure last config is used

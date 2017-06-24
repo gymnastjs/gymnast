@@ -32,6 +32,15 @@
     "react/jsx-filename-extension": 0,
     "react/require-default-props": 0,
     "import/no-extraneous-dependencies": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": [
+          "reflex"
+        ]
+      }
+    ],
     "flowtype/define-flow-type": 2
   }
 }

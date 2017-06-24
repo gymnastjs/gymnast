@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid, Layout } from '../../src'
+import { Grid, Layout } from 'reflex'
 import { Box } from '../core'
 import styles from './layout.css'
 
