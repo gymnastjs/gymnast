@@ -2,7 +2,7 @@
 import React from 'react'
 import { times } from 'lodash'
 import { number, boolean } from '@storybook/addon-knobs'
-import { Grid, Layout } from '../../src'
+import { Grid, Layout } from 'reflex'
 import { Box, getMarginSelect } from '../core'
 
 export default function() {

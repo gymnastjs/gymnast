@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Grid, Item, Layout } from '../../src'
+import { Grid, Item, Layout } from 'reflex'
 import { loremIpsum } from '../core'
 import styles from './layout.css'
 

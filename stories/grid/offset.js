@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { Grid } from '../../src'
+import { Grid } from 'reflex'
 import { Root, Box } from '../core'
 
 export default function() {

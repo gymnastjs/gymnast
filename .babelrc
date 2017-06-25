@@ -1,4 +1,53 @@
 {
-  "presets": ["es2015", "react"],
-  "plugins": ["transform-object-rest-spread", "transform-class-properties"]
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "plugins": [
+    "flow-react-proptypes",
+    "lodash",
+    "transform-object-rest-spread",
+    "transform-class-properties"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "module-alias",
+          [
+            {
+              "src": "./dist/reflex",
+              "expose": "reflex"
+            }
+          ]
+        ]
+      ]
+    },
+    "development": {
+      "plugins": [
+        [
+          "module-alias",
+          [
+            {
+              "src": "./dist/reflex",
+              "expose": "reflex"
+            }
+          ]
+        ]
+      ]
+    },
+    "test": {
+      "plugins": [
+        [
+          "module-alias",
+          [
+            {
+              "src": "./src/index",
+              "expose": "reflex"
+            }
+          ]
+        ]
+      ]
+    }
+  }
 }

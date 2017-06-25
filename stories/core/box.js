@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid, ItemHOC } from '../../src'
+import { Grid, ItemHOC } from 'reflex'
 import styles from './stories.css'
 import type { ItemSize } from '../../src/types'
 
@@ -13,21 +13,15 @@ const typeMap = {
 class Box extends React.PureComponent {
   static displayName = 'Box'
 
-  static defaultProps = {
-    style: undefined,
-    value: undefined,
-  }
-
   props: {
     type: 'A' | 'B' | 'C' | 'D',
     style?: Object,
-    children: any,
+    children?: any,
     value?: ItemSize,
   }
 
   render() {
     const { type, value = type, children, style, ...props } = this.props
-
     return (
       <div {...props}>
         <div className={styles[`box${typeMap[type]}`]} style={style}>

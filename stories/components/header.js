@@ -2,7 +2,7 @@
 import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Item, Layout } from '../../src'
+import { Grid, Item, Layout } from 'reflex'
 import { Box } from '../core'
 
 export default function() {

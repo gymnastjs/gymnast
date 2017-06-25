@@ -1,8 +1,11 @@
 {
-  "name": "flex",
-  "version": "1.0.0",
+  "name": "reflex",
+  "version": "0.0.0-semantically-released",
   "description": "Flexbox React 12-column layout system",
-  "main": "index.js",
+  "module": "src/index.js",
+  "main": "dist/reflex.js",
+  "browser": "dist/reflex.js",
+  "homepage": "https://obartra.github.io/reflex",
   "repository": {
     "type": "git",
     "url": "https://github.com/obartra/reflex"
@@ -13,22 +16,31 @@
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
+    "@bubltechnology/customizable-commit-analyzer": "1.0.2-0",
+    "@storybook/addon-knobs": "3.1.5",
+    "@storybook/addon-notes": "3.1.5",
     "@storybook/addon-storyshots": "3.1.5",
+    "@storybook/react": "3.1.5",
     "all-contributors-cli": "4.3.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
+    "babel-plugin-flow-react-proptypes": "3.4.0",
+    "babel-plugin-lodash": "3.2.11",
+    "babel-plugin-module-alias": "1.6.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "clean-webpack-plugin": "0.1.16",
     "commitizen": "2.9.6",
+    "condition-circle": "1.5.0",
     "css-loader": "0.28.4",
     "cz-conventional-changelog": "2.0.0",
-    "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-prettier": "2.2.0",
     "eslint-plugin-flowtype": "2.34.0",
     "eslint-plugin-import": "2.5.0",
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-react": "7.1.0",
+    "eslint": "3.19.0",
     "flow-bin": "0.48.0",
     "html-loader": "0.4.5",
     "husky": "0.13.4",
@@ -49,9 +61,13 @@
     "react-test-renderer": "15.6.1",
     "regenerator-runtime": "0.10.5",
     "screener-storybook": "0.7.11",
+    "semantic-release-cli": "3.0.3",
+    "semantic-release": "6.3.6",
     "storybook-addon-jsx": "4.1.1",
     "style-loader": "0.18.2",
-    "stylelint": "7.11.1"
+    "stylelint": "7.11.1",
+    "webpack-bundle-analyzer": "2.8.2",
+    "webpack": "3.0.0"
   },
   "lint-staged": {
     "*.{js,css}": [
@@ -61,14 +77,15 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.css$": "identity-obj-proxy",
-      "^.+\\.(md|txt)$": "<rootDir>/test/stringStub.js"
+      "^.+[.]css$": "identity-obj-proxy",
+      "^.+[.](md|txt)$": "<rootDir>/test/stringStub.js"
     },
     "testMatch": [
       "**/?(*.)spec.js"
     ]
   },
   "scripts": {
+    "build": "webpack --config scripts/webpack.config.js -p",
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:gen": "all-contributors generate",
@@ -79,19 +96,22 @@
     "lint:js": "eslint src stories storybook",
     "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",
-    "start": "start-storybook -p 9001 -s ./stories/static -c storybook",
-    "test:unit": "jest",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "start:storybook": "start-storybook -p 9001 -s ./stories/static -c storybook",
+    "start:webpack": "yarn build -- --watch",
+    "start": "npm-run-all --parallel start:*",
     "test:image": "screener-storybook --conf screener.config.js",
+    "test:unit": "jest",
     "test": "npm-run-all --parallel test:*"
   },
+  "release": {
+    "verifyConditions": "condition-circle",
+    "analyzeCommits": "@bubltechnology/customizable-commit-analyzer"
+  },
   "dependencies": {
-    "@storybook/addon-knobs": "3.1.5",
-    "@storybook/addon-notes": "3.1.5",
-    "@storybook/react": "3.1.5",
     "lodash": "4.17.4",
     "prop-types": "15.5.10",
-    "react": "15.6.1",
-    "react-dom": "15.6.1"
+    "react": "15.6.1"
   },
   "config": {
     "commitizen": {

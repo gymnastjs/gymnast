@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid, Item, Layout } from '../../src'
+import { Grid, Item, Layout } from 'reflex'
 import { Box, loremIpsum } from '../core'
 import { colors1, colors2 } from '../core/stories.css'
 import styles from './report.css'
