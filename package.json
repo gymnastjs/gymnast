@@ -1,5 +1,5 @@
 {
-  "name": "reflex",
+  "name": "@obartra/reflex",
   "version": "0.0.0-semantically-released",
   "description": "Flexbox React 12-column layout system",
   "module": "src/index.js",
