@@ -6,11 +6,22 @@
 
 Flexbox React 12-column layout system
 
+## Install
+
+To get the library that exports `Item`, `Grid` and `Layout`, run:
+
+```bash
+yarn add @obartra/reflex
+
+```
+
+Note that `React` and `PropTypes` are dependencies of the generated bundle.
+
 ## Demo
 
 Check out the demo [here](https://obartra.github.io/reflex). It contains usage examples and mocked page layouts.
 
-## Setup
+## Development
 
 ```bash
 yarn && yarn build && yarn start
