@@ -12,6 +12,7 @@ dependencies:
     - node_modules
   override:
     - yarn
+    - yarn build
 test:
   override:
     - scripts/citests.sh:
@@ -22,6 +23,8 @@ deployment:
     branch: master
     commands:
       - ./scripts/deploystorybook.sh
+      - git checkout $CIRCLE_SHA1
+      - ./scripts/deploynpm.sh
   dev:
     branch: /^(?!.*(master|gh-pages)).+$/
     commands:
