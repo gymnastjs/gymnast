@@ -13,15 +13,17 @@ export default class Padding extends React.PureComponent {
 
   props: {
     children?: React$Element<any>,
+    className?: string,
     direction?: string | void,
     size?: MarginSizes,
   }
 
   render() {
-    const { direction, size, children } = this.props
+    const { direction, className, size, children } = this.props
     const classes = compact([
-      styles.padding,
+      className,
       grid,
+      styles.padding,
       styles[size],
       ...getSides(direction).map(dir => styles[dir]),
     ]).join(' ')

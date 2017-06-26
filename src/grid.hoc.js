@@ -70,15 +70,17 @@ export default function Grid(Component: any) {
       } = this.props
       const classes = compact([
         ...(root ? [] : getMarginClasses(margin, marginSize)),
-        align && styles[`${align}Align`],
         className,
-        justify && styles[`${justify}Justify`],
         offset && styles[`colOffset-${offset}`],
         root && styles.root,
         size && styles.col,
         size && styles[`col-${String(size)}`],
         styles.grid,
-      ]).join(' ')
+      ])
+      const offsetClasses = compact([
+        align && styles[`${align}Align`],
+        justify && styles[`${justify}Justify`],
+      ])
 
       if (root && getSides(margin).length) {
         log.error('"root" grids cannot have margins', margin)
@@ -88,10 +90,15 @@ export default function Grid(Component: any) {
           '"Grid" (unlike "Item") cannot simultaneously have size and offset'
         )
       }
+
       if (padding) {
         return (
-          <Component {...props} className={classes}>
-            <Padding direction={padding} size={paddingSize}>
+          <Component {...props} className={classes.join(' ')}>
+            <Padding
+              direction={padding}
+              size={paddingSize}
+              className={offsetClasses.join(' ')}
+            >
               {children}
             </Padding>
           </Component>
@@ -99,7 +106,10 @@ export default function Grid(Component: any) {
       }
 
       return (
-        <Component {...props} className={classes}>
+        <Component
+          {...props}
+          className={[...classes, ...offsetClasses].join(' ')}
+        >
           {children}
         </Component>
       )
