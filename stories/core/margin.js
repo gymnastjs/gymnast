@@ -9,7 +9,7 @@ const sizeMap = {
 
 const marginMap = {
   Default: undefined,
-  Horizontal: [0, 0.5],
+  Horizontal: [0, 1],
   None: [],
   Vertical: [0, 0, 1],
 }

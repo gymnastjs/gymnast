@@ -8,20 +8,20 @@ import { Box, Root, getPositionSelect, getMarginSelect } from '../core'
 import { horizontal } from '../core/marginTypes'
 
 export default function() {
-  const paddingOptions = [
-    'none',
-    'all',
-    'horizontal',
-    'vertical',
-    'top left',
-    'bottom',
-  ]
+  const paddingMap = {
+    None: [],
+    All: [1],
+    Horizontal: [0, 1],
+    Vertical: [1, 0],
+    'Top Left': [1, 0, 0, 1],
+    Bottom: [0, 0, 1],
+  }
+  const paddingOptions = Object.keys(paddingMap)
   const items = number('Items', 6, { range: true, min: 1, max: 24 })
-  const { margin: itemMargin, marginSize: itemMarginSize } = getMarginSelect()
+  const { margin: itemMargin } = getMarginSelect()
   const params = {
     itemMargin,
-    itemMarginSize,
-    padding: select('Padding', paddingOptions),
+    padding: paddingMap[select('Padding', paddingOptions)],
     ...getPositionSelect(),
   }
   const height = {

@@ -2628,11 +2628,9 @@ exports[`Storyshots Grid Nested 1`] = `
         >
           <div
             className="colors2 col col-12 grid"
-            itemMarginSize={undefined}
           >
             <div
               className="colors1 col col-6 grid"
-              itemMarginSize={undefined}
               style={
                 Object {
                   "height": 150,
@@ -2641,7 +2639,6 @@ exports[`Storyshots Grid Nested 1`] = `
             >
               <div
                 className="colors3 col col-6 grid"
-                itemMarginSize={undefined}
               >
                 <div
                   className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing margin center colors4 col-6 col"
@@ -2664,7 +2661,6 @@ exports[`Storyshots Grid Nested 1`] = `
         >
           <div
             className="colors2 col col-12 grid"
-            itemMarginSize={undefined}
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing margin colOffset-3 col-6 col"
@@ -2725,7 +2721,6 @@ exports[`Storyshots Grid Nested 1`] = `
           >
             <div
               className="colors2 col col-12 grid"
-              itemMarginSize={undefined}
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing margin col-2 col"

@@ -62,4 +62,20 @@ describe('getSpacingClasses', () => {
       'leftDoubleSpacing',
     ])
   })
+
+  it('should validate all permutations', () => {
+    const sizes = [0, 0.5, 1, 2]
+
+    sizes.forEach(top => {
+      sizes.forEach(right => {
+        sizes.forEach(bottom => {
+          sizes.forEach(left => {
+            expect(
+              getSpacingClasses([top, right, bottom, left])
+            ).toMatchSnapshot()
+          })
+        })
+      })
+    })
+  })
 })

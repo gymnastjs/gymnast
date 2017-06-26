@@ -7,7 +7,7 @@ import style from './spacing.css'
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
-const stringify = param => JSON.stringify(param)
+const { stringify } = JSON
 
 /* eslint-disable no-console */
 export const log = {
