@@ -4,6 +4,7 @@ import { boolean } from '@storybook/addon-knobs'
 import { Grid, Item, Layout } from 'reflex'
 import { loremIpsum } from '../core'
 import styles from './layout.css'
+import { top, horizontalHalf } from '../core/marginTypes'
 
 export default function() {
   const includeText = boolean('Show text', false)
@@ -18,7 +19,7 @@ export default function() {
       <Layout type="parent" className={styles.main}>
         <Layout className={styles.top}>
           <Grid root>
-            <Grid itemMargin="horizontal">
+            <Grid itemMargin={horizontalHalf}>
               <Item size={6} offset={2}>
                 <input type="text" placeholder="Some search here" />
               </Item>
@@ -30,7 +31,7 @@ export default function() {
         </Layout>
         <Layout type="stretch">
           <Grid root className={styles.content}>
-            <Grid align="top" padding="top">
+            <Grid align="top" padding={top}>
               <Item size={12}>
                 <h2>Content</h2>
               </Item>

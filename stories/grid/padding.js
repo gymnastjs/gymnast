@@ -3,6 +3,15 @@ import React from 'react'
 import { Grid, Item } from 'reflex'
 import { Root, getMarginSelect, loremIpsum } from '../core'
 import styles from '../core/stories.css'
+import {
+  all,
+  bottom,
+  horizontal,
+  none,
+  top,
+  topRight,
+  xBottom,
+} from '../core/marginTypes'
 
 export default function() {
   const params = getMarginSelect()
@@ -14,8 +23,8 @@ export default function() {
 
   return (
     <Root>
-      <Grid margin="horizontal">
-        <Item size={12} margin="none">
+      <Grid margin={horizontal}>
+        <Item size={12} margin={none}>
           <h1>Default (No Padding)</h1>
         </Item>
         <Grid size={6} {...params} className={styles.colors2}>
@@ -24,104 +33,99 @@ export default function() {
           </Item>
         </Grid>
       </Grid>
-      <Grid margin="horizontal">
-        <Item size={6} margin="none">
+      <Grid margin={horizontal}>
+        <Item size={6} margin={none}>
           <h1>Top Right Padding</h1>
         </Item>
-        <Item size={6} margin="none">
+        <Item size={6} margin={none}>
           <h1>Item Top Right Padding</h1>
         </Item>
         <Grid
           size={6}
           {...params}
           className={styles.colors2}
-          padding="top right"
+          padding={topRight}
         >
           <Item size={12} className={styles.colors3}>
             {text}
           </Item>
         </Grid>
         <Grid size={6} {...params} className={styles.colors2}>
-          <Item size={12} className={styles.colors3} padding="top right">
+          <Item size={12} className={styles.colors3} padding={topRight}>
             {text}
           </Item>
         </Grid>
       </Grid>
-      <Grid margin="horizontal">
-        <Item size={6} margin="none">
+      <Grid margin={horizontal}>
+        <Item size={6} margin={none}>
           <h1>All-sides Padding</h1>
         </Item>
-        <Item size={6} margin="none">
+        <Item size={6} margin={none}>
           <h1>Item All-sides Padding</h1>
         </Item>
-        <Grid size={6} {...params} className={styles.colors2} padding="all">
+        <Grid size={6} {...params} className={styles.colors2} padding={all}>
           <Item size={12} className={styles.colors3}>
             {text}
           </Item>
         </Grid>
         <Grid size={6} {...params} className={styles.colors2}>
-          <Item size={12} className={styles.colors3} padding="all">
+          <Item size={12} className={styles.colors3} padding={all}>
             {text}
           </Item>
         </Grid>
       </Grid>
-      <Grid margin="horizontal">
-        <Item size={6} margin="none">
+      <Grid margin={horizontal}>
+        <Item size={6} margin={none}>
           <h1>Bottom Padding</h1>
         </Item>
-        <Item size={6} margin="none">
+        <Item size={6} margin={none}>
           <h1>Item Bottom Padding</h1>
         </Item>
-        <Grid size={6} {...params} className={styles.colors2} padding="bottom">
+        <Grid size={6} {...params} className={styles.colors2} padding={bottom}>
           <Item size={12} className={styles.colors3}>
             {text}
           </Item>
         </Grid>
         <Grid size={6} {...params} className={styles.colors2}>
-          <Item size={12} className={styles.colors3} padding="bottom">
+          <Item size={12} className={styles.colors3} padding={bottom}>
             {text}
           </Item>
         </Grid>
       </Grid>
-      <Grid margin="horizontal">
-        <Item size={6} margin="none">
+      <Grid margin={horizontal}>
+        <Item size={6} margin={none}>
           <h1>Top-Right-Left Padding</h1>
         </Item>
-        <Item size={6} margin="none">
+        <Item size={6} margin={none}>
           <h1>Item Top-Right-Left Padding</h1>
         </Item>
-        <Grid
-          size={6}
-          {...params}
-          className={styles.colors2}
-          padding="horizontal top"
-        >
+        <Grid size={6} {...params} className={styles.colors2} padding={xBottom}>
           <Item size={12} className={styles.colors3}>
             {text}
           </Item>
         </Grid>
         <Grid size={6} {...params} className={styles.colors2}>
-          <Item size={12} className={styles.colors3} padding="horizontal top">
+          <Item size={12} className={styles.colors3} padding={xBottom}>
             {text}
           </Item>
         </Grid>
       </Grid>
 
-      <Grid margin="horizontal">
-        <Item size={12} margin="none">
+      <Grid margin={horizontal}>
+        <Item size={12} margin={none}>
           <h1>With Justify / Alignment</h1>
         </Item>
-        <Item size={6} margin="none">
+        <Item size={6} margin={none}>
           <h2>Container Padding</h2>
         </Item>
-        <Item size={6} margin="none">
+        <Item size={6} margin={none}>
           <h2>Item Padding</h2>
         </Item>
         <Grid
           size={6}
           {...params}
           className={styles.colors2}
-          padding="top"
+          padding={top}
           justify="center"
           align="middle"
           style={{ height: 300 }}
@@ -141,7 +145,7 @@ export default function() {
           <Item
             size={12}
             className={styles.colors3}
-            padding="top"
+            padding={top}
             style={{ maxWidth: 200 }}
           >
             {text}

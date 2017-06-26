@@ -1,12 +1,21 @@
 // @flow
-import { uniq, memoize } from 'lodash'
-import type { Component, IndividualSides, MarginSizes } from './types'
-import marginStyle from './margin.css'
+import { memoize, compact } from 'lodash'
+import type { Spacing, Component } from './types'
+import style from './spacing.css'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
+const { stringify } = JSON
+
+/* eslint-disable no-console */
+export const log = {
+  error: isProd ? noop : console.error.bind(console),
+  warn: isProd ? noop : console.warn.bind(console),
+  info: isProd ? noop : console.log.bind(console),
+}
+/* eslint-enable no-console */
 
 export function getDisplayName(WrappedComponent: string | Component): string {
   const defaultName = 'Component'
@@ -18,59 +27,57 @@ export function getDisplayName(WrappedComponent: string | Component): string {
   return WrappedComponent || defaultName
 }
 
-const individualSides = ['top', 'right', 'bottom', 'left']
-const sideMaps = {
-  horizontal: ['right', 'left'],
-  vertical: ['top', 'bottom'],
-  all: individualSides,
-  none: [],
+function getSizeName(size: number) {
+  switch (size) {
+    case 0:
+      return ''
+    case 0.5:
+      return 'Half'
+    case 1:
+      return 'Single'
+    case 2:
+      return 'Double'
+    default:
+      throw new Error(
+        `Invalid size number. Valid values are: 0, 0.5, 1 and 2. ${size} provided`
+      )
+  }
 }
 
-export function getSides(sides?: string = ''): Array<IndividualSides> {
-  const allSides = sides.split(' ').reduce((acc, current) => {
-    if (individualSides.includes(current)) {
-      return [...acc, current]
-    } else if (current in sideMaps) {
-      return [...acc, ...sideMaps[current]]
-    }
-    return acc
-  }, [])
+function getSpacing(spacings: Spacing = []): Array<string> {
+  const size = spacings.map(getSizeName)
+  const directions = ['top', 'right', 'bottom', 'left']
+  let allSizes = []
 
-  return uniq(allSides)
-}
-
-const marginSizeClasses = {
-  none: marginStyle.noSize,
-  half: marginStyle.halfSize,
-  single: marginStyle.singleSize,
-  double: marginStyle.doubleSize,
-}
-
-function getMarginClassesRaw(
-  margin?: string,
-  marginSize?: MarginSizes
-): Array<string | void> {
-  const sides = getSides(margin).map(
-    direction => marginStyle[`${direction}Margin`]
-  )
-  const size = marginSize && marginSizeClasses[marginSize]
-
-  if (!sides.length) {
-    return [marginStyle.noMargin]
+  switch (size.length) {
+    case 0:
+      break
+    case 1:
+      allSizes = [size[0], size[0], size[0], size[0]]
+      break
+    case 2:
+      allSizes = [size[0], size[1], size[0], size[1]]
+      break
+    case 3:
+      allSizes = [size[0], size[1], size[2], size[1]]
+      break
+    default:
+      allSizes = size
+      break
   }
 
-  return [marginStyle.margin, size, ...sides]
+  return compact(
+    allSizes.map(
+      (current, index) =>
+        current && style[`${directions[index]}${current}Spacing`]
+    )
+  )
 }
 
-export const getMarginClasses = memoize(
-  getMarginClassesRaw,
-  (margin, marginSize) => `${margin}${marginSize}`
-)
+export const getSpacingClasses = memoize(getSpacing, stringify)
 
-/* eslint-disable no-console */
-export const log = {
-  error: isProd ? noop : console.error.bind(console),
-  warn: isProd ? noop : console.warn.bind(console),
-  info: isProd ? noop : console.log.bind(console),
+function hasSidesRaw(spacing: Spacing): boolean {
+  return getSpacing(spacing).length > 0
 }
-/* eslint-enable no-console */
+
+export const hasSides = memoize(hasSidesRaw, stringify)

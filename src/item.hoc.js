@@ -2,8 +2,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import { getDisplayName, getMarginClasses } from './utils'
-import type { ItemSize, AlignItem, Justify, Offset, MarginSizes } from './types'
+import { getDisplayName, getSpacingClasses } from './utils'
+import type { ItemSize, AlignItem, Justify, Spacing, Offset } from './types'
 import Padding from './padding'
 import styles from './gridItem.css'
 
@@ -15,11 +15,9 @@ export default function Item(Component: any) {
       className?: string,
       grid?: boolean,
       justify?: Justify,
-      margin?: string,
-      marginSize?: MarginSizes,
+      margin?: Spacing,
       offset?: Offset,
-      padding?: string,
-      paddingSize?: MarginSizes,
+      padding?: Spacing,
       size?: ItemSize,
     }
 
@@ -29,8 +27,7 @@ export default function Item(Component: any) {
     }
 
     static contextTypes = {
-      margin: PropTypes.string,
-      marginSize: PropTypes.string,
+      margin: PropTypes.arrayOf(PropTypes.oneOf([0, 0.5, 1, 2])),
     }
 
     render() {
@@ -41,16 +38,14 @@ export default function Item(Component: any) {
         grid,
         justify,
         margin = this.context.margin,
-        marginSize = this.context.marginSize,
         offset,
         padding,
-        paddingSize,
         size,
         ...props
       } = this.props
       const classes = compact([
-        ...getMarginClasses(margin, marginSize),
-        (margin || marginSize) && styles.margin,
+        ...getSpacingClasses(margin),
+        margin && styles.margin,
         align && styles[align],
         className,
         grid && styles.grid,
@@ -63,7 +58,7 @@ export default function Item(Component: any) {
       if (padding) {
         return (
           <Component {...props} className={classes}>
-            <Padding direction={padding} size={paddingSize}>
+            <Padding direction={padding}>
               {children}
             </Padding>
           </Component>

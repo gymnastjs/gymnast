@@ -5,7 +5,7 @@ import { Grid, Layout } from 'reflex'
 import { Box, getMarginSelect } from '../core'
 
 export default function() {
-  const { itemMargin, itemMarginSize, margin, marginSize } = getMarginSelect(
+  const { itemMargin, margin } = getMarginSelect(
     'Yellow Item Margin',
     'Yellow Item Margin Size',
     'All Items Margins',
@@ -17,17 +17,11 @@ export default function() {
   return (
     <Layout type="parent">
       <Grid root>
-        <Grid itemMargin={itemMargin} itemMarginSize={itemMarginSize}>
+        <Grid itemMargin={itemMargin}>
           {times(6, getBox)}
 
           {times(2, getBox)}
-          <Box
-            size={4}
-            type="C"
-            value="Item"
-            margin={margin}
-            marginSize={marginSize}
-          />
+          <Box size={4} type="C" value="Item" margin={margin} />
           {times(2, getBox)}
 
           {times(6, getBox)}

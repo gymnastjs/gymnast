@@ -4,6 +4,7 @@ import { boolean } from '@storybook/addon-knobs'
 import { Grid, Item, Layout } from 'reflex'
 import { loremIpsum } from '../core'
 import styles from './layout.css'
+import { top, horizontal, horizontalHalf } from '../core/marginTypes'
 
 export default function() {
   const includeText = boolean('Show text', false)
@@ -17,12 +18,12 @@ export default function() {
       </Layout>
       <Layout type="stretch" className={styles.main}>
         <Grid root>
-          <Grid size={12} margin="horizontal">
+          <Grid size={12} margin={horizontalHalf}>
             <Grid
               size={2}
               className={styles.nav}
-              padding="top"
-              margin="horizontal"
+              padding={top}
+              margin={horizontal}
             >
               <Item size={12}>
                 <h2>Nav</h2>
@@ -32,8 +33,8 @@ export default function() {
               size={8}
               className={styles.content}
               align="top"
-              padding="top"
-              margin="horizontal"
+              padding={top}
+              margin={horizontal}
             >
               <Item size={12}>
                 <h2>Content</h2>
@@ -45,8 +46,8 @@ export default function() {
             <Grid
               size={2}
               className={styles.ads}
-              padding="top"
-              margin="horizontal"
+              padding={top}
+              margin={horizontal}
             >
               <Item size={12}>
                 <h2>Ads</h2>

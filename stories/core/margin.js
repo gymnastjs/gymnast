@@ -1,23 +1,30 @@
 // @flow
 import { select } from '@storybook/addon-knobs'
 
-const marginSizeMap = {
-  Default: undefined,
-  Double: 'double',
-  Half: 'half',
+const sizeMap = {
+  Default: 1,
+  Double: 2,
+  Half: 0.5,
 }
 
 const marginMap = {
   Default: undefined,
-  Horizontal: 'horizontal',
-  None: 'none',
-  Vertical: 'vertical',
+  Horizontal: [0, 1],
+  None: [],
+  Vertical: [0, 0, 1],
 }
 
 const marginOptions = ['Default', 'Horizontal', 'None', 'Vertical']
 const marginDefault = 'Default'
 const marginSizeOptions = ['Default', 'Double', 'Half']
 const marginSizeDefault = 'Default'
+
+function getMargin(margin, size) {
+  if (typeof marginMap[margin] === 'undefined') {
+    return undefined
+  }
+  return marginMap[margin].map(value => sizeMap[size] * value)
+}
 
 export default function getMarginSelect(
   marginTitle: string = 'Margin',
@@ -39,9 +46,7 @@ export default function getMarginSelect(
   )
 
   return {
-    margin: marginMap[marginStr],
-    marginSize: marginSizeMap[marginSizeStr],
-    itemMargin: marginMap[itemMarginStr],
-    itemMarginSize: marginSizeMap[itemMarginSizeStr],
+    margin: getMargin(marginStr, marginSizeStr),
+    itemMargin: getMargin(itemMarginStr, itemMarginSizeStr),
   }
 }

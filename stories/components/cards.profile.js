@@ -3,6 +3,7 @@ import React from 'react'
 import { Grid, Item } from '../../src'
 import { Root } from '../core'
 import styles from '../core/stories.css'
+import { all, none, bottom, xBottom } from '../core/marginTypes'
 
 export default function() {
   return (
@@ -11,19 +12,19 @@ export default function() {
         <Item size={12}><h1>User Profile</h1></Item>
 
         <Grid size={12} align="stretch">
-          <Grid size={4} margin="all">
+          <Grid size={4} margin={all}>
             <Grid size={12} className={styles.colors2}>
-              <Item margin="none">Full Bleed</Item>
+              <Item margin={none}>Full Bleed</Item>
             </Grid>
           </Grid>
 
-          <Grid size={8} margin="all">
-            <Grid margin="bottom">
+          <Grid size={8} margin={all}>
+            <Grid margin={bottom}>
               <Grid
                 size={12}
                 className={styles.colors2}
-                padding="top right left"
-                itemMargin="right bottom"
+                padding={xBottom}
+                itemMargin={[0, 0.5, 1, 0]}
               >
                 <Item size={6}><h2>Title</h2></Item>
                 <Item size={3} offset={3}>Note</Item>
@@ -43,8 +44,8 @@ export default function() {
             <Grid
               size={12}
               className={styles.colors2}
-              padding="top left right"
-              itemMargin="right bottom"
+              padding={xBottom}
+              itemMargin={[0, 0.5, 1, 0]}
             >
               <Item size={6}>Text1</Item>
               <Item size={6}>Text2</Item>

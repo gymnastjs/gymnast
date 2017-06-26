@@ -3,6 +3,7 @@ import React from 'react'
 import { Grid, Layout } from 'reflex'
 import { Box } from '../core'
 import styles from './layout.css'
+import { top } from '../core/marginTypes'
 
 const SIZE = {
   TALL: { height: 200 },
@@ -20,7 +21,7 @@ export default function() {
           </Grid>
         </Layout>
         <Layout className={styles.subheader}>
-          <Grid root padding="top">
+          <Grid root padding={top}>
             <Box size={2} type="D" />
             <Box size={2} type="D" />
             <Box size={2} type="D" />
