@@ -1,49 +1,65 @@
-import { getSides } from './utils'
+import { hasSides, getSpacingClasses } from './utils'
 
-describe('getSides', () => {
-  it('should not crash when no parameters are passed', () => {
-    expect(getSides()).toEqual([])
+describe('hasSides', () => {
+  it('should return false no parameters are passed', () => {
+    expect(hasSides()).toEqual(false)
   })
 
-  it('should return an empty array when no sides are set', () => {
-    expect(getSides('')).toEqual([])
+  it('should return false when an empty array is passed', () => {
+    expect(hasSides([])).toEqual(false)
   })
 
-  it('should return an empty array when "none" is set', () => {
-    expect(getSides('none')).toEqual([])
+  it('should return false when all values are 0', () => {
+    expect(hasSides([0])).toEqual(false)
+    expect(hasSides([0, 0])).toEqual(false)
+    expect(hasSides([0, 0, 0])).toEqual(false)
+    expect(hasSides([0, 0, 0, 0])).toEqual(false)
   })
 
-  it('should convert "all" to all directions', () => {
-    const all = getSides('all')
+  it('should return true for all other case', () => {
+    expect(hasSides([1, 0])).toEqual(true)
+    expect(hasSides([0, 0.5])).toEqual(true)
+    expect(hasSides([0, 0, 0, 0.5])).toEqual(true)
+  })
+})
 
-    expect(all.includes('top')).toBeTruthy()
-    expect(all.includes('right')).toBeTruthy()
-    expect(all.includes('bottom')).toBeTruthy()
-    expect(all.includes('left')).toBeTruthy()
+describe('getSpacingClasses', () => {
+  it('should no expand 0 values', () => {
+    expect(getSpacingClasses([0])).toEqual([])
   })
 
-  it('should convert "vertical" to top/bottom directions', () => {
-    const all = getSides('vertical')
-
-    expect(all.includes('top')).toBeTruthy()
-    expect(all.includes('bottom')).toBeTruthy()
+  it('should expand single values', () => {
+    expect(getSpacingClasses([0.5])).toEqual([
+      'topHalfSpacing',
+      'rightHalfSpacing',
+      'bottomHalfSpacing',
+      'leftHalfSpacing',
+    ])
   })
 
-  it('should convert "horizontal" to left/right directions', () => {
-    const all = getSides('horizontal')
-
-    expect(all.includes('left')).toBeTruthy()
-    expect(all.includes('right')).toBeTruthy()
+  it('should use top/bottom and left/right when there are 2 values', () => {
+    expect(getSpacingClasses([1, 2])).toEqual([
+      'topSingleSpacing',
+      'rightDoubleSpacing',
+      'bottomSingleSpacing',
+      'leftDoubleSpacing',
+    ])
   })
 
-  describe('Behavior documented by padding.md', () => {
-    it('should ignore sizes that have less sides than already defined, regardless of order', () => {
-      expect(getSides('none all')).toEqual(getSides('all'))
-      expect(getSides('all none')).toEqual(getSides('all'))
-    })
+  it('should use right value for left when there are 3 values', () => {
+    expect(getSpacingClasses([0.5, 1, 2])).toEqual([
+      'topHalfSpacing',
+      'rightSingleSpacing',
+      'bottomDoubleSpacing',
+      'leftSingleSpacing',
+    ])
+  })
 
-    it('should treat vertical top the same than vertical)', () => {
-      expect(getSides('vertical top')).toEqual(getSides('vertical'))
-    })
+  it('should ignore 0 values', () => {
+    expect(getSpacingClasses([0, 0.5, 1, 2])).toEqual([
+      'rightHalfSpacing',
+      'bottomSingleSpacing',
+      'leftDoubleSpacing',
+    ])
   })
 })

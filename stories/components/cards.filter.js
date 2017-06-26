@@ -3,6 +3,17 @@ import React from 'react'
 import { Grid, Item } from '../../src'
 import { Root, loremIpsum } from '../core'
 import styles from '../core/stories.css'
+import {
+  all,
+  bottom,
+  bottomHalf,
+  horizontal,
+  horizontalHalf,
+  none,
+  top,
+  verticalHalf,
+  xBottom,
+} from '../core/marginTypes'
 
 export default function() {
   function ListItem({ index }: { index: number }) {
@@ -10,9 +21,8 @@ export default function() {
       <Grid
         size={12}
         className={index % 2 ? styles.colors1 : styles.colors4}
-        padding={index === 0 ? 'bottom' : 'top bottom'}
-        paddingSize="half"
-        itemMargin="none"
+        padding={index === 0 ? bottomHalf : verticalHalf}
+        itemMargin={none}
       >
         <Item size={6}>
           Selected Item Name
@@ -29,30 +39,25 @@ export default function() {
         <Item size={12}><h1>Filter List</h1></Item>
 
         <Grid size={12} align="stretch" justify="center">
-          <Grid size={6} margin="all">
-            <Grid margin="bottom">
+          <Grid size={6} margin={all}>
+            <Grid margin={bottom}>
               <Grid
                 size={12}
                 className={styles.colors1}
-                padding="top right left"
-                itemMargin="right bottom"
+                padding={xBottom}
+                itemMargin={[0, 0.5, 1, 0]}
               >
                 <Item size={9}><h2>Title</h2></Item>
-                <Item size={3} align="right" margin="none">X</Item>
+                <Item size={3} align="right" margin={none}>X</Item>
               </Grid>
               <Grid
                 size={12}
                 className={styles.colors4}
-                padding="top"
-                margin="right left"
+                padding={top}
+                margin={horizontalHalf}
               >
 
-                <Item
-                  size={12}
-                  margin="horizontal"
-                  padding="bottom"
-                  paddingSize="half"
-                >
+                <Item size={12} margin={horizontalHalf} padding={bottomHalf}>
                   Filter by...
                 </Item>
                 <Item size={6}><input type="text" /></Item>
@@ -60,9 +65,8 @@ export default function() {
               <Grid
                 size={12}
                 className={styles.colors2}
-                padding="top"
-                margin="right left"
-                marginSize="double"
+                padding={top}
+                margin={horizontal}
               >
                 <ListItem index={0} />
                 <ListItem index={1} />
@@ -70,13 +74,13 @@ export default function() {
                 <ListItem index={3} />
                 <ListItem index={4} />
 
-                <Item size={12} margin="none">
+                <Item size={12} margin={none}>
                   <p>{loremIpsum.substr(0, 100)}</p>
                 </Item>
-                <Item size={4} margin="right bottom">
+                <Item size={4} margin={[0, 0.5, 1, 0]}>
                   <button>Cancel</button>
                 </Item>
-                <Item size={4} margin="left bottom">
+                <Item size={4} margin={[0, 0, 1, 0.5]}>
                   <button>Filter</button>
                 </Item>
               </Grid>

@@ -2,8 +2,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import { getDisplayName, getMarginClasses } from './utils'
-import type { MarginSizes, Overflow, Fixed, LayoutType } from './types'
+import { getDisplayName, getSpacingClasses } from './utils'
+import type { Overflow, Fixed, Spacing, LayoutType } from './types'
 import styles from './layout.css'
 
 function getLayout(layout: LayoutType): string {
@@ -42,43 +42,28 @@ export default function Layout(Component: any) {
     props: {
       className?: String,
       fixed?: Fixed,
-      margin?: string,
-      marginSize?: MarginSizes,
+      margin?: Spacing,
       overflow?: Overflow,
       type?: LayoutType,
     }
 
-    static defaultProps = {
-      marginSize: 'none',
-    }
-
     static childContextTypes = {
-      margin: PropTypes.string,
-      marginSize: PropTypes.string,
+      margin: PropTypes.arrayOf(PropTypes.oneOf([0, 0.5, 1, 2])),
     }
 
     getChildContext() {
       return {
-        margin: 'all',
-        marginSize: 'single',
+        margin: [0, 0.5, 1],
       }
     }
 
     render() {
-      const {
-        className,
-        fixed,
-        margin,
-        marginSize,
-        overflow,
-        type,
-        ...props
-      } = this.props
+      const { className, fixed, margin, overflow, type, ...props } = this.props
       const classes = compact([
         className,
         getFixed(fixed),
         getLayout(type),
-        ...getMarginClasses(margin, marginSize),
+        ...getSpacingClasses(margin),
         getOverflow(overflow),
         styles.layout,
       ])

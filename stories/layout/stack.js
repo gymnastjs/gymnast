@@ -5,6 +5,7 @@ import { number } from '@storybook/addon-knobs'
 import { Grid, Layout, Item } from 'reflex'
 import { Box } from '../core'
 import style from './layout.css'
+import { item, horizontalHalf } from '../core/marginTypes'
 
 function getStaticSection(index) {
   return (
@@ -14,7 +15,7 @@ function getStaticSection(index) {
           size={12}
           type="C"
           value={`Section ${index + 1}`}
-          margin="horizontal"
+          margin={horizontalHalf}
         />
       </Grid>
     </Layout>
@@ -24,7 +25,7 @@ function getStaticSection(index) {
 function getContainerSection(index, subsections) {
   return (
     <Layout key={index} type="parent" overflow="scrollbars">
-      <Grid root align="top" itemMargin="vertical">
+      <Grid root align="top" itemMargin={item}>
         {times(subsections, i =>
           <Grid key={i}>
             <Item size={12}><h1>SubSection {i + 1}</h1></Item>

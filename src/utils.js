@@ -1,12 +1,21 @@
 // @flow
-import { uniq, memoize } from 'lodash'
-import type { Component, IndividualSides, MarginSizes } from './types'
-import marginStyle from './margin.css'
+import { memoize, compact } from 'lodash'
+import type { Spacing, Component } from './types'
+import style from './spacing.css'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
+const stringify = param => JSON.stringify(param)
+
+/* eslint-disable no-console */
+export const log = {
+  error: isProd ? noop : console.error.bind(console),
+  warn: isProd ? noop : console.warn.bind(console),
+  info: isProd ? noop : console.log.bind(console),
+}
+/* eslint-enable no-console */
 
 export function getDisplayName(WrappedComponent: string | Component): string {
   const defaultName = 'Component'
@@ -18,59 +27,63 @@ export function getDisplayName(WrappedComponent: string | Component): string {
   return WrappedComponent || defaultName
 }
 
-const individualSides = ['top', 'right', 'bottom', 'left']
-const sideMaps = {
-  horizontal: ['right', 'left'],
-  vertical: ['top', 'bottom'],
-  all: individualSides,
-  none: [],
-}
-
-export function getSides(sides?: string = ''): Array<IndividualSides> {
-  const allSides = sides.split(' ').reduce((acc, current) => {
-    if (individualSides.includes(current)) {
-      return [...acc, current]
-    } else if (current in sideMaps) {
-      return [...acc, ...sideMaps[current]]
-    }
-    return acc
-  }, [])
-
-  return uniq(allSides)
-}
-
-const marginSizeClasses = {
-  none: marginStyle.noSize,
-  half: marginStyle.halfSize,
-  single: marginStyle.singleSize,
-  double: marginStyle.doubleSize,
-}
-
-function getMarginClassesRaw(
-  margin?: string,
-  marginSize?: MarginSizes
-): Array<string | void> {
-  const sides = getSides(margin).map(
-    direction => marginStyle[`${direction}Margin`]
-  )
-  const size = marginSize && marginSizeClasses[marginSize]
-
-  if (!sides.length) {
-    return [marginStyle.noMargin]
+function getSizeName(size: number) {
+  switch (size) {
+    case 0:
+      return ''
+    case 0.5:
+      return 'Half'
+    case 1:
+      return 'Single'
+    case 2:
+      return 'Double'
+    default:
+      throw new Error(
+        `Invalid size number. Valid values are: 0, 0.5, 1 and 2. ${size} provided`
+      )
   }
-
-  return [marginStyle.margin, size, ...sides]
 }
 
-export const getMarginClasses = memoize(
-  getMarginClassesRaw,
-  (margin, marginSize) => `${margin}${marginSize}`
-)
+function getSpacing(spacings: Spacing = []): Array<string> {
+  const size = spacings.map(getSizeName)
 
-/* eslint-disable no-console */
-export const log = {
-  error: isProd ? noop : console.error.bind(console),
-  warn: isProd ? noop : console.warn.bind(console),
-  info: isProd ? noop : console.log.bind(console),
+  switch (size.length) {
+    case 0:
+      return []
+    case 1:
+      return compact(
+        ['top', 'right', 'bottom', 'left'].map(
+          dir => size[0] && style[`${dir}${size[0]}Spacing`]
+        )
+      )
+    case 2:
+      return compact([
+        size[0] && style[`top${size[0]}Spacing`],
+        size[1] && style[`right${size[1]}Spacing`],
+        size[0] && style[`bottom${size[0]}Spacing`],
+        size[1] && style[`left${size[1]}Spacing`],
+      ])
+    case 3:
+      return compact([
+        size[0] && style[`top${size[0]}Spacing`],
+        size[1] && style[`right${size[1]}Spacing`],
+        size[2] && style[`bottom${size[2]}Spacing`],
+        size[1] && style[`left${size[1]}Spacing`],
+      ])
+    default:
+      return compact([
+        size[0] && style[`top${size[0]}Spacing`],
+        size[1] && style[`right${size[1]}Spacing`],
+        size[2] && style[`bottom${size[2]}Spacing`],
+        size[3] && style[`left${size[3]}Spacing`],
+      ])
+  }
 }
-/* eslint-enable no-console */
+
+export const getSpacingClasses = memoize(getSpacing, stringify)
+
+function hasSidesRaw(spacing: Spacing): boolean {
+  return getSpacing(spacing).length > 0
+}
+
+export const hasSides = memoize(hasSidesRaw, stringify)

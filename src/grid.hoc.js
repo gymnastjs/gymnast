@@ -2,8 +2,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import { getDisplayName, getSides, getMarginClasses, log } from './utils'
-import type { AlignGrid, Justify, Offset, Size, MarginSizes } from './types'
+import { getDisplayName, getSpacingClasses, hasSides, log } from './utils'
+import type { AlignGrid, Justify, Offset, Size, Spacing } from './types'
 import Padding from './padding'
 import styles from './gridItem.css'
 
@@ -11,14 +11,11 @@ export type Props = {
   align?: AlignGrid,
   children?: Element | Array<Element>,
   className?: string,
-  itemMargin?: string,
-  itemMarginSize?: MarginSizes,
+  itemMargin?: Spacing,
   justify?: Justify,
-  margin?: string,
-  marginSize?: MarginSizes,
+  margin?: Spacing,
   offset?: Offset,
-  padding?: string,
-  paddingSize?: MarginSizes,
+  padding?: Spacing,
   root?: boolean,
   size?: Size,
 }
@@ -28,26 +25,22 @@ export default function Grid(Component: any) {
     props: Props
 
     static defaultProps = {
-      margin: 'none',
-      marginSize: 'single',
+      margin: [],
       offset: 0,
       root: false,
     }
 
     static childContextTypes = {
-      margin: PropTypes.string,
-      marginSize: PropTypes.string,
+      margin: PropTypes.arrayOf(PropTypes.oneOf([0, 0.5, 1, 2])),
     }
 
     static contextTypes = {
-      margin: PropTypes.string,
-      marginSize: PropTypes.string,
+      margin: PropTypes.arrayOf(PropTypes.oneOf([0, 0.5, 1, 2])),
     }
 
     getChildContext() {
       return {
         margin: this.props.itemMargin || this.context.margin,
-        marginSize: this.props.itemMarginSize || this.context.marginSize,
       }
     }
 
@@ -57,19 +50,16 @@ export default function Grid(Component: any) {
         children,
         className,
         itemMargin,
-        itemMarginSize,
         justify,
         margin = this.context.margin,
-        marginSize = this.context.marginSize,
         offset,
         padding,
-        paddingSize,
         root,
         size,
         ...props
       } = this.props
       const classes = compact([
-        ...(root ? [] : getMarginClasses(margin, marginSize)),
+        ...(root ? [] : getSpacingClasses(margin)),
         className,
         offset && styles[`colOffset-${offset}`],
         root && styles.root,
@@ -82,8 +72,8 @@ export default function Grid(Component: any) {
         justify && styles[`${justify}Justify`],
       ])
 
-      if (root && getSides(margin).length) {
-        log.error('"root" grids cannot have margins', margin)
+      if (root && hasSides(margin)) {
+        log.error('"root" grids cannot have margins')
       }
       if (size && offset) {
         log.error(
@@ -94,11 +84,7 @@ export default function Grid(Component: any) {
       if (padding) {
         return (
           <Component {...props} className={classes.join(' ')}>
-            <Padding
-              direction={padding}
-              size={paddingSize}
-              className={offsetClasses.join(' ')}
-            >
+            <Padding direction={padding} className={offsetClasses.join(' ')}>
               {children}
             </Padding>
           </Component>

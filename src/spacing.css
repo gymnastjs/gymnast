@@ -1,0 +1,53 @@
+@import "./variables";
+
+.noSpacing {
+  padding: 0;
+}
+
+.topHalfSpacing {
+  padding-top: calc(var(--vertical-gutter) / 2);
+}
+
+.leftHalfSpacing {
+  padding-left: calc(var(--gutter) / 2);
+}
+
+.rightHalfSpacing {
+  padding-right: calc(var(--gutter) / 2);
+}
+
+.bottomHalfSpacing {
+  padding-bottom: calc(var(--vertical-gutter) / 2);
+}
+
+.topSingleSpacing {
+  padding-top: var(--vertical-gutter);
+}
+
+.leftSingleSpacing {
+  padding-left: var(--gutter);
+}
+
+.rightSingleSpacing {
+  padding-right: var(--gutter);
+}
+
+.bottomSingleSpacing {
+  padding-bottom: var(--vertical-gutter);
+}
+
+.topDoubleSpacing {
+  padding-top: calc(var(--vertical-gutter) * 2);
+}
+
+.leftDoubleSpacing {
+  padding-left: calc(var(--gutter) * 2);
+}
+
+.rightDoubleSpacing {
+  padding-right: calc(var(--gutter) * 2);
+}
+
+.bottomDoubleSpacing {
+  padding-bottom: calc(var(--vertical-gutter) * 2);
+}

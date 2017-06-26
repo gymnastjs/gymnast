@@ -17,7 +17,7 @@ class Box extends React.PureComponent {
     type: 'A' | 'B' | 'C' | 'D',
     style?: Object,
     children?: any,
-    value?: ItemSize,
+    value?: ItemSize | void,
   }
 
   render() {

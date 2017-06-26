@@ -4,6 +4,14 @@ import { Grid, Item, Layout } from 'reflex'
 import { Box, loremIpsum } from '../core'
 import { colors1, colors2 } from '../core/stories.css'
 import styles from './report.css'
+import {
+  bottom,
+  horizontal,
+  horizontalHalf,
+  right,
+  top,
+  vertical,
+} from '../core/marginTypes'
 
 function P(props) {
   return (
@@ -34,25 +42,25 @@ export default function() {
     <Layout type="parent" className={styles.report}>
       <Layout fixed="top">
         <Layout className={styles.header}>
-          <Grid root padding="top bottom">
-            <Item size={12} margin="horizontal"><h1>Header</h1></Item>
+          <Grid root padding={vertical}>
+            <Item size={12} margin={horizontalHalf}><h1>Header</h1></Item>
           </Grid>
         </Layout>
         <Layout className={styles.subheader}>
-          <Grid root itemMargin="horizontal" padding="top">
+          <Grid root itemMargin={horizontalHalf} padding={top}>
             <Item size={12}><h2>Subheader</h2></Item>
             <Grid size={10}>
-              <Item margin="right" marginSize="double" size="fit">
-                <Box type="C" padding="horizontal">Lorem</Box>
+              <Item margin={right} size="fit">
+                <Box type="C" padding={horizontal}>Lorem</Box>
               </Item>
-              <Item margin="right" marginSize="double" size="fit">
-                <Box size="fit" type="C" padding="horizontal">ipsum</Box>
+              <Item margin={right} size="fit">
+                <Box size="fit" type="C" padding={horizontal}>ipsum</Box>
               </Item>
-              <Item margin="right" marginSize="double" size="fit">
-                <Box size="fit" type="C" padding="horizontal">dolor</Box>
+              <Item margin={right} size="fit">
+                <Box size="fit" type="C" padding={horizontal}>dolor</Box>
               </Item>
-              <Item margin="right" marginSize="double" size="fit">
-                <Box size="fit" type="C" padding="horizontal">
+              <Item margin={right} size="fit">
+                <Box size="fit" type="C" padding={horizontal}>
                   sit amet, consectetur
                 </Box>
               </Item>
@@ -65,7 +73,7 @@ export default function() {
         <Layout type="stretch">
           <Grid root>
             <Grid align="stretch">
-              <Grid size={1} className={styles.nav} align="top" padding="top">
+              <Grid size={1} className={styles.nav} align="top" padding={top}>
                 <Item size={12}>
                   <ul>
                     <li>Item 1</li>
@@ -81,7 +89,7 @@ export default function() {
                 size={7}
                 className={styles.content}
                 align="top"
-                padding="top"
+                padding={top}
               >
                 <P>Text A</P>
                 <Card height={140}>First Block</Card>
@@ -99,21 +107,15 @@ export default function() {
                 <Card>Ok last one</Card>
                 <P>{loremIpsum.substr(0, 250)}...</P>
               </Grid>
-              <Grid
-                size={4}
-                className={styles.clippy}
-                padding="horizontal"
-                paddingSize="half"
-              >
+              <Grid size={4} className={styles.clippy} padding={horizontalHalf}>
                 <Grid
                   size={12}
                   align="top"
-                  className={` ${colors1}`}
-                  padding="top"
-                  margin="horizontal"
-                  marginSize="double"
+                  className={colors1}
+                  padding={top}
+                  margin={horizontal}
                 >
-                  <Item margin="vertical">
+                  <Item margin={bottom}>
                     Side bar
                   </Item>
                 </Grid>
