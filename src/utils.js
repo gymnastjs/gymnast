@@ -46,38 +46,32 @@ function getSizeName(size: number) {
 
 function getSpacing(spacings: Spacing = []): Array<string> {
   const size = spacings.map(getSizeName)
+  const directions = ['top', 'right', 'bottom', 'left']
+  let allSizes = []
 
   switch (size.length) {
     case 0:
-      return []
+      break
     case 1:
-      return compact(
-        ['top', 'right', 'bottom', 'left'].map(
-          dir => size[0] && style[`${dir}${size[0]}Spacing`]
-        )
-      )
+      allSizes = [size[0], size[0], size[0], size[0]]
+      break
     case 2:
-      return compact([
-        size[0] && style[`top${size[0]}Spacing`],
-        size[1] && style[`right${size[1]}Spacing`],
-        size[0] && style[`bottom${size[0]}Spacing`],
-        size[1] && style[`left${size[1]}Spacing`],
-      ])
+      allSizes = [size[0], size[1], size[0], size[1]]
+      break
     case 3:
-      return compact([
-        size[0] && style[`top${size[0]}Spacing`],
-        size[1] && style[`right${size[1]}Spacing`],
-        size[2] && style[`bottom${size[2]}Spacing`],
-        size[1] && style[`left${size[1]}Spacing`],
-      ])
+      allSizes = [size[0], size[1], size[2], size[1]]
+      break
     default:
-      return compact([
-        size[0] && style[`top${size[0]}Spacing`],
-        size[1] && style[`right${size[1]}Spacing`],
-        size[2] && style[`bottom${size[2]}Spacing`],
-        size[3] && style[`left${size[3]}Spacing`],
-      ])
+      allSizes = size
+      break
   }
+
+  return compact(
+    allSizes.map(
+      (current, index) =>
+        current && style[`${directions[index]}${current}Spacing`]
+    )
+  )
 }
 
 export const getSpacingClasses = memoize(getSpacing, stringify)
