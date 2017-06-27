@@ -49,15 +49,6 @@
     align-items: flex-end;
   }
 
-  /*&.stretchAlign > .col {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &.stretchAlign > .col > *, &.stretchAlign > .grid > .col > * {
-    flex: 1 0 100%;
-  }*/
-
   &.col-fit {
     flex-basis: 0;
     white-space: nowrap;
@@ -78,32 +69,5 @@
 @for $i from 0 to 11 {
   .colOffset-$(i) {
     margin-left: calc($i / 12 * 100%);
-  }
-}
-
-/* TODO: is this needed? */
-.col {
-  &.selfTop {
-    align-self: flex-start;
-  }
-
-  &.middle {
-    align-self: center;
-  }
-
-  &.bottom {
-    align-self: flex-end;
-  }
-
-  &.left {
-    text-align: left;
-  }
-
-  &.center {
-    text-align: center;
-  }
-
-  &.right {
-    text-align: right;
   }
 }
