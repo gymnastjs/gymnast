@@ -6,6 +6,7 @@ machine:
 general:
   artifacts:
     - "dist"
+    - "coverage"
     - test/screenshot/images
   branches:
     ignore:
