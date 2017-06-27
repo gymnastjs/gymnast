@@ -6,7 +6,7 @@ engines:
     enabled: true
   stylelint:
     enabled: true
- shellcheck:
+  shellcheck:
     enabled: true
 ratings:
   paths:
