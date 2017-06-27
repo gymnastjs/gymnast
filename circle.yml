@@ -1,6 +1,8 @@
 machine:
   node:
     version: 8.1.2
+  environment:
+    MAGIC_URL: $(./scripts/url.sh)
 general:
   artifacts:
     - "dist"
@@ -12,6 +14,7 @@ dependencies:
   cache_directories:
     - node_modules
   override:
+    - echo "$MAGIC_URL"
     - yarn
     - yarn build
 test:
