@@ -1,0 +1,23 @@
+
+engines:
+  eslint:
+    enabled: true
+    channel: "eslint-3"
+  fixme:
+    enabled: true
+  stylelint:
+    enabled: true
+ shellcheck:
+    enabled: true
+ratings:
+  paths:
+  - "**.sh"
+  - "**.css"
+  - "**.js"
+  - "src/*"
+  - "src/**/*"
+  - "test/*"
+  - "test/**/*"
+  - "stories/*"
+  - "stories/**/*"
+  - "scripts/*"

@@ -4,6 +4,7 @@ machine:
 general:
   artifacts:
     - "dist"
+    - "coverage"
   branches:
     ignore:
       - gh-pages
