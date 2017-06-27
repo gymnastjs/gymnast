@@ -4,45 +4,54 @@ import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
 import { Root, Box, getMarginSelect } from '../core'
+import { item } from '../core/marginTypes'
 
 export default function() {
   const items = number('Items', 0, { range: true, min: 0, max: 5 })
-  const margin = getMarginSelect()
+  const margin = getMarginSelect(undefined, 'Horizontal')
 
   return (
     <Root>
-      <h1>Auto Size</h1>
+      <Grid margin={item}>
+        <h1>Auto Size</h1>
+      </Grid>
       {times(9, size =>
-        <Grid {...margin} key={size}>
+        <Grid margin={margin} key={size}>
           {times(size + items, i =>
-            <Box key={i} type="A" value={`1 / ${size + items}`} />
+            <Box size="auto" key={i} type="A" value={`1 / ${size + items}`} />
           )}
         </Grid>
       )}
 
-      <h1>8 - auto</h1>
-      <Grid {...margin}>
+      <Grid margin={item}>
+        <h1>8 - auto</h1>
+      </Grid>
+      <Grid margin={margin}>
         <Box size={8} type="A" value="8" />
-        <Box type="A" value="12 - 8 = 4" />
+        <Box size="auto" type="A" value="12 - 8 = 4" />
       </Grid>
 
-      <h1>6 - 1/2 - 1/2</h1>
-      <Grid {...margin}>
+      <Grid margin={item}>
+        <h1>6 - 1/2 - 1/2</h1>
+      </Grid>
+      <Grid margin={margin}>
         <Box size={6} type="A" value="6" />
-        <Box type="A" value="(12 - 6) / 2 = 3" />
-        <Box type="A" value="(12 - 6) / 2 = 3" />
+        <Box size="auto" type="A" value="(12 - 6) / 2 = 3" />
+        <Box size="auto" type="A" value="(12 - 6) / 2 = 3" />
       </Grid>
 
-      <h1>Custom</h1>
-      <Grid {...margin}>
+      <Grid margin={item}>
+        <h1>Custom</h1>
+      </Grid>
+      <Grid margin={margin}>
         {times(items, index =>
-          <Box key={index} type="A" value={`${index + 1}`} />
+          <Box size="auto" key={index} type="A" value={`${index + 1}`} />
         )}
       </Grid>
-      <Grid {...margin}>
+      <Grid margin={margin}>
         <Box size={6} type="A" value="6 (fixed)" />
         {times(items, index =>
-          <Box key={index} type="A" value={`${index + 2}`} />
+          <Box size="auto" key={index} type="A" value={`${index + 2}`} />
         )}
       </Grid>
     </Root>

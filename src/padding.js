@@ -2,7 +2,7 @@
 import React from 'react'
 import { compact } from 'lodash'
 import { getSpacingClasses } from './utils'
-import { grid } from './gridItem.css'
+import { grid } from './grid.css'
 import type { Spacing } from './types'
 
 export default class Padding extends React.PureComponent {

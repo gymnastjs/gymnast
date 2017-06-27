@@ -1,6 +1,5 @@
 // @flow
 import React from 'react'
-import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { getDisplayName, getSpacingClasses } from './utils'
 import type { Overflow, Fixed, Spacing, LayoutType } from './types'
@@ -45,16 +44,6 @@ export default function Layout(Component: any) {
       margin?: Spacing,
       overflow?: Overflow,
       type?: LayoutType,
-    }
-
-    static childContextTypes = {
-      margin: PropTypes.arrayOf(PropTypes.oneOf([0, 0.5, 1, 2])),
-    }
-
-    getChildContext() {
-      return {
-        margin: [0, 0.5, 1],
-      }
     }
 
     render() {

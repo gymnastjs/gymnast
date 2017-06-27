@@ -2,21 +2,20 @@
 import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Layout, Item } from 'reflex'
-import { Box } from '../core'
+import { Grid, Layout } from 'reflex'
 import style from './layout.css'
+import { colors3 } from '../core/stories.css'
 import { item, horizontalHalf } from '../core/marginTypes'
 
 function getStaticSection(index) {
   return (
     <Layout key={index}>
       <Grid root>
-        <Box
-          size={12}
-          type="C"
-          value={`Section ${index + 1}`}
-          margin={horizontalHalf}
-        />
+        <Grid margin={horizontalHalf}>
+          <Grid className={colors3} margin={horizontalHalf}>
+            <h1>{`Section ${index + 1}`}</h1>
+          </Grid>
+        </Grid>
       </Grid>
     </Layout>
   )
@@ -25,10 +24,10 @@ function getStaticSection(index) {
 function getContainerSection(index, subsections) {
   return (
     <Layout key={index} type="parent" overflow="scrollbars">
-      <Grid root align="top" itemMargin={item}>
+      <Grid root align="top">
         {times(subsections, i =>
           <Grid key={i}>
-            <Item size={12}><h1>SubSection {i + 1}</h1></Item>
+            <Grid margin={item} size={12}><h1>SubSection {i + 1}</h1></Grid>
           </Grid>
         )}
       </Grid>

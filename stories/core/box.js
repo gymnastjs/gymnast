@@ -1,8 +1,8 @@
 // @flow
 import React from 'react'
-import { Grid, ItemHOC } from 'reflex'
+import { Grid } from 'reflex'
 import styles from './stories.css'
-import type { ItemSize } from '../../src/types'
+import type { Spacing } from '../../src/types'
 
 const typeMap = {
   A: 1,
@@ -10,28 +10,38 @@ const typeMap = {
   C: 3,
   D: 4,
 }
-class Box extends React.PureComponent {
+export default class Box extends React.PureComponent {
   static displayName = 'Box'
 
   props: {
     type: 'A' | 'B' | 'C' | 'D',
     style?: Object,
     children?: any,
-    value?: ItemSize | void,
+    value?: string,
+    margin?: Spacing,
   }
 
   render() {
-    const { type, value = type, children, style, ...props } = this.props
+    const {
+      children,
+      margin = [0, 0.5, 1],
+      style,
+      type,
+      value = type,
+      ...props
+    } = this.props
     return (
-      <div {...props}>
-        <div className={styles[`box${typeMap[type]}`]} style={style}>
-          <Grid align="middle" justify="center">
-            {children || value}
-          </Grid>
-        </div>
-      </div>
+      <Grid margin={margin} {...props}>
+        <Grid
+          className={styles[`box${typeMap[type]}`]}
+          padding={[1, 0]}
+          align="middle"
+          justify="center"
+          style={style}
+        >
+          {children || value}
+        </Grid>
+      </Grid>
     )
   }
 }
-
-export default ItemHOC(Box)

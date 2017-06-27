@@ -1,109 +1,88 @@
 // @flow
 import React from 'react'
-import { Grid, Item } from '../../src'
+import { Grid } from '../../src'
 import { Root } from '../core'
-import { item, xItem, all, none, horizontalHalf } from '../core/marginTypes'
+import { item, all, xItem, none, horizontalHalf } from '../core/marginTypes'
 import styles from '../core/stories.css'
 
 export default function() {
   return (
     <Root>
       <Grid>
-        <Item size={12}><h1>Consistent Padding</h1></Item>
+        <Grid margin={item}><h1>Consistent Padding</h1></Grid>
 
-        <Grid size={3} margin={all}>
+        <Grid size={3} margin={horizontalHalf}>
           <Grid
-            size={12}
             className={styles.colors2}
             padding={xItem}
             margin={horizontalHalf}
           >
-            <Item className={styles.colors4}>
+            <Grid className={styles.colors4} margin={item}>
               All around padding
-            </Item>
+            </Grid>
           </Grid>
         </Grid>
-        <Grid size={3} margin={all}>
-          <Grid size={12} className={styles.colors2}>
-            <Item margin={none}>Full Bleed</Item>
+        <Grid size={3} margin={horizontalHalf}>
+          <Grid className={styles.colors2}>
+            <Grid>Full Bleed</Grid>
           </Grid>
         </Grid>
 
-        <Item size={12}><h1>Mixed Padding</h1></Item>
+        <Grid margin={all}><h1>Mixed Padding</h1></Grid>
 
         <Grid size={6} margin={item}>
-          <Grid
-            size={8}
-            className={styles.colors2}
-            padding={xItem}
-            itemMargin={item}
-          >
-            <Item>
+          <Grid size={8} className={styles.colors2} padding={xItem}>
+            <Grid margin={item}>
               Padding
-            </Item>
+            </Grid>
           </Grid>
           <Grid size={4} className={styles.colors4}>
-            <Item margin={none}>
+            <Grid margin={none}>
               No padding
-            </Item>
+            </Grid>
           </Grid>
         </Grid>
 
         <Grid size={6} margin={item}>
           <Grid size={4} className={styles.colors4}>
-            <Item margin={none}>
+            <Grid margin={none}>
               No padding
-            </Item>
+            </Grid>
           </Grid>
-          <Grid
-            size={4}
-            className={styles.colors2}
-            padding={xItem}
-            itemMargin={item}
-          >
-            <Item>
+          <Grid size={4} className={styles.colors2} padding={xItem}>
+            <Grid margin={item}>
               Padding
-            </Item>
+            </Grid>
           </Grid>
           <Grid size={4} className={styles.colors4}>
-            <Item margin={none}>
+            <Grid margin={none}>
               No padding
-            </Item>
+            </Grid>
           </Grid>
         </Grid>
 
         <Grid size={6} margin={item}>
           <Grid size={4} className={styles.colors4}>
-            <Item margin={none}>
+            <Grid margin={none}>
               No padding
-            </Item>
+            </Grid>
           </Grid>
-          <Grid
-            size={8}
-            className={styles.colors2}
-            padding={xItem}
-            itemMargin={item}
-          >
-            <Item>
+          <Grid size={8} className={styles.colors2} padding={xItem}>
+            <Grid margin={item}>
               Padding
-            </Item>
+            </Grid>
           </Grid>
         </Grid>
         <Grid size={6} margin={item}>
-          <Grid
-            size={12}
-            className={styles.colors2}
-            padding={xItem}
-            itemMargin={item}
-          >
-            <Item>
+          <Grid size={12} className={styles.colors2} padding={xItem}>
+            <Grid margin={item}>
               Padding
-            </Item>
+            </Grid>
           </Grid>
           <Grid size={12} className={styles.colors4}>
-            <Item margin={none}>
+            <Grid margin={none}>
               No padding
-            </Item>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

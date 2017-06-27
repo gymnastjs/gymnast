@@ -1,10 +1,10 @@
 // @flow
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Grid, Item, Layout } from 'reflex'
+import { Grid, Layout } from 'reflex'
 import { loremIpsum } from '../core'
 import styles from './layout.css'
-import { top, horizontalHalf } from '../core/marginTypes'
+import { item, vertical, horizontalHalf } from '../core/marginTypes'
 
 export default function() {
   const includeText = boolean('Show text', false)
@@ -13,38 +13,42 @@ export default function() {
     <Layout type="parent" className={styles.page}>
       <Layout className={styles.header} fixed="top">
         <Grid root>
-          <h1>Header</h1>
+          <Grid margin={horizontalHalf} size={12}>
+            <h1>Header</h1>
+          </Grid>
         </Grid>
       </Layout>
       <Layout type="parent" className={styles.main}>
         <Layout className={styles.top}>
           <Grid root>
-            <Grid itemMargin={horizontalHalf}>
-              <Item size={6} offset={2}>
+            <Grid>
+              <Grid margin={horizontalHalf} size={6} offset={2}>
                 <input type="text" placeholder="Some search here" />
-              </Item>
-              <Item size={2}>
+              </Grid>
+              <Grid margin={horizontalHalf} size={2}>
                 <button>Search</button>
-              </Item>
+              </Grid>
             </Grid>
           </Grid>
         </Layout>
         <Layout type="stretch">
           <Grid root className={styles.content}>
-            <Grid align="top" padding={top}>
-              <Item size={12}>
+            <Grid align="top" padding={vertical}>
+              <Grid margin={item}>
                 <h2>Content</h2>
-              </Item>
-              <Item size={12}>
+              </Grid>
+              <Grid margin={horizontalHalf}>
                 {includeText && <p>{loremIpsum}</p>}
-              </Item>
+              </Grid>
             </Grid>
           </Grid>
         </Layout>
       </Layout>
       <Layout className={styles.footer}>
         <Grid root>
-          <h1>Footer</h1>
+          <Grid margin={horizontalHalf} size={12}>
+            <h1>Footer</h1>
+          </Grid>
         </Grid>
       </Layout>
     </Layout>

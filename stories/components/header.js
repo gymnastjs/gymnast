@@ -2,8 +2,9 @@
 import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Item, Layout } from 'reflex'
+import { Grid, Layout } from 'reflex'
 import { Box } from '../core'
+import { item } from '../core/marginTypes'
 
 export default function() {
   const items = number('Items', 6, { range: true, min: 1, max: 6 })
@@ -28,9 +29,9 @@ export default function() {
       </Layout>
       <Layout type="parent">
         <Grid root>
-          <Item size={12}>
+          <Grid margin={item}>
             <h1>With Nested Grids</h1>
-          </Item>
+          </Grid>
           <Grid align="stretch">
             <Box size={2} type="A" value="Go Back" />
             <Box size={6} type="A">

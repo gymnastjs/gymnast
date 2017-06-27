@@ -9,7 +9,7 @@
   }
 
   & h1 {
-    margin: 10px;
+    margin: 10px 0;
   }
 
   /* header heights, hard coded offsets */
@@ -19,7 +19,7 @@
   }
 
   &.hasSubheader .main {
-    margin-top: 189px;
+    margin-top: 173px;
   }
 
   /* end of hard coded offsets */
