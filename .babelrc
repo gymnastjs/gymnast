@@ -14,12 +14,11 @@
       "plugins": [
         [
           "module-resolver",
-          [
-            {
-              "src": "./dist/reflex",
-              "expose": "reflex"
+          {
+            "alias": {
+              "reflex": "./dist/reflex"
             }
-          ]
+          }
         ]
       ]
     },
@@ -27,12 +26,11 @@
       "plugins": [
         [
           "module-resolver",
-          [
-            {
-              "src": "./dist/reflex",
-              "expose": "reflex"
+          {
+            "alias": {
+              "reflex": "./dist/reflex"
             }
-          ]
+          }
         ]
       ]
     },
@@ -40,12 +38,11 @@
       "plugins": [
         [
           "module-resolver",
-          [
-            {
-              "src": "./src/index",
-              "expose": "reflex"
+          {
+            "alias": {
+              "reflex": "./src/index"
             }
-          ]
+          }
         ]
       ]
     }

@@ -6,8 +6,6 @@ engines:
     enabled: true
   stylelint:
     enabled: true
-  shellcheck:
-    enabled: true
 ratings:
   paths:
   - "**.sh"
