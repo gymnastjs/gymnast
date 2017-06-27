@@ -13,39 +13,36 @@
     "production": {
       "plugins": [
         [
-          "module-alias",
-          [
-            {
-              "src": "./dist/reflex",
-              "expose": "reflex"
+          "module-resolver",
+          {
+            "alias": {
+              "reflex": "./dist/reflex"
             }
-          ]
+          }
         ]
       ]
     },
     "development": {
       "plugins": [
         [
-          "module-alias",
-          [
-            {
-              "src": "./dist/reflex",
-              "expose": "reflex"
+          "module-resolver",
+          {
+            "alias": {
+              "reflex": "./dist/reflex"
             }
-          ]
+          }
         ]
       ]
     },
     "test": {
       "plugins": [
         [
-          "module-alias",
-          [
-            {
-              "src": "./src/index",
-              "expose": "reflex"
+          "module-resolver",
+          {
+            "alias": {
+              "reflex": "./src/index"
             }
-          ]
+          }
         ]
       ]
     }
