@@ -26,7 +26,6 @@ test:
     - git checkout $CIRCLE_SHA1
     - yarn
   override:
-    - yarn
     - scripts/citests.sh:
         parallel: true
 deployment:
