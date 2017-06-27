@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { utils } from '../src'
 import { storyFolders, WithExtensions } from './core'
+import { getName } from '../getName'
 
 /**
  * storyFolders dynamically fetches all files within `/components`, `/grid` and `/layout`. Here we
@@ -32,24 +33,6 @@ function configStories(storiesOfName: string, storiesModule: typeof module) {
   return {
     add: addStoryWithJSX,
   }
-}
-
-function deKebab(text) {
-  return text
-    .replace(/([A-Z])/g, ' $1')
-    .split(' ')
-    .map((word = '') => {
-      const first = (word[0] || '').toUpperCase()
-
-      return `${first}${word.slice(1)}`
-    })
-    .join(' ')
-}
-
-function getName(path) {
-  const fileName = path.replace(/^.*[\\/]/, '').replace(/\.js$/, '')
-
-  return deKebab(fileName)
 }
 
 function getNote(path, notes) {

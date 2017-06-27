@@ -4,3 +4,8 @@ dist/
 coverage/
 yarn-error.log
 docs/
+test/screenshot/images/diffs
+test/screenshot/images/results
+tests_output/
+selenium-server-standalone-*
+nohup.out

@@ -21,23 +21,23 @@ fi
 # Ensure all required variables are defined
 DEFAULT_USERNAME='[unknown user]'
 DEFAULT_BRANCH='default'
-BASE_URL='https://obartra.github.io/reflex'
 USER=${CIRCLE_USERNAME:-$DEFAULT_USERNAME}
 BRANCH=${CIRCLE_BRANCH:-$DEFAULT_BRANCH}
 TEMP_PATH="$PWD/../temp"
 
 if [ "$CIRCLE_BRANCH" = 'master' ]; then
   TARGET_PATH='.'
-  TARGET_URL=$BASE_URL
 else
   TARGET_PATH="./branch/$BRANCH"
-  TARGET_URL="$BASE_URL/branch/$BRANCH"
 fi
+
+TARGET_URL=$(./scripts/getTargetUrl.sh)
 
 # Set git user
 git config user.email "$USER@reflex.ci" && git config user.name "Reflex CI ($BRANCH)"
 
 # Build StoryBook in the `../temp` folder
+yarn
 yarn build
 ./node_modules/.bin/build-storybook -c storybook -s ./stories/static -o $TEMP_PATH
 
@@ -48,8 +48,8 @@ cp .gitignore $TEMP_PATH
 
 # Switch to gh-pages branch
 git reset --hard HEAD
-git checkout -b gh-pages
 git fetch origin gh-pages
+git checkout gh-pages
 git reset --hard origin/gh-pages
 git clean -xdfq
 
@@ -69,7 +69,7 @@ mv ../temp/* $TARGET_PATH
 rm -rf $TEMP_PATH
 
 # Commit changes
-if [ -z $(git status --porcelain) ]; then
+if [ -z "$(git status --porcelain)" ]; then
   echo "Nothing to commit, everything is clean ✨"
 else
   git add -A -f
