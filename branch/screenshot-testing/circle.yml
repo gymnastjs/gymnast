@@ -4,6 +4,7 @@ machine:
 general:
   artifacts:
     - "dist"
+    - test/screenshot/images
   branches:
     ignore:
       - gh-pages
