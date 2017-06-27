@@ -1,0 +1,17 @@
+exclude:
+- /flow-typed/.*
+- /stories/.*
+- /storybook/.*
+component_depth: 2
+languages:
+- javascript
+
+- name: javascript
+  production:
+    exclude:
+      - .*\.spec\.js
+      - .*\/__snapshots__\/.*\.js
+  test:
+    include:
+      - .*\.spec\.js
+      - .*\/__snapshots__\/.*\.js
