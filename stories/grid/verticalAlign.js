@@ -4,6 +4,7 @@ import { times } from 'lodash'
 import { boolean, number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
 import { Root, Box } from '../core'
+import { item } from '../core/marginTypes'
 
 function ReferenceColumn({ height }: { height: number }) {
   return (
@@ -30,33 +31,27 @@ export default function() {
 
   return (
     <Root>
-      <h1>Item Align</h1>
-      <Grid align={stretch && 'stretch'}>
-        <ReferenceColumn height={height} />
-        <Box size={2} type="A" value="TOP" align="top" />
-        <Box size={2} type="A" value="MIDDLE" align="middle" />
-        <Box size={2} type="A" value="BOTTOM" align="bottom" />
-        <Box size={2} type="A" value="MIDDLE" align="middle" />
-        <Box size={2} type="C" value="DEFAULT" />
-        <ReferenceColumn height={height} />
+      <Grid margin={item}>
+        <h1>Item Align</h1>
       </Grid>
-      <h1>Grid Align</h1>
       <Grid>
-        <Grid size={4} align={stretch ? 'stretch' : 'top'} style={{ height }}>
+        <ReferenceColumn height={height} />
+        <Box size="auto" type="A" value="TOP" align="top" />
+        <Box size="auto" type="A" value="MIDDLE" align="middle" />
+        <Box size="auto" type="A" value="BOTTOM" align="bottom" />
+        <Box size="auto" type="A" value="DEFAULT" />
+      </Grid>
+      <Grid margin={item}>
+        <h1>Grid Align</h1>
+      </Grid>
+      <Grid>
+        <Grid size={4} align={!stretch && 'top'} style={{ height }}>
           {times(items, i => <Box size={12} key={i} type="C" value="TOP" />)}
         </Grid>
-        <Grid
-          size={4}
-          align={stretch ? 'stretch' : 'middle'}
-          style={{ height }}
-        >
+        <Grid size={4} align={!stretch && 'middle'} style={{ height }}>
           {times(items, i => <Box size={12} key={i} type="C" value="MIDDLE" />)}
         </Grid>
-        <Grid
-          size={4}
-          align={stretch ? 'stretch' : 'bottom'}
-          style={{ height }}
-        >
+        <Grid size={4} align={!stretch && 'bottom'} style={{ height }}>
           {times(items, i => <Box size={12} key={i} type="C" value="BOTTOM" />)}
         </Grid>
       </Grid>

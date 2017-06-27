@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Grid, Item, Layout } from 'reflex'
+import { Grid, Layout } from 'reflex'
 import { loremIpsum } from '../core'
 import styles from './layout.css'
 import { top, horizontal, horizontalHalf } from '../core/marginTypes'
@@ -13,7 +13,9 @@ export default function() {
     <Layout type="parent" className={styles.page}>
       <Layout className={styles.header} fixed="top">
         <Grid root>
-          <h1>Header</h1>
+          <Grid margin={horizontalHalf} size={12}>
+            <h1>Header</h1>
+          </Grid>
         </Grid>
       </Layout>
       <Layout type="stretch" className={styles.main}>
@@ -25,9 +27,9 @@ export default function() {
               padding={top}
               margin={horizontal}
             >
-              <Item size={12}>
+              <Grid size={12}>
                 <h2>Nav</h2>
-              </Item>
+              </Grid>
             </Grid>
             <Grid
               size={8}
@@ -36,12 +38,12 @@ export default function() {
               padding={top}
               margin={horizontal}
             >
-              <Item size={12}>
+              <Grid size={12}>
                 <h2>Content</h2>
-              </Item>
-              <Item size={12}>
+              </Grid>
+              <Grid size={12}>
                 {includeText && <p>{loremIpsum}</p>}
-              </Item>
+              </Grid>
             </Grid>
             <Grid
               size={2}
@@ -49,16 +51,18 @@ export default function() {
               padding={top}
               margin={horizontal}
             >
-              <Item size={12}>
+              <Grid size={12}>
                 <h2>Ads</h2>
-              </Item>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Layout>
       <Layout className={styles.footer}>
         <Grid root>
-          <h1>Footer</h1>
+          <Grid margin={horizontalHalf} size={12}>
+            <h1>Footer</h1>
+          </Grid>
         </Grid>
       </Layout>
     </Layout>

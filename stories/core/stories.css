@@ -14,7 +14,7 @@ section {
   margin-bottom: 20px;
 }
 
-h2, h3 {
+h1, h2, h3 {
   margin: 0;
   text-align: left;
 }
@@ -53,13 +53,6 @@ button {
 
 .box1, .box2, .box3, .box4 {
   cursor: default;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100%;
-  white-space: nowrap;
 }
 
 .colors1, .box1 {

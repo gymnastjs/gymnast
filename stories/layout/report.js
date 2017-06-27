@@ -1,23 +1,27 @@
 // @flow
 import React from 'react'
-import { Grid, Item, Layout } from 'reflex'
-import { Box, loremIpsum } from '../core'
-import { colors1, colors2 } from '../core/stories.css'
+import { Grid, Layout } from 'reflex'
+import { loremIpsum } from '../core'
+import { colors1, colors2, colors3 } from '../core/stories.css'
 import styles from './report.css'
 import {
   bottom,
   horizontal,
   horizontalHalf,
-  right,
+  xTopHalf,
+  rightHalf,
+  rightDouble,
   top,
+  item,
+  topHalf,
   vertical,
 } from '../core/marginTypes'
 
 function P(props) {
   return (
-    <Item size={12}>
+    <Grid size={12} margin={item}>
       <p {...props} />
-    </Item>
+    </Grid>
   )
 }
 
@@ -29,11 +33,11 @@ function Card({
   height?: number,
 }): React$Element<any> {
   return (
-    <Item size={12} style={{ height }}>
-      <div style={{ height: '100%' }} className={styles.card}>
+    <Grid style={{ height }} size={12} margin={item}>
+      <div style={{ height: '100%', width: '100%' }} className={styles.card}>
         <P>{children}</P>
       </div>
-    </Item>
+    </Grid>
   )
 }
 
@@ -43,38 +47,54 @@ export default function() {
       <Layout fixed="top">
         <Layout className={styles.header}>
           <Grid root padding={vertical}>
-            <Item size={12} margin={horizontalHalf}><h1>Header</h1></Item>
+            <Grid margin={horizontalHalf}><h1>Header</h1></Grid>
           </Grid>
         </Layout>
         <Layout className={styles.subheader}>
-          <Grid root itemMargin={horizontalHalf} padding={top}>
-            <Item size={12}><h2>Subheader</h2></Item>
-            <Grid size={10}>
-              <Item margin={right} size="fit">
-                <Box type="C" padding={horizontal}>Lorem</Box>
-              </Item>
-              <Item margin={right} size="fit">
-                <Box size="fit" type="C" padding={horizontal}>ipsum</Box>
-              </Item>
-              <Item margin={right} size="fit">
-                <Box size="fit" type="C" padding={horizontal}>dolor</Box>
-              </Item>
-              <Item margin={right} size="fit">
-                <Box size="fit" type="C" padding={horizontal}>
+          <Grid root padding={topHalf}>
+            <Grid margin={xTopHalf}><h2>Subheader</h2></Grid>
+            <Grid size={10} margin={horizontalHalf}>
+              <Grid margin={rightDouble} size="fit">
+                <Grid padding={top} className={colors3}>
+                  Lorem
+                </Grid>
+              </Grid>
+              <Grid margin={rightDouble} size="fit">
+                <Grid padding={top} className={colors3}>
+                  ipsum
+                </Grid>
+              </Grid>
+              <Grid margin={rightDouble} size="fit">
+                <Grid padding={top} className={colors3}>
+                  dolor
+                </Grid>
+              </Grid>
+              <Grid margin={rightDouble} size="fit">
+                <Grid padding={top} className={colors3}>
                   sit amet, consectetur
-                </Box>
-              </Item>
+                </Grid>
+              </Grid>
             </Grid>
-            <Box size={2} type="C" />
+            <Grid margin={rightHalf} size={2}>
+              <Grid padding={top} className={colors3}>
+                sit amet
+              </Grid>
+            </Grid>
           </Grid>
         </Layout>
       </Layout>
       <Layout type="parent" className={`${styles.main} ${colors2}`}>
         <Layout type="stretch">
           <Grid root>
-            <Grid align="stretch">
-              <Grid size={1} className={styles.nav} align="top" padding={top}>
-                <Item size={12}>
+            <Grid align="stretch" size={12}>
+              <Grid
+                size={1}
+                className={styles.nav}
+                align="top"
+                padding={top}
+                margin={horizontalHalf}
+              >
+                <Grid>
                   <ul>
                     <li>Item 1</li>
                     <li>Item 2</li>
@@ -83,7 +103,7 @@ export default function() {
                     <li>Item 5</li>
                     <li>Item 6</li>
                   </ul>
-                </Item>
+                </Grid>
               </Grid>
               <Grid
                 size={7}
@@ -115,9 +135,9 @@ export default function() {
                   padding={top}
                   margin={horizontal}
                 >
-                  <Item margin={bottom}>
+                  <Grid margin={bottom}>
                     Side bar
-                  </Item>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
@@ -125,7 +145,9 @@ export default function() {
         </Layout>
         <Layout className={styles.footer}>
           <Grid root>
-            <h1>Footer</h1>
+            <Grid margin={horizontalHalf} size={12}>
+              <h1>Footer</h1>
+            </Grid>
           </Grid>
         </Layout>
       </Layout>

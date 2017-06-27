@@ -2,10 +2,10 @@
 import React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
-import { Grid, Item } from 'reflex'
+import { Grid } from 'reflex'
 import styles from '../core/stories.css'
 import { Box, Root, getPositionSelect, getMarginSelect } from '../core'
-import { horizontal } from '../core/marginTypes'
+import { item } from '../core/marginTypes'
 
 export default function() {
   const paddingMap = {
@@ -18,9 +18,8 @@ export default function() {
   }
   const paddingOptions = Object.keys(paddingMap)
   const items = number('Items', 6, { range: true, min: 1, max: 24 })
-  const { margin: itemMargin } = getMarginSelect()
+  const margin = getMarginSelect()
   const params = {
-    itemMargin,
     padding: paddingMap[select('Padding', paddingOptions)],
     ...getPositionSelect(),
   }
@@ -30,30 +29,48 @@ export default function() {
 
   return (
     <Root>
-      <Item size={12}><h1>Nested Example</h1></Item>
-      <Grid size={12} margin={horizontal}>
+      <Grid size={12} margin={item}><h1>Nested Example</h1></Grid>
+      <Grid size={12} margin={item}>
         <Grid size={12} {...params} className={styles.colors2}>
-          <Grid size={6} {...params} className={styles.colors1} style={height}>
-            <Grid size={6} {...params} className={styles.colors3}>
-              <Item size={6} className={styles.colors4} align="center">A</Item>
+          <Grid
+            size={6}
+            {...params}
+            margin={margin}
+            className={styles.colors1}
+            style={height}
+          >
+            <Grid
+              size={6}
+              {...params}
+              margin={margin}
+              className={styles.colors3}
+            >
+              <Grid
+                size={6}
+                margin={margin}
+                className={styles.colors4}
+                align="center"
+              >
+                A
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
-      <Item size={12}><h1>With Offsets</h1></Item>
-      <Grid size={12} margin={horizontal}>
+      <Grid size={12} margin={item}><h1>With Offsets</h1></Grid>
+      <Grid size={12} margin={item}>
         <Grid size={12} {...params} className={styles.colors2}>
-          <Box size={6} offset={3} type="A" />
-          <Box size={4} type="A" />
-          <Box size={4} offset={4} type="A" />
+          <Box size={6} margin={margin} offset={3} type="A" />
+          <Box size={4} margin={margin} type="A" />
+          <Box size={4} margin={margin} offset={4} type="A" />
         </Grid>
       </Grid>
-      <Item size={12}><h1>With Overflow</h1></Item>
+      <Grid size={12} margin={item}><h1>With Overflow</h1></Grid>
       <Grid size={12}>
-        <Grid size={6} margin={horizontal}>
+        <Grid size={6} margin={item}>
           <Grid size={12} {...params} className={styles.colors2}>
             {times(items, index =>
-              <Box size={2} key={index} type="A">
+              <Box size={2} margin={margin} key={index} type="A">
                 {`${index * 2 % 12 + 2}`}
               </Box>
             )}
