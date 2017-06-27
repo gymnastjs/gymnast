@@ -13,7 +13,7 @@
     "production": {
       "plugins": [
         [
-          "module-alias",
+          "module-resolver",
           [
             {
               "src": "./dist/reflex",
@@ -26,7 +26,7 @@
     "development": {
       "plugins": [
         [
-          "module-alias",
+          "module-resolver",
           [
             {
               "src": "./dist/reflex",
@@ -39,7 +39,7 @@
     "test": {
       "plugins": [
         [
-          "module-alias",
+          "module-resolver",
           [
             {
               "src": "./src/index",
