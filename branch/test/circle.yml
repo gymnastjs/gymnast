@@ -2,7 +2,7 @@ machine:
   node:
     version: 8.1.2
   environment:
-    MAGIC_URL: "https://obartra.github.io/reflex$(\"$CIRCLE_BRANCH\" == \"master\" && echo \"\" || echo \"/branch/$CIRCLE_BRANCH\")"
+    MAGIC_URL: $(./scripts/url.sh)
 general:
   artifacts:
     - "dist"
