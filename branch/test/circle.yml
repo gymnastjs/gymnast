@@ -2,8 +2,7 @@ machine:
   node:
     version: 8.1.2
   environment:
-    MASTER_URL: "https://obartra.github.io/reflex"
-    BRANCH_URL: "$MASTER_URL/branch/$CIRCLE_BRANCH"
+    MAGIC_URL: "https://obartra.github.io/reflex$(\"$CIRCLE_BRANCH\" == \"master\" && echo \"\" || echo \"/branch/$CIRCLE_BRANCH\")"
 general:
   artifacts:
     - "dist"
@@ -15,8 +14,7 @@ dependencies:
   cache_directories:
     - node_modules
   override:
-    - echo "$MASTER_URL"
-    - echo "$BRANCH_URL"
+    - echo "$MAGIC_URL"
     - yarn
     - yarn build
 test:
