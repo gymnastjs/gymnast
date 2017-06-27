@@ -1,4 +1,6 @@
 machine:
+  environment:
+    TARGET_URL: "https://obartra.github.io/reflex/branch/$CIRCLE_BRANCH"
   node:
     version: 8.1.2
 general:
@@ -16,8 +18,6 @@ dependencies:
     - java -jar selenium-server-standalone-2.44.0.jar:
         background: true
 test:
-  environment:
-    TARGET_URL: "https://obartra.github.io/reflex/branch/${CIRCLE_BRANCH}"
   cache_directories:
     - node_modules
   pre:
