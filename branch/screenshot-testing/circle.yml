@@ -12,19 +12,16 @@ general:
     ignore:
       - gh-pages
 dependencies:
+  cache_directories:
+    - node_modules
   override:
-    - echo "install on pre test"
-  post:
+    - ./scripts/deploystorybook.sh
+    - git checkout $CIRCLE_SHA1
+    - yarn
     - wget https://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar
     - java -jar selenium-server-standalone-2.44.0.jar:
         background: true
 test:
-  cache_directories:
-    - node_modules
-  pre:
-    - ./scripts/deploystorybook.sh
-    - git checkout $CIRCLE_SHA1
-    - yarn
   override:
     - scripts/citests.sh:
         parallel: true
