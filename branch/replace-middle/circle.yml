@@ -1,0 +1,32 @@
+machine:
+  node:
+    version: 8.1.2
+general:
+  artifacts:
+    - "dist"
+    - "coverage"
+  branches:
+    ignore:
+      - gh-pages
+dependencies:
+  cache_directories:
+    - node_modules
+  override:
+    - yarn
+    - yarn build
+test:
+  override:
+    - scripts/citests.sh:
+        parallel: true
+deployment:
+  publish:
+    owner: obartra
+    branch: master
+    commands:
+      - ./scripts/deploystorybook.sh
+      - git checkout $CIRCLE_SHA1
+      - ./scripts/deploynpm.sh
+  dev:
+    branch: /^(?!.*(master|gh-pages)).+$/
+    commands:
+      - ./scripts/deploystorybook.sh
