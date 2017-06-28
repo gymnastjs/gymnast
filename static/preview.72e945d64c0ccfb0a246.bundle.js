@@ -1679,7 +1679,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         if (null != t[e]) return new Error("Invalid prop `" + e + "` of value `" + value + "` passed to `" + n + "`. Expected undefined or null.");
       }]).isRequired }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Size", { value: n(0).oneOfType([n(0).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), n(0).oneOf([12]), n(0).oneOf(["fit"]), n(0).oneOf(["auto"]), function (t, e, n) {
         if (null != t[e]) return new Error("Invalid prop `" + e + "` of value `" + value + "` passed to `" + n + "`. Expected undefined or null.");
-      }]).isRequired }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Component", { value: n(0).oneOfType([n(0).shape({ displayName: n(0).string, name: n(0).string }), n(0).func]).isRequired }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_AlignGrid", { value: n(0).oneOfType([n(0).oneOf(["bottom"]), n(0).oneOf(["middle"]), n(0).oneOf(["top"]), function (t, e, n) {
+      }]).isRequired }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Component", { value: n(0).oneOfType([n(0).shape({ displayName: n(0).string, name: n(0).string }), n(0).func]).isRequired }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_AlignGrid", { value: n(0).oneOfType([n(0).oneOf(["bottom"]), n(0).oneOf(["center"]), n(0).oneOf(["top"]), function (t, e, n) {
         if (null != t[e]) return new Error("Invalid prop `" + e + "` of value `" + value + "` passed to `" + n + "`. Expected undefined or null.");
       }]).isRequired }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Justify", { value: n(0).oneOfType([n(0).oneOf(["left"]), n(0).oneOf(["center"]), n(0).oneOf(["right"]), function (t, e, n) {
         if (null != t[e]) return new Error("Invalid prop `" + e + "` of value `" + value + "` passed to `" + n + "`. Expected undefined or null.");
@@ -2996,7 +2996,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         } }]), e;
     }(p.default.PureComponent);g.propTypes = { children: "function" == typeof React$Element ? n(0).instanceOf(React$Element) : n(0).any, className: n(0).string, direction: "function" == typeof y ? y : n(0).shape(y) }, e.default = g;
   }, function (t, e, n) {
-    e = t.exports = n(15)(void 0), e.push([t.i, ".grid__grid___bk7GY{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%}.grid__grid___bk7GY.grid__root___H_hZL{padding-left:36px;padding-right:36px;margin:auto;min-width:400px;max-width:1224px}.grid__grid___bk7GY:not(.grid__col___1OEZt){flex-grow:1}.grid__grid___bk7GY.grid__leftJustify___3vN8C{justify-content:flex-start;margin-right:auto}.grid__grid___bk7GY.grid__centerJustify___2b90U{justify-content:center;margin-left:auto;margin-right:auto}.grid__grid___bk7GY.grid__rightJustify___3n13f{justify-content:flex-end;margin-left:auto}.grid__grid___bk7GY.grid__topAlign___1ywN6{align-content:flex-start;align-items:flex-start}.grid__grid___bk7GY.grid__middleAlign___30gIo{align-content:center;align-items:center}.grid__grid___bk7GY.grid__bottomAlign___1CGa7{align-content:flex-end;align-items:flex-end}.grid__grid___bk7GY.grid__col-fit___2fDTl{flex-basis:0;white-space:nowrap}.grid__grid___bk7GY.grid__col-auto___3OEdx{flex:1 1 0%}.grid__col-1___17LJG{flex-basis:8.33333%;max-width:8.33333%}.grid__col-2___2nMUV{flex-basis:16.66667%;max-width:16.66667%}.grid__col-3___xkeJO{flex-basis:25%;max-width:25%}.grid__col-4___3Rexy{flex-basis:33.33333%;max-width:33.33333%}.grid__col-5___1edIG{flex-basis:41.66667%;max-width:41.66667%}.grid__col-6___udRC_{flex-basis:50%;max-width:50%}.grid__col-7___17cZH{flex-basis:58.33333%;max-width:58.33333%}.grid__col-8___3MDYh{flex-basis:66.66667%;max-width:66.66667%}.grid__col-9___3Bzna{flex-basis:75%;max-width:75%}.grid__col-10___3sS71{flex-basis:83.33333%;max-width:83.33333%}.grid__col-11___3IgTz{flex-basis:91.66667%;max-width:91.66667%}.grid__col-12___1Y5El{flex-basis:100%;max-width:100%}.grid__colOffset-0___Xg-Cw{margin-left:0}.grid__colOffset-1___2O6nK{margin-left:8.33333%}.grid__colOffset-2___cO18a{margin-left:16.66667%}.grid__colOffset-3___2p_7a{margin-left:25%}.grid__colOffset-4___3p_Hv{margin-left:33.33333%}.grid__colOffset-5___yZ3jD{margin-left:41.66667%}.grid__colOffset-6___33Qfy{margin-left:50%}.grid__colOffset-7___20iKe{margin-left:58.33333%}.grid__colOffset-8___VK05g{margin-left:66.66667%}.grid__colOffset-9___2_T-p{margin-left:75%}.grid__colOffset-10___3ta9R{margin-left:83.33333%}.grid__colOffset-11___3YEca{margin-left:91.66667%}", ""]), e.locals = { grid: "grid__grid___bk7GY", root: "grid__root___H_hZL", col: "grid__col___1OEZt", leftJustify: "grid__leftJustify___3vN8C", centerJustify: "grid__centerJustify___2b90U", rightJustify: "grid__rightJustify___3n13f", topAlign: "grid__topAlign___1ywN6", middleAlign: "grid__middleAlign___30gIo", bottomAlign: "grid__bottomAlign___1CGa7", "col-fit": "grid__col-fit___2fDTl", colFit: "grid__col-fit___2fDTl", "col-auto": "grid__col-auto___3OEdx", colAuto: "grid__col-auto___3OEdx", "col-1": "grid__col-1___17LJG", col1: "grid__col-1___17LJG", "col-2": "grid__col-2___2nMUV", col2: "grid__col-2___2nMUV", "col-3": "grid__col-3___xkeJO", col3: "grid__col-3___xkeJO", "col-4": "grid__col-4___3Rexy", col4: "grid__col-4___3Rexy", "col-5": "grid__col-5___1edIG", col5: "grid__col-5___1edIG", "col-6": "grid__col-6___udRC_", col6: "grid__col-6___udRC_", "col-7": "grid__col-7___17cZH", col7: "grid__col-7___17cZH", "col-8": "grid__col-8___3MDYh", col8: "grid__col-8___3MDYh", "col-9": "grid__col-9___3Bzna", col9: "grid__col-9___3Bzna", "col-10": "grid__col-10___3sS71", col10: "grid__col-10___3sS71", "col-11": "grid__col-11___3IgTz", col11: "grid__col-11___3IgTz", "col-12": "grid__col-12___1Y5El", col12: "grid__col-12___1Y5El", "colOffset-0": "grid__colOffset-0___Xg-Cw", colOffset0: "grid__colOffset-0___Xg-Cw", "colOffset-1": "grid__colOffset-1___2O6nK", colOffset1: "grid__colOffset-1___2O6nK", "colOffset-2": "grid__colOffset-2___cO18a", colOffset2: "grid__colOffset-2___cO18a", "colOffset-3": "grid__colOffset-3___2p_7a", colOffset3: "grid__colOffset-3___2p_7a", "colOffset-4": "grid__colOffset-4___3p_Hv", colOffset4: "grid__colOffset-4___3p_Hv", "colOffset-5": "grid__colOffset-5___yZ3jD", colOffset5: "grid__colOffset-5___yZ3jD", "colOffset-6": "grid__colOffset-6___33Qfy", colOffset6: "grid__colOffset-6___33Qfy", "colOffset-7": "grid__colOffset-7___20iKe", colOffset7: "grid__colOffset-7___20iKe", "colOffset-8": "grid__colOffset-8___VK05g", colOffset8: "grid__colOffset-8___VK05g", "colOffset-9": "grid__colOffset-9___2_T-p", colOffset9: "grid__colOffset-9___2_T-p", "colOffset-10": "grid__colOffset-10___3ta9R", colOffset10: "grid__colOffset-10___3ta9R", "colOffset-11": "grid__colOffset-11___3YEca", colOffset11: "grid__colOffset-11___3YEca" };
+    e = t.exports = n(15)(void 0), e.push([t.i, ".grid__grid___bk7GY{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%}.grid__grid___bk7GY.grid__root___H_hZL{padding-left:36px;padding-right:36px;margin:auto;min-width:400px;max-width:1224px}.grid__grid___bk7GY:not(.grid__col___1OEZt){flex-grow:1}.grid__grid___bk7GY.grid__leftJustify___3vN8C{justify-content:flex-start;margin-right:auto}.grid__grid___bk7GY.grid__centerJustify___2b90U{justify-content:center;margin-left:auto;margin-right:auto}.grid__grid___bk7GY.grid__rightJustify___3n13f{justify-content:flex-end;margin-left:auto}.grid__grid___bk7GY.grid__topAlign___1ywN6{align-content:flex-start;align-items:flex-start}.grid__grid___bk7GY.grid__centerAlign___2Vm2H{align-content:center;align-items:center}.grid__grid___bk7GY.grid__bottomAlign___1CGa7{align-content:flex-end;align-items:flex-end}.grid__grid___bk7GY.grid__col-fit___2fDTl{flex-basis:0;white-space:nowrap}.grid__grid___bk7GY.grid__col-auto___3OEdx{flex:1 1 0%}.grid__col-1___17LJG{flex-basis:8.33333%;max-width:8.33333%}.grid__col-2___2nMUV{flex-basis:16.66667%;max-width:16.66667%}.grid__col-3___xkeJO{flex-basis:25%;max-width:25%}.grid__col-4___3Rexy{flex-basis:33.33333%;max-width:33.33333%}.grid__col-5___1edIG{flex-basis:41.66667%;max-width:41.66667%}.grid__col-6___udRC_{flex-basis:50%;max-width:50%}.grid__col-7___17cZH{flex-basis:58.33333%;max-width:58.33333%}.grid__col-8___3MDYh{flex-basis:66.66667%;max-width:66.66667%}.grid__col-9___3Bzna{flex-basis:75%;max-width:75%}.grid__col-10___3sS71{flex-basis:83.33333%;max-width:83.33333%}.grid__col-11___3IgTz{flex-basis:91.66667%;max-width:91.66667%}.grid__col-12___1Y5El{flex-basis:100%;max-width:100%}.grid__colOffset-0___Xg-Cw{margin-left:0}.grid__colOffset-1___2O6nK{margin-left:8.33333%}.grid__colOffset-2___cO18a{margin-left:16.66667%}.grid__colOffset-3___2p_7a{margin-left:25%}.grid__colOffset-4___3p_Hv{margin-left:33.33333%}.grid__colOffset-5___yZ3jD{margin-left:41.66667%}.grid__colOffset-6___33Qfy{margin-left:50%}.grid__colOffset-7___20iKe{margin-left:58.33333%}.grid__colOffset-8___VK05g{margin-left:66.66667%}.grid__colOffset-9___2_T-p{margin-left:75%}.grid__colOffset-10___3ta9R{margin-left:83.33333%}.grid__colOffset-11___3YEca{margin-left:91.66667%}", ""]), e.locals = { grid: "grid__grid___bk7GY", root: "grid__root___H_hZL", col: "grid__col___1OEZt", leftJustify: "grid__leftJustify___3vN8C", centerJustify: "grid__centerJustify___2b90U", rightJustify: "grid__rightJustify___3n13f", topAlign: "grid__topAlign___1ywN6", centerAlign: "grid__centerAlign___2Vm2H", bottomAlign: "grid__bottomAlign___1CGa7", "col-fit": "grid__col-fit___2fDTl", colFit: "grid__col-fit___2fDTl", "col-auto": "grid__col-auto___3OEdx", colAuto: "grid__col-auto___3OEdx", "col-1": "grid__col-1___17LJG", col1: "grid__col-1___17LJG", "col-2": "grid__col-2___2nMUV", col2: "grid__col-2___2nMUV", "col-3": "grid__col-3___xkeJO", col3: "grid__col-3___xkeJO", "col-4": "grid__col-4___3Rexy", col4: "grid__col-4___3Rexy", "col-5": "grid__col-5___1edIG", col5: "grid__col-5___1edIG", "col-6": "grid__col-6___udRC_", col6: "grid__col-6___udRC_", "col-7": "grid__col-7___17cZH", col7: "grid__col-7___17cZH", "col-8": "grid__col-8___3MDYh", col8: "grid__col-8___3MDYh", "col-9": "grid__col-9___3Bzna", col9: "grid__col-9___3Bzna", "col-10": "grid__col-10___3sS71", col10: "grid__col-10___3sS71", "col-11": "grid__col-11___3IgTz", col11: "grid__col-11___3IgTz", "col-12": "grid__col-12___1Y5El", col12: "grid__col-12___1Y5El", "colOffset-0": "grid__colOffset-0___Xg-Cw", colOffset0: "grid__colOffset-0___Xg-Cw", "colOffset-1": "grid__colOffset-1___2O6nK", colOffset1: "grid__colOffset-1___2O6nK", "colOffset-2": "grid__colOffset-2___cO18a", colOffset2: "grid__colOffset-2___cO18a", "colOffset-3": "grid__colOffset-3___2p_7a", colOffset3: "grid__colOffset-3___2p_7a", "colOffset-4": "grid__colOffset-4___3p_Hv", colOffset4: "grid__colOffset-4___3p_Hv", "colOffset-5": "grid__colOffset-5___yZ3jD", colOffset5: "grid__colOffset-5___yZ3jD", "colOffset-6": "grid__colOffset-6___33Qfy", colOffset6: "grid__colOffset-6___33Qfy", "colOffset-7": "grid__colOffset-7___20iKe", colOffset7: "grid__colOffset-7___20iKe", "colOffset-8": "grid__colOffset-8___VK05g", colOffset8: "grid__colOffset-8___VK05g", "colOffset-9": "grid__colOffset-9___2_T-p", colOffset9: "grid__colOffset-9___2_T-p", "colOffset-10": "grid__colOffset-10___3ta9R", colOffset10: "grid__colOffset-10___3ta9R", "colOffset-11": "grid__colOffset-11___3YEca", colOffset11: "grid__colOffset-11___3YEca" };
   }, function (t, e, n) {
     "use strict";
     function r(t) {
@@ -3538,7 +3538,7 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
   }), __webpack_require__(1).func]).isRequired
 });
 if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_AlignGrid', {
-  value: __webpack_require__(1).oneOfType([__webpack_require__(1).oneOf(['bottom']), __webpack_require__(1).oneOf(['middle']), __webpack_require__(1).oneOf(['top']), function (props, propName, componentName) {
+  value: __webpack_require__(1).oneOfType([__webpack_require__(1).oneOf(['bottom']), __webpack_require__(1).oneOf(['center']), __webpack_require__(1).oneOf(['top']), function (props, propName, componentName) {
     if (props[propName] != null) return new Error('Invalid prop `' + propName + '` of value `' + value + '` passed to `' + componentName + '`. Expected undefined or null.');
   }]).isRequired
 });
@@ -42690,7 +42690,7 @@ var Box = function (_React$PureComponent) {
           {
             className: _stories2.default['box' + typeMap[type]],
             padding: [1, 0],
-            align: 'middle',
+            align: 'center',
             justify: 'center',
             style: style
           },
@@ -42839,7 +42839,7 @@ var justifyMap = {
 var alignMap = {
   Default: undefined,
   Top: 'top',
-  Middle: 'middle',
+  Center: 'center',
   Bottom: 'bottom',
   Stretch: 'stretch'
 };
@@ -42849,7 +42849,7 @@ function getMarginSelect() {
   var alignTitle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'Align';
 
   var justifyStr = (0, _addonKnobs.select)(justifyTitle, ['Default', 'Center', 'Left', 'Right'], 'Default');
-  var alignStr = (0, _addonKnobs.select)(alignTitle, ['Default', 'Top', 'Middle', 'Bottom', 'Stretch'], 'Default');
+  var alignStr = (0, _addonKnobs.select)(alignTitle, ['Default', 'Top', 'Center', 'Bottom', 'Stretch'], 'Default');
 
   return {
     align: alignMap[alignStr],
@@ -43918,7 +43918,7 @@ exports.default = function () {
           className: _stories2.default.colors2,
           padding: _marginTypes.top,
           justify: 'center',
-          align: 'middle',
+          align: 'center',
           style: { height: 300 }
         },
         _react2.default.createElement(
@@ -43938,7 +43938,7 @@ exports.default = function () {
           size: 6,
           className: _stories2.default.colors2,
           justify: 'center',
-          align: 'middle',
+          align: 'center',
           style: { height: 300 }
         },
         _react2.default.createElement(
@@ -44096,7 +44096,7 @@ exports.default = function () {
       null,
       _react2.default.createElement(ReferenceColumn, { height: height }),
       _react2.default.createElement(_core.Box, { size: 'auto', type: 'A', value: 'TOP', align: 'top' }),
-      _react2.default.createElement(_core.Box, { size: 'auto', type: 'A', value: 'MIDDLE', align: 'middle' }),
+      _react2.default.createElement(_core.Box, { size: 'auto', type: 'A', value: 'CENTER', align: 'center' }),
       _react2.default.createElement(_core.Box, { size: 'auto', type: 'A', value: 'BOTTOM', align: 'bottom' }),
       _react2.default.createElement(_core.Box, { size: 'auto', type: 'A', value: 'DEFAULT' })
     ),
@@ -44121,9 +44121,9 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Grid,
-        { size: 4, align: !stretch && 'middle', style: { height: height } },
+        { size: 4, align: !stretch && 'center', style: { height: height } },
         (0, _times3.default)(items, function (i) {
-          return _react2.default.createElement(_core.Box, { size: 12, key: i, type: 'C', value: 'MIDDLE' });
+          return _react2.default.createElement(_core.Box, { size: 12, key: i, type: 'C', value: 'CENTER' });
         })
       ),
       _react2.default.createElement(
@@ -46330,7 +46330,7 @@ exports = module.exports = __webpack_require__(116)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.grid__grid___bk7GY{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%}.grid__grid___bk7GY.grid__root___H_hZL{padding-left:36px;padding-right:36px;margin:auto;min-width:400px;max-width:1224px}.grid__grid___bk7GY:not(.grid__col___1OEZt){flex-grow:1}.grid__grid___bk7GY.grid__leftJustify___3vN8C{justify-content:flex-start;margin-right:auto}.grid__grid___bk7GY.grid__centerJustify___2b90U{justify-content:center;margin-left:auto;margin-right:auto}.grid__grid___bk7GY.grid__rightJustify___3n13f{justify-content:flex-end;margin-left:auto}.grid__grid___bk7GY.grid__topAlign___1ywN6{align-content:flex-start;align-items:flex-start}.grid__grid___bk7GY.grid__middleAlign___30gIo{align-content:center;align-items:center}.grid__grid___bk7GY.grid__bottomAlign___1CGa7{align-content:flex-end;align-items:flex-end}.grid__grid___bk7GY.grid__col-fit___2fDTl{flex-basis:0;white-space:nowrap}.grid__grid___bk7GY.grid__col-auto___3OEdx{flex:1 1 0%}.grid__col-1___17LJG{flex-basis:8.33333%;max-width:8.33333%}.grid__col-2___2nMUV{flex-basis:16.66667%;max-width:16.66667%}.grid__col-3___xkeJO{flex-basis:25%;max-width:25%}.grid__col-4___3Rexy{flex-basis:33.33333%;max-width:33.33333%}.grid__col-5___1edIG{flex-basis:41.66667%;max-width:41.66667%}.grid__col-6___udRC_{flex-basis:50%;max-width:50%}.grid__col-7___17cZH{flex-basis:58.33333%;max-width:58.33333%}.grid__col-8___3MDYh{flex-basis:66.66667%;max-width:66.66667%}.grid__col-9___3Bzna{flex-basis:75%;max-width:75%}.grid__col-10___3sS71{flex-basis:83.33333%;max-width:83.33333%}.grid__col-11___3IgTz{flex-basis:91.66667%;max-width:91.66667%}.grid__col-12___1Y5El{flex-basis:100%;max-width:100%}.grid__colOffset-0___Xg-Cw{margin-left:0}.grid__colOffset-1___2O6nK{margin-left:8.33333%}.grid__colOffset-2___cO18a{margin-left:16.66667%}.grid__colOffset-3___2p_7a{margin-left:25%}.grid__colOffset-4___3p_Hv{margin-left:33.33333%}.grid__colOffset-5___yZ3jD{margin-left:41.66667%}.grid__colOffset-6___33Qfy{margin-left:50%}.grid__colOffset-7___20iKe{margin-left:58.33333%}.grid__colOffset-8___VK05g{margin-left:66.66667%}.grid__colOffset-9___2_T-p{margin-left:75%}.grid__colOffset-10___3ta9R{margin-left:83.33333%}.grid__colOffset-11___3YEca{margin-left:91.66667%}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.grid__grid___bk7GY{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%}.grid__grid___bk7GY.grid__root___H_hZL{padding-left:36px;padding-right:36px;margin:auto;min-width:400px;max-width:1224px}.grid__grid___bk7GY:not(.grid__col___1OEZt){flex-grow:1}.grid__grid___bk7GY.grid__leftJustify___3vN8C{justify-content:flex-start;margin-right:auto}.grid__grid___bk7GY.grid__centerJustify___2b90U{justify-content:center;margin-left:auto;margin-right:auto}.grid__grid___bk7GY.grid__rightJustify___3n13f{justify-content:flex-end;margin-left:auto}.grid__grid___bk7GY.grid__topAlign___1ywN6{align-content:flex-start;align-items:flex-start}.grid__grid___bk7GY.grid__centerAlign___2Vm2H{align-content:center;align-items:center}.grid__grid___bk7GY.grid__bottomAlign___1CGa7{align-content:flex-end;align-items:flex-end}.grid__grid___bk7GY.grid__col-fit___2fDTl{flex-basis:0;white-space:nowrap}.grid__grid___bk7GY.grid__col-auto___3OEdx{flex:1 1 0%}.grid__col-1___17LJG{flex-basis:8.33333%;max-width:8.33333%}.grid__col-2___2nMUV{flex-basis:16.66667%;max-width:16.66667%}.grid__col-3___xkeJO{flex-basis:25%;max-width:25%}.grid__col-4___3Rexy{flex-basis:33.33333%;max-width:33.33333%}.grid__col-5___1edIG{flex-basis:41.66667%;max-width:41.66667%}.grid__col-6___udRC_{flex-basis:50%;max-width:50%}.grid__col-7___17cZH{flex-basis:58.33333%;max-width:58.33333%}.grid__col-8___3MDYh{flex-basis:66.66667%;max-width:66.66667%}.grid__col-9___3Bzna{flex-basis:75%;max-width:75%}.grid__col-10___3sS71{flex-basis:83.33333%;max-width:83.33333%}.grid__col-11___3IgTz{flex-basis:91.66667%;max-width:91.66667%}.grid__col-12___1Y5El{flex-basis:100%;max-width:100%}.grid__colOffset-0___Xg-Cw{margin-left:0}.grid__colOffset-1___2O6nK{margin-left:8.33333%}.grid__colOffset-2___cO18a{margin-left:16.66667%}.grid__colOffset-3___2p_7a{margin-left:25%}.grid__colOffset-4___3p_Hv{margin-left:33.33333%}.grid__colOffset-5___yZ3jD{margin-left:41.66667%}.grid__colOffset-6___33Qfy{margin-left:50%}.grid__colOffset-7___20iKe{margin-left:58.33333%}.grid__colOffset-8___VK05g{margin-left:66.66667%}.grid__colOffset-9___2_T-p{margin-left:75%}.grid__colOffset-10___3ta9R{margin-left:83.33333%}.grid__colOffset-11___3YEca{margin-left:91.66667%}", ""]);
 
 // exports
 exports.locals = {
@@ -46341,7 +46341,7 @@ exports.locals = {
 	"centerJustify": "grid__centerJustify___2b90U",
 	"rightJustify": "grid__rightJustify___3n13f",
 	"topAlign": "grid__topAlign___1ywN6",
-	"middleAlign": "grid__middleAlign___30gIo",
+	"centerAlign": "grid__centerAlign___2Vm2H",
 	"bottomAlign": "grid__bottomAlign___1CGa7",
 	"col-fit": "grid__col-fit___2fDTl",
 	"colFit": "grid__col-fit___2fDTl",
@@ -46616,7 +46616,7 @@ module.exports = "<h1 id=\"sizing\">Sizing</h1>\n<p>Any number from 1-12 defines
 /* 843 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"vertical-align\">Vertical Align</h1>\n<p>Alignment defaults to top but middle and bottom are also available</p>\n<p>Note that while <code>align=&quot;top&quot;</code> has the same behavior than the default, <code>align=&quot;top&quot;</code> is useful to break inheritance.</p>\n<p>For instance, if the parent is set to <code>align=&quot;stretch&quot;</code>, setting a child to <code>align=&quot;top&quot;</code> will ensure its children align to the top.</p>\n";
+module.exports = "<h1 id=\"vertical-align\">Vertical Align</h1>\n<p>Alignment defaults to top but center and bottom are also available</p>\n<p>Note that while <code>align=&quot;top&quot;</code> has the same behavior than the default, <code>align=&quot;top&quot;</code> is useful to break inheritance.</p>\n<p>For instance, if the parent is set to <code>align=&quot;stretch&quot;</code>, setting a child to <code>align=&quot;top&quot;</code> will ensure its children align to the top.</p>\n";
 
 /***/ }),
 /* 844 */
@@ -52856,4 +52856,4 @@ module.exports = __webpack_require__(662);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.bebcf71d62230bffa2e2.bundle.js.map
+//# sourceMappingURL=preview.72e945d64c0ccfb0a246.bundle.js.map
