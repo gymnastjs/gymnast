@@ -37,7 +37,7 @@ export default function() {
       <Grid>
         <ReferenceColumn height={height} />
         <Box size="auto" type="A" value="TOP" align="top" />
-        <Box size="auto" type="A" value="MIDDLE" align="middle" />
+        <Box size="auto" type="A" value="CENTER" align="center" />
         <Box size="auto" type="A" value="BOTTOM" align="bottom" />
         <Box size="auto" type="A" value="DEFAULT" />
       </Grid>
@@ -48,8 +48,8 @@ export default function() {
         <Grid size={4} align={!stretch && 'top'} style={{ height }}>
           {times(items, i => <Box size={12} key={i} type="C" value="TOP" />)}
         </Grid>
-        <Grid size={4} align={!stretch && 'middle'} style={{ height }}>
-          {times(items, i => <Box size={12} key={i} type="C" value="MIDDLE" />)}
+        <Grid size={4} align={!stretch && 'center'} style={{ height }}>
+          {times(items, i => <Box size={12} key={i} type="C" value="CENTER" />)}
         </Grid>
         <Grid size={4} align={!stretch && 'bottom'} style={{ height }}>
           {times(items, i => <Box size={12} key={i} type="C" value="BOTTOM" />)}

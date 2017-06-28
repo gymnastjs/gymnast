@@ -35,7 +35,7 @@ export default class Box extends React.PureComponent {
         <Grid
           className={styles[`box${typeMap[type]}`]}
           padding={[1, 0]}
-          align="middle"
+          align="center"
           justify="center"
           style={style}
         >

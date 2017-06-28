@@ -13,7 +13,7 @@ export type Component =
     }
   | Function
 
-export type AlignGrid = 'bottom' | 'middle' | 'top' | void
+export type AlignGrid = 'bottom' | 'center' | 'top' | void
 
 export type Justify = 'left' | 'center' | 'right' | void
 

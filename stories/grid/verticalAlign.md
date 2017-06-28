@@ -1,6 +1,6 @@
 # Vertical Align
 
-Alignment defaults to top but middle and bottom are also available
+Alignment defaults to top but center and bottom are also available
 
 Note that while `align="top"` has the same behavior than the default, `align="top"` is useful to break inheritance.
 
