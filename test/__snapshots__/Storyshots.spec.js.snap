@@ -236,7 +236,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 1
                         </div>
@@ -250,7 +250,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 2
                         </div>
@@ -264,7 +264,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 3
                         </div>
@@ -278,7 +278,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 4
                         </div>
@@ -292,7 +292,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 5
                         </div>
@@ -306,7 +306,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 6
                         </div>
@@ -331,7 +331,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 1
                         </div>
@@ -345,7 +345,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 2
                         </div>
@@ -359,7 +359,7 @@ exports[`Storyshots Components Cards.composite 1`] = `
                         style={undefined}
                       >
                         <div
-                          className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                          className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                         >
                           Box 3
                         </div>
@@ -887,7 +887,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   Go Back
                 </div>
@@ -901,7 +901,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   <h2>
                     Page Title
@@ -917,7 +917,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   Action 1
                 </div>
@@ -931,7 +931,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   Action 2
                 </div>
@@ -945,7 +945,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   1
                 </div>
@@ -959,7 +959,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   2
                 </div>
@@ -973,7 +973,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   3
                 </div>
@@ -987,7 +987,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   4
                 </div>
@@ -1001,7 +1001,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   5
                 </div>
@@ -1015,7 +1015,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   6
                 </div>
@@ -1029,7 +1029,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   A
                 </div>
@@ -1062,7 +1062,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   Go Back
                 </div>
@@ -1076,7 +1076,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   <h2>
                     Page Title
@@ -1092,7 +1092,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   Action 1
                 </div>
@@ -1106,7 +1106,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   Action 2
                 </div>
@@ -1124,7 +1124,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   1
                 </div>
@@ -1138,7 +1138,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   2
                 </div>
@@ -1152,7 +1152,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   3
                 </div>
@@ -1166,7 +1166,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   4
                 </div>
@@ -1180,7 +1180,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   5
                 </div>
@@ -1194,7 +1194,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   6
                 </div>
@@ -1212,7 +1212,7 @@ exports[`Storyshots Components Header 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   A
                 </div>
@@ -1246,7 +1246,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 &lt;
               </div>
@@ -1260,7 +1260,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -1274,7 +1274,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 ...
               </div>
@@ -1288,7 +1288,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 5
               </div>
@@ -1302,7 +1302,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 6
               </div>
@@ -1316,7 +1316,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 7
               </div>
@@ -1330,7 +1330,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 8
               </div>
@@ -1344,7 +1344,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 9
               </div>
@@ -1358,7 +1358,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 10
               </div>
@@ -1372,7 +1372,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 ...
               </div>
@@ -1386,7 +1386,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 20
               </div>
@@ -1400,7 +1400,7 @@ exports[`Storyshots Components Pagination 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 &gt;
               </div>
@@ -1433,7 +1433,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -1447,7 +1447,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 2
               </div>
@@ -1461,7 +1461,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 3
               </div>
@@ -1475,7 +1475,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 4
               </div>
@@ -1493,7 +1493,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               }
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 5
               </div>
@@ -1507,7 +1507,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 6
               </div>
@@ -1521,7 +1521,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 7
               </div>
@@ -1535,7 +1535,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 8
               </div>
@@ -1549,7 +1549,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 9
               </div>
@@ -1563,7 +1563,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 10
               </div>
@@ -1606,7 +1606,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 1
               </div>
@@ -1624,7 +1624,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 2
               </div>
@@ -1638,7 +1638,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 2
               </div>
@@ -1656,7 +1656,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 3
               </div>
@@ -1670,7 +1670,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 3
               </div>
@@ -1684,7 +1684,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 3
               </div>
@@ -1702,7 +1702,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 4
               </div>
@@ -1716,7 +1716,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 4
               </div>
@@ -1730,7 +1730,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 4
               </div>
@@ -1744,7 +1744,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 4
               </div>
@@ -1762,7 +1762,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 5
               </div>
@@ -1776,7 +1776,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 5
               </div>
@@ -1790,7 +1790,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 5
               </div>
@@ -1804,7 +1804,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 5
               </div>
@@ -1818,7 +1818,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 5
               </div>
@@ -1836,7 +1836,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 6
               </div>
@@ -1850,7 +1850,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 6
               </div>
@@ -1864,7 +1864,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 6
               </div>
@@ -1878,7 +1878,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 6
               </div>
@@ -1892,7 +1892,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 6
               </div>
@@ -1906,7 +1906,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 6
               </div>
@@ -1924,7 +1924,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 7
               </div>
@@ -1938,7 +1938,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 7
               </div>
@@ -1952,7 +1952,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 7
               </div>
@@ -1966,7 +1966,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 7
               </div>
@@ -1980,7 +1980,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 7
               </div>
@@ -1994,7 +1994,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 7
               </div>
@@ -2008,7 +2008,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 7
               </div>
@@ -2026,7 +2026,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 8
               </div>
@@ -2040,7 +2040,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 8
               </div>
@@ -2054,7 +2054,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 8
               </div>
@@ -2068,7 +2068,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 8
               </div>
@@ -2082,7 +2082,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 8
               </div>
@@ -2096,7 +2096,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 8
               </div>
@@ -2110,7 +2110,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 8
               </div>
@@ -2124,7 +2124,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1 / 8
               </div>
@@ -2149,7 +2149,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 8
               </div>
@@ -2163,7 +2163,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 12 - 8 = 4
               </div>
@@ -2188,7 +2188,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 6
               </div>
@@ -2202,7 +2202,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 (12 - 6) / 2 = 3
               </div>
@@ -2216,7 +2216,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 (12 - 6) / 2 = 3
               </div>
@@ -2244,7 +2244,7 @@ exports[`Storyshots Grid Fraction 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 6 (fixed)
               </div>
@@ -2277,7 +2277,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 DEFAULT
               </div>
@@ -2295,7 +2295,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 LEFT
               </div>
@@ -2313,7 +2313,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 CENTER
               </div>
@@ -2331,7 +2331,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 RIGHT
               </div>
@@ -2349,7 +2349,7 @@ exports[`Storyshots Grid Horizontal Align 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 DEFAULT
               </div>
@@ -2382,7 +2382,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2396,7 +2396,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2410,7 +2410,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2424,7 +2424,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2438,7 +2438,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2452,7 +2452,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2466,7 +2466,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2480,7 +2480,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2494,7 +2494,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 Item
               </div>
@@ -2508,7 +2508,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2522,7 +2522,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2536,7 +2536,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2550,7 +2550,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2564,7 +2564,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2578,7 +2578,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2592,7 +2592,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2606,7 +2606,7 @@ exports[`Storyshots Grid Margin 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 global
               </div>
@@ -2682,7 +2682,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   A
                 </div>
@@ -2696,7 +2696,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   A
                 </div>
@@ -2710,7 +2710,7 @@ exports[`Storyshots Grid Nested 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   A
                 </div>
@@ -2742,7 +2742,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     2
                   </div>
@@ -2756,7 +2756,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     4
                   </div>
@@ -2770,7 +2770,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     6
                   </div>
@@ -2784,7 +2784,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     8
                   </div>
@@ -2798,7 +2798,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     10
                   </div>
@@ -2812,7 +2812,7 @@ exports[`Storyshots Grid Nested 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     12
                   </div>
@@ -2847,7 +2847,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +0
               </div>
@@ -2861,7 +2861,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +7
               </div>
@@ -2879,7 +2879,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +1
               </div>
@@ -2893,7 +2893,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +5
               </div>
@@ -2907,7 +2907,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +1
               </div>
@@ -2925,7 +2925,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +2
               </div>
@@ -2939,7 +2939,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +3
               </div>
@@ -2953,7 +2953,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +3
               </div>
@@ -2971,7 +2971,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +3
               </div>
@@ -2985,7 +2985,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +1
               </div>
@@ -2999,7 +2999,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +5
               </div>
@@ -3017,7 +3017,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +4
               </div>
@@ -3035,7 +3035,7 @@ exports[`Storyshots Grid Offset 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 +0
               </div>
@@ -3322,7 +3322,7 @@ exports[`Storyshots Grid Padding 1`] = `
             }
           >
             <div
-              className="middleAlign centerJustify grid topSingleSpacing"
+              className="centerAlign centerJustify grid topSingleSpacing"
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors3 col col-12 grid"
@@ -3341,7 +3341,7 @@ exports[`Storyshots Grid Padding 1`] = `
             </div>
           </div>
           <div
-            className="colors2 col col-6 grid middleAlign centerJustify"
+            className="colors2 col col-6 grid centerAlign centerJustify"
             style={
               Object {
                 "height": 300,
@@ -3394,7 +3394,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3408,7 +3408,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3422,7 +3422,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3436,7 +3436,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3450,7 +3450,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3464,7 +3464,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3478,7 +3478,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3492,7 +3492,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3506,7 +3506,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3520,7 +3520,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3534,7 +3534,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3548,7 +3548,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 1
               </div>
@@ -3566,7 +3566,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 2
               </div>
@@ -3580,7 +3580,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 2
               </div>
@@ -3594,7 +3594,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 2
               </div>
@@ -3608,7 +3608,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 2
               </div>
@@ -3622,7 +3622,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 2
               </div>
@@ -3636,7 +3636,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 2
               </div>
@@ -3654,7 +3654,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 3
               </div>
@@ -3668,7 +3668,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 3
               </div>
@@ -3682,7 +3682,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 3
               </div>
@@ -3696,7 +3696,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 3
               </div>
@@ -3714,7 +3714,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 4
               </div>
@@ -3728,7 +3728,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 4
               </div>
@@ -3742,7 +3742,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 4
               </div>
@@ -3760,7 +3760,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 6
               </div>
@@ -3774,7 +3774,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 6
               </div>
@@ -3792,7 +3792,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 Auto
               </div>
@@ -3810,7 +3810,7 @@ exports[`Storyshots Grid Sizing 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 12
               </div>
@@ -3854,7 +3854,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
               }
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                  
               </div>
@@ -3868,23 +3868,23 @@ exports[`Storyshots Grid Vertical Align 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 TOP
               </div>
             </div>
           </div>
           <div
-            className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid middleAlign"
+            className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid centerAlign"
           >
             <div
               className="box1 grid"
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
-                MIDDLE
+                CENTER
               </div>
             </div>
           </div>
@@ -3896,7 +3896,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 BOTTOM
               </div>
@@ -3910,7 +3910,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
               style={undefined}
             >
               <div
-                className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
                 DEFAULT
               </div>
@@ -3943,7 +3943,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   TOP
                 </div>
@@ -3951,7 +3951,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
             </div>
           </div>
           <div
-            className="col col-4 grid middleAlign"
+            className="col col-4 grid centerAlign"
             style={
               Object {
                 "height": 300,
@@ -3966,9 +3966,9 @@ exports[`Storyshots Grid Vertical Align 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
-                  MIDDLE
+                  CENTER
                 </div>
               </div>
             </div>
@@ -3989,7 +3989,7 @@ exports[`Storyshots Grid Vertical Align 1`] = `
                 style={undefined}
               >
                 <div
-                  className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   BOTTOM
                 </div>
@@ -4044,7 +4044,7 @@ exports[`Storyshots Layout Cards 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     D
                   </div>
@@ -4058,7 +4058,7 @@ exports[`Storyshots Layout Cards 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     D
                   </div>
@@ -4072,7 +4072,7 @@ exports[`Storyshots Layout Cards 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     D
                   </div>
@@ -4086,7 +4086,7 @@ exports[`Storyshots Layout Cards 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     D
                   </div>
@@ -4100,7 +4100,7 @@ exports[`Storyshots Layout Cards 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     D
                   </div>
@@ -4114,7 +4114,7 @@ exports[`Storyshots Layout Cards 1`] = `
                   style={undefined}
                 >
                   <div
-                    className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                   >
                     D
                   </div>
@@ -4151,7 +4151,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     }
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4165,7 +4165,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     style={undefined}
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4183,7 +4183,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     }
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4197,7 +4197,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     style={undefined}
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4211,7 +4211,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     style={undefined}
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4229,7 +4229,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     }
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4247,7 +4247,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     }
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4265,7 +4265,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     }
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4283,7 +4283,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     }
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4301,7 +4301,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     }
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
@@ -4319,7 +4319,7 @@ exports[`Storyshots Layout Cards 1`] = `
                     }
                   >
                     <div
-                      className="middleAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                      className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                     >
                       B
                     </div>
