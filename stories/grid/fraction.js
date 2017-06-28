@@ -3,7 +3,7 @@ import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
-import { Root, Box, getMarginSelect } from '../core'
+import { RootLayout, Box, getMarginSelect } from '../core'
 import { item } from '../core/marginTypes'
 
 export default function() {
@@ -11,7 +11,7 @@ export default function() {
   const margin = getMarginSelect(undefined, 'Horizontal')
 
   return (
-    <Root>
+    <RootLayout>
       <Grid margin={item}>
         <h1>Auto Size</h1>
       </Grid>
@@ -54,6 +54,6 @@ export default function() {
           <Box size="auto" key={index} type="A" value={`${index + 2}`} />
         )}
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

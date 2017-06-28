@@ -3,7 +3,7 @@ import React from 'react'
 import { times } from 'lodash'
 import { boolean, number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
-import { Root, Box } from '../core'
+import { RootLayout, Box } from '../core'
 import { item } from '../core/marginTypes'
 
 function ReferenceColumn({ height }: { height: number }) {
@@ -30,7 +30,7 @@ export default function() {
   })
 
   return (
-    <Root>
+    <RootLayout>
       <Grid margin={item}>
         <h1>Item Align</h1>
       </Grid>
@@ -55,6 +55,6 @@ export default function() {
           {times(items, i => <Box size={12} key={i} type="C" value="BOTTOM" />)}
         </Grid>
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

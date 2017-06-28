@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid, Layout } from 'reflex'
+import { Grid, Layout, Root } from 'reflex'
 import { Box } from '../core'
 import styles from './layout.css'
 import { top, horizontalHalf } from '../core/marginTypes'
@@ -16,27 +16,27 @@ export default function() {
     <Layout type="parent" className={`${styles.page} ${styles.hasSubheader}`}>
       <Layout fixed="top">
         <Layout className={styles.header}>
-          <Grid root>
+          <Root>
             <Grid margin={horizontalHalf} size={12}>
               <h1>Header</h1>
             </Grid>
-          </Grid>
+          </Root>
         </Layout>
-        <Layout className={styles.subheader}>
-          <Grid root padding={top}>
+        <Layout className={styles.subheader} margin={top}>
+          <Root>
             <Box size={2} type="D" />
             <Box size={2} type="D" />
             <Box size={2} type="D" />
             <Box size={2} type="D" />
             <Box size={2} type="D" />
             <Box size={2} type="D" />
-          </Grid>
+          </Root>
         </Layout>
       </Layout>
       <Layout type="parent" className={styles.main}>
         <Layout type="stretch">
-          <Grid root padding={top}>
-            <Grid align="stretch">
+          <Root>
+            <Grid align="stretch" padding={top}>
               <Box size={10} type="B" style={SIZE.TALL} />
               <Box size={2} type="B" style={SIZE.SMALL} />
               <Box size={12} type="B" style={SIZE.MEDIUM} />
@@ -49,14 +49,14 @@ export default function() {
               <Box size={4} type="B" style={SIZE.TALL} />
               <Box size={4} type="B" style={SIZE.TALL} />
             </Grid>
-          </Grid>
+          </Root>
         </Layout>
         <Layout className={styles.footer}>
-          <Grid root>
+          <Root>
             <Grid margin={horizontalHalf} size={12}>
               <h1>Footer</h1>
             </Grid>
-          </Grid>
+          </Root>
         </Layout>
       </Layout>
     </Layout>

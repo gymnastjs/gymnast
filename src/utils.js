@@ -75,9 +75,3 @@ function getSpacing(spacings: Spacing = []): Array<string> {
 }
 
 export const getSpacingClasses = memoize(getSpacing, stringify)
-
-function hasSidesRaw(spacing: Spacing): boolean {
-  return getSpacing(spacing).length > 0
-}
-
-export const hasSides = memoize(hasSidesRaw, stringify)

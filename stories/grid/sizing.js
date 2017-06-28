@@ -3,13 +3,13 @@ import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
-import { Root, Box } from '../core'
+import { RootLayout, Box } from '../core'
 
 export default function() {
   const size = number('Size', 12, { range: true, min: 1, max: 12 })
 
   return (
-    <Root>
+    <RootLayout>
       <Grid>
         {times(12, i => <Box key={i} size={1} type="A" value="1" />)}
       </Grid>
@@ -31,6 +31,6 @@ export default function() {
       <Grid>
         <Box size={size} type="C" value={`${size}`} />
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

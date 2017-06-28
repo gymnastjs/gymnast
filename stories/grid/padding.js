@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Grid } from 'reflex'
-import { Root, getMarginSelect, loremIpsum } from '../core'
+import { RootLayout, getMarginSelect, loremIpsum } from '../core'
 import styles from '../core/stories.css'
 import { all, bottom, item, top, topRight, xBottom } from '../core/marginTypes'
 
@@ -14,7 +14,7 @@ export default function() {
   )
 
   return (
-    <Root>
+    <RootLayout>
       <Grid margin={item}>
         <Grid size={12} margin={bottom}>
           <h1>Default (No Padding)</h1>
@@ -163,6 +163,6 @@ export default function() {
           </Grid>
         </Grid>
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

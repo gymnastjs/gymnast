@@ -1,27 +1,4 @@
-import { hasSides, getSpacingClasses } from './utils'
-
-describe('hasSides', () => {
-  it('should return false no parameters are passed', () => {
-    expect(hasSides()).toEqual(false)
-  })
-
-  it('should return false when an empty array is passed', () => {
-    expect(hasSides([])).toEqual(false)
-  })
-
-  it('should return false when all values are 0', () => {
-    expect(hasSides([0])).toEqual(false)
-    expect(hasSides([0, 0])).toEqual(false)
-    expect(hasSides([0, 0, 0])).toEqual(false)
-    expect(hasSides([0, 0, 0, 0])).toEqual(false)
-  })
-
-  it('should return true for all other case', () => {
-    expect(hasSides([1, 0])).toEqual(true)
-    expect(hasSides([0, 0.5])).toEqual(true)
-    expect(hasSides([0, 0, 0, 0.5])).toEqual(true)
-  })
-})
+import { getSpacingClasses } from './utils'
 
 describe('getSpacingClasses', () => {
   it('should no expand 0 values', () => {
