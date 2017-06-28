@@ -1,13 +1,13 @@
 // @flow
 import React from 'react'
 import { Grid } from '../../src'
-import { Root } from '../core'
+import { RootLayout } from '../core'
 import styles from '../core/stories.css'
 import { bottom, item, xBottom, itemXLeft } from '../core/marginTypes'
 
 export default function() {
   return (
-    <Root>
+    <RootLayout>
       <Grid>
         <Grid margin={item}><h1>User Profile</h1></Grid>
 
@@ -46,6 +46,6 @@ export default function() {
         </Grid>
 
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

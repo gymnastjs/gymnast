@@ -3,9 +3,15 @@
 .layout {
   display: flex;
   align-self: flex-start;
+  align-items: center;
   flex-flow: column;
   box-sizing: border-box;
   width: 100%;
+  min-width: var(--min-width);
+
+  & > :not(.layout) {
+    max-width: var(--max-width);
+  }
 }
 
 .parent {

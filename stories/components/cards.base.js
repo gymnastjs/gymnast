@@ -1,13 +1,13 @@
 // @flow
 import React from 'react'
 import { Grid } from '../../src'
-import { Root } from '../core'
+import { RootLayout } from '../core'
 import { item, all, xItem, none, horizontalHalf } from '../core/marginTypes'
 import styles from '../core/stories.css'
 
 export default function() {
   return (
-    <Root>
+    <RootLayout>
       <Grid>
         <Grid margin={item}><h1>Consistent Padding</h1></Grid>
 
@@ -86,6 +86,6 @@ export default function() {
           </Grid>
         </Grid>
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

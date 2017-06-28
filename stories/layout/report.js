@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid, Layout } from 'reflex'
+import { Grid, Root, Layout } from 'reflex'
 import { loremIpsum } from '../core'
 import { colors1, colors2, colors3 } from '../core/stories.css'
 import styles from './report.css'
@@ -8,12 +8,11 @@ import {
   bottom,
   horizontal,
   horizontalHalf,
-  xTopHalf,
+  allHalf,
   rightHalf,
   rightDouble,
   top,
   item,
-  topHalf,
   vertical,
 } from '../core/marginTypes'
 
@@ -46,13 +45,15 @@ export default function() {
     <Layout type="parent" className={styles.report}>
       <Layout fixed="top">
         <Layout className={styles.header}>
-          <Grid root padding={vertical}>
-            <Grid margin={horizontalHalf}><h1>Header</h1></Grid>
-          </Grid>
+          <Root>
+            <Grid padding={vertical} margin={horizontalHalf}>
+              <h1>Header</h1>
+            </Grid>
+          </Root>
         </Layout>
         <Layout className={styles.subheader}>
-          <Grid root padding={topHalf}>
-            <Grid margin={xTopHalf}><h2>Subheader</h2></Grid>
+          <Root>
+            <Grid margin={allHalf}><h2>Subheader</h2></Grid>
             <Grid size={10} margin={horizontalHalf}>
               <Grid margin={rightDouble} size="fit">
                 <Grid padding={top} className={colors3}>
@@ -80,12 +81,12 @@ export default function() {
                 sit amet
               </Grid>
             </Grid>
-          </Grid>
+          </Root>
         </Layout>
       </Layout>
       <Layout type="parent" className={`${styles.main} ${colors2}`}>
         <Layout type="stretch">
-          <Grid root>
+          <Root>
             <Grid align="stretch" size={12}>
               <Grid
                 size={1}
@@ -141,14 +142,14 @@ export default function() {
                 </Grid>
               </Grid>
             </Grid>
-          </Grid>
+          </Root>
         </Layout>
         <Layout className={styles.footer}>
-          <Grid root>
+          <Root>
             <Grid margin={horizontalHalf} size={12}>
               <h1>Footer</h1>
             </Grid>
-          </Grid>
+          </Root>
         </Layout>
       </Layout>
     </Layout>

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { compact } from 'lodash'
-import { getDisplayName, getSpacingClasses, hasSides, log } from './utils'
+import { getDisplayName, getSpacingClasses } from './utils'
 import type { AlignGrid, Justify, Offset, Size, Spacing } from './types'
 import Padding from './padding'
 import styles from './grid.css'
@@ -14,7 +14,6 @@ export type Props = {
   margin?: Spacing,
   offset?: Offset,
   padding?: Spacing,
-  root?: boolean,
   size?: Size,
 }
 
@@ -25,7 +24,6 @@ export default function Grid(Component: any) {
     static defaultProps = {
       margin: [],
       offset: 0,
-      root: false,
     }
 
     render() {
@@ -37,15 +35,13 @@ export default function Grid(Component: any) {
         margin = this.context.margin,
         offset,
         padding,
-        root,
         size,
         ...props
       } = this.props
       const classes = compact([
-        ...(root ? [] : getSpacingClasses(margin)),
+        ...getSpacingClasses(margin),
         className,
         offset && styles[`colOffset-${offset}`],
-        root && styles.root,
         size && styles.col,
         size && styles[`col-${String(size)}`],
         styles.grid,
@@ -55,9 +51,6 @@ export default function Grid(Component: any) {
         justify && styles[`${justify}Justify`],
       ])
 
-      if (root && hasSides(margin)) {
-        log.error('"root" grids cannot have margins')
-      }
       if (padding) {
         return (
           <Component {...props} className={classes.join(' ')}>

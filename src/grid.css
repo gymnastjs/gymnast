@@ -6,14 +6,6 @@
   flex-flow: row wrap;
   width: 100%;
 
-  &.root {
-    padding-left: calc(var(--page-margin) - var(--gutter) / 2);
-    padding-right: calc(var(--page-margin) - var(--gutter) / 2);
-    margin: auto;
-    min-width: var(--min-width);
-    max-width: var(--max-width);
-  }
-
   &:not(.col) {
     flex-grow: 1;
   }

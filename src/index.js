@@ -7,3 +7,5 @@ export { default as Layout } from './layout'
 export { default as LayoutHOC } from './layout.hoc'
 export { version } from '../version'
 export const utils = srcUtils
+
+export { default as Root } from './derived/root'

@@ -2,13 +2,13 @@
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
-import { Root, Box } from '../core'
+import { RootLayout, Box } from '../core'
 
 export default function() {
   const offset = number('Offset', 0, { range: true, min: 0, max: 11 })
 
   return (
-    <Root>
+    <RootLayout>
       <Grid>
         <Box size={1} type="A" value="+0" />
         <Box size={1} offset={7} type="A" value="+7" />
@@ -34,6 +34,6 @@ export default function() {
       <Grid>
         <Box size={1} offset={offset} type="C" value={`+${offset}`} />
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Grid } from '../../src'
-import { Root, Box } from '../core'
+import { RootLayout, Box } from '../core'
 import styles from '../core/stories.css'
 import {
   all,
@@ -14,7 +14,7 @@ import {
 
 export default function() {
   return (
-    <Root>
+    <RootLayout>
       <Grid>
         <Grid margin={item}><h1>Composite Card</h1></Grid>
 
@@ -105,6 +105,6 @@ export default function() {
           </Grid>
         </Grid>
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Grid, Layout } from 'reflex'
+import { Grid, Layout, Root } from 'reflex'
 import { loremIpsum } from '../core'
 import styles from './layout.css'
 import { top, horizontal, horizontalHalf } from '../core/marginTypes'
@@ -12,14 +12,14 @@ export default function() {
   return (
     <Layout type="parent" className={styles.page}>
       <Layout className={styles.header} fixed="top">
-        <Grid root>
+        <Root>
           <Grid margin={horizontalHalf} size={12}>
             <h1>Header</h1>
           </Grid>
-        </Grid>
+        </Root>
       </Layout>
       <Layout type="stretch" className={styles.main}>
-        <Grid root>
+        <Root>
           <Grid size={12} margin={horizontalHalf}>
             <Grid
               size={2}
@@ -56,14 +56,14 @@ export default function() {
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
+        </Root>
       </Layout>
       <Layout className={styles.footer}>
-        <Grid root>
+        <Root>
           <Grid margin={horizontalHalf} size={12}>
             <h1>Footer</h1>
           </Grid>
-        </Grid>
+        </Root>
       </Layout>
     </Layout>
   )

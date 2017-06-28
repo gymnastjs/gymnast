@@ -4,7 +4,7 @@ import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
 import { Grid } from 'reflex'
 import styles from '../core/stories.css'
-import { Box, Root, getPositionSelect, getMarginSelect } from '../core'
+import { Box, RootLayout, getPositionSelect, getMarginSelect } from '../core'
 import { item } from '../core/marginTypes'
 
 export default function() {
@@ -28,7 +28,7 @@ export default function() {
   }
 
   return (
-    <Root>
+    <RootLayout>
       <Grid size={12} margin={item}><h1>Nested Example</h1></Grid>
       <Grid size={12} margin={item}>
         <Grid size={12} {...params} className={styles.colors2}>
@@ -77,6 +77,6 @@ export default function() {
           </Grid>
         </Grid>
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }

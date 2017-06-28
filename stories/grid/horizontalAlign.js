@@ -2,7 +2,7 @@
 import React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
-import { Root, Box } from '../core'
+import { RootLayout, Box } from '../core'
 
 const justifyType = {
   Default: undefined,
@@ -25,7 +25,7 @@ export default function() {
   })
 
   return (
-    <Root>
+    <RootLayout>
       <Grid size={size} justify={justifyType[justify]}>
         <Box size={2} type="C" value={justify.toUpperCase()} />
       </Grid>
@@ -41,6 +41,6 @@ export default function() {
       <Grid size={size}>
         <Box size={2} type="A" value="DEFAULT" />
       </Grid>
-    </Root>
+    </RootLayout>
   )
 }
