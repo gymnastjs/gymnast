@@ -36,17 +36,3 @@
   position: fixed;
   bottom: 0;
 }
-
-.layoutMarginNone {
-  padding: 0;
-}
-
-.layoutMarginVerticalHalf {
-  padding-top: calc(var(--gutter) / 2);
-  padding-bottom: calc(var(--gutter) / 2);
-}
-
-.layoutMarginVerticalDouble {
-  padding-top: calc(var(--gutter) * 2);
-  padding-bottom: calc(var(--gutter) * 2);
-}
