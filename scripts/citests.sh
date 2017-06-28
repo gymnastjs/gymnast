@@ -9,10 +9,22 @@ set -e
 echo "Running node $CIRCLE_NODE_INDEX"
 
 if [ "$CIRCLE_NODE_INDEX" -eq "0" ]; then
-  yarn lint                    # Run linting tasks
-  yarn test:unit -- --coverage # Run unit tests
+  yarn build                              # build the bundle
+  yarn lint                               # Validate linting
+  yarn test:unit -- --coverage            # Validate unit tests
   cat ./coverage/lcov.info | node_modules/.bin/codeclimate-test-reporter
-  cp -R coverage/* $CIRCLE_TEST_REPORTS # Copy test coverage reports for CircleCI
+  cp -R coverage/* $CIRCLE_TEST_REPORTS   # Copy test coverage reports for CircleCI
 else
-  yarn test:image              # Run image comparison tests
+  # Run image comparison tests
+  yarn test:image -- --url $(./scripts/getTargetUrl.sh)/iframe.html
+
+  # If there are no new images, continue with the build
+  if [ -z "$(git status --porcelain)" ]; then
+    echo "No new images added 📸"
+  # otherwise commit, which will cancel this build and trigger a new one with these images
+  else
+    git add -A
+    git commit -m "fix(screenshots): $USER updated screenshot tests" --no-verify
+    git push origin HEAD:$CIRCLE_BRANCH
+  fi
 fi
