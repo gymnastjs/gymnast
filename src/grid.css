@@ -39,7 +39,7 @@
     align-items: flex-start;
   }
 
-  &.middleAlign {
+  &.centerAlign {
     align-content: center;
     align-items: center;
   }

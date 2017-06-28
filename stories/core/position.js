@@ -11,7 +11,7 @@ const justifyMap = {
 const alignMap = {
   Default: undefined,
   Top: 'top',
-  Middle: 'middle',
+  Center: 'center',
   Bottom: 'bottom',
   Stretch: 'stretch',
 }
@@ -27,7 +27,7 @@ export default function getMarginSelect(
   )
   const alignStr = select(
     alignTitle,
-    ['Default', 'Top', 'Middle', 'Bottom', 'Stretch'],
+    ['Default', 'Top', 'Center', 'Bottom', 'Stretch'],
     'Default'
   )
 

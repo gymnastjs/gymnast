@@ -133,7 +133,7 @@ export default function() {
           className={styles.colors2}
           padding={top}
           justify="center"
-          align="middle"
+          align="center"
           style={{ height: 300 }}
         >
           <Grid
@@ -149,7 +149,7 @@ export default function() {
           size={6}
           className={styles.colors2}
           justify="center"
-          align="middle"
+          align="center"
           style={{ height: 300 }}
         >
           <Grid
