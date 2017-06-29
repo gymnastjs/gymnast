@@ -75,5 +75,5 @@ else
   git add -A -f
   git commit -m "docs(storybook): $USER updated '$TARGET_URL'" --no-verify
   git rebase origin/gh-pages
-  git push origin gh-pages
+  git push -f origin gh-pages
 fi
