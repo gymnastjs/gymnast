@@ -39,7 +39,7 @@ git config user.email "$USER@reflex.ci" && git config user.name "Reflex CI ($BRA
 # Build StoryBook in the `../temp` folder
 yarn
 yarn build
-./node_modules/.bin/build-storybook -c storybook -s ./stories/static -o $TEMP_PATH
+./node_modules/.bin/build-storybook -c storybook/config -s ./storybook/static -o $TEMP_PATH
 
 # Copy circle.yml to ensure last config is used
 cp circle.yml $TEMP_PATH
@@ -74,5 +74,6 @@ if [ -z "$(git status --porcelain)" ]; then
 else
   git add -A -f
   git commit -m "docs(storybook): $USER updated '$TARGET_URL'" --no-verify
-  git push origin gh-pages
+  git rebase origin/gh-pages
+  git push -f origin gh-pages
 fi

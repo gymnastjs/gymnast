@@ -1,25 +1,26 @@
-const { readdirSync } = require('fs')
-const { join, parse } = require('path')
-const { getName } = require('../../../getName')
+import { flattenDeep } from 'lodash'
+import { storyFolders } from '../../../storybook/shared/storyFolders'
 
 const targetUrlIndex = process.argv.indexOf('--url')
 
 const BASE_URL = process.argv[targetUrlIndex + 1]
 
-const stories = readdirSync(join(__dirname, '../../../stories'))
-  .filter(path => ['grid', 'layout', 'components'].indexOf(path) >= 0)
-  .map(folder => join(__dirname, '../../../stories', folder))
-  .map(path => ({
-    kind: getName(parse(path).name),
-    storyNames: readdirSync(path)
-      .filter(storyPath => storyPath.endsWith('.js'))
-      .map(getName),
-  }))
+function getStories(content) {
+  if (content.namepath) {
+    return content.namepath
+  }
+  return Object.values(content).map(getStories)
+}
+
+const stories = Object.keys(storyFolders).map(kind => ({
+  kind,
+  storyNames: flattenDeep(getStories(storyFolders[kind])),
+}))
 
 const scenarios = stories.reduce((prev, story) => {
   const storyScenarios = story.storyNames.map(name => ({
     label: `${story.kind}__${name}`,
-    url: `${BASE_URL}?selectedKind=${encodeURIComponent(
+    url: `${BASE_URL}?selectedKind=%20${encodeURIComponent(
       story.kind
     )}&selectedStory=${encodeURIComponent(name)}`,
   }))
@@ -28,12 +29,12 @@ const scenarios = stories.reduce((prev, story) => {
 }, [])
 
 module.exports = scenarios.reduce(
-  (prev, { label, url }) =>
-    Object.assign({}, prev, {
-      [label]: browser => {
-        process.stdout.write(`loading story at ${url}\n`)
-        browser.url(url).compareScreenshot(`${label}.png`).end()
-      },
-    }),
+  (prev, { label, url }) => ({
+    ...prev,
+    [label]: browser => {
+      process.stdout.write(`loading story at ${url}\n`)
+      browser.url(url).compareScreenshot(`${label}.png`).end()
+    },
+  }),
   {}
 )

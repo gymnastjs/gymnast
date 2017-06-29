@@ -9,9 +9,8 @@ set -e
 echo "Running node $CIRCLE_NODE_INDEX"
 
 if [ "$CIRCLE_NODE_INDEX" -eq "0" ]; then
-  yarn build                              # build the bundle
   yarn lint                               # Validate linting
-  yarn test:unit -- --coverage            # Validate unit tests
+  yarn test -- --coverage                 # Validate unit tests
   cat ./coverage/lcov.info | node_modules/.bin/codeclimate-test-reporter
   cp -R coverage/* $CIRCLE_TEST_REPORTS   # Copy test coverage reports for CircleCI
 else

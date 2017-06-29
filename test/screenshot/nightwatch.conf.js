@@ -1,13 +1,11 @@
-const path = require('path')
+import path from 'path'
 
 const targetUrlIndex = process.argv.indexOf('--url')
-if (targetUrlIndex === -1) {
-  throw new Error(
-    'Cannot run screenshot tests. Environment variable `TARGET_URL` must be provided'
-  )
-}
+const targetUrl = targetUrlIndex === -1
+  ? 'http://localhost:9001/iframe.html'
+  : process.argv[targetUrlIndex + 1]
 
-const targetUrl = process.argv[targetUrlIndex + 1]
+process.env.NODE_ENV = 'test:image'
 
 module.exports = {
   src_folders: [path.resolve(__dirname, './specs')],
