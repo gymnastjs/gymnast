@@ -6,10 +6,10 @@ const targetUrlIndex = process.argv.indexOf('--url')
 const BASE_URL = process.argv[targetUrlIndex + 1]
 
 function getStories(content) {
-  if (content.story) {
+  if (content.namepath) {
     return content.namepath
   }
-  return Object.values(content).forEach(getStories)
+  return Object.values(content).map(getStories)
 }
 
 const stories = Object.keys(storyFolders).map(kind => ({
@@ -29,12 +29,12 @@ const scenarios = stories.reduce((prev, story) => {
 }, [])
 
 module.exports = scenarios.reduce(
-  (prev, { label, url }) =>
-    Object.assign({}, prev, {
-      [label]: browser => {
-        process.stdout.write(`loading story at ${url}\n`)
-        browser.url(url).compareScreenshot(`${label}.png`).end()
-      },
-    }),
+  (prev, { label, url }) => ({
+    ...prev,
+    [label]: browser => {
+      process.stdout.write(`loading story at ${url}\n`)
+      browser.url(url).compareScreenshot(`${label}.png`).end()
+    },
+  }),
   {}
 )

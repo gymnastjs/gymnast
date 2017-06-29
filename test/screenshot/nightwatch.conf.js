@@ -5,6 +5,8 @@ const targetUrl = targetUrlIndex === -1
   ? 'http://localhost:9001/iframe.html'
   : process.argv[targetUrlIndex + 1]
 
+process.env.NODE_ENV = 'test:image'
+
 module.exports = {
   src_folders: [path.resolve(__dirname, './specs')],
   custom_commands_path: path.resolve(__dirname, './commands'),

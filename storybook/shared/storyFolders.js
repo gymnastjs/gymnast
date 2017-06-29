@@ -5,6 +5,9 @@ import { readdirSync, lstatSync } from 'fs'
 import { join } from 'path'
 import { getName } from './getName'
 
+const isTest =
+  process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'test:image'
+
 type storyObj = {
   story: Function,
   notes: string,
@@ -47,7 +50,7 @@ function loadTestFolder(path: string, origin: string = ''): storyObj {
           name,
           {
             /* eslint-disable global-require, import/no-dynamic-require */
-            story: require(filepath).default,
+            story: process.env.NODE_ENV === 'test' && require(filepath).default,
             /* eslint-enable global-require, import/no-dynamic-require */
             notes: '',
             filepath,
@@ -60,7 +63,7 @@ function loadTestFolder(path: string, origin: string = ''): storyObj {
   return folders.reduce(
     (acc, folder) => ({
       ...acc,
-      [getName(folder)]: loadTestFolder(folder),
+      [getName(folder)]: loadTestFolder(folder, getName(folder)),
     }),
     directChildren
   )
@@ -97,7 +100,7 @@ function loadWebpack(loader: Function): storyTree {
   }, {})
 }
 
-export const storyFolders = require && require.context
+export const storyFolders = !isTest
   ? loadWebpack(require.context('../stories', true, /.+\.(md|js)$/i))
   : loadTest()
 

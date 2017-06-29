@@ -2626,7 +2626,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Card.Base 1`] = `
+exports[`Storyshots  Components Base 1`] = `
 <div>
   <div>
     <div
@@ -2806,7 +2806,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Card.Composite 1`] = `
+exports[`Storyshots  Components Composite 1`] = `
 <div>
   <div>
     <div
@@ -3134,7 +3134,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Card.Filter 1`] = `
+exports[`Storyshots  Components Filter 1`] = `
 <div>
   <div>
     <div
@@ -3351,150 +3351,6 @@ exports[`Storyshots  Components Card.Filter 1`] = `
                           Filter
                         </button>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots  Components Card.Profile 1`] = `
-<div>
-  <div>
-    <div
-      className="parent layout"
-    >
-      <div
-        className="rightHalfSpacing leftHalfSpacing grid"
-      >
-        <div
-          className="grid rightSingleSpacing leftSingleSpacing"
-        >
-          <div
-            className="grid"
-          >
-            <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
-            >
-              <h1>
-                User Profile
-              </h1>
-            </div>
-            <div
-              className="grid stretchAlign"
-            >
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
-              >
-                <div
-                  className="colors2 grid"
-                >
-                  Full Bleed
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-8 grid"
-              >
-                <div
-                  className="bottomSingleSpacing grid"
-                >
-                  <div
-                    className="colors2 grid"
-                  >
-                    <div
-                      className="grid topSingleSpacing rightSingleSpacing leftSingleSpacing"
-                    >
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
-                      >
-                        <h2>
-                          Title
-                        </h2>
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing colOffset-3 col col-3 grid"
-                      >
-                        Note
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
-                      >
-                        Text1
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
-                      >
-                        Text2
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
-                      >
-                        Text3
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-3 grid"
-                      >
-                        Text4
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-3 grid"
-                      >
-                        Text5
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
-                      >
-                        Text6
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
-                      >
-                        Text7
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
-                      >
-                        Text8
-                      </div>
-                      <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-3 grid"
-                      >
-                        Text9
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="colors2 grid"
-                >
-                  <div
-                    className="grid topSingleSpacing rightSingleSpacing leftSingleSpacing"
-                  >
-                    <div
-                      className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
-                    >
-                      Text1
-                    </div>
-                    <div
-                      className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
-                    >
-                      Text2
-                    </div>
-                    <div
-                      className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
-                    >
-                      Text3
-                    </div>
-                    <div
-                      className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
-                    >
-                      Text4
                     </div>
                   </div>
                 </div>
@@ -4056,6 +3912,150 @@ exports[`Storyshots  Components Pagination 1`] = `
                   className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
                   &gt;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Components Profile 1`] = `
+<div>
+  <div>
+    <div
+      className="parent layout"
+    >
+      <div
+        className="rightHalfSpacing leftHalfSpacing grid"
+      >
+        <div
+          className="grid rightSingleSpacing leftSingleSpacing"
+        >
+          <div
+            className="grid"
+          >
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
+            >
+              <h1>
+                User Profile
+              </h1>
+            </div>
+            <div
+              className="grid stretchAlign"
+            >
+              <div
+                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
+              >
+                <div
+                  className="colors2 grid"
+                >
+                  Full Bleed
+                </div>
+              </div>
+              <div
+                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-8 grid"
+              >
+                <div
+                  className="bottomSingleSpacing grid"
+                >
+                  <div
+                    className="colors2 grid"
+                  >
+                    <div
+                      className="grid topSingleSpacing rightSingleSpacing leftSingleSpacing"
+                    >
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
+                      >
+                        <h2>
+                          Title
+                        </h2>
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing colOffset-3 col col-3 grid"
+                      >
+                        Note
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
+                      >
+                        Text1
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
+                      >
+                        Text2
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
+                      >
+                        Text3
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-3 grid"
+                      >
+                        Text4
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-3 grid"
+                      >
+                        Text5
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
+                      >
+                        Text6
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
+                      >
+                        Text7
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-2 grid"
+                      >
+                        Text8
+                      </div>
+                      <div
+                        className="rightHalfSpacing bottomSingleSpacing col col-3 grid"
+                      >
+                        Text9
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="colors2 grid"
+                >
+                  <div
+                    className="grid topSingleSpacing rightSingleSpacing leftSingleSpacing"
+                  >
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
+                    >
+                      Text1
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
+                    >
+                      Text2
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
+                    >
+                      Text3
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
+                    >
+                      Text4
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
