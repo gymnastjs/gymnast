@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1123);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1124);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -42713,7 +42713,7 @@ function loadTestFolder(path) {
   }).map(function (filepath) {
     return [(0, _getName.getName)(filepath), {
       /* eslint-disable global-require, import/no-dynamic-require */
-      story: undefined, // require(filepath).default
+      story: !(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()).default,
       /* eslint-enable global-require, import/no-dynamic-require */
       notes: '',
       filepath: filepath
@@ -42757,7 +42757,7 @@ function loadWebpack(loader) {
   }, {});
 }
 
-var storyFolders = exports.storyFolders = !isTest ? loadWebpack(__webpack_require__(1122)) : loadTest();
+var storyFolders = exports.storyFolders = !isTest ? loadWebpack(__webpack_require__(1123)) : loadTest();
 
 exports.default = storyFolders;
 /* WEBPACK VAR INJECTION */}.call(exports, "/"))
@@ -53412,6 +53412,18 @@ module.exports = v1;
 
 /***/ }),
 /* 1122 */
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 1122;
+
+/***/ }),
+/* 1123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -53466,10 +53478,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 1122;
+webpackContext.id = 1123;
 
 /***/ }),
-/* 1123 */
+/* 1124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(218);
@@ -53479,4 +53491,4 @@ module.exports = __webpack_require__(670);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.4cc5fbc5987c6660529d.bundle.js.map
+//# sourceMappingURL=preview.086beb80c9010e44cefe.bundle.js.map
