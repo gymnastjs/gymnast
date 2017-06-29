@@ -20,7 +20,7 @@ const stories = Object.keys(storyFolders).map(kind => ({
 const scenarios = stories.reduce((prev, story) => {
   const storyScenarios = story.storyNames.map(name => ({
     label: `${story.kind}__${name}`,
-    url: `${BASE_URL}?selectedKind=${encodeURIComponent(
+    url: `${BASE_URL}?selectedKind=%20${encodeURIComponent(
       story.kind
     )}&selectedStory=${encodeURIComponent(name)}`,
   }))
