@@ -23,6 +23,7 @@ dependencies:
         background: true
 test:
   override:
+    - yarn build
     - scripts/citests.sh:
         parallel: true
 deployment:
