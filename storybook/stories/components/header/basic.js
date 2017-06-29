@@ -3,8 +3,8 @@ import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
-import { Box, RootLayout } from '../../shared'
-import { item } from '../../shared/marginTypes'
+import { Box, RootLayout } from '../../../shared'
+import { item } from '../../../shared/marginTypes'
 
 export default function() {
   const items = number('Items', 6, { range: true, min: 1, max: 6 })
