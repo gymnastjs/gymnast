@@ -42708,9 +42708,7 @@ function loadTestFolder(path) {
       files = _getFilesAndFolders.files,
       folders = _getFilesAndFolders.folders;
 
-  return folders.reduce(function (acc, folder) {
-    return _extends({}, acc, _defineProperty({}, (0, _getName.getName)(folder), loadTestFolder(folder)));
-  }, (0, _fromPairs3.default)(files.filter(function (filepath) {
+  var directChildren = (0, _fromPairs3.default)(files.filter(function (filepath) {
     return filepath.endsWith('.js');
   }).map(function (filepath) {
     return [(0, _getName.getName)(filepath), {
@@ -42720,7 +42718,11 @@ function loadTestFolder(path) {
       notes: '',
       filepath: filepath
     }];
-  })));
+  }));
+
+  return folders.reduce(function (acc, folder) {
+    return _extends({}, acc, _defineProperty({}, (0, _getName.getName)(folder), loadTestFolder(folder)));
+  }, directChildren);
 }
 
 function loadTest() {
@@ -53477,4 +53479,4 @@ module.exports = __webpack_require__(670);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.58532c38433f09fa7849.bundle.js.map
+//# sourceMappingURL=preview.4cc5fbc5987c6660529d.bundle.js.map
