@@ -22,6 +22,7 @@
     "@storybook/addon-storyshots": "3.1.5",
     "@storybook/react": "3.1.5",
     "all-contributors-cli": "4.3.0",
+    "babel-cli": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-plugin-flow-react-proptypes": "3.4.0",
@@ -98,15 +99,14 @@
     "lint:css": "stylelint src/*.css stories/*.css",
     "lint:flow": "flow stop && flow",
     "lint:js": "eslint src stories storybook",
-    "lint": "NODE_ENV=test npm-run-all --parallel lint:*",
+    "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "start:storybook": "start-storybook -p 9001 -s ./stories/static -c storybook",
+    "start:storybook": "start-storybook -p 9001 -s ./storybook/static -c storybook/config",
     "start:webpack": "yarn build -- --watch",
     "start": "npm-run-all --parallel start:*",
-    "test:image": "node_modules/.bin/nightwatch --config test/screenshot/nightwatch.conf.js",
-    "test:unit": "jest",
-    "test": "npm-run-all --parallel test:*"
+    "test:image": "babel-node node_modules/.bin/nightwatch --config test/screenshot/nightwatch.conf.js",
+    "test": "jest"
   },
   "release": {
     "verifyConditions": "condition-circle",

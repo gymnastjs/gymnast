@@ -7,33 +7,17 @@
     "flow-react-proptypes",
     "lodash",
     "transform-object-rest-spread",
-    "transform-class-properties"
+    "transform-class-properties",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "reflex": "./dist/reflex"
+        }
+      }
+    ]
   ],
   "env": {
-    "production": {
-      "plugins": [
-        [
-          "module-resolver",
-          {
-            "alias": {
-              "reflex": "./dist/reflex"
-            }
-          }
-        ]
-      ]
-    },
-    "development": {
-      "plugins": [
-        [
-          "module-resolver",
-          {
-            "alias": {
-              "reflex": "./dist/reflex"
-            }
-          }
-        ]
-      ]
-    },
     "test": {
       "plugins": [
         [

@@ -1,0 +1,90 @@
+// @flow
+import React from 'react'
+import { Grid } from 'reflex'
+import { RootLayout, loremIpsum } from '../../../shared'
+import styles from '../../../shared/stories.css'
+import {
+  bottom,
+  bottomHalf,
+  horizontal,
+  horizontalHalf,
+  item,
+  leftHalf,
+  none,
+  rightHalf,
+  top,
+  verticalHalf,
+  xBottom,
+} from '../../../shared/marginTypes'
+
+export default function() {
+  function ListItem({ index }: { index: number }) {
+    return (
+      <Grid
+        className={index % 2 ? styles.colors1 : styles.colors4}
+        padding={index === 0 ? bottomHalf : verticalHalf}
+      >
+        <Grid size={6} margin={rightHalf}>
+          Selected Item Name
+        </Grid>
+        <Grid margin={horizontalHalf} size={3}>Some Tag</Grid>
+        <Grid margin={leftHalf} size={1} offset={2} justify="right">
+          x
+        </Grid>
+      </Grid>
+    )
+  }
+
+  return (
+    <RootLayout>
+      <Grid>
+        <Grid margin={item}><h1>Filter List</h1></Grid>
+
+        <Grid align="stretch" justify="center">
+          <Grid size={6} margin={item}>
+            <Grid margin={bottom}>
+              <Grid className={styles.colors1} padding={xBottom}>
+                <Grid margin={[0, 0.5, 1, 0]} size={9}><h2>Title</h2></Grid>
+                <Grid size={3} justify="right" margin={none}>X</Grid>
+              </Grid>
+              <Grid
+                size={12}
+                className={styles.colors4}
+                padding={top}
+                margin={horizontalHalf}
+              >
+
+                <Grid margin={horizontalHalf} padding={bottomHalf}>
+                  Filter by...
+                </Grid>
+                <Grid margin={item} size={6}><input type="text" /></Grid>
+              </Grid>
+              <Grid
+                size={12}
+                className={styles.colors2}
+                padding={top}
+                margin={horizontal}
+              >
+                <ListItem index={0} />
+                <ListItem index={1} />
+                <ListItem index={2} />
+                <ListItem index={3} />
+                <ListItem index={4} />
+
+                <Grid>
+                  <p>{loremIpsum.substr(0, 100)}</p>
+                </Grid>
+                <Grid size={4} margin={[0, 0.5, 1, 0]}>
+                  <button>Cancel</button>
+                </Grid>
+                <Grid size={4} margin={[0, 0, 1, 0.5]}>
+                  <button>Filter</button>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </RootLayout>
+  )
+}
