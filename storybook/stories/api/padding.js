@@ -1,16 +1,9 @@
 // @flow
 import React from 'react'
-import { Grid } from 'reflex'
+import { Grid, Col } from 'reflex'
 import { RootLayout, getMarginSelect, loremIpsum } from '../../shared'
 import styles from '../../shared/stories.css'
-import {
-  all,
-  bottom,
-  item,
-  top,
-  topRight,
-  xBottom,
-} from '../../shared/marginTypes'
+import { all, bottom, top, topRight, xBottom } from '../../shared/marginTypes'
 
 export default function() {
   const margin = getMarginSelect()
@@ -22,17 +15,17 @@ export default function() {
 
   return (
     <RootLayout>
-      <Grid margin={item}>
-        <Grid size={12} margin={bottom}>
+      <Col>
+        <Grid margin={bottom}>
           <h1>Default (No Padding)</h1>
         </Grid>
         <Grid size={6} className={styles.colors2}>
-          <Grid margin={margin} size={12} className={styles.colors3}>
+          <Grid margin={margin} className={styles.colors3}>
             {text}
           </Grid>
         </Grid>
-      </Grid>
-      <Grid margin={item}>
+      </Col>
+      <Col>
         <Grid size={6} margin={bottom}>
           <h1>Top Right Padding</h1>
         </Grid>
@@ -40,22 +33,17 @@ export default function() {
           <h1>Item Top Right Padding</h1>
         </Grid>
         <Grid size={6} className={styles.colors2} padding={topRight}>
-          <Grid margin={margin} size={12} className={styles.colors3}>
+          <Grid margin={margin} className={styles.colors3}>
             {text}
           </Grid>
         </Grid>
         <Grid size={6} className={styles.colors2}>
-          <Grid
-            margin={margin}
-            size={12}
-            className={styles.colors3}
-            padding={topRight}
-          >
+          <Grid margin={margin} className={styles.colors3} padding={topRight}>
             {text}
           </Grid>
         </Grid>
-      </Grid>
-      <Grid margin={item}>
+      </Col>
+      <Col>
         <Grid size={6} margin={bottom}>
           <h1>All-sides Padding</h1>
         </Grid>
@@ -63,22 +51,17 @@ export default function() {
           <h1>Item All-sides Padding</h1>
         </Grid>
         <Grid size={6} className={styles.colors2} padding={all}>
-          <Grid margin={margin} size={12} className={styles.colors3}>
+          <Grid margin={margin} className={styles.colors3}>
             {text}
           </Grid>
         </Grid>
         <Grid size={6} className={styles.colors2}>
-          <Grid
-            margin={margin}
-            size={12}
-            className={styles.colors3}
-            padding={all}
-          >
+          <Grid margin={margin} className={styles.colors3} padding={all}>
             {text}
           </Grid>
         </Grid>
-      </Grid>
-      <Grid margin={item}>
+      </Col>
+      <Col>
         <Grid size={6} margin={bottom}>
           <h1>Bottom Padding</h1>
         </Grid>
@@ -86,22 +69,17 @@ export default function() {
           <h1>Item Bottom Padding</h1>
         </Grid>
         <Grid size={6} className={styles.colors2} padding={bottom}>
-          <Grid margin={margin} size={12} className={styles.colors3}>
+          <Grid margin={margin} className={styles.colors3}>
             {text}
           </Grid>
         </Grid>
         <Grid size={6} className={styles.colors2}>
-          <Grid
-            margin={margin}
-            size={12}
-            className={styles.colors3}
-            padding={bottom}
-          >
+          <Grid margin={margin} className={styles.colors3} padding={bottom}>
             {text}
           </Grid>
         </Grid>
-      </Grid>
-      <Grid margin={item}>
+      </Col>
+      <Col>
         <Grid size={6} margin={bottom}>
           <h1>Top-Right-Left Padding</h1>
         </Grid>
@@ -109,24 +87,19 @@ export default function() {
           <h1>Item Top-Right-Left Padding</h1>
         </Grid>
         <Grid size={6} className={styles.colors2} padding={xBottom}>
-          <Grid margin={margin} size={12} className={styles.colors3}>
+          <Grid margin={margin} className={styles.colors3}>
             {text}
           </Grid>
         </Grid>
         <Grid size={6} className={styles.colors2}>
-          <Grid
-            margin={margin}
-            size={12}
-            className={styles.colors3}
-            padding={xBottom}
-          >
+          <Grid margin={margin} className={styles.colors3} padding={xBottom}>
             {text}
           </Grid>
         </Grid>
-      </Grid>
+      </Col>
 
-      <Grid margin={item}>
-        <Grid size={12} margin={bottom}>
+      <Col>
+        <Grid margin={bottom}>
           <h1>With Justify / Alignment</h1>
         </Grid>
         <Grid size={6} margin={bottom}>
@@ -145,7 +118,6 @@ export default function() {
         >
           <Grid
             margin={margin}
-            size={12}
             className={styles.colors3}
             style={{ maxWidth: 200 }}
           >
@@ -161,7 +133,6 @@ export default function() {
         >
           <Grid
             margin={margin}
-            size={12}
             className={styles.colors3}
             padding={top}
             style={{ maxWidth: 200 }}
@@ -169,7 +140,7 @@ export default function() {
             {text}
           </Grid>
         </Grid>
-      </Grid>
+      </Col>
     </RootLayout>
   )
 }

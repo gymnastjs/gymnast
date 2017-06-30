@@ -2,9 +2,8 @@
 import React from 'react'
 import { times } from 'lodash'
 import { boolean, number } from '@storybook/addon-knobs'
-import { Grid } from 'reflex'
+import { Grid, Col } from 'reflex'
 import { RootLayout, Box } from '../../shared'
-import { item } from '../../shared/marginTypes'
 
 function ReferenceColumn({ height }: { height: number }) {
   return (
@@ -31,9 +30,9 @@ export default function() {
 
   return (
     <RootLayout>
-      <Grid margin={item}>
+      <Col>
         <h1>Item Align</h1>
-      </Grid>
+      </Col>
       <Grid>
         <ReferenceColumn height={height} />
         <Box size="auto" type="A" value="TOP" align="top" />
@@ -41,18 +40,18 @@ export default function() {
         <Box size="auto" type="A" value="BOTTOM" align="bottom" />
         <Box size="auto" type="A" value="DEFAULT" />
       </Grid>
-      <Grid margin={item}>
+      <Col>
         <h1>Grid Align</h1>
-      </Grid>
+      </Col>
       <Grid>
         <Grid size={4} align={!stretch && 'top'} style={{ height }}>
-          {times(items, i => <Box size={12} key={i} type="C" value="TOP" />)}
+          {times(items, i => <Box key={i} type="C" value="TOP" />)}
         </Grid>
         <Grid size={4} align={!stretch && 'center'} style={{ height }}>
-          {times(items, i => <Box size={12} key={i} type="C" value="CENTER" />)}
+          {times(items, i => <Box key={i} type="C" value="CENTER" />)}
         </Grid>
         <Grid size={4} align={!stretch && 'bottom'} style={{ height }}>
-          {times(items, i => <Box size={12} key={i} type="C" value="BOTTOM" />)}
+          {times(items, i => <Box key={i} type="C" value="BOTTOM" />)}
         </Grid>
       </Grid>
     </RootLayout>

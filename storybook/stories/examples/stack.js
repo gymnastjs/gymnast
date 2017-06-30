@@ -2,10 +2,10 @@
 import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Layout, Root } from 'reflex'
+import { Col, Grid, Layout, Root } from 'reflex'
 import style from './layout.css'
 import { colors3 } from '../../shared/stories.css'
-import { item, horizontalHalf } from '../../shared/marginTypes'
+import { horizontalHalf } from '../../shared/marginTypes'
 
 function getStaticSection(index) {
   return (
@@ -27,7 +27,7 @@ function getContainerSection(index, subsections) {
       <Root align="top">
         {times(subsections, i =>
           <Grid key={i}>
-            <Grid margin={item} size={12}><h1>SubSection {i + 1}</h1></Grid>
+            <Col><h1>SubSection {i + 1}</h1></Col>
           </Grid>
         )}
       </Root>

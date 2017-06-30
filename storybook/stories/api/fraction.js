@@ -2,9 +2,8 @@
 import React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid } from 'reflex'
+import { Grid, Col } from 'reflex'
 import { RootLayout, Box, getMarginSelect } from '../../shared'
-import { item } from '../../shared/marginTypes'
 
 export default function() {
   const items = number('Items', 0, { range: true, min: 0, max: 5 })
@@ -12,9 +11,9 @@ export default function() {
 
   return (
     <RootLayout>
-      <Grid margin={item}>
+      <Col>
         <h1>Auto Size</h1>
-      </Grid>
+      </Col>
       {times(9, size =>
         <Grid key={size}>
           {times(size + items, i =>
@@ -29,26 +28,26 @@ export default function() {
         </Grid>
       )}
 
-      <Grid margin={item}>
+      <Col>
         <h1>8 - auto</h1>
-      </Grid>
+      </Col>
       <Grid>
         <Box margin={margin} size={8} type="A" value="8" />
         <Box margin={margin} size="auto" type="A" value="12 - 8 = 4" />
       </Grid>
 
-      <Grid margin={item}>
+      <Col>
         <h1>6 - 1/2 - 1/2</h1>
-      </Grid>
+      </Col>
       <Grid>
         <Box margin={margin} size={6} type="A" value="6" />
         <Box margin={margin} size="auto" type="A" value="(12 - 6) / 2 = 3" />
         <Box margin={margin} size="auto" type="A" value="(12 - 6) / 2 = 3" />
       </Grid>
 
-      <Grid margin={item}>
+      <Col>
         <h1>Custom</h1>
-      </Grid>
+      </Col>
       <Grid>
         {times(items, index =>
           <Box

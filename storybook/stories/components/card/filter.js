@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid } from 'reflex'
+import { Grid, Col } from 'reflex'
 import { RootLayout, loremIpsum } from '../../../shared'
 import styles from '../../../shared/stories.css'
 import {
@@ -8,7 +8,6 @@ import {
   bottomHalf,
   horizontal,
   horizontalHalf,
-  item,
   leftHalf,
   none,
   rightHalf,
@@ -38,17 +37,16 @@ export default function() {
   return (
     <RootLayout>
       <Grid>
-        <Grid margin={item}><h1>Filter List</h1></Grid>
+        <Col><h1>Filter List</h1></Col>
 
         <Grid align="stretch" justify="center">
-          <Grid size={6} margin={item}>
+          <Col size={6}>
             <Grid margin={bottom}>
               <Grid className={styles.colors1} padding={xBottom}>
                 <Grid margin={[0, 0.5, 1, 0]} size={9}><h2>Title</h2></Grid>
                 <Grid size={3} justify="right" margin={none}>X</Grid>
               </Grid>
               <Grid
-                size={12}
                 className={styles.colors4}
                 padding={top}
                 margin={horizontalHalf}
@@ -57,10 +55,9 @@ export default function() {
                 <Grid margin={horizontalHalf} padding={bottomHalf}>
                   Filter by...
                 </Grid>
-                <Grid margin={item} size={6}><input type="text" /></Grid>
+                <Col size={6}><input type="text" /></Col>
               </Grid>
               <Grid
-                size={12}
                 className={styles.colors2}
                 padding={top}
                 margin={horizontal}
@@ -82,7 +79,7 @@ export default function() {
                 </Grid>
               </Grid>
             </Grid>
-          </Grid>
+          </Col>
         </Grid>
       </Grid>
     </RootLayout>

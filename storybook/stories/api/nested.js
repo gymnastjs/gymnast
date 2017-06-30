@@ -2,7 +2,7 @@
 import React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
-import { Grid } from 'reflex'
+import { Grid, Col } from 'reflex'
 import styles from '../../shared/stories.css'
 import {
   Box,
@@ -10,7 +10,6 @@ import {
   getPositionSelect,
   getMarginSelect,
 } from '../../shared'
-import { item } from '../../shared/marginTypes'
 
 export default function() {
   const paddingMap = {
@@ -34,9 +33,9 @@ export default function() {
 
   return (
     <RootLayout>
-      <Grid size={12} margin={item}><h1>Nested Example</h1></Grid>
-      <Grid size={12} margin={item}>
-        <Grid size={12} {...params} className={styles.colors2}>
+      <Col><h1>Nested Example</h1></Col>
+      <Col>
+        <Grid {...params} className={styles.colors2}>
           <Grid
             size={6}
             {...params}
@@ -61,26 +60,26 @@ export default function() {
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid size={12} margin={item}><h1>With Offsets</h1></Grid>
-      <Grid size={12} margin={item}>
-        <Grid size={12} {...params} className={styles.colors2}>
+      </Col>
+      <Col><h1>With Offsets</h1></Col>
+      <Col>
+        <Grid {...params} className={styles.colors2}>
           <Box size={6} margin={margin} offset={3} type="A" />
           <Box size={4} margin={margin} type="A" />
           <Box size={4} margin={margin} offset={4} type="A" />
         </Grid>
-      </Grid>
-      <Grid size={12} margin={item}><h1>With Overflow</h1></Grid>
-      <Grid size={12}>
-        <Grid size={6} margin={item}>
-          <Grid size={12} {...params} className={styles.colors2}>
+      </Col>
+      <Col><h1>With Overflow</h1></Col>
+      <Grid>
+        <Col size={6}>
+          <Grid {...params} className={styles.colors2}>
             {times(items, index =>
               <Box size={2} margin={margin} key={index} type="A">
                 {`${index * 2 % 12 + 2}`}
               </Box>
             )}
           </Grid>
-        </Grid>
+        </Col>
       </Grid>
     </RootLayout>
   )
