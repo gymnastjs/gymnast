@@ -47946,7 +47946,7 @@ exports = module.exports = __webpack_require__(117)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.layout__page___1P3a_{position:absolute;top:0}.layout__page___1P3a_ h2,.layout__page___1P3a_ p{margin:0}.layout__page___1P3a_ h1{margin:10px 0}.layout__page___1P3a_{/*header heights, hard coded offsets*/}.layout__main___1C8ei{margin-top:57px}&.layout__hasSubheader___1Ek4X .layout__main___1C8ei{margin-top:173px}\n\n/* end of hard coded offsets */.layout__footer___1UTyp,.layout__header___13EHl{color:gold;background-color:#1d1f21}.layout__nav___2XCpj{color:#efefef;background-color:#1469cc}.layout__content___1gJdR,.layout__subheader___-T3FW{color:#1469cc;background-color:#efefef}.layout__card___1xW3H{background-color:#fff}.layout__ads___3jPGv,.layout__card___1xW3H{color:#1d1f21}.layout__ads___3jPGv{background-color:gold}.layout__top___2-uU2{padding-top:48px;padding-bottom:48px;color:#efefef;background-color:#1469cc}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.layout__page___1P3a_{position:absolute;top:0}.layout__page___1P3a_ h2,.layout__page___1P3a_ p{margin:0}.layout__page___1P3a_ h1{margin:10px 0}.layout__page___1P3a_ .layout__main___1C8ei{margin-top:57px}.layout__page___1P3a_.layout__hasSubheader___1Ek4X .layout__main___1C8ei{margin-top:173px}.layout__page___1P3a_{/*end of hard coded offsets*/}.layout__page___1P3a_ .layout__footer___1UTyp,.layout__page___1P3a_ .layout__header___13EHl{color:gold;background-color:#1d1f21}.layout__page___1P3a_ .layout__nav___2XCpj{color:#efefef;background-color:#1469cc}.layout__page___1P3a_ .layout__content___1gJdR,.layout__page___1P3a_ .layout__subheader___-T3FW{color:#1469cc;background-color:#efefef}.layout__page___1P3a_ .layout__card___1xW3H{color:#1d1f21;background-color:#fff}.layout__page___1P3a_ .layout__ads___3jPGv{color:#1d1f21;background-color:gold}.layout__page___1P3a_ .layout__top___2-uU2{padding-top:48px;padding-bottom:48px;color:#efefef;background-color:#1469cc}", ""]);
 
 // exports
 exports.locals = {
@@ -54296,4 +54296,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.0fe74e22efc4c020dbc5.bundle.js.map
+//# sourceMappingURL=preview.2e68488916d09cd58dd2.bundle.js.map
