@@ -39447,6 +39447,9 @@ function SearchFilters(props) {
     )
   );
 }
+SearchFilters.propTypes = {
+  size: __webpack_require__(1).number
+};
 
 /***/ }),
 /* 507 */
@@ -54453,4 +54456,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.a1d6a24d7ede0690be95.bundle.js.map
+//# sourceMappingURL=preview.e4519475c4aa35eb1f18.bundle.js.map
