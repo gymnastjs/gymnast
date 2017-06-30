@@ -14,7 +14,9 @@ section {
   margin-bottom: 20px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   text-align: left;
 }
@@ -31,7 +33,8 @@ li {
   text-align: left;
 }
 
-input, button {
+input,
+button {
   width: 100%;
   height: 40px;
   font-size: 18px;
@@ -51,26 +54,51 @@ button {
   background-color: var(--axonGold);
 }
 
-.box1, .box2, .box3, .box4 {
+.box1,
+.box2,
+.box3,
+.box4 {
   cursor: default;
 }
 
-.colors1, .box1 {
+.colors1,
+.box1 {
   color: var(--axonGold);
   background-color: var(--axonBlack);
 }
 
-.colors2, .box2 {
+.colors2,
+.box2 {
   color: var(--bolt);
   background-color: var(--nomuraGray);
 }
 
-.colors3, .box3 {
+.colors3,
+.box3 {
   color: var(--axonBlack);
   background-color: var(--axonGold);
 }
 
-.colors4, .box4 {
+.colors4,
+.box4 {
   color: var(--nomuraGray);
   background-color: var(--bolt);
+}
+
+.block {
+  composes: colors2;
+  height: 15px;
+  width: 15px;
+  min-height: 15px;
+}
+
+.image {
+  composes: colors4;
+  height: 100px;
+  width: 100%;
+}
+
+.paginationArrow {
+  composes: colors2;
+  padding: '5px 10px';
 }

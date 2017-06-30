@@ -3508,7 +3508,85 @@ exports[`Storyshots  Components Card.Profile 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Header 1`] = `
+exports[`Storyshots  Components Header.App 1`] = `
+<div>
+  <div>
+    <div
+      className="colors1 fixedTop auto layout"
+    >
+      <div
+        className="rightHalfSpacing leftHalfSpacing grid"
+      >
+        <div
+          className="centerAlign grid rightSingleSpacing leftSingleSpacing"
+        >
+          <div
+            className="rightHalfSpacing leftHalfSpacing col col-auto grid centerAlign"
+          >
+            <div
+              className="rightHalfSpacing colors2 col col-auto grid"
+            >
+              Lorem
+            </div>
+            <div
+              className="rightHalfSpacing colors4 col col-auto grid"
+            >
+              ipsum
+            </div>
+            <div
+              className="rightHalfSpacing colors2 col col-auto grid"
+            >
+              dolor
+            </div>
+            <div
+              className="rightHalfSpacing colors4 col col-auto grid"
+            >
+              sit amet
+            </div>
+            <div
+              className="rightHalfSpacing colors2 col col-auto grid"
+            >
+              consectetur
+            </div>
+          </div>
+          <div
+            className="rightHalfSpacing leftHalfSpacing colors4 colOffset-1 col col-3 grid"
+          >
+            <input
+              placeholder="Search for anything..."
+            />
+          </div>
+          <div
+            className="rightHalfSpacing leftHalfSpacing col col-2 grid centerAlign"
+          >
+            <div
+              className="rightHalfSpacing col col-auto grid"
+            >
+              <div
+                className="block"
+              />
+            </div>
+            <div
+              className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+            >
+              <div
+                className="block"
+              />
+            </div>
+            <div
+              className="col col-fit grid rightJustify"
+            >
+              Lorem ipsum
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Components Header.Basic 1`] = `
 <div>
   <div>
     <div>
@@ -4059,6 +4137,328 @@ exports[`Storyshots  Components Pagination 1`] = `
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Components Search.Filters 1`] = `
+<div>
+  <div>
+    <div
+      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors4 grid topAlign"
+    >
+      <div
+        className="rightHalfSpacing bottomSingleSpacing grid"
+      >
+        Filter by
+      </div>
+      <div
+        className="bottomSingleSpacing colors2 grid"
+      >
+        <div
+          className="col col-auto grid"
+        >
+          Type 1
+        </div>
+        <div
+          className="col col-fit grid"
+        >
+          +
+        </div>
+      </div>
+      <div
+        className="bottomSingleSpacing colors1 grid"
+      >
+        <div
+          className="col col-auto grid"
+        >
+          Type 2
+        </div>
+        <div
+          className="col col-fit grid"
+        >
+          +
+        </div>
+      </div>
+      <div
+        className="bottomSingleSpacing colors2 grid"
+      >
+        <div
+          className="col col-auto grid"
+        >
+          Type 3
+        </div>
+        <div
+          className="col col-fit grid"
+        >
+          +
+        </div>
+      </div>
+      <div
+        className="bottomSingleSpacing colors1 grid"
+      >
+        <div
+          className="col col-auto grid"
+        >
+          Type 4
+        </div>
+        <div
+          className="col col-fit grid"
+        >
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Components Search.Nav 1`] = `
+<div>
+  <div>
+    <div
+      className="colors2 auto topSingleSpacing layout"
+    >
+      <div
+        className="rightHalfSpacing leftHalfSpacing grid"
+      >
+        <div
+          className="grid rightSingleSpacing leftSingleSpacing"
+        >
+          <div
+            className="grid"
+          >
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-7 grid"
+            >
+              <input
+                placeholder="Search for anything..."
+              />
+            </div>
+            <div
+              className="rightHalfSpacing leftHalfSpacing grid"
+            >
+              <div
+                className="col col-5 grid"
+              >
+                <div
+                  className="rightHalfSpacing colors1 col col-auto grid"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  Lorem
+                </div>
+                <div
+                  className="rightHalfSpacing colors4 col col-auto grid"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  ipsum
+                </div>
+                <div
+                  className="rightHalfSpacing colors1 col col-auto grid"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  dolor
+                </div>
+                <div
+                  className="rightHalfSpacing colors4 col col-auto grid"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  sit amet
+                </div>
+              </div>
+              <div
+                className="colors1 col col-auto grid rightJustify"
+              >
+                <div
+                  className="col col-fit grid"
+                >
+                  First View  | 
+                </div>
+                <div
+                  className="col col-fit grid"
+                >
+                    Second View
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Components Search.Results 1`] = `
+<div>
+  <div>
+    <div
+      className="colors2 grid topAlign"
+    >
+      <div
+        className="grid"
+      >
+        <div
+          className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
+        >
+          <input
+            placeholder="Sort by..."
+          />
+        </div>
+        <div
+          className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-5 grid"
+        />
+        <div
+          className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid centerAlign rightJustify"
+        >
+          <div
+            className="colors4 col col-2 grid"
+          >
+            <div
+              className="grid centerJustify"
+            >
+              &lt;
+            </div>
+          </div>
+          <div
+            className="col col-7 grid"
+          >
+            <div
+              className="grid centerJustify"
+            >
+              Page 1 of 12
+            </div>
+          </div>
+          <div
+            className="colors4 col col-2 grid"
+          >
+            <div
+              className="grid centerJustify"
+            >
+              &gt;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="grid"
+      >
+        <div
+          className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-5 grid"
+        >
+          <div
+            className="bottomHalfSpacing colors1 grid"
+          >
+            Orci tempus venenatis
+          </div>
+          <div
+            className="bottomHalfSpacing colors1 grid"
+          >
+            1/6/2017 at 14:50 - 1700 Minor Ave
+          </div>
+          <div
+            className="grid"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ipsum quis mi rhoncus luctus. Quisque eros lorem, elementum et...
+          </div>
+        </div>
+        <div
+          className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid topAlign"
+        >
+          <div
+            className="bottomHalfSpacing colors4 grid"
+          >
+            status text ipsum
+          </div>
+          <div
+            className="grid"
+          >
+            status sub lorem
+          </div>
+        </div>
+        <div
+          className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
+        >
+          <div
+            className="image grid centerAlign centerJustify"
+          >
+            IMAGE
+          </div>
+        </div>
+      </div>
+      <div
+        className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid centerJustify"
+      >
+        <div
+          className="rightHalfSpacing leftHalfSpacing col col-fit grid"
+        >
+          <div
+            className="paginationArrow grid centerJustify"
+          >
+            &lt;
+          </div>
+        </div>
+        <div
+          className="rightHalfSpacing leftHalfSpacing col col-4 grid centerAlign"
+        >
+          <div
+            className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+          >
+            1
+          </div>
+          <div
+            className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+          >
+            2
+          </div>
+          <div
+            className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+          >
+            3
+          </div>
+          <div
+            className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+          >
+            4
+          </div>
+          <div
+            className="rightHalfSpacing col col-auto grid"
+          >
+            ...
+          </div>
+          <div
+            className="rightHalfSpacing col col-auto grid"
+          >
+            1,485
+          </div>
+        </div>
+        <div
+          className="rightHalfSpacing leftHalfSpacing col col-fit grid"
+        >
+          <div
+            className="paginationArrow grid centerJustify"
+          >
+            &gt;
           </div>
         </div>
       </div>
@@ -5014,6 +5414,610 @@ exports[`Storyshots  Examples Report 1`] = `
                   Footer
                 </h1>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Examples Search 1`] = `
+<div>
+  <div>
+    <div
+      className="page parent layout"
+    >
+      <div
+        className="colors1 fixedTop auto layout"
+      >
+        <div
+          className="rightHalfSpacing leftHalfSpacing grid"
+        >
+          <div
+            className="centerAlign grid rightSingleSpacing leftSingleSpacing"
+          >
+            <div
+              className="rightHalfSpacing leftHalfSpacing col col-auto grid centerAlign"
+            >
+              <div
+                className="rightHalfSpacing colors2 col col-auto grid"
+              >
+                Lorem
+              </div>
+              <div
+                className="rightHalfSpacing colors4 col col-auto grid"
+              >
+                ipsum
+              </div>
+              <div
+                className="rightHalfSpacing colors2 col col-auto grid"
+              >
+                dolor
+              </div>
+              <div
+                className="rightHalfSpacing colors4 col col-auto grid"
+              >
+                sit amet
+              </div>
+              <div
+                className="rightHalfSpacing colors2 col col-auto grid"
+              >
+                consectetur
+              </div>
+            </div>
+            <div
+              className="rightHalfSpacing leftHalfSpacing colors4 colOffset-1 col col-3 grid"
+            >
+              <input
+                placeholder="Search for anything..."
+              />
+            </div>
+            <div
+              className="rightHalfSpacing leftHalfSpacing col col-2 grid centerAlign"
+            >
+              <div
+                className="rightHalfSpacing col col-auto grid"
+              >
+                <div
+                  className="block"
+                />
+              </div>
+              <div
+                className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+              >
+                <div
+                  className="block"
+                />
+              </div>
+              <div
+                className="col col-fit grid rightJustify"
+              >
+                Lorem ipsum
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="content stretch layout"
+        style={
+          Object {
+            "marginTop": 40,
+          }
+        }
+      >
+        <div
+          className="colors2 auto topSingleSpacing layout"
+        >
+          <div
+            className="rightHalfSpacing leftHalfSpacing grid"
+          >
+            <div
+              className="grid rightSingleSpacing leftSingleSpacing"
+            >
+              <div
+                className="grid"
+              >
+                <div
+                  className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-7 grid"
+                >
+                  <input
+                    placeholder="Search for anything..."
+                  />
+                </div>
+                <div
+                  className="rightHalfSpacing leftHalfSpacing grid"
+                >
+                  <div
+                    className="col col-5 grid"
+                  >
+                    <div
+                      className="rightHalfSpacing colors1 col col-auto grid"
+                      style={
+                        Object {
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      Lorem
+                    </div>
+                    <div
+                      className="rightHalfSpacing colors4 col col-auto grid"
+                      style={
+                        Object {
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      ipsum
+                    </div>
+                    <div
+                      className="rightHalfSpacing colors1 col col-auto grid"
+                      style={
+                        Object {
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      dolor
+                    </div>
+                    <div
+                      className="rightHalfSpacing colors4 col col-auto grid"
+                      style={
+                        Object {
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      sit amet
+                    </div>
+                  </div>
+                  <div
+                    className="colors1 col col-auto grid rightJustify"
+                  >
+                    <div
+                      className="col col-fit grid"
+                    >
+                      First View  | 
+                    </div>
+                    <div
+                      className="col col-fit grid"
+                    >
+                        Second View
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ads parent layout"
+        >
+          <div
+            className="rightHalfSpacing leftHalfSpacing grid"
+          >
+            <div
+              className="grid rightSingleSpacing leftSingleSpacing"
+            >
+              <div
+                className="topSingleSpacing grid"
+              >
+                <div
+                  className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors4 col col-3 grid topAlign"
+                >
+                  <div
+                    className="rightHalfSpacing bottomSingleSpacing grid"
+                  >
+                    Filter by
+                  </div>
+                  <div
+                    className="bottomSingleSpacing colors2 grid"
+                  >
+                    <div
+                      className="col col-auto grid"
+                    >
+                      Type 1
+                    </div>
+                    <div
+                      className="col col-fit grid"
+                    >
+                      +
+                    </div>
+                  </div>
+                  <div
+                    className="bottomSingleSpacing colors1 grid"
+                  >
+                    <div
+                      className="col col-auto grid"
+                    >
+                      Type 2
+                    </div>
+                    <div
+                      className="col col-fit grid"
+                    >
+                      +
+                    </div>
+                  </div>
+                  <div
+                    className="bottomSingleSpacing colors2 grid"
+                  >
+                    <div
+                      className="col col-auto grid"
+                    >
+                      Type 3
+                    </div>
+                    <div
+                      className="col col-fit grid"
+                    >
+                      +
+                    </div>
+                  </div>
+                  <div
+                    className="bottomSingleSpacing colors1 grid"
+                  >
+                    <div
+                      className="col col-auto grid"
+                    >
+                      Type 4
+                    </div>
+                    <div
+                      className="col col-fit grid"
+                    >
+                      +
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="colors2 col col-9 grid topAlign"
+                >
+                  <div
+                    className="grid"
+                  >
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
+                    >
+                      <input
+                        placeholder="Sort by..."
+                      />
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-5 grid"
+                    />
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid centerAlign rightJustify"
+                    >
+                      <div
+                        className="colors4 col col-2 grid"
+                      >
+                        <div
+                          className="grid centerJustify"
+                        >
+                          &lt;
+                        </div>
+                      </div>
+                      <div
+                        className="col col-7 grid"
+                      >
+                        <div
+                          className="grid centerJustify"
+                        >
+                          Page 1 of 12
+                        </div>
+                      </div>
+                      <div
+                        className="colors4 col col-2 grid"
+                      >
+                        <div
+                          className="grid centerJustify"
+                        >
+                          &gt;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="grid"
+                  >
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-5 grid"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        Orci tempus venenatis
+                      </div>
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        1/6/2017 at 14:50 - 1700 Minor Ave
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ipsum quis mi rhoncus luctus. Quisque eros lorem, elementum et...
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid topAlign"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors4 grid"
+                      >
+                        status text ipsum
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        status sub lorem
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
+                    >
+                      <div
+                        className="image grid centerAlign centerJustify"
+                      >
+                        IMAGE
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="grid"
+                  >
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-5 grid"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        Orci tempus venenatis
+                      </div>
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        1/6/2017 at 14:50 - 1700 Minor Ave
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ipsum quis mi rhoncus luctus. Quisque eros lorem, elementum et...
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid topAlign"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors4 grid"
+                      >
+                        status text ipsum
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        status sub lorem
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
+                    >
+                      <div
+                        className="image grid centerAlign centerJustify"
+                      >
+                        IMAGE
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="grid"
+                  >
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-5 grid"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        Orci tempus venenatis
+                      </div>
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        1/6/2017 at 14:50 - 1700 Minor Ave
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ipsum quis mi rhoncus luctus. Quisque eros lorem, elementum et...
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid topAlign"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors4 grid"
+                      >
+                        status text ipsum
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        status sub lorem
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
+                    >
+                      <div
+                        className="image grid centerAlign centerJustify"
+                      >
+                        IMAGE
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="grid"
+                  >
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-5 grid"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        Orci tempus venenatis
+                      </div>
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        1/6/2017 at 14:50 - 1700 Minor Ave
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ipsum quis mi rhoncus luctus. Quisque eros lorem, elementum et...
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid topAlign"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors4 grid"
+                      >
+                        status text ipsum
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        status sub lorem
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
+                    >
+                      <div
+                        className="image grid centerAlign centerJustify"
+                      >
+                        IMAGE
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="grid"
+                  >
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-5 grid"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        Orci tempus venenatis
+                      </div>
+                      <div
+                        className="bottomHalfSpacing colors1 grid"
+                      >
+                        1/6/2017 at 14:50 - 1700 Minor Ave
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ipsum quis mi rhoncus luctus. Quisque eros lorem, elementum et...
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid topAlign"
+                    >
+                      <div
+                        className="bottomHalfSpacing colors4 grid"
+                      >
+                        status text ipsum
+                      </div>
+                      <div
+                        className="grid"
+                      >
+                        status sub lorem
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
+                    >
+                      <div
+                        className="image grid centerAlign centerJustify"
+                      >
+                        IMAGE
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid centerJustify"
+                  >
+                    <div
+                      className="rightHalfSpacing leftHalfSpacing col col-fit grid"
+                    >
+                      <div
+                        className="paginationArrow grid centerJustify"
+                      >
+                        &lt;
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing leftHalfSpacing col col-4 grid centerAlign"
+                    >
+                      <div
+                        className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+                      >
+                        1
+                      </div>
+                      <div
+                        className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+                      >
+                        2
+                      </div>
+                      <div
+                        className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+                      >
+                        3
+                      </div>
+                      <div
+                        className="rightHalfSpacing col col-auto grid"
+                      >
+                        ...
+                      </div>
+                      <div
+                        className="rightHalfSpacing col col-auto grid"
+                      >
+                        1,485
+                      </div>
+                    </div>
+                    <div
+                      className="rightHalfSpacing leftHalfSpacing col col-fit grid"
+                    >
+                      <div
+                        className="paginationArrow grid centerJustify"
+                      >
+                        &gt;
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="footer auto layout"
+      >
+        <div
+          className="rightHalfSpacing leftHalfSpacing grid"
+        >
+          <div
+            className="grid rightSingleSpacing leftSingleSpacing"
+          >
+            <div
+              className="topSingleSpacing rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid centerJustify"
+            >
+              ©ACME Corp. 2017
             </div>
           </div>
         </div>
