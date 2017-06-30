@@ -1,21 +1,15 @@
 // @flow
 import React from 'react'
-import { Grid } from 'reflex'
+import { Grid, Col } from 'reflex'
 import { RootLayout } from '../../../shared'
-import {
-  item,
-  all,
-  xItem,
-  none,
-  horizontalHalf,
-} from '../../../shared/marginTypes'
+import { all, xItem, none, horizontalHalf } from '../../../shared/marginTypes'
 import styles from '../../../shared/stories.css'
 
 export default function() {
   return (
     <RootLayout>
       <Grid>
-        <Grid margin={item}><h1>Consistent Padding</h1></Grid>
+        <Col><h1>Consistent Padding</h1></Col>
 
         <Grid size={3} margin={horizontalHalf}>
           <Grid
@@ -23,9 +17,9 @@ export default function() {
             padding={xItem}
             margin={horizontalHalf}
           >
-            <Grid className={styles.colors4} margin={item}>
+            <Col className={styles.colors4}>
               All around padding
-            </Grid>
+            </Col>
           </Grid>
         </Grid>
         <Grid size={3} margin={horizontalHalf}>
@@ -36,61 +30,61 @@ export default function() {
 
         <Grid margin={all}><h1>Mixed Padding</h1></Grid>
 
-        <Grid size={6} margin={item}>
+        <Col size={6}>
           <Grid size={8} className={styles.colors2} padding={xItem}>
-            <Grid margin={item}>
+            <Col>
               Padding
-            </Grid>
+            </Col>
           </Grid>
           <Grid size={4} className={styles.colors4}>
             <Grid margin={none}>
               No padding
             </Grid>
           </Grid>
-        </Grid>
+        </Col>
 
-        <Grid size={6} margin={item}>
+        <Col size={6}>
           <Grid size={4} className={styles.colors4}>
             <Grid margin={none}>
               No padding
             </Grid>
           </Grid>
           <Grid size={4} className={styles.colors2} padding={xItem}>
-            <Grid margin={item}>
+            <Col>
               Padding
-            </Grid>
+            </Col>
           </Grid>
           <Grid size={4} className={styles.colors4}>
             <Grid margin={none}>
               No padding
             </Grid>
           </Grid>
-        </Grid>
+        </Col>
 
-        <Grid size={6} margin={item}>
+        <Col size={6}>
           <Grid size={4} className={styles.colors4}>
             <Grid margin={none}>
               No padding
             </Grid>
           </Grid>
           <Grid size={8} className={styles.colors2} padding={xItem}>
-            <Grid margin={item}>
+            <Col>
               Padding
-            </Grid>
+            </Col>
           </Grid>
-        </Grid>
-        <Grid size={6} margin={item}>
-          <Grid size={12} className={styles.colors2} padding={xItem}>
-            <Grid margin={item}>
+        </Col>
+        <Col size={6}>
+          <Grid className={styles.colors2} padding={xItem}>
+            <Col>
               Padding
-            </Grid>
+            </Col>
           </Grid>
-          <Grid size={12} className={styles.colors4}>
+          <Grid className={styles.colors4}>
             <Grid margin={none}>
               No padding
             </Grid>
           </Grid>
-        </Grid>
+        </Col>
       </Grid>
     </RootLayout>
   )

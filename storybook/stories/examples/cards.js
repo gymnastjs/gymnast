@@ -17,7 +17,7 @@ export default function() {
       <Layout fixed="top">
         <Layout className={styles.header}>
           <Root>
-            <Grid margin={horizontalHalf} size={12}>
+            <Grid margin={horizontalHalf}>
               <h1>Header</h1>
             </Grid>
           </Root>
@@ -39,7 +39,7 @@ export default function() {
             <Grid align="stretch" padding={top}>
               <Box size={10} type="B" style={SIZE.TALL} />
               <Box size={2} type="B" style={SIZE.SMALL} />
-              <Box size={12} type="B" style={SIZE.MEDIUM} />
+              <Box type="B" style={SIZE.MEDIUM} />
               <Box size={6} type="B" style={SIZE.SMALL} />
               <Box size={6} type="B" style={SIZE.SMALL} />
               <Box size={4} type="B" style={SIZE.TALL} />
@@ -53,7 +53,7 @@ export default function() {
         </Layout>
         <Layout className={styles.footer}>
           <Root>
-            <Grid margin={horizontalHalf} size={12}>
+            <Grid margin={horizontalHalf}>
               <h1>Footer</h1>
             </Grid>
           </Root>

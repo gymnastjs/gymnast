@@ -1,10 +1,10 @@
 // @flow
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Grid, Layout, Root } from 'reflex'
+import { Grid, Layout, Root, Col } from 'reflex'
 import { loremIpsum } from '../../shared'
 import styles from './layout.css'
-import { item, vertical, horizontalHalf } from '../../shared/marginTypes'
+import { vertical, horizontalHalf } from '../../shared/marginTypes'
 
 export default function() {
   const includeText = boolean('Show text', false)
@@ -13,7 +13,7 @@ export default function() {
     <Layout type="parent" className={styles.page}>
       <Layout className={styles.header} fixed="top">
         <Root>
-          <Grid margin={horizontalHalf} size={12}>
+          <Grid margin={horizontalHalf}>
             <h1>Header</h1>
           </Grid>
         </Root>
@@ -34,9 +34,9 @@ export default function() {
         <Layout type="stretch">
           <Root className={styles.content}>
             <Grid align="top" padding={vertical}>
-              <Grid margin={item}>
+              <Col>
                 <h2>Content</h2>
-              </Grid>
+              </Col>
               <Grid margin={horizontalHalf}>
                 {includeText && <p>{loremIpsum}</p>}
               </Grid>
@@ -46,7 +46,7 @@ export default function() {
       </Layout>
       <Layout className={styles.footer}>
         <Root>
-          <Grid margin={horizontalHalf} size={12}>
+          <Grid margin={horizontalHalf}>
             <h1>Footer</h1>
           </Grid>
         </Root>

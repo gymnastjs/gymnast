@@ -13,21 +13,21 @@ export default function() {
     <Layout type="parent" className={styles.page}>
       <Layout className={styles.header} fixed="top">
         <Root>
-          <Grid margin={horizontalHalf} size={12}>
+          <Grid margin={horizontalHalf}>
             <h1>Header</h1>
           </Grid>
         </Root>
       </Layout>
       <Layout type="stretch" className={styles.main}>
         <Root>
-          <Grid size={12} margin={horizontalHalf}>
+          <Grid margin={horizontalHalf}>
             <Grid
               size={2}
               className={styles.nav}
               padding={top}
               margin={horizontal}
             >
-              <Grid size={12}>
+              <Grid>
                 <h2>Nav</h2>
               </Grid>
             </Grid>
@@ -38,10 +38,10 @@ export default function() {
               padding={top}
               margin={horizontal}
             >
-              <Grid size={12}>
+              <Grid>
                 <h2>Content</h2>
               </Grid>
-              <Grid size={12}>
+              <Grid>
                 {includeText && <p>{loremIpsum}</p>}
               </Grid>
             </Grid>
@@ -51,7 +51,7 @@ export default function() {
               padding={top}
               margin={horizontal}
             >
-              <Grid size={12}>
+              <Grid>
                 <h2>Ads</h2>
               </Grid>
             </Grid>
@@ -60,7 +60,7 @@ export default function() {
       </Layout>
       <Layout className={styles.footer}>
         <Root>
-          <Grid margin={horizontalHalf} size={12}>
+          <Grid margin={horizontalHalf}>
             <h1>Footer</h1>
           </Grid>
         </Root>

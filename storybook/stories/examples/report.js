@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Grid, Root, Layout } from 'reflex'
+import { Grid, Root, Layout, Col } from 'reflex'
 import { loremIpsum } from '../../shared'
 import { colors1, colors2, colors3 } from '../../shared/stories.css'
 import styles from './report.css'
@@ -11,15 +11,14 @@ import {
   allHalf,
   rightDouble,
   top,
-  item,
   vertical,
 } from '../../shared/marginTypes'
 
 function P(props) {
   return (
-    <Grid size={12} margin={item}>
+    <Col>
       <p {...props} />
-    </Grid>
+    </Col>
   )
 }
 
@@ -31,13 +30,13 @@ function Card({
   height?: number,
 }): React$Element<any> {
   return (
-    <Grid style={{ height }} size={12} margin={item}>
+    <Col style={{ height }}>
       <div style={{ height: '100%', width: '100%' }} className={styles.card}>
         <P>
           {children}
         </P>
       </div>
-    </Grid>
+    </Col>
   )
 }
 
@@ -90,7 +89,7 @@ export default function() {
       <Layout type="parent" className={`${styles.main} ${colors2}`}>
         <Layout type="stretch">
           <Root>
-            <Grid align="stretch" size={12}>
+            <Grid align="stretch">
               <Grid
                 size={1}
                 className={styles.nav}
@@ -135,7 +134,6 @@ export default function() {
               </Grid>
               <Grid size={4} className={styles.clippy} padding={horizontalHalf}>
                 <Grid
-                  size={12}
                   align="top"
                   className={colors1}
                   padding={top}
@@ -149,7 +147,7 @@ export default function() {
         </Layout>
         <Layout className={styles.footer}>
           <Root>
-            <Grid margin={horizontalHalf} size={12}>
+            <Grid margin={horizontalHalf}>
               <h1>Footer</h1>
             </Grid>
           </Root>
