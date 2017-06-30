@@ -9,7 +9,6 @@ import {
   horizontal,
   horizontalHalf,
   allHalf,
-  rightHalf,
   rightDouble,
   top,
   item,
@@ -34,7 +33,9 @@ function Card({
   return (
     <Grid style={{ height }} size={12} margin={item}>
       <div style={{ height: '100%', width: '100%' }} className={styles.card}>
-        <P>{children}</P>
+        <P>
+          {children}
+        </P>
       </div>
     </Grid>
   )
@@ -53,7 +54,9 @@ export default function() {
         </Layout>
         <Layout className={styles.subheader}>
           <Root>
-            <Grid margin={allHalf}><h2>Subheader</h2></Grid>
+            <Grid margin={allHalf}>
+              <h2>Subheader</h2>
+            </Grid>
             <Grid size={10} margin={horizontalHalf}>
               <Grid margin={rightDouble} size="fit">
                 <Grid padding={top} className={colors3}>
@@ -76,7 +79,7 @@ export default function() {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid margin={rightHalf} size={2}>
+            <Grid margin={horizontalHalf} size={2}>
               <Grid padding={top} className={colors3}>
                 sit amet
               </Grid>
@@ -126,7 +129,9 @@ export default function() {
                 <P>Text F</P>
                 <Card height={210}>Final Block</Card>
                 <Card>Ok last one</Card>
-                <P>{loremIpsum.substr(0, 250)}...</P>
+                <P>
+                  {loremIpsum.substr(0, 250)}...
+                </P>
               </Grid>
               <Grid size={4} className={styles.clippy} padding={horizontalHalf}>
                 <Grid
@@ -136,9 +141,7 @@ export default function() {
                   padding={top}
                   margin={horizontal}
                 >
-                  <Grid margin={bottom}>
-                    Side bar
-                  </Grid>
+                  <Grid margin={bottom}>Side bar</Grid>
                 </Grid>
               </Grid>
             </Grid>
