@@ -46179,8 +46179,8 @@ function Card(_ref) {
       height = _ref$height === undefined ? 70 : _ref$height;
 
   return _react2.default.createElement(
-    _reflex.Grid,
-    { style: { height: height }, margin: _marginTypes.item },
+    _reflex.Col,
+    { style: { height: height } },
     _react2.default.createElement(
       'div',
       { style: { height: '100%', width: '100%' }, className: _report2.default.card },
@@ -54262,4 +54262,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.bdbfa4573080d327aadf.bundle.js.map
+//# sourceMappingURL=preview.27805da61fe4f578656b.bundle.js.map
