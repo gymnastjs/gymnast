@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1124);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1144);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -42822,6 +42822,21 @@ function getFilesAndFolders(path) {
   };
 }
 
+function getImagePath(filepath) {
+  return filepath.replace(/\.js$/, '.spec.png');
+}
+
+function dropEnds(array) {
+  return (0, _tail3.default)((0, _initial3.default)(array));
+}
+
+function getNote(files, filepath, loader) {
+  var mdFile = filepath.replace(/\.js$/, '.md');
+  var hasMd = files.indexOf(mdFile) !== -1;
+
+  return hasMd ? loader(mdFile).default || loader(mdFile) : '';
+}
+
 /**
  * Reads the `/components`, `/grid` and `/layout` subfolder files and adds them to their respective
  * stories
@@ -42849,6 +42864,7 @@ function loadTestFolder(path) {
       /* eslint-enable global-require, import/no-dynamic-require */
       notes: '',
       filepath: filepath,
+      image: getImagePath(filepath),
       namepath: origin ? origin + '.' + name : name
     }];
   }));
@@ -42867,10 +42883,6 @@ function loadTest() {
   }));
 }
 
-function dropEnds(array) {
-  return (0, _tail3.default)((0, _initial3.default)(array));
-}
-
 function loadWebpack(loader) {
   var files = loader.keys();
 
@@ -42878,13 +42890,12 @@ function loadWebpack(loader) {
     return file.endsWith('.js');
   }).reduce(function (acc, filepath) {
     var path = dropEnds(filepath.split('/')).map(_getName.getName).join('.');
-    var mdFile = filepath.replace(/\.js$/, '.md');
-    var hasMd = files.indexOf(mdFile) !== -1;
     var namepath = path + '.' + (0, _getName.getName)(filepath);
 
     (0, _set3.default)(acc, namepath, {
       story: loader(filepath).default || loader(filepath),
-      notes: hasMd ? loader(mdFile).default || loader(mdFile) : '',
+      notes: getNote(files, filepath, loader),
+      image: getImagePath(filepath),
       filepath: filepath,
       namepath: (0, _tail3.default)(namepath.split('.')).join('.')
     });
@@ -53504,40 +53515,60 @@ webpackEmptyContext.id = 1122;
 var map = {
 	"./api/autoflow.js": 753,
 	"./api/autoflow.md": 844,
+	"./api/autoflow.spec.png": 1124,
 	"./api/fraction.js": 754,
 	"./api/fraction.md": 845,
+	"./api/fraction.spec.png": 1125,
 	"./api/horizontalAlign.js": 755,
 	"./api/horizontalAlign.md": 846,
+	"./api/horizontalAlign.spec.png": 1126,
 	"./api/margin.js": 756,
 	"./api/margin.md": 847,
+	"./api/margin.spec.png": 1127,
 	"./api/nested.js": 757,
 	"./api/nested.md": 848,
+	"./api/nested.spec.png": 1128,
 	"./api/offset.js": 758,
 	"./api/offset.md": 849,
+	"./api/offset.spec.png": 1129,
 	"./api/padding.js": 759,
 	"./api/padding.md": 850,
+	"./api/padding.spec.png": 1130,
 	"./api/sizing.js": 760,
 	"./api/sizing.md": 851,
+	"./api/sizing.spec.png": 1131,
 	"./api/verticalAlign.js": 761,
 	"./api/verticalAlign.md": 852,
+	"./api/verticalAlign.spec.png": 1132,
 	"./components/card/base.js": 762,
+	"./components/card/base.spec.png": 1133,
 	"./components/card/composite.js": 763,
+	"./components/card/composite.spec.png": 1134,
 	"./components/card/filter.js": 764,
+	"./components/card/filter.spec.png": 1135,
 	"./components/card/profile.js": 765,
+	"./components/card/profile.spec.png": 1136,
 	"./components/header.js": 766,
 	"./components/header.md": 853,
+	"./components/header.spec.png": 1137,
 	"./components/pagination.js": 767,
 	"./components/pagination.md": 854,
+	"./components/pagination.spec.png": 1138,
 	"./examples/cards.js": 768,
 	"./examples/cards.md": 855,
+	"./examples/cards.spec.png": 1139,
 	"./examples/holyGrail.js": 769,
 	"./examples/holyGrail.md": 856,
+	"./examples/holyGrail.spec.png": 1140,
 	"./examples/report.js": 770,
 	"./examples/report.md": 857,
+	"./examples/report.spec.png": 1141,
 	"./examples/stack.js": 771,
 	"./examples/stack.md": 858,
+	"./examples/stack.spec.png": 1142,
 	"./examples/twoSections.js": 772,
-	"./examples/twoSections.md": 859
+	"./examples/twoSections.md": 859,
+	"./examples/twoSections.spec.png": 1143
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -53557,6 +53588,126 @@ webpackContext.id = 1123;
 
 /***/ }),
 /* 1124 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/autoflow.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1125 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/fraction.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1126 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/horizontalAlign.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1127 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/margin.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1128 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/nested.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1129 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/offset.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1130 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/padding.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1131 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/sizing.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1132 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/verticalAlign.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1133 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/base.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1134 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/composite.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1135 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/filter.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1136 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/profile.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1137 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1138 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/pagination.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1139 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/cards.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1140 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/holyGrail.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1141 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/report.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1142 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/stack.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1143 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/twoSections.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(218);
@@ -53566,4 +53717,4 @@ module.exports = __webpack_require__(672);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.a615c7fb1fab1afe830a.bundle.js.map
+//# sourceMappingURL=preview.3c7c179041c64de58ac8.bundle.js.map
