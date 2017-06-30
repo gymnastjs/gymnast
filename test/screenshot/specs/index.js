@@ -7,33 +7,36 @@ const BASE_URL = process.argv[targetUrlIndex + 1]
 
 function getStories(content) {
   if (content.namepath) {
-    return content.namepath
+    return content
   }
   return Object.values(content).map(getStories)
 }
 
-const stories = Object.keys(storyFolders).map(kind => ({
-  kind,
-  storyNames: flattenDeep(getStories(storyFolders[kind])),
-}))
-
-const scenarios = stories.reduce((prev, story) => {
-  const storyScenarios = story.storyNames.map(name => ({
-    label: `${story.kind}__${name}`,
-    url: `${BASE_URL}?selectedKind=%20${encodeURIComponent(
-      story.kind
-    )}&selectedStory=${encodeURIComponent(name)}`,
+const scenarios = Object.keys(storyFolders)
+  .map(kind => ({
+    kind,
+    storyNames: flattenDeep(getStories(storyFolders[kind])),
   }))
-
-  return prev.concat(storyScenarios)
-}, [])
+  .reduce(
+    (prev, story) => [
+      ...prev,
+      ...story.storyNames.map(({ namepath, image }) => ({
+        label: `${story.kind}__${namepath}`,
+        image,
+        url: `${BASE_URL}?selectedKind=%20${encodeURIComponent(
+          story.kind
+        )}&selectedStory=${encodeURIComponent(namepath)}`,
+      })),
+    ],
+    []
+  )
 
 module.exports = scenarios.reduce(
-  (prev, { label, url }) => ({
+  (prev, { label, url, image }) => ({
     ...prev,
     [label]: browser => {
       process.stdout.write(`loading story at ${url}\n`)
-      browser.url(url).compareScreenshot(`${label}.png`).end()
+      browser.url(url).compareScreenshot(`${label}.png`, image).end()
     },
   }),
   {}
