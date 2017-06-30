@@ -42932,6 +42932,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var showOverlay = false;
+
 var WithExtensions = function (_React$PureComponent) {
   _inherits(WithExtensions, _React$PureComponent);
 
@@ -42963,7 +42965,12 @@ var WithExtensions = function (_React$PureComponent) {
           className = _props.className,
           props = _objectWithoutProperties(_props, ['notes', 'className']);
 
-      var designGrid = (0, _addonKnobs.boolean)('Overlay', false) && this.getDesignGrid();
+      // defaults to last used value, when changed it updates it. This allows us to persist the 'show overlay' setting across examples
+
+
+      showOverlay = (0, _addonKnobs.boolean)('Overlay', showOverlay);
+
+      var designGrid = showOverlay && this.getDesignGrid();
 
       if (notes) {
         return _react2.default.createElement(
@@ -43118,7 +43125,7 @@ var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var items = (0, _addonKnobs.number)('Items', 0, { range: true, min: 0, max: 5 });
-  var margin = (0, _shared.getMarginSelect)(undefined, 'Horizontal');
+  var margin = (0, _shared.getMarginSelect)(undefined, 'Item');
 
   return _react2.default.createElement(
     _shared.RootLayout,
@@ -43135,9 +43142,15 @@ exports.default = function () {
     (0, _times3.default)(9, function (size) {
       return _react2.default.createElement(
         _reflex.Grid,
-        { margin: margin, key: size },
+        { key: size },
         (0, _times3.default)(size + items, function (i) {
-          return _react2.default.createElement(_shared.Box, { size: 'auto', key: i, type: 'A', value: '1 / ' + (size + items) });
+          return _react2.default.createElement(_shared.Box, {
+            size: 'auto',
+            margin: margin,
+            key: i,
+            type: 'A',
+            value: '1 / ' + (size + items)
+          });
         })
       );
     }),
@@ -43152,9 +43165,9 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Grid,
-      { margin: margin },
-      _react2.default.createElement(_shared.Box, { size: 8, type: 'A', value: '8' }),
-      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: '12 - 8 = 4' })
+      null,
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 8, type: 'A', value: '8' }),
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '12 - 8 = 4' })
     ),
     _react2.default.createElement(
       _reflex.Grid,
@@ -43167,10 +43180,10 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Grid,
-      { margin: margin },
-      _react2.default.createElement(_shared.Box, { size: 6, type: 'A', value: '6' }),
-      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: '(12 - 6) / 2 = 3' }),
-      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: '(12 - 6) / 2 = 3' })
+      null,
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 6, type: 'A', value: '6' }),
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '(12 - 6) / 2 = 3' }),
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '(12 - 6) / 2 = 3' })
     ),
     _react2.default.createElement(
       _reflex.Grid,
@@ -43183,17 +43196,29 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Grid,
-      { margin: margin },
+      null,
       (0, _times3.default)(items, function (index) {
-        return _react2.default.createElement(_shared.Box, { size: 'auto', key: index, type: 'A', value: '' + (index + 1) });
+        return _react2.default.createElement(_shared.Box, {
+          margin: margin,
+          size: 'auto',
+          key: index,
+          type: 'A',
+          value: '' + (index + 1)
+        });
       })
     ),
     _react2.default.createElement(
       _reflex.Grid,
-      { margin: margin },
-      _react2.default.createElement(_shared.Box, { size: 6, type: 'A', value: '6 (fixed)' }),
+      null,
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 6, type: 'A', value: '6 (fixed)' }),
       (0, _times3.default)(items, function (index) {
-        return _react2.default.createElement(_shared.Box, { size: 'auto', key: index, type: 'A', value: '' + (index + 2) });
+        return _react2.default.createElement(_shared.Box, {
+          margin: margin,
+          size: 'auto',
+          key: index,
+          type: 'A',
+          value: '' + (index + 2)
+        });
       })
     )
   );
@@ -45355,7 +45380,7 @@ exports.default = function () {
           ),
           _react2.default.createElement(
             _reflex.Grid,
-            { margin: _marginTypes.rightHalf, size: 2 },
+            { margin: _marginTypes.horizontalHalf, size: 2 },
             _react2.default.createElement(
               _reflex.Grid,
               { padding: _marginTypes.top, className: _stories.colors3 },
@@ -53541,4 +53566,4 @@ module.exports = __webpack_require__(672);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.c27d1b44499822a53f9a.bundle.js.map
+//# sourceMappingURL=preview.a615c7fb1fab1afe830a.bundle.js.map
