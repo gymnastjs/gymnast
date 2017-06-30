@@ -3,8 +3,6 @@ const fs = require('fs')
 const mkdirp = require('mkdirp')
 const path = require('path')
 
-const isUpdate = process.argv.indexOf('-u') > -1
-
 function makeDir(dirPath) {
   return new Promise((resolve, reject) => {
     mkdirp(dirPath, err => {
@@ -32,9 +30,8 @@ function compareImages(baselinePath, resultPath, callback) {
   resemblejs(baselinePath).compareTo(resultPath).onComplete(callback)
 }
 
-exports.assertion = function assertion(filename, expected) {
+exports.assertion = function assertion(filename, baselinePath, expected) {
   const screenshotPath = 'test/screenshot/images'
-  const baselinePath = `${screenshotPath}/baseline/${filename}`
   const resultPath = `${screenshotPath}/results/${filename}`
   const diffPath = `${screenshotPath}/diffs/${filename}`
 
@@ -42,14 +39,15 @@ exports.assertion = function assertion(filename, expected) {
   this.expected = expected || 0 // misMatchPercentage tolerance default 0%
 
   this.command = callback => {
-    makeDir(path.dirname(baselinePath))
-      .then(() => makeDir(path.dirname(resultPath)))
-      .then(() => makeDir(path.dirname(diffPath)))
-      .then(() => {})
+    makeDir(path.dirname(resultPath)).then(() =>
+      makeDir(path.dirname(diffPath))
+    )
+
     // create new baseline photo if none exists
-    if (!fs.existsSync(baselinePath) || isUpdate) {
-      makeDir(path.dirname(baselinePath))
-        .then(() => fs.writeFileSync(baselinePath, fs.readFileSync(resultPath)))
+    if (!fs.existsSync(baselinePath)) {
+      process.stdout.write('Image did not exist, updating test...\n')
+      fs
+        .writeFileSync(baselinePath, fs.readFileSync(resultPath))
         .then(() => compareImages(baselinePath, resultPath, callback))
     } else {
       compareImages(baselinePath, resultPath, callback)

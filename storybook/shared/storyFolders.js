@@ -28,6 +28,21 @@ function getFilesAndFolders(
   }
 }
 
+function getImagePath(filepath) {
+  return filepath.replace(/\.js$/, '.spec.png')
+}
+
+function dropEnds(array) {
+  return tail(initial(array))
+}
+
+function getNote(files, filepath, loader) {
+  const mdFile = filepath.replace(/\.js$/, '.md')
+  const hasMd = files.indexOf(mdFile) !== -1
+
+  return hasMd ? loader(mdFile).default || loader(mdFile) : ''
+}
+
 /**
  * Reads the `/components`, `/grid` and `/layout` subfolder files and adds them to their respective
  * stories
@@ -54,6 +69,7 @@ function loadTestFolder(path: string, origin: string = ''): storyObj {
             /* eslint-enable global-require, import/no-dynamic-require */
             notes: '',
             filepath,
+            image: getImagePath(filepath),
             namepath: origin ? `${origin}.${name}` : name,
           },
         ]
@@ -77,22 +93,17 @@ function loadTest(): storyTree {
   )
 }
 
-function dropEnds(array) {
-  return tail(initial(array))
-}
-
 function loadWebpack(loader: Function): storyTree {
   const files = loader.keys()
 
   return files.filter(file => file.endsWith('.js')).reduce((acc, filepath) => {
     const path = dropEnds(filepath.split('/')).map(getName).join('.')
-    const mdFile = filepath.replace(/\.js$/, '.md')
-    const hasMd = files.indexOf(mdFile) !== -1
     const namepath = `${path}.${getName(filepath)}`
 
     set(acc, namepath, {
       story: loader(filepath).default || loader(filepath),
-      notes: hasMd ? loader(mdFile).default || loader(mdFile) : '',
+      notes: getNote(files, filepath, loader),
+      image: getImagePath(filepath),
       filepath,
       namepath: tail(namepath.split('.')).join('.'),
     })
@@ -101,7 +112,7 @@ function loadWebpack(loader: Function): storyTree {
 }
 
 export const storyFolders = !isTest
-  ? loadWebpack(require.context('../stories', true, /.+\.(md|js)$/i))
+  ? loadWebpack(require.context('../stories', true, /.+\.(md|png|js)$/i))
   : loadTest()
 
 export default storyFolders

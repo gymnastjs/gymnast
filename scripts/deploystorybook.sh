@@ -74,6 +74,7 @@ if [ -z "$(git status --porcelain)" ]; then
 else
   git add -A -f
   git commit -m "docs(storybook): $USER updated '$TARGET_URL'" --no-verify
+  git fetch origin gh-pages
   git rebase origin/gh-pages
   git push -f origin gh-pages
 fi
