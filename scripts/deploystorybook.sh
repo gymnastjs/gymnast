@@ -13,7 +13,8 @@ set -e
 #
 
 # Skip if not on CI
-if [ "$CI" != true ] ; then
+
+if [ "$CI" != true ] || [ "$CIRCLE_NODE_INDEX" -gt "0" ] ; then
   echo "This script is only meant to run on CI. Set 'CI' global to true to override."
   exit 1
 fi
