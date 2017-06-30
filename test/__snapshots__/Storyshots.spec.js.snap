@@ -187,10 +187,10 @@ exports[`Storyshots  Api Fraction 1`] = `
             </h1>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           />
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
@@ -208,7 +208,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </div>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
@@ -240,7 +240,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </div>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
@@ -286,7 +286,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </div>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
@@ -346,7 +346,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </div>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
@@ -420,7 +420,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </div>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
@@ -508,7 +508,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </div>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
@@ -610,7 +610,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </div>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
@@ -733,7 +733,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </h1>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-8 grid"
@@ -772,7 +772,7 @@ exports[`Storyshots  Api Fraction 1`] = `
             </h1>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
@@ -825,10 +825,10 @@ exports[`Storyshots  Api Fraction 1`] = `
             </h1>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           />
           <div
-            className="rightHalfSpacing leftHalfSpacing grid"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
@@ -4644,7 +4644,7 @@ exports[`Storyshots  Examples Report 1`] = `
                 </div>
               </div>
               <div
-                className="rightHalfSpacing col col-2 grid"
+                className="rightHalfSpacing leftHalfSpacing col col-2 grid"
               >
                 <div
                   className="colors3 grid"
