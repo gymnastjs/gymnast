@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1135);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1155);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -43448,6 +43448,21 @@ function getFilesAndFolders(path) {
   };
 }
 
+function getImagePath(filepath) {
+  return filepath.replace(/\.js$/, '.spec.png');
+}
+
+function dropEnds(array) {
+  return (0, _tail3.default)((0, _initial3.default)(array));
+}
+
+function getNote(files, filepath, loader) {
+  var mdFile = filepath.replace(/\.js$/, '.md');
+  var hasMd = files.indexOf(mdFile) !== -1;
+
+  return hasMd ? loader(mdFile).default || loader(mdFile) : '';
+}
+
 /**
  * Reads the `/components`, `/grid` and `/layout` subfolder files and adds them to their respective
  * stories
@@ -43475,6 +43490,7 @@ function loadTestFolder(path) {
       /* eslint-enable global-require, import/no-dynamic-require */
       notes: '',
       filepath: filepath,
+      image: getImagePath(filepath),
       namepath: origin ? origin + '.' + name : name
     }];
   }));
@@ -43493,10 +43509,6 @@ function loadTest() {
   }));
 }
 
-function dropEnds(array) {
-  return (0, _tail3.default)((0, _initial3.default)(array));
-}
-
 function loadWebpack(loader) {
   var files = loader.keys();
 
@@ -43504,13 +43516,12 @@ function loadWebpack(loader) {
     return file.endsWith('.js');
   }).reduce(function (acc, filepath) {
     var path = dropEnds(filepath.split('/')).map(_getName.getName).join('.');
-    var mdFile = filepath.replace(/\.js$/, '.md');
-    var hasMd = files.indexOf(mdFile) !== -1;
     var namepath = path + '.' + (0, _getName.getName)(filepath);
 
     (0, _set3.default)(acc, namepath, {
       story: loader(filepath).default || loader(filepath),
-      notes: hasMd ? loader(mdFile).default || loader(mdFile) : '',
+      notes: getNote(files, filepath, loader),
+      image: getImagePath(filepath),
       filepath: filepath,
       namepath: (0, _tail3.default)(namepath.split('.')).join('.')
     });
@@ -43558,6 +43569,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var showOverlay = false;
+
 var WithExtensions = function (_React$PureComponent) {
   _inherits(WithExtensions, _React$PureComponent);
 
@@ -43589,7 +43602,12 @@ var WithExtensions = function (_React$PureComponent) {
           className = _props.className,
           props = _objectWithoutProperties(_props, ['notes', 'className']);
 
-      var designGrid = (0, _addonKnobs.boolean)('Overlay', false) && this.getDesignGrid();
+      // defaults to last used value, when changed it updates it. This allows us to persist the 'show overlay' setting across examples
+
+
+      showOverlay = (0, _addonKnobs.boolean)('Overlay', showOverlay);
+
+      var designGrid = showOverlay && this.getDesignGrid();
 
       if (notes) {
         return _react2.default.createElement(
@@ -43744,7 +43762,7 @@ var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var items = (0, _addonKnobs.number)('Items', 0, { range: true, min: 0, max: 5 });
-  var margin = (0, _shared.getMarginSelect)(undefined, 'Horizontal');
+  var margin = (0, _shared.getMarginSelect)(undefined, 'Item');
 
   return _react2.default.createElement(
     _shared.RootLayout,
@@ -43761,9 +43779,15 @@ exports.default = function () {
     (0, _times3.default)(9, function (size) {
       return _react2.default.createElement(
         _reflex.Grid,
-        { margin: margin, key: size },
+        { key: size },
         (0, _times3.default)(size + items, function (i) {
-          return _react2.default.createElement(_shared.Box, { size: 'auto', key: i, type: 'A', value: '1 / ' + (size + items) });
+          return _react2.default.createElement(_shared.Box, {
+            size: 'auto',
+            margin: margin,
+            key: i,
+            type: 'A',
+            value: '1 / ' + (size + items)
+          });
         })
       );
     }),
@@ -43778,9 +43802,9 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Grid,
-      { margin: margin },
-      _react2.default.createElement(_shared.Box, { size: 8, type: 'A', value: '8' }),
-      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: '12 - 8 = 4' })
+      null,
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 8, type: 'A', value: '8' }),
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '12 - 8 = 4' })
     ),
     _react2.default.createElement(
       _reflex.Col,
@@ -43790,6 +43814,13 @@ exports.default = function () {
         null,
         '6 - 1/2 - 1/2'
       )
+    ),
+    _react2.default.createElement(
+      _reflex.Col,
+      null,
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 6, type: 'A', value: '6' }),
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '(12 - 6) / 2 = 3' }),
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '(12 - 6) / 2 = 3' })
     ),
     _react2.default.createElement(
       _reflex.Grid,
@@ -43809,17 +43840,29 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Grid,
-      { margin: margin },
+      null,
       (0, _times3.default)(items, function (index) {
-        return _react2.default.createElement(_shared.Box, { size: 'auto', key: index, type: 'A', value: '' + (index + 1) });
+        return _react2.default.createElement(_shared.Box, {
+          margin: margin,
+          size: 'auto',
+          key: index,
+          type: 'A',
+          value: '' + (index + 1)
+        });
       })
     ),
     _react2.default.createElement(
       _reflex.Grid,
-      { margin: margin },
-      _react2.default.createElement(_shared.Box, { size: 6, type: 'A', value: '6 (fixed)' }),
+      null,
+      _react2.default.createElement(_shared.Box, { margin: margin, size: 6, type: 'A', value: '6 (fixed)' }),
       (0, _times3.default)(items, function (index) {
-        return _react2.default.createElement(_shared.Box, { size: 'auto', key: index, type: 'A', value: '' + (index + 2) });
+        return _react2.default.createElement(_shared.Box, {
+          margin: margin,
+          size: 'auto',
+          key: index,
+          type: 'A',
+          value: '' + (index + 2)
+        });
       })
     )
   );
@@ -45950,7 +45993,7 @@ exports.default = function () {
           ),
           _react2.default.createElement(
             _reflex.Grid,
-            { margin: _marginTypes.rightHalf, size: 2 },
+            { margin: _marginTypes.horizontalHalf, size: 2 },
             _react2.default.createElement(
               _reflex.Grid,
               { padding: _marginTypes.top, className: _stories.colors3 },
@@ -54190,32 +54233,47 @@ webpackEmptyContext.id = 1133;
 var map = {
 	"./api/autoflow.js": 758,
 	"./api/autoflow.md": 850,
+	"./api/autoflow.spec.png": 1135,
 	"./api/fraction.js": 759,
 	"./api/fraction.md": 851,
+	"./api/fraction.spec.png": 1136,
 	"./api/horizontalAlign.js": 760,
 	"./api/horizontalAlign.md": 852,
+	"./api/horizontalAlign.spec.png": 1137,
 	"./api/margin.js": 761,
 	"./api/margin.md": 853,
+	"./api/margin.spec.png": 1138,
 	"./api/nested.js": 762,
 	"./api/nested.md": 854,
+	"./api/nested.spec.png": 1139,
 	"./api/offset.js": 763,
 	"./api/offset.md": 855,
+	"./api/offset.spec.png": 1140,
 	"./api/padding.js": 764,
 	"./api/padding.md": 856,
+	"./api/padding.spec.png": 1141,
 	"./api/sizing.js": 765,
 	"./api/sizing.md": 857,
+	"./api/sizing.spec.png": 1142,
 	"./api/verticalAlign.js": 766,
 	"./api/verticalAlign.md": 858,
+	"./api/verticalAlign.spec.png": 1143,
 	"./components/card/base.js": 767,
+	"./components/card/base.spec.png": 1144,
 	"./components/card/composite.js": 768,
+	"./components/card/composite.spec.png": 1145,
 	"./components/card/filter.js": 769,
+	"./components/card/filter.spec.png": 1146,
 	"./components/card/profile.js": 770,
+	"./components/card/profile.spec.png": 1147,
+	"./components/header.spec.png": 1148,
 	"./components/header/app.js": 505,
 	"./components/header/app.md": 859,
 	"./components/header/basic.js": 771,
 	"./components/header/header.md": 860,
 	"./components/pagination.js": 772,
 	"./components/pagination.md": 861,
+	"./components/pagination.spec.png": 1149,
 	"./components/search/filters.js": 506,
 	"./components/search/filters.md": 862,
 	"./components/search/nav.js": 507,
@@ -54224,16 +54282,21 @@ var map = {
 	"./components/search/results.md": 864,
 	"./examples/cards.js": 773,
 	"./examples/cards.md": 865,
+	"./examples/cards.spec.png": 1150,
 	"./examples/holyGrail.js": 774,
 	"./examples/holyGrail.md": 866,
+	"./examples/holyGrail.spec.png": 1151,
 	"./examples/report.js": 775,
 	"./examples/report.md": 867,
+	"./examples/report.spec.png": 1152,
 	"./examples/search.js": 776,
 	"./examples/search.md": 868,
 	"./examples/stack.js": 777,
 	"./examples/stack.md": 869,
+	"./examples/stack.spec.png": 1153,
 	"./examples/twoSections.js": 778,
-	"./examples/twoSections.md": 870
+	"./examples/twoSections.md": 870,
+	"./examples/twoSections.spec.png": 1154
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -54253,6 +54316,126 @@ webpackContext.id = 1134;
 
 /***/ }),
 /* 1135 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/autoflow.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1136 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/fraction.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1137 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/horizontalAlign.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1138 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/margin.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1139 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/nested.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1140 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/offset.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1141 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/padding.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1142 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/sizing.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1143 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/verticalAlign.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1144 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/base.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1145 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/composite.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1146 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/filter.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1147 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/profile.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1148 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1149 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/pagination.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1150 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/cards.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1151 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/holyGrail.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1152 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/report.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1153 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/stack.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1154 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/twoSections.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(219);
@@ -54262,4 +54445,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.27805da61fe4f578656b.bundle.js.map
+//# sourceMappingURL=preview.e6f14dbd72d7894e9bcc.bundle.js.map
