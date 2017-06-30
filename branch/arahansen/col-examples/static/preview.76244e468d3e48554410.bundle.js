@@ -43782,7 +43782,7 @@ exports.default = function () {
       )
     ),
     _react2.default.createElement(
-      _reflex.Col,
+      _reflex.Grid,
       null,
       _react2.default.createElement(_shared.Box, { margin: margin, size: 6, type: 'A', value: '6' }),
       _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '(12 - 6) / 2 = 3' }),
@@ -54451,4 +54451,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.fcfffd1c106a3225dd26.bundle.js.map
+//# sourceMappingURL=preview.76244e468d3e48554410.bundle.js.map
