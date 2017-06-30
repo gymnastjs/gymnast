@@ -13,9 +13,15 @@ set -e
 #
 
 # Skip if not on CI
-if [ "$CI" != true ] ; then
+
+if [ "$CI" != true ]; then
   echo "This script is only meant to run on CI. Set 'CI' global to true to override."
   exit 1
+fi
+
+if [ "$CIRCLE_NODE_INDEX" -gt "0" ]; then
+  echo "This script runs on the first CI node. Skipping to prevent multiple deploys to gh-pages"
+  exit 0
 fi
 
 # Ensure all required variables are defined
@@ -76,5 +82,5 @@ else
   git commit -m "docs(storybook): $USER updated '$TARGET_URL'" --no-verify
   git fetch origin gh-pages
   git rebase origin/gh-pages
-  git push -f origin gh-pages
+  git push origin gh-pages
 fi
