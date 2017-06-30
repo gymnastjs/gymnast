@@ -73,7 +73,7 @@
 "use strict";
 
 
-module.exports = __webpack_require__(56);
+module.exports = __webpack_require__(55);
 
 
 /***/ }),
@@ -455,7 +455,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 var _prodInvariant = __webpack_require__(5);
 
-var DOMProperty = __webpack_require__(54);
+var DOMProperty = __webpack_require__(53);
 var ReactDOMComponentFlags = __webpack_require__(195);
 
 var invariant = __webpack_require__(3);
@@ -2240,7 +2240,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         l = r(c);o.propTypes = {};
   }]);
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(59)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58)(module)))
 
 /***/ }),
 /* 19 */
@@ -2358,7 +2358,7 @@ module.exports = g;
 
 var global    = __webpack_require__(19)
   , core      = __webpack_require__(11)
-  , ctx       = __webpack_require__(48)
+  , ctx       = __webpack_require__(47)
   , hide      = __webpack_require__(40)
   , PROTOTYPE = 'prototype';
 
@@ -2441,7 +2441,7 @@ var _prodInvariant = __webpack_require__(5),
 var CallbackQueue = __webpack_require__(193);
 var PooledClass = __webpack_require__(43);
 var ReactFeatureFlags = __webpack_require__(198);
-var ReactReconciler = __webpack_require__(55);
+var ReactReconciler = __webpack_require__(54);
 var Transaction = __webpack_require__(93);
 
 var invariant = __webpack_require__(3);
@@ -2761,7 +2761,7 @@ var loremIpsum = exports.loremIpsum = _loremIpsum2.default;
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(47);
+var isObject = __webpack_require__(46);
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
@@ -3210,7 +3210,7 @@ function withKnobsOptions() {
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(49)(function(){
+module.exports = !__webpack_require__(48)(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -3334,7 +3334,7 @@ module.exports = function(it, key){
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP         = __webpack_require__(28)
-  , createDesc = __webpack_require__(65);
+  , createDesc = __webpack_require__(64);
 module.exports = __webpack_require__(32) ? function(object, key, value){
   return dP.f(object, key, createDesc(1, value));
 } : function(object, key, value){
@@ -3669,37 +3669,6 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
 
 /***/ }),
 /* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var all = exports.all = [1, 0.5];
-var allHalf = exports.allHalf = [0.5];
-var bottom = exports.bottom = [0, 0, 1];
-var bottomHalf = exports.bottomHalf = [0, 0, 0.5];
-var horizontal = exports.horizontal = [0, 1];
-var horizontalHalf = exports.horizontalHalf = [0, 0.5];
-var item = exports.item = [0, 0.5, 1];
-var itemXLeft = exports.itemXLeft = [0, 0.5, 1, 0];
-var leftHalf = exports.leftHalf = [0, 0, 0, 0.5];
-var none = exports.none = [];
-var right = exports.right = [0, 1, 0, 0];
-var rightDouble = exports.rightDouble = [0, 2, 0, 0];
-var rightHalf = exports.rightHalf = [0, 0.5, 0, 0];
-var top = exports.top = [1, 0, 0, 0];
-var topLeft = exports.topLeft = [1, 0, 0, 1];
-var topRight = exports.topRight = [1, 1, 0, 0];
-var vertical = exports.vertical = [1, 0];
-var verticalHalf = exports.verticalHalf = [0.5, 0];
-var xBottom = exports.xBottom = [1, 1, 0];
-var xItem = exports.xItem = [1, 0.5, 0];
-
-/***/ }),
-/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = function(it){
@@ -3707,7 +3676,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
@@ -3732,7 +3701,7 @@ module.exports = function(fn, that, length){
 };
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports) {
 
 module.exports = function(exec){
@@ -3744,7 +3713,7 @@ module.exports = function(exec){
 };
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
@@ -3756,7 +3725,7 @@ module.exports = Object.keys || function keys(O){
 };
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3819,7 +3788,7 @@ module.exports = defineProperties;
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var implementation = __webpack_require__(337);
@@ -3828,7 +3797,7 @@ module.exports = Function.prototype.bind || implementation;
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3951,7 +3920,7 @@ DOMLazyTree.queueText = queueText;
 module.exports = DOMLazyTree;
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4165,7 +4134,7 @@ var DOMProperty = {
 module.exports = DOMProperty;
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4336,7 +4305,7 @@ var ReactReconciler = {
 module.exports = ReactReconciler;
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4357,7 +4326,7 @@ var _assign = __webpack_require__(8);
 var ReactBaseClasses = __webpack_require__(213);
 var ReactChildren = __webpack_require__(481);
 var ReactDOMFactories = __webpack_require__(482);
-var ReactElement = __webpack_require__(57);
+var ReactElement = __webpack_require__(56);
 var ReactPropTypes = __webpack_require__(483);
 var ReactVersion = __webpack_require__(484);
 
@@ -4473,7 +4442,7 @@ if (false) {
 module.exports = React;
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4819,7 +4788,7 @@ ReactElement.isValidElement = function (object) {
 module.exports = ReactElement;
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -4850,7 +4819,7 @@ if(false) {
 }
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -4878,13 +4847,13 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports = {};
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(84),
@@ -4918,7 +4887,7 @@ module.exports = baseGetTag;
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports) {
 
 /**
@@ -4953,7 +4922,7 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4966,7 +4935,7 @@ module.exports = isObjectLike;
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9pbmxpbmVBcnJheVRyYW5zZm9ybWVyL2luZGV4LmpzIl0sIm5hbWVzIjpbImRlZmF1bHQiXSwibWFwcGluZ3MiOiJBQUFBOztxQkFFb0IsMEI7cUJBQWJBLE8iLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCdcblxuZXhwb3J0IGRlZmF1bHQgZnJvbSAnLi9pbmxpbmVBcnJheVRyYW5zZm9ybWVyJ1xuIl19
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -4976,7 +4945,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports) {
 
 module.exports = function(bitmap, value){
@@ -4989,7 +4958,7 @@ module.exports = function(bitmap, value){
 };
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
@@ -4999,7 +4968,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5022,7 +4991,7 @@ module.exports = ES7;
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsNative = __webpack_require__(350),
@@ -5045,7 +5014,7 @@ module.exports = getNative;
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5324,7 +5293,7 @@ var EventPluginHub = {
 module.exports = EventPluginHub;
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5340,7 +5309,7 @@ module.exports = EventPluginHub;
 
 
 
-var EventPluginHub = __webpack_require__(69);
+var EventPluginHub = __webpack_require__(68);
 var EventPluginUtils = __webpack_require__(127);
 
 var accumulateInto = __webpack_require__(204);
@@ -5463,7 +5432,7 @@ var EventPropagators = {
 module.exports = EventPropagators;
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5514,7 +5483,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5578,7 +5547,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5620,6 +5589,35 @@ function reactProdInvariant(code) {
 }
 
 module.exports = reactProdInvariant;
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var all = exports.all = [1, 0.5];
+var allHalf = exports.allHalf = [0.5];
+var bottom = exports.bottom = [0, 0, 1];
+var bottomHalf = exports.bottomHalf = [0, 0, 0.5];
+var horizontal = exports.horizontal = [0, 1];
+var horizontalHalf = exports.horizontalHalf = [0, 0.5];
+var leftHalf = exports.leftHalf = [0, 0, 0, 0.5];
+var none = exports.none = [];
+var right = exports.right = [0, 1, 0, 0];
+var rightDouble = exports.rightDouble = [0, 2, 0, 0];
+var rightHalf = exports.rightHalf = [0, 0.5, 0, 0];
+var top = exports.top = [1, 0, 0, 0];
+var topLeft = exports.topLeft = [1, 0, 0, 1];
+var topRight = exports.topRight = [1, 1, 0, 0];
+var vertical = exports.vertical = [1, 0];
+var verticalHalf = exports.verticalHalf = [0.5, 0];
+var xBottom = exports.xBottom = [1, 1, 0];
+var xItem = exports.xItem = [1, 0.5, 0];
 
 /***/ }),
 /* 74 */
@@ -5805,7 +5803,7 @@ module.exports = getMapData;
 /* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(68);
+var getNative = __webpack_require__(67);
 
 /* Built-in method references that are verified to be native. */
 var nativeCreate = getNative(Object, 'create');
@@ -5817,8 +5815,8 @@ module.exports = nativeCreate;
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(61),
-    isObjectLike = __webpack_require__(62);
+var baseGetTag = __webpack_require__(60),
+    isObjectLike = __webpack_require__(61);
 
 /** `Object#toString` result references. */
 var symbolTag = '[object Symbol]';
@@ -6252,7 +6250,7 @@ module.exports = ReactBrowserEventEmitter;
 
 
 
-var SyntheticUIEvent = __webpack_require__(72);
+var SyntheticUIEvent = __webpack_require__(71);
 var ViewportMetrics = __webpack_require__(203);
 
 var getEventModifierState = __webpack_require__(135);
@@ -6809,7 +6807,7 @@ exports.default = function (arr) {
 __webpack_require__(304);
 var global        = __webpack_require__(19)
   , hide          = __webpack_require__(40)
-  , Iterators     = __webpack_require__(60)
+  , Iterators     = __webpack_require__(59)
   , TO_STRING_TAG = __webpack_require__(17)('toStringTag');
 
 for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
@@ -7131,7 +7129,7 @@ module.exports = function(it){
 /* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(47)
+var isObject = __webpack_require__(46)
   , document = __webpack_require__(19).document
   // in old IE typeof document.createElement is 'object'
   , is = isObject(document) && isObject(document.createElement);
@@ -7249,7 +7247,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(47);
+var isObject = __webpack_require__(46);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function(it, S){
@@ -7287,7 +7285,7 @@ exports.f = __webpack_require__(17);
 
 var classof   = __webpack_require__(143)
   , ITERATOR  = __webpack_require__(17)('iterator')
-  , Iterators = __webpack_require__(60);
+  , Iterators = __webpack_require__(59);
 module.exports = __webpack_require__(11).getIteratorMethod = function(it){
   if(it != undefined)return it[ITERATOR]
     || it['@@iterator']
@@ -7453,7 +7451,7 @@ module.exports = shallowEqual;
 /* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var bind = __webpack_require__(52);
+var bind = __webpack_require__(51);
 
 module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 
@@ -7617,7 +7615,7 @@ module.exports = __webpack_require__(426);
 
 
 
-var DOMLazyTree = __webpack_require__(53);
+var DOMLazyTree = __webpack_require__(52);
 var Danger = __webpack_require__(418);
 var ReactDOMComponentTree = __webpack_require__(10);
 var ReactInstrumentation = __webpack_require__(22);
@@ -8431,7 +8429,7 @@ var _prodInvariant = __webpack_require__(5);
 var ReactPropTypesSecret = __webpack_require__(447);
 var propTypesFactory = __webpack_require__(188);
 
-var React = __webpack_require__(56);
+var React = __webpack_require__(55);
 var PropTypes = propTypesFactory(React.isValidElement);
 
 var invariant = __webpack_require__(3);
@@ -8702,7 +8700,7 @@ module.exports = ReactErrorUtils;
 var _prodInvariant = __webpack_require__(5);
 
 var ReactCurrentOwner = __webpack_require__(30);
-var ReactInstanceMap = __webpack_require__(71);
+var ReactInstanceMap = __webpack_require__(70);
 var ReactInstrumentation = __webpack_require__(22);
 var ReactUpdates = __webpack_require__(25);
 
@@ -9955,7 +9953,7 @@ function updateLink (link, options, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(64)
+var cof = __webpack_require__(63)
   , TAG = __webpack_require__(17)('toStringTag')
   // ES3 wrong here
   , ARG = cof(function(){ return arguments; }()) == 'Arguments';
@@ -9985,7 +9983,7 @@ module.exports = function(it){
 // most Object methods by ES6 should accept primitives
 var $export = __webpack_require__(24)
   , core    = __webpack_require__(11)
-  , fails   = __webpack_require__(49);
+  , fails   = __webpack_require__(48);
 module.exports = function(KEY, exec){
   var fn  = (core.Object || {})[KEY] || Object[KEY]
     , exp = {};
@@ -10247,7 +10245,7 @@ module.exports = __webpack_require__(19).document && document.documentElement;
 /* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(32) && !__webpack_require__(49)(function(){
+module.exports = !__webpack_require__(32) && !__webpack_require__(48)(function(){
   return Object.defineProperty(__webpack_require__(105)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -10256,7 +10254,7 @@ module.exports = !__webpack_require__(32) && !__webpack_require__(49)(function()
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(64);
+var cof = __webpack_require__(63);
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
   return cof(it) == 'String' ? it.split('') : Object(it);
 };
@@ -10266,7 +10264,7 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
-var Iterators  = __webpack_require__(60)
+var Iterators  = __webpack_require__(59)
   , ITERATOR   = __webpack_require__(17)('iterator')
   , ArrayProto = Array.prototype;
 
@@ -10302,7 +10300,7 @@ var LIBRARY        = __webpack_require__(77)
   , redefine       = __webpack_require__(164)
   , hide           = __webpack_require__(40)
   , has            = __webpack_require__(39)
-  , Iterators      = __webpack_require__(60)
+  , Iterators      = __webpack_require__(59)
   , $iterCreate    = __webpack_require__(290)
   , setToStringTag = __webpack_require__(79)
   , getPrototypeOf = __webpack_require__(162)
@@ -10398,7 +10396,7 @@ module.exports = function(exec, skipClosing){
 /***/ (function(module, exports, __webpack_require__) {
 
 var pIE            = __webpack_require__(78)
-  , createDesc     = __webpack_require__(65)
+  , createDesc     = __webpack_require__(64)
   , toIObject      = __webpack_require__(41)
   , toPrimitive    = __webpack_require__(113)
   , has            = __webpack_require__(39)
@@ -10432,7 +10430,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has         = __webpack_require__(39)
-  , toObject    = __webpack_require__(66)
+  , toObject    = __webpack_require__(65)
   , IE_PROTO    = __webpack_require__(109)('IE_PROTO')
   , ObjectProto = Object.prototype;
 
@@ -10476,7 +10474,7 @@ module.exports = __webpack_require__(40);
 /* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx                = __webpack_require__(48)
+var ctx                = __webpack_require__(47)
   , invoke             = __webpack_require__(288)
   , html               = __webpack_require__(153)
   , cel                = __webpack_require__(105)
@@ -10515,7 +10513,7 @@ if(!setTask || !clearTask){
     delete queue[id];
   };
   // Node.js 0.8-
-  if(__webpack_require__(64)(process) == 'process'){
+  if(__webpack_require__(63)(process) == 'process'){
     defer = function(id){
       process.nextTick(ctx(run, id, 1));
     };
@@ -10580,7 +10578,7 @@ var mod = __webpack_require__(172);
 var isPrimitive = __webpack_require__(318);
 var toPrimitive = __webpack_require__(320);
 var parseInteger = parseInt;
-var bind = __webpack_require__(52);
+var bind = __webpack_require__(51);
 var strSlice = bind.call(Function.call, String.prototype.slice);
 var isBinary = bind.call(Function.call, RegExp.prototype.test, /^0b[01]+$/i);
 var isOctal = bind.call(Function.call, RegExp.prototype.test, /^0o[0-7]+$/i);
@@ -11129,7 +11127,7 @@ module.exports = getActiveElement;
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(68),
+var getNative = __webpack_require__(67),
     root = __webpack_require__(34);
 
 /* Built-in method references that are verified to be native. */
@@ -11309,13 +11307,13 @@ var isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(59)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58)(module)))
 
 /***/ }),
 /* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(61),
+var baseGetTag = __webpack_require__(60),
     isObject = __webpack_require__(42);
 
 /** `Object#toString` result references. */
@@ -11918,7 +11916,7 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 
 
 
-var DOMProperty = __webpack_require__(54);
+var DOMProperty = __webpack_require__(53);
 var ReactDOMComponentTree = __webpack_require__(10);
 var ReactInstrumentation = __webpack_require__(22);
 
@@ -12651,19 +12649,19 @@ module.exports = ReactInputSelection;
 
 var _prodInvariant = __webpack_require__(5);
 
-var DOMLazyTree = __webpack_require__(53);
-var DOMProperty = __webpack_require__(54);
-var React = __webpack_require__(56);
+var DOMLazyTree = __webpack_require__(52);
+var DOMProperty = __webpack_require__(53);
+var React = __webpack_require__(55);
 var ReactBrowserEventEmitter = __webpack_require__(91);
 var ReactCurrentOwner = __webpack_require__(30);
 var ReactDOMComponentTree = __webpack_require__(10);
 var ReactDOMContainerInfo = __webpack_require__(428);
 var ReactDOMFeatureFlags = __webpack_require__(430);
 var ReactFeatureFlags = __webpack_require__(198);
-var ReactInstanceMap = __webpack_require__(71);
+var ReactInstanceMap = __webpack_require__(70);
 var ReactInstrumentation = __webpack_require__(22);
 var ReactMarkupChecksum = __webpack_require__(444);
-var ReactReconciler = __webpack_require__(55);
+var ReactReconciler = __webpack_require__(54);
 var ReactUpdateQueue = __webpack_require__(132);
 var ReactUpdates = __webpack_require__(25);
 
@@ -13195,7 +13193,7 @@ module.exports = ReactMount;
 
 var _prodInvariant = __webpack_require__(5);
 
-var React = __webpack_require__(56);
+var React = __webpack_require__(55);
 
 var invariant = __webpack_require__(3);
 
@@ -13995,7 +13993,7 @@ module.exports = traverseAllChildren;
 
 
 
-var _prodInvariant = __webpack_require__(73),
+var _prodInvariant = __webpack_require__(72),
     _assign = __webpack_require__(8);
 
 var ReactNoopUpdateQueue = __webpack_require__(216);
@@ -14144,7 +14142,7 @@ module.exports = {
 
 
 
-var _prodInvariant = __webpack_require__(73);
+var _prodInvariant = __webpack_require__(72);
 
 var ReactCurrentOwner = __webpack_require__(30);
 
@@ -15064,14 +15062,14 @@ module.exports = { "default": __webpack_require__(275), __esModule: true };
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(80)('meta')
-  , isObject = __webpack_require__(47)
+  , isObject = __webpack_require__(46)
   , has      = __webpack_require__(39)
   , setDesc  = __webpack_require__(28).f
   , id       = 0;
 var isExtensible = Object.isExtensible || function(){
   return true;
 };
-var FREEZE = !__webpack_require__(49)(function(){
+var FREEZE = !__webpack_require__(48)(function(){
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function(it){
@@ -15123,7 +15121,7 @@ var meta = module.exports = {
 
 var dP       = __webpack_require__(28)
   , anObject = __webpack_require__(27)
-  , getKeys  = __webpack_require__(50);
+  , getKeys  = __webpack_require__(49);
 
 module.exports = __webpack_require__(32) ? Object.defineProperties : function defineProperties(O, Properties){
   anObject(O);
@@ -16540,7 +16538,7 @@ module.exports = identity;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsArguments = __webpack_require__(349),
-    isObjectLike = __webpack_require__(62);
+    isObjectLike = __webpack_require__(61);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -17217,7 +17215,7 @@ module.exports = function getPolyfill() {
 "use strict";
 
 
-var define = __webpack_require__(51);
+var define = __webpack_require__(50);
 var getPolyfill = __webpack_require__(260);
 
 module.exports = function shimArrayPrototypeIncludes() {
@@ -17485,7 +17483,7 @@ module.exports = function(IS_INCLUDES){
 "use strict";
 
 var $defineProperty = __webpack_require__(28)
-  , createDesc      = __webpack_require__(65);
+  , createDesc      = __webpack_require__(64);
 
 module.exports = function(object, index, value){
   if(index in object)$defineProperty.f(object, index, createDesc(0, value));
@@ -17497,7 +17495,7 @@ module.exports = function(object, index, value){
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(50)
+var getKeys = __webpack_require__(49)
   , gOPS    = __webpack_require__(108)
   , pIE     = __webpack_require__(78);
 module.exports = function(it){
@@ -17516,7 +17514,7 @@ module.exports = function(it){
 /* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx         = __webpack_require__(48)
+var ctx         = __webpack_require__(47)
   , call        = __webpack_require__(157)
   , isArrayIter = __webpack_require__(156)
   , anObject    = __webpack_require__(27)
@@ -17568,7 +17566,7 @@ module.exports = function(fn, args, that){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(64);
+var cof = __webpack_require__(63);
 module.exports = Array.isArray || function isArray(arg){
   return cof(arg) == 'Array';
 };
@@ -17580,7 +17578,7 @@ module.exports = Array.isArray || function isArray(arg){
 "use strict";
 
 var create         = __webpack_require__(107)
-  , descriptor     = __webpack_require__(65)
+  , descriptor     = __webpack_require__(64)
   , setToStringTag = __webpack_require__(79)
   , IteratorPrototype = {};
 
@@ -17604,7 +17602,7 @@ module.exports = function(done, value){
 /* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getKeys   = __webpack_require__(50)
+var getKeys   = __webpack_require__(49)
   , toIObject = __webpack_require__(41);
 module.exports = function(object, el){
   var O      = toIObject(object)
@@ -17624,7 +17622,7 @@ var global    = __webpack_require__(19)
   , Observer  = global.MutationObserver || global.WebKitMutationObserver
   , process   = global.process
   , Promise   = global.Promise
-  , isNode    = __webpack_require__(64)(process) == 'process';
+  , isNode    = __webpack_require__(63)(process) == 'process';
 
 module.exports = function(){
   var head, last, notify;
@@ -17695,15 +17693,15 @@ module.exports = function(){
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
-var getKeys  = __webpack_require__(50)
+var getKeys  = __webpack_require__(49)
   , gOPS     = __webpack_require__(108)
   , pIE      = __webpack_require__(78)
-  , toObject = __webpack_require__(66)
+  , toObject = __webpack_require__(65)
   , IObject  = __webpack_require__(155)
   , $assign  = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(49)(function(){
+module.exports = !$assign || __webpack_require__(48)(function(){
   var A = {}
     , B = {}
     , S = Symbol()
@@ -17770,7 +17768,7 @@ module.exports = function(target, src, safe){
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(47)
+var isObject = __webpack_require__(46)
   , anObject = __webpack_require__(27);
 var check = function(O, proto){
   anObject(O);
@@ -17780,7 +17778,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function(test, buggy, set){
       try {
-        set = __webpack_require__(48)(Function.call, __webpack_require__(160).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(47)(Function.call, __webpack_require__(160).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch(e){ buggy = true; }
@@ -17879,9 +17877,9 @@ module.exports = __webpack_require__(11).getIterator = function(it){
 
 "use strict";
 
-var ctx            = __webpack_require__(48)
+var ctx            = __webpack_require__(47)
   , $export        = __webpack_require__(24)
-  , toObject       = __webpack_require__(66)
+  , toObject       = __webpack_require__(65)
   , call           = __webpack_require__(157)
   , isArrayIter    = __webpack_require__(156)
   , toLength       = __webpack_require__(112)
@@ -17925,7 +17923,7 @@ $export($export.S + $export.F * !__webpack_require__(159)(function(iter){ Array.
 
 var addToUnscopables = __webpack_require__(282)
   , step             = __webpack_require__(291)
-  , Iterators        = __webpack_require__(60)
+  , Iterators        = __webpack_require__(59)
   , toIObject        = __webpack_require__(41);
 
 // 22.1.3.4 Array.prototype.entries()
@@ -17987,7 +17985,7 @@ $export($export.S + $export.F * !__webpack_require__(32), 'Object', {definePrope
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 Object.getPrototypeOf(O)
-var toObject        = __webpack_require__(66)
+var toObject        = __webpack_require__(65)
   , $getPrototypeOf = __webpack_require__(162);
 
 __webpack_require__(144)('getPrototypeOf', function(){
@@ -18001,8 +17999,8 @@ __webpack_require__(144)('getPrototypeOf', function(){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 Object.keys(O)
-var toObject = __webpack_require__(66)
-  , $keys    = __webpack_require__(50);
+var toObject = __webpack_require__(65)
+  , $keys    = __webpack_require__(49);
 
 __webpack_require__(144)('keys', function(){
   return function keys(it){
@@ -18026,10 +18024,10 @@ $export($export.S, 'Object', {setPrototypeOf: __webpack_require__(297).set});
 
 var LIBRARY            = __webpack_require__(77)
   , global             = __webpack_require__(19)
-  , ctx                = __webpack_require__(48)
+  , ctx                = __webpack_require__(47)
   , classof            = __webpack_require__(143)
   , $export            = __webpack_require__(24)
-  , isObject           = __webpack_require__(47)
+  , isObject           = __webpack_require__(46)
   , aFunction          = __webpack_require__(103)
   , anInstance         = __webpack_require__(283)
   , forOf              = __webpack_require__(287)
@@ -18336,7 +18334,7 @@ var global         = __webpack_require__(19)
   , $export        = __webpack_require__(24)
   , redefine       = __webpack_require__(164)
   , META           = __webpack_require__(226).KEY
-  , $fails         = __webpack_require__(49)
+  , $fails         = __webpack_require__(48)
   , shared         = __webpack_require__(110)
   , setToStringTag = __webpack_require__(79)
   , uid            = __webpack_require__(80)
@@ -18349,12 +18347,12 @@ var global         = __webpack_require__(19)
   , anObject       = __webpack_require__(27)
   , toIObject      = __webpack_require__(41)
   , toPrimitive    = __webpack_require__(113)
-  , createDesc     = __webpack_require__(65)
+  , createDesc     = __webpack_require__(64)
   , _create        = __webpack_require__(107)
   , gOPNExt        = __webpack_require__(295)
   , $GOPD          = __webpack_require__(160)
   , $DP            = __webpack_require__(28)
-  , $keys          = __webpack_require__(50)
+  , $keys          = __webpack_require__(49)
   , gOPD           = $GOPD.f
   , dP             = $DP.f
   , gOPN           = gOPNExt.f
@@ -26424,8 +26422,8 @@ module.exports = baseFor;
 /* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(61),
-    isObjectLike = __webpack_require__(62);
+var baseGetTag = __webpack_require__(60),
+    isObjectLike = __webpack_require__(61);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]';
@@ -26501,9 +26499,9 @@ module.exports = baseIsNative;
 /* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(61),
+var baseGetTag = __webpack_require__(60),
     isLength = __webpack_require__(148),
-    isObjectLike = __webpack_require__(62);
+    isObjectLike = __webpack_require__(61);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]',
@@ -26748,7 +26746,7 @@ module.exports = createBaseFor;
 /* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(68);
+var getNative = __webpack_require__(67);
 
 var defineProperty = (function() {
   try {
@@ -27352,7 +27350,7 @@ var nodeUtil = (function() {
 
 module.exports = nodeUtil;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(59)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58)(module)))
 
 /***/ }),
 /* 384 */
@@ -27824,9 +27822,9 @@ module.exports = function isArguments(value) {
 "use strict";
 
 
-var ES = __webpack_require__(67);
+var ES = __webpack_require__(66);
 var has = __webpack_require__(119);
-var bind = __webpack_require__(52);
+var bind = __webpack_require__(51);
 var isEnumerable = bind.call(Function.call, Object.prototype.propertyIsEnumerable);
 
 module.exports = function entries(O) {
@@ -27863,7 +27861,7 @@ module.exports = function getPolyfill() {
 
 
 var getPolyfill = __webpack_require__(399);
-var define = __webpack_require__(51);
+var define = __webpack_require__(50);
 
 module.exports = function shimEntries() {
 	var polyfill = getPolyfill();
@@ -27883,7 +27881,7 @@ module.exports = function shimEntries() {
 "use strict";
 
 
-var ES = __webpack_require__(67);
+var ES = __webpack_require__(66);
 
 var defineProperty = Object.defineProperty;
 var getDescriptor = Object.getOwnPropertyDescriptor;
@@ -27949,7 +27947,7 @@ module.exports = function getPolyfill() {
 
 
 var getPolyfill = __webpack_require__(402);
-var define = __webpack_require__(51);
+var define = __webpack_require__(50);
 
 module.exports = function shimGetOwnPropertyDescriptors() {
 	var polyfill = getPolyfill();
@@ -27969,9 +27967,9 @@ module.exports = function shimGetOwnPropertyDescriptors() {
 "use strict";
 
 
-var ES = __webpack_require__(67);
+var ES = __webpack_require__(66);
 var has = __webpack_require__(119);
-var bind = __webpack_require__(52);
+var bind = __webpack_require__(51);
 var isEnumerable = bind.call(Function.call, Object.prototype.propertyIsEnumerable);
 
 module.exports = function values(O) {
@@ -28008,7 +28006,7 @@ module.exports = function getPolyfill() {
 
 
 var getPolyfill = __webpack_require__(405);
-var define = __webpack_require__(51);
+var define = __webpack_require__(50);
 
 module.exports = function shimValues() {
 	var polyfill = getPolyfill();
@@ -29188,7 +29186,7 @@ module.exports = AutoFocusUtils;
 
 
 
-var EventPropagators = __webpack_require__(70);
+var EventPropagators = __webpack_require__(69);
 var ExecutionEnvironment = __webpack_require__(16);
 var FallbackCompositionState = __webpack_require__(421);
 var SyntheticCompositionEvent = __webpack_require__(458);
@@ -29797,8 +29795,8 @@ module.exports = CSSPropertyOperations;
 
 
 
-var EventPluginHub = __webpack_require__(69);
-var EventPropagators = __webpack_require__(70);
+var EventPluginHub = __webpack_require__(68);
+var EventPropagators = __webpack_require__(69);
 var ExecutionEnvironment = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(10);
 var ReactUpdates = __webpack_require__(25);
@@ -30116,7 +30114,7 @@ module.exports = ChangeEventPlugin;
 
 var _prodInvariant = __webpack_require__(5);
 
-var DOMLazyTree = __webpack_require__(53);
+var DOMLazyTree = __webpack_require__(52);
 var ExecutionEnvironment = __webpack_require__(16);
 
 var createNodesFromMarkup = __webpack_require__(328);
@@ -30196,7 +30194,7 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(70);
+var EventPropagators = __webpack_require__(69);
 var ReactDOMComponentTree = __webpack_require__(10);
 var SyntheticMouseEvent = __webpack_require__(92);
 
@@ -30399,7 +30397,7 @@ module.exports = FallbackCompositionState;
 
 
 
-var DOMProperty = __webpack_require__(54);
+var DOMProperty = __webpack_require__(53);
 
 var MUST_USE_PROPERTY = DOMProperty.injection.MUST_USE_PROPERTY;
 var HAS_BOOLEAN_VALUE = DOMProperty.injection.HAS_BOOLEAN_VALUE;
@@ -30640,7 +30638,7 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 
-var ReactReconciler = __webpack_require__(55);
+var ReactReconciler = __webpack_require__(54);
 
 var instantiateReactComponent = __webpack_require__(209);
 var KeyEscapeUtils = __webpack_require__(128);
@@ -30835,14 +30833,14 @@ module.exports = ReactComponentBrowserEnvironment;
 var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(8);
 
-var React = __webpack_require__(56);
+var React = __webpack_require__(55);
 var ReactComponentEnvironment = __webpack_require__(130);
 var ReactCurrentOwner = __webpack_require__(30);
 var ReactErrorUtils = __webpack_require__(131);
-var ReactInstanceMap = __webpack_require__(71);
+var ReactInstanceMap = __webpack_require__(70);
 var ReactInstrumentation = __webpack_require__(22);
 var ReactNodeTypes = __webpack_require__(202);
-var ReactReconciler = __webpack_require__(55);
+var ReactReconciler = __webpack_require__(54);
 
 if (false) {
   var checkReactTypeSpec = require('./checkReactTypeSpec');
@@ -31742,7 +31740,7 @@ module.exports = ReactCompositeComponent;
 var ReactDOMComponentTree = __webpack_require__(10);
 var ReactDefaultInjection = __webpack_require__(439);
 var ReactMount = __webpack_require__(201);
-var ReactReconciler = __webpack_require__(55);
+var ReactReconciler = __webpack_require__(54);
 var ReactUpdates = __webpack_require__(25);
 var ReactVersion = __webpack_require__(452);
 
@@ -31860,11 +31858,11 @@ var _prodInvariant = __webpack_require__(5),
 
 var AutoFocusUtils = __webpack_require__(414);
 var CSSPropertyOperations = __webpack_require__(416);
-var DOMLazyTree = __webpack_require__(53);
+var DOMLazyTree = __webpack_require__(52);
 var DOMNamespaces = __webpack_require__(125);
-var DOMProperty = __webpack_require__(54);
+var DOMProperty = __webpack_require__(53);
 var DOMPropertyOperations = __webpack_require__(194);
-var EventPluginHub = __webpack_require__(69);
+var EventPluginHub = __webpack_require__(68);
 var EventPluginRegistry = __webpack_require__(126);
 var ReactBrowserEventEmitter = __webpack_require__(91);
 var ReactDOMComponentFlags = __webpack_require__(195);
@@ -32908,7 +32906,7 @@ module.exports = ReactDOMContainerInfo;
 
 var _assign = __webpack_require__(8);
 
-var DOMLazyTree = __webpack_require__(53);
+var DOMLazyTree = __webpack_require__(52);
 var ReactDOMComponentTree = __webpack_require__(10);
 
 var ReactDOMEmptyComponent = function (instantiate) {
@@ -33327,7 +33325,7 @@ module.exports = ReactDOMInput;
 
 var _assign = __webpack_require__(8);
 
-var React = __webpack_require__(56);
+var React = __webpack_require__(55);
 var ReactDOMComponentTree = __webpack_require__(10);
 var ReactDOMSelect = __webpack_require__(196);
 
@@ -33673,7 +33671,7 @@ var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(8);
 
 var DOMChildrenOperations = __webpack_require__(124);
-var DOMLazyTree = __webpack_require__(53);
+var DOMLazyTree = __webpack_require__(52);
 var ReactDOMComponentTree = __webpack_require__(10);
 
 var escapeTextContentForBrowser = __webpack_require__(94);
@@ -34331,7 +34329,7 @@ module.exports = REACT_ELEMENT_TYPE;
 
 
 
-var EventPluginHub = __webpack_require__(69);
+var EventPluginHub = __webpack_require__(68);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -34528,8 +34526,8 @@ module.exports = ReactEventListener;
 
 
 
-var DOMProperty = __webpack_require__(54);
-var EventPluginHub = __webpack_require__(69);
+var DOMProperty = __webpack_require__(53);
+var EventPluginHub = __webpack_require__(68);
 var EventPluginUtils = __webpack_require__(127);
 var ReactComponentEnvironment = __webpack_require__(130);
 var ReactEmptyComponent = __webpack_require__(197);
@@ -34625,11 +34623,11 @@ module.exports = ReactMarkupChecksum;
 var _prodInvariant = __webpack_require__(5);
 
 var ReactComponentEnvironment = __webpack_require__(130);
-var ReactInstanceMap = __webpack_require__(71);
+var ReactInstanceMap = __webpack_require__(70);
 var ReactInstrumentation = __webpack_require__(22);
 
 var ReactCurrentOwner = __webpack_require__(30);
-var ReactReconciler = __webpack_require__(55);
+var ReactReconciler = __webpack_require__(54);
 var ReactChildReconciler = __webpack_require__(423);
 
 var emptyFunction = __webpack_require__(20);
@@ -36035,7 +36033,7 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(70);
+var EventPropagators = __webpack_require__(69);
 var ExecutionEnvironment = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(10);
 var ReactInputSelection = __webpack_require__(200);
@@ -36232,7 +36230,7 @@ module.exports = SelectEventPlugin;
 var _prodInvariant = __webpack_require__(5);
 
 var EventListener = __webpack_require__(175);
-var EventPropagators = __webpack_require__(70);
+var EventPropagators = __webpack_require__(69);
 var ReactDOMComponentTree = __webpack_require__(10);
 var SyntheticAnimationEvent = __webpack_require__(456);
 var SyntheticClipboardEvent = __webpack_require__(457);
@@ -36243,7 +36241,7 @@ var SyntheticMouseEvent = __webpack_require__(92);
 var SyntheticDragEvent = __webpack_require__(459);
 var SyntheticTouchEvent = __webpack_require__(463);
 var SyntheticTransitionEvent = __webpack_require__(464);
-var SyntheticUIEvent = __webpack_require__(72);
+var SyntheticUIEvent = __webpack_require__(71);
 var SyntheticWheelEvent = __webpack_require__(465);
 
 var emptyFunction = __webpack_require__(20);
@@ -36628,7 +36626,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(72);
+var SyntheticUIEvent = __webpack_require__(71);
 
 /**
  * @interface FocusEvent
@@ -36711,7 +36709,7 @@ module.exports = SyntheticInputEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(72);
+var SyntheticUIEvent = __webpack_require__(71);
 
 var getEventCharCode = __webpack_require__(134);
 var getEventKey = __webpack_require__(470);
@@ -36800,7 +36798,7 @@ module.exports = SyntheticKeyboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(72);
+var SyntheticUIEvent = __webpack_require__(71);
 
 var getEventModifierState = __webpack_require__(135);
 
@@ -37087,7 +37085,7 @@ var _prodInvariant = __webpack_require__(5);
 
 var ReactCurrentOwner = __webpack_require__(30);
 var ReactDOMComponentTree = __webpack_require__(10);
-var ReactInstanceMap = __webpack_require__(71);
+var ReactInstanceMap = __webpack_require__(70);
 
 var getHostComponentFromComposite = __webpack_require__(206);
 var invariant = __webpack_require__(3);
@@ -37767,7 +37765,7 @@ module.exports = KeyEscapeUtils;
 
 
 
-var _prodInvariant = __webpack_require__(73);
+var _prodInvariant = __webpack_require__(72);
 
 var invariant = __webpack_require__(3);
 
@@ -37884,7 +37882,7 @@ module.exports = PooledClass;
 
 
 var PooledClass = __webpack_require__(480);
-var ReactElement = __webpack_require__(57);
+var ReactElement = __webpack_require__(56);
 
 var emptyFunction = __webpack_require__(20);
 var traverseAllChildren = __webpack_require__(490);
@@ -38079,7 +38077,7 @@ module.exports = ReactChildren;
 
 
 
-var ReactElement = __webpack_require__(57);
+var ReactElement = __webpack_require__(56);
 
 /**
  * Create a factory that creates HTML tag elements.
@@ -38253,7 +38251,7 @@ module.exports = ReactDOMFactories;
 
 
 
-var _require = __webpack_require__(57),
+var _require = __webpack_require__(56),
     isValidElement = _require.isValidElement;
 
 var factory = __webpack_require__(188);
@@ -38299,7 +38297,7 @@ module.exports = '15.6.1';
 var _require = __webpack_require__(213),
     Component = _require.Component;
 
-var _require2 = __webpack_require__(57),
+var _require2 = __webpack_require__(56),
     isValidElement = _require2.isValidElement;
 
 var ReactNoopUpdateQueue = __webpack_require__(216);
@@ -38465,9 +38463,9 @@ module.exports = lowPriorityWarning;
  */
 
 
-var _prodInvariant = __webpack_require__(73);
+var _prodInvariant = __webpack_require__(72);
 
-var ReactElement = __webpack_require__(57);
+var ReactElement = __webpack_require__(56);
 
 var invariant = __webpack_require__(3);
 
@@ -38509,7 +38507,7 @@ module.exports = onlyChild;
 
 
 
-var _prodInvariant = __webpack_require__(73);
+var _prodInvariant = __webpack_require__(72);
 
 var ReactCurrentOwner = __webpack_require__(30);
 var REACT_ELEMENT_TYPE = __webpack_require__(215);
@@ -38680,8 +38678,8 @@ module.exports = traverseAllChildren;
 "use strict";
 
 
-var bind = __webpack_require__(52);
-var ES = __webpack_require__(67);
+var bind = __webpack_require__(51);
+var ES = __webpack_require__(66);
 var slice = bind.call(Function.call, String.prototype.slice);
 
 module.exports = function padEnd(maxLength) {
@@ -38734,7 +38732,7 @@ module.exports = function getPolyfill() {
 
 
 var getPolyfill = __webpack_require__(492);
-var define = __webpack_require__(51);
+var define = __webpack_require__(50);
 
 module.exports = function shimPadEnd() {
 	var polyfill = getPolyfill();
@@ -38750,8 +38748,8 @@ module.exports = function shimPadEnd() {
 "use strict";
 
 
-var bind = __webpack_require__(52);
-var ES = __webpack_require__(67);
+var bind = __webpack_require__(51);
+var ES = __webpack_require__(66);
 var slice = bind.call(Function.call, String.prototype.slice);
 
 module.exports = function padStart(maxLength) {
@@ -38804,7 +38802,7 @@ module.exports = function getPolyfill() {
 
 
 var getPolyfill = __webpack_require__(495);
-var define = __webpack_require__(51);
+var define = __webpack_require__(50);
 
 module.exports = function shimPadStart() {
 	var polyfill = getPolyfill();
@@ -39333,7 +39331,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -39360,7 +39358,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -39455,7 +39453,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -39570,7 +39568,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -40899,7 +40897,7 @@ if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object'
 (0, _react.configure)(function () {
   __webpack_require__(751);
 }, module);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(59)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58)(module)))
 
 /***/ }),
 /* 677 */
@@ -43080,7 +43078,7 @@ function addStories(content, component) {
 
   addStories(content, component);
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(59)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58)(module)))
 
 /***/ }),
 /* 752 */
@@ -43103,7 +43101,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -43736,8 +43734,8 @@ exports.default = function () {
     _shared.RootLayout,
     null,
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -43760,8 +43758,8 @@ exports.default = function () {
       );
     }),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -43775,8 +43773,8 @@ exports.default = function () {
       _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '12 - 8 = 4' })
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -43791,8 +43789,8 @@ exports.default = function () {
       _react2.default.createElement(_shared.Box, { margin: margin, size: 'auto', type: 'A', value: '(12 - 6) / 2 = 3' })
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -43838,8 +43836,6 @@ var _addonKnobs = __webpack_require__(31);
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
-
-var _marginTypes = __webpack_require__(46);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44011,8 +44007,8 @@ exports.default = function () {
     _shared.RootLayout,
     null,
     _react2.default.createElement(
-      _reflex.Grid,
-      { size: 12, margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -44020,11 +44016,11 @@ exports.default = function () {
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { size: 12, margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         _reflex.Grid,
-        _extends({ size: 12 }, params, { className: _stories2.default.colors2 }),
+        _extends({}, params, { className: _stories2.default.colors2 }),
         _react2.default.createElement(
           _reflex.Grid,
           _extends({
@@ -44057,8 +44053,8 @@ exports.default = function () {
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { size: 12, margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -44066,19 +44062,19 @@ exports.default = function () {
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { size: 12, margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         _reflex.Grid,
-        _extends({ size: 12 }, params, { className: _stories2.default.colors2 }),
+        _extends({}, params, { className: _stories2.default.colors2 }),
         _react2.default.createElement(_shared.Box, { size: 6, margin: margin, offset: 3, type: 'A' }),
         _react2.default.createElement(_shared.Box, { size: 4, margin: margin, type: 'A' }),
         _react2.default.createElement(_shared.Box, { size: 4, margin: margin, offset: 4, type: 'A' })
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { size: 12, margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -44087,13 +44083,13 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Grid,
-      { size: 12 },
+      null,
       _react2.default.createElement(
-        _reflex.Grid,
-        { size: 6, margin: _marginTypes.item },
+        _reflex.Col,
+        { size: 6 },
         _react2.default.createElement(
           _reflex.Grid,
-          _extends({ size: 12 }, params, { className: _stories2.default.colors2 }),
+          _extends({}, params, { className: _stories2.default.colors2 }),
           (0, _times3.default)(items, function (index) {
             return _react2.default.createElement(
               _shared.Box,
@@ -44115,13 +44111,11 @@ var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
 var _shared = __webpack_require__(26);
-
-var _marginTypes = __webpack_require__(46);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44217,11 +44211,11 @@ exports.default = function () {
     _shared.RootLayout,
     null,
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         _reflex.Grid,
-        { size: 12, margin: _marginTypes.bottom },
+        { margin: _marginTypes.bottom },
         _react2.default.createElement(
           'h1',
           null,
@@ -44233,14 +44227,14 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2 },
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: margin, size: 12, className: _stories2.default.colors3 },
+          { margin: margin, className: _stories2.default.colors3 },
           text
         )
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         _reflex.Grid,
         { size: 6, margin: _marginTypes.bottom },
@@ -44264,7 +44258,7 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2, padding: _marginTypes.topRight },
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: margin, size: 12, className: _stories2.default.colors3 },
+          { margin: margin, className: _stories2.default.colors3 },
           text
         )
       ),
@@ -44273,19 +44267,14 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2 },
         _react2.default.createElement(
           _reflex.Grid,
-          {
-            margin: margin,
-            size: 12,
-            className: _stories2.default.colors3,
-            padding: _marginTypes.topRight
-          },
+          { margin: margin, className: _stories2.default.colors3, padding: _marginTypes.topRight },
           text
         )
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         _reflex.Grid,
         { size: 6, margin: _marginTypes.bottom },
@@ -44309,7 +44298,7 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2, padding: _marginTypes.all },
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: margin, size: 12, className: _stories2.default.colors3 },
+          { margin: margin, className: _stories2.default.colors3 },
           text
         )
       ),
@@ -44318,19 +44307,14 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2 },
         _react2.default.createElement(
           _reflex.Grid,
-          {
-            margin: margin,
-            size: 12,
-            className: _stories2.default.colors3,
-            padding: _marginTypes.all
-          },
+          { margin: margin, className: _stories2.default.colors3, padding: _marginTypes.all },
           text
         )
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         _reflex.Grid,
         { size: 6, margin: _marginTypes.bottom },
@@ -44354,7 +44338,7 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2, padding: _marginTypes.bottom },
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: margin, size: 12, className: _stories2.default.colors3 },
+          { margin: margin, className: _stories2.default.colors3 },
           text
         )
       ),
@@ -44363,19 +44347,14 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2 },
         _react2.default.createElement(
           _reflex.Grid,
-          {
-            margin: margin,
-            size: 12,
-            className: _stories2.default.colors3,
-            padding: _marginTypes.bottom
-          },
+          { margin: margin, className: _stories2.default.colors3, padding: _marginTypes.bottom },
           text
         )
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         _reflex.Grid,
         { size: 6, margin: _marginTypes.bottom },
@@ -44399,7 +44378,7 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2, padding: _marginTypes.xBottom },
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: margin, size: 12, className: _stories2.default.colors3 },
+          { margin: margin, className: _stories2.default.colors3 },
           text
         )
       ),
@@ -44408,22 +44387,17 @@ exports.default = function () {
         { size: 6, className: _stories2.default.colors2 },
         _react2.default.createElement(
           _reflex.Grid,
-          {
-            margin: margin,
-            size: 12,
-            className: _stories2.default.colors3,
-            padding: _marginTypes.xBottom
-          },
+          { margin: margin, className: _stories2.default.colors3, padding: _marginTypes.xBottom },
           text
         )
       )
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         _reflex.Grid,
-        { size: 12, margin: _marginTypes.bottom },
+        { margin: _marginTypes.bottom },
         _react2.default.createElement(
           'h1',
           null,
@@ -44462,7 +44436,6 @@ exports.default = function () {
           _reflex.Grid,
           {
             margin: margin,
-            size: 12,
             className: _stories2.default.colors3,
             style: { maxWidth: 200 }
           },
@@ -44482,7 +44455,6 @@ exports.default = function () {
           _reflex.Grid,
           {
             margin: margin,
-            size: 12,
             className: _stories2.default.colors3,
             padding: _marginTypes.top,
             style: { maxWidth: 200 }
@@ -44502,11 +44474,11 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44620,8 +44592,8 @@ exports.default = function () {
     _shared.RootLayout,
     null,
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -44638,8 +44610,8 @@ exports.default = function () {
       _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'DEFAULT' })
     ),
     _react2.default.createElement(
-      _reflex.Grid,
-      { margin: _marginTypes.item },
+      _reflex.Col,
+      null,
       _react2.default.createElement(
         'h1',
         null,
@@ -44653,21 +44625,21 @@ exports.default = function () {
         _reflex.Grid,
         { size: 4, align: !stretch && 'top', style: { height: height } },
         (0, _times3.default)(items, function (i) {
-          return _react2.default.createElement(_shared.Box, { size: 12, key: i, type: 'C', value: 'TOP' });
+          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'TOP' });
         })
       ),
       _react2.default.createElement(
         _reflex.Grid,
         { size: 4, align: !stretch && 'center', style: { height: height } },
         (0, _times3.default)(items, function (i) {
-          return _react2.default.createElement(_shared.Box, { size: 12, key: i, type: 'C', value: 'CENTER' });
+          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'CENTER' });
         })
       ),
       _react2.default.createElement(
         _reflex.Grid,
         { size: 4, align: !stretch && 'bottom', style: { height: height } },
         (0, _times3.default)(items, function (i) {
-          return _react2.default.createElement(_shared.Box, { size: 12, key: i, type: 'C', value: 'BOTTOM' });
+          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'BOTTOM' });
         })
       )
     )
@@ -44684,8 +44656,6 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _marginTypes = __webpack_require__(46);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ReferenceColumn(_ref) {
@@ -44700,6 +44670,7 @@ function ReferenceColumn(_ref) {
     }
   });
 }
+
 ReferenceColumn.propTypes = {
   height: __webpack_require__(1).number.isRequired
 };
@@ -44723,8 +44694,8 @@ exports.default = function () {
       _reflex.Grid,
       null,
       _react2.default.createElement(
-        _reflex.Grid,
-        { margin: _marginTypes.item },
+        _reflex.Col,
+        null,
         _react2.default.createElement(
           'h1',
           null,
@@ -44742,8 +44713,8 @@ exports.default = function () {
             margin: _marginTypes.horizontalHalf
           },
           _react2.default.createElement(
-            _reflex.Grid,
-            { className: _stories2.default.colors4, margin: _marginTypes.item },
+            _reflex.Col,
+            { className: _stories2.default.colors4 },
             'All around padding'
           )
         )
@@ -44771,14 +44742,14 @@ exports.default = function () {
         )
       ),
       _react2.default.createElement(
-        _reflex.Grid,
-        { size: 6, margin: _marginTypes.item },
+        _reflex.Col,
+        { size: 6 },
         _react2.default.createElement(
           _reflex.Grid,
           { size: 8, className: _stories2.default.colors2, padding: _marginTypes.xItem },
           _react2.default.createElement(
-            _reflex.Grid,
-            { margin: _marginTypes.item },
+            _reflex.Col,
+            null,
             'Padding'
           )
         ),
@@ -44793,8 +44764,8 @@ exports.default = function () {
         )
       ),
       _react2.default.createElement(
-        _reflex.Grid,
-        { size: 6, margin: _marginTypes.item },
+        _reflex.Col,
+        { size: 6 },
         _react2.default.createElement(
           _reflex.Grid,
           { size: 4, className: _stories2.default.colors4 },
@@ -44808,8 +44779,8 @@ exports.default = function () {
           _reflex.Grid,
           { size: 4, className: _stories2.default.colors2, padding: _marginTypes.xItem },
           _react2.default.createElement(
-            _reflex.Grid,
-            { margin: _marginTypes.item },
+            _reflex.Col,
+            null,
             'Padding'
           )
         ),
@@ -44824,8 +44795,8 @@ exports.default = function () {
         )
       ),
       _react2.default.createElement(
-        _reflex.Grid,
-        { size: 6, margin: _marginTypes.item },
+        _reflex.Col,
+        { size: 6 },
         _react2.default.createElement(
           _reflex.Grid,
           { size: 4, className: _stories2.default.colors4 },
@@ -44839,27 +44810,27 @@ exports.default = function () {
           _reflex.Grid,
           { size: 8, className: _stories2.default.colors2, padding: _marginTypes.xItem },
           _react2.default.createElement(
-            _reflex.Grid,
-            { margin: _marginTypes.item },
+            _reflex.Col,
+            null,
             'Padding'
           )
         )
       ),
       _react2.default.createElement(
-        _reflex.Grid,
-        { size: 6, margin: _marginTypes.item },
+        _reflex.Col,
+        { size: 6 },
         _react2.default.createElement(
           _reflex.Grid,
-          { size: 12, className: _stories2.default.colors2, padding: _marginTypes.xItem },
+          { className: _stories2.default.colors2, padding: _marginTypes.xItem },
           _react2.default.createElement(
-            _reflex.Grid,
-            { margin: _marginTypes.item },
+            _reflex.Col,
+            null,
             'Padding'
           )
         ),
         _react2.default.createElement(
           _reflex.Grid,
-          { size: 12, className: _stories2.default.colors4 },
+          { className: _stories2.default.colors4 },
           _react2.default.createElement(
             _reflex.Grid,
             { margin: _marginTypes.none },
@@ -44879,9 +44850,9 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -44906,8 +44877,8 @@ exports.default = function () {
       _reflex.Grid,
       null,
       _react2.default.createElement(
-        _reflex.Grid,
-        { margin: _marginTypes.item },
+        _reflex.Col,
+        null,
         _react2.default.createElement(
           'h1',
           null,
@@ -44915,8 +44886,8 @@ exports.default = function () {
         )
       ),
       _react2.default.createElement(
-        _reflex.Grid,
-        { margin: _marginTypes.item },
+        _reflex.Col,
+        null,
         _react2.default.createElement(
           _reflex.Grid,
           { className: _stories2.default.colors2 },
@@ -44937,8 +44908,8 @@ exports.default = function () {
             _reflex.Grid,
             { size: 7, margin: _marginTypes.horizontalHalf, padding: _marginTypes.top },
             _react2.default.createElement(
-              _reflex.Grid,
-              { margin: _marginTypes.item },
+              _reflex.Col,
+              null,
               _react2.default.createElement(
                 'h2',
                 null,
@@ -44980,8 +44951,8 @@ exports.default = function () {
               )
             ),
             _react2.default.createElement(
-              _reflex.Grid,
-              { margin: _marginTypes.item },
+              _reflex.Col,
+              null,
               _react2.default.createElement(
                 'h2',
                 null,
@@ -45003,7 +44974,7 @@ exports.default = function () {
               ),
               _react2.default.createElement(
                 _shared.Box,
-                { size: 12, type: 'D' },
+                { type: 'D' },
                 'Box 3'
               )
             )
@@ -45030,8 +45001,8 @@ exports.default = function () {
                   _reflex.Grid,
                   { className: _stories2.default.colors1, padding: _marginTypes.all },
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { margin: _marginTypes.item, size: 6 },
+                    _reflex.Col,
+                    { size: 6 },
                     _react2.default.createElement(
                       'h3',
                       null,
@@ -45039,8 +45010,8 @@ exports.default = function () {
                     )
                   ),
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { margin: _marginTypes.item, size: 6, justify: 'right' },
+                    _reflex.Col,
+                    { size: 6, justify: 'right' },
                     'test'
                   )
                 ),
@@ -45048,8 +45019,8 @@ exports.default = function () {
                   _reflex.Grid,
                   { padding: [1, 0.5, 0, 0.5] },
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { size: 4, margin: _marginTypes.item },
+                    _reflex.Col,
+                    { size: 4 },
                     _react2.default.createElement(
                       _reflex.Grid,
                       { className: _stories2.default.colors4, justify: 'center' },
@@ -45057,8 +45028,8 @@ exports.default = function () {
                     )
                   ),
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { size: 4, margin: _marginTypes.item },
+                    _reflex.Col,
+                    { size: 4 },
                     _react2.default.createElement(
                       _reflex.Grid,
                       { className: _stories2.default.colors4, justify: 'center' },
@@ -45066,8 +45037,8 @@ exports.default = function () {
                     )
                   ),
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { size: 4, margin: _marginTypes.item },
+                    _reflex.Col,
+                    { size: 4 },
                     _react2.default.createElement(
                       _reflex.Grid,
                       { className: _stories2.default.colors4, justify: 'center' },
@@ -45075,8 +45046,8 @@ exports.default = function () {
                     )
                   ),
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { size: 4, margin: _marginTypes.item },
+                    _reflex.Col,
+                    { size: 4 },
                     _react2.default.createElement(
                       _reflex.Grid,
                       { className: _stories2.default.colors4, justify: 'center' },
@@ -45084,8 +45055,8 @@ exports.default = function () {
                     )
                   ),
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { size: 4, margin: _marginTypes.item },
+                    _reflex.Col,
+                    { size: 4 },
                     _react2.default.createElement(
                       _reflex.Grid,
                       { className: _stories2.default.colors4, justify: 'center' },
@@ -45093,8 +45064,8 @@ exports.default = function () {
                     )
                   ),
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { size: 4, margin: _marginTypes.item },
+                    _reflex.Col,
+                    { size: 4 },
                     _react2.default.createElement(
                       _reflex.Grid,
                       { className: _stories2.default.colors4, justify: 'center' },
@@ -45102,8 +45073,8 @@ exports.default = function () {
                     )
                   ),
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { size: 12, margin: _marginTypes.item },
+                    _reflex.Col,
+                    null,
                     _react2.default.createElement(
                       _reflex.Grid,
                       { className: _stories2.default.colors4, justify: 'center' },
@@ -45111,8 +45082,8 @@ exports.default = function () {
                     )
                   ),
                   _react2.default.createElement(
-                    _reflex.Grid,
-                    { size: 12, margin: _marginTypes.item },
+                    _reflex.Col,
+                    null,
                     _react2.default.createElement(
                       _reflex.Grid,
                       { className: _stories2.default.colors4, justify: 'center' },
@@ -45137,11 +45108,11 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45194,8 +45165,8 @@ exports.default = function () {
       _reflex.Grid,
       null,
       _react2.default.createElement(
-        _reflex.Grid,
-        { margin: _marginTypes.item },
+        _reflex.Col,
+        null,
         _react2.default.createElement(
           'h1',
           null,
@@ -45206,8 +45177,8 @@ exports.default = function () {
         _reflex.Grid,
         { align: 'stretch', justify: 'center' },
         _react2.default.createElement(
-          _reflex.Grid,
-          { size: 6, margin: _marginTypes.item },
+          _reflex.Col,
+          { size: 6 },
           _react2.default.createElement(
             _reflex.Grid,
             { margin: _marginTypes.bottom },
@@ -45232,7 +45203,6 @@ exports.default = function () {
             _react2.default.createElement(
               _reflex.Grid,
               {
-                size: 12,
                 className: _stories2.default.colors4,
                 padding: _marginTypes.top,
                 margin: _marginTypes.horizontalHalf
@@ -45243,15 +45213,14 @@ exports.default = function () {
                 'Filter by...'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.item, size: 6 },
+                _reflex.Col,
+                { size: 6 },
                 _react2.default.createElement('input', { type: 'text' })
               )
             ),
             _react2.default.createElement(
               _reflex.Grid,
               {
-                size: 12,
                 className: _stories2.default.colors2,
                 padding: _marginTypes.top,
                 margin: _marginTypes.horizontal
@@ -45304,11 +45273,11 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45331,8 +45300,8 @@ exports.default = function () {
       _reflex.Grid,
       null,
       _react2.default.createElement(
-        _reflex.Grid,
-        { margin: _marginTypes.item },
+        _reflex.Col,
+        null,
         _react2.default.createElement(
           'h1',
           null,
@@ -45343,8 +45312,8 @@ exports.default = function () {
         _reflex.Grid,
         { align: 'stretch' },
         _react2.default.createElement(
-          _reflex.Grid,
-          { size: 4, margin: _marginTypes.item },
+          _reflex.Col,
+          { size: 4 },
           _react2.default.createElement(
             _reflex.Grid,
             { className: _stories2.default.colors2 },
@@ -45352,8 +45321,8 @@ exports.default = function () {
           )
         ),
         _react2.default.createElement(
-          _reflex.Grid,
-          { size: 8, margin: _marginTypes.item },
+          _reflex.Col,
+          { size: 8 },
           _react2.default.createElement(
             _reflex.Grid,
             { margin: _marginTypes.bottom },
@@ -45361,8 +45330,8 @@ exports.default = function () {
               _reflex.Grid,
               { className: _stories2.default.colors2, padding: _marginTypes.xBottom },
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 6 },
+                _reflex.Col,
+                { marginLeft: 0, size: 6 },
                 _react2.default.createElement(
                   'h2',
                   null,
@@ -45370,53 +45339,53 @@ exports.default = function () {
                 )
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 3, offset: 3 },
+                _reflex.Col,
+                { marginLeft: 0, size: 3, offset: 3 },
                 'Note'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 2 },
+                _reflex.Col,
+                { marginLeft: 0, size: 2 },
                 'Text1'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 2 },
+                _reflex.Col,
+                { marginLeft: 0, size: 2 },
                 'Text2'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 2 },
+                _reflex.Col,
+                { marginLeft: 0, size: 2 },
                 'Text3'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 3 },
+                _reflex.Col,
+                { marginLeft: 0, size: 3 },
                 'Text4'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 3 },
+                _reflex.Col,
+                { marginLeft: 0, size: 3 },
                 'Text5'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 2 },
+                _reflex.Col,
+                { marginLeft: 0, size: 2 },
                 'Text6'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 2 },
+                _reflex.Col,
+                { marginLeft: 0, size: 2 },
                 'Text7'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 2 },
+                _reflex.Col,
+                { marginLeft: 0, size: 2 },
                 'Text8'
               ),
               _react2.default.createElement(
-                _reflex.Grid,
-                { margin: _marginTypes.itemXLeft, size: 3 },
+                _reflex.Col,
+                { marginLeft: 0, size: 3 },
                 'Text9'
               )
             )
@@ -45425,23 +45394,23 @@ exports.default = function () {
             _reflex.Grid,
             { className: _stories2.default.colors2, padding: _marginTypes.xBottom },
             _react2.default.createElement(
-              _reflex.Grid,
-              { margin: _marginTypes.itemXLeft, size: 6 },
+              _reflex.Col,
+              { marginLeft: 0, size: 6 },
               'Text1'
             ),
             _react2.default.createElement(
-              _reflex.Grid,
-              { margin: _marginTypes.itemXLeft, size: 6 },
+              _reflex.Col,
+              { marginLeft: 0, size: 6 },
               'Text2'
             ),
             _react2.default.createElement(
-              _reflex.Grid,
-              { margin: _marginTypes.itemXLeft, size: 6 },
+              _reflex.Col,
+              { marginLeft: 0, size: 6 },
               'Text3'
             ),
             _react2.default.createElement(
-              _reflex.Grid,
-              { margin: _marginTypes.itemXLeft, size: 6 },
+              _reflex.Col,
+              { marginLeft: 0, size: 6 },
               'Text4'
             )
           )
@@ -45459,11 +45428,11 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _stories2 = _interopRequireDefault(_stories);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45516,8 +45485,8 @@ exports.default = function () {
       _shared.RootLayout,
       null,
       _react2.default.createElement(
-        _reflex.Grid,
-        { margin: _marginTypes.item },
+        _reflex.Col,
+        null,
         _react2.default.createElement(
           'h1',
           null,
@@ -45550,7 +45519,7 @@ exports.default = function () {
       _react2.default.createElement(
         _reflex.Grid,
         { size: 6 },
-        _react2.default.createElement(_shared.Box, { size: 12, type: 'A' })
+        _react2.default.createElement(_shared.Box, { type: 'A' })
       )
     )
   );
@@ -45565,8 +45534,6 @@ var _addonKnobs = __webpack_require__(31);
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
-
-var _marginTypes = __webpack_require__(46);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45652,7 +45619,7 @@ exports.default = function () {
           null,
           _react2.default.createElement(
             _reflex.Grid,
-            { margin: _marginTypes.horizontalHalf, size: 12 },
+            { margin: _marginTypes.horizontalHalf },
             _react2.default.createElement(
               'h1',
               null,
@@ -45690,7 +45657,7 @@ exports.default = function () {
             { align: 'stretch', padding: _marginTypes.top },
             _react2.default.createElement(_shared.Box, { size: 10, type: 'B', style: SIZE.TALL }),
             _react2.default.createElement(_shared.Box, { size: 2, type: 'B', style: SIZE.SMALL }),
-            _react2.default.createElement(_shared.Box, { size: 12, type: 'B', style: SIZE.MEDIUM }),
+            _react2.default.createElement(_shared.Box, { type: 'B', style: SIZE.MEDIUM }),
             _react2.default.createElement(_shared.Box, { size: 6, type: 'B', style: SIZE.SMALL }),
             _react2.default.createElement(_shared.Box, { size: 6, type: 'B', style: SIZE.SMALL }),
             _react2.default.createElement(_shared.Box, { size: 4, type: 'B', style: SIZE.TALL }),
@@ -45710,7 +45677,7 @@ exports.default = function () {
           null,
           _react2.default.createElement(
             _reflex.Grid,
-            { margin: _marginTypes.horizontalHalf, size: 12 },
+            { margin: _marginTypes.horizontalHalf },
             _react2.default.createElement(
               'h1',
               null,
@@ -45735,7 +45702,7 @@ var _layout = __webpack_require__(218);
 
 var _layout2 = _interopRequireDefault(_layout);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45770,7 +45737,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: _marginTypes.horizontalHalf, size: 12 },
+          { margin: _marginTypes.horizontalHalf },
           _react2.default.createElement(
             'h1',
             null,
@@ -45787,7 +45754,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           _reflex.Grid,
-          { size: 12, margin: _marginTypes.horizontalHalf },
+          { margin: _marginTypes.horizontalHalf },
           _react2.default.createElement(
             _reflex.Grid,
             {
@@ -45798,7 +45765,7 @@ exports.default = function () {
             },
             _react2.default.createElement(
               _reflex.Grid,
-              { size: 12 },
+              null,
               _react2.default.createElement(
                 'h2',
                 null,
@@ -45817,7 +45784,7 @@ exports.default = function () {
             },
             _react2.default.createElement(
               _reflex.Grid,
-              { size: 12 },
+              null,
               _react2.default.createElement(
                 'h2',
                 null,
@@ -45826,7 +45793,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
               _reflex.Grid,
-              { size: 12 },
+              null,
               includeText && _react2.default.createElement(
                 'p',
                 null,
@@ -45844,7 +45811,7 @@ exports.default = function () {
             },
             _react2.default.createElement(
               _reflex.Grid,
-              { size: 12 },
+              null,
               _react2.default.createElement(
                 'h2',
                 null,
@@ -45863,7 +45830,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: _marginTypes.horizontalHalf, size: 12 },
+          { margin: _marginTypes.horizontalHalf },
           _react2.default.createElement(
             'h1',
             null,
@@ -45889,7 +45856,7 @@ var _layout = __webpack_require__(218);
 
 var _layout2 = _interopRequireDefault(_layout);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46006,7 +45973,7 @@ exports.default = function () {
           null,
           _react2.default.createElement(
             _reflex.Grid,
-            { align: 'stretch', size: 12 },
+            { align: 'stretch' },
             _react2.default.createElement(
               _reflex.Grid,
               {
@@ -46146,7 +46113,6 @@ exports.default = function () {
               _react2.default.createElement(
                 _reflex.Grid,
                 {
-                  size: 12,
                   align: 'top',
                   className: _stories.colors1,
                   padding: _marginTypes.top,
@@ -46170,7 +46136,7 @@ exports.default = function () {
           null,
           _react2.default.createElement(
             _reflex.Grid,
-            { margin: _marginTypes.horizontalHalf, size: 12 },
+            { margin: _marginTypes.horizontalHalf },
             _react2.default.createElement(
               'h1',
               null,
@@ -46191,20 +46157,20 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
 var _report = __webpack_require__(1122);
 
 var _report2 = _interopRequireDefault(_report);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function P(props) {
   return _react2.default.createElement(
-    _reflex.Grid,
-    { size: 12, margin: _marginTypes.item },
+    _reflex.Col,
+    null,
     _react2.default.createElement('p', props)
   );
 }
@@ -46215,8 +46181,8 @@ function Card(_ref) {
       height = _ref$height === undefined ? 70 : _ref$height;
 
   return _react2.default.createElement(
-    _reflex.Grid,
-    { style: { height: height }, size: 12, margin: _marginTypes.item },
+    _reflex.Col,
+    { style: { height: height } },
     _react2.default.createElement(
       'div',
       { style: { height: '100%', width: '100%' }, className: _report2.default.card },
@@ -46363,9 +46329,9 @@ var _layout = __webpack_require__(218);
 
 var _layout2 = _interopRequireDefault(_layout);
 
-var _stories = __webpack_require__(58);
+var _stories = __webpack_require__(57);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46405,8 +46371,8 @@ function getContainerSection(index, subsections) {
           _reflex.Grid,
           { key: i },
           _react2.default.createElement(
-            _reflex.Grid,
-            { margin: _marginTypes.item, size: 12 },
+            _reflex.Col,
+            null,
             _react2.default.createElement(
               'h1',
               null,
@@ -46452,7 +46418,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: _marginTypes.horizontalHalf, size: 12 },
+          { margin: _marginTypes.horizontalHalf },
           _react2.default.createElement(
             'h1',
             null,
@@ -46500,8 +46466,8 @@ exports.default = function () {
             _reflex.Grid,
             { align: 'top', padding: _marginTypes.vertical },
             _react2.default.createElement(
-              _reflex.Grid,
-              { margin: _marginTypes.item },
+              _reflex.Col,
+              null,
               _react2.default.createElement(
                 'h2',
                 null,
@@ -46529,7 +46495,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           _reflex.Grid,
-          { margin: _marginTypes.horizontalHalf, size: 12 },
+          { margin: _marginTypes.horizontalHalf },
           _react2.default.createElement(
             'h1',
             null,
@@ -46555,7 +46521,7 @@ var _layout = __webpack_require__(218);
 
 var _layout2 = _interopRequireDefault(_layout);
 
-var _marginTypes = __webpack_require__(46);
+var _marginTypes = __webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46869,7 +46835,7 @@ var TemplateTag = function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stripIndentTransformer__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__trimResultTransformer__ = __webpack_require__(38);
 
 
@@ -46903,7 +46869,7 @@ var commaLists = new __WEBPACK_IMPORTED_MODULE_0__TemplateTag__["a" /* default *
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stripIndentTransformer__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__trimResultTransformer__ = __webpack_require__(38);
 
 
@@ -46937,7 +46903,7 @@ var commaListsAnd = new __WEBPACK_IMPORTED_MODULE_0__TemplateTag__["a" /* defaul
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stripIndentTransformer__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__trimResultTransformer__ = __webpack_require__(38);
 
 
@@ -46971,7 +46937,7 @@ var commaListsOr = new __WEBPACK_IMPORTED_MODULE_0__TemplateTag__["a" /* default
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stripIndentTransformer__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__trimResultTransformer__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__splitStringTransformer__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__removeNonPrintingValuesTransformer__ = __webpack_require__(512);
@@ -47005,7 +46971,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "replaceResultTransformer", function() { return __WEBPACK_IMPORTED_MODULE_3__replaceResultTransformer__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__replaceSubstitutionTransformer__ = __webpack_require__(513);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "replaceSubstitutionTransformer", function() { return __WEBPACK_IMPORTED_MODULE_4__replaceSubstitutionTransformer__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "inlineArrayTransformer", function() { return __WEBPACK_IMPORTED_MODULE_5__inlineArrayTransformer__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__splitStringTransformer__ = __webpack_require__(270);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "splitStringTransformer", function() { return __WEBPACK_IMPORTED_MODULE_6__splitStringTransformer__["a"]; });
@@ -47175,7 +47141,7 @@ var inlineArrayTransformer = function inlineArrayTransformer() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stripIndentTransformer__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__trimResultTransformer__ = __webpack_require__(38);
 
 
@@ -47240,7 +47206,7 @@ var oneLine = new __WEBPACK_IMPORTED_MODULE_0__TemplateTag__["a" /* default */](
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__trimResultTransformer__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__replaceResultTransformer__ = __webpack_require__(102);
 
@@ -47274,7 +47240,7 @@ var oneLineCommaLists = new __WEBPACK_IMPORTED_MODULE_0__TemplateTag__["a" /* de
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__trimResultTransformer__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__replaceResultTransformer__ = __webpack_require__(102);
 
@@ -47308,7 +47274,7 @@ var oneLineCommaListsAnd = new __WEBPACK_IMPORTED_MODULE_0__TemplateTag__["a" /*
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__trimResultTransformer__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__replaceResultTransformer__ = __webpack_require__(102);
 
@@ -47342,7 +47308,7 @@ var oneLineCommaListsOr = new __WEBPACK_IMPORTED_MODULE_0__TemplateTag__["a" /* 
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__trimResultTransformer__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__replaceResultTransformer__ = __webpack_require__(102);
 
@@ -47495,7 +47461,7 @@ var replaceSubstitutionTransformer = function replaceSubstitutionTransformer(rep
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TemplateTag__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stripIndentTransformer__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inlineArrayTransformer__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__trimResultTransformer__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__splitStringTransformer__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__replaceSubstitutionTransformer__ = __webpack_require__(513);
@@ -47733,7 +47699,7 @@ module.exports = __webpack_require__(11).Object.freeze;
 
 var classof   = __webpack_require__(143)
   , ITERATOR  = __webpack_require__(17)('iterator')
-  , Iterators = __webpack_require__(60);
+  , Iterators = __webpack_require__(59);
 module.exports = __webpack_require__(11).isIterable = function(it){
   var O = Object(it);
   return O[ITERATOR] !== undefined
@@ -47767,7 +47733,7 @@ $export($export.S + $export.F * !__webpack_require__(32), 'Object', {definePrope
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.5 Object.freeze(O)
-var isObject = __webpack_require__(47)
+var isObject = __webpack_require__(46)
   , meta     = __webpack_require__(226).onFreeze;
 
 __webpack_require__(144)('freeze', function($freeze){
@@ -53611,7 +53577,7 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23), __webpack_require__(59)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23), __webpack_require__(58)(module)))
 
 /***/ }),
 /* 1126 */
@@ -54478,4 +54444,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.6e31ccfc0952af72ee42.bundle.js.map
+//# sourceMappingURL=preview.9934bbfab1e1fbab041b.bundle.js.map
