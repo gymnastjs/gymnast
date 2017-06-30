@@ -39,14 +39,15 @@ exports.assertion = function assertion(filename, baselinePath, expected) {
   this.expected = expected || 0 // misMatchPercentage tolerance default 0%
 
   this.command = callback => {
-    makeDir(path.dirname(baselinePath))
-      .then(() => makeDir(path.dirname(resultPath)))
-      .then(() => makeDir(path.dirname(diffPath)))
+    makeDir(path.dirname(resultPath)).then(() =>
+      makeDir(path.dirname(diffPath))
+    )
 
     // create new baseline photo if none exists
     if (!fs.existsSync(baselinePath)) {
-      makeDir(path.dirname(baselinePath))
-        .then(() => fs.writeFileSync(baselinePath, fs.readFileSync(resultPath)))
+      process.stdout.write('Image did not exist, updating test...\n')
+      fs
+        .writeFileSync(baselinePath, fs.readFileSync(resultPath))
         .then(() => compareImages(baselinePath, resultPath, callback))
     } else {
       compareImages(baselinePath, resultPath, callback)
