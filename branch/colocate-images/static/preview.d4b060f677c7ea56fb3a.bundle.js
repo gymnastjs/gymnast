@@ -42822,11 +42822,8 @@ function getFilesAndFolders(path) {
   };
 }
 
-function getImage(files, filepath) {
-  var pngFile = filepath.replace(/\.js$/, '.spec.png');
-  var hasPNG = files.indexOf(pngFile) !== -1;
-
-  return hasPNG ? pngFile : '';
+function getImagePath(filepath) {
+  return filepath.replace(/\.js$/, '.spec.png');
 }
 
 function dropEnds(array) {
@@ -42867,7 +42864,7 @@ function loadTestFolder(path) {
       /* eslint-enable global-require, import/no-dynamic-require */
       notes: '',
       filepath: filepath,
-      image: getImage(files, filepath),
+      image: getImagePath(filepath),
       namepath: origin ? origin + '.' + name : name
     }];
   }));
@@ -42898,7 +42895,7 @@ function loadWebpack(loader) {
     (0, _set3.default)(acc, namepath, {
       story: loader(filepath).default || loader(filepath),
       notes: getNote(files, filepath, loader),
-      image: getImage(files, filepath),
+      image: getImagePath(filepath),
       filepath: filepath,
       namepath: (0, _tail3.default)(namepath.split('.')).join('.')
     });
@@ -53587,4 +53584,4 @@ module.exports = __webpack_require__(672);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.d640ca9ce41eae37bbfe.bundle.js.map
+//# sourceMappingURL=preview.d4b060f677c7ea56fb3a.bundle.js.map
