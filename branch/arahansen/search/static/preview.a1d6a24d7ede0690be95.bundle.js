@@ -39301,20 +39301,8 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Col,
-        {
-          style: {
-            borderLeft: '1px solid #fff',
-            borderRight: '1px solid #fff'
-          },
-          marginBottom: 0,
-          offset: 1,
-          size: 3,
-          className: _stories2.default.colors4
-        },
-        _react2.default.createElement('input', {
-          style: { outline: 'none', padding: 0 },
-          placeholder: 'Search for anything...'
-        })
+        { marginBottom: 0, offset: 1, size: 3, className: _stories2.default.colors4 },
+        _react2.default.createElement('input', { placeholder: 'Search for anything...' })
       ),
       _react2.default.createElement(
         _reflex.Col,
@@ -39375,6 +39363,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = SearchFilters;
 
 var _react = __webpack_require__(0);
@@ -39389,10 +39380,10 @@ var _stories2 = _interopRequireDefault(_stories);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function SearchFilters() {
+function SearchFilters(props) {
   return _react2.default.createElement(
     _reflex.Col,
-    { size: 3, className: _stories2.default.colors4, align: 'top' },
+    _extends({}, props, { className: _stories2.default.colors4, align: 'top' }),
     _react2.default.createElement(
       _reflex.Col,
       { marginLeft: 0 },
@@ -39600,11 +39591,12 @@ function SearchResults(_ref) {
   var _ref$results = _ref.results,
       results = _ref$results === undefined ? 1 : _ref$results,
       _ref$pages = _ref.pages,
-      pages = _ref$pages === undefined ? 4 : _ref$pages;
+      pages = _ref$pages === undefined ? 4 : _ref$pages,
+      size = _ref.size;
 
   return _react2.default.createElement(
     _reflex.Grid,
-    { size: 9, className: _stories2.default.colors2, align: 'top' },
+    { size: size, className: _stories2.default.colors2, align: 'top' },
     _react2.default.createElement(
       _reflex.Grid,
       null,
@@ -39688,15 +39680,7 @@ function SearchResults(_ref) {
           { size: 'auto' },
           _react2.default.createElement(
             _reflex.Grid,
-            {
-              justify: 'center',
-              align: 'center',
-              style: {
-                height: 100,
-                width: '100%',
-                backgroundColor: '#bbb'
-              }
-            },
+            { justify: 'center', align: 'center', className: _stories2.default.image },
             'IMAGE'
           )
         )
@@ -39710,11 +39694,7 @@ function SearchResults(_ref) {
         { marginBottom: 0, size: 'fit' },
         _react2.default.createElement(
           _reflex.Grid,
-          {
-            justify: 'center',
-            className: _stories2.default.colors4,
-            style: { padding: '5px 10px' }
-          },
+          { justify: 'center', className: _stories2.default.paginationArrow },
           '<'
         )
       ),
@@ -39744,11 +39724,7 @@ function SearchResults(_ref) {
         { marginBottom: 0, size: 'fit' },
         _react2.default.createElement(
           _reflex.Grid,
-          {
-            justify: 'center',
-            className: _stories2.default.colors4,
-            style: { padding: '5px 10px' }
-          },
+          { justify: 'center', className: _stories2.default.paginationArrow },
           '>'
         )
       )
@@ -39757,7 +39733,8 @@ function SearchResults(_ref) {
 }
 SearchResults.propTypes = {
   results: __webpack_require__(1).number.isRequired,
-  pages: __webpack_require__(1).number.isRequired
+  pages: __webpack_require__(1).number.isRequired,
+  size: __webpack_require__(1).number.isRequired
 };
 
 /***/ }),
@@ -46279,6 +46256,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = function () {
   var results = (0, _addonKnobs.number)('Results', 5, { range: true, min: 1, max: 10 });
   var pages = (0, _addonKnobs.number)('Pages', 3, { range: true, min: 1, max: 5 });
@@ -46303,8 +46282,8 @@ exports.default = function () {
           _react2.default.createElement(
             _reflex.Grid,
             { margin: [1, 0, 0, 0] },
-            _react2.default.createElement(_filters2.default, null),
-            _react2.default.createElement(_results2.default, { pages: pages, results: results })
+            _react2.default.createElement(_filters2.default, { size: 3 }),
+            _react2.default.createElement(_results2.default, _extends({ size: 9 }, { pages: pages, results: results }))
           )
         )
       )
@@ -47959,7 +47938,7 @@ exports = module.exports = __webpack_require__(117)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}@font-face{font-family:Geometria;src:url(https://obartra.github.io/reflex/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h1,h2,h3{margin:0;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}button,input{width:100%;height:40px;font-size:18px;box-sizing:border-box}input{outline:1px solid #1d1f21;border:0;padding:12px}button{border-radius:0;border:0;color:#1d1f21;background-color:gold}.stories__box1___mWKMX,.stories__box2___2HHLa,.stories__box3___1GNyk,.stories__box4___3rT21{cursor:default}.stories__box1___mWKMX,.stories__colors1___zkyJh{color:gold;background-color:#1d1f21}.stories__box2___2HHLa,.stories__colors2___1Vcy4{color:#1469cc;background-color:#efefef}.stories__box3___1GNyk,.stories__colors3___3aCZ2{color:#1d1f21;background-color:gold}.stories__box4___3rT21,.stories__colors4___2cdrQ{color:#efefef;background-color:#1469cc}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}@font-face{font-family:Geometria;src:url(https://obartra.github.io/reflex/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h1,h2,h3{margin:0;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}button,input{width:100%;height:40px;font-size:18px;box-sizing:border-box}input{outline:1px solid #1d1f21;border:0;padding:12px}button{border-radius:0;border:0;color:#1d1f21;background-color:gold}.stories__box1___mWKMX,.stories__box2___2HHLa,.stories__box3___1GNyk,.stories__box4___3rT21{cursor:default}.stories__box1___mWKMX,.stories__colors1___zkyJh{color:gold;background-color:#1d1f21}.stories__box2___2HHLa,.stories__colors2___1Vcy4{color:#1469cc;background-color:#efefef}.stories__box3___1GNyk,.stories__colors3___3aCZ2{color:#1d1f21;background-color:gold}.stories__box4___3rT21,.stories__colors4___2cdrQ{color:#efefef;background-color:#1469cc}.stories__image___1UKS7{height:100px;width:100%}.stories__paginationArrow___1MreF{padding:\"5px 10px\"}", ""]);
 
 // exports
 exports.locals = {
@@ -47970,7 +47949,9 @@ exports.locals = {
 	"colors1": "stories__colors1___zkyJh",
 	"colors2": "stories__colors2___1Vcy4",
 	"colors3": "stories__colors3___3aCZ2",
-	"colors4": "stories__colors4___2cdrQ"
+	"colors4": "stories__colors4___2cdrQ",
+	"image": "stories__image___1UKS7 stories__colors4___2cdrQ",
+	"paginationArrow": "stories__paginationArrow___1MreF stories__colors2___1Vcy4"
 };
 
 /***/ }),
@@ -54472,4 +54453,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.7f6b64c60ab5ef27d876.bundle.js.map
+//# sourceMappingURL=preview.a1d6a24d7ede0690be95.bundle.js.map
