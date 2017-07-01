@@ -7337,7 +7337,7 @@ function toComment(sourceMap) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(186),
-    isLength = __webpack_require__(147);
+    isLength = __webpack_require__(148);
 
 /**
  * Checks if `value` is array-like. A value is considered array-like if it's
@@ -8156,7 +8156,7 @@ exports.f = __webpack_require__(17);
 /* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof   = __webpack_require__(142)
+var classof   = __webpack_require__(143)
   , ITERATOR  = __webpack_require__(17)('iterator')
   , Iterators = __webpack_require__(58);
 module.exports = __webpack_require__(11).getIteratorMethod = function(it){
@@ -10379,9 +10379,40 @@ if (false) {
 module.exports = validateDOMNesting;
 
 /***/ }),
-/* 140 */,
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(842);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(102)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--3-1!../../node_modules/postcss-loader/lib/index.js??ref--3-2!./stories.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--3-1!../../node_modules/postcss-loader/lib/index.js??ref--3-2!./stories.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
 /* 141 */,
-/* 142 */
+/* 142 */,
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
@@ -10409,7 +10440,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
@@ -10424,7 +10455,7 @@ module.exports = function(KEY, exec){
 };
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var listCacheClear = __webpack_require__(371),
@@ -10462,7 +10493,7 @@ module.exports = ListCache;
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
@@ -10490,7 +10521,7 @@ module.exports = isIndex;
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isSymbol = __webpack_require__(87);
@@ -10517,7 +10548,7 @@ module.exports = toKey;
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
@@ -10556,37 +10587,6 @@ function isLength(value) {
 
 module.exports = isLength;
 
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(842);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(102)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--3-1!../../node_modules/postcss-loader/lib/index.js??ref--3-2!./stories.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js??ref--3-1!../../node_modules/postcss-loader/lib/index.js??ref--3-2!./stories.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ }),
 /* 149 */
@@ -16644,7 +16644,7 @@ var baseTimes = __webpack_require__(238),
     isArguments = __webpack_require__(245),
     isArray = __webpack_require__(33),
     isBuffer = __webpack_require__(185),
-    isIndex = __webpack_require__(145),
+    isIndex = __webpack_require__(146),
     isTypedArray = __webpack_require__(246);
 
 /** Used for built-in method references. */
@@ -18451,7 +18451,7 @@ $export($export.S + $export.F * !__webpack_require__(32), 'Object', {definePrope
 var toObject        = __webpack_require__(64)
   , $getPrototypeOf = __webpack_require__(162);
 
-__webpack_require__(143)('getPrototypeOf', function(){
+__webpack_require__(144)('getPrototypeOf', function(){
   return function getPrototypeOf(it){
     return $getPrototypeOf(toObject(it));
   };
@@ -18465,7 +18465,7 @@ __webpack_require__(143)('getPrototypeOf', function(){
 var toObject = __webpack_require__(64)
   , $keys    = __webpack_require__(49);
 
-__webpack_require__(143)('keys', function(){
+__webpack_require__(144)('keys', function(){
   return function keys(it){
     return $keys(toObject(it));
   };
@@ -18488,7 +18488,7 @@ $export($export.S, 'Object', {setPrototypeOf: __webpack_require__(297).set});
 var LIBRARY            = __webpack_require__(76)
   , global             = __webpack_require__(19)
   , ctx                = __webpack_require__(47)
-  , classof            = __webpack_require__(142)
+  , classof            = __webpack_require__(143)
   , $export            = __webpack_require__(24)
   , isObject           = __webpack_require__(46)
   , aFunction          = __webpack_require__(104)
@@ -26963,7 +26963,7 @@ module.exports = baseIsNative;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(59),
-    isLength = __webpack_require__(147),
+    isLength = __webpack_require__(148),
     isObjectLike = __webpack_require__(60);
 
 /** `Object#toString` result references. */
@@ -27624,7 +27624,7 @@ module.exports = listCacheSet;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Hash = __webpack_require__(346),
-    ListCache = __webpack_require__(144),
+    ListCache = __webpack_require__(145),
     Map = __webpack_require__(179);
 
 /**
@@ -39796,7 +39796,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(148);
+var _stories = __webpack_require__(140);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -40025,7 +40025,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(148);
+var _stories = __webpack_require__(140);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -43558,7 +43558,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
-var _stories = __webpack_require__(148);
+var _stories = __webpack_require__(140);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -44627,6 +44627,10 @@ var _shared = __webpack_require__(26);
 
 var _marginTypes = __webpack_require__(72);
 
+var _stories = __webpack_require__(140);
+
+var _stories2 = _interopRequireDefault(_stories);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Padding(_ref) {
@@ -44635,7 +44639,7 @@ function Padding(_ref) {
   var margin = (0, _shared.getMarginSelect)();
   var text = _react2.default.createElement(
     'div',
-    { dev: 1 },
+    { className: _stories2.default.colors1 },
     _shared.loremIpsum.substr(0, 150)
   );
 
@@ -45547,7 +45551,7 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _stories = __webpack_require__(148);
+var _stories = __webpack_require__(140);
 
 var _stories2 = _interopRequireDefault(_stories);
 
@@ -46564,7 +46568,7 @@ var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
-var _stories = __webpack_require__(148);
+var _stories = __webpack_require__(140);
 
 var _report = __webpack_require__(1124);
 
@@ -46736,7 +46740,7 @@ var _layout = __webpack_require__(218);
 
 var _layout2 = _interopRequireDefault(_layout);
 
-var _stories = __webpack_require__(148);
+var _stories = __webpack_require__(140);
 
 var _marginTypes = __webpack_require__(72);
 
@@ -48104,7 +48108,7 @@ module.exports = __webpack_require__(11).Object.freeze;
 /* 833 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof   = __webpack_require__(142)
+var classof   = __webpack_require__(143)
   , ITERATOR  = __webpack_require__(17)('iterator')
   , Iterators = __webpack_require__(58);
 module.exports = __webpack_require__(11).isIterable = function(it){
@@ -48143,7 +48147,7 @@ $export($export.S + $export.F * !__webpack_require__(32), 'Object', {definePrope
 var isObject = __webpack_require__(46)
   , meta     = __webpack_require__(226).onFreeze;
 
-__webpack_require__(143)('freeze', function($freeze){
+__webpack_require__(144)('freeze', function($freeze){
   return function freeze(it){
     return $freeze && isObject(it) ? $freeze(meta(it)) : it;
   };
@@ -48983,9 +48987,9 @@ module.exports = baseFill;
 
 var assignValue = __webpack_require__(234),
     castPath = __webpack_require__(239),
-    isIndex = __webpack_require__(145),
+    isIndex = __webpack_require__(146),
     isObject = __webpack_require__(43),
-    toKey = __webpack_require__(146);
+    toKey = __webpack_require__(147);
 
 /**
  * The base implementation of `_.set`.
@@ -49055,7 +49059,7 @@ module.exports = baseSet;
 
 var eq = __webpack_require__(121),
     isArrayLike = __webpack_require__(98),
-    isIndex = __webpack_require__(145),
+    isIndex = __webpack_require__(146),
     isObject = __webpack_require__(43);
 
 /**
@@ -54901,4 +54905,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.da9fd7e78e3f511b6434.bundle.js.map
+//# sourceMappingURL=preview.7171859e70bf49cc8087.bundle.js.map
