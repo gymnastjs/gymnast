@@ -45422,15 +45422,6 @@ function Composite(props) {
               )
             ),
             _react2.default.createElement(
-              _reflex.Col,
-              null,
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Section 2'
-              )
-            ),
-            _react2.default.createElement(
               _reflex.Grid,
               null,
               _react2.default.createElement(
@@ -54906,4 +54897,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.992a115b4eebc91ad378.bundle.js.map
+//# sourceMappingURL=preview.3fd4c2d1e15a34e13362.bundle.js.map
