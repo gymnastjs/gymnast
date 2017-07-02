@@ -45236,7 +45236,7 @@ exports.default = function () {
               ),
               _react2.default.createElement(
                 _reflex.Col,
-                { marginLeft: 0, size: 'auto' },
+                { marginLeft: 0, size: 3 },
                 'Note'
               ),
               _react2.default.createElement(
@@ -54257,4 +54257,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.1ad0e4480b2496c4a563.bundle.js.map
+//# sourceMappingURL=preview.59edf1e73e8f5751e918.bundle.js.map
