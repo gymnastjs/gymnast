@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1157);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1156);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1304,7 +1304,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         v = r(m),
         x = n(1).babelPluginFlowReactPropTypes_proptype_Spacing || n(0).any,
         w = n(1).babelPluginFlowReactPropTypes_proptype_Size || n(0).any,
-        O = (n(1).babelPluginFlowReactPropTypes_proptype_Offset || n(0).any, n(1).babelPluginFlowReactPropTypes_proptype_Justify || n(0).any),
+        O = n(1).babelPluginFlowReactPropTypes_proptype_Justify || n(0).any,
         P = n(1).babelPluginFlowReactPropTypes_proptype_AlignGrid || n(0).any;Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Props", { value: { align: "function" == typeof P ? P : n(0).shape(P), children: n(0).oneOfType(["function" == typeof Element ? n(0).instanceOf(Element) : n(0).any, n(0).arrayOf("function" == typeof Element ? n(0).instanceOf(Element) : n(0).any)]), className: n(0).string, justify: "function" == typeof O ? O : n(0).shape(O), margin: "function" == typeof x ? x : n(0).shape(x), padding: "function" == typeof x ? x : n(0).shape(x), size: "function" == typeof w ? w : n(0).shape(w) }, configurable: !0 });
   }, function (t, e, n) {
     "use strict";
@@ -2757,7 +2757,7 @@ var loremIpsum = exports.loremIpsum = _loremIpsum2.default;
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(46);
+var isObject = __webpack_require__(45);
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
@@ -3604,6 +3604,14 @@ exports.default = new AddonStore();
 
 /***/ }),
 /* 45 */
+/***/ (function(module, exports) {
+
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+/***/ }),
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3656,14 +3664,6 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
   }]),
   configurable: true
 });
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports) {
-
-module.exports = function(it){
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
-};
 
 /***/ }),
 /* 47 */
@@ -7119,7 +7119,7 @@ module.exports = function(it){
 /* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(46)
+var isObject = __webpack_require__(45)
   , document = __webpack_require__(19).document
   // in old IE typeof document.createElement is 'object'
   , is = isObject(document) && isObject(document.createElement);
@@ -7237,7 +7237,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(46);
+var isObject = __webpack_require__(45);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function(it, S){
@@ -14959,9 +14959,9 @@ var _spacing2 = _interopRequireDefault(_spacing);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
 /* eslint-disable no-unused-vars */
 var noop = function noop() {
@@ -15052,7 +15052,7 @@ module.exports = { "default": __webpack_require__(275), __esModule: true };
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(80)('meta')
-  , isObject = __webpack_require__(46)
+  , isObject = __webpack_require__(45)
   , has      = __webpack_require__(39)
   , setDesc  = __webpack_require__(28).f
   , id       = 0;
@@ -17758,7 +17758,7 @@ module.exports = function(target, src, safe){
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(46)
+var isObject = __webpack_require__(45)
   , anObject = __webpack_require__(27);
 var check = function(O, proto){
   anObject(O);
@@ -18017,7 +18017,7 @@ var LIBRARY            = __webpack_require__(77)
   , ctx                = __webpack_require__(47)
   , classof            = __webpack_require__(143)
   , $export            = __webpack_require__(24)
-  , isObject           = __webpack_require__(46)
+  , isObject           = __webpack_require__(45)
   , aFunction          = __webpack_require__(103)
   , anInstance         = __webpack_require__(283)
   , forOf              = __webpack_require__(287)
@@ -38991,15 +38991,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Size = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Size || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Size = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Size || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Offset = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Offset || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Justify = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Justify || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Justify = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Justify || __webpack_require__(1).any;
-
-var babelPluginFlowReactPropTypes_proptype_AlignGrid = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_AlignGrid || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_AlignGrid = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_AlignGrid || __webpack_require__(1).any;
 
 if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Props', {
   value: {
@@ -39113,13 +39111,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_LayoutType = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_LayoutType || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_LayoutType = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_LayoutType || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Fixed = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Fixed || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Fixed = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Fixed || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Overflow = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Overflow || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Overflow = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Overflow || __webpack_require__(1).any;
 
 function getLayout(layout) {
   switch (layout) {
@@ -39286,7 +39284,7 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Col,
-        { marginBottom: 0, offset: 1, size: 3, className: _stories2.default.colors4 },
+        { marginBottom: 0, size: 3, className: _stories2.default.colors4 },
         _react2.default.createElement('input', { placeholder: 'Search for anything...' })
       ),
       _react2.default.createElement(
@@ -42902,7 +42900,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
 var Padding = function (_React$PureComponent) {
   _inherits(Padding, _React$PureComponent);
@@ -43102,7 +43100,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
 var typeMap = {
   A: 1,
@@ -43241,7 +43239,7 @@ exports.default = getMarginSelect;
 
 var _addonKnobs = __webpack_require__(33);
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
 var marginMap = {
   Item: [0, 0.5, 1],
@@ -44037,26 +44035,6 @@ exports.default = function () {
             )
           )
         )
-      )
-    ),
-    _react2.default.createElement(
-      _reflex.Col,
-      null,
-      _react2.default.createElement(
-        'h1',
-        null,
-        'With Offsets'
-      )
-    ),
-    _react2.default.createElement(
-      _reflex.Col,
-      null,
-      _react2.default.createElement(
-        _reflex.Grid,
-        _extends({}, params, { className: _stories2.default.colors2 }),
-        _react2.default.createElement(_shared.Box, { size: 6, margin: margin, offset: 3, type: 'A' }),
-        _react2.default.createElement(_shared.Box, { size: 4, margin: margin, type: 'A' }),
-        _react2.default.createElement(_shared.Box, { size: 4, margin: margin, offset: 4, type: 'A' })
       )
     ),
     _react2.default.createElement(
@@ -47614,7 +47592,7 @@ $export($export.S + $export.F * !__webpack_require__(31), 'Object', {definePrope
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.5 Object.freeze(O)
-var isObject = __webpack_require__(46)
+var isObject = __webpack_require__(45)
   , meta     = __webpack_require__(226).onFreeze;
 
 __webpack_require__(144)('freeze', function($freeze){
@@ -54060,60 +54038,59 @@ var map = {
 	"./api/margin.spec.png": 1136,
 	"./api/nested.js": 762,
 	"./api/nested.md": 853,
-	"./api/nested.spec.png": 1137,
 	"./api/padding.js": 763,
 	"./api/padding.md": 854,
-	"./api/padding.spec.png": 1138,
+	"./api/padding.spec.png": 1137,
 	"./api/sizing.js": 764,
 	"./api/sizing.md": 855,
-	"./api/sizing.spec.png": 1139,
+	"./api/sizing.spec.png": 1138,
 	"./api/verticalAlign.js": 765,
 	"./api/verticalAlign.md": 856,
-	"./api/verticalAlign.spec.png": 1140,
+	"./api/verticalAlign.spec.png": 1139,
 	"./components/card/base.js": 766,
-	"./components/card/base.spec.png": 1141,
+	"./components/card/base.spec.png": 1140,
 	"./components/card/composite.js": 767,
-	"./components/card/composite.spec.png": 1142,
+	"./components/card/composite.spec.png": 1141,
 	"./components/card/filter.js": 768,
-	"./components/card/filter.spec.png": 1143,
+	"./components/card/filter.spec.png": 1142,
 	"./components/card/profile.js": 769,
-	"./components/card/profile.spec.png": 1144,
+	"./components/card/profile.spec.png": 1143,
 	"./components/header/app.js": 505,
 	"./components/header/app.md": 857,
-	"./components/header/app.spec.png": 1145,
+	"./components/header/app.spec.png": 1144,
 	"./components/header/basic.js": 770,
-	"./components/header/basic.spec.png": 1146,
+	"./components/header/basic.spec.png": 1145,
 	"./components/header/header.md": 858,
 	"./components/pagination.js": 771,
 	"./components/pagination.md": 859,
-	"./components/pagination.spec.png": 1147,
+	"./components/pagination.spec.png": 1146,
 	"./components/search/filters.js": 506,
 	"./components/search/filters.md": 860,
-	"./components/search/filters.spec.png": 1148,
+	"./components/search/filters.spec.png": 1147,
 	"./components/search/nav.js": 507,
 	"./components/search/nav.md": 861,
-	"./components/search/nav.spec.png": 1149,
+	"./components/search/nav.spec.png": 1148,
 	"./components/search/results.js": 508,
 	"./components/search/results.md": 862,
-	"./components/search/results.spec.png": 1150,
+	"./components/search/results.spec.png": 1149,
 	"./examples/cards.js": 772,
 	"./examples/cards.md": 863,
-	"./examples/cards.spec.png": 1151,
+	"./examples/cards.spec.png": 1150,
 	"./examples/holyGrail.js": 773,
 	"./examples/holyGrail.md": 864,
-	"./examples/holyGrail.spec.png": 1152,
+	"./examples/holyGrail.spec.png": 1151,
 	"./examples/report.js": 774,
 	"./examples/report.md": 865,
-	"./examples/report.spec.png": 1153,
+	"./examples/report.spec.png": 1152,
 	"./examples/search.js": 775,
 	"./examples/search.md": 866,
-	"./examples/search.spec.png": 1154,
+	"./examples/search.spec.png": 1153,
 	"./examples/stack.js": 776,
 	"./examples/stack.md": 867,
-	"./examples/stack.spec.png": 1155,
+	"./examples/stack.spec.png": 1154,
 	"./examples/twoSections.js": 777,
 	"./examples/twoSections.md": 868,
-	"./examples/twoSections.spec.png": 1156
+	"./examples/twoSections.spec.png": 1155
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -54159,124 +54136,118 @@ throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/
 /* 1137 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/nested.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/padding.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1138 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/padding.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/sizing.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1139 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/sizing.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/verticalAlign.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1140 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/verticalAlign.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/base.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1141 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/base.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/composite.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1142 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/composite.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/filter.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1143 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/filter.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/profile.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1144 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/profile.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header/app.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1145 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header/app.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header/basic.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1146 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header/basic.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/pagination.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1147 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/pagination.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/filters.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1148 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/filters.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/nav.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1149 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/nav.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/results.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1150 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/results.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/cards.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1151 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/cards.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/holyGrail.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1152 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/holyGrail.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/report.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1153 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/report.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/search.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1154 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/search.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/stack.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1155 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/stack.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
-
-/***/ }),
-/* 1156 */
-/***/ (function(module, exports) {
-
 throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/twoSections.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
-/* 1157 */
+/* 1156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(219);
@@ -54286,4 +54257,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.3845ea685a469c4587c9.bundle.js.map
+//# sourceMappingURL=preview.1ad0e4480b2496c4a563.bundle.js.map
