@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1140);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1135);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -54219,21 +54219,16 @@ var map = {
 	"./components/card/profile.js": 770,
 	"./components/header/app.js": 505,
 	"./components/header/app.md": 859,
-	"./components/header/app.spec.png": 1135,
 	"./components/header/basic.js": 771,
-	"./components/header/basic.spec.png": 1136,
 	"./components/header/header.md": 860,
 	"./components/pagination.js": 772,
 	"./components/pagination.md": 861,
 	"./components/search/filters.js": 506,
 	"./components/search/filters.md": 862,
-	"./components/search/filters.spec.png": 1137,
 	"./components/search/nav.js": 507,
 	"./components/search/nav.md": 863,
-	"./components/search/nav.spec.png": 1138,
 	"./components/search/results.js": 508,
 	"./components/search/results.md": 864,
-	"./components/search/results.spec.png": 1139,
 	"./examples/cards.js": 773,
 	"./examples/cards.md": 865,
 	"./examples/holyGrail.js": 774,
@@ -54265,36 +54260,6 @@ webpackContext.id = 1134;
 
 /***/ }),
 /* 1135 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header/app.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
-
-/***/ }),
-/* 1136 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header/basic.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
-
-/***/ }),
-/* 1137 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/filters.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
-
-/***/ }),
-/* 1138 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/nav.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
-
-/***/ }),
-/* 1139 */
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/results.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
-
-/***/ }),
-/* 1140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(219);
@@ -54304,4 +54269,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.2721d6efb8135a5c8473.bundle.js.map
+//# sourceMappingURL=preview.a635e4a4b779b5d0c40e.bundle.js.map
