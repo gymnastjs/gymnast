@@ -1,29 +1,16 @@
-// @flow
 /* eslint-disable global-require, import/no-dynamic-require */
 
-import { fromPairs, initial, tail, set, negate } from 'lodash'
-import { readdirSync, lstatSync } from 'fs'
-import { join } from 'path'
-import { getName } from './getName'
+const { fromPairs, initial, tail, set, negate } = require('lodash')
+const { readdirSync, lstatSync } = require('fs')
+const { join } = require('path')
+const { getName } = require('./getName')
 
 const isTest =
   process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'test:image'
 const baseUrl =
   'https://github.com/obartra/reflex/tree/master/storybook/stories/'
 
-type storyObj = {
-  story: Function,
-  notes: string,
-  filepath: string,
-}
-
-type storyTree = {
-  [string]: storyTree | storyObj,
-}
-
-function getFilesAndFolders(
-  path: string
-): { folders: Array<string>, files: Array<string> } {
+function getFilesAndFolders(path) {
   const content = readdirSync(path).map(filename => join(path, filename))
   return {
     folders: content.filter(filepath => lstatSync(filepath).isDirectory()),
@@ -44,7 +31,7 @@ function getNote(files, filepath, loader) {
   const hasMd = files.indexOf(mdFile) !== -1
   const url = filepath.replace('./', baseUrl)
   const note = hasMd ? loader(mdFile).default || loader(mdFile) : ''
-  const footer = (require('./footer.md'): string) || ''
+  const footer = require('./footer.md') || ''
 
   return `${note}${footer.replace('[[url]]', url)}`
 }
@@ -56,7 +43,7 @@ function endsWith(str) {
 const doesntEndWith = str => negate(endsWith(str))
 
 function fileTestMapper(origin) {
-  return (filepath: string) => {
+  return filepath => {
     const name = getName(filepath)
 
     return [
@@ -79,10 +66,10 @@ function fileTestMapper(origin) {
  * `require.context` (it's webpack specific).
  *
  */
-function loadTestFolder(path: string, origin: string = ''): storyObj {
+function loadTestFolder(path, origin = '') {
   const { files, folders } = getFilesAndFolders(path)
 
-  const directChildren: storyObj = fromPairs(
+  const directChildren = fromPairs(
     files
       .filter(endsWith('.js'))
       .filter(doesntEndWith('.spec.js'))
@@ -90,23 +77,23 @@ function loadTestFolder(path: string, origin: string = ''): storyObj {
   )
 
   return folders.reduce(
-    (acc, folder) => ({
-      ...acc,
-      [getName(folder)]: loadTestFolder(folder, getName(folder)),
-    }),
+    (acc, folder) =>
+      Object.assign(acc, {
+        [getName(folder)]: loadTestFolder(folder, getName(folder)),
+      }),
     directChildren
   )
 }
 
-function loadTest(): storyTree {
+function loadTest() {
   const { folders } = getFilesAndFolders(join(__dirname, '../stories'))
 
   return fromPairs(
-    folders.map((folder: string) => [getName(folder), loadTestFolder(folder)])
+    folders.map(folder => [getName(folder), loadTestFolder(folder)])
   )
 }
 
-function loadWebpack(loader: Function): storyTree {
+function loadWebpack(loader) {
   const files = loader.keys()
 
   return files
@@ -127,8 +114,8 @@ function loadWebpack(loader: Function): storyTree {
     }, {})
 }
 
-export const storyFolders = !isTest
+const storyFolders = !isTest
   ? loadWebpack(require.context('../stories', true, /.+\.(md|png|js)$/i))
   : loadTest()
 
-export default storyFolders
+module.exports = { storyFolders }

@@ -47,10 +47,9 @@ exports.assertion = function assertion(filename, baselinePath, expected) {
     if (!fs.existsSync(baselinePath)) {
       process.stdout.write('Image did not exist, updating test...\n')
       fs.writeFileSync(baselinePath, fs.readFileSync(resultPath))
-      compareImages(baselinePath, resultPath, callback)
-    } else {
-      compareImages(baselinePath, resultPath, callback)
     }
+
+    compareImages(baselinePath, resultPath, callback)
 
     return this
   }
