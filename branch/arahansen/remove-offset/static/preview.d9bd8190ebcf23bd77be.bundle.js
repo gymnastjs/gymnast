@@ -39230,7 +39230,7 @@ exports.default = function () {
       { align: 'center' },
       _react2.default.createElement(
         _reflex.Col,
-        { align: 'center', size: 'auto', marginBottom: 0 },
+        { align: 'center', size: 6, marginBottom: 0 },
         _react2.default.createElement(
           _reflex.Col,
           {
@@ -39284,8 +39284,17 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Col,
-        { marginBottom: 0, size: 3, className: _stories2.default.colors4 },
-        _react2.default.createElement('input', { placeholder: 'Search for anything...' })
+        {
+          marginBottom: 0,
+          justify: 'right',
+          size: 3,
+          className: _stories2.default.colors4
+        },
+        _react2.default.createElement(
+          _reflex.Grid,
+          null,
+          _react2.default.createElement('input', { placeholder: 'Search for anything...' })
+        )
       ),
       _react2.default.createElement(
         _reflex.Col,
@@ -54257,4 +54266,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.59edf1e73e8f5751e918.bundle.js.map
+//# sourceMappingURL=preview.d9bd8190ebcf23bd77be.bundle.js.map
