@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1157);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1161);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -54215,59 +54215,63 @@ var map = {
 	"./api/margin.spec.png": 1139,
 	"./api/nested.js": 763,
 	"./api/nested.md": 855,
+	"./api/nested.spec.png": 1140,
 	"./api/offset.js": 764,
 	"./api/offset.md": 856,
-	"./api/offset.spec.png": 1140,
+	"./api/offset.spec.png": 1141,
 	"./api/padding.js": 765,
 	"./api/padding.md": 857,
-	"./api/padding.spec.png": 1141,
+	"./api/padding.spec.png": 1142,
 	"./api/sizing.js": 766,
 	"./api/sizing.md": 858,
-	"./api/sizing.spec.png": 1142,
+	"./api/sizing.spec.png": 1143,
 	"./api/verticalAlign.js": 767,
 	"./api/verticalAlign.md": 859,
-	"./api/verticalAlign.spec.png": 1143,
+	"./api/verticalAlign.spec.png": 1144,
 	"./components/card/base.js": 768,
-	"./components/card/base.spec.png": 1144,
+	"./components/card/base.spec.png": 1145,
 	"./components/card/composite.js": 769,
-	"./components/card/composite.spec.png": 1145,
+	"./components/card/composite.spec.png": 1146,
 	"./components/card/filter.js": 770,
-	"./components/card/filter.spec.png": 1146,
+	"./components/card/filter.spec.png": 1147,
 	"./components/card/profile.js": 771,
-	"./components/card/profile.spec.png": 1147,
+	"./components/card/profile.spec.png": 1148,
 	"./components/header/app.js": 505,
 	"./components/header/app.md": 860,
+	"./components/header/app.spec.png": 1149,
 	"./components/header/basic.js": 772,
+	"./components/header/basic.spec.png": 1150,
 	"./components/header/header.md": 861,
 	"./components/pagination.js": 773,
 	"./components/pagination.md": 862,
-	"./components/pagination.spec.png": 1148,
+	"./components/pagination.spec.png": 1151,
 	"./components/search/filters.js": 506,
 	"./components/search/filters.md": 863,
-	"./components/search/filters.spec.png": 1149,
+	"./components/search/filters.spec.png": 1152,
 	"./components/search/nav.js": 507,
 	"./components/search/nav.md": 864,
-	"./components/search/nav.spec.png": 1150,
+	"./components/search/nav.spec.png": 1153,
 	"./components/search/results.js": 508,
 	"./components/search/results.md": 865,
-	"./components/search/results.spec.png": 1151,
+	"./components/search/results.spec.png": 1154,
 	"./examples/cards.js": 774,
 	"./examples/cards.md": 866,
-	"./examples/cards.spec.png": 1152,
+	"./examples/cards.spec.png": 1155,
 	"./examples/holyGrail.js": 775,
 	"./examples/holyGrail.md": 867,
-	"./examples/holyGrail.spec.png": 1153,
+	"./examples/holyGrail.spec.png": 1156,
 	"./examples/report.js": 776,
 	"./examples/report.md": 868,
-	"./examples/report.spec.png": 1154,
+	"./examples/report.spec.png": 1157,
 	"./examples/search.js": 777,
 	"./examples/search.md": 869,
+	"./examples/search.spec.png": 1158,
 	"./examples/stack.js": 778,
 	"./examples/stack.md": 870,
-	"./examples/stack.spec.png": 1155,
+	"./examples/stack.spec.png": 1159,
 	"./examples/twoSections.js": 779,
 	"./examples/twoSections.md": 871,
-	"./examples/twoSections.spec.png": 1156
+	"./examples/twoSections.spec.png": 1160
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -54313,106 +54317,130 @@ throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/
 /* 1140 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/offset.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/nested.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1141 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/padding.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/offset.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1142 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/sizing.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/padding.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1143 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/verticalAlign.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/sizing.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1144 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/base.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/api/verticalAlign.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1145 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/composite.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/base.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1146 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/filter.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/composite.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1147 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/profile.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/filter.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1148 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/pagination.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/card/profile.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1149 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/filters.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header/app.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1150 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/nav.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/header/basic.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1151 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/results.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/pagination.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1152 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/cards.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/filters.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1153 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/holyGrail.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/nav.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1154 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/report.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/components/search/results.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1155 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/stack.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/cards.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1156 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/twoSections.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/holyGrail.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ }),
 /* 1157 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/report.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1158 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/search.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1159 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/stack.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1160 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/ubuntu/reflex/storybook/stories/examples/twoSections.spec.png Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
+
+/***/ }),
+/* 1161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(219);
@@ -54422,4 +54450,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.f47a46a2fb0b74745e6d.bundle.js.map
+//# sourceMappingURL=preview.e5f2eeadabddd36ef979.bundle.js.map
