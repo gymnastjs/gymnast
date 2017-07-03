@@ -1684,7 +1684,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 d = t.padding,
                 _ = t.size,
                 g = i(t, ["dev", "align", "children", "className", "justify", "margin", "offset", "padding", "size"]),
-                m = (0, f.default)([].concat(o((0, h.getSpacingClasses)(s)), [c, l && x.default["colOffset-" + l], _ && x.default.col, _ && x.default["col-" + String(_)], this.context.devMode && !0 && S.default["colors" + String(n)], x.default.grid])),
+                m = (0, f.default)([].concat(o((0, h.getSpacingClasses)(s)), [c, l && x.default["colOffset-" + l], _ && x.default.col, _ && x.default["col-" + String(_)], n && this.context.devMode && !0 && S.default["colors" + String(n)], x.default.grid])),
                 b = (0, f.default)([r && x.default[r + "Align"], u && x.default[u + "Justify"]]);return d ? y.default.createElement(e, p({}, g, { className: m.join(" ") }), y.default.createElement(v.default, { direction: d, className: b.join(" ") }, a)) : y.default.createElement(e, p({}, g, { className: [].concat(o(m), o(b)).join(" ") }), a);
           } }]), n;
       }(y.default.Component), t.defaultProps = { margin: [], offset: 0 }, t.contextTypes = { devMode: m.default.bool }, t.displayName = "withGrid(" + (0, h.getDisplayName)(e) + ")", n;
@@ -1795,7 +1795,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 p = t.devMode,
                 d = t.dev,
                 g = i(t, ["className", "fixed", "margin", "overflow", "type", "devMode", "dev"]),
-                m = (0, _.default)([n, l(r), s(u)].concat(o((0, O.getSpacingClasses)(a)), [f(c), (p || this.context.devMode) && !0 && P.default["colors" + String(d)], w.default.layout]));return h.default.createElement(e, y({}, g, { className: m.join(" ") }));
+                m = (0, _.default)([n, l(r), s(u)].concat(o((0, O.getSpacingClasses)(a)), [f(c), d && (p || this.context.devMode) && !0 && P.default["colors" + String(d)], w.default.layout]));return h.default.createElement(e, y({}, g, { className: m.join(" ") }));
           } }]), n;
       }(h.default.Component), t.contextTypes = { devMode: v.default.bool }, t.childContextTypes = { devMode: v.default.bool }, t.displayName = "withLayout(" + (0, O.getDisplayName)(e) + ")", n;
     }Object.defineProperty(t, "__esModule", { value: !0 });var d = n(10),
@@ -39528,7 +39528,7 @@ function Grid(Component) {
             size = _props.size,
             props = _objectWithoutProperties(_props, ['dev', 'align', 'children', 'className', 'justify', 'margin', 'offset', 'padding', 'size']);
 
-        var classes = (0, _compact3.default)([].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin)), [className, offset && _grid2.default['colOffset-' + offset], size && _grid2.default.col, size && _grid2.default['col-' + String(size)], this.context.devMode && "production" !== 'production' && _dev2.default['colors' + String(dev)], _grid2.default.grid]));
+        var classes = (0, _compact3.default)([].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin)), [className, offset && _grid2.default['colOffset-' + offset], size && _grid2.default.col, size && _grid2.default['col-' + String(size)], dev && this.context.devMode && "production" !== 'production' && _dev2.default['colors' + String(dev)], _grid2.default.grid]));
         var offsetClasses = (0, _compact3.default)([align && _grid2.default[align + 'Align'], justify && _grid2.default[justify + 'Justify']]);
 
         if (padding) {
@@ -39686,7 +39686,7 @@ function Layout(Component) {
             dev = _props.dev,
             props = _objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'type', 'devMode', 'dev']);
 
-        var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(type)].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin)), [getOverflow(overflow), (devMode || this.context.devMode) && "production" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
+        var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(type)].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin)), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "production" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
 
         return _react2.default.createElement(Component, _extends({}, props, { className: classes.join(' ') }));
       }
@@ -54876,4 +54876,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.2afdc9a27cd2b138ae63.bundle.js.map
+//# sourceMappingURL=preview.65a0a99ee84655e548da.bundle.js.map
