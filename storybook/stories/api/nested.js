@@ -61,14 +61,6 @@ export default function() {
           </Grid>
         </Grid>
       </Col>
-      <Col><h1>With Offsets</h1></Col>
-      <Col>
-        <Grid {...params} className={styles.colors2}>
-          <Box size={6} margin={margin} offset={3} type="A" />
-          <Box size={4} margin={margin} type="A" />
-          <Box size={4} margin={margin} offset={4} type="A" />
-        </Grid>
-      </Col>
       <Col><h1>With Overflow</h1></Col>
       <Grid>
         <Col size={6}>

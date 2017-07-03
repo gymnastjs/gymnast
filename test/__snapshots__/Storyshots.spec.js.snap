@@ -1271,63 +1271,6 @@ exports[`Storyshots  Api Nested 1`] = `
             className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
           >
             <h1>
-              With Offsets
-            </h1>
-          </div>
-          <div
-            className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
-          >
-            <div
-              className="colors2 grid"
-            >
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-3 col col-6 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    A
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    A
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-4 col col-4 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    A
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
-          >
-            <h1>
               With Overflow
             </h1>
           </div>
@@ -1464,7 +1407,10 @@ exports[`Storyshots  Api Offset 1`] = `
               </div>
             </div>
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-7 col col-1 grid"
+              className="col col-7 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1482,7 +1428,10 @@ exports[`Storyshots  Api Offset 1`] = `
             className="grid"
           >
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-1 col col-1 grid"
+              className="col col-1 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1496,7 +1445,10 @@ exports[`Storyshots  Api Offset 1`] = `
               </div>
             </div>
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-5 col col-1 grid"
+              className="col col-5 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1510,7 +1462,10 @@ exports[`Storyshots  Api Offset 1`] = `
               </div>
             </div>
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-1 col col-1 grid"
+              className="col col-1 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1528,7 +1483,10 @@ exports[`Storyshots  Api Offset 1`] = `
             className="grid"
           >
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-2 col col-1 grid"
+              className="col col-2 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1542,7 +1500,10 @@ exports[`Storyshots  Api Offset 1`] = `
               </div>
             </div>
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-3 col col-1 grid"
+              className="col col-3 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1556,7 +1517,10 @@ exports[`Storyshots  Api Offset 1`] = `
               </div>
             </div>
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-3 col col-1 grid"
+              className="col col-3 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1574,7 +1538,10 @@ exports[`Storyshots  Api Offset 1`] = `
             className="grid"
           >
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-3 col col-1 grid"
+              className="col col-3 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1588,7 +1555,10 @@ exports[`Storyshots  Api Offset 1`] = `
               </div>
             </div>
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-1 col col-1 grid"
+              className="col col-1 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1602,7 +1572,10 @@ exports[`Storyshots  Api Offset 1`] = `
               </div>
             </div>
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-5 col col-1 grid"
+              className="col col-5 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1620,7 +1593,10 @@ exports[`Storyshots  Api Offset 1`] = `
             className="grid"
           >
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colOffset-4 col col-1 grid"
+              className="col col-4 grid"
+            />
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
                 className="box1 grid"
@@ -1636,19 +1612,18 @@ exports[`Storyshots  Api Offset 1`] = `
           </div>
           <div
             className="grid"
+          />
+          <div
+            className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
           >
             <div
-              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
+              className="box3 grid"
+              style={undefined}
             >
               <div
-                className="box3 grid"
-                style={undefined}
+                className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
               >
-                <div
-                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                >
-                  +0
-                </div>
+                +0
               </div>
             </div>
           </div>
@@ -3232,7 +3207,7 @@ exports[`Storyshots  Components Card.Filter 1`] = `
                             Some Tag
                           </div>
                           <div
-                            className="leftHalfSpacing colOffset-2 col col-1 grid rightJustify"
+                            className="leftHalfSpacing col col-auto grid rightJustify"
                           >
                             x
                           </div>
@@ -3255,7 +3230,7 @@ exports[`Storyshots  Components Card.Filter 1`] = `
                             Some Tag
                           </div>
                           <div
-                            className="leftHalfSpacing colOffset-2 col col-1 grid rightJustify"
+                            className="leftHalfSpacing col col-auto grid rightJustify"
                           >
                             x
                           </div>
@@ -3278,7 +3253,7 @@ exports[`Storyshots  Components Card.Filter 1`] = `
                             Some Tag
                           </div>
                           <div
-                            className="leftHalfSpacing colOffset-2 col col-1 grid rightJustify"
+                            className="leftHalfSpacing col col-auto grid rightJustify"
                           >
                             x
                           </div>
@@ -3301,7 +3276,7 @@ exports[`Storyshots  Components Card.Filter 1`] = `
                             Some Tag
                           </div>
                           <div
-                            className="leftHalfSpacing colOffset-2 col col-1 grid rightJustify"
+                            className="leftHalfSpacing col col-auto grid rightJustify"
                           >
                             x
                           </div>
@@ -3324,7 +3299,7 @@ exports[`Storyshots  Components Card.Filter 1`] = `
                             Some Tag
                           </div>
                           <div
-                            className="leftHalfSpacing colOffset-2 col col-1 grid rightJustify"
+                            className="leftHalfSpacing col col-auto grid rightJustify"
                           >
                             x
                           </div>
@@ -3411,14 +3386,14 @@ exports[`Storyshots  Components Card.Profile 1`] = `
                       className="grid topSingleSpacing rightSingleSpacing leftSingleSpacing"
                     >
                       <div
-                        className="rightHalfSpacing bottomSingleSpacing col col-6 grid"
+                        className="rightHalfSpacing bottomSingleSpacing col col-9 grid"
                       >
                         <h2>
                           Title
                         </h2>
                       </div>
                       <div
-                        className="rightHalfSpacing bottomSingleSpacing colOffset-3 col col-3 grid"
+                        className="rightHalfSpacing bottomSingleSpacing col col-3 grid"
                       >
                         Note
                       </div>
@@ -3550,31 +3525,44 @@ exports[`Storyshots  Components Header.App 1`] = `
             </div>
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing colors4 colOffset-1 col col-3 grid"
+            className="col col-1 grid"
+          />
+          <div
+            className="rightHalfSpacing leftHalfSpacing colors4 col col-3 grid rightJustify"
           >
             <input
               placeholder="Search for anything..."
             />
           </div>
           <div
-            className="rightHalfSpacing leftHalfSpacing col col-2 grid centerAlign"
+            className="rightHalfSpacing leftHalfSpacing col col-fit grid centerAlign"
+            style={
+              Object {
+                "flexWrap": "nowrap",
+              }
+            }
           >
             <div
-              className="rightHalfSpacing col col-auto grid"
+              className="rightHalfSpacing col col-fit grid"
             >
               <div
                 className="block"
               />
             </div>
             <div
-              className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+              className="rightHalfSpacing leftHalfSpacing col col-fit grid"
             >
               <div
                 className="block"
               />
             </div>
             <div
-              className="col col-fit grid rightJustify"
+              className="col col-auto grid rightJustify"
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
             >
               Lorem ipsum
             </div>
@@ -3589,360 +3577,179 @@ exports[`Storyshots  Components Header.App 1`] = `
 exports[`Storyshots  Components Header.Basic 1`] = `
 <div>
   <div>
-    <div>
+    <div
+      className="parent layout"
+    >
       <div
-        className="parent layout"
+        className="rightHalfSpacing leftHalfSpacing grid"
       >
         <div
-          className="rightHalfSpacing leftHalfSpacing grid"
+          className="grid rightSingleSpacing leftSingleSpacing"
         >
           <div
-            className="grid rightSingleSpacing leftSingleSpacing"
+            className="grid stretchAlign"
           >
             <div
-              className="grid stretchAlign"
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+                className="box1 grid"
+                style={undefined}
               >
                 <div
-                  className="box1 grid"
-                  style={undefined}
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    Go Back
-                  </div>
+                  Go Back
                 </div>
               </div>
+            </div>
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
+            >
               <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
+                className="box1 grid"
+                style={undefined}
               >
                 <div
-                  className="box1 grid"
-                  style={undefined}
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    <h2>
-                      Page Title
-                    </h2>
-                  </div>
+                  <h2>
+                    Page Title
+                  </h2>
                 </div>
               </div>
+            </div>
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+            >
               <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+                className="box3 grid"
+                style={undefined}
               >
                 <div
-                  className="box3 grid"
-                  style={undefined}
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    Action 1
-                  </div>
+                  Action 1
                 </div>
               </div>
+            </div>
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+            >
               <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+                className="box4 grid"
+                style={undefined}
               >
                 <div
-                  className="box4 grid"
-                  style={undefined}
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    Action 2
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    1
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    2
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    3
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    4
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    5
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    6
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    A
-                  </div>
+                  Action 2
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        className="parent layout"
-      >
-        <div
-          className="rightHalfSpacing leftHalfSpacing grid"
-        >
           <div
-            className="grid rightSingleSpacing leftSingleSpacing"
+            className="col col-6 grid"
+          >
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+            >
+              <div
+                className="box1 grid"
+                style={undefined}
+              >
+                <div
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                >
+                  1
+                </div>
+              </div>
+            </div>
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+            >
+              <div
+                className="box1 grid"
+                style={undefined}
+              >
+                <div
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                >
+                  2
+                </div>
+              </div>
+            </div>
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+            >
+              <div
+                className="box1 grid"
+                style={undefined}
+              >
+                <div
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+            >
+              <div
+                className="box1 grid"
+                style={undefined}
+              >
+                <div
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                >
+                  4
+                </div>
+              </div>
+            </div>
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+            >
+              <div
+                className="box1 grid"
+                style={undefined}
+              >
+                <div
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                >
+                  5
+                </div>
+              </div>
+            </div>
+            <div
+              className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+            >
+              <div
+                className="box1 grid"
+                style={undefined}
+              >
+                <div
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
+                >
+                  6
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col col-6 grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
             >
-              <h1>
-                With Nested Grids
-              </h1>
-            </div>
-            <div
-              className="grid stretchAlign"
-            >
               <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
+                className="box1 grid"
+                style={undefined}
               >
                 <div
-                  className="box1 grid"
-                  style={undefined}
+                  className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
                 >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    Go Back
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    <h2>
-                      Page Title
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
-              >
-                <div
-                  className="box3 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    Action 1
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
-              >
-                <div
-                  className="box4 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    Action 2
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col col-6 grid"
-            >
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    1
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    2
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    3
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    4
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    5
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    6
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col col-6 grid"
-            >
-              <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
-              >
-                <div
-                  className="box1 grid"
-                  style={undefined}
-                >
-                  <div
-                    className="centerAlign centerJustify grid topSingleSpacing bottomSingleSpacing"
-                  >
-                    A
-                  </div>
+                  A
                 </div>
               </div>
             </div>
@@ -5468,31 +5275,44 @@ exports[`Storyshots  Examples Search 1`] = `
               </div>
             </div>
             <div
-              className="rightHalfSpacing leftHalfSpacing colors4 colOffset-1 col col-3 grid"
+              className="col col-1 grid"
+            />
+            <div
+              className="rightHalfSpacing leftHalfSpacing colors4 col col-3 grid rightJustify"
             >
               <input
                 placeholder="Search for anything..."
               />
             </div>
             <div
-              className="rightHalfSpacing leftHalfSpacing col col-2 grid centerAlign"
+              className="rightHalfSpacing leftHalfSpacing col col-fit grid centerAlign"
+              style={
+                Object {
+                  "flexWrap": "nowrap",
+                }
+              }
             >
               <div
-                className="rightHalfSpacing col col-auto grid"
+                className="rightHalfSpacing col col-fit grid"
               >
                 <div
                   className="block"
                 />
               </div>
               <div
-                className="rightHalfSpacing leftHalfSpacing col col-auto grid"
+                className="rightHalfSpacing leftHalfSpacing col col-fit grid"
               >
                 <div
                   className="block"
                 />
               </div>
               <div
-                className="col col-fit grid rightJustify"
+                className="col col-auto grid rightJustify"
+                style={
+                  Object {
+                    "whiteSpace": "nowrap",
+                  }
+                }
               >
                 Lorem ipsum
               </div>
@@ -6152,10 +5972,10 @@ exports[`Storyshots  Examples Two Sections 1`] = `
               className="grid rightSingleSpacing leftSingleSpacing"
             >
               <div
-                className="grid"
+                className="grid centerJustify"
               >
                 <div
-                  className="rightHalfSpacing leftHalfSpacing colOffset-2 col col-6 grid"
+                  className="rightHalfSpacing leftHalfSpacing col col-6 grid"
                 >
                   <input
                     placeholder="Some search here"

@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Col, Layout, Grid, Root } from 'reflex'
+import { Col, Layout, Grid, Root, Offset } from 'reflex'
 import styles from '../../../shared/stories.css'
 
 export default function() {
@@ -49,17 +49,28 @@ export default function() {
             consectetur
           </Col>
         </Col>
-        <Col marginBottom={0} offset={1} size={3} className={styles.colors4}>
+        <Offset size={1} />
+        <Col
+          marginBottom={0}
+          justify="right"
+          size={3}
+          className={styles.colors4}
+        >
           <input placeholder="Search for anything..." />
         </Col>
-        <Col align="center" marginBottom={0} size={2}>
-          <Col size="auto" marginLeft={0} marginBottom={0}>
+        <Col
+          align="center"
+          marginBottom={0}
+          size="fit"
+          style={{ flexWrap: 'nowrap' }}
+        >
+          <Col size="fit" marginLeft={0} marginBottom={0}>
             <div className={styles.block} />
           </Col>
-          <Col size="auto" marginBottom={0}>
+          <Col size="fit" marginBottom={0}>
             <div className={styles.block} />
           </Col>
-          <Grid size="fit" justify="right">
+          <Grid style={{ whiteSpace: 'nowrap' }} size="auto" justify="right">
             Lorem ipsum
           </Grid>
         </Col>
