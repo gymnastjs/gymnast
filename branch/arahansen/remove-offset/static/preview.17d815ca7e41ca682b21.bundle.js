@@ -831,7 +831,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     "function" == typeof Symbol && Symbol.iterator;t.exports = n(84)();
   }, function (t, e, n) {
     "use strict";
-    Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Size", { value: n(0).oneOfType([n(0).oneOf([0]), n(0).oneOf([1]), n(0).oneOf([2]), n(0).oneOf([3]), n(0).oneOf([4]), n(0).oneOf([5]), n(0).oneOf([6]), n(0).oneOf([7]), n(0).oneOf([8]), n(0).oneOf([9]), n(0).oneOf([10]), n(0).oneOf([11]), n(0).oneOf([12]), n(0).oneOf(["fit"]), n(0).oneOf(["auto"]), function (t, e, n) {
+    Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Offset", { value: n(0).oneOfType([n(0).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), function (t, e, n) {
+        if (null != t[e]) return new Error("Invalid prop `" + e + "` of value `" + value + "` passed to `" + n + "`. Expected undefined or null.");
+      }]), configurable: !0 }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Size", { value: n(0).oneOfType([n(0).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), n(0).oneOf(["fit"]), n(0).oneOf(["auto"]), function (t, e, n) {
         if (null != t[e]) return new Error("Invalid prop `" + e + "` of value `" + value + "` passed to `" + n + "`. Expected undefined or null.");
       }]), configurable: !0 }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_Component", { value: n(0).oneOfType([n(0).shape({ displayName: n(0).string, name: n(0).string }), n(0).func]), configurable: !0 }), Object.defineProperty(e, "babelPluginFlowReactPropTypes_proptype_AlignGrid", { value: n(0).oneOfType([n(0).oneOf(["bottom"]), n(0).oneOf(["center"]), n(0).oneOf(["top"]), function (t, e, n) {
         if (null != t[e]) return new Error("Invalid prop `" + e + "` of value `" + value + "` passed to `" + n + "`. Expected undefined or null.");
@@ -1118,11 +1120,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             s = { css: u, media: c, sourceMap: l };r[a] ? r[a].parts.push(s) : n.push(r[a] = { id: a, parts: [s] });
       }return n;
     }function i(t, e) {
-      var n = g(t.insertInto);if (!n) throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var r = m[m.length - 1];if ("top" === t.insertAt) r ? r.nextSibling ? n.insertBefore(e, r.nextSibling) : n.appendChild(e) : n.insertBefore(e, n.firstChild), m.push(e);else {
+      var n = g(t.insertInto);if (!n) throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var r = v[v.length - 1];if ("top" === t.insertAt) r ? r.nextSibling ? n.insertBefore(e, r.nextSibling) : n.appendChild(e) : n.insertBefore(e, n.firstChild), v.push(e);else {
         if ("bottom" !== t.insertAt) throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");n.appendChild(e);
       }
     }function a(t) {
-      if (null === t.parentNode) return !1;t.parentNode.removeChild(t);var e = m.indexOf(t);e >= 0 && m.splice(e, 1);
+      if (null === t.parentNode) return !1;t.parentNode.removeChild(t);var e = v.indexOf(t);e >= 0 && v.splice(e, 1);
     }function u(t) {
       var e = document.createElement("style");return t.attrs.type = "text/css", l(e, t.attrs), i(t, e), e;
     }function c(t) {
@@ -1160,7 +1162,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     }function d(t, e, n) {
       var r = n.css,
           o = n.sourceMap,
-          i = void 0 === e.convertToAbsoluteUrls && o;(e.convertToAbsoluteUrls || i) && (r = v(r)), o && (r += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(o)))) + " */");var a = new Blob([r], { type: "text/css" }),
+          i = void 0 === e.convertToAbsoluteUrls && o;(e.convertToAbsoluteUrls || i) && (r = m(r)), o && (r += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(o)))) + " */");var a = new Blob([r], { type: "text/css" }),
           u = t.href;t.href = URL.createObjectURL(a), u && URL.revokeObjectURL(u);
     }var _ = {},
         y = function (t) {
@@ -1179,8 +1181,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     }),
         b = null,
         h = 0,
-        m = [],
-        v = n(83);t.exports = function (t, e) {
+        v = [],
+        m = n(83);t.exports = function (t, e) {
       if ("undefined" != typeof DEBUG && DEBUG && "object" != (typeof document === "undefined" ? "undefined" : _typeof(document))) throw new Error("The style-loader cannot be used in a non-browser environment");e = e || {}, e.attrs = "object" == _typeof(e.attrs) ? e.attrs : {}, e.singleton || (e.singleton = y()), e.insertInto || (e.insertInto = "head"), e.insertAt || (e.insertAt = "bottom");var n = o(t, e);return r(n, e), function (t) {
         for (var i = [], a = 0; a < n.length; a++) {
           var u = n[a],
@@ -1274,8 +1276,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 s = e.padding,
                 d = e.size,
                 _ = i(e, ["align", "children", "className", "justify", "margin", "padding", "size"]),
-                b = (0, f.default)([].concat(o((0, g.getSpacingClasses)(l)), [a, d && v.default.col, d && v.default["col-" + String(d)], v.default.grid])),
-                m = (0, f.default)([n && v.default[n + "Align"], u && v.default[u + "Justify"]]);return s ? y.default.createElement(t, p({}, _, { className: b.join(" ") }), y.default.createElement(h.default, { direction: s, className: m.join(" ") }, r)) : y.default.createElement(t, p({}, _, { className: [].concat(o(b), o(m)).join(" ") }), r);
+                b = (0, f.default)([].concat(o((0, g.getSpacingClasses)(l)), [a, d && m.default.col, d && m.default["col-" + String(d)], m.default.grid])),
+                v = (0, f.default)([n && m.default[n + "Align"], u && m.default[u + "Justify"]]);return s ? y.default.createElement(t, p({}, _, { className: b.join(" ") }), y.default.createElement(h.default, { direction: s, className: v.join(" ") }, r)) : y.default.createElement(t, p({}, _, { className: [].concat(o(b), o(v)).join(" ") }), r);
           } }]), n;
       }(y.default.PureComponent), e.defaultProps = { margin: [] }, e.displayName = "withGrid(" + (0, g.getDisplayName)(t) + ")", n;
     }Object.defineProperty(e, "__esModule", { value: !0 });var s = n(10),
@@ -1300,8 +1302,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         g = n(11),
         b = n(85),
         h = r(b),
-        m = n(29),
-        v = r(m),
+        v = n(29),
+        m = r(v),
         x = n(1).babelPluginFlowReactPropTypes_proptype_Spacing || n(0).any,
         O = n(1).babelPluginFlowReactPropTypes_proptype_Size || n(0).any,
         w = n(1).babelPluginFlowReactPropTypes_proptype_Justify || n(0).any,
@@ -1373,9 +1375,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 u = e.overflow,
                 c = e.type,
                 p = i(e, ["className", "fixed", "margin", "overflow", "type"]),
-                d = (0, _.default)([n, s(r), l(c)].concat(o((0, m.getSpacingClasses)(a)), [f(u), x.default.layout]));return h.default.createElement(t, y({}, p, { className: d.join(" ") }));
+                d = (0, _.default)([n, s(r), l(c)].concat(o((0, v.getSpacingClasses)(a)), [f(u), x.default.layout]));return h.default.createElement(t, y({}, p, { className: d.join(" ") }));
           } }]), n;
-      }(h.default.PureComponent), e.displayName = "withLayout(" + (0, m.getDisplayName)(t) + ")", n;
+      }(h.default.PureComponent), e.displayName = "withLayout(" + (0, v.getDisplayName)(t) + ")", n;
     }Object.defineProperty(e, "__esModule", { value: !0 });var d = n(10),
         _ = r(d),
         y = Object.assign || function (t) {
@@ -1395,9 +1397,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       };
     }();e.default = p;var b = n(2),
         h = r(b),
-        m = n(11),
-        v = n(88),
-        x = r(v);n(1).babelPluginFlowReactPropTypes_proptype_LayoutType || n(0).any, n(1).babelPluginFlowReactPropTypes_proptype_Spacing || n(0).any, n(1).babelPluginFlowReactPropTypes_proptype_Fixed || n(0).any, n(1).babelPluginFlowReactPropTypes_proptype_Overflow || n(0).any;
+        v = n(11),
+        m = n(88),
+        x = r(m);n(1).babelPluginFlowReactPropTypes_proptype_LayoutType || n(0).any, n(1).babelPluginFlowReactPropTypes_proptype_Spacing || n(0).any, n(1).babelPluginFlowReactPropTypes_proptype_Fixed || n(0).any, n(1).babelPluginFlowReactPropTypes_proptype_Overflow || n(0).any;
   }, function (t, e, n) {
     "use strict";
     function r(t) {
@@ -1449,7 +1451,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   }, function (t, e, n) {
     "use strict";
     function r(t) {
-      return ("" + t).replace(v, "$&/");
+      return ("" + t).replace(m, "$&/");
     }function o(t, e) {
       this.func = t, this.context = e, this.count = 0;
     }function i(t, e, n) {
@@ -1480,12 +1482,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         g = n(9),
         b = n(36),
         h = _.twoArgumentPooler,
-        m = _.fourArgumentPooler,
-        v = /\/+/g;o.prototype.destructor = function () {
+        v = _.fourArgumentPooler,
+        m = /\/+/g;o.prototype.destructor = function () {
       this.func = null, this.context = null, this.count = 0;
     }, _.addPoolingTo(o, h), u.prototype.destructor = function () {
       this.result = null, this.keyPrefix = null, this.func = null, this.context = null, this.count = 0;
-    }, _.addPoolingTo(u, m);var x = { forEach: a, map: s, mapIntoWithKeyPrefixInternal: l, count: p, toArray: d };t.exports = x;
+    }, _.addPoolingTo(u, v);var x = { forEach: a, map: s, mapIntoWithKeyPrefixInternal: l, count: p, toArray: d };t.exports = x;
   }, function (t, e, n) {
     "use strict";
     var r = n(7),
@@ -1528,12 +1530,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           b = "" === e ? f : e + p;if (Array.isArray(t)) for (var h = 0; h < t.length; h++) {
         _ = t[h], y = b + r(_, h), g += o(_, y, n, i);
       } else {
-        var m = l(t);if (m) {
-          var v,
-              x = m.call(t);if (m !== t.entries) for (var O = 0; !(v = x.next()).done;) {
-            _ = v.value, y = b + r(_, O++), g += o(_, y, n, i);
-          } else for (; !(v = x.next()).done;) {
-            var w = v.value;w && (_ = w[1], y = b + s.escape(w[0]) + p + r(_, 0), g += o(_, y, n, i));
+        var v = l(t);if (v) {
+          var m,
+              x = v.call(t);if (v !== t.entries) for (var O = 0; !(m = x.next()).done;) {
+            _ = m.value, y = b + r(_, O++), g += o(_, y, n, i);
+          } else for (; !(m = x.next()).done;) {
+            var w = m.value;w && (_ = w[1], y = b + s.escape(w[0]) + p + r(_, 0), g += o(_, y, n, i));
           }
         } else if ("object" === d) {
           var P = "",
@@ -1658,23 +1660,23 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
           }return null;
         }return f(e);
-      }function m(e) {
+      }function v(e) {
         switch (void 0 === e ? "undefined" : r(e)) {case "number":case "string":case "undefined":
             return !0;case "boolean":
             return !e;case "object":
-            if (Array.isArray(e)) return e.every(m);if (null === e || t(e)) return !0;var o = n(e);if (!o) return !1;var i,
+            if (Array.isArray(e)) return e.every(v);if (null === e || t(e)) return !0;var o = n(e);if (!o) return !1;var i,
                 a = o.call(e);if (o !== e.entries) {
               for (; !(i = a.next()).done;) {
-                if (!m(i.value)) return !1;
+                if (!v(i.value)) return !1;
               }
             } else for (; !(i = a.next()).done;) {
-              var u = i.value;if (u && !m(u[1])) return !1;
+              var u = i.value;if (u && !v(u[1])) return !1;
             }return !0;default:
             return !1;}
-      }function v(t, e) {
+      }function m(t, e) {
         return "symbol" === t || "Symbol" === e["@@toStringTag"] || "function" == typeof Symbol && e instanceof Symbol;
       }function x(t) {
-        var e = void 0 === t ? "undefined" : r(t);return Array.isArray(t) ? "array" : t instanceof RegExp ? "object" : v(e, t) ? "symbol" : e;
+        var e = void 0 === t ? "undefined" : r(t);return Array.isArray(t) ? "array" : t instanceof RegExp ? "object" : m(e, t) ? "symbol" : e;
       }function O(t) {
         if (void 0 === t || null === t) return "" + t;var e = x(t);if ("object" === e) {
           if (t instanceof Date) return "date";if (t instanceof RegExp) return "regexp";
@@ -1699,7 +1701,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           }return f(e);
         }(), instanceOf: _, node: function () {
           function t(t, e, n, r, o) {
-            return m(t[e]) ? null : new s("Invalid " + r + " `" + o + "` supplied to `" + n + "`, expected a ReactNode.");
+            return v(t[e]) ? null : new s("Invalid " + r + " `" + o + "` supplied to `" + n + "`, expected a ReactNode.");
           }return f(t);
         }(), objectOf: g, oneOf: y, oneOfType: b, shape: h };return s.prototype = Error.prototype, T.checkPropTypes = c, T.PropTypes = T, T;
     };
@@ -1723,18 +1725,18 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       return t;
     }function o(t, e, n) {
       function o(t, e) {
-        var n = m.hasOwnProperty(e) ? m[e] : null;w.hasOwnProperty(e) && c("OVERRIDE_BASE" === n, "ReactClassInterface: You are attempting to override `%s` from your class specification. Ensure that your method names do not overlap with React methods.", e), t && c("DEFINE_MANY" === n || "DEFINE_MANY_MERGED" === n, "ReactClassInterface: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.", e);
+        var n = v.hasOwnProperty(e) ? v[e] : null;w.hasOwnProperty(e) && c("OVERRIDE_BASE" === n, "ReactClassInterface: You are attempting to override `%s` from your class specification. Ensure that your method names do not overlap with React methods.", e), t && c("DEFINE_MANY" === n || "DEFINE_MANY_MERGED" === n, "ReactClassInterface: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.", e);
       }function s(t, n) {
         if (n) {
           c("function" != typeof n, "ReactClass: You're attempting to use a component class or function as a mixin. Instead, just use a regular object."), c(!e(n), "ReactClass: You're attempting to use a component as a mixin. Instead, just use a regular object.");var r = t.prototype,
-              i = r.__reactAutoBindPairs;n.hasOwnProperty(l) && v.mixins(t, n.mixins);for (var a in n) {
+              i = r.__reactAutoBindPairs;n.hasOwnProperty(l) && m.mixins(t, n.mixins);for (var a in n) {
             if (n.hasOwnProperty(a) && a !== l) {
               var u = n[a],
-                  s = r.hasOwnProperty(a);if (o(s, a), v.hasOwnProperty(a)) v[a](t, u);else {
-                var f = m.hasOwnProperty(a),
+                  s = r.hasOwnProperty(a);if (o(s, a), m.hasOwnProperty(a)) m[a](t, u);else {
+                var f = v.hasOwnProperty(a),
                     p = "function" == typeof u,
                     y = p && !f && !s && !1 !== n.autobind;if (y) i.push(a, u), r[a] = u;else if (s) {
-                  var g = m[a];c(f && ("DEFINE_MANY_MERGED" === g || "DEFINE_MANY" === g), "ReactClass: Unexpected spec policy %s for key %s when mixing in component specs.", g, a), "DEFINE_MANY_MERGED" === g ? r[a] = d(r[a], u) : "DEFINE_MANY" === g && (r[a] = _(r[a], u));
+                  var g = v[a];c(f && ("DEFINE_MANY_MERGED" === g || "DEFINE_MANY" === g), "ReactClass: Unexpected spec policy %s for key %s when mixing in component specs.", g, a), "DEFINE_MANY_MERGED" === g ? r[a] = d(r[a], u) : "DEFINE_MANY" === g && (r[a] = _(r[a], u));
                 } else r[a] = u;
               }
             }
@@ -1743,7 +1745,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       }function f(t, e) {
         if (e) for (var n in e) {
           var r = e[n];if (e.hasOwnProperty(n)) {
-            var o = n in v;c(!o, 'ReactClass: You are attempting to define a reserved property, `%s`, that shouldn\'t be on the "statics" key. Define it as an instance property instead; it will still be accessible on the constructor.', n);var i = n in t;c(!i, "ReactClass: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.", n), t[n] = r;
+            var o = n in m;c(!o, 'ReactClass: You are attempting to define a reserved property, `%s`, that shouldn\'t be on the "statics" key. Define it as an instance property instead; it will still be accessible on the constructor.', n);var i = n in t;c(!i, "ReactClass: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.", n), t[n] = r;
           }
         }
       }function p(t, e) {
@@ -1769,12 +1771,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       }function b(t) {
         var e = r(function (t, r, o) {
           this.__reactAutoBindPairs.length && g(this), this.props = t, this.context = r, this.refs = u, this.updater = o || n, this.state = null;var a = this.getInitialState ? this.getInitialState() : null;c("object" === (void 0 === a ? "undefined" : i(a)) && !Array.isArray(a), "%s.getInitialState(): must return an object or null", e.displayName || "ReactCompositeComponent"), this.state = a;
-        });e.prototype = new P(), e.prototype.constructor = e, e.prototype.__reactAutoBindPairs = [], h.forEach(s.bind(null, e)), s(e, x), s(e, t), s(e, O), e.getDefaultProps && (e.defaultProps = e.getDefaultProps()), c(e.prototype.render, "createClass(...): Class specification must implement a `render` method.");for (var o in m) {
+        });e.prototype = new P(), e.prototype.constructor = e, e.prototype.__reactAutoBindPairs = [], h.forEach(s.bind(null, e)), s(e, x), s(e, t), s(e, O), e.getDefaultProps && (e.defaultProps = e.getDefaultProps()), c(e.prototype.render, "createClass(...): Class specification must implement a `render` method.");for (var o in v) {
           e.prototype[o] || (e.prototype[o] = null);
         }return e;
       }var h = [],
-          m = { mixins: "DEFINE_MANY", statics: "DEFINE_MANY", propTypes: "DEFINE_MANY", contextTypes: "DEFINE_MANY", childContextTypes: "DEFINE_MANY", getDefaultProps: "DEFINE_MANY_MERGED", getInitialState: "DEFINE_MANY_MERGED", getChildContext: "DEFINE_MANY_MERGED", render: "DEFINE_ONCE", componentWillMount: "DEFINE_MANY", componentDidMount: "DEFINE_MANY", componentWillReceiveProps: "DEFINE_MANY", shouldComponentUpdate: "DEFINE_ONCE", componentWillUpdate: "DEFINE_MANY", componentDidUpdate: "DEFINE_MANY", componentWillUnmount: "DEFINE_MANY", updateComponent: "OVERRIDE_BASE" },
-          v = { displayName: function displayName(t, e) {
+          v = { mixins: "DEFINE_MANY", statics: "DEFINE_MANY", propTypes: "DEFINE_MANY", contextTypes: "DEFINE_MANY", childContextTypes: "DEFINE_MANY", getDefaultProps: "DEFINE_MANY_MERGED", getInitialState: "DEFINE_MANY_MERGED", getChildContext: "DEFINE_MANY_MERGED", render: "DEFINE_ONCE", componentWillMount: "DEFINE_MANY", componentDidMount: "DEFINE_MANY", componentWillReceiveProps: "DEFINE_MANY", shouldComponentUpdate: "DEFINE_ONCE", componentWillUpdate: "DEFINE_MANY", componentDidUpdate: "DEFINE_MANY", componentWillUnmount: "DEFINE_MANY", updateComponent: "OVERRIDE_BASE" },
+          m = { displayName: function displayName(t, e) {
           t.displayName = e;
         }, mixins: function mixins(t, e) {
           if (e) for (var n = 0; n < e.length; n++) {
@@ -2244,9 +2246,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         i = r(o),
         a = n(5),
         u = r(a),
-        c = function c(t) {
+        c = (n(1).babelPluginFlowReactPropTypes_proptype_Offset || n(0).any, function (t) {
       var e = t.size;return i.default.createElement(u.default, { size: e });
-    };c.propTypes = { size: n(0).number.isRequired }, e.default = c;
+    });c.propTypes = { size: "function" == typeof OffsetType ? n(0).instanceOf(OffsetType).isRequired : n(0).any.isRequired }, e.default = c;
   }]);
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58)(module)))
@@ -2770,7 +2772,7 @@ var loremIpsum = exports.loremIpsum = _loremIpsum2.default;
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(45);
+var isObject = __webpack_require__(46);
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
@@ -3617,21 +3619,19 @@ exports.default = new AddonStore();
 
 /***/ }),
 /* 45 */
-/***/ (function(module, exports) {
-
-module.exports = function(it){
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
-};
-
-/***/ }),
-/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Offset', {
+  value: __webpack_require__(1).oneOfType([__webpack_require__(1).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), function (props, propName, componentName) {
+    if (props[propName] != null) return new Error('Invalid prop `' + propName + '` of value `' + value + '` passed to `' + componentName + '`. Expected undefined or null.');
+  }]),
+  configurable: true
+});
 if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Size', {
-  value: __webpack_require__(1).oneOfType([__webpack_require__(1).oneOf([0]), __webpack_require__(1).oneOf([1]), __webpack_require__(1).oneOf([2]), __webpack_require__(1).oneOf([3]), __webpack_require__(1).oneOf([4]), __webpack_require__(1).oneOf([5]), __webpack_require__(1).oneOf([6]), __webpack_require__(1).oneOf([7]), __webpack_require__(1).oneOf([8]), __webpack_require__(1).oneOf([9]), __webpack_require__(1).oneOf([10]), __webpack_require__(1).oneOf([11]), __webpack_require__(1).oneOf([12]), __webpack_require__(1).oneOf(['fit']), __webpack_require__(1).oneOf(['auto']), function (props, propName, componentName) {
+  value: __webpack_require__(1).oneOfType([__webpack_require__(1).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), __webpack_require__(1).oneOf(['fit']), __webpack_require__(1).oneOf(['auto']), function (props, propName, componentName) {
     if (props[propName] != null) return new Error('Invalid prop `' + propName + '` of value `' + value + '` passed to `' + componentName + '`. Expected undefined or null.');
   }]),
   configurable: true
@@ -3677,6 +3677,14 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
   }]),
   configurable: true
 });
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
 
 /***/ }),
 /* 47 */
@@ -7132,7 +7140,7 @@ module.exports = function(it){
 /* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(45)
+var isObject = __webpack_require__(46)
   , document = __webpack_require__(19).document
   // in old IE typeof document.createElement is 'object'
   , is = isObject(document) && isObject(document.createElement);
@@ -7250,7 +7258,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(45);
+var isObject = __webpack_require__(46);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function(it, S){
@@ -15023,9 +15031,9 @@ var _spacing2 = _interopRequireDefault(_spacing);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
 /* eslint-disable no-unused-vars */
 var noop = function noop() {
@@ -15116,7 +15124,7 @@ module.exports = { "default": __webpack_require__(275), __esModule: true };
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(80)('meta')
-  , isObject = __webpack_require__(45)
+  , isObject = __webpack_require__(46)
   , has      = __webpack_require__(39)
   , setDesc  = __webpack_require__(28).f
   , id       = 0;
@@ -17771,7 +17779,7 @@ module.exports = function(target, src, safe){
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(45)
+var isObject = __webpack_require__(46)
   , anObject = __webpack_require__(27);
 var check = function(O, proto){
   anObject(O);
@@ -18030,7 +18038,7 @@ var LIBRARY            = __webpack_require__(77)
   , ctx                = __webpack_require__(47)
   , classof            = __webpack_require__(143)
   , $export            = __webpack_require__(24)
-  , isObject           = __webpack_require__(45)
+  , isObject           = __webpack_require__(46)
   , aFunction          = __webpack_require__(103)
   , anInstance         = __webpack_require__(283)
   , forOf              = __webpack_require__(287)
@@ -39004,13 +39012,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Size = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Size || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Size = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Size || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Justify = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Justify || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Justify = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Justify || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_AlignGrid = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_AlignGrid || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_AlignGrid = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_AlignGrid || __webpack_require__(1).any;
 
 if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Props', {
   value: {
@@ -39124,13 +39132,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_LayoutType = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_LayoutType || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_LayoutType = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_LayoutType || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Fixed = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Fixed || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Fixed = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Fixed || __webpack_require__(1).any;
 
-var babelPluginFlowReactPropTypes_proptype_Overflow = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Overflow || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Overflow = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Overflow || __webpack_require__(1).any;
 
 function getLayout(layout) {
   switch (layout) {
@@ -42744,13 +42752,15 @@ var _grid2 = _interopRequireDefault(_grid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var babelPluginFlowReactPropTypes_proptype_Offset = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Offset || __webpack_require__(1).any;
+
 var Offset = function Offset(_ref) {
   var size = _ref.size;
   return _react2.default.createElement(_grid2.default, { size: size });
 };
 
 Offset.propTypes = {
-  size: __webpack_require__(1).number.isRequired
+  size: typeof OffsetType === 'function' ? __webpack_require__(1).instanceOf(OffsetType).isRequired : __webpack_require__(1).any.isRequired
 };
 exports.default = Offset;
 Offset.__docgenInfo = {
@@ -42758,7 +42768,7 @@ Offset.__docgenInfo = {
   'props': {
     'size': {
       'flowType': {
-        'name': 'number'
+        'name': 'OffsetType'
       },
       'required': true,
       'description': ''
@@ -42984,7 +42994,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
 var Padding = function (_React$PureComponent) {
   _inherits(Padding, _React$PureComponent);
@@ -43184,7 +43194,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
 var typeMap = {
   A: 1,
@@ -43323,7 +43333,7 @@ exports.default = getMarginSelect;
 
 var _addonKnobs = __webpack_require__(31);
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(46).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(45).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(1).any;
 
 var marginMap = {
   Item: [0, 0.5, 1],
@@ -47753,7 +47763,7 @@ $export($export.S + $export.F * !__webpack_require__(32), 'Object', {definePrope
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.5 Object.freeze(O)
-var isObject = __webpack_require__(45)
+var isObject = __webpack_require__(46)
   , meta     = __webpack_require__(227).onFreeze;
 
 __webpack_require__(144)('freeze', function($freeze){
@@ -54426,4 +54436,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.ff6a13291bb2cee11337.bundle.js.map
+//# sourceMappingURL=preview.17d815ca7e41ca682b21.bundle.js.map
