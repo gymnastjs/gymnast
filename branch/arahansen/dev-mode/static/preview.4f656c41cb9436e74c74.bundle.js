@@ -43920,18 +43920,16 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 function RootLayout(_ref) {
   var _ref$type = _ref.type,
       type = _ref$type === undefined ? 'parent' : _ref$type,
-      devMode = _ref.devMode,
-      props = _objectWithoutProperties(_ref, ['type', 'devMode']);
+      props = _objectWithoutProperties(_ref, ['type']);
 
   return _react2.default.createElement(
     _reflex.Layout,
-    { devMode: devMode, type: type },
+    { type: type },
     _react2.default.createElement(_reflex.Root, props)
   );
 }
 RootLayout.propTypes = {
-  type: __webpack_require__(1).string,
-  devMode: __webpack_require__(1).bool
+  type: __webpack_require__(1).string
 };
 
 /***/ }),
@@ -44171,11 +44169,7 @@ var WithExtensions = function (_React$PureComponent) {
           _react2.default.createElement(
             _addonNotes.WithNotes,
             { notes: notes },
-            _react2.default.createElement(
-              _reflex.Layout,
-              null,
-              _react2.default.createElement('div', props)
-            )
+            _react2.default.createElement('div', props)
           )
         );
       }
@@ -54900,4 +54894,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.294bcd844a83332c2588.bundle.js.map
+//# sourceMappingURL=preview.4f656c41cb9436e74c74.bundle.js.map
