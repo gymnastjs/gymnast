@@ -21,8 +21,8 @@ export default function() {
           <Col size={8}>
             <Grid margin={bottom}>
               <Grid className={styles.colors2} padding={xBottom}>
-                <Col marginLeft={0} size={6}><h2>Title</h2></Col>
-                <Col marginLeft={0} size={3} offset={3}>Note</Col>
+                <Col marginLeft={0} size={9}><h2>Title</h2></Col>
+                <Col marginLeft={0} size={3}>Note</Col>
 
                 <Col marginLeft={0} size={2}>Text1</Col>
                 <Col marginLeft={0} size={2}>Text2</Col>
@@ -44,7 +44,6 @@ export default function() {
             </Grid>
           </Col>
         </Grid>
-
       </Grid>
     </RootLayout>
   )

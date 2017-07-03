@@ -21,8 +21,8 @@ export default function() {
       <Layout type="parent" className={styles.main}>
         <Layout className={styles.top}>
           <Root>
-            <Grid>
-              <Grid margin={horizontalHalf} size={6} offset={2}>
+            <Grid justify="center">
+              <Grid margin={horizontalHalf} size={6}>
                 <input type="text" placeholder="Some search here" />
               </Grid>
               <Grid margin={horizontalHalf} size={2}>
@@ -38,7 +38,10 @@ export default function() {
                 <h2>Content</h2>
               </Col>
               <Grid margin={horizontalHalf}>
-                {includeText && <p>{loremIpsum}</p>}
+                {includeText &&
+                  <p>
+                    {loremIpsum}
+                  </p>}
               </Grid>
             </Grid>
           </Root>

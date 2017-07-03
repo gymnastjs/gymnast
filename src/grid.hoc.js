@@ -2,7 +2,7 @@
 import React from 'react'
 import { compact } from 'lodash'
 import { getDisplayName, getSpacingClasses } from './utils'
-import type { AlignGrid, Justify, Offset, Size, Spacing } from './types'
+import type { AlignGrid, Justify, Size, Spacing } from './types'
 import Padding from './padding'
 import styles from './grid.css'
 
@@ -12,7 +12,6 @@ export type Props = {
   className?: string,
   justify?: Justify,
   margin?: Spacing,
-  offset?: Offset,
   padding?: Spacing,
   size?: Size,
 }
@@ -23,7 +22,6 @@ export default function Grid(Component: any) {
 
     static defaultProps = {
       margin: [],
-      offset: 0,
     }
 
     render() {
@@ -33,7 +31,6 @@ export default function Grid(Component: any) {
         className,
         justify,
         margin = this.context.margin,
-        offset,
         padding,
         size,
         ...props
@@ -41,7 +38,6 @@ export default function Grid(Component: any) {
       const classes = compact([
         ...getSpacingClasses(margin),
         className,
-        offset && styles[`colOffset-${offset}`],
         size && styles.col,
         size && styles[`col-${String(size)}`],
         styles.grid,

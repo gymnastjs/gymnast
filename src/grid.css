@@ -57,9 +57,3 @@
     max-width: calc(($i / 12) * 100%);
   }
 }
-
-@for $i from 0 to 11 {
-  .colOffset-$(i) {
-    margin-left: calc($i / 12 * 100%);
-  }
-}
