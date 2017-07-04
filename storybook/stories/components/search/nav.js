@@ -1,11 +1,10 @@
 // @flow
 import React from 'react'
 import { Col, Layout, Grid, Root } from 'reflex'
-import styles from '../../../shared/stories.css'
 
 export default function SearchNav() {
   return (
-    <Layout className={styles.colors2} margin={[1, 0, 0, 0]}>
+    <Layout dev={2} margin={[1, 0, 0, 0]}>
       <Root>
         <Grid>
           <Col size={7}>
@@ -18,7 +17,7 @@ export default function SearchNav() {
                 marginBottom={0}
                 size="auto"
                 style={{ whiteSpace: 'nowrap' }}
-                className={styles.colors1}
+                dev={1}
               >
                 Lorem
               </Col>
@@ -26,7 +25,7 @@ export default function SearchNav() {
                 size="auto"
                 marginLeft={0}
                 marginBottom={0}
-                className={styles.colors4}
+                dev={4}
                 style={{ whiteSpace: 'nowrap' }}
               >
                 ipsum
@@ -36,7 +35,7 @@ export default function SearchNav() {
                 size="auto"
                 marginBottom={0}
                 marginLeft={0}
-                className={styles.colors1}
+                dev={1}
               >
                 dolor
               </Col>
@@ -45,12 +44,12 @@ export default function SearchNav() {
                 style={{ whiteSpace: 'nowrap' }}
                 marginBottom={0}
                 marginLeft={0}
-                className={styles.colors4}
+                dev={4}
               >
                 sit amet
               </Col>
             </Grid>
-            <Grid size="auto" justify="right" className={styles.colors1}>
+            <Grid size="auto" justify="right" dev={1}>
               <Grid size="fit">First View &nbsp;| </Grid>
               <Grid size="fit">&nbsp; Second View</Grid>
             </Grid>

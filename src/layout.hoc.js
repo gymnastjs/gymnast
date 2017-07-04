@@ -1,9 +1,11 @@
 // @flow
 import React from 'react'
+import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { getDisplayName, getSpacingClasses } from './utils'
-import type { Overflow, Fixed, Spacing, LayoutType } from './types'
+import type { Dev, Overflow, Fixed, Spacing, LayoutType } from './types'
 import styles from './layout.css'
+import devStyles from './dev.css'
 
 function getLayout(layout: LayoutType): string {
   switch (layout) {
@@ -37,8 +39,10 @@ function getOverflow(overflow: Overflow): string {
 }
 
 export default function Layout(Component: any) {
-  return class withLayout extends React.PureComponent {
+  return class withLayout extends React.Component {
     props: {
+      dev?: Dev,
+      devMode?: boolean,
       className?: String,
       fixed?: Fixed,
       margin?: Spacing,
@@ -46,14 +50,41 @@ export default function Layout(Component: any) {
       type?: LayoutType,
     }
 
+    static contextTypes = {
+      devMode: PropTypes.bool,
+    }
+
+    static childContextTypes = {
+      devMode: PropTypes.bool,
+    }
+
+    getChildContext() {
+      return {
+        devMode: this.props.devMode || this.context.devMode,
+      }
+    }
+
     render() {
-      const { className, fixed, margin, overflow, type, ...props } = this.props
+      const {
+        className,
+        fixed,
+        margin,
+        overflow,
+        type,
+        devMode,
+        dev,
+        ...props
+      } = this.props
       const classes = compact([
         className,
         getFixed(fixed),
         getLayout(type),
         ...getSpacingClasses(margin),
         getOverflow(overflow),
+        dev &&
+          (devMode || this.context.devMode) &&
+          process.env.NODE_ENV !== 'production' &&
+          devStyles[`colors${String(dev)}`],
         styles.layout,
       ])
 

@@ -19,7 +19,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -33,7 +33,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -47,7 +47,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -61,7 +61,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -75,7 +75,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box3 grid"
+                className="colors3 grid"
                 style={
                   Object {
                     "height": 100,
@@ -93,7 +93,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -107,7 +107,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -121,7 +121,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -135,7 +135,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -149,7 +149,7 @@ exports[`Storyshots  Api Autoflow 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -196,7 +196,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -214,7 +214,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -228,7 +228,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -246,7 +246,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -260,7 +260,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -274,7 +274,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -292,7 +292,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -306,7 +306,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -320,7 +320,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -334,7 +334,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -352,7 +352,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -366,7 +366,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -380,7 +380,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -394,7 +394,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -408,7 +408,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -426,7 +426,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -440,7 +440,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -454,7 +454,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -468,7 +468,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -482,7 +482,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -496,7 +496,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -514,7 +514,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -528,7 +528,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -542,7 +542,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -556,7 +556,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -570,7 +570,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -584,7 +584,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -598,7 +598,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -616,7 +616,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -630,7 +630,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -644,7 +644,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -658,7 +658,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -672,7 +672,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -686,7 +686,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -700,7 +700,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -714,7 +714,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -739,7 +739,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-8 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -753,7 +753,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -778,7 +778,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -792,7 +792,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -806,7 +806,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -834,7 +834,7 @@ exports[`Storyshots  Api Fraction 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -871,7 +871,7 @@ exports[`Storyshots  Api Horizontal Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box3 grid"
+                className="colors3 grid"
                 style={undefined}
               >
                 <div
@@ -889,7 +889,7 @@ exports[`Storyshots  Api Horizontal Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -907,7 +907,7 @@ exports[`Storyshots  Api Horizontal Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -925,7 +925,7 @@ exports[`Storyshots  Api Horizontal Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -943,7 +943,7 @@ exports[`Storyshots  Api Horizontal Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -980,7 +980,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -994,7 +994,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1008,7 +1008,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1022,7 +1022,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1036,7 +1036,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1050,7 +1050,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1064,7 +1064,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1078,7 +1078,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1092,7 +1092,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
             >
               <div
-                className="box3 grid"
+                className="colors3 grid"
                 style={undefined}
               >
                 <div
@@ -1106,7 +1106,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1120,7 +1120,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1134,7 +1134,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1148,7 +1148,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1162,7 +1162,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1176,7 +1176,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1190,7 +1190,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1204,7 +1204,7 @@ exports[`Storyshots  Api Margin 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1248,7 +1248,7 @@ exports[`Storyshots  Api Nested 1`] = `
               className="colors2 grid"
             >
               <div
-                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors1 col col-6 grid"
+                className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 colors1 grid"
                 style={
                   Object {
                     "height": 150,
@@ -1256,10 +1256,10 @@ exports[`Storyshots  Api Nested 1`] = `
                 }
               >
                 <div
-                  className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors3 col col-6 grid"
+                  className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 colors3 grid"
                 >
                   <div
-                    className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors4 col col-6 grid centerAlign"
+                    className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 colors4 grid centerAlign"
                   >
                     A
                   </div>
@@ -1287,7 +1287,7 @@ exports[`Storyshots  Api Nested 1`] = `
                   className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
                 >
                   <div
-                    className="box1 grid"
+                    className="colors1 grid"
                     style={undefined}
                   >
                     <div
@@ -1301,7 +1301,7 @@ exports[`Storyshots  Api Nested 1`] = `
                   className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
                 >
                   <div
-                    className="box1 grid"
+                    className="colors1 grid"
                     style={undefined}
                   >
                     <div
@@ -1315,7 +1315,7 @@ exports[`Storyshots  Api Nested 1`] = `
                   className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
                 >
                   <div
-                    className="box1 grid"
+                    className="colors1 grid"
                     style={undefined}
                   >
                     <div
@@ -1329,7 +1329,7 @@ exports[`Storyshots  Api Nested 1`] = `
                   className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
                 >
                   <div
-                    className="box1 grid"
+                    className="colors1 grid"
                     style={undefined}
                   >
                     <div
@@ -1343,7 +1343,7 @@ exports[`Storyshots  Api Nested 1`] = `
                   className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
                 >
                   <div
-                    className="box1 grid"
+                    className="colors1 grid"
                     style={undefined}
                   >
                     <div
@@ -1357,7 +1357,7 @@ exports[`Storyshots  Api Nested 1`] = `
                   className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
                 >
                   <div
-                    className="box1 grid"
+                    className="colors1 grid"
                     style={undefined}
                   >
                     <div
@@ -1396,7 +1396,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1413,7 +1413,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1434,7 +1434,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1451,7 +1451,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1468,7 +1468,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1489,7 +1489,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1506,7 +1506,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1523,7 +1523,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1544,7 +1544,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1561,7 +1561,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1578,7 +1578,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1599,7 +1599,7 @@ exports[`Storyshots  Api Offset 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1617,7 +1617,7 @@ exports[`Storyshots  Api Offset 1`] = `
             className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
           >
             <div
-              className="box3 grid"
+              className="colors3 grid"
               style={undefined}
             >
               <div
@@ -1657,7 +1657,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </h1>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors3 grid"
@@ -1688,7 +1688,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </h1>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="grid topSingleSpacing rightSingleSpacing"
@@ -1705,7 +1705,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </div>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors3 grid"
@@ -1740,7 +1740,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </h1>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="grid topSingleSpacing rightHalfSpacing bottomSingleSpacing leftHalfSpacing"
@@ -1757,7 +1757,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </div>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors3 grid"
@@ -1792,7 +1792,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </h1>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="grid bottomSingleSpacing"
@@ -1809,7 +1809,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </div>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors3 grid"
@@ -1844,7 +1844,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </h1>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="grid topSingleSpacing rightSingleSpacing leftSingleSpacing"
@@ -1861,7 +1861,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </div>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors3 grid"
@@ -1903,7 +1903,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </h2>
             </div>
             <div
-              className="colors2 col col-6 grid"
+              className="col col-6 colors2 grid"
               style={
                 Object {
                   "height": 300,
@@ -1930,7 +1930,7 @@ exports[`Storyshots  Api Padding 1`] = `
               </div>
             </div>
             <div
-              className="colors2 col col-6 grid centerAlign centerJustify"
+              className="col col-6 colors2 grid centerAlign centerJustify"
               style={
                 Object {
                   "height": 300,
@@ -1983,7 +1983,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -1997,7 +1997,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2011,7 +2011,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2025,7 +2025,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2039,7 +2039,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2053,7 +2053,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2067,7 +2067,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2081,7 +2081,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2095,7 +2095,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2109,7 +2109,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2123,7 +2123,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2137,7 +2137,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2155,7 +2155,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2169,7 +2169,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2183,7 +2183,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2197,7 +2197,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2211,7 +2211,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2225,7 +2225,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2243,7 +2243,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2257,7 +2257,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2271,7 +2271,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2285,7 +2285,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2303,7 +2303,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2317,7 +2317,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2331,7 +2331,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2349,7 +2349,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2363,7 +2363,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2381,7 +2381,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2399,7 +2399,7 @@ exports[`Storyshots  Api Sizing 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-12 grid"
             >
               <div
-                className="box3 grid"
+                className="colors3 grid"
                 style={undefined}
               >
                 <div
@@ -2443,7 +2443,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={
                   Object {
                     "height": 300,
@@ -2461,7 +2461,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid topAlign"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2475,7 +2475,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid centerAlign"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2489,7 +2489,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid bottomAlign"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2503,7 +2503,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-auto grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -2536,7 +2536,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
               >
                 <div
-                  className="box3 grid"
+                  className="colors3 grid"
                   style={undefined}
                 >
                   <div
@@ -2559,7 +2559,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
               >
                 <div
-                  className="box3 grid"
+                  className="colors3 grid"
                   style={undefined}
                 >
                   <div
@@ -2582,7 +2582,7 @@ exports[`Storyshots  Api Vertical Align 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
               >
                 <div
-                  className="box3 grid"
+                  className="colors3 grid"
                   style={undefined}
                 >
                   <div
@@ -2644,10 +2644,10 @@ exports[`Storyshots  Components Card.Base 1`] = `
               className="rightHalfSpacing leftHalfSpacing col col-3 grid"
             >
               <div
-                className="colors2 grid"
+                className="grid"
               >
                 <div
-                  className="grid"
+                  className="colors2 grid"
                 >
                   Full Bleed
                 </div>
@@ -2664,7 +2664,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
             >
               <div
-                className="colors2 col col-8 grid"
+                className="col col-8 colors2 grid"
               >
                 <div
                   className="grid topSingleSpacing rightHalfSpacing leftHalfSpacing"
@@ -2677,7 +2677,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
                 </div>
               </div>
               <div
-                className="colors4 col col-4 grid"
+                className="col col-4 colors4 grid"
               >
                 <div
                   className="grid"
@@ -2690,7 +2690,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
             >
               <div
-                className="colors4 col col-4 grid"
+                className="col col-4 colors4 grid"
               >
                 <div
                   className="grid"
@@ -2699,7 +2699,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
                 </div>
               </div>
               <div
-                className="colors2 col col-4 grid"
+                className="col col-4 colors2 grid"
               >
                 <div
                   className="grid topSingleSpacing rightHalfSpacing leftHalfSpacing"
@@ -2712,7 +2712,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
                 </div>
               </div>
               <div
-                className="colors4 col col-4 grid"
+                className="col col-4 colors4 grid"
               >
                 <div
                   className="grid"
@@ -2725,7 +2725,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
             >
               <div
-                className="colors4 col col-4 grid"
+                className="col col-4 colors4 grid"
               >
                 <div
                   className="grid"
@@ -2734,7 +2734,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
                 </div>
               </div>
               <div
-                className="colors2 col col-8 grid"
+                className="col col-8 colors2 grid"
               >
                 <div
                   className="grid topSingleSpacing rightHalfSpacing leftHalfSpacing"
@@ -2840,7 +2840,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2854,7 +2854,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2868,7 +2868,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2882,7 +2882,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2896,7 +2896,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2910,7 +2910,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2935,7 +2935,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2949,7 +2949,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2963,7 +2963,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                         className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
                       >
                         <div
-                          className="box4 grid"
+                          className="colors4 grid"
                           style={undefined}
                         >
                           <div
@@ -2977,7 +2977,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                   </div>
                 </div>
                 <div
-                  className="colors4 col col-5 grid"
+                  className="col col-5 colors4 grid"
                 >
                   <div
                     className="topAlign grid topSingleSpacing rightSingleSpacing bottomSingleSpacing leftSingleSpacing"
@@ -3487,7 +3487,7 @@ exports[`Storyshots  Components Header.App 1`] = `
 <div>
   <div>
     <div
-      className="colors1 fixedTop auto layout"
+      className="fixedTop auto colors1 layout"
     >
       <div
         className="rightHalfSpacing leftHalfSpacing grid"
@@ -3499,27 +3499,27 @@ exports[`Storyshots  Components Header.App 1`] = `
             className="rightHalfSpacing leftHalfSpacing col col-auto grid centerAlign"
           >
             <div
-              className="rightHalfSpacing colors2 col col-auto grid"
+              className="rightHalfSpacing col col-auto colors2 grid"
             >
               Lorem
             </div>
             <div
-              className="rightHalfSpacing colors4 col col-auto grid"
+              className="rightHalfSpacing col col-auto colors4 grid"
             >
               ipsum
             </div>
             <div
-              className="rightHalfSpacing colors2 col col-auto grid"
+              className="rightHalfSpacing col col-auto colors2 grid"
             >
               dolor
             </div>
             <div
-              className="rightHalfSpacing colors4 col col-auto grid"
+              className="rightHalfSpacing col col-auto colors4 grid"
             >
               sit amet
             </div>
             <div
-              className="rightHalfSpacing colors2 col col-auto grid"
+              className="rightHalfSpacing col col-auto colors2 grid"
             >
               consectetur
             </div>
@@ -3528,7 +3528,7 @@ exports[`Storyshots  Components Header.App 1`] = `
             className="col col-1 grid"
           />
           <div
-            className="rightHalfSpacing leftHalfSpacing colors4 col col-3 grid rightJustify"
+            className="rightHalfSpacing leftHalfSpacing col col-3 colors4 grid rightJustify"
           >
             <input
               placeholder="Search for anything..."
@@ -3593,7 +3593,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3607,7 +3607,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3623,7 +3623,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box3 grid"
+                className="colors3 grid"
                 style={undefined}
               >
                 <div
@@ -3637,7 +3637,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box4 grid"
+                className="colors4 grid"
                 style={undefined}
               >
                 <div
@@ -3655,7 +3655,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3669,7 +3669,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3683,7 +3683,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3697,7 +3697,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3711,7 +3711,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3725,7 +3725,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3743,7 +3743,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3780,7 +3780,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3794,7 +3794,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3808,7 +3808,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3822,7 +3822,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3836,7 +3836,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3850,7 +3850,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3864,7 +3864,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3878,7 +3878,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3892,7 +3892,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3906,7 +3906,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box1 grid"
+                className="colors1 grid"
                 style={undefined}
               >
                 <div
@@ -3920,7 +3920,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -3934,7 +3934,7 @@ exports[`Storyshots  Components Pagination 1`] = `
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-1 grid"
             >
               <div
-                className="box2 grid"
+                className="colors2 grid"
                 style={undefined}
               >
                 <div
@@ -4028,7 +4028,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
 <div>
   <div>
     <div
-      className="colors2 auto topSingleSpacing layout"
+      className="auto topSingleSpacing colors2 layout"
     >
       <div
         className="rightHalfSpacing leftHalfSpacing grid"
@@ -4053,7 +4053,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
                 className="col col-5 grid"
               >
                 <div
-                  className="rightHalfSpacing colors1 col col-auto grid"
+                  className="rightHalfSpacing col col-auto colors1 grid"
                   style={
                     Object {
                       "whiteSpace": "nowrap",
@@ -4063,7 +4063,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
                   Lorem
                 </div>
                 <div
-                  className="rightHalfSpacing colors4 col col-auto grid"
+                  className="rightHalfSpacing col col-auto colors4 grid"
                   style={
                     Object {
                       "whiteSpace": "nowrap",
@@ -4073,7 +4073,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
                   ipsum
                 </div>
                 <div
-                  className="rightHalfSpacing colors1 col col-auto grid"
+                  className="rightHalfSpacing col col-auto colors1 grid"
                   style={
                     Object {
                       "whiteSpace": "nowrap",
@@ -4083,7 +4083,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
                   dolor
                 </div>
                 <div
-                  className="rightHalfSpacing colors4 col col-auto grid"
+                  className="rightHalfSpacing col col-auto colors4 grid"
                   style={
                     Object {
                       "whiteSpace": "nowrap",
@@ -4094,7 +4094,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
                 </div>
               </div>
               <div
-                className="colors1 col col-auto grid rightJustify"
+                className="col col-auto colors1 grid rightJustify"
               >
                 <div
                   className="col col-fit grid"
@@ -4139,7 +4139,7 @@ exports[`Storyshots  Components Search.Results 1`] = `
           className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid centerAlign rightJustify"
         >
           <div
-            className="colors4 col col-2 grid"
+            className="col col-2 colors4 grid"
           >
             <div
               className="grid centerJustify"
@@ -4157,7 +4157,7 @@ exports[`Storyshots  Components Search.Results 1`] = `
             </div>
           </div>
           <div
-            className="colors4 col col-2 grid"
+            className="col col-2 colors4 grid"
           >
             <div
               className="grid centerJustify"
@@ -4284,7 +4284,7 @@ exports[`Storyshots  Examples Cards 1`] = `
         className="fixedTop auto layout"
       >
         <div
-          className="header auto layout"
+          className="auto colors1 layout"
         >
           <div
             className="rightHalfSpacing leftHalfSpacing grid"
@@ -4315,7 +4315,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
               >
                 <div
-                  className="box4 grid"
+                  className="colors4 grid"
                   style={undefined}
                 >
                   <div
@@ -4329,7 +4329,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
               >
                 <div
-                  className="box4 grid"
+                  className="colors4 grid"
                   style={undefined}
                 >
                   <div
@@ -4343,7 +4343,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
               >
                 <div
-                  className="box4 grid"
+                  className="colors4 grid"
                   style={undefined}
                 >
                   <div
@@ -4357,7 +4357,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
               >
                 <div
-                  className="box4 grid"
+                  className="colors4 grid"
                   style={undefined}
                 >
                   <div
@@ -4371,7 +4371,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
               >
                 <div
-                  className="box4 grid"
+                  className="colors4 grid"
                   style={undefined}
                 >
                   <div
@@ -4385,7 +4385,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
               >
                 <div
-                  className="box4 grid"
+                  className="colors4 grid"
                   style={undefined}
                 >
                   <div
@@ -4421,7 +4421,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-10 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={
                         Object {
                           "height": 200,
@@ -4439,7 +4439,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={undefined}
                     >
                       <div
@@ -4453,7 +4453,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={
                         Object {
                           "height": 150,
@@ -4471,7 +4471,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={undefined}
                     >
                       <div
@@ -4485,7 +4485,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={undefined}
                     >
                       <div
@@ -4499,7 +4499,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={
                         Object {
                           "height": 200,
@@ -4517,7 +4517,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={
                         Object {
                           "height": 200,
@@ -4535,7 +4535,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={
                         Object {
                           "height": 200,
@@ -4553,7 +4553,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={
                         Object {
                           "height": 200,
@@ -4571,7 +4571,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={
                         Object {
                           "height": 200,
@@ -4589,7 +4589,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
                   >
                     <div
-                      className="box2 grid"
+                      className="colors2 grid"
                       style={
                         Object {
                           "height": 200,
@@ -4609,7 +4609,7 @@ exports[`Storyshots  Examples Cards 1`] = `
           </div>
         </div>
         <div
-          className="footer auto layout"
+          className="auto colors1 layout"
         >
           <div
             className="rightHalfSpacing leftHalfSpacing grid"
@@ -4640,7 +4640,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
       className="page parent layout"
     >
       <div
-        className="header fixedTop auto layout"
+        className="fixedTop auto colors1 layout"
       >
         <div
           className="rightHalfSpacing leftHalfSpacing grid"
@@ -4671,7 +4671,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
               className="rightHalfSpacing leftHalfSpacing grid"
             >
               <div
-                className="rightSingleSpacing leftSingleSpacing nav col col-2 grid"
+                className="rightSingleSpacing leftSingleSpacing col col-2 colors4 grid"
               >
                 <div
                   className="grid topSingleSpacing"
@@ -4704,7 +4704,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
                 </div>
               </div>
               <div
-                className="rightSingleSpacing leftSingleSpacing ads col col-2 grid"
+                className="rightSingleSpacing leftSingleSpacing col col-2 colors3 grid"
               >
                 <div
                   className="grid topSingleSpacing"
@@ -4723,7 +4723,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
         </div>
       </div>
       <div
-        className="footer auto layout"
+        className="auto colors1 layout"
       >
         <div
           className="rightHalfSpacing leftHalfSpacing grid"
@@ -5206,7 +5206,7 @@ exports[`Storyshots  Examples Report 1`] = `
           </div>
         </div>
         <div
-          className="footer auto layout"
+          className="auto colors1 layout"
         >
           <div
             className="rightHalfSpacing leftHalfSpacing grid"
@@ -5237,7 +5237,7 @@ exports[`Storyshots  Examples Search 1`] = `
       className="page parent layout"
     >
       <div
-        className="colors1 fixedTop auto layout"
+        className="fixedTop auto colors1 layout"
       >
         <div
           className="rightHalfSpacing leftHalfSpacing grid"
@@ -5249,27 +5249,27 @@ exports[`Storyshots  Examples Search 1`] = `
               className="rightHalfSpacing leftHalfSpacing col col-auto grid centerAlign"
             >
               <div
-                className="rightHalfSpacing colors2 col col-auto grid"
+                className="rightHalfSpacing col col-auto colors2 grid"
               >
                 Lorem
               </div>
               <div
-                className="rightHalfSpacing colors4 col col-auto grid"
+                className="rightHalfSpacing col col-auto colors4 grid"
               >
                 ipsum
               </div>
               <div
-                className="rightHalfSpacing colors2 col col-auto grid"
+                className="rightHalfSpacing col col-auto colors2 grid"
               >
                 dolor
               </div>
               <div
-                className="rightHalfSpacing colors4 col col-auto grid"
+                className="rightHalfSpacing col col-auto colors4 grid"
               >
                 sit amet
               </div>
               <div
-                className="rightHalfSpacing colors2 col col-auto grid"
+                className="rightHalfSpacing col col-auto colors2 grid"
               >
                 consectetur
               </div>
@@ -5278,7 +5278,7 @@ exports[`Storyshots  Examples Search 1`] = `
               className="col col-1 grid"
             />
             <div
-              className="rightHalfSpacing leftHalfSpacing colors4 col col-3 grid rightJustify"
+              className="rightHalfSpacing leftHalfSpacing col col-3 colors4 grid rightJustify"
             >
               <input
                 placeholder="Search for anything..."
@@ -5329,7 +5329,7 @@ exports[`Storyshots  Examples Search 1`] = `
         }
       >
         <div
-          className="colors2 auto topSingleSpacing layout"
+          className="auto topSingleSpacing colors2 layout"
         >
           <div
             className="rightHalfSpacing leftHalfSpacing grid"
@@ -5354,7 +5354,7 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="col col-5 grid"
                   >
                     <div
-                      className="rightHalfSpacing colors1 col col-auto grid"
+                      className="rightHalfSpacing col col-auto colors1 grid"
                       style={
                         Object {
                           "whiteSpace": "nowrap",
@@ -5364,7 +5364,7 @@ exports[`Storyshots  Examples Search 1`] = `
                       Lorem
                     </div>
                     <div
-                      className="rightHalfSpacing colors4 col col-auto grid"
+                      className="rightHalfSpacing col col-auto colors4 grid"
                       style={
                         Object {
                           "whiteSpace": "nowrap",
@@ -5374,7 +5374,7 @@ exports[`Storyshots  Examples Search 1`] = `
                       ipsum
                     </div>
                     <div
-                      className="rightHalfSpacing colors1 col col-auto grid"
+                      className="rightHalfSpacing col col-auto colors1 grid"
                       style={
                         Object {
                           "whiteSpace": "nowrap",
@@ -5384,7 +5384,7 @@ exports[`Storyshots  Examples Search 1`] = `
                       dolor
                     </div>
                     <div
-                      className="rightHalfSpacing colors4 col col-auto grid"
+                      className="rightHalfSpacing col col-auto colors4 grid"
                       style={
                         Object {
                           "whiteSpace": "nowrap",
@@ -5395,7 +5395,7 @@ exports[`Storyshots  Examples Search 1`] = `
                     </div>
                   </div>
                   <div
-                    className="colors1 col col-auto grid rightJustify"
+                    className="col col-auto colors1 grid rightJustify"
                   >
                     <div
                       className="col col-fit grid"
@@ -5414,7 +5414,7 @@ exports[`Storyshots  Examples Search 1`] = `
           </div>
         </div>
         <div
-          className="ads parent layout"
+          className="parent colors3 layout"
         >
           <div
             className="rightHalfSpacing leftHalfSpacing grid"
@@ -5426,7 +5426,7 @@ exports[`Storyshots  Examples Search 1`] = `
                 className="topSingleSpacing grid"
               >
                 <div
-                  className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing colors4 col col-3 grid topAlign"
+                  className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 colors4 grid topAlign"
                 >
                   <div
                     className="rightHalfSpacing bottomSingleSpacing grid"
@@ -5491,7 +5491,7 @@ exports[`Storyshots  Examples Search 1`] = `
                   </div>
                 </div>
                 <div
-                  className="colors2 col col-9 grid topAlign"
+                  className="col col-9 colors2 grid topAlign"
                 >
                   <div
                     className="grid"
@@ -5510,7 +5510,7 @@ exports[`Storyshots  Examples Search 1`] = `
                       className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-3 grid centerAlign rightJustify"
                     >
                       <div
-                        className="colors4 col col-2 grid"
+                        className="col col-2 colors4 grid"
                       >
                         <div
                           className="grid centerJustify"
@@ -5528,7 +5528,7 @@ exports[`Storyshots  Examples Search 1`] = `
                         </div>
                       </div>
                       <div
-                        className="colors4 col col-2 grid"
+                        className="col col-2 colors4 grid"
                       >
                         <div
                           className="grid centerJustify"
@@ -5826,7 +5826,7 @@ exports[`Storyshots  Examples Search 1`] = `
         </div>
       </div>
       <div
-        className="footer auto layout"
+        className="auto colors1 layout"
       >
         <div
           className="rightHalfSpacing leftHalfSpacing grid"
@@ -5941,7 +5941,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
       className="page parent layout"
     >
       <div
-        className="header fixedTop auto layout"
+        className="fixedTop auto colors1 layout"
       >
         <div
           className="rightHalfSpacing leftHalfSpacing grid"
@@ -6025,7 +6025,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
         </div>
       </div>
       <div
-        className="footer auto layout"
+        className="auto colors1 layout"
       >
         <div
           className="rightHalfSpacing leftHalfSpacing grid"

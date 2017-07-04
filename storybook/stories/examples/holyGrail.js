@@ -11,7 +11,7 @@ export default function() {
 
   return (
     <Layout type="parent" className={styles.page}>
-      <Layout className={styles.header} fixed="top">
+      <Layout dev={1} fixed="top">
         <Root>
           <Grid margin={horizontalHalf}>
             <h1>Header</h1>
@@ -21,12 +21,7 @@ export default function() {
       <Layout type="stretch" className={styles.main}>
         <Root>
           <Grid margin={horizontalHalf}>
-            <Grid
-              size={2}
-              className={styles.nav}
-              padding={top}
-              margin={horizontal}
-            >
+            <Grid size={2} dev={4} padding={top} margin={horizontal}>
               <Grid>
                 <h2>Nav</h2>
               </Grid>
@@ -42,15 +37,13 @@ export default function() {
                 <h2>Content</h2>
               </Grid>
               <Grid>
-                {includeText && <p>{loremIpsum}</p>}
+                {includeText &&
+                  <p>
+                    {loremIpsum}
+                  </p>}
               </Grid>
             </Grid>
-            <Grid
-              size={2}
-              className={styles.ads}
-              padding={top}
-              margin={horizontal}
-            >
+            <Grid size={2} dev={3} padding={top} margin={horizontal}>
               <Grid>
                 <h2>Ads</h2>
               </Grid>
@@ -58,7 +51,7 @@ export default function() {
           </Grid>
         </Root>
       </Layout>
-      <Layout className={styles.footer}>
+      <Layout dev={1}>
         <Root>
           <Grid margin={horizontalHalf}>
             <h1>Footer</h1>

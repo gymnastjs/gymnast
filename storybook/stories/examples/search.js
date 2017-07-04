@@ -21,7 +21,7 @@ export default function() {
         style={{ marginTop: 40 }}
       >
         <SearchNav />
-        <Layout type="parent" className={styles.ads}>
+        <Layout type="parent" dev={3}>
           <Root>
             <Grid margin={[1, 0, 0, 0]}>
               <SearchFilters size={3} />
@@ -30,7 +30,7 @@ export default function() {
           </Root>
         </Layout>
       </Layout>
-      <Layout className={styles.footer}>
+      <Layout dev={1}>
         <Root>
           <Col marginTop={1} justify="center">
             &copy;ACME Corp. 2017

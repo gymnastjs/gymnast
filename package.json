@@ -90,7 +90,7 @@
     ]
   },
   "scripts": {
-    "build": "webpack --config scripts/webpack.config.js -p",
+    "build": "yarn webpack -- -p",
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:gen": "all-contributors generate",
@@ -103,10 +103,11 @@
     "precommit": "lint-staged",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "start:storybook": "start-storybook -p 9001 -s ./storybook/static -c storybook/config",
-    "start:webpack": "yarn build -- --watch",
+    "start:webpack": "yarn webpack -- --watch",
     "start": "npm-run-all --parallel start:*",
     "test:image": "babel-node node_modules/.bin/nightwatch --config test/screenshot/nightwatch.conf.js",
-    "test": "jest"
+    "test": "jest",
+    "webpack": "webpack --config scripts/webpack.config.js"
   },
   "release": {
     "verifyConditions": "condition-circle",

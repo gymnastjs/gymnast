@@ -4,7 +4,8 @@
   position: absolute;
   top: 0;
 
-  & h2, & p {
+  & h2,
+  & p {
     margin: 0;
   }
 
@@ -24,29 +25,10 @@
 
   /* end of hard coded offsets */
 
-  & .header, & .footer {
-    color: var(--axonGold);
-    background-color: var(--axonBlack);
-  }
-
-  & .nav {
-    color: var(--nomuraGray);
-    background-color: var(--bolt);
-  }
-
-  & .subheader, & .content {
+  & .subheader,
+  & .content {
     color: var(--bolt);
     background-color: var(--nomuraGray);
-  }
-
-  & .card {
-    color: var(--axonBlack);
-    background-color: white;
-  }
-
-  & .ads {
-    color: var(--axonBlack);
-    background-color: var(--axonGold);
   }
 
   & .top {

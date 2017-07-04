@@ -39,12 +39,13 @@ export default function() {
   return (
     <RootLayout>
       <Grid>
-        <Col><h1>Filter List</h1></Col>
-
+        <Col>
+          <h1>Filter List</h1>
+        </Col>
         <Grid align="stretch" justify="center">
           <Col size={6}>
             <Grid margin={bottom}>
-              <Grid className={styles.colors1} padding={xBottom}>
+              <Grid dev={1} padding={xBottom}>
                 <Grid margin={[0, 0.5, 1, 0]} size={9}>
                   <h2>Title</h2>
                 </Grid>
@@ -52,21 +53,15 @@ export default function() {
                   X
                 </Grid>
               </Grid>
-              <Grid
-                className={styles.colors4}
-                padding={top}
-                margin={horizontalHalf}
-              >
+              <Grid dev={4} padding={top} margin={horizontalHalf}>
                 <Grid margin={horizontalHalf} padding={bottomHalf}>
                   Filter by...
                 </Grid>
-                <Col size={6}><input type="text" /></Col>
+                <Col size={6}>
+                  <input type="text" />
+                </Col>
               </Grid>
-              <Grid
-                className={styles.colors2}
-                padding={top}
-                margin={horizontal}
-              >
+              <Grid dev={2} padding={top} margin={horizontal}>
                 <ListItem index={0} />
                 <ListItem index={1} />
                 <ListItem index={2} />
