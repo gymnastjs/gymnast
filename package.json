@@ -6,6 +6,7 @@
   "main": "dist/reflex.js",
   "browser": "dist/reflex.js",
   "homepage": "https://obartra.github.io/reflex",
+  "files": ["package.json", "README.md", "LICENSE", "src", "dist"],
   "repository": {
     "type": "git",
     "url": "https://github.com/obartra/reflex"
@@ -75,19 +76,14 @@
     "webpack-bundle-analyzer": "2.8.2"
   },
   "lint-staged": {
-    "*.{js,css}": [
-      "format",
-      "git add"
-    ]
+    "*.{js,css}": ["format", "git add"]
   },
   "jest": {
     "moduleNameMapper": {
       "^.+[.]css$": "identity-obj-proxy",
       "^.+[.](md|txt)$": "<rootDir>/test/stringStub.js"
     },
-    "testMatch": [
-      "**/?(*.)spec.js"
-    ]
+    "testMatch": ["**/?(*.)spec.js"]
   },
   "scripts": {
     "build": "yarn webpack -- -p",
