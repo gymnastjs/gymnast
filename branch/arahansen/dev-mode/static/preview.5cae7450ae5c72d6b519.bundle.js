@@ -46267,7 +46267,7 @@ exports.default = function () {
           ),
           _react2.default.createElement(
             _reflex.Grid,
-            { size: 2, dev: 2, padding: _marginTypes.top, margin: _marginTypes.horizontal },
+            { size: 2, dev: 3, padding: _marginTypes.top, margin: _marginTypes.horizontal },
             _react2.default.createElement(
               _reflex.Grid,
               null,
@@ -54892,4 +54892,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.baa26f7c00e627815bce.bundle.js.map
+//# sourceMappingURL=preview.5cae7450ae5c72d6b519.bundle.js.map
