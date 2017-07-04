@@ -11,7 +11,7 @@ export default function() {
 
   return (
     <Layout type="parent" className={styles.page}>
-      <Layout className={styles.header} fixed="top">
+      <Layout dev={1} fixed="top">
         <Root>
           <Grid margin={horizontalHalf}>
             <h1>Header</h1>
@@ -47,7 +47,7 @@ export default function() {
           </Root>
         </Layout>
       </Layout>
-      <Layout className={styles.footer}>
+      <Layout dev={1}>
         <Root>
           <Grid margin={horizontalHalf}>
             <h1>Footer</h1>

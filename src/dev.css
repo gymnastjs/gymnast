@@ -1,0 +1,21 @@
+@import "./variables";
+
+.colors1 {
+  color: var(--axonGold);
+  background-color: var(--axonBlack);
+}
+
+.colors2 {
+  color: var(--bolt);
+  background-color: var(--nomuraGray);
+}
+
+.colors3 {
+  color: var(--axonBlack);
+  background-color: var(--axonGold);
+}
+
+.colors4 {
+  color: var(--nomuraGray);
+  background-color: var(--bolt);
+}

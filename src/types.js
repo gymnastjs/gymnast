@@ -12,6 +12,8 @@ export type Component =
     }
   | Function
 
+export type Dev = 1 | 2 | 3 | 4 | void
+
 export type AlignGrid = 'bottom' | 'center' | 'top' | void
 
 export type Justify = 'left' | 'center' | 'right' | void

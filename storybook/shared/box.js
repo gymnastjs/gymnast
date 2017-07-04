@@ -1,7 +1,6 @@
 // @flow
 import React from 'react'
 import { Grid } from 'reflex'
-import styles from './stories.css'
 import type { Spacing } from '../../src/types'
 
 const typeMap = {
@@ -33,7 +32,7 @@ export default class Box extends React.PureComponent {
     return (
       <Grid margin={margin} {...props}>
         <Grid
-          className={styles[`box${typeMap[type]}`]}
+          dev={typeMap[type]}
           padding={[1, 0]}
           align="center"
           justify="center"

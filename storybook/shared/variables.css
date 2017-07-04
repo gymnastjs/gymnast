@@ -1,12 +1,5 @@
 @import "../../src/variables.css";
 
-:root {
-  --axonBlack: #1D1F21;
-  --axonGold: #FFD700;
-  --bolt: #1469CC;
-  --nomuraGray: #efefef;
-}
-
 @font-face {
   font-family: 'Geometria';
   src: url('https://obartra.github.io/reflex/fonts/Geometria-Light.ttf')

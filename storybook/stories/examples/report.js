@@ -145,7 +145,7 @@ export default function() {
             </Grid>
           </Root>
         </Layout>
-        <Layout className={styles.footer}>
+        <Layout dev={1}>
           <Root>
             <Grid margin={horizontalHalf}>
               <h1>Footer</h1>

@@ -1,15 +1,19 @@
 // @flow
 import React from 'react'
+import PropTypes from 'prop-types'
 import { WithNotes } from '@storybook/addon-notes'
 import { boolean } from '@storybook/addon-knobs'
 import style from './designGrid.css'
 
-let showOverlay = false
-
 export default class WithExtensions extends React.PureComponent {
-  static defaultProps = {
-    notes: '',
-    className: '',
+  static childContextTypes = {
+    devMode: PropTypes.bool,
+  }
+
+  getChildContext() {
+    return {
+      devMode: boolean('Dev Mode', true),
+    }
   }
 
   getDesignGrid = () =>
@@ -24,9 +28,8 @@ export default class WithExtensions extends React.PureComponent {
 
   render() {
     const { notes, className, ...props } = this.props
-
     // defaults to last used value, when changed it updates it. This allows us to persist the 'show overlay' setting across examples
-    showOverlay = boolean('Overlay', showOverlay)
+    const showOverlay = boolean('Overlay', false)
 
     const designGrid = showOverlay && this.getDesignGrid()
 

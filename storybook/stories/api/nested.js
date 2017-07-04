@@ -3,7 +3,6 @@ import React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
 import { Grid, Col } from 'reflex'
-import styles from '../../shared/stories.css'
 import {
   Box,
   RootLayout,
@@ -33,38 +32,26 @@ export default function() {
 
   return (
     <RootLayout>
-      <Col><h1>Nested Example</h1></Col>
       <Col>
-        <Grid {...params} className={styles.colors2}>
-          <Grid
-            size={6}
-            {...params}
-            margin={margin}
-            className={styles.colors1}
-            style={height}
-          >
-            <Grid
-              size={6}
-              {...params}
-              margin={margin}
-              className={styles.colors3}
-            >
-              <Grid
-                size={6}
-                margin={margin}
-                className={styles.colors4}
-                align="center"
-              >
+        <h1>Nested Example</h1>
+      </Col>
+      <Col>
+        <Grid {...params} dev={2}>
+          <Grid size={6} {...params} margin={margin} dev={1} style={height}>
+            <Grid size={6} {...params} margin={margin} dev={3}>
+              <Grid size={6} margin={margin} dev={4} align="center">
                 A
               </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Col>
-      <Col><h1>With Overflow</h1></Col>
+      <Col>
+        <h1>With Overflow</h1>
+      </Col>
       <Grid>
         <Col size={6}>
-          <Grid {...params} className={styles.colors2}>
+          <Grid {...params} dev={2}>
             {times(items, index =>
               <Box size={2} margin={margin} key={index} type="A">
                 {`${index * 2 % 12 + 2}`}

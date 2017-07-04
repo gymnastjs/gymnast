@@ -1,6 +1,7 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
+const { DefinePlugin } = require('webpack')
 
 const isProd = process.env.NODE_ENV === 'production'
 const root = resolve(__dirname, '../dist')
@@ -27,6 +28,11 @@ module.exports = {
       reportFilename: 'stats.html',
       logLevel: 'error',
       openAnalyzer: false,
+    }),
+    new DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+      },
     }),
   ],
   externals: isProd

@@ -1,12 +1,15 @@
 // @flow
 import React from 'react'
+import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { getDisplayName, getSpacingClasses } from './utils'
-import type { AlignGrid, Justify, Size, Spacing } from './types'
+import type { Dev, AlignGrid, Justify, Size, Spacing } from './types'
 import Padding from './padding'
 import styles from './grid.css'
+import devStyles from './dev.css'
 
 export type Props = {
+  dev?: Dev,
   align?: AlignGrid,
   children?: Element | Array<Element>,
   className?: string,
@@ -17,29 +20,39 @@ export type Props = {
 }
 
 export default function Grid(Component: any) {
-  return class withGrid extends React.PureComponent {
+  return class withGrid extends React.Component {
     props: Props
 
     static defaultProps = {
       margin: [],
     }
 
+    static contextTypes = {
+      devMode: PropTypes.bool,
+    }
+
     render() {
       const {
+        dev,
         align,
         children,
         className,
         justify,
-        margin = this.context.margin,
+        margin,
         padding,
         size,
         ...props
       } = this.props
+
       const classes = compact([
         ...getSpacingClasses(margin),
         className,
         size && styles.col,
         size && styles[`col-${String(size)}`],
+        dev &&
+          this.context.devMode &&
+          process.env.NODE_ENV !== 'production' &&
+          devStyles[`colors${String(dev)}`],
         styles.grid,
       ])
       const offsetClasses = compact([

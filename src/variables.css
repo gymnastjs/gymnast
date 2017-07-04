@@ -1,4 +1,8 @@
 :root {
+  --axonBlack: #1d1f21;
+  --axonGold: #ffd700;
+  --bolt: #1469cc;
+  --nomuraGray: #efefef;
   --base: 8px;
   --gutter: calc(var(--base) * 3); /* 24px */
   --vertical-gutter: var(--gutter); /* 24px */
