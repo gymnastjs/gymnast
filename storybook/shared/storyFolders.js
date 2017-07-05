@@ -1,10 +1,11 @@
 // @flow
 
-import { fromPairs, initial, tail, set } from 'lodash'
+import { fromPairs, flow, initial, tail, set } from 'lodash'
 import { readdirSync, lstatSync } from 'fs'
 import { join } from 'path'
 import { getName } from './getName'
 
+const dropEnds = flow(tail, initial)
 const isTest =
   process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'test:image'
 
@@ -30,10 +31,6 @@ function getFilesAndFolders(
 
 function getImagePath(filepath) {
   return filepath.replace(/\.js$/, '.spec.png')
-}
-
-function dropEnds(array) {
-  return tail(initial(array))
 }
 
 function getNote(files, filepath, loader) {
