@@ -40285,10 +40285,10 @@ function SearchResults(_ref) {
         )
       )
     ),
-    new Array(results).fill(0).map(function () {
+    (0, _times3.default)(results, function (key) {
       return _react2.default.createElement(
         _reflex.Grid,
-        null,
+        { key: key },
         _react2.default.createElement(
           _reflex.Col,
           { size: 5 },
@@ -40351,7 +40351,7 @@ function SearchResults(_ref) {
         (0, _times3.default)(pages, function (num) {
           return _react2.default.createElement(
             _reflex.Col,
-            { marginBottom: 0, size: 'auto' },
+            { marginBottom: 0, size: 'auto', key: num },
             num + 1
           );
         }),
@@ -55810,4 +55810,4 @@ module.exports = __webpack_require__(685);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.808361ef347eabb272ff.bundle.js.map
+//# sourceMappingURL=preview.b8bc6bc396ca83e0479d.bundle.js.map
