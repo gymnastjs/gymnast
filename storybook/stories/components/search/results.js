@@ -32,8 +32,8 @@ export default function SearchResults({
           </Grid>
         </Col>
       </Grid>
-      {new Array(results).fill(0).map(() =>
-        <Grid>
+      {times(results, key =>
+        <Grid key={key}>
           <Col size={5}>
             <Grid margin={[0, 0, 0.5, 0]} dev={1}>
               Orci tempus venenatis
@@ -68,7 +68,7 @@ export default function SearchResults({
         </Col>
         <Col marginBottom={0} size={4} align="center">
           {times(pages, num =>
-            <Col marginBottom={0} size="auto">
+            <Col marginBottom={0} size="auto" key={num}>
               {num + 1}
             </Col>
           )}
