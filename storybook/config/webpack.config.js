@@ -4,6 +4,11 @@ module.exports = {
   node: {
     fs: 'empty',
   },
+  resolve: {
+    alias: {
+      PropTypes: 'prop-types',
+    },
+  },
   module: {
     rules: [
       {

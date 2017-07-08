@@ -1,3 +1,8 @@
+/* eslint-disable global-require, no-underscore-dangle */
+
+import { configure, setAddon } from '@storybook/react'
+import JSXAddon from 'storybook-addon-jsx'
+
 if (
   typeof window === 'object' &&
   window.navigator &&
@@ -14,10 +19,6 @@ if (
     })
   )
 }
-
-/* eslint-disable global-require, no-underscore-dangle */
-import { configure, setAddon } from '@storybook/react'
-import JSXAddon from 'storybook-addon-jsx'
 
 setAddon(JSXAddon)
 

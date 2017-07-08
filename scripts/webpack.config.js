@@ -1,3 +1,4 @@
+const { optimize } = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
@@ -33,6 +34,10 @@ module.exports = {
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       },
+    }),
+    new optimize.UglifyJsPlugin({
+      minimize: true,
+      sourceMap: true,
     }),
   ],
   externals: isProd
