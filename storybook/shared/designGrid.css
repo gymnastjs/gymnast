@@ -1,4 +1,4 @@
-@import "../../src/variables";
+@import "../../src/variables.css";
 @import "./variables.css";
 
 :root {
@@ -31,7 +31,8 @@
   );
   background-size: calc(var(--colWidth) + var(--gutter)) 1px;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     position: absolute;
     content: '';
     top: 0;
@@ -53,11 +54,14 @@
 @media (max-width: 1224px) {
   .contentArea {
     width: var(--smallPageWidth);
-    background-image: linear-gradient(
+    min-width: 400px;
+    background-image: repeating-linear-gradient(
       90deg,
+      transparent,
       transparent var(--col),
-      color(var(--bolt) alpha(0.1)) var(--gutter)
+      color(var(--axonGold) alpha(0.1)) calc(var(--col) + 1px),
+      color(var(--axonGold) alpha(0.1)) calc(var(--col) + var(--gutter) + 2px)
     );
-    background-size: calc(var(--col) + var(--gutter)) 1px;
+    background-size: calc(var(--col) + var(--gutter) + 2px) 1px;
   }
 }
