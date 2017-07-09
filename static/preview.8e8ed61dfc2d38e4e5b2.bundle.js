@@ -48300,7 +48300,7 @@ exports = module.exports = __webpack_require__(97)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.designGrid__designGrid___3FH-Q{position:fixed;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none}.designGrid__contentArea___1gnX6{position:relative;margin:0 auto;height:100%;pointer-events:none;max-width:1128px;background-color:transparent;background-image:linear-gradient(90deg,transparent 72px,rgba(20,105,204,.1) 0);background-size:96px 1px}.designGrid__contentArea___1gnX6:after,.designGrid__contentArea___1gnX6:before{position:absolute;content:\"\";top:0;bottom:0;width:48px;height:100%;background-color:rgba(255,215,0,.15)}.designGrid__contentArea___1gnX6:before{left:-48px}.designGrid__contentArea___1gnX6:after{right:-48px}@media (max-width:1224px){.designGrid__contentArea___1gnX6{width:calc(100vw - 48px * 2);background-image:linear-gradient(90deg,transparent calc((100vw - 48px * 2) / 12 - 24px),rgba(20,105,204,.1) 24px);background-size:calc(((100vw - 48px * 2) / 12 - 24px) + 24px) 1px}}", ""]);
+exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.designGrid__designGrid___3FH-Q{position:fixed;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none}.designGrid__contentArea___1gnX6{position:relative;margin:0 auto;height:100%;pointer-events:none;max-width:1128px;background-color:transparent;background-image:linear-gradient(90deg,transparent 72px,rgba(20,105,204,.1) 0);background-size:96px 1px}.designGrid__contentArea___1gnX6:after,.designGrid__contentArea___1gnX6:before{position:absolute;content:\"\";top:0;bottom:0;width:48px;height:100%;background-color:rgba(255,215,0,.15)}.designGrid__contentArea___1gnX6:before{left:-48px}.designGrid__contentArea___1gnX6:after{right:-48px}@media (max-width:1224px){.designGrid__contentArea___1gnX6{width:calc(100vw - 48px * 2);min-width:400px;background-image:repeating-linear-gradient(90deg,transparent,transparent calc((100vw - 48px * 2) / 12 - 24px),rgba(255,215,0,.1) calc(((100vw - 48px * 2) / 12 - 24px) + 1px),rgba(255,215,0,.1) calc(((100vw - 48px * 2) / 12 - 24px) + 24px + 2px));background-size:calc(((100vw - 48px * 2) / 12 - 24px) + 24px + 2px) 1px}}", ""]);
 
 // exports
 exports.locals = {
@@ -54862,4 +54862,4 @@ module.exports = __webpack_require__(675);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.54e9d6b7c66898413dc2.bundle.js.map
+//# sourceMappingURL=preview.8e8ed61dfc2d38e4e5b2.bundle.js.map
