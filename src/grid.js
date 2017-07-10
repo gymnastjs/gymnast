@@ -11,7 +11,7 @@ import devStyles from './dev.css'
 export type Props = {
   dev?: Dev,
   align?: AlignGrid,
-  children?: Element | Array<Element>,
+  children?: React$Element<any> | Array<React$Element<any>>,
   className?: string,
   justify?: Justify,
   margin?: Spacing,
@@ -19,7 +19,7 @@ export type Props = {
   size?: Size,
 }
 
-export default class withGrid extends React.Component {
+export default class Grid extends React.Component {
   static defaultProps = {
     margin: [],
   }

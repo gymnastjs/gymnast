@@ -38,7 +38,7 @@ function getOverflow(overflow: Overflow): string {
   }
 }
 
-export default class withLayout extends React.Component {
+export default class Layout extends React.Component {
   static contextTypes = {
     devMode: PropTypes.bool,
   }
