@@ -1,12 +1,15 @@
 // @flow
+/* eslint-disable global-require, import/no-dynamic-require */
 
-import { fromPairs, initial, tail, set } from 'lodash'
+import { fromPairs, initial, tail, set, negate } from 'lodash'
 import { readdirSync, lstatSync } from 'fs'
 import { join } from 'path'
 import { getName } from './getName'
 
 const isTest =
   process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'test:image'
+const baseUrl =
+  'https://github.com/obartra/reflex/tree/master/storybook/stories/'
 
 type storyObj = {
   story: Function,
@@ -39,41 +42,51 @@ function dropEnds(array) {
 function getNote(files, filepath, loader) {
   const mdFile = filepath.replace(/\.js$/, '.md')
   const hasMd = files.indexOf(mdFile) !== -1
+  const url = filepath.replace('./', baseUrl)
+  const note = hasMd ? loader(mdFile).default || loader(mdFile) : ''
+  const footer = hasMd ? require('./footer.md') : ''
 
-  return hasMd ? loader(mdFile).default || loader(mdFile) : ''
+  return `${note}${footer.replace('[[url]]', url)}`
+}
+
+function endsWith(str) {
+  return filepath => filepath.toLowerCase().endsWith(str)
+}
+
+const doesntEndWith = str => negate(endsWith(str))
+
+function fileTestMapper(origin) {
+  return (filepath: string) => {
+    const name = getName(filepath)
+
+    return [
+      name,
+      {
+        story: process.env.NODE_ENV === 'test' && require(filepath).default,
+        notes: '',
+        filepath,
+        image: getImagePath(filepath),
+        namepath: origin ? `${origin}.${name}` : name,
+      },
+    ]
+  }
 }
 
 /**
- * Reads the `/components`, `/grid` and `/layout` subfolder files and adds them to their respective
- * stories
+ * Recursively walks `storybook/stories` folder and adds matching files as stories
  *
  * There are 2 separate strategies for loading these stories since tests don't know about
  * `require.context` (it's webpack specific).
  *
- * `require.context` need` to be statically analyzable (so dependencies are correctly bundled) which
- * makes this API less clean
  */
 function loadTestFolder(path: string, origin: string = ''): storyObj {
   const { files, folders } = getFilesAndFolders(path)
 
   const directChildren: storyObj = fromPairs(
     files
-      .filter(filepath => filepath.endsWith('.js'))
-      .map((filepath: string) => {
-        const name = getName(filepath)
-        return [
-          name,
-          {
-            /* eslint-disable global-require, import/no-dynamic-require */
-            story: process.env.NODE_ENV === 'test' && require(filepath).default,
-            /* eslint-enable global-require, import/no-dynamic-require */
-            notes: '',
-            filepath,
-            image: getImagePath(filepath),
-            namepath: origin ? `${origin}.${name}` : name,
-          },
-        ]
-      })
+      .filter(endsWith('.js'))
+      .filter(doesntEndWith('.spec.js'))
+      .map(fileTestMapper(origin))
   )
 
   return folders.reduce(
@@ -96,19 +109,22 @@ function loadTest(): storyTree {
 function loadWebpack(loader: Function): storyTree {
   const files = loader.keys()
 
-  return files.filter(file => file.endsWith('.js')).reduce((acc, filepath) => {
-    const path = dropEnds(filepath.split('/')).map(getName).join('.')
-    const namepath = `${path}.${getName(filepath)}`
+  return files
+    .filter(endsWith('.js'))
+    .filter(doesntEndWith('.spec.js'))
+    .reduce((acc, filepath) => {
+      const path = dropEnds(filepath.split('/')).map(getName).join('.')
+      const namepath = `${path}.${getName(filepath)}`
 
-    set(acc, namepath, {
-      story: loader(filepath).default || loader(filepath),
-      notes: getNote(files, filepath, loader),
-      image: getImagePath(filepath),
-      filepath,
-      namepath: tail(namepath.split('.')).join('.'),
-    })
-    return acc
-  }, {})
+      set(acc, namepath, {
+        story: loader(filepath).default || loader(filepath),
+        notes: getNote(files, filepath, loader),
+        image: getImagePath(filepath),
+        filepath,
+        namepath: tail(namepath.split('.')).join('.'),
+      })
+      return acc
+    }, {})
 }
 
 export const storyFolders = !isTest
