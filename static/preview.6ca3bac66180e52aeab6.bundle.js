@@ -49746,7 +49746,7 @@ function getNote(files, filepath, loader) {
   var hasMd = files.indexOf(mdFile) !== -1;
   var url = filepath.replace('./', baseUrl);
   var note = hasMd ? loader(mdFile).default || loader(mdFile) : '';
-  var footer = hasMd ? __webpack_require__(856) : '';
+  var footer = __webpack_require__(856) || '';
 
   return '' + note + footer.replace('[[url]]', url);
 }
@@ -60697,4 +60697,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.f55d3d00e1ffdd32ef9b.bundle.js.map
+//# sourceMappingURL=preview.6ca3bac66180e52aeab6.bundle.js.map
