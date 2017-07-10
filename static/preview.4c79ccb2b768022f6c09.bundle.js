@@ -1032,7 +1032,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         P = n(1).babelPluginFlowReactPropTypes_proptype_Size || n(0).any,
         E = n(1).babelPluginFlowReactPropTypes_proptype_Justify || n(0).any,
         j = n(1).babelPluginFlowReactPropTypes_proptype_AlignGrid || n(0).any,
-        R = n(1).babelPluginFlowReactPropTypes_proptype_Dev || n(0).any;Object.defineProperty(t, "babelPluginFlowReactPropTypes_proptype_Props", { value: { dev: "function" == typeof R ? R : n(0).shape(R), align: "function" == typeof j ? j : n(0).shape(j), children: n(0).oneOfType(["function" == typeof Element ? n(0).instanceOf(Element) : n(0).any, n(0).arrayOf("function" == typeof Element ? n(0).instanceOf(Element) : n(0).any)]), className: n(0).string, justify: "function" == typeof E ? E : n(0).shape(E), margin: "function" == typeof O ? O : n(0).shape(O), padding: "function" == typeof O ? O : n(0).shape(O), size: "function" == typeof P ? P : n(0).shape(P) }, configurable: !0 });var T = function (e) {
+        R = n(1).babelPluginFlowReactPropTypes_proptype_Dev || n(0).any;Object.defineProperty(t, "babelPluginFlowReactPropTypes_proptype_Props", { value: { dev: "function" == typeof R ? R : n(0).shape(R), align: "function" == typeof j ? j : n(0).shape(j), children: n(0).oneOfType(["function" == typeof React$Element ? n(0).instanceOf(React$Element) : n(0).any, n(0).arrayOf("function" == typeof React$Element ? n(0).instanceOf(React$Element) : n(0).any)]), className: n(0).string, justify: "function" == typeof E ? E : n(0).shape(E), margin: "function" == typeof O ? O : n(0).shape(O), padding: "function" == typeof O ? O : n(0).shape(O), size: "function" == typeof P ? P : n(0).shape(P) }, configurable: !0 });var T = function (e) {
       function t() {
         return a(this, t), u(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
       }return c(t, e), p(t, [{ key: "render", value: function value() {
@@ -1049,7 +1049,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               _ = (0, l.default)([].concat(o((0, g.getSpacingClasses)(c)), [a, p && x.default.col, p && x.default["col-" + String(p)], t && this.context.devMode && !0 && S.default["colors" + String(t)], x.default.grid])),
               m = (0, l.default)([n && x.default[n + "Align"], u && x.default[u + "Justify"]]);return s ? y.default.createElement("div", f({}, d, { className: _.join(" ") }), y.default.createElement(v.default, { direction: s, className: m.join(" ") }, r)) : y.default.createElement("div", f({}, d, { className: [].concat(o(_), o(m)).join(" ") }), r);
         } }]), t;
-    }(y.default.Component);T.defaultProps = { margin: [] }, T.contextTypes = { devMode: m.default.bool }, T.propTypes = { dev: "function" == typeof R ? R : n(0).shape(R), align: "function" == typeof j ? j : n(0).shape(j), children: n(0).oneOfType(["function" == typeof Element ? n(0).instanceOf(Element) : n(0).any, n(0).arrayOf("function" == typeof Element ? n(0).instanceOf(Element) : n(0).any)]), className: n(0).string, justify: "function" == typeof E ? E : n(0).shape(E), margin: "function" == typeof O ? O : n(0).shape(O), padding: "function" == typeof O ? O : n(0).shape(O), size: "function" == typeof P ? P : n(0).shape(P) }, t.default = T;
+    }(y.default.Component);T.defaultProps = { margin: [] }, T.contextTypes = { devMode: m.default.bool }, T.propTypes = { dev: "function" == typeof R ? R : n(0).shape(R), align: "function" == typeof j ? j : n(0).shape(j), children: n(0).oneOfType(["function" == typeof React$Element ? n(0).instanceOf(React$Element) : n(0).any, n(0).arrayOf("function" == typeof React$Element ? n(0).instanceOf(React$Element) : n(0).any)]), className: n(0).string, justify: "function" == typeof E ? E : n(0).shape(E), margin: "function" == typeof O ? O : n(0).shape(O), padding: "function" == typeof O ? O : n(0).shape(O), size: "function" == typeof P ? P : n(0).shape(P) }, t.default = T;
   }, function (e, t, n) {
     "use strict";
     function r(e) {
@@ -15435,7 +15435,7 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
   value: {
     dev: typeof babelPluginFlowReactPropTypes_proptype_Dev === 'function' ? babelPluginFlowReactPropTypes_proptype_Dev : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Dev),
     align: typeof babelPluginFlowReactPropTypes_proptype_AlignGrid === 'function' ? babelPluginFlowReactPropTypes_proptype_AlignGrid : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_AlignGrid),
-    children: __webpack_require__(0).oneOfType([typeof Element === 'function' ? __webpack_require__(0).instanceOf(Element) : __webpack_require__(0).any, __webpack_require__(0).arrayOf(typeof Element === 'function' ? __webpack_require__(0).instanceOf(Element) : __webpack_require__(0).any)]),
+    children: __webpack_require__(0).oneOfType([typeof React$Element === 'function' ? __webpack_require__(0).instanceOf(React$Element) : __webpack_require__(0).any, __webpack_require__(0).arrayOf(typeof React$Element === 'function' ? __webpack_require__(0).instanceOf(React$Element) : __webpack_require__(0).any)]),
     className: __webpack_require__(0).string,
     justify: typeof babelPluginFlowReactPropTypes_proptype_Justify === 'function' ? babelPluginFlowReactPropTypes_proptype_Justify : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Justify),
     margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
@@ -15445,16 +15445,16 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
   configurable: true
 });
 
-var withGrid = function (_React$Component) {
-  _inherits(withGrid, _React$Component);
+var Grid = function (_React$Component) {
+  _inherits(Grid, _React$Component);
 
-  function withGrid() {
-    _classCallCheck(this, withGrid);
+  function Grid() {
+    _classCallCheck(this, Grid);
 
-    return _possibleConstructorReturn(this, (withGrid.__proto__ || Object.getPrototypeOf(withGrid)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Grid.__proto__ || Object.getPrototypeOf(Grid)).apply(this, arguments));
   }
 
-  _createClass(withGrid, [{
+  _createClass(Grid, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -15491,27 +15491,27 @@ var withGrid = function (_React$Component) {
     }
   }]);
 
-  return withGrid;
+  return Grid;
 }(_react2.default.Component);
 
-withGrid.defaultProps = {
+Grid.defaultProps = {
   margin: []
 };
-withGrid.contextTypes = {
+Grid.contextTypes = {
   devMode: _propTypes2.default.bool
 };
-withGrid.propTypes = {
+Grid.propTypes = {
   dev: typeof babelPluginFlowReactPropTypes_proptype_Dev === 'function' ? babelPluginFlowReactPropTypes_proptype_Dev : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Dev),
   align: typeof babelPluginFlowReactPropTypes_proptype_AlignGrid === 'function' ? babelPluginFlowReactPropTypes_proptype_AlignGrid : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_AlignGrid),
-  children: __webpack_require__(0).oneOfType([typeof Element === 'function' ? __webpack_require__(0).instanceOf(Element) : __webpack_require__(0).any, __webpack_require__(0).arrayOf(typeof Element === 'function' ? __webpack_require__(0).instanceOf(Element) : __webpack_require__(0).any)]),
+  children: __webpack_require__(0).oneOfType([typeof React$Element === 'function' ? __webpack_require__(0).instanceOf(React$Element) : __webpack_require__(0).any, __webpack_require__(0).arrayOf(typeof React$Element === 'function' ? __webpack_require__(0).instanceOf(React$Element) : __webpack_require__(0).any)]),
   className: __webpack_require__(0).string,
   justify: typeof babelPluginFlowReactPropTypes_proptype_Justify === 'function' ? babelPluginFlowReactPropTypes_proptype_Justify : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Justify),
   margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
   padding: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
   size: typeof babelPluginFlowReactPropTypes_proptype_Size === 'function' ? babelPluginFlowReactPropTypes_proptype_Size : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Size)
 };
-exports.default = withGrid;
-withGrid.__docgenInfo = {
+exports.default = Grid;
+Grid.__docgenInfo = {
   'description': '',
   'props': {
     'dev': {
@@ -15531,15 +15531,23 @@ withGrid.__docgenInfo = {
     'children': {
       'flowType': {
         'name': 'union',
-        'raw': 'Element | Array<Element>',
+        'raw': 'React$Element<any> | Array<React$Element<any>>',
         'elements': [{
-          'name': 'Element'
+          'name': 'React$Element',
+          'elements': [{
+            'name': 'any'
+          }],
+          'raw': 'React$Element<any>'
         }, {
           'name': 'Array',
           'elements': [{
-            'name': 'Element'
+            'name': 'React$Element',
+            'elements': [{
+              'name': 'any'
+            }],
+            'raw': 'React$Element<any>'
           }],
-          'raw': 'Array<Element>'
+          'raw': 'Array<React$Element<any>>'
         }]
       },
       'required': false,
@@ -15589,8 +15597,8 @@ withGrid.__docgenInfo = {
 
 if (typeof STORYBOOK_REACT_CLASSES !== 'undefined') {
   STORYBOOK_REACT_CLASSES['src/grid.js'] = {
-    name: 'withGrid',
-    docgenInfo: withGrid.__docgenInfo,
+    name: 'Grid',
+    docgenInfo: Grid.__docgenInfo,
     path: 'src/grid.js'
   };
 }
@@ -43339,16 +43347,16 @@ function getOverflow(overflow) {
   }
 }
 
-var withLayout = function (_React$Component) {
-  _inherits(withLayout, _React$Component);
+var Layout = function (_React$Component) {
+  _inherits(Layout, _React$Component);
 
-  function withLayout() {
-    _classCallCheck(this, withLayout);
+  function Layout() {
+    _classCallCheck(this, Layout);
 
-    return _possibleConstructorReturn(this, (withLayout.__proto__ || Object.getPrototypeOf(withLayout)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
   }
 
-  _createClass(withLayout, [{
+  _createClass(Layout, [{
     key: 'getChildContext',
     value: function getChildContext() {
       return {
@@ -43374,16 +43382,16 @@ var withLayout = function (_React$Component) {
     }
   }]);
 
-  return withLayout;
+  return Layout;
 }(_react2.default.Component);
 
-withLayout.contextTypes = {
+Layout.contextTypes = {
   devMode: _propTypes2.default.bool
 };
-withLayout.childContextTypes = {
+Layout.childContextTypes = {
   devMode: _propTypes2.default.bool
 };
-withLayout.propTypes = {
+Layout.propTypes = {
   dev: typeof babelPluginFlowReactPropTypes_proptype_Dev === 'function' ? babelPluginFlowReactPropTypes_proptype_Dev : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Dev),
   devMode: __webpack_require__(0).bool,
   className: typeof String === 'function' ? __webpack_require__(0).instanceOf(String) : __webpack_require__(0).any,
@@ -43392,8 +43400,8 @@ withLayout.propTypes = {
   overflow: typeof babelPluginFlowReactPropTypes_proptype_Overflow === 'function' ? babelPluginFlowReactPropTypes_proptype_Overflow : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Overflow),
   type: typeof babelPluginFlowReactPropTypes_proptype_LayoutType === 'function' ? babelPluginFlowReactPropTypes_proptype_LayoutType : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_LayoutType)
 };
-exports.default = withLayout;
-withLayout.__docgenInfo = {
+exports.default = Layout;
+Layout.__docgenInfo = {
   'description': '',
   'props': {
     'dev': {
@@ -43450,8 +43458,8 @@ withLayout.__docgenInfo = {
 
 if (typeof STORYBOOK_REACT_CLASSES !== 'undefined') {
   STORYBOOK_REACT_CLASSES['src/layout.js'] = {
-    name: 'withLayout',
-    docgenInfo: withLayout.__docgenInfo,
+    name: 'Layout',
+    docgenInfo: Layout.__docgenInfo,
     path: 'src/layout.js'
   };
 }
@@ -54956,4 +54964,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.a48aa4e8776f31831310.bundle.js.map
+//# sourceMappingURL=preview.4c79ccb2b768022f6c09.bundle.js.map
