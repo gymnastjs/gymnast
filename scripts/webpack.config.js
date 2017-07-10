@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
 const { DefinePlugin } = require('webpack')
+const { compact } = require('lodash')
 
 const isProd = process.env.NODE_ENV === 'production'
 const root = resolve(__dirname, '../dist')
@@ -11,14 +12,14 @@ module.exports = {
   entry: resolve(__dirname, '../src/index.js'),
   output: {
     path: root,
-    filename: 'reflex.js',
+    filename: isProd ? 'reflex.min.js' : 'reflex.js',
     library: 'reflex',
     libraryTarget: 'umd',
   },
   node: {
     fs: 'empty',
   },
-  plugins: [
+  plugins: compact([
     new CleanWebpackPlugin([root], {
       root,
       dry: false,
@@ -35,11 +36,13 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       },
     }),
-    new optimize.UglifyJsPlugin({
-      minimize: true,
-      sourceMap: true,
-    }),
-  ],
+
+    isProd &&
+      new optimize.UglifyJsPlugin({
+        minimize: true,
+        sourceMap: true,
+      }),
+  ]),
   externals: isProd
     ? {
         react: 'react',
