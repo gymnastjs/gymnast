@@ -12,6 +12,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.png$/,
+        use: 'ignore-loader',
+      },
+      {
         test: /\.txt$/,
         use: 'raw-loader',
       },
