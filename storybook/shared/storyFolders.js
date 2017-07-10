@@ -44,7 +44,7 @@ function getNote(files, filepath, loader) {
   const hasMd = files.indexOf(mdFile) !== -1
   const url = filepath.replace('./', baseUrl)
   const note = hasMd ? loader(mdFile).default || loader(mdFile) : ''
-  const footer = hasMd ? require('./footer.md') : ''
+  const footer = (require('./footer.md'): string) || ''
 
   return `${note}${footer.replace('[[url]]', url)}`
 }
