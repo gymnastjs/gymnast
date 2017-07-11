@@ -44,13 +44,21 @@ export default function() {
         <h1>Grid Align</h1>
       </Col>
       <Grid>
-        <Grid size={4} align={!stretch && 'top'} style={{ height }}>
+        <Grid size={4} align={!stretch ? 'top' : undefined} style={{ height }}>
           {times(items, i => <Box key={i} type="C" value="TOP" />)}
         </Grid>
-        <Grid size={4} align={!stretch && 'center'} style={{ height }}>
+        <Grid
+          size={4}
+          align={!stretch ? 'center' : undefined}
+          style={{ height }}
+        >
           {times(items, i => <Box key={i} type="C" value="CENTER" />)}
         </Grid>
-        <Grid size={4} align={!stretch && 'bottom'} style={{ height }}>
+        <Grid
+          size={4}
+          align={!stretch ? 'bottom' : undefined}
+          style={{ height }}
+        >
           {times(items, i => <Box key={i} type="C" value="BOTTOM" />)}
         </Grid>
       </Grid>

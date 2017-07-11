@@ -36,7 +36,7 @@ export default function() {
       <Layout type="parent" className={styles.main}>
         <Layout type="stretch">
           <Root>
-            <Grid align="stretch" padding={top}>
+            <Grid padding={top}>
               <Box size={10} type="B" style={SIZE.TALL} />
               <Box size={2} type="B" style={SIZE.SMALL} />
               <Box type="B" style={SIZE.MEDIUM} />

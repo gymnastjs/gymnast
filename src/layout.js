@@ -56,7 +56,7 @@ export default class Layout extends React.Component {
   props: {
     dev?: Dev,
     devMode?: boolean,
-    className?: String,
+    className?: string,
     fixed?: Fixed,
     margin?: Spacing,
     overflow?: Overflow,
