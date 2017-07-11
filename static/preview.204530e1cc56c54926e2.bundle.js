@@ -942,7 +942,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         configurable: true
       });
       if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Size', {
-        value: __webpack_require__(0).oneOfType([__webpack_require__(0).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), __webpack_require__(0).oneOf(['fit']), __webpack_require__(0).oneOf(['auto']), function (props, propName, componentName) {
+        value: __webpack_require__(0).oneOfType([__webpack_require__(0).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), __webpack_require__(0).oneOf([12]), __webpack_require__(0).oneOf(['fit']), __webpack_require__(0).oneOf(['auto']), function (props, propName, componentName) {
           if (props[propName] != null) return new Error('Invalid prop `' + propName + '` of value `' + value + '` passed to `' + componentName + '`. Expected undefined or null.');
         }]),
         configurable: true
@@ -8167,7 +8167,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       Layout.propTypes = {
         dev: typeof babelPluginFlowReactPropTypes_proptype_Dev === 'function' ? babelPluginFlowReactPropTypes_proptype_Dev : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Dev),
         devMode: __webpack_require__(0).bool,
-        className: typeof String === 'function' ? __webpack_require__(0).instanceOf(String) : __webpack_require__(0).any,
+        className: __webpack_require__(0).string,
         fixed: typeof babelPluginFlowReactPropTypes_proptype_Fixed === 'function' ? babelPluginFlowReactPropTypes_proptype_Fixed : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Fixed),
         margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
         overflow: typeof babelPluginFlowReactPropTypes_proptype_Overflow === 'function' ? babelPluginFlowReactPropTypes_proptype_Overflow : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Overflow),
@@ -9404,7 +9404,7 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
   configurable: true
 });
 if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Size', {
-  value: __webpack_require__(0).oneOfType([__webpack_require__(0).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), __webpack_require__(0).oneOf(['fit']), __webpack_require__(0).oneOf(['auto']), function (props, propName, componentName) {
+  value: __webpack_require__(0).oneOfType([__webpack_require__(0).oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]), __webpack_require__(0).oneOf([12]), __webpack_require__(0).oneOf(['fit']), __webpack_require__(0).oneOf(['auto']), function (props, propName, componentName) {
     if (props[propName] != null) return new Error('Invalid prop `' + propName + '` of value `' + value + '` passed to `' + componentName + '`. Expected undefined or null.');
   }]),
   configurable: true
@@ -45804,9 +45804,9 @@ function SearchResults(_ref) {
   );
 }
 SearchResults.propTypes = {
-  results: __webpack_require__(0).number.isRequired,
-  pages: __webpack_require__(0).number.isRequired,
-  size: __webpack_require__(0).number.isRequired
+  results: __webpack_require__(0).number,
+  pages: __webpack_require__(0).number,
+  size: __webpack_require__(0).number
 };
 
 /***/ }),
@@ -49127,7 +49127,7 @@ Layout.childContextTypes = {
 Layout.propTypes = {
   dev: typeof babelPluginFlowReactPropTypes_proptype_Dev === 'function' ? babelPluginFlowReactPropTypes_proptype_Dev : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Dev),
   devMode: __webpack_require__(0).bool,
-  className: typeof String === 'function' ? __webpack_require__(0).instanceOf(String) : __webpack_require__(0).any,
+  className: __webpack_require__(0).string,
   fixed: typeof babelPluginFlowReactPropTypes_proptype_Fixed === 'function' ? babelPluginFlowReactPropTypes_proptype_Fixed : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Fixed),
   margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
   overflow: typeof babelPluginFlowReactPropTypes_proptype_Overflow === 'function' ? babelPluginFlowReactPropTypes_proptype_Overflow : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Overflow),
@@ -49153,7 +49153,7 @@ Layout.__docgenInfo = {
     },
     'className': {
       'flowType': {
-        'name': 'String'
+        'name': 'string'
       },
       'required': false,
       'description': ''
@@ -49990,7 +49990,7 @@ var _times3 = _interopRequireDefault(_times2);
 exports.default = function () {
   var items = (0, _addonKnobs.number)('Items', 5, { range: true, min: 0, max: 100 });
   var props = {
-    align: !(0, _addonKnobs.boolean)('Stretch', true) && 'top'
+    align: !(0, _addonKnobs.boolean)('Stretch', true) ? 'top' : undefined
   };
   var margin = (0, _shared.getMarginSelect)();
 
@@ -50254,7 +50254,7 @@ var _times3 = _interopRequireDefault(_times2);
 exports.default = function () {
   var itemMargin = (0, _shared.getMarginSelect)('Yellow Item Margin', 'Yellow Item Margin Size');
   var margin = (0, _shared.getMarginSelect)('All Items Margins', 'All Items Margin Size');
-  var align = !(0, _addonKnobs.boolean)('Stretch', true) && 'top';
+  var align = !(0, _addonKnobs.boolean)('Stretch', true) ? 'top' : undefined;
 
   var getBox = function getBox(index) {
     return _react2.default.createElement(_shared.Box, {
@@ -50909,21 +50909,29 @@ exports.default = function () {
       null,
       _react2.default.createElement(
         _reflex.Grid,
-        { size: 4, align: !stretch && 'top', style: { height: height } },
+        { size: 4, align: !stretch ? 'top' : undefined, style: { height: height } },
         (0, _times3.default)(items, function (i) {
           return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'TOP' });
         })
       ),
       _react2.default.createElement(
         _reflex.Grid,
-        { size: 4, align: !stretch && 'center', style: { height: height } },
+        {
+          size: 4,
+          align: !stretch ? 'center' : undefined,
+          style: { height: height }
+        },
         (0, _times3.default)(items, function (i) {
           return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'CENTER' });
         })
       ),
       _react2.default.createElement(
         _reflex.Grid,
-        { size: 4, align: !stretch && 'bottom', style: { height: height } },
+        {
+          size: 4,
+          align: !stretch ? 'bottom' : undefined,
+          style: { height: height }
+        },
         (0, _times3.default)(items, function (i) {
           return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'BOTTOM' });
         })
@@ -51445,7 +51453,7 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Grid,
-        { align: 'stretch', justify: 'center' },
+        { justify: 'center' },
         _react2.default.createElement(
           _reflex.Col,
           { size: 6 },
@@ -51572,7 +51580,7 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Grid,
-        { align: 'stretch' },
+        null,
         _react2.default.createElement(
           _reflex.Col,
           { size: 4 },
@@ -51717,7 +51725,7 @@ exports.default = function () {
     null,
     _react2.default.createElement(
       _reflex.Grid,
-      { align: 'stretch' },
+      null,
       _react2.default.createElement(_shared.Box, { size: 2, type: 'A', value: 'Go Back' }),
       _react2.default.createElement(
         _shared.Box,
@@ -51875,7 +51883,7 @@ exports.default = function () {
           null,
           _react2.default.createElement(
             _reflex.Grid,
-            { align: 'stretch', padding: _marginTypes.top },
+            { padding: _marginTypes.top },
             _react2.default.createElement(_shared.Box, { size: 10, type: 'B', style: SIZE.TALL }),
             _react2.default.createElement(_shared.Box, { size: 2, type: 'B', style: SIZE.SMALL }),
             _react2.default.createElement(_shared.Box, { type: 'B', style: SIZE.MEDIUM }),
@@ -52184,7 +52192,7 @@ exports.default = function () {
           null,
           _react2.default.createElement(
             _reflex.Grid,
-            { align: 'stretch' },
+            null,
             _react2.default.createElement(
               _reflex.Grid,
               {
@@ -60697,4 +60705,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.6ca3bac66180e52aeab6.bundle.js.map
+//# sourceMappingURL=preview.204530e1cc56c54926e2.bundle.js.map
