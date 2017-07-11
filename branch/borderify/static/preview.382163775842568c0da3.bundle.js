@@ -2969,10 +2969,10 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       }
 
       function getSpacing() {
-        var spacings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-        var area = arguments[1];
+        var values = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+        var type = arguments[1];
 
-        var size = spacings.map(getSizeName);
+        var size = values.map(getSizeName);
         var directions = ['top', 'right', 'bottom', 'left'];
         var allSizes = [];
 
@@ -2994,7 +2994,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
 
         return (0, _compact3.default)(allSizes.map(function (current, index) {
-          return current && _spacing2.default['' + directions[index] + current + area];
+          return current && _spacing2.default['' + directions[index] + current + type];
         }));
       }
 
@@ -23845,10 +23845,10 @@ function getSizeName(size) {
 }
 
 function getSpacing() {
-  var spacings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var area = arguments[1];
+  var values = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var type = arguments[1];
 
-  var size = spacings.map(getSizeName);
+  var size = values.map(getSizeName);
   var directions = ['top', 'right', 'bottom', 'left'];
   var allSizes = [];
 
@@ -23870,7 +23870,7 @@ function getSpacing() {
   }
 
   return (0, _compact3.default)(allSizes.map(function (current, index) {
-    return current && _spacing2.default['' + directions[index] + current + area];
+    return current && _spacing2.default['' + directions[index] + current + type];
   }));
 }
 
@@ -60497,4 +60497,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.8d0f137e059ee7953523.bundle.js.map
+//# sourceMappingURL=preview.382163775842568c0da3.bundle.js.map
