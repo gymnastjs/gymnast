@@ -2,2045 +2,4090 @@
 
 exports[`getSpacingClasses should validate all permutations 1`] = `Array []`;
 
-exports[`getSpacingClasses should validate all permutations 2`] = `
-Array [
-  "leftHalfSpacing",
-]
-`;
+exports[`getSpacingClasses should validate all permutations 2`] = `Array []`;
 
 exports[`getSpacingClasses should validate all permutations 3`] = `
 Array [
-  "leftSingleSpacing",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 4`] = `
 Array [
-  "leftDoubleSpacing",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 5`] = `
 Array [
-  "bottomHalfSpacing",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 6`] = `
 Array [
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 7`] = `
 Array [
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 8`] = `
 Array [
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 9`] = `
 Array [
-  "bottomSingleSpacing",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 10`] = `
 Array [
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 11`] = `
 Array [
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 12`] = `
 Array [
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 13`] = `
 Array [
-  "bottomDoubleSpacing",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 14`] = `
 Array [
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 15`] = `
 Array [
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 16`] = `
 Array [
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 17`] = `
 Array [
-  "rightHalfSpacing",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 18`] = `
 Array [
-  "rightHalfSpacing",
-  "leftHalfSpacing",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 19`] = `
 Array [
-  "rightHalfSpacing",
-  "leftSingleSpacing",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 20`] = `
 Array [
-  "rightHalfSpacing",
-  "leftDoubleSpacing",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 21`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 22`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 23`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 24`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 25`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 26`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 27`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 28`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 29`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 30`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 31`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 32`] = `
 Array [
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 33`] = `
 Array [
-  "rightSingleSpacing",
+  "rightHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 34`] = `
 Array [
-  "rightSingleSpacing",
-  "leftHalfSpacing",
+  "rightHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 35`] = `
 Array [
-  "rightSingleSpacing",
-  "leftSingleSpacing",
+  "rightHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 36`] = `
 Array [
-  "rightSingleSpacing",
-  "leftDoubleSpacing",
+  "rightHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 37`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
+  "rightHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 38`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "rightHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 39`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "rightHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 40`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "rightHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 41`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
+  "rightHalfMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 42`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "rightHalfMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 43`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 44`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 45`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 46`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 47`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 48`] = `
 Array [
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 49`] = `
 Array [
-  "rightDoubleSpacing",
+  "rightHalfMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 50`] = `
 Array [
-  "rightDoubleSpacing",
-  "leftHalfSpacing",
+  "rightHalfMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 51`] = `
 Array [
-  "rightDoubleSpacing",
-  "leftSingleSpacing",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 52`] = `
 Array [
-  "rightDoubleSpacing",
-  "leftDoubleSpacing",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 53`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 54`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 55`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 56`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 57`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 58`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 59`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 60`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 61`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 62`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 63`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 64`] = `
 Array [
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 65`] = `
 Array [
-  "topHalfSpacing",
+  "rightSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 66`] = `
 Array [
-  "topHalfSpacing",
-  "leftHalfSpacing",
+  "rightSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 67`] = `
 Array [
-  "topHalfSpacing",
-  "leftSingleSpacing",
+  "rightSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 68`] = `
 Array [
-  "topHalfSpacing",
-  "leftDoubleSpacing",
+  "rightSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 69`] = `
 Array [
-  "topHalfSpacing",
-  "bottomHalfSpacing",
+  "rightSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 70`] = `
 Array [
-  "topHalfSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "rightSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 71`] = `
 Array [
-  "topHalfSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "rightSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 72`] = `
 Array [
-  "topHalfSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "rightSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 73`] = `
 Array [
-  "topHalfSpacing",
-  "bottomSingleSpacing",
+  "rightSingleMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 74`] = `
 Array [
-  "topHalfSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "rightSingleMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 75`] = `
 Array [
-  "topHalfSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 76`] = `
 Array [
-  "topHalfSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 77`] = `
 Array [
-  "topHalfSpacing",
-  "bottomDoubleSpacing",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 78`] = `
 Array [
-  "topHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 79`] = `
 Array [
-  "topHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 80`] = `
 Array [
-  "topHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 81`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
+  "rightSingleMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 82`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "leftHalfSpacing",
+  "rightSingleMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 83`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "leftSingleSpacing",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 84`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "leftDoubleSpacing",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 85`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 86`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 87`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 88`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 89`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 90`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 91`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 92`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 93`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 94`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 95`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 96`] = `
 Array [
-  "topHalfSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 97`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
+  "rightDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 98`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "leftHalfSpacing",
+  "rightDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 99`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "leftSingleSpacing",
+  "rightDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 100`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "leftDoubleSpacing",
+  "rightDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 101`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
+  "rightDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 102`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "rightDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 103`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "rightDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 104`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "rightDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 105`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 106`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 107`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 108`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 109`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 110`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 111`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 112`] = `
 Array [
-  "topHalfSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 113`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 114`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "leftHalfSpacing",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 115`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "leftSingleSpacing",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 116`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "leftDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 117`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 118`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 119`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 120`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 121`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 122`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 123`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 124`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 125`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 126`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 127`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 128`] = `
 Array [
-  "topHalfSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 129`] = `
 Array [
-  "topSingleSpacing",
+  "topHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 130`] = `
 Array [
-  "topSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 131`] = `
 Array [
-  "topSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 132`] = `
 Array [
-  "topSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 133`] = `
 Array [
-  "topSingleSpacing",
-  "bottomHalfSpacing",
+  "topHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 134`] = `
 Array [
-  "topSingleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 135`] = `
 Array [
-  "topSingleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 136`] = `
 Array [
-  "topSingleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 137`] = `
 Array [
-  "topSingleSpacing",
-  "bottomSingleSpacing",
+  "topHalfMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 138`] = `
 Array [
-  "topSingleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 139`] = `
 Array [
-  "topSingleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 140`] = `
 Array [
-  "topSingleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 141`] = `
 Array [
-  "topSingleSpacing",
-  "bottomDoubleSpacing",
+  "topHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 142`] = `
 Array [
-  "topSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 143`] = `
 Array [
-  "topSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 144`] = `
 Array [
-  "topSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 145`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
+  "topHalfMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 146`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 147`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 148`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 149`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
+  "topHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 150`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 151`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 152`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 153`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
+  "topHalfMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 154`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 155`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 156`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 157`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
+  "topHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 158`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 159`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 160`] = `
 Array [
-  "topSingleSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 161`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 162`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 163`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 164`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 165`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 166`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 167`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 168`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 169`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 170`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 171`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 172`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 173`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 174`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 175`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 176`] = `
 Array [
-  "topSingleSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 177`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 178`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 179`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 180`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 181`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 182`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 183`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 184`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 185`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 186`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 187`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 188`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 189`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 190`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 191`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 192`] = `
 Array [
-  "topSingleSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 193`] = `
 Array [
-  "topDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 194`] = `
 Array [
-  "topDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 195`] = `
 Array [
-  "topDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 196`] = `
 Array [
-  "topDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 197`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 198`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 199`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 200`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 201`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 202`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 203`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 204`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 205`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 206`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 207`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 208`] = `
 Array [
-  "topDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 209`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 210`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 211`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 212`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 213`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 214`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 215`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 216`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 217`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 218`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 219`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 220`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 221`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 222`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 223`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 224`] = `
 Array [
-  "topDoubleSpacing",
-  "rightHalfSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 225`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 226`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 227`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 228`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 229`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 230`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 231`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 232`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 233`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 234`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 235`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 236`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 237`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 238`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 239`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 240`] = `
 Array [
-  "topDoubleSpacing",
-  "rightSingleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 241`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 242`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 243`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 244`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 245`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 246`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 247`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 248`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomHalfSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 249`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 250`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 251`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 252`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomSingleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 253`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 254`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftHalfSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 255`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftSingleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;
 
 exports[`getSpacingClasses should validate all permutations 256`] = `
 Array [
-  "topDoubleSpacing",
-  "rightDoubleSpacing",
-  "bottomDoubleSpacing",
-  "leftDoubleSpacing",
+  "topHalfMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 257`] = `
+Array [
+  "topSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 258`] = `
+Array [
+  "topSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 259`] = `
+Array [
+  "topSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 260`] = `
+Array [
+  "topSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 261`] = `
+Array [
+  "topSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 262`] = `
+Array [
+  "topSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 263`] = `
+Array [
+  "topSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 264`] = `
+Array [
+  "topSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 265`] = `
+Array [
+  "topSingleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 266`] = `
+Array [
+  "topSingleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 267`] = `
+Array [
+  "topSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 268`] = `
+Array [
+  "topSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 269`] = `
+Array [
+  "topSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 270`] = `
+Array [
+  "topSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 271`] = `
+Array [
+  "topSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 272`] = `
+Array [
+  "topSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 273`] = `
+Array [
+  "topSingleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 274`] = `
+Array [
+  "topSingleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 275`] = `
+Array [
+  "topSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 276`] = `
+Array [
+  "topSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 277`] = `
+Array [
+  "topSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 278`] = `
+Array [
+  "topSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 279`] = `
+Array [
+  "topSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 280`] = `
+Array [
+  "topSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 281`] = `
+Array [
+  "topSingleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 282`] = `
+Array [
+  "topSingleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 283`] = `
+Array [
+  "topSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 284`] = `
+Array [
+  "topSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 285`] = `
+Array [
+  "topSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 286`] = `
+Array [
+  "topSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 287`] = `
+Array [
+  "topSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 288`] = `
+Array [
+  "topSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 289`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 290`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 291`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 292`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 293`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 294`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 295`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 296`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 297`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 298`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 299`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 300`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 301`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 302`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 303`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 304`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 305`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 306`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 307`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 308`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 309`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 310`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 311`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 312`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 313`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 314`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 315`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 316`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 317`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 318`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 319`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 320`] = `
+Array [
+  "topSingleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 321`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 322`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 323`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 324`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 325`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 326`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 327`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 328`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 329`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 330`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 331`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 332`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 333`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 334`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 335`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 336`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 337`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 338`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 339`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 340`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 341`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 342`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 343`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 344`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 345`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 346`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 347`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 348`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 349`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 350`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 351`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 352`] = `
+Array [
+  "topSingleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 353`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 354`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 355`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 356`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 357`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 358`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 359`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 360`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 361`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 362`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 363`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 364`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 365`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 366`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 367`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 368`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 369`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 370`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 371`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 372`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 373`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 374`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 375`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 376`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 377`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 378`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 379`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 380`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 381`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 382`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 383`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 384`] = `
+Array [
+  "topSingleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 385`] = `
+Array [
+  "topDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 386`] = `
+Array [
+  "topDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 387`] = `
+Array [
+  "topDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 388`] = `
+Array [
+  "topDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 389`] = `
+Array [
+  "topDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 390`] = `
+Array [
+  "topDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 391`] = `
+Array [
+  "topDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 392`] = `
+Array [
+  "topDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 393`] = `
+Array [
+  "topDoubleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 394`] = `
+Array [
+  "topDoubleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 395`] = `
+Array [
+  "topDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 396`] = `
+Array [
+  "topDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 397`] = `
+Array [
+  "topDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 398`] = `
+Array [
+  "topDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 399`] = `
+Array [
+  "topDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 400`] = `
+Array [
+  "topDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 401`] = `
+Array [
+  "topDoubleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 402`] = `
+Array [
+  "topDoubleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 403`] = `
+Array [
+  "topDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 404`] = `
+Array [
+  "topDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 405`] = `
+Array [
+  "topDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 406`] = `
+Array [
+  "topDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 407`] = `
+Array [
+  "topDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 408`] = `
+Array [
+  "topDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 409`] = `
+Array [
+  "topDoubleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 410`] = `
+Array [
+  "topDoubleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 411`] = `
+Array [
+  "topDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 412`] = `
+Array [
+  "topDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 413`] = `
+Array [
+  "topDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 414`] = `
+Array [
+  "topDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 415`] = `
+Array [
+  "topDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 416`] = `
+Array [
+  "topDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 417`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 418`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 419`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 420`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 421`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 422`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 423`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 424`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 425`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 426`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 427`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 428`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 429`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 430`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 431`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 432`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 433`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 434`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 435`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 436`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 437`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 438`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 439`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 440`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 441`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 442`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 443`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 444`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 445`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 446`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 447`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 448`] = `
+Array [
+  "topDoubleMargin",
+  "rightHalfMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 449`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 450`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 451`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 452`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 453`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 454`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 455`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 456`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 457`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 458`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 459`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 460`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 461`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 462`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 463`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 464`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 465`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 466`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 467`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 468`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 469`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 470`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 471`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 472`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 473`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 474`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 475`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 476`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 477`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 478`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 479`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 480`] = `
+Array [
+  "topDoubleMargin",
+  "rightSingleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 481`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 482`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 483`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 484`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 485`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 486`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 487`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 488`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 489`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 490`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 491`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 492`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 493`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 494`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 495`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 496`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomHalfMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 497`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 498`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 499`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 500`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 501`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 502`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 503`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 504`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomSingleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 505`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 506`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 507`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 508`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftHalfMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 509`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 510`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftSingleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 511`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
+]
+`;
+
+exports[`getSpacingClasses should validate all permutations 512`] = `
+Array [
+  "topDoubleMargin",
+  "rightDoubleMargin",
+  "bottomDoubleMargin",
+  "leftDoubleMargin",
 ]
 `;

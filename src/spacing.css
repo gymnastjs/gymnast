@@ -1,53 +1,117 @@
 @import "./variables";
 
-.noSpacing {
+.noPadding {
   padding: 0;
 }
 
-.topHalfSpacing {
+.topHalfPadding {
   padding-top: calc(var(--vertical-gutter) / 2);
 }
 
-.leftHalfSpacing {
+.leftHalfPadding {
   padding-left: calc(var(--gutter) / 2);
 }
 
-.rightHalfSpacing {
+.rightHalfPadding {
   padding-right: calc(var(--gutter) / 2);
 }
 
-.bottomHalfSpacing {
+.bottomHalfPadding {
   padding-bottom: calc(var(--vertical-gutter) / 2);
 }
 
-.topSingleSpacing {
+.topSinglePadding {
   padding-top: var(--vertical-gutter);
 }
 
-.leftSingleSpacing {
+.leftSinglePadding {
   padding-left: var(--gutter);
 }
 
-.rightSingleSpacing {
+.rightSinglePadding {
   padding-right: var(--gutter);
 }
 
-.bottomSingleSpacing {
+.bottomSinglePadding {
   padding-bottom: var(--vertical-gutter);
 }
 
-.topDoubleSpacing {
+.topDoublePadding {
   padding-top: calc(var(--vertical-gutter) * 2);
 }
 
-.leftDoubleSpacing {
+.leftDoublePadding {
   padding-left: calc(var(--gutter) * 2);
 }
 
-.rightDoubleSpacing {
+.rightDoublePadding {
   padding-right: calc(var(--gutter) * 2);
 }
 
-.bottomDoubleSpacing {
+.bottomDoublePadding {
   padding-bottom: calc(var(--vertical-gutter) * 2);
+}
+
+.noMargin,
+.topHalfMargin,
+.leftHalfMargin,
+.rightHalfMargin,
+.bottomHalfMargin,
+.topSingleMargin,
+.leftSingleMargin,
+.rightSingleMargin,
+.bottomSingleMargin,
+.topDoubleMargin,
+.leftDoubleMargin,
+.rightDoubleMargin,
+.bottomDoubleMargin {
+  border: 0 transparent solid;
+}
+
+.topHalfMargin {
+  border-top-width: calc(var(--vertical-gutter) / 2);
+}
+
+.leftHalfMargin {
+  border-left-width: calc(var(--gutter) / 2);
+}
+
+.rightHalfMargin {
+  border-right-width: calc(var(--gutter) / 2);
+}
+
+.bottomHalfMargin {
+  border-bottom-width: calc(var(--vertical-gutter) / 2);
+}
+
+.topSingleMargin {
+  border-top-width: var(--vertical-gutter);
+}
+
+.leftSingleMargin {
+  border-left-width: var(--gutter);
+}
+
+.rightSingleMargin {
+  border-right-width: var(--gutter);
+}
+
+.bottomSingleMargin {
+  border-bottom-width: var(--vertical-gutter);
+}
+
+.topDoubleMargin {
+  border-top-width: calc(var(--vertical-gutter) * 2);
+}
+
+.leftDoubleMargin {
+  border-left-width: calc(var(--gutter) * 2);
+}
+
+.rightDoubleMargin {
+  border-right-width: calc(var(--gutter) * 2);
+}
+
+.bottomDoubleMargin {
+  border-bottom-width: calc(var(--vertical-gutter) * 2);
 }

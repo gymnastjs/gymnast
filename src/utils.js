@@ -44,8 +44,11 @@ function getSizeName(size: number) {
   }
 }
 
-function getSpacing(spacings: Spacing = []): Array<string> {
-  const size = spacings.map(getSizeName)
+function getSpacing(
+  values: Spacing = [],
+  type: 'Padding' | 'Margin'
+): Array<string> {
+  const size = values.map(getSizeName)
   const directions = ['top', 'right', 'bottom', 'left']
   let allSizes = []
 
@@ -69,7 +72,7 @@ function getSpacing(spacings: Spacing = []): Array<string> {
   return compact(
     allSizes.map(
       (current, index) =>
-        current && style[`${directions[index]}${current}Spacing`]
+        current && style[`${directions[index]}${current}${type}`]
     )
   )
 }

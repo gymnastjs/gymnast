@@ -6,37 +6,37 @@ describe('getSpacingClasses', () => {
   })
 
   it('should expand single values', () => {
-    expect(getSpacingClasses([0.5])).toEqual([
-      'topHalfSpacing',
-      'rightHalfSpacing',
-      'bottomHalfSpacing',
-      'leftHalfSpacing',
+    expect(getSpacingClasses([0.5], 'Padding')).toEqual([
+      'topHalfPadding',
+      'rightHalfPadding',
+      'bottomHalfPadding',
+      'leftHalfPadding',
     ])
   })
 
   it('should use top/bottom and left/right when there are 2 values', () => {
-    expect(getSpacingClasses([1, 2])).toEqual([
-      'topSingleSpacing',
-      'rightDoubleSpacing',
-      'bottomSingleSpacing',
-      'leftDoubleSpacing',
+    expect(getSpacingClasses([1, 2], 'Margin')).toEqual([
+      'topSingleMargin',
+      'rightDoubleMargin',
+      'bottomSingleMargin',
+      'leftDoubleMargin',
     ])
   })
 
   it('should use right value for left when there are 3 values', () => {
-    expect(getSpacingClasses([0.5, 1, 2])).toEqual([
-      'topHalfSpacing',
-      'rightSingleSpacing',
-      'bottomDoubleSpacing',
-      'leftSingleSpacing',
+    expect(getSpacingClasses([0.5, 1, 2], 'Padding')).toEqual([
+      'topHalfPadding',
+      'rightSinglePadding',
+      'bottomDoublePadding',
+      'leftSinglePadding',
     ])
   })
 
   it('should ignore 0 values', () => {
-    expect(getSpacingClasses([0, 0.5, 1, 2])).toEqual([
-      'rightHalfSpacing',
-      'bottomSingleSpacing',
-      'leftDoubleSpacing',
+    expect(getSpacingClasses([0, 0.5, 1, 2], 'Margin')).toEqual([
+      'rightHalfMargin',
+      'bottomSingleMargin',
+      'leftDoubleMargin',
     ])
   })
 
@@ -48,7 +48,10 @@ describe('getSpacingClasses', () => {
         sizes.forEach(bottom => {
           sizes.forEach(left => {
             expect(
-              getSpacingClasses([top, right, bottom, left])
+              getSpacingClasses([top, right, bottom, left], 'Margin')
+            ).toMatchSnapshot()
+            expect(
+              getSpacingClasses([top, right, bottom, left], 'Padding')
             ).toMatchSnapshot()
           })
         })
