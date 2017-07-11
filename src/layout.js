@@ -78,7 +78,7 @@ export default class Layout extends React.Component {
       className,
       getFixed(fixed),
       getLayout(type),
-      ...getSpacingClasses(margin),
+      ...getSpacingClasses(margin, 'Margin'),
       getOverflow(overflow),
       dev &&
         (devMode || this.context.devMode) &&
