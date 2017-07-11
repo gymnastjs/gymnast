@@ -51453,7 +51453,7 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Grid,
-        { align: 'stretch', justify: 'center' },
+        { justify: 'center' },
         _react2.default.createElement(
           _reflex.Col,
           { size: 6 },
@@ -51580,7 +51580,7 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Grid,
-        { align: 'stretch' },
+        null,
         _react2.default.createElement(
           _reflex.Col,
           { size: 4 },
@@ -51725,7 +51725,7 @@ exports.default = function () {
     null,
     _react2.default.createElement(
       _reflex.Grid,
-      { align: 'stretch' },
+      null,
       _react2.default.createElement(_shared.Box, { size: 2, type: 'A', value: 'Go Back' }),
       _react2.default.createElement(
         _shared.Box,
@@ -51883,7 +51883,7 @@ exports.default = function () {
           null,
           _react2.default.createElement(
             _reflex.Grid,
-            { align: 'stretch', padding: _marginTypes.top },
+            { padding: _marginTypes.top },
             _react2.default.createElement(_shared.Box, { size: 10, type: 'B', style: SIZE.TALL }),
             _react2.default.createElement(_shared.Box, { size: 2, type: 'B', style: SIZE.SMALL }),
             _react2.default.createElement(_shared.Box, { type: 'B', style: SIZE.MEDIUM }),
@@ -52192,7 +52192,7 @@ exports.default = function () {
           null,
           _react2.default.createElement(
             _reflex.Grid,
-            { align: 'stretch' },
+            null,
             _react2.default.createElement(
               _reflex.Grid,
               {
@@ -60705,4 +60705,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.49384e9fd692c58d6301.bundle.js.map
+//# sourceMappingURL=preview.204530e1cc56c54926e2.bundle.js.map
