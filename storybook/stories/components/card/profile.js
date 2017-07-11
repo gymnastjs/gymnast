@@ -12,7 +12,7 @@ export default function() {
           <h1>User Profile</h1>
         </Col>
 
-        <Grid align="stretch">
+        <Grid>
           <Col size={4}>
             <Grid dev={2}>Full Bleed</Grid>
           </Col>

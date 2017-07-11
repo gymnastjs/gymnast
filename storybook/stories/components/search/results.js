@@ -9,9 +9,9 @@ export default function SearchResults({
   pages = 4,
   size,
 }: {
-  results: number,
-  pages: number,
-  size: number,
+  results?: number,
+  pages?: number,
+  size?: number,
 }) {
   return (
     <Grid size={size} dev={2} align="top">

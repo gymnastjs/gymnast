@@ -10,7 +10,7 @@ export default function() {
 
   return (
     <RootLayout>
-      <Grid align="stretch">
+      <Grid>
         <Box size={2} type="A" value="Go Back" />
         <Box size={6} type="A">
           <h2>Page Title</h2>

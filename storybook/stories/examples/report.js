@@ -89,7 +89,7 @@ export default function() {
       <Layout type="parent" className={`${styles.main} ${colors2}`}>
         <Layout type="stretch">
           <Root>
-            <Grid align="stretch">
+            <Grid>
               <Grid
                 size={1}
                 className={styles.nav}

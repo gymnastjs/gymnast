@@ -3132,7 +3132,7 @@ exports[`Storyshots  Components Card.Filter 1`] = `
               </h1>
             </div>
             <div
-              className="grid stretchAlign centerJustify"
+              className="grid centerJustify"
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-6 grid"
@@ -3362,7 +3362,7 @@ exports[`Storyshots  Components Card.Profile 1`] = `
               </h1>
             </div>
             <div
-              className="grid stretchAlign"
+              className="grid"
             >
               <div
                 className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-4 grid"
@@ -3587,7 +3587,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
           className="grid rightSingleSpacing leftSingleSpacing"
         >
           <div
-            className="grid stretchAlign"
+            className="grid"
           >
             <div
               className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-2 grid"
@@ -4415,7 +4415,7 @@ exports[`Storyshots  Examples Cards 1`] = `
                 className="grid"
               >
                 <div
-                  className="stretchAlign grid topSingleSpacing"
+                  className="grid topSingleSpacing"
                 >
                   <div
                     className="rightHalfSpacing bottomSingleSpacing leftHalfSpacing col col-10 grid"
@@ -4880,7 +4880,7 @@ exports[`Storyshots  Examples Report 1`] = `
               className="grid rightSingleSpacing leftSingleSpacing"
             >
               <div
-                className="grid stretchAlign"
+                className="grid"
               >
                 <div
                   className="rightHalfSpacing leftHalfSpacing nav col col-1 grid"

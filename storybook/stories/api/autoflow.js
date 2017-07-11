@@ -8,7 +8,7 @@ import { Box, RootLayout, getMarginSelect } from '../../shared'
 export default function() {
   const items = number('Items', 5, { range: true, min: 0, max: 100 })
   const props = {
-    align: !boolean('Stretch', true) && 'top',
+    align: !boolean('Stretch', true) ? 'top' : undefined,
   }
   const margin = getMarginSelect()
 

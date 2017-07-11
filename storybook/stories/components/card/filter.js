@@ -42,7 +42,7 @@ export default function() {
         <Col>
           <h1>Filter List</h1>
         </Col>
-        <Grid align="stretch" justify="center">
+        <Grid justify="center">
           <Col size={6}>
             <Grid margin={bottom}>
               <Grid dev={1} padding={xBottom}>

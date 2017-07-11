@@ -11,7 +11,7 @@ export default function() {
     'Yellow Item Margin Size'
   )
   const margin = getMarginSelect('All Items Margins', 'All Items Margin Size')
-  const align = !boolean('Stretch', true) && 'top'
+  const align = !boolean('Stretch', true) ? 'top' : undefined
 
   const getBox = index =>
     <Box
