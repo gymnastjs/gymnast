@@ -10,6 +10,7 @@ We have several examples [on the website](https://obartra.github.io/reflex). Her
 
 ```jsx
 import { Grid, Layout } from 'xn-reflex'
+import'xn-reflex/dist/reflex.css'
 
 <Layout dev={1} fixed="top">
   <Grid margin={[0, 1]} padding={[0, 1]}>
@@ -24,7 +25,7 @@ The `Layout` Component defines sections in the page that have full width. `Grid`
 
 ## 🖥 Install
 
-Reflex is available as the `xn-reflex` package on [npm](https://www.npmjs.com/). It is also available on the [unpkg CDN](https://unpkg.com/xn-reflex).
+Reflex is available as the `xn-reflex` package on [npm](https://www.npmjs.com/). It is also available on the [unpkg CDN](https://unpkg.com/xn-reflex) and the CSS [here](https://unpkg.com/xn-reflex/dist/reflex.css).
 
 You can install it with:
 
@@ -32,7 +33,7 @@ You can install it with:
 yarn add xn-reflex
 ```
 
-`React` and `PropTypes` are dependencies of the generated bundle.
+`React` and `PropTypes` are dependencies of the generated bundle and you'll need to make sure you include the CSS file from `xn-reflex/dist/reflex.css`.
 
 ## 👥 Contributors
 
