@@ -1,4 +1,5 @@
 const { optimize } = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
@@ -7,6 +8,26 @@ const { compact } = require('lodash')
 
 const isProd = process.env.NODE_ENV === 'production'
 const root = resolve(__dirname, '../dist')
+
+const cssLoaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      modules: true,
+      camelCase: true,
+      importLoaders: 1,
+      localIdentName: '[name]__[local]___[hash:base64:5]',
+    },
+  },
+  {
+    loader: 'postcss-loader',
+    options: {
+      config: {
+        path: resolve(__dirname, 'postcss.config.js'),
+      },
+    },
+  },
+]
 
 module.exports = {
   entry: resolve(__dirname, '../src/index.js'),
@@ -20,6 +41,7 @@ module.exports = {
     fs: 'empty',
   },
   plugins: compact([
+    !isProd && new ExtractTextPlugin('reflex.css'),
     new CleanWebpackPlugin([root], {
       root,
       dry: false,
@@ -58,26 +80,12 @@ module.exports = {
       {
         test: /\.css$/,
         include: resolve(__dirname, '../'),
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              camelCase: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: {
-                path: resolve(__dirname, 'postcss.config.js'),
-              },
-            },
-          },
-        ],
+        loader: isProd
+          ? ['style-loader', ...cssLoaders]
+          : ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: cssLoaders,
+            }),
       },
     ],
   },
