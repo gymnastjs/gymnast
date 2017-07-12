@@ -886,7 +886,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       /******/__webpack_require__.p = "";
       /******/
       /******/ // Load entry module and return exports
-      /******/return __webpack_require__(__webpack_require__.s = 34);
+      /******/return __webpack_require__(__webpack_require__.s = 32);
       /******/
     }(
     /************************************************************************/
@@ -921,7 +921,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         // By explicitly using `prop-types` you are opting into new development behavior.
         // http://fb.me/prop-types-in-prod
         var throwOnDirectAccess = true;
-        module.exports = __webpack_require__(28)(isValidElement, throwOnDirectAccess);
+        module.exports = __webpack_require__(26)(isValidElement, throwOnDirectAccess);
       } else {
         // By explicitly using `prop-types` you are opting into new production behavior.
         // http://fb.me/prop-types-in-prod
@@ -1027,7 +1027,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
        *
        */
 
-      var emptyFunction = __webpack_require__(17);
+      var emptyFunction = __webpack_require__(15);
 
       /**
        * Similar to invariant but only logs a warning if the condition is not met.
@@ -1172,7 +1172,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       var canDefineProperty = __webpack_require__(9);
       var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-      var REACT_ELEMENT_TYPE = __webpack_require__(25);
+      var REACT_ELEMENT_TYPE = __webpack_require__(23);
 
       var RESERVED_PROPS = {
         key: true,
@@ -1544,7 +1544,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       "use strict";
 
-      module.exports = __webpack_require__(35);
+      module.exports = __webpack_require__(33);
 
       /***/
     },
@@ -1557,7 +1557,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         value: true
       });
 
-      var _compact2 = __webpack_require__(16);
+      var _compact2 = __webpack_require__(14);
 
       var _compact3 = _interopRequireDefault(_compact2);
 
@@ -1589,13 +1589,13 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       var _propTypes2 = _interopRequireDefault(_propTypes);
 
-      var _utils = __webpack_require__(20);
+      var _utils = __webpack_require__(18);
 
-      var _grid = __webpack_require__(88);
+      var _grid = __webpack_require__(84);
 
       var _grid2 = _interopRequireDefault(_grid);
 
-      var _dev = __webpack_require__(33);
+      var _dev = __webpack_require__(31);
 
       var _dev2 = _interopRequireDefault(_dev);
 
@@ -1879,7 +1879,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       "use strict";
 
-      var getNative = __webpack_require__(30);
+      var getNative = __webpack_require__(28);
 
       /* Built-in method references that are verified to be native. */
       var nativeCreate = getNative(Object, 'create');
@@ -1893,7 +1893,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       "use strict";
 
-      var eq = __webpack_require__(75);
+      var eq = __webpack_require__(73);
 
       /**
        * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -1922,7 +1922,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       "use strict";
 
-      var isKeyable = __webpack_require__(81);
+      var isKeyable = __webpack_require__(79);
 
       /**
        * Gets the data for `map`.
@@ -1942,435 +1942,6 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       /***/
     },
     /* 14 */
-    /***/function (module, exports, __webpack_require__) {
-
-      "use strict";
-
-      /*
-      	MIT License http://www.opensource.org/licenses/mit-license.php
-      	Author Tobias Koppers @sokra
-      */
-      // css base code, injected by the css-loader
-
-      module.exports = function (useSourceMap) {
-        var list = [];
-
-        // return the list of modules as css string
-        list.toString = function toString() {
-          return this.map(function (item) {
-            var content = cssWithMappingToString(item, useSourceMap);
-            if (item[2]) {
-              return "@media " + item[2] + "{" + content + "}";
-            } else {
-              return content;
-            }
-          }).join("");
-        };
-
-        // import a list of modules into the list
-        list.i = function (modules, mediaQuery) {
-          if (typeof modules === "string") modules = [[null, modules, ""]];
-          var alreadyImportedModules = {};
-          for (var i = 0; i < this.length; i++) {
-            var id = this[i][0];
-            if (typeof id === "number") alreadyImportedModules[id] = true;
-          }
-          for (i = 0; i < modules.length; i++) {
-            var item = modules[i];
-            // skip already imported module
-            // this implementation is not 100% perfect for weird media query combinations
-            //  when a module is imported multiple times with different media queries.
-            //  I hope this will never occur (Hey this way we have smaller bundles)
-            if (typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-              if (mediaQuery && !item[2]) {
-                item[2] = mediaQuery;
-              } else if (mediaQuery) {
-                item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-              }
-              list.push(item);
-            }
-          }
-        };
-        return list;
-      };
-
-      function cssWithMappingToString(item, useSourceMap) {
-        var content = item[1] || '';
-        var cssMapping = item[3];
-        if (!cssMapping) {
-          return content;
-        }
-
-        if (useSourceMap && typeof btoa === 'function') {
-          var sourceMapping = toComment(cssMapping);
-          var sourceURLs = cssMapping.sources.map(function (source) {
-            return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
-          });
-
-          return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-        }
-
-        return [content].join('\n');
-      }
-
-      // Adapted from convert-source-map (MIT)
-      function toComment(sourceMap) {
-        // eslint-disable-next-line no-undef
-        var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-        var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-        return '/*# ' + data + ' */';
-      }
-
-      /***/
-    },
-    /* 15 */
-    /***/function (module, exports, __webpack_require__) {
-
-      /*
-      	MIT License http://www.opensource.org/licenses/mit-license.php
-      	Author Tobias Koppers @sokra
-      */
-
-      var stylesInDom = {};
-
-      var memoize = function memoize(fn) {
-        var memo;
-
-        return function () {
-          if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-          return memo;
-        };
-      };
-
-      var isOldIE = memoize(function () {
-        // Test for IE <= 9 as proposed by Browserhacks
-        // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-        // Tests for existence of standard globals is to allow style-loader
-        // to operate correctly into non-standard environments
-        // @see https://github.com/webpack-contrib/style-loader/issues/177
-        return window && document && document.all && !window.atob;
-      });
-
-      var getElement = function (fn) {
-        var memo = {};
-
-        return function (selector) {
-          if (typeof memo[selector] === "undefined") {
-            memo[selector] = fn.call(this, selector);
-          }
-
-          return memo[selector];
-        };
-      }(function (target) {
-        return document.querySelector(target);
-      });
-
-      var singleton = null;
-      var singletonCounter = 0;
-      var stylesInsertedAtTop = [];
-
-      var fixUrls = __webpack_require__(87);
-
-      module.exports = function (list, options) {
-        if (typeof DEBUG !== "undefined" && DEBUG) {
-          if ((typeof document === 'undefined' ? 'undefined' : _typeof2(document)) !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-        }
-
-        options = options || {};
-
-        options.attrs = _typeof2(options.attrs) === "object" ? options.attrs : {};
-
-        // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-        // tags it will allow on a page
-        if (!options.singleton) options.singleton = isOldIE();
-
-        // By default, add <style> tags to the <head> element
-        if (!options.insertInto) options.insertInto = "head";
-
-        // By default, add <style> tags to the bottom of the target
-        if (!options.insertAt) options.insertAt = "bottom";
-
-        var styles = listToStyles(list, options);
-
-        addStylesToDom(styles, options);
-
-        return function update(newList) {
-          var mayRemove = [];
-
-          for (var i = 0; i < styles.length; i++) {
-            var item = styles[i];
-            var domStyle = stylesInDom[item.id];
-
-            domStyle.refs--;
-            mayRemove.push(domStyle);
-          }
-
-          if (newList) {
-            var newStyles = listToStyles(newList, options);
-            addStylesToDom(newStyles, options);
-          }
-
-          for (var i = 0; i < mayRemove.length; i++) {
-            var domStyle = mayRemove[i];
-
-            if (domStyle.refs === 0) {
-              for (var j = 0; j < domStyle.parts.length; j++) {
-                domStyle.parts[j]();
-              }delete stylesInDom[domStyle.id];
-            }
-          }
-        };
-      };
-
-      function addStylesToDom(styles, options) {
-        for (var i = 0; i < styles.length; i++) {
-          var item = styles[i];
-          var domStyle = stylesInDom[item.id];
-
-          if (domStyle) {
-            domStyle.refs++;
-
-            for (var j = 0; j < domStyle.parts.length; j++) {
-              domStyle.parts[j](item.parts[j]);
-            }
-
-            for (; j < item.parts.length; j++) {
-              domStyle.parts.push(addStyle(item.parts[j], options));
-            }
-          } else {
-            var parts = [];
-
-            for (var j = 0; j < item.parts.length; j++) {
-              parts.push(addStyle(item.parts[j], options));
-            }
-
-            stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts };
-          }
-        }
-      }
-
-      function listToStyles(list, options) {
-        var styles = [];
-        var newStyles = {};
-
-        for (var i = 0; i < list.length; i++) {
-          var item = list[i];
-          var id = options.base ? item[0] + options.base : item[0];
-          var css = item[1];
-          var media = item[2];
-          var sourceMap = item[3];
-          var part = { css: css, media: media, sourceMap: sourceMap };
-
-          if (!newStyles[id]) styles.push(newStyles[id] = { id: id, parts: [part] });else newStyles[id].parts.push(part);
-        }
-
-        return styles;
-      }
-
-      function insertStyleElement(options, style) {
-        var target = getElement(options.insertInto);
-
-        if (!target) {
-          throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
-        }
-
-        var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
-
-        if (options.insertAt === "top") {
-          if (!lastStyleElementInsertedAtTop) {
-            target.insertBefore(style, target.firstChild);
-          } else if (lastStyleElementInsertedAtTop.nextSibling) {
-            target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
-          } else {
-            target.appendChild(style);
-          }
-          stylesInsertedAtTop.push(style);
-        } else if (options.insertAt === "bottom") {
-          target.appendChild(style);
-        } else {
-          throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-        }
-      }
-
-      function removeStyleElement(style) {
-        if (style.parentNode === null) return false;
-        style.parentNode.removeChild(style);
-
-        var idx = stylesInsertedAtTop.indexOf(style);
-        if (idx >= 0) {
-          stylesInsertedAtTop.splice(idx, 1);
-        }
-      }
-
-      function createStyleElement(options) {
-        var style = document.createElement("style");
-
-        options.attrs.type = "text/css";
-
-        addAttrs(style, options.attrs);
-        insertStyleElement(options, style);
-
-        return style;
-      }
-
-      function createLinkElement(options) {
-        var link = document.createElement("link");
-
-        options.attrs.type = "text/css";
-        options.attrs.rel = "stylesheet";
-
-        addAttrs(link, options.attrs);
-        insertStyleElement(options, link);
-
-        return link;
-      }
-
-      function addAttrs(el, attrs) {
-        Object.keys(attrs).forEach(function (key) {
-          el.setAttribute(key, attrs[key]);
-        });
-      }
-
-      function addStyle(obj, options) {
-        var style, update, remove, result;
-
-        // If a transform function was defined, run it on the css
-        if (options.transform && obj.css) {
-          result = options.transform(obj.css);
-
-          if (result) {
-            // If transform returns a value, use that instead of the original css.
-            // This allows running runtime transformations on the css.
-            obj.css = result;
-          } else {
-            // If the transform function returns a falsy value, don't add this css.
-            // This allows conditional loading of css
-            return function () {
-              // noop
-            };
-          }
-        }
-
-        if (options.singleton) {
-          var styleIndex = singletonCounter++;
-
-          style = singleton || (singleton = createStyleElement(options));
-
-          update = applyToSingletonTag.bind(null, style, styleIndex, false);
-          remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-        } else if (obj.sourceMap && typeof URL === "function" && typeof URL.createObjectURL === "function" && typeof URL.revokeObjectURL === "function" && typeof Blob === "function" && typeof btoa === "function") {
-          style = createLinkElement(options);
-          update = updateLink.bind(null, style, options);
-          remove = function remove() {
-            removeStyleElement(style);
-
-            if (style.href) URL.revokeObjectURL(style.href);
-          };
-        } else {
-          style = createStyleElement(options);
-          update = applyToTag.bind(null, style);
-          remove = function remove() {
-            removeStyleElement(style);
-          };
-        }
-
-        update(obj);
-
-        return function updateStyle(newObj) {
-          if (newObj) {
-            if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
-              return;
-            }
-
-            update(obj = newObj);
-          } else {
-            remove();
-          }
-        };
-      }
-
-      var replaceText = function () {
-        var textStore = [];
-
-        return function (index, replacement) {
-          textStore[index] = replacement;
-
-          return textStore.filter(Boolean).join('\n');
-        };
-      }();
-
-      function applyToSingletonTag(style, index, remove, obj) {
-        var css = remove ? "" : obj.css;
-
-        if (style.styleSheet) {
-          style.styleSheet.cssText = replaceText(index, css);
-        } else {
-          var cssNode = document.createTextNode(css);
-          var childNodes = style.childNodes;
-
-          if (childNodes[index]) style.removeChild(childNodes[index]);
-
-          if (childNodes.length) {
-            style.insertBefore(cssNode, childNodes[index]);
-          } else {
-            style.appendChild(cssNode);
-          }
-        }
-      }
-
-      function applyToTag(style, obj) {
-        var css = obj.css;
-        var media = obj.media;
-
-        if (media) {
-          style.setAttribute("media", media);
-        }
-
-        if (style.styleSheet) {
-          style.styleSheet.cssText = css;
-        } else {
-          while (style.firstChild) {
-            style.removeChild(style.firstChild);
-          }
-
-          style.appendChild(document.createTextNode(css));
-        }
-      }
-
-      function updateLink(link, options, obj) {
-        var css = obj.css;
-        var sourceMap = obj.sourceMap;
-
-        /*
-        	If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
-        	and there is no publicPath defined then lets turn convertToAbsoluteUrls
-        	on by default.  Otherwise default to the convertToAbsoluteUrls option
-        	directly
-        */
-        var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
-
-        if (options.convertToAbsoluteUrls || autoFixUrls) {
-          css = fixUrls(css);
-        }
-
-        if (sourceMap) {
-          // http://stackoverflow.com/a/26603875
-          css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-        }
-
-        var blob = new Blob([css], { type: "text/css" });
-
-        var oldSrc = link.href;
-
-        link.href = URL.createObjectURL(blob);
-
-        if (oldSrc) URL.revokeObjectURL(oldSrc);
-      }
-
-      /***/
-    },
-    /* 16 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -2410,7 +1981,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 17 */
+    /* 15 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -2454,7 +2025,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 18 */
+    /* 16 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -2523,7 +2094,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 19 */
+    /* 17 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -2911,7 +2482,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 20 */
+    /* 18 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -2921,17 +2492,17 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       });
       exports.getSpacingClasses = exports.log = undefined;
 
-      var _compact2 = __webpack_require__(16);
+      var _compact2 = __webpack_require__(14);
 
       var _compact3 = _interopRequireDefault(_compact2);
 
-      var _memoize2 = __webpack_require__(52);
+      var _memoize2 = __webpack_require__(50);
 
       var _memoize3 = _interopRequireDefault(_memoize2);
 
       exports.getDisplayName = getDisplayName;
 
-      var _spacing = __webpack_require__(85);
+      var _spacing = __webpack_require__(83);
 
       var _spacing2 = _interopRequireDefault(_spacing);
 
@@ -3018,7 +2589,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 21 */
+    /* 19 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -3029,7 +2600,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
       };
 
-      var freeGlobal = __webpack_require__(60);
+      var freeGlobal = __webpack_require__(58);
 
       /** Detect free variable `self`. */
       var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
@@ -3041,7 +2612,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 22 */
+    /* 20 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -3064,12 +2635,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       var _prodInvariant = __webpack_require__(5),
           _assign = __webpack_require__(8);
 
-      var ReactNoopUpdateQueue = __webpack_require__(23);
+      var ReactNoopUpdateQueue = __webpack_require__(21);
 
       var canDefineProperty = __webpack_require__(9);
-      var emptyObject = __webpack_require__(24);
+      var emptyObject = __webpack_require__(22);
       var invariant = __webpack_require__(3);
-      var lowPriorityWarning = __webpack_require__(18);
+      var lowPriorityWarning = __webpack_require__(16);
 
       /**
        * Base class helpers for the updating state of a component.
@@ -3194,7 +2765,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 23 */
+    /* 21 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -3293,7 +2864,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 24 */
+    /* 22 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -3317,7 +2888,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 25 */
+    /* 23 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -3341,7 +2912,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 26 */
+    /* 24 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -3386,7 +2957,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 27 */
+    /* 25 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -3414,15 +2985,15 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       };
 
       var ReactCurrentOwner = __webpack_require__(10);
-      var ReactComponentTreeHook = __webpack_require__(19);
+      var ReactComponentTreeHook = __webpack_require__(17);
       var ReactElement = __webpack_require__(4);
 
-      var checkReactTypeSpec = __webpack_require__(41);
+      var checkReactTypeSpec = __webpack_require__(39);
 
       var canDefineProperty = __webpack_require__(9);
-      var getIteratorFn = __webpack_require__(26);
+      var getIteratorFn = __webpack_require__(24);
       var warning = __webpack_require__(2);
-      var lowPriorityWarning = __webpack_require__(18);
+      var lowPriorityWarning = __webpack_require__(16);
 
       function getDeclarationErrorAddendum() {
         if (ReactCurrentOwner.current) {
@@ -3651,7 +3222,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 28 */
+    /* 26 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -3670,12 +3241,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
       };
 
-      var emptyFunction = __webpack_require__(17);
+      var emptyFunction = __webpack_require__(15);
       var invariant = __webpack_require__(3);
       var warning = __webpack_require__(2);
 
-      var ReactPropTypesSecret = __webpack_require__(29);
-      var checkPropTypes = __webpack_require__(47);
+      var ReactPropTypesSecret = __webpack_require__(27);
+      var checkPropTypes = __webpack_require__(45);
 
       module.exports = function (isValidElement, throwOnDirectAccess) {
         /* global Symbol */
@@ -4152,7 +3723,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 29 */
+    /* 27 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -4171,13 +3742,13 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 30 */
+    /* 28 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var baseIsNative = __webpack_require__(57),
-          getValue = __webpack_require__(67);
+      var baseIsNative = __webpack_require__(55),
+          getValue = __webpack_require__(65);
 
       /**
        * Gets the native function at `key` of `object`.
@@ -4196,12 +3767,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 31 */
+    /* 29 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var root = __webpack_require__(21);
+      var root = __webpack_require__(19);
 
       /** Built-in value references. */
       var _Symbol = root.Symbol;
@@ -4210,7 +3781,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 32 */
+    /* 30 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -4255,41 +3826,15 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 33 */
-    /***/function (module, exports, __webpack_require__) {
+    /* 31 */
+    /***/function (module, exports) {
 
-      // style-loader: Adds some css to the DOM by adding a <style> tag
-
-      // load the styles
-      var content = __webpack_require__(90);
-      if (typeof content === 'string') content = [[module.i, content, '']];
-      // Prepare cssTransformation
-      var transform;
-
-      var options = {};
-      options.transform = transform;
-      // add the styles to the DOM
-      var update = __webpack_require__(15)(content, options);
-      if (content.locals) module.exports = content.locals;
-      // Hot Module Replacement
-      if (false) {
-        // When the styles change, update the <style> tags
-        if (!content.locals) {
-          module.hot.accept("!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/postcss-loader/lib/index.js??ref--1-2!./dev.css", function () {
-            var newContent = require('!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/postcss-loader/lib/index.js??ref--1-2!./dev.css');
-            if (typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-            update(newContent);
-          });
-        }
-        // When the module is disposed, remove the <style> tags
-        module.hot.dispose(function () {
-          update();
-        });
-      }
+      // removed by extract-text-webpack-plugin
+      module.exports = { "colors1": "dev__colors1___Cwxl9", "colors2": "dev__colors2___2L6H5", "colors3": "dev__colors3___3bIDu", "colors4": "dev__colors4___inP-1" };
 
       /***/
     },
-    /* 34 */
+    /* 32 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -4308,7 +3853,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _layout = __webpack_require__(91);
+      var _layout = __webpack_require__(85);
 
       Object.defineProperty(exports, 'Layout', {
         enumerable: true,
@@ -4317,7 +3862,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _version = __webpack_require__(94);
+      var _version = __webpack_require__(87);
 
       Object.defineProperty(exports, 'version', {
         enumerable: true,
@@ -4326,7 +3871,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _col = __webpack_require__(95);
+      var _col = __webpack_require__(88);
 
       Object.defineProperty(exports, 'Col', {
         enumerable: true,
@@ -4335,7 +3880,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _root = __webpack_require__(96);
+      var _root = __webpack_require__(89);
 
       Object.defineProperty(exports, 'Root', {
         enumerable: true,
@@ -4344,7 +3889,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _offset = __webpack_require__(97);
+      var _offset = __webpack_require__(90);
 
       Object.defineProperty(exports, 'Offset', {
         enumerable: true,
@@ -4353,7 +3898,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _utils = __webpack_require__(20);
+      var _utils = __webpack_require__(18);
 
       var srcUtils = _interopRequireWildcard(_utils);
 
@@ -4377,7 +3922,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 35 */
+    /* 33 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -4393,24 +3938,24 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       var _assign = __webpack_require__(8);
 
-      var ReactBaseClasses = __webpack_require__(22);
-      var ReactChildren = __webpack_require__(36);
-      var ReactDOMFactories = __webpack_require__(40);
+      var ReactBaseClasses = __webpack_require__(20);
+      var ReactChildren = __webpack_require__(34);
+      var ReactDOMFactories = __webpack_require__(38);
       var ReactElement = __webpack_require__(4);
-      var ReactPropTypes = __webpack_require__(45);
-      var ReactVersion = __webpack_require__(48);
+      var ReactPropTypes = __webpack_require__(43);
+      var ReactVersion = __webpack_require__(46);
 
-      var createReactClass = __webpack_require__(49);
-      var onlyChild = __webpack_require__(51);
+      var createReactClass = __webpack_require__(47);
+      var onlyChild = __webpack_require__(49);
 
       var createElement = ReactElement.createElement;
       var createFactory = ReactElement.createFactory;
       var cloneElement = ReactElement.cloneElement;
 
       if (true) {
-        var lowPriorityWarning = __webpack_require__(18);
+        var lowPriorityWarning = __webpack_require__(16);
         var canDefineProperty = __webpack_require__(9);
-        var ReactElementValidator = __webpack_require__(27);
+        var ReactElementValidator = __webpack_require__(25);
         var didWarnPropTypesDeprecated = false;
         createElement = ReactElementValidator.createElement;
         createFactory = ReactElementValidator.createFactory;
@@ -4513,7 +4058,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 36 */
+    /* 34 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -4527,11 +4072,11 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
        *
        */
 
-      var PooledClass = __webpack_require__(37);
+      var PooledClass = __webpack_require__(35);
       var ReactElement = __webpack_require__(4);
 
-      var emptyFunction = __webpack_require__(17);
-      var traverseAllChildren = __webpack_require__(38);
+      var emptyFunction = __webpack_require__(15);
+      var traverseAllChildren = __webpack_require__(36);
 
       var twoArgumentPooler = PooledClass.twoArgumentPooler;
       var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -4707,7 +4252,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 37 */
+    /* 35 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -4823,7 +4368,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 38 */
+    /* 36 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -4846,11 +4391,11 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       var _prodInvariant = __webpack_require__(5);
 
       var ReactCurrentOwner = __webpack_require__(10);
-      var REACT_ELEMENT_TYPE = __webpack_require__(25);
+      var REACT_ELEMENT_TYPE = __webpack_require__(23);
 
-      var getIteratorFn = __webpack_require__(26);
+      var getIteratorFn = __webpack_require__(24);
       var invariant = __webpack_require__(3);
-      var KeyEscapeUtils = __webpack_require__(39);
+      var KeyEscapeUtils = __webpack_require__(37);
       var warning = __webpack_require__(2);
 
       var SEPARATOR = '.';
@@ -5009,7 +4554,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 39 */
+    /* 37 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5072,7 +4617,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 40 */
+    /* 38 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5095,7 +4640,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
        */
       var createDOMFactory = ReactElement.createFactory;
       if (true) {
-        var ReactElementValidator = __webpack_require__(27);
+        var ReactElementValidator = __webpack_require__(25);
         createDOMFactory = ReactElementValidator.createFactory;
       }
 
@@ -5245,7 +4790,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 41 */
+    /* 39 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5269,8 +4814,8 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
         var _prodInvariant = __webpack_require__(5);
 
-        var ReactPropTypeLocationNames = __webpack_require__(43);
-        var ReactPropTypesSecret = __webpack_require__(44);
+        var ReactPropTypeLocationNames = __webpack_require__(41);
+        var ReactPropTypesSecret = __webpack_require__(42);
 
         var invariant = __webpack_require__(3);
         var warning = __webpack_require__(2);
@@ -5283,7 +4828,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
           // https://github.com/facebook/react/issues/7240
           // Remove the inline requires when we don't need them anymore:
           // https://github.com/facebook/react/pull/7178
-          ReactComponentTreeHook = __webpack_require__(19);
+          ReactComponentTreeHook = __webpack_require__(17);
         }
 
         var loggedTypeFailures = {};
@@ -5325,7 +4870,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
                 if (true) {
                   if (!ReactComponentTreeHook) {
-                    ReactComponentTreeHook = __webpack_require__(19);
+                    ReactComponentTreeHook = __webpack_require__(17);
                   }
                   if (debugID !== null) {
                     componentStackInfo = ReactComponentTreeHook.getStackAddendumByID(debugID);
@@ -5342,11 +4887,11 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
         module.exports = checkReactTypeSpec;
         /* WEBPACK VAR INJECTION */
-      }).call(exports, __webpack_require__(42));
+      }).call(exports, __webpack_require__(40));
 
       /***/
     },
-    /* 42 */
+    /* 40 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5540,7 +5085,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 43 */
+    /* 41 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5569,7 +5114,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 44 */
+    /* 42 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5590,7 +5135,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 45 */
+    /* 43 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5607,13 +5152,13 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       var _require = __webpack_require__(4),
           isValidElement = _require.isValidElement;
 
-      var factory = __webpack_require__(46);
+      var factory = __webpack_require__(44);
 
       module.exports = factory(isValidElement);
 
       /***/
     },
-    /* 46 */
+    /* 44 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5631,7 +5176,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       // However if one is migrating to the `prop-types` npm library, they will go through the
       // `index.js` entry point, and it will branch depending on the environment.
 
-      var factory = __webpack_require__(28);
+      var factory = __webpack_require__(26);
       module.exports = function (isValidElement) {
         // It is still allowed in 15.5.
         var throwOnDirectAccess = false;
@@ -5640,7 +5185,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 47 */
+    /* 45 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5662,7 +5207,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       if (true) {
         var invariant = __webpack_require__(3);
         var warning = __webpack_require__(2);
-        var ReactPropTypesSecret = __webpack_require__(29);
+        var ReactPropTypesSecret = __webpack_require__(27);
         var loggedTypeFailures = {};
       }
 
@@ -5712,7 +5257,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 48 */
+    /* 46 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5730,7 +5275,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 49 */
+    /* 47 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5744,20 +5289,20 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
        *
        */
 
-      var _require = __webpack_require__(22),
+      var _require = __webpack_require__(20),
           Component = _require.Component;
 
       var _require2 = __webpack_require__(4),
           isValidElement = _require2.isValidElement;
 
-      var ReactNoopUpdateQueue = __webpack_require__(23);
-      var factory = __webpack_require__(50);
+      var ReactNoopUpdateQueue = __webpack_require__(21);
+      var factory = __webpack_require__(48);
 
       module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
       /***/
     },
-    /* 50 */
+    /* 48 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -5779,7 +5324,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       var _assign = __webpack_require__(8);
 
-      var emptyObject = __webpack_require__(24);
+      var emptyObject = __webpack_require__(22);
       var _invariant = __webpack_require__(3);
 
       if (true) {
@@ -6500,7 +6045,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 51 */
+    /* 49 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6543,12 +6088,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 52 */
+    /* 50 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var MapCache = __webpack_require__(53);
+      var MapCache = __webpack_require__(51);
 
       /** Error message constants. */
       var FUNC_ERROR_TEXT = 'Expected a function';
@@ -6624,16 +6169,16 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 53 */
+    /* 51 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var mapCacheClear = __webpack_require__(54),
-          mapCacheDelete = __webpack_require__(80),
-          mapCacheGet = __webpack_require__(82),
-          mapCacheHas = __webpack_require__(83),
-          mapCacheSet = __webpack_require__(84);
+      var mapCacheClear = __webpack_require__(52),
+          mapCacheDelete = __webpack_require__(78),
+          mapCacheGet = __webpack_require__(80),
+          mapCacheHas = __webpack_require__(81),
+          mapCacheSet = __webpack_require__(82);
 
       /**
        * Creates a map cache object to store key-value pairs.
@@ -6664,14 +6209,14 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 54 */
+    /* 52 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var Hash = __webpack_require__(55),
-          ListCache = __webpack_require__(72),
-          Map = __webpack_require__(79);
+      var Hash = __webpack_require__(53),
+          ListCache = __webpack_require__(70),
+          Map = __webpack_require__(77);
 
       /**
        * Removes all key-value entries from the map.
@@ -6693,16 +6238,16 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 55 */
+    /* 53 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var hashClear = __webpack_require__(56),
-          hashDelete = __webpack_require__(68),
-          hashGet = __webpack_require__(69),
-          hashHas = __webpack_require__(70),
-          hashSet = __webpack_require__(71);
+      var hashClear = __webpack_require__(54),
+          hashDelete = __webpack_require__(66),
+          hashGet = __webpack_require__(67),
+          hashHas = __webpack_require__(68),
+          hashSet = __webpack_require__(69);
 
       /**
        * Creates a hash object.
@@ -6733,7 +6278,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 56 */
+    /* 54 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6756,15 +6301,15 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 57 */
+    /* 55 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var isFunction = __webpack_require__(58),
-          isMasked = __webpack_require__(64),
-          isObject = __webpack_require__(32),
-          toSource = __webpack_require__(66);
+      var isFunction = __webpack_require__(56),
+          isMasked = __webpack_require__(62),
+          isObject = __webpack_require__(30),
+          toSource = __webpack_require__(64);
 
       /**
        * Used to match `RegExp`
@@ -6808,13 +6353,13 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 58 */
+    /* 56 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var baseGetTag = __webpack_require__(59),
-          isObject = __webpack_require__(32);
+      var baseGetTag = __webpack_require__(57),
+          isObject = __webpack_require__(30);
 
       /** `Object#toString` result references. */
       var asyncTag = '[object AsyncFunction]',
@@ -6853,14 +6398,14 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 59 */
+    /* 57 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var _Symbol = __webpack_require__(31),
-          getRawTag = __webpack_require__(62),
-          objectToString = __webpack_require__(63);
+      var _Symbol = __webpack_require__(29),
+          getRawTag = __webpack_require__(60),
+          objectToString = __webpack_require__(61);
 
       /** `Object#toString` result references. */
       var nullTag = '[object Null]',
@@ -6887,7 +6432,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 60 */
+    /* 58 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6905,11 +6450,11 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
         module.exports = freeGlobal;
         /* WEBPACK VAR INJECTION */
-      }).call(exports, __webpack_require__(61));
+      }).call(exports, __webpack_require__(59));
 
       /***/
     },
-    /* 61 */
+    /* 59 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6943,12 +6488,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 62 */
+    /* 60 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var _Symbol = __webpack_require__(31);
+      var _Symbol = __webpack_require__(29);
 
       /** Used for built-in method references. */
       var objectProto = Object.prototype;
@@ -6997,7 +6542,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 63 */
+    /* 61 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7028,12 +6573,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 64 */
+    /* 62 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var coreJsData = __webpack_require__(65);
+      var coreJsData = __webpack_require__(63);
 
       /** Used to detect methods masquerading as native. */
       var maskSrcKey = function () {
@@ -7056,12 +6601,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 65 */
+    /* 63 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var root = __webpack_require__(21);
+      var root = __webpack_require__(19);
 
       /** Used to detect overreaching core-js shims. */
       var coreJsData = root['__core-js_shared__'];
@@ -7070,7 +6615,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 66 */
+    /* 64 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7105,7 +6650,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 67 */
+    /* 65 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7127,7 +6672,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 68 */
+    /* 66 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7153,7 +6698,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 69 */
+    /* 67 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7191,7 +6736,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 70 */
+    /* 68 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7222,7 +6767,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 71 */
+    /* 69 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7253,16 +6798,16 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 72 */
+    /* 70 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var listCacheClear = __webpack_require__(73),
-          listCacheDelete = __webpack_require__(74),
-          listCacheGet = __webpack_require__(76),
-          listCacheHas = __webpack_require__(77),
-          listCacheSet = __webpack_require__(78);
+      var listCacheClear = __webpack_require__(71),
+          listCacheDelete = __webpack_require__(72),
+          listCacheGet = __webpack_require__(74),
+          listCacheHas = __webpack_require__(75),
+          listCacheSet = __webpack_require__(76);
 
       /**
        * Creates an list cache object.
@@ -7293,7 +6838,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 73 */
+    /* 71 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7315,7 +6860,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 74 */
+    /* 72 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7358,7 +6903,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 75 */
+    /* 73 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7404,7 +6949,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 76 */
+    /* 74 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7431,7 +6976,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 77 */
+    /* 75 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7455,7 +7000,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 78 */
+    /* 76 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7489,13 +7034,13 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 79 */
+    /* 77 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var getNative = __webpack_require__(30),
-          root = __webpack_require__(21);
+      var getNative = __webpack_require__(28),
+          root = __webpack_require__(19);
 
       /* Built-in method references that are verified to be native. */
       var Map = getNative(root, 'Map');
@@ -7504,7 +7049,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 80 */
+    /* 78 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7530,7 +7075,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 81 */
+    /* 79 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7557,7 +7102,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 82 */
+    /* 80 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7581,7 +7126,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 83 */
+    /* 81 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7605,7 +7150,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 84 */
+    /* 82 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7635,284 +7180,23 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
+    /* 83 */
+    /***/function (module, exports) {
+
+      // removed by extract-text-webpack-plugin
+      module.exports = { "noPadding": "spacing__noPadding___3zEXg", "topHalfPadding": "spacing__topHalfPadding___1FQjX", "leftHalfPadding": "spacing__leftHalfPadding___2O5qU", "rightHalfPadding": "spacing__rightHalfPadding___2rhRg", "bottomHalfPadding": "spacing__bottomHalfPadding___L8ZjY", "topSinglePadding": "spacing__topSinglePadding___1bdEy", "leftSinglePadding": "spacing__leftSinglePadding___3snLN", "rightSinglePadding": "spacing__rightSinglePadding___3gFvW", "bottomSinglePadding": "spacing__bottomSinglePadding___YRMfc", "topDoublePadding": "spacing__topDoublePadding___3wdO3", "leftDoublePadding": "spacing__leftDoublePadding___-4uBE", "rightDoublePadding": "spacing__rightDoublePadding___aDEyo", "bottomDoublePadding": "spacing__bottomDoublePadding___47QLI", "bottomDoubleMargin": "spacing__bottomDoubleMargin___36k1-", "bottomHalfMargin": "spacing__bottomHalfMargin___DYhgG", "bottomSingleMargin": "spacing__bottomSingleMargin___Ah-QE", "leftDoubleMargin": "spacing__leftDoubleMargin___2M99D", "leftHalfMargin": "spacing__leftHalfMargin___16PZQ", "leftSingleMargin": "spacing__leftSingleMargin___30CCd", "noMargin": "spacing__noMargin___bcal9", "rightDoubleMargin": "spacing__rightDoubleMargin___2lmQg", "rightHalfMargin": "spacing__rightHalfMargin___kp5Hs", "rightSingleMargin": "spacing__rightSingleMargin___2knpa", "topDoubleMargin": "spacing__topDoubleMargin___-Dham", "topHalfMargin": "spacing__topHalfMargin___AeL5z", "topSingleMargin": "spacing__topSingleMargin___3VMuo" };
+
+      /***/
+    },
+    /* 84 */
+    /***/function (module, exports) {
+
+      // removed by extract-text-webpack-plugin
+      module.exports = { "grid": "grid__grid___bk7GY", "col": "grid__col___1OEZt", "leftJustify": "grid__leftJustify___3vN8C", "centerJustify": "grid__centerJustify___2b90U", "rightJustify": "grid__rightJustify___3n13f", "topAlign": "grid__topAlign___1ywN6", "centerAlign": "grid__centerAlign___2Vm2H", "bottomAlign": "grid__bottomAlign___1CGa7", "col-fit": "grid__col-fit___2fDTl", "colFit": "grid__col-fit___2fDTl", "col-auto": "grid__col-auto___3OEdx", "colAuto": "grid__col-auto___3OEdx", "col-1": "grid__col-1___17LJG", "col1": "grid__col-1___17LJG", "col-2": "grid__col-2___2nMUV", "col2": "grid__col-2___2nMUV", "col-3": "grid__col-3___xkeJO", "col3": "grid__col-3___xkeJO", "col-4": "grid__col-4___3Rexy", "col4": "grid__col-4___3Rexy", "col-5": "grid__col-5___1edIG", "col5": "grid__col-5___1edIG", "col-6": "grid__col-6___udRC_", "col6": "grid__col-6___udRC_", "col-7": "grid__col-7___17cZH", "col7": "grid__col-7___17cZH", "col-8": "grid__col-8___3MDYh", "col8": "grid__col-8___3MDYh", "col-9": "grid__col-9___3Bzna", "col9": "grid__col-9___3Bzna", "col-10": "grid__col-10___3sS71", "col10": "grid__col-10___3sS71", "col-11": "grid__col-11___3IgTz", "col11": "grid__col-11___3IgTz", "col-12": "grid__col-12___1Y5El", "col12": "grid__col-12___1Y5El" };
+
+      /***/
+    },
     /* 85 */
-    /***/function (module, exports, __webpack_require__) {
-
-      // style-loader: Adds some css to the DOM by adding a <style> tag
-
-      // load the styles
-      var content = __webpack_require__(86);
-      if (typeof content === 'string') content = [[module.i, content, '']];
-      // Prepare cssTransformation
-      var transform;
-
-      var options = {};
-      options.transform = transform;
-      // add the styles to the DOM
-      var update = __webpack_require__(15)(content, options);
-      if (content.locals) module.exports = content.locals;
-      // Hot Module Replacement
-      if (false) {
-        // When the styles change, update the <style> tags
-        if (!content.locals) {
-          module.hot.accept("!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/postcss-loader/lib/index.js??ref--1-2!./spacing.css", function () {
-            var newContent = require('!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/postcss-loader/lib/index.js??ref--1-2!./spacing.css');
-            if (typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-            update(newContent);
-          });
-        }
-        // When the module is disposed, remove the <style> tags
-        module.hot.dispose(function () {
-          update();
-        });
-      }
-
-      /***/
-    },
-    /* 86 */
-    /***/function (module, exports, __webpack_require__) {
-
-      exports = module.exports = __webpack_require__(14)(undefined);
-      // imports
-
-
-      // module
-      exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.spacing__noPadding___3zEXg{padding:0}.spacing__topHalfPadding___1FQjX{padding-top:12px}.spacing__leftHalfPadding___2O5qU{padding-left:12px}.spacing__rightHalfPadding___2rhRg{padding-right:12px}.spacing__bottomHalfPadding___L8ZjY{padding-bottom:12px}.spacing__topSinglePadding___1bdEy{padding-top:24px}.spacing__leftSinglePadding___3snLN{padding-left:24px}.spacing__rightSinglePadding___3gFvW{padding-right:24px}.spacing__bottomSinglePadding___YRMfc{padding-bottom:24px}.spacing__topDoublePadding___3wdO3{padding-top:48px}.spacing__leftDoublePadding___-4uBE{padding-left:48px}.spacing__rightDoublePadding___aDEyo{padding-right:48px}.spacing__bottomDoublePadding___47QLI{padding-bottom:48px}.spacing__bottomDoubleMargin___36k1-,.spacing__bottomHalfMargin___DYhgG,.spacing__bottomSingleMargin___Ah-QE,.spacing__leftDoubleMargin___2M99D,.spacing__leftHalfMargin___16PZQ,.spacing__leftSingleMargin___30CCd,.spacing__noMargin___bcal9,.spacing__rightDoubleMargin___2lmQg,.spacing__rightHalfMargin___kp5Hs,.spacing__rightSingleMargin___2knpa,.spacing__topDoubleMargin___-Dham,.spacing__topHalfMargin___AeL5z,.spacing__topSingleMargin___3VMuo{border:0 solid transparent}.spacing__topHalfMargin___AeL5z{border-top-width:12px}.spacing__leftHalfMargin___16PZQ{border-left-width:12px}.spacing__rightHalfMargin___kp5Hs{border-right-width:12px}.spacing__bottomHalfMargin___DYhgG{border-bottom-width:12px}.spacing__topSingleMargin___3VMuo{border-top-width:24px}.spacing__leftSingleMargin___30CCd{border-left-width:24px}.spacing__rightSingleMargin___2knpa{border-right-width:24px}.spacing__bottomSingleMargin___Ah-QE{border-bottom-width:24px}.spacing__topDoubleMargin___-Dham{border-top-width:48px}.spacing__leftDoubleMargin___2M99D{border-left-width:48px}.spacing__rightDoubleMargin___2lmQg{border-right-width:48px}.spacing__bottomDoubleMargin___36k1-{border-bottom-width:48px}", ""]);
-
-      // exports
-      exports.locals = {
-        "noPadding": "spacing__noPadding___3zEXg",
-        "topHalfPadding": "spacing__topHalfPadding___1FQjX",
-        "leftHalfPadding": "spacing__leftHalfPadding___2O5qU",
-        "rightHalfPadding": "spacing__rightHalfPadding___2rhRg",
-        "bottomHalfPadding": "spacing__bottomHalfPadding___L8ZjY",
-        "topSinglePadding": "spacing__topSinglePadding___1bdEy",
-        "leftSinglePadding": "spacing__leftSinglePadding___3snLN",
-        "rightSinglePadding": "spacing__rightSinglePadding___3gFvW",
-        "bottomSinglePadding": "spacing__bottomSinglePadding___YRMfc",
-        "topDoublePadding": "spacing__topDoublePadding___3wdO3",
-        "leftDoublePadding": "spacing__leftDoublePadding___-4uBE",
-        "rightDoublePadding": "spacing__rightDoublePadding___aDEyo",
-        "bottomDoublePadding": "spacing__bottomDoublePadding___47QLI",
-        "bottomDoubleMargin": "spacing__bottomDoubleMargin___36k1-",
-        "bottomHalfMargin": "spacing__bottomHalfMargin___DYhgG",
-        "bottomSingleMargin": "spacing__bottomSingleMargin___Ah-QE",
-        "leftDoubleMargin": "spacing__leftDoubleMargin___2M99D",
-        "leftHalfMargin": "spacing__leftHalfMargin___16PZQ",
-        "leftSingleMargin": "spacing__leftSingleMargin___30CCd",
-        "noMargin": "spacing__noMargin___bcal9",
-        "rightDoubleMargin": "spacing__rightDoubleMargin___2lmQg",
-        "rightHalfMargin": "spacing__rightHalfMargin___kp5Hs",
-        "rightSingleMargin": "spacing__rightSingleMargin___2knpa",
-        "topDoubleMargin": "spacing__topDoubleMargin___-Dham",
-        "topHalfMargin": "spacing__topHalfMargin___AeL5z",
-        "topSingleMargin": "spacing__topSingleMargin___3VMuo"
-      };
-
-      /***/
-    },
-    /* 87 */
-    /***/function (module, exports, __webpack_require__) {
-
-      "use strict";
-
-      /**
-       * When source maps are enabled, `style-loader` uses a link element with a data-uri to
-       * embed the css on the page. This breaks all relative urls because now they are relative to a
-       * bundle instead of the current page.
-       *
-       * One solution is to only use full urls, but that may be impossible.
-       *
-       * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
-       *
-       * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
-       *
-       */
-
-      module.exports = function (css) {
-        // get current location
-        var location = typeof window !== "undefined" && window.location;
-
-        if (!location) {
-          throw new Error("fixUrls requires window.location");
-        }
-
-        // blank or null?
-        if (!css || typeof css !== "string") {
-          return css;
-        }
-
-        var baseUrl = location.protocol + "//" + location.host;
-        var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
-
-        // convert each url(...)
-        /*
-        This regular expression is just a way to recursively match brackets within
-        a string.
-        	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
-           (  = Start a capturing group
-             (?:  = Start a non-capturing group
-                 [^)(]  = Match anything that isn't a parentheses
-                 |  = OR
-                 \(  = Match a start parentheses
-                     (?:  = Start another non-capturing groups
-                         [^)(]+  = Match anything that isn't a parentheses
-                         |  = OR
-                         \(  = Match a start parentheses
-                             [^)(]*  = Match anything that isn't a parentheses
-                         \)  = Match a end parentheses
-                     )  = End Group
-                     *\) = Match anything and then a close parens
-                 )  = Close non-capturing group
-                 *  = Match anything
-              )  = Close capturing group
-         \)  = Match a close parens
-        	 /gi  = Get all matches, not the first.  Be case insensitive.
-         */
-        var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function (fullMatch, origUrl) {
-          // strip quotes (if they exist)
-          var unquotedOrigUrl = origUrl.trim().replace(/^"(.*)"$/, function (o, $1) {
-            return $1;
-          }).replace(/^'(.*)'$/, function (o, $1) {
-            return $1;
-          });
-
-          // already a full url? no change
-          if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
-            return fullMatch;
-          }
-
-          // convert the url to a full url
-          var newUrl;
-
-          if (unquotedOrigUrl.indexOf("//") === 0) {
-            //TODO: should we add protocol?
-            newUrl = unquotedOrigUrl;
-          } else if (unquotedOrigUrl.indexOf("/") === 0) {
-            // path should be relative to the base url
-            newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
-          } else {
-            // path should be relative to current directory
-            newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
-          }
-
-          // send back the fixed url(...)
-          return "url(" + JSON.stringify(newUrl) + ")";
-        });
-
-        // send back the fixed css
-        return fixedCss;
-      };
-
-      /***/
-    },
-    /* 88 */
-    /***/function (module, exports, __webpack_require__) {
-
-      // style-loader: Adds some css to the DOM by adding a <style> tag
-
-      // load the styles
-      var content = __webpack_require__(89);
-      if (typeof content === 'string') content = [[module.i, content, '']];
-      // Prepare cssTransformation
-      var transform;
-
-      var options = {};
-      options.transform = transform;
-      // add the styles to the DOM
-      var update = __webpack_require__(15)(content, options);
-      if (content.locals) module.exports = content.locals;
-      // Hot Module Replacement
-      if (false) {
-        // When the styles change, update the <style> tags
-        if (!content.locals) {
-          module.hot.accept("!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/postcss-loader/lib/index.js??ref--1-2!./grid.css", function () {
-            var newContent = require('!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/postcss-loader/lib/index.js??ref--1-2!./grid.css');
-            if (typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-            update(newContent);
-          });
-        }
-        // When the module is disposed, remove the <style> tags
-        module.hot.dispose(function () {
-          update();
-        });
-      }
-
-      /***/
-    },
-    /* 89 */
-    /***/function (module, exports, __webpack_require__) {
-
-      exports = module.exports = __webpack_require__(14)(undefined);
-      // imports
-
-
-      // module
-      exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.grid__grid___bk7GY{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%}.grid__grid___bk7GY:not(.grid__col___1OEZt){flex-grow:1}.grid__grid___bk7GY.grid__leftJustify___3vN8C{justify-content:flex-start;margin-right:auto}.grid__grid___bk7GY.grid__centerJustify___2b90U{justify-content:center;margin-left:auto;margin-right:auto}.grid__grid___bk7GY.grid__rightJustify___3n13f{justify-content:flex-end;margin-left:auto}.grid__grid___bk7GY.grid__topAlign___1ywN6{align-content:flex-start;align-items:flex-start}.grid__grid___bk7GY.grid__centerAlign___2Vm2H{align-content:center;align-items:center}.grid__grid___bk7GY.grid__bottomAlign___1CGa7{align-content:flex-end;align-items:flex-end}.grid__grid___bk7GY.grid__col-fit___2fDTl{flex-basis:0;white-space:nowrap}.grid__grid___bk7GY.grid__col-auto___3OEdx{flex:1 1 0%}.grid__col-1___17LJG{flex-basis:8.33333%;max-width:8.33333%}.grid__col-2___2nMUV{flex-basis:16.66667%;max-width:16.66667%}.grid__col-3___xkeJO{flex-basis:25%;max-width:25%}.grid__col-4___3Rexy{flex-basis:33.33333%;max-width:33.33333%}.grid__col-5___1edIG{flex-basis:41.66667%;max-width:41.66667%}.grid__col-6___udRC_{flex-basis:50%;max-width:50%}.grid__col-7___17cZH{flex-basis:58.33333%;max-width:58.33333%}.grid__col-8___3MDYh{flex-basis:66.66667%;max-width:66.66667%}.grid__col-9___3Bzna{flex-basis:75%;max-width:75%}.grid__col-10___3sS71{flex-basis:83.33333%;max-width:83.33333%}.grid__col-11___3IgTz{flex-basis:91.66667%;max-width:91.66667%}.grid__col-12___1Y5El{flex-basis:100%;max-width:100%}", ""]);
-
-      // exports
-      exports.locals = {
-        "grid": "grid__grid___bk7GY",
-        "col": "grid__col___1OEZt",
-        "leftJustify": "grid__leftJustify___3vN8C",
-        "centerJustify": "grid__centerJustify___2b90U",
-        "rightJustify": "grid__rightJustify___3n13f",
-        "topAlign": "grid__topAlign___1ywN6",
-        "centerAlign": "grid__centerAlign___2Vm2H",
-        "bottomAlign": "grid__bottomAlign___1CGa7",
-        "col-fit": "grid__col-fit___2fDTl",
-        "colFit": "grid__col-fit___2fDTl",
-        "col-auto": "grid__col-auto___3OEdx",
-        "colAuto": "grid__col-auto___3OEdx",
-        "col-1": "grid__col-1___17LJG",
-        "col1": "grid__col-1___17LJG",
-        "col-2": "grid__col-2___2nMUV",
-        "col2": "grid__col-2___2nMUV",
-        "col-3": "grid__col-3___xkeJO",
-        "col3": "grid__col-3___xkeJO",
-        "col-4": "grid__col-4___3Rexy",
-        "col4": "grid__col-4___3Rexy",
-        "col-5": "grid__col-5___1edIG",
-        "col5": "grid__col-5___1edIG",
-        "col-6": "grid__col-6___udRC_",
-        "col6": "grid__col-6___udRC_",
-        "col-7": "grid__col-7___17cZH",
-        "col7": "grid__col-7___17cZH",
-        "col-8": "grid__col-8___3MDYh",
-        "col8": "grid__col-8___3MDYh",
-        "col-9": "grid__col-9___3Bzna",
-        "col9": "grid__col-9___3Bzna",
-        "col-10": "grid__col-10___3sS71",
-        "col10": "grid__col-10___3sS71",
-        "col-11": "grid__col-11___3IgTz",
-        "col11": "grid__col-11___3IgTz",
-        "col-12": "grid__col-12___1Y5El",
-        "col12": "grid__col-12___1Y5El"
-      };
-
-      /***/
-    },
-    /* 90 */
-    /***/function (module, exports, __webpack_require__) {
-
-      exports = module.exports = __webpack_require__(14)(undefined);
-      // imports
-
-
-      // module
-      exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.dev__colors1___Cwxl9{color:gold;background-color:#1d1f21}.dev__colors2___2L6H5{color:#1469cc;background-color:#efefef}.dev__colors3___3bIDu{color:#1d1f21;background-color:gold}.dev__colors4___inP-1{color:#efefef;background-color:#1469cc}", ""]);
-
-      // exports
-      exports.locals = {
-        "colors1": "dev__colors1___Cwxl9",
-        "colors2": "dev__colors2___2L6H5",
-        "colors3": "dev__colors3___3bIDu",
-        "colors4": "dev__colors4___inP-1"
-      };
-
-      /***/
-    },
-    /* 91 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7921,7 +7205,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         value: true
       });
 
-      var _compact2 = __webpack_require__(16);
+      var _compact2 = __webpack_require__(14);
 
       var _compact3 = _interopRequireDefault(_compact2);
 
@@ -7953,13 +7237,13 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       var _propTypes2 = _interopRequireDefault(_propTypes);
 
-      var _utils = __webpack_require__(20);
+      var _utils = __webpack_require__(18);
 
-      var _layout = __webpack_require__(92);
+      var _layout = __webpack_require__(86);
 
       var _layout2 = _interopRequireDefault(_layout);
 
-      var _dev = __webpack_require__(33);
+      var _dev = __webpack_require__(31);
 
       var _dev2 = _interopRequireDefault(_dev);
 
@@ -8099,64 +7383,15 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 92 */
-    /***/function (module, exports, __webpack_require__) {
+    /* 86 */
+    /***/function (module, exports) {
 
-      // style-loader: Adds some css to the DOM by adding a <style> tag
-
-      // load the styles
-      var content = __webpack_require__(93);
-      if (typeof content === 'string') content = [[module.i, content, '']];
-      // Prepare cssTransformation
-      var transform;
-
-      var options = {};
-      options.transform = transform;
-      // add the styles to the DOM
-      var update = __webpack_require__(15)(content, options);
-      if (content.locals) module.exports = content.locals;
-      // Hot Module Replacement
-      if (false) {
-        // When the styles change, update the <style> tags
-        if (!content.locals) {
-          module.hot.accept("!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/postcss-loader/lib/index.js??ref--1-2!./layout.css", function () {
-            var newContent = require('!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/postcss-loader/lib/index.js??ref--1-2!./layout.css');
-            if (typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-            update(newContent);
-          });
-        }
-        // When the module is disposed, remove the <style> tags
-        module.hot.dispose(function () {
-          update();
-        });
-      }
+      // removed by extract-text-webpack-plugin
+      module.exports = { "layout": "layout__layout___74Wzo", "parent": "layout__parent___2MI7Y", "overflow": "layout__overflow___2j6Gd", "auto": "layout__auto___15Qo_", "stretch": "layout__stretch___3Z7Y8", "fixedTop": "layout__fixedTop___dKj8O", "fixedBottom": "layout__fixedBottom___1CNXU" };
 
       /***/
     },
-    /* 93 */
-    /***/function (module, exports, __webpack_require__) {
-
-      exports = module.exports = __webpack_require__(14)(undefined);
-      // imports
-
-
-      // module
-      exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.layout__layout___74Wzo{display:flex;align-self:flex-start;align-items:center;flex-flow:column;box-sizing:border-box;width:100%;min-width:400px}.layout__layout___74Wzo>:not(.layout__layout___74Wzo){max-width:1224px}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto;overflow-x:hidden}.layout__auto___15Qo_{flex-grow:0;flex-shrink:0}.layout__stretch___3Z7Y8{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}", ""]);
-
-      // exports
-      exports.locals = {
-        "layout": "layout__layout___74Wzo",
-        "parent": "layout__parent___2MI7Y",
-        "overflow": "layout__overflow___2j6Gd",
-        "auto": "layout__auto___15Qo_",
-        "stretch": "layout__stretch___3Z7Y8",
-        "fixedTop": "layout__fixedTop___dKj8O",
-        "fixedBottom": "layout__fixedBottom___1CNXU"
-      };
-
-      /***/
-    },
-    /* 94 */
+    /* 87 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -8165,7 +7400,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 95 */
+    /* 88 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -8228,7 +7463,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 96 */
+    /* 89 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -8268,7 +7503,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 97 */
+    /* 90 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -60529,4 +59764,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.af2ce50a525219f3464c.bundle.js.map
+//# sourceMappingURL=preview.1f164afab08d5ab6f7b2.bundle.js.map
