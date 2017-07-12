@@ -4,6 +4,10 @@ Reflex is a React and flexbox-based layout solution. With Reflex, you can elimin
 
 [Learn how to use Reflex in your own project](https://github.com/obartra/reflex/wiki/Getting-Started).
 
+or
+
+[Play with a demo](https://codesandbox.io/s/k7RvpOmN)
+
 ## 📺 Examples
 
 We have several examples [on the website](https://obartra.github.io/reflex). Here is one of them:
