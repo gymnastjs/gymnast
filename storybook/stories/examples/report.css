@@ -4,61 +4,30 @@
   position: absolute;
   top: 0;
 
+  & p,
+  & ul,
+  & li,
   & h1,
   & h2 {
     margin: 0;
-  }
-
-  & button {
-    width: 100%;
-    height: 40px;
-    font-size: 18px;
-    box-sizing: border-box;
-    border-radius: 0;
-    border: 0;
-    color: var(--axonBlack);
-    background-color: var(--axonGold);
+    padding: 0;
   }
 
   /* header heights, hard coded offsets */
   & .main {
-    margin-top: 181px;
+    margin-top: 157px;
   }
   /* end of hard coded offsets */
 
-  & .header {
-    color: var(--axonGold);
-    background-color: var(--axonBlack);
-  }
-
-  & .nav {
-    color: var(--nomuraGray);
-    background-color: var(--bolt);
-  }
-
-  & .subheader,
-  & .content {
-    color: var(--bolt);
-    background-color: var(--nomuraGray);
-  }
-
-  & .card {
+  & .card,
+  & li:nth-child(2n + 1) {
     color: var(--axonBlack);
     background-color: white;
   }
 
-  & .top {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    color: var(--nomuraGray);
-    background-color: var(--bolt);
-  }
-
-  & p,
-  & ul,
-  & li {
-    margin: 0;
-    padding: 0;
+  & li:nth-child(2n) {
+    color: var(--axonGold);
+    background-color: var(--axonBlack);
   }
 
   & li {
@@ -67,25 +36,5 @@
     height: calc(24px * 2 - 17px);
     text-align: center;
     padding-top: 17px;
-
-    &:nth-child(2n + 1) {
-      color: var(--axonBlack);
-      background-color: white;
-    }
-
-    &:nth-child(2n) {
-      color: var(--axonGold);
-      background-color: var(--axonBlack);
-    }
-  }
-
-  & .subheader {
-    color: var(--nomuraGray);
-    background-color: var(--bolt);
-  }
-
-  & .nav {
-    background-color: transparent;
-    color: var(--bolt);
   }
 }

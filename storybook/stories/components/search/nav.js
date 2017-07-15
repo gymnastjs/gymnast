@@ -4,7 +4,7 @@ import { Col, Layout, Grid, Root } from 'reflex'
 
 export default function SearchNav() {
   return (
-    <Layout dev={2} margin={[1, 0, 0, 0]}>
+    <Layout dev={4} margin={[1, 0, 0, 0]}>
       <Root>
         <Grid>
           <Col size={7}>
@@ -25,7 +25,7 @@ export default function SearchNav() {
                 size="auto"
                 marginLeft={0}
                 marginBottom={0}
-                dev={4}
+                dev={2}
                 style={{ whiteSpace: 'nowrap' }}
               >
                 ipsum
@@ -44,7 +44,7 @@ export default function SearchNav() {
                 style={{ whiteSpace: 'nowrap' }}
                 marginBottom={0}
                 marginLeft={0}
-                dev={4}
+                dev={2}
               >
                 sit amet
               </Col>

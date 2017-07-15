@@ -3,6 +3,7 @@ import React from 'react'
 import { Col, Grid } from 'reflex'
 import { times } from 'lodash'
 import styles from '../../../shared/stories.css'
+import { bottomHalf } from '../../../shared/marginTypes'
 
 export default function SearchResults({
   results = 1,
@@ -14,7 +15,7 @@ export default function SearchResults({
   size?: number,
 }) {
   return (
-    <Grid size={size} dev={2} align="top">
+    <Grid size={size} dev={5} align="top">
       <Grid>
         <Col size={4}>
           <input placeholder="Sort by..." />
@@ -35,10 +36,10 @@ export default function SearchResults({
       {times(results, key =>
         <Grid key={key}>
           <Col size={5}>
-            <Grid margin={[0, 0, 0.5, 0]} dev={1}>
+            <Grid margin={bottomHalf} dev={1}>
               Orci tempus venenatis
             </Grid>
-            <Grid margin={[0, 0, 0.5, 0]} dev={1}>
+            <Grid margin={bottomHalf} dev={1}>
               1/6/2017 at 14:50 - 1700 Minor Ave
             </Grid>
             <Grid>
@@ -48,10 +49,10 @@ export default function SearchResults({
             </Grid>
           </Col>
           <Col size={4} align="top">
-            <Grid margin={[0, 0, 0.5, 0]} dev={4}>
+            <Grid margin={bottomHalf} dev={4}>
               status text ipsum
             </Grid>
-            <Grid>status sub lorem</Grid>
+            <Grid dev={2}>status sub lorem</Grid>
           </Col>
           <Col size="auto">
             <Grid justify="center" align="center" className={styles.image}>

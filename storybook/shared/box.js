@@ -8,39 +8,36 @@ const typeMap = {
   B: 2,
   C: 3,
   D: 4,
+  E: 5,
 }
-export default class Box extends React.PureComponent {
-  static displayName = 'Box'
 
-  props: {
-    type: 'A' | 'B' | 'C' | 'D',
-    style?: Object,
-    children?: any,
-    value?: string,
-    margin?: Spacing,
-  }
+type BoxProps = {
+  type: 'A' | 'B' | 'C' | 'D' | 'E',
+  style?: Object,
+  children?: any,
+  value?: string,
+  margin?: Spacing,
+}
 
-  render() {
-    const {
-      children,
-      margin = [0, 0.5, 1],
-      style,
-      type,
-      value = type,
-      ...props
-    } = this.props
-    return (
-      <Grid margin={margin} {...props}>
-        <Grid
-          dev={typeMap[type]}
-          padding={[1, 0]}
-          align="center"
-          justify="center"
-          style={style}
-        >
-          {children || value}
-        </Grid>
+export default function Box({
+  children,
+  margin = [0, 0.5, 1],
+  style,
+  type,
+  value = type,
+  ...props
+}: BoxProps) {
+  return (
+    <Grid margin={margin} {...props}>
+      <Grid
+        dev={typeMap[type]}
+        padding={[1, 0]}
+        align="center"
+        justify="center"
+        style={style}
+      >
+        {children || value}
       </Grid>
-    )
-  }
+    </Grid>
+  )
 }

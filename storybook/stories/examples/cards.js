@@ -3,7 +3,7 @@ import React from 'react'
 import { Grid, Layout, Root } from 'reflex'
 import { Box } from '../../shared'
 import styles from './layout.css'
-import { top, horizontalHalf } from '../../shared/marginTypes'
+import { top, allHalf } from '../../shared/marginTypes'
 
 const SIZE = {
   TALL: { height: 200 },
@@ -17,12 +17,12 @@ export default function() {
       <Layout fixed="top">
         <Layout dev={1}>
           <Root>
-            <Grid margin={horizontalHalf}>
+            <Grid padding={allHalf}>
               <h1>Header</h1>
             </Grid>
           </Root>
         </Layout>
-        <Layout className={styles.subheader} margin={top}>
+        <Layout className={styles.subheader} margin={top} dev={2}>
           <Root>
             <Box size={2} type="D" />
             <Box size={2} type="D" />
@@ -53,7 +53,7 @@ export default function() {
         </Layout>
         <Layout dev={1}>
           <Root>
-            <Grid margin={horizontalHalf}>
+            <Grid padding={allHalf}>
               <h1>Footer</h1>
             </Grid>
           </Root>

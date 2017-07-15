@@ -4,37 +4,20 @@
   position: absolute;
   top: 0;
 
+  & h1,
   & h2,
   & p {
     margin: 0;
   }
 
-  & h1 {
-    margin: 10px 0;
-  }
-
   /* header heights, hard coded offsets */
 
   & .main {
-    margin-top: 57px;
+    margin-top: 62px;
   }
 
   &.hasSubheader .main {
-    margin-top: 173px;
+    margin-top: 177px;
   }
-
   /* end of hard coded offsets */
-
-  & .subheader,
-  & .content {
-    color: var(--bolt);
-    background-color: var(--nomuraGray);
-  }
-
-  & .top {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    color: var(--nomuraGray);
-    background-color: var(--bolt);
-  }
 }
