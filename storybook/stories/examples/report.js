@@ -2,7 +2,6 @@
 import React from 'react'
 import { Grid, Root, Layout, Col } from 'reflex'
 import { loremIpsum } from '../../shared'
-import { colors1, colors2, colors3 } from '../../shared/stories.css'
 import styles from './report.css'
 import {
   bottom,
@@ -11,7 +10,6 @@ import {
   allHalf,
   rightDouble,
   top,
-  vertical,
 } from '../../shared/marginTypes'
 
 function P(props) {
@@ -30,12 +28,10 @@ function Card({
   height?: number,
 }): React$Element<any> {
   return (
-    <Col style={{ height }}>
-      <div style={{ height: '100%', width: '100%' }} className={styles.card}>
-        <P>
-          {children}
-        </P>
-      </div>
+    <Col style={{ minHeight: height }}>
+      <Grid padding={[1]} dev={5}>
+        {children}
+      </Grid>
     </Col>
   )
 }
@@ -44,67 +40,85 @@ export default function() {
   return (
     <Layout type="parent" className={styles.report}>
       <Layout fixed="top">
-        <Layout className={styles.header}>
+        <Layout dev={1}>
           <Root>
-            <Grid padding={vertical} margin={horizontalHalf}>
+            <Grid margin={allHalf}>
               <h1>Header</h1>
             </Grid>
           </Root>
         </Layout>
-        <Layout className={styles.subheader}>
+        <Layout dev={4}>
           <Root>
             <Grid margin={allHalf}>
               <h2>Subheader</h2>
             </Grid>
             <Grid size={10} margin={horizontalHalf}>
               <Grid margin={rightDouble} size="fit">
-                <Grid padding={top} className={colors3}>
+                <Grid padding={top} dev={3}>
                   Lorem
                 </Grid>
               </Grid>
               <Grid margin={rightDouble} size="fit">
-                <Grid padding={top} className={colors3}>
+                <Grid padding={top} dev={3}>
                   ipsum
                 </Grid>
               </Grid>
               <Grid margin={rightDouble} size="fit">
-                <Grid padding={top} className={colors3}>
+                <Grid padding={top} dev={3}>
                   dolor
                 </Grid>
               </Grid>
               <Grid margin={rightDouble} size="fit">
-                <Grid padding={top} className={colors3}>
+                <Grid padding={top} dev={3}>
                   sit amet, consectetur
                 </Grid>
               </Grid>
             </Grid>
             <Grid margin={horizontalHalf} size={2}>
-              <Grid padding={top} className={colors3}>
+              <Grid padding={top} dev={3}>
                 sit amet
               </Grid>
             </Grid>
           </Root>
         </Layout>
       </Layout>
-      <Layout type="parent" className={`${styles.main} ${colors2}`}>
+      <Layout type="parent" className={styles.main} dev={2}>
         <Layout type="stretch">
           <Root>
             <Grid>
-              <Grid
-                size={1}
-                className={styles.nav}
-                align="top"
-                padding={top}
-                margin={horizontalHalf}
-              >
+              <Grid size={1} align="top" padding={top} margin={horizontalHalf}>
                 <Grid>
                   <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                    <li>Item 4</li>
-                    <li>Item 5</li>
-                    <li>Item 6</li>
+                    <li>
+                      <Grid size="fit" dev={5}>
+                        Item 1
+                      </Grid>
+                    </li>
+                    <li>
+                      <Grid size="fit" dev={1}>
+                        Item 2
+                      </Grid>
+                    </li>
+                    <li>
+                      <Grid size="fit" dev={5}>
+                        Item 3
+                      </Grid>
+                    </li>
+                    <li>
+                      <Grid size="fit" dev={1}>
+                        Item 4
+                      </Grid>
+                    </li>
+                    <li>
+                      <Grid size="fit" dev={5}>
+                        Item 5
+                      </Grid>
+                    </li>
+                    <li>
+                      <Grid size="fit" dev={1}>
+                        Item 6
+                      </Grid>
+                    </li>
                   </ul>
                 </Grid>
               </Grid>
@@ -133,12 +147,7 @@ export default function() {
                 </P>
               </Grid>
               <Grid size={4} className={styles.clippy} padding={horizontalHalf}>
-                <Grid
-                  align="top"
-                  className={colors1}
-                  padding={top}
-                  margin={horizontal}
-                >
+                <Grid align="top" dev={1} padding={top} margin={horizontal}>
                   <Grid margin={bottom}>Side bar</Grid>
                 </Grid>
               </Grid>
@@ -147,7 +156,7 @@ export default function() {
         </Layout>
         <Layout dev={1}>
           <Root>
-            <Grid margin={horizontalHalf}>
+            <Grid margin={allHalf}>
               <h1>Footer</h1>
             </Grid>
           </Root>

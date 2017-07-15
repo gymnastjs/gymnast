@@ -19,3 +19,8 @@
   color: var(--nomuraGray);
   background-color: var(--bolt);
 }
+
+.colors5 {
+  color: var(--axonBlack);
+  background-color: white;
+}

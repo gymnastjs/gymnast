@@ -3192,7 +3192,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
 <div>
   <div>
     <div
-      className="auto topSinglePadding colors2 layout"
+      className="auto topSinglePadding colors4 layout"
     >
       <div
         className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -3224,7 +3224,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
                 Lorem
               </div>
               <div
-                className="rightHalfMargin col col-auto colors4 grid"
+                className="rightHalfMargin col col-auto colors2 grid"
                 style={
                   Object {
                     "whiteSpace": "nowrap",
@@ -3244,7 +3244,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
                 dolor
               </div>
               <div
-                className="rightHalfMargin col col-auto colors4 grid"
+                className="rightHalfMargin col col-auto colors2 grid"
                 style={
                   Object {
                     "whiteSpace": "nowrap",
@@ -3280,7 +3280,7 @@ exports[`Storyshots  Components Search.Results 1`] = `
 <div>
   <div>
     <div
-      className="colors2 grid topAlign"
+      className="colors5 grid topAlign"
     >
       <div
         className="grid"
@@ -3334,12 +3334,12 @@ exports[`Storyshots  Components Search.Results 1`] = `
           className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-5 grid"
         >
           <div
-            className="bottomHalfMargin colors1 grid"
+            className="bottomHalfPadding colors1 grid"
           >
             Orci tempus venenatis
           </div>
           <div
-            className="bottomHalfMargin colors1 grid"
+            className="bottomHalfPadding colors1 grid"
           >
             1/6/2017 at 14:50 - 1700 Minor Ave
           </div>
@@ -3353,12 +3353,12 @@ exports[`Storyshots  Components Search.Results 1`] = `
           className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-4 grid topAlign"
         >
           <div
-            className="bottomHalfMargin colors4 grid"
+            className="bottomHalfPadding colors4 grid"
           >
             status text ipsum
           </div>
           <div
-            className="grid"
+            className="colors2 grid"
           >
             status sub lorem
           </div>
@@ -3450,7 +3450,7 @@ exports[`Storyshots  Examples Cards 1`] = `
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
           >
             <div
-              className="rightHalfMargin leftHalfMargin grid"
+              className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
             >
               <h1>
                 Header
@@ -3459,7 +3459,7 @@ exports[`Storyshots  Examples Cards 1`] = `
           </div>
         </div>
         <div
-          className="subheader auto topSinglePadding layout"
+          className="subheader auto topSinglePadding colors2 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -3691,7 +3691,7 @@ exports[`Storyshots  Examples Cards 1`] = `
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
           >
             <div
-              className="rightHalfMargin leftHalfMargin grid"
+              className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
             >
               <h1>
                 Footer
@@ -3718,7 +3718,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
         >
           <div
-            className="rightHalfMargin leftHalfMargin grid"
+            className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
           >
             <h1>
               Header
@@ -3781,7 +3781,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
         >
           <div
-            className="rightHalfMargin leftHalfMargin grid"
+            className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
           >
             <h1>
               Footer
@@ -3804,13 +3804,13 @@ exports[`Storyshots  Examples Report 1`] = `
         className="fixedTop auto layout"
       >
         <div
-          className="header auto layout"
+          className="auto colors1 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
           >
             <div
-              className="rightHalfMargin leftHalfMargin topSinglePadding bottomSinglePadding grid"
+              className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
             >
               <h1>
                 Header
@@ -3819,13 +3819,13 @@ exports[`Storyshots  Examples Report 1`] = `
           </div>
         </div>
         <div
-          className="subheader auto layout"
+          className="auto colors4 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
           >
             <div
-              className="topHalfMargin rightHalfMargin bottomHalfMargin leftHalfMargin grid"
+              className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
             >
               <h2>
                 Subheader
@@ -3884,7 +3884,7 @@ exports[`Storyshots  Examples Report 1`] = `
         </div>
       </div>
       <div
-        className="main colors2 parent layout"
+        className="main parent colors2 layout"
       >
         <div
           className="stretch layout"
@@ -3896,29 +3896,53 @@ exports[`Storyshots  Examples Report 1`] = `
               className="grid"
             >
               <div
-                className="rightHalfMargin leftHalfMargin topSinglePadding nav col col-1 grid topAlign"
+                className="rightHalfMargin leftHalfMargin topSinglePadding col col-1 grid topAlign"
               >
                 <div
                   className="grid"
                 >
                   <ul>
                     <li>
-                      Item 1
+                      <div
+                        className="col col-fit colors5 grid"
+                      >
+                        Item 1
+                      </div>
                     </li>
                     <li>
-                      Item 2
+                      <div
+                        className="col col-fit colors1 grid"
+                      >
+                        Item 2
+                      </div>
                     </li>
                     <li>
-                      Item 3
+                      <div
+                        className="col col-fit colors5 grid"
+                      >
+                        Item 3
+                      </div>
                     </li>
                     <li>
-                      Item 4
+                      <div
+                        className="col col-fit colors1 grid"
+                      >
+                        Item 4
+                      </div>
                     </li>
                     <li>
-                      Item 5
+                      <div
+                        className="col col-fit colors5 grid"
+                      >
+                        Item 5
+                      </div>
                     </li>
                     <li>
-                      Item 6
+                      <div
+                        className="col col-fit colors1 grid"
+                      >
+                        Item 6
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -3937,52 +3961,28 @@ exports[`Storyshots  Examples Report 1`] = `
                   className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
                   style={
                     Object {
-                      "height": 140,
+                      "minHeight": 140,
                     }
                   }
                 >
                   <div
-                    className="card"
-                    style={
-                      Object {
-                        "height": "100%",
-                        "width": "100%",
-                      }
-                    }
+                    className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors5 grid"
                   >
-                    <div
-                      className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-                    >
-                      <p>
-                        First Block
-                      </p>
-                    </div>
+                    First Block
                   </div>
                 </div>
                 <div
                   className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
                   style={
                     Object {
-                      "height": 70,
+                      "minHeight": 70,
                     }
                   }
                 >
                   <div
-                    className="card"
-                    style={
-                      Object {
-                        "height": "100%",
-                        "width": "100%",
-                      }
-                    }
+                    className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors5 grid"
                   >
-                    <div
-                      className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-                    >
-                      <p>
-                        Second Block
-                      </p>
-                    </div>
+                    Second Block
                   </div>
                 </div>
                 <div
@@ -3996,26 +3996,14 @@ exports[`Storyshots  Examples Report 1`] = `
                   className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
                   style={
                     Object {
-                      "height": 70,
+                      "minHeight": 70,
                     }
                   }
                 >
                   <div
-                    className="card"
-                    style={
-                      Object {
-                        "height": "100%",
-                        "width": "100%",
-                      }
-                    }
+                    className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors5 grid"
                   >
-                    <div
-                      className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-                    >
-                      <p>
-                        Another Block
-                      </p>
-                    </div>
+                    Another Block
                   </div>
                 </div>
                 <div
@@ -4029,26 +4017,14 @@ exports[`Storyshots  Examples Report 1`] = `
                   className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
                   style={
                     Object {
-                      "height": 70,
+                      "minHeight": 70,
                     }
                   }
                 >
                   <div
-                    className="card"
-                    style={
-                      Object {
-                        "height": "100%",
-                        "width": "100%",
-                      }
-                    }
+                    className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors5 grid"
                   >
-                    <div
-                      className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-                    >
-                      <p>
-                        Another Block
-                      </p>
-                    </div>
+                    Another Block
                   </div>
                 </div>
                 <div
@@ -4062,26 +4038,14 @@ exports[`Storyshots  Examples Report 1`] = `
                   className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
                   style={
                     Object {
-                      "height": 70,
+                      "minHeight": 70,
                     }
                   }
                 >
                   <div
-                    className="card"
-                    style={
-                      Object {
-                        "height": "100%",
-                        "width": "100%",
-                      }
-                    }
+                    className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors5 grid"
                   >
-                    <div
-                      className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-                    >
-                      <p>
-                        Another Block
-                      </p>
-                    </div>
+                    Another Block
                   </div>
                 </div>
                 <div
@@ -4095,26 +4059,14 @@ exports[`Storyshots  Examples Report 1`] = `
                   className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
                   style={
                     Object {
-                      "height": 70,
+                      "minHeight": 70,
                     }
                   }
                 >
                   <div
-                    className="card"
-                    style={
-                      Object {
-                        "height": "100%",
-                        "width": "100%",
-                      }
-                    }
+                    className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors5 grid"
                   >
-                    <div
-                      className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-                    >
-                      <p>
-                        Another Block
-                      </p>
-                    </div>
+                    Another Block
                   </div>
                 </div>
                 <div
@@ -4128,52 +4080,28 @@ exports[`Storyshots  Examples Report 1`] = `
                   className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
                   style={
                     Object {
-                      "height": 210,
+                      "minHeight": 210,
                     }
                   }
                 >
                   <div
-                    className="card"
-                    style={
-                      Object {
-                        "height": "100%",
-                        "width": "100%",
-                      }
-                    }
+                    className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors5 grid"
                   >
-                    <div
-                      className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-                    >
-                      <p>
-                        Final Block
-                      </p>
-                    </div>
+                    Final Block
                   </div>
                 </div>
                 <div
                   className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
                   style={
                     Object {
-                      "height": 70,
+                      "minHeight": 70,
                     }
                   }
                 >
                   <div
-                    className="card"
-                    style={
-                      Object {
-                        "height": "100%",
-                        "width": "100%",
-                      }
-                    }
+                    className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors5 grid"
                   >
-                    <div
-                      className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-                    >
-                      <p>
-                        Ok last one
-                      </p>
-                    </div>
+                    Ok last one
                   </div>
                 </div>
                 <div
@@ -4208,7 +4136,7 @@ exports[`Storyshots  Examples Report 1`] = `
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
           >
             <div
-              className="rightHalfMargin leftHalfMargin grid"
+              className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
             >
               <h1>
                 Footer
@@ -4317,7 +4245,7 @@ exports[`Storyshots  Examples Search 1`] = `
         }
       >
         <div
-          className="auto topSinglePadding colors2 layout"
+          className="auto topSinglePadding colors4 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -4349,7 +4277,7 @@ exports[`Storyshots  Examples Search 1`] = `
                     Lorem
                   </div>
                   <div
-                    className="rightHalfMargin col col-auto colors4 grid"
+                    className="rightHalfMargin col col-auto colors2 grid"
                     style={
                       Object {
                         "whiteSpace": "nowrap",
@@ -4369,7 +4297,7 @@ exports[`Storyshots  Examples Search 1`] = `
                     dolor
                   </div>
                   <div
-                    className="rightHalfMargin col col-auto colors4 grid"
+                    className="rightHalfMargin col col-auto colors2 grid"
                     style={
                       Object {
                         "whiteSpace": "nowrap",
@@ -4398,7 +4326,7 @@ exports[`Storyshots  Examples Search 1`] = `
           </div>
         </div>
         <div
-          className="parent colors3 layout"
+          className="parent colors2 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -4472,7 +4400,7 @@ exports[`Storyshots  Examples Search 1`] = `
                 </div>
               </div>
               <div
-                className="col col-9 colors2 grid topAlign"
+                className="col col-9 colors5 grid topAlign"
               >
                 <div
                   className="grid"
@@ -4526,12 +4454,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-5 grid"
                   >
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       Orci tempus venenatis
                     </div>
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       1/6/2017 at 14:50 - 1700 Minor Ave
                     </div>
@@ -4545,12 +4473,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-4 grid topAlign"
                   >
                     <div
-                      className="bottomHalfMargin colors4 grid"
+                      className="bottomHalfPadding colors4 grid"
                     >
                       status text ipsum
                     </div>
                     <div
-                      className="grid"
+                      className="colors2 grid"
                     >
                       status sub lorem
                     </div>
@@ -4572,12 +4500,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-5 grid"
                   >
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       Orci tempus venenatis
                     </div>
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       1/6/2017 at 14:50 - 1700 Minor Ave
                     </div>
@@ -4591,12 +4519,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-4 grid topAlign"
                   >
                     <div
-                      className="bottomHalfMargin colors4 grid"
+                      className="bottomHalfPadding colors4 grid"
                     >
                       status text ipsum
                     </div>
                     <div
-                      className="grid"
+                      className="colors2 grid"
                     >
                       status sub lorem
                     </div>
@@ -4618,12 +4546,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-5 grid"
                   >
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       Orci tempus venenatis
                     </div>
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       1/6/2017 at 14:50 - 1700 Minor Ave
                     </div>
@@ -4637,12 +4565,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-4 grid topAlign"
                   >
                     <div
-                      className="bottomHalfMargin colors4 grid"
+                      className="bottomHalfPadding colors4 grid"
                     >
                       status text ipsum
                     </div>
                     <div
-                      className="grid"
+                      className="colors2 grid"
                     >
                       status sub lorem
                     </div>
@@ -4664,12 +4592,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-5 grid"
                   >
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       Orci tempus venenatis
                     </div>
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       1/6/2017 at 14:50 - 1700 Minor Ave
                     </div>
@@ -4683,12 +4611,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-4 grid topAlign"
                   >
                     <div
-                      className="bottomHalfMargin colors4 grid"
+                      className="bottomHalfPadding colors4 grid"
                     >
                       status text ipsum
                     </div>
                     <div
-                      className="grid"
+                      className="colors2 grid"
                     >
                       status sub lorem
                     </div>
@@ -4710,12 +4638,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-5 grid"
                   >
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       Orci tempus venenatis
                     </div>
                     <div
-                      className="bottomHalfMargin colors1 grid"
+                      className="bottomHalfPadding colors1 grid"
                     >
                       1/6/2017 at 14:50 - 1700 Minor Ave
                     </div>
@@ -4729,12 +4657,12 @@ exports[`Storyshots  Examples Search 1`] = `
                     className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-4 grid topAlign"
                   >
                     <div
-                      className="bottomHalfMargin colors4 grid"
+                      className="bottomHalfPadding colors4 grid"
                     >
                       status text ipsum
                     </div>
                     <div
-                      className="grid"
+                      className="colors2 grid"
                     >
                       status sub lorem
                     </div>
@@ -4812,9 +4740,11 @@ exports[`Storyshots  Examples Search 1`] = `
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
         >
           <div
-            className="topSingleMargin rightHalfMargin bottomSingleMargin leftHalfMargin grid centerJustify"
+            className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
           >
-            ©ACME Corp. 2017
+            <h1>
+              Footer
+            </h1>
           </div>
         </div>
       </div>
@@ -4841,15 +4771,11 @@ exports[`Storyshots  Examples Stack 1`] = `
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
         >
           <div
-            className="rightHalfMargin leftHalfMargin grid"
+            className="topHalfPadding bottomHalfPadding colors3 grid"
           >
-            <div
-              className="rightHalfMargin leftHalfMargin colors3 grid"
-            >
-              <h1>
-                Section 1
-              </h1>
-            </div>
+            <h1>
+              Section 1
+            </h1>
           </div>
         </div>
       </div>
@@ -4860,40 +4786,28 @@ exports[`Storyshots  Examples Stack 1`] = `
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid topAlign"
         >
           <div
-            className="grid"
+            className="topHalfPadding bottomHalfPadding grid"
           >
-            <div
-              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-            >
-              <h1>
-                SubSection 
-                1
-              </h1>
-            </div>
+            <h1>
+              SubSection 
+              1
+            </h1>
           </div>
           <div
-            className="grid"
+            className="topHalfPadding bottomHalfPadding grid"
           >
-            <div
-              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-            >
-              <h1>
-                SubSection 
-                2
-              </h1>
-            </div>
+            <h1>
+              SubSection 
+              2
+            </h1>
           </div>
           <div
-            className="grid"
+            className="topHalfPadding bottomHalfPadding grid"
           >
-            <div
-              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-            >
-              <h1>
-                SubSection 
-                3
-              </h1>
-            </div>
+            <h1>
+              SubSection 
+              3
+            </h1>
           </div>
         </div>
       </div>
@@ -4915,7 +4829,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
         >
           <div
-            className="rightHalfMargin leftHalfMargin grid"
+            className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
           >
             <h1>
               Header
@@ -4927,13 +4841,13 @@ exports[`Storyshots  Examples Two Sections 1`] = `
         className="main parent layout"
       >
         <div
-          className="top auto layout"
+          className="top auto colors4 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
           >
             <div
-              className="grid centerJustify"
+              className="topDoublePadding bottomDoublePadding grid centerJustify"
             >
               <div
                 className="rightHalfMargin leftHalfMargin col col-6 grid"
@@ -4983,7 +4897,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
         >
           <div
-            className="rightHalfMargin leftHalfMargin grid"
+            className="topHalfPadding rightHalfPadding bottomHalfPadding leftHalfPadding grid"
           >
             <h1>
               Footer

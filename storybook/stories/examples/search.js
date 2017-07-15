@@ -1,13 +1,14 @@
 // @flow
 
 import React from 'react'
-import { Grid, Layout, Root, Col } from 'reflex'
+import { Grid, Layout, Root } from 'reflex'
 import { number } from '@storybook/addon-knobs'
 import styles from './layout.css'
 import Header from '../components/header/app'
 import SearchFilters from '../components/search/filters'
 import SearchNav from '../components/search/nav'
 import SearchResults from '../components/search/results'
+import { allHalf } from '../../shared/marginTypes'
 
 export default function() {
   const results = number('Results', 5, { range: true, min: 1, max: 10 })
@@ -21,7 +22,7 @@ export default function() {
         style={{ marginTop: 40 }}
       >
         <SearchNav />
-        <Layout type="parent" dev={3}>
+        <Layout type="parent" dev={2}>
           <Root>
             <Grid margin={[1, 0, 0, 0]}>
               <SearchFilters size={3} />
@@ -32,9 +33,9 @@ export default function() {
       </Layout>
       <Layout dev={1}>
         <Root>
-          <Col marginTop={1} justify="center">
-            &copy;ACME Corp. 2017
-          </Col>
+          <Grid margin={allHalf}>
+            <h1>Footer</h1>
+          </Grid>
         </Root>
       </Layout>
     </Layout>
