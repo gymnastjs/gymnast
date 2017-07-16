@@ -1591,7 +1591,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       var _utils = __webpack_require__(18);
 
-      var _grid = __webpack_require__(84);
+      var _grid = __webpack_require__(83);
 
       var _grid2 = _interopRequireDefault(_grid);
 
@@ -1893,7 +1893,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       "use strict";
 
-      var eq = __webpack_require__(73);
+      var eq = __webpack_require__(72);
 
       /**
        * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -1922,7 +1922,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       "use strict";
 
-      var isKeyable = __webpack_require__(79);
+      var isKeyable = __webpack_require__(78);
 
       /**
        * Gets the data for `map`.
@@ -2502,7 +2502,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       exports.getDisplayName = getDisplayName;
 
-      var _spacing = __webpack_require__(83);
+      var _spacing = __webpack_require__(82);
 
       var _spacing2 = _interopRequireDefault(_spacing);
 
@@ -3748,7 +3748,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       "use strict";
 
       var baseIsNative = __webpack_require__(55),
-          getValue = __webpack_require__(65);
+          getValue = __webpack_require__(64);
 
       /**
        * Gets the native function at `key` of `object`.
@@ -3853,7 +3853,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _layout = __webpack_require__(85);
+      var _layout = __webpack_require__(84);
 
       Object.defineProperty(exports, 'Layout', {
         enumerable: true,
@@ -3862,7 +3862,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _version = __webpack_require__(87);
+      var _version = __webpack_require__(86);
 
       Object.defineProperty(exports, 'version', {
         enumerable: true,
@@ -3871,7 +3871,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _col = __webpack_require__(88);
+      var _col = __webpack_require__(87);
 
       Object.defineProperty(exports, 'Col', {
         enumerable: true,
@@ -3880,7 +3880,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _root = __webpack_require__(89);
+      var _root = __webpack_require__(88);
 
       Object.defineProperty(exports, 'Root', {
         enumerable: true,
@@ -3889,7 +3889,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
       });
 
-      var _offset = __webpack_require__(90);
+      var _offset = __webpack_require__(89);
 
       Object.defineProperty(exports, 'Offset', {
         enumerable: true,
@@ -6175,10 +6175,10 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       "use strict";
 
       var mapCacheClear = __webpack_require__(52),
-          mapCacheDelete = __webpack_require__(78),
-          mapCacheGet = __webpack_require__(80),
-          mapCacheHas = __webpack_require__(81),
-          mapCacheSet = __webpack_require__(82);
+          mapCacheDelete = __webpack_require__(77),
+          mapCacheGet = __webpack_require__(79),
+          mapCacheHas = __webpack_require__(80),
+          mapCacheSet = __webpack_require__(81);
 
       /**
        * Creates a map cache object to store key-value pairs.
@@ -6215,8 +6215,8 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       "use strict";
 
       var Hash = __webpack_require__(53),
-          ListCache = __webpack_require__(70),
-          Map = __webpack_require__(77);
+          ListCache = __webpack_require__(69),
+          Map = __webpack_require__(76);
 
       /**
        * Removes all key-value entries from the map.
@@ -6244,10 +6244,10 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       "use strict";
 
       var hashClear = __webpack_require__(54),
-          hashDelete = __webpack_require__(66),
-          hashGet = __webpack_require__(67),
-          hashHas = __webpack_require__(68),
-          hashSet = __webpack_require__(69);
+          hashDelete = __webpack_require__(65),
+          hashGet = __webpack_require__(66),
+          hashHas = __webpack_require__(67),
+          hashSet = __webpack_require__(68);
 
       /**
        * Creates a hash object.
@@ -6307,9 +6307,9 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       "use strict";
 
       var isFunction = __webpack_require__(56),
-          isMasked = __webpack_require__(62),
+          isMasked = __webpack_require__(61),
           isObject = __webpack_require__(30),
-          toSource = __webpack_require__(64);
+          toSource = __webpack_require__(63);
 
       /**
        * Used to match `RegExp`
@@ -6404,8 +6404,8 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       "use strict";
 
       var _Symbol = __webpack_require__(29),
-          getRawTag = __webpack_require__(60),
-          objectToString = __webpack_require__(61);
+          getRawTag = __webpack_require__(59),
+          objectToString = __webpack_require__(60);
 
       /** `Object#toString` result references. */
       var nullTag = '[object Null]',
@@ -6450,45 +6450,13 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
         module.exports = freeGlobal;
         /* WEBPACK VAR INJECTION */
-      }).call(exports, __webpack_require__(59));
+      }).call(exports, function () {
+        return this;
+      }() || Function('return this')());
 
       /***/
     },
     /* 59 */
-    /***/function (module, exports, __webpack_require__) {
-
-      "use strict";
-
-      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-      } : function (obj) {
-        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
-      };
-
-      var g;
-
-      // This works in non-strict mode
-      g = function () {
-        return this;
-      }();
-
-      try {
-        // This works if eval is allowed (see CSP)
-        g = g || Function("return this")() || (1, eval)("this");
-      } catch (e) {
-        // This works if the window reference is available
-        if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
-      }
-
-      // g can still be undefined, but nothing to do about it...
-      // We return undefined, instead of nothing here, so it's
-      // easier to handle this case. if(!global) { ...}
-
-      module.exports = g;
-
-      /***/
-    },
-    /* 60 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6542,7 +6510,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 61 */
+    /* 60 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6573,12 +6541,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 62 */
+    /* 61 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var coreJsData = __webpack_require__(63);
+      var coreJsData = __webpack_require__(62);
 
       /** Used to detect methods masquerading as native. */
       var maskSrcKey = function () {
@@ -6601,7 +6569,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 63 */
+    /* 62 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6615,7 +6583,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 64 */
+    /* 63 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6650,7 +6618,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 65 */
+    /* 64 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6672,7 +6640,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 66 */
+    /* 65 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6698,7 +6666,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 67 */
+    /* 66 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6736,7 +6704,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 68 */
+    /* 67 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6767,7 +6735,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 69 */
+    /* 68 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6798,16 +6766,16 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 70 */
+    /* 69 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
 
-      var listCacheClear = __webpack_require__(71),
-          listCacheDelete = __webpack_require__(72),
-          listCacheGet = __webpack_require__(74),
-          listCacheHas = __webpack_require__(75),
-          listCacheSet = __webpack_require__(76);
+      var listCacheClear = __webpack_require__(70),
+          listCacheDelete = __webpack_require__(71),
+          listCacheGet = __webpack_require__(73),
+          listCacheHas = __webpack_require__(74),
+          listCacheSet = __webpack_require__(75);
 
       /**
        * Creates an list cache object.
@@ -6838,7 +6806,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 71 */
+    /* 70 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6860,7 +6828,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 72 */
+    /* 71 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6903,7 +6871,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 73 */
+    /* 72 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6949,7 +6917,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 74 */
+    /* 73 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -6976,7 +6944,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 75 */
+    /* 74 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7000,7 +6968,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 76 */
+    /* 75 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7034,7 +7002,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 77 */
+    /* 76 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7049,7 +7017,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 78 */
+    /* 77 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7075,7 +7043,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 79 */
+    /* 78 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7102,7 +7070,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 80 */
+    /* 79 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7126,7 +7094,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 81 */
+    /* 80 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7150,7 +7118,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 82 */
+    /* 81 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7180,7 +7148,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 83 */
+    /* 82 */
     /***/function (module, exports) {
 
       // removed by extract-text-webpack-plugin
@@ -7188,7 +7156,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 84 */
+    /* 83 */
     /***/function (module, exports) {
 
       // removed by extract-text-webpack-plugin
@@ -7196,7 +7164,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 85 */
+    /* 84 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7239,7 +7207,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       var _utils = __webpack_require__(18);
 
-      var _layout = __webpack_require__(86);
+      var _layout = __webpack_require__(85);
 
       var _layout2 = _interopRequireDefault(_layout);
 
@@ -7383,7 +7351,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 86 */
+    /* 85 */
     /***/function (module, exports) {
 
       // removed by extract-text-webpack-plugin
@@ -7391,7 +7359,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 87 */
+    /* 86 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7400,7 +7368,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 88 */
+    /* 87 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7463,7 +7431,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 89 */
+    /* 88 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7503,7 +7471,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       /***/
     },
-    /* 90 */
+    /* 89 */
     /***/function (module, exports, __webpack_require__) {
 
       "use strict";
@@ -7541,6 +7509,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
     /******/)
   );
 });
+//# sourceMappingURL=reflex.js.map
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(57)(module)))
 
 /***/ }),
@@ -52881,7 +52850,7 @@ exports = module.exports = __webpack_require__(80)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.dev__colors1___Cwxl9{color:gold;background-color:#1d1f21}.dev__colors2___2L6H5{color:#1469cc;background-color:#efefef}.dev__colors3___3bIDu{color:#1d1f21;background-color:gold}.dev__colors4___inP-1{color:#efefef;background-color:#1469cc}.dev__colors5___1CZDS{color:#1d1f21;background-color:#fff}", ""]);
+exports.push([module.i, ".dev__colors1___Cwxl9{color:gold;background-color:#1d1f21}.dev__colors2___2L6H5{color:#1469cc;background-color:#efefef}.dev__colors3___3bIDu{color:#1d1f21;background-color:gold}.dev__colors4___inP-1{color:#efefef;background-color:#1469cc}.dev__colors5___1CZDS{color:#1d1f21;background-color:#fff}", ""]);
 
 // exports
 exports.locals = {
@@ -52901,7 +52870,7 @@ exports = module.exports = __webpack_require__(80)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.grid__grid___bk7GY{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%}.grid__grid___bk7GY:not(.grid__col___1OEZt){flex-grow:1}.grid__grid___bk7GY.grid__leftJustify___3vN8C{justify-content:flex-start;margin-right:auto}.grid__grid___bk7GY.grid__centerJustify___2b90U{justify-content:center;margin-left:auto;margin-right:auto}.grid__grid___bk7GY.grid__rightJustify___3n13f{justify-content:flex-end;margin-left:auto}.grid__grid___bk7GY.grid__topAlign___1ywN6{align-content:flex-start;align-items:flex-start}.grid__grid___bk7GY.grid__centerAlign___2Vm2H{align-content:center;align-items:center}.grid__grid___bk7GY.grid__bottomAlign___1CGa7{align-content:flex-end;align-items:flex-end}.grid__grid___bk7GY.grid__col-fit___2fDTl{flex-basis:0;white-space:nowrap}.grid__grid___bk7GY.grid__col-auto___3OEdx{flex:1 1 0%}.grid__col-1___17LJG{flex-basis:8.33333%;max-width:8.33333%}.grid__col-2___2nMUV{flex-basis:16.66667%;max-width:16.66667%}.grid__col-3___xkeJO{flex-basis:25%;max-width:25%}.grid__col-4___3Rexy{flex-basis:33.33333%;max-width:33.33333%}.grid__col-5___1edIG{flex-basis:41.66667%;max-width:41.66667%}.grid__col-6___udRC_{flex-basis:50%;max-width:50%}.grid__col-7___17cZH{flex-basis:58.33333%;max-width:58.33333%}.grid__col-8___3MDYh{flex-basis:66.66667%;max-width:66.66667%}.grid__col-9___3Bzna{flex-basis:75%;max-width:75%}.grid__col-10___3sS71{flex-basis:83.33333%;max-width:83.33333%}.grid__col-11___3IgTz{flex-basis:91.66667%;max-width:91.66667%}.grid__col-12___1Y5El{flex-basis:100%;max-width:100%}", ""]);
+exports.push([module.i, ".grid__grid___bk7GY{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%}.grid__grid___bk7GY:not(.grid__col___1OEZt){flex-grow:1}.grid__grid___bk7GY.grid__leftJustify___3vN8C{justify-content:flex-start;margin-right:auto}.grid__grid___bk7GY.grid__centerJustify___2b90U{justify-content:center;margin-left:auto;margin-right:auto}.grid__grid___bk7GY.grid__rightJustify___3n13f{justify-content:flex-end;margin-left:auto}.grid__grid___bk7GY.grid__topAlign___1ywN6{align-content:flex-start;align-items:flex-start}.grid__grid___bk7GY.grid__centerAlign___2Vm2H{align-content:center;align-items:center}.grid__grid___bk7GY.grid__bottomAlign___1CGa7{align-content:flex-end;align-items:flex-end}.grid__grid___bk7GY.grid__col-fit___2fDTl{flex-basis:0;white-space:nowrap}.grid__grid___bk7GY.grid__col-auto___3OEdx{flex:1 1 0%}.grid__col-1___17LJG{flex-basis:8.33333%;max-width:8.33333%}.grid__col-2___2nMUV{flex-basis:16.66667%;max-width:16.66667%}.grid__col-3___xkeJO{flex-basis:25%;max-width:25%}.grid__col-4___3Rexy{flex-basis:33.33333%;max-width:33.33333%}.grid__col-5___1edIG{flex-basis:41.66667%;max-width:41.66667%}.grid__col-6___udRC_{flex-basis:50%;max-width:50%}.grid__col-7___17cZH{flex-basis:58.33333%;max-width:58.33333%}.grid__col-8___3MDYh{flex-basis:66.66667%;max-width:66.66667%}.grid__col-9___3Bzna{flex-basis:75%;max-width:75%}.grid__col-10___3sS71{flex-basis:83.33333%;max-width:83.33333%}.grid__col-11___3IgTz{flex-basis:91.66667%;max-width:91.66667%}.grid__col-12___1Y5El{flex-basis:100%;max-width:100%}", ""]);
 
 // exports
 exports.locals = {
@@ -52952,7 +52921,7 @@ exports = module.exports = __webpack_require__(80)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.layout__layout___74Wzo{display:flex;align-self:flex-start;align-items:center;flex-flow:column;box-sizing:border-box;width:100%;min-width:400px}.layout__layout___74Wzo>:not(.layout__layout___74Wzo){max-width:1224px}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto;overflow-x:hidden}.layout__auto___15Qo_{flex-grow:0;flex-shrink:0}.layout__stretch___3Z7Y8{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}", ""]);
+exports.push([module.i, ".layout__layout___74Wzo{display:flex;align-self:flex-start;align-items:center;flex-flow:column;box-sizing:border-box;width:100%;min-width:400px}.layout__layout___74Wzo>:not(.layout__layout___74Wzo){max-width:1224px}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto;overflow-x:hidden}.layout__auto___15Qo_{flex-grow:0;flex-shrink:0}.layout__stretch___3Z7Y8{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}", ""]);
 
 // exports
 exports.locals = {
@@ -52974,7 +52943,7 @@ exports = module.exports = __webpack_require__(80)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.spacing__noPadding___3zEXg{padding:0}.spacing__topHalfPadding___1FQjX{padding-top:12px}.spacing__leftHalfPadding___2O5qU{padding-left:12px}.spacing__rightHalfPadding___2rhRg{padding-right:12px}.spacing__bottomHalfPadding___L8ZjY{padding-bottom:12px}.spacing__topSinglePadding___1bdEy{padding-top:24px}.spacing__leftSinglePadding___3snLN{padding-left:24px}.spacing__rightSinglePadding___3gFvW{padding-right:24px}.spacing__bottomSinglePadding___YRMfc{padding-bottom:24px}.spacing__topDoublePadding___3wdO3{padding-top:48px}.spacing__leftDoublePadding___-4uBE{padding-left:48px}.spacing__rightDoublePadding___aDEyo{padding-right:48px}.spacing__bottomDoublePadding___47QLI{padding-bottom:48px}.spacing__bottomDoubleMargin___36k1-,.spacing__bottomHalfMargin___DYhgG,.spacing__bottomSingleMargin___Ah-QE,.spacing__leftDoubleMargin___2M99D,.spacing__leftHalfMargin___16PZQ,.spacing__leftSingleMargin___30CCd,.spacing__noMargin___bcal9,.spacing__rightDoubleMargin___2lmQg,.spacing__rightHalfMargin___kp5Hs,.spacing__rightSingleMargin___2knpa,.spacing__topDoubleMargin___-Dham,.spacing__topHalfMargin___AeL5z,.spacing__topSingleMargin___3VMuo{border:0 solid transparent}.spacing__topHalfMargin___AeL5z{border-top-width:12px}.spacing__leftHalfMargin___16PZQ{border-left-width:12px}.spacing__rightHalfMargin___kp5Hs{border-right-width:12px}.spacing__bottomHalfMargin___DYhgG{border-bottom-width:12px}.spacing__topSingleMargin___3VMuo{border-top-width:24px}.spacing__leftSingleMargin___30CCd{border-left-width:24px}.spacing__rightSingleMargin___2knpa{border-right-width:24px}.spacing__bottomSingleMargin___Ah-QE{border-bottom-width:24px}.spacing__topDoubleMargin___-Dham{border-top-width:48px}.spacing__leftDoubleMargin___2M99D{border-left-width:48px}.spacing__rightDoubleMargin___2lmQg{border-right-width:48px}.spacing__bottomDoubleMargin___36k1-{border-bottom-width:48px}", ""]);
+exports.push([module.i, ".spacing__noPadding___3zEXg{padding:0}.spacing__topHalfPadding___1FQjX{padding-top:12px}.spacing__leftHalfPadding___2O5qU{padding-left:12px}.spacing__rightHalfPadding___2rhRg{padding-right:12px}.spacing__bottomHalfPadding___L8ZjY{padding-bottom:12px}.spacing__topSinglePadding___1bdEy{padding-top:24px}.spacing__leftSinglePadding___3snLN{padding-left:24px}.spacing__rightSinglePadding___3gFvW{padding-right:24px}.spacing__bottomSinglePadding___YRMfc{padding-bottom:24px}.spacing__topDoublePadding___3wdO3{padding-top:48px}.spacing__leftDoublePadding___-4uBE{padding-left:48px}.spacing__rightDoublePadding___aDEyo{padding-right:48px}.spacing__bottomDoublePadding___47QLI{padding-bottom:48px}.spacing__bottomDoubleMargin___36k1-,.spacing__bottomHalfMargin___DYhgG,.spacing__bottomSingleMargin___Ah-QE,.spacing__leftDoubleMargin___2M99D,.spacing__leftHalfMargin___16PZQ,.spacing__leftSingleMargin___30CCd,.spacing__noMargin___bcal9,.spacing__rightDoubleMargin___2lmQg,.spacing__rightHalfMargin___kp5Hs,.spacing__rightSingleMargin___2knpa,.spacing__topDoubleMargin___-Dham,.spacing__topHalfMargin___AeL5z,.spacing__topSingleMargin___3VMuo{border:0 solid transparent}.spacing__topHalfMargin___AeL5z{border-top-width:12px}.spacing__leftHalfMargin___16PZQ{border-left-width:12px}.spacing__rightHalfMargin___kp5Hs{border-right-width:12px}.spacing__bottomHalfMargin___DYhgG{border-bottom-width:12px}.spacing__topSingleMargin___3VMuo{border-top-width:24px}.spacing__leftSingleMargin___30CCd{border-left-width:24px}.spacing__rightSingleMargin___2knpa{border-right-width:24px}.spacing__bottomSingleMargin___Ah-QE{border-bottom-width:24px}.spacing__topDoubleMargin___-Dham{border-top-width:48px}.spacing__leftDoubleMargin___2M99D{border-left-width:48px}.spacing__rightDoubleMargin___2lmQg{border-right-width:48px}.spacing__bottomDoubleMargin___36k1-{border-bottom-width:48px}", ""]);
 
 // exports
 exports.locals = {
@@ -53015,7 +52984,7 @@ exports = module.exports = __webpack_require__(80)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}.designGrid__designGrid___3FH-Q{position:fixed;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none}.designGrid__contentArea___1gnX6{position:relative;margin:0 auto;height:100%;pointer-events:none;max-width:1128px;background-color:transparent;background-image:linear-gradient(90deg,transparent 72px,rgba(20,105,204,.1) 0);background-size:96px 1px}.designGrid__contentArea___1gnX6:after,.designGrid__contentArea___1gnX6:before{position:absolute;content:\"\";top:0;bottom:0;width:48px;height:100%;background-color:rgba(255,215,0,.15)}.designGrid__contentArea___1gnX6:before{left:-48px}.designGrid__contentArea___1gnX6:after{right:-48px}@media (max-width:1224px){.designGrid__contentArea___1gnX6{width:calc(100vw - 96px);min-width:400px;background-image:repeating-linear-gradient(90deg,transparent,transparent calc(8.33333vw - 32px),rgba(255,215,0,.1) calc(8.33333vw - 31px),rgba(255,215,0,.1) calc(8.33333vw - 6px));background-size:calc(8.33333vw - 6px) 1px}}", ""]);
+exports.push([module.i, ".designGrid__designGrid___3FH-Q{position:fixed;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none}.designGrid__contentArea___1gnX6{position:relative;margin:0 auto;height:100%;pointer-events:none;max-width:1128px;background-color:transparent;background-image:linear-gradient(90deg,transparent 72px,rgba(20,105,204,.1) 24px);background-size:96px 1px}.designGrid__contentArea___1gnX6:after,.designGrid__contentArea___1gnX6:before{position:absolute;content:\"\";top:0;bottom:0;width:48px;height:100%;background-color:rgba(255,215,0,.15)}.designGrid__contentArea___1gnX6:before{left:-48px}.designGrid__contentArea___1gnX6:after{right:-48px}@media (max-width:1224px){.designGrid__contentArea___1gnX6{width:calc(100vw - 96px);min-width:400px;background-image:repeating-linear-gradient(90deg,transparent,transparent calc(8.33333vw - 32px),rgba(255,215,0,.1) calc(8.33333vw - 31px),rgba(255,215,0,.1) calc(8.33333vw - 6px));background-size:calc(8.33333vw - 6px) 1px}}", ""]);
 
 // exports
 exports.locals = {
@@ -53048,7 +53017,7 @@ exports = module.exports = __webpack_require__(80)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}@font-face{font-family:Geometria;src:url(https://obartra.github.io/reflex/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h1,h2,h3{margin:0;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}button,input{width:100%;height:40px;font-size:18px;box-sizing:border-box}input{outline:1px solid #1d1f21;border:0;padding:12px}button{border-radius:0;border:0;color:#1d1f21;background-color:gold}.stories__box1___mWKMX,.stories__box2___2HHLa,.stories__box3___1GNyk,.stories__box4___3rT21{cursor:default}.stories__box1___mWKMX,.stories__colors1___zkyJh{color:gold;background-color:#1d1f21}.stories__box2___2HHLa,.stories__colors2___1Vcy4{color:#1469cc;background-color:#efefef}.stories__box3___1GNyk,.stories__colors3___3aCZ2{color:#1d1f21;background-color:gold}.stories__box4___3rT21,.stories__colors4___2cdrQ{color:#efefef;background-color:#1469cc}.stories__block___xFNAi{height:15px;width:15px;min-height:15px}.stories__image___1UKS7{height:100px;width:100%}.stories__paginationArrow___1MreF{padding:\"5px 10px\"}", ""]);
+exports.push([module.i, "@font-face{font-family:Geometria;src:url(https://obartra.github.io/reflex/fonts/Geometria-Light.ttf) format(\"truetype\");font-weight:100;font-style:normal}body{margin:0;padding:50px 0}*{font-weight:100;font-family:Geometria,Arial,Helvetica,sans-serif}section{margin-bottom:20px}h1,h2,h3{margin:0;text-align:left}ul{margin:0;padding:20px}li{font-size:12px;margin-bottom:5px;list-style:none;text-align:left}button,input{width:100%;height:40px;font-size:18px;box-sizing:border-box}input{outline:1px solid #1d1f21;border:0;padding:12px}button{border-radius:0;border:0;color:#1d1f21;background-color:gold}.stories__box1___mWKMX,.stories__box2___2HHLa,.stories__box3___1GNyk,.stories__box4___3rT21{cursor:default}.stories__box1___mWKMX,.stories__colors1___zkyJh{color:gold;background-color:#1d1f21}.stories__box2___2HHLa,.stories__colors2___1Vcy4{color:#1469cc;background-color:#efefef}.stories__box3___1GNyk,.stories__colors3___3aCZ2{color:#1d1f21;background-color:gold}.stories__box4___3rT21,.stories__colors4___2cdrQ{color:#efefef;background-color:#1469cc}.stories__block___xFNAi{height:15px;width:15px;min-height:15px}.stories__image___1UKS7{height:100px;width:100%}.stories__paginationArrow___1MreF{padding:\"5px 10px\"}", ""]);
 
 // exports
 exports.locals = {
@@ -53074,7 +53043,7 @@ exports = module.exports = __webpack_require__(80)(undefined);
 
 
 // module
-exports.push([module.i, ".layout__page___1P3a_{position:absolute;top:0}.layout__page___1P3a_ h1,.layout__page___1P3a_ h2,.layout__page___1P3a_ li,.layout__page___1P3a_ p,.layout__page___1P3a_ ul{margin:0;padding:0}.layout__page___1P3a_ .layout__main___1C8ei{margin-top:62px}.layout__page___1P3a_.layout__hasSubheader___1Ek4X .layout__main___1C8ei{margin-top:177px}.layout__page___1P3a_{/*end of hard coded offsets*/}", ""]);
+exports.push([module.i, ".layout__page___1P3a_{position:absolute;top:0}.layout__page___1P3a_ h1,.layout__page___1P3a_ h2,.layout__page___1P3a_ li,.layout__page___1P3a_ p,.layout__page___1P3a_ ul{margin:0;padding:0}.layout__page___1P3a_ .layout__main___1C8ei{margin-top:62px}.layout__page___1P3a_.layout__hasSubheader___1Ek4X .layout__main___1C8ei{margin-top:177px}", ""]);
 
 // exports
 exports.locals = {
@@ -53092,7 +53061,7 @@ exports = module.exports = __webpack_require__(80)(undefined);
 
 
 // module
-exports.push([module.i, ":root{ /* 24px */ /* 24px */ /* 48px */ /* 1224px */ /* 400px */}\n\n/* header heights, hard coded offsets */.report__reportMain___3V-s7{margin-top:157px}\n\n/* end of hard coded offsets */li:nth-child(odd){color:#1d1f21;background-color:#fff}li:nth-child(2n){color:gold;background-color:#1d1f21}li{display:block;width:48px;text-align:center}", ""]);
+exports.push([module.i, ".report__reportMain___3V-s7{margin-top:157px}li:nth-child(odd){color:#1d1f21;background-color:#fff}li:nth-child(2n){color:gold;background-color:#1d1f21}li{display:block;width:48px;text-align:center}", ""]);
 
 // exports
 exports.locals = {
@@ -59698,4 +59667,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.ea8648c4202ef6db8d22.bundle.js.map
+//# sourceMappingURL=preview.629ddc1048265fe99b74.bundle.js.map
