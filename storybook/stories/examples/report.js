@@ -3,6 +3,7 @@ import React from 'react'
 import { Grid, Root, Layout, Col } from 'reflex'
 import { loremIpsum } from '../../shared'
 import styles from './report.css'
+import { page } from './layout.css'
 import {
   bottom,
   horizontal,
@@ -10,6 +11,7 @@ import {
   allHalf,
   rightDouble,
   top,
+  verticalHalf,
 } from '../../shared/marginTypes'
 
 function P(props) {
@@ -17,6 +19,21 @@ function P(props) {
     <Col>
       <p {...props} />
     </Col>
+  )
+}
+
+function Li({ index }: { index: number }) {
+  return (
+    <li>
+      <Grid
+        size="fit"
+        dev={index % 2 ? 5 : 1}
+        padding={verticalHalf}
+        justify="center"
+      >
+        Item {index}
+      </Grid>
+    </li>
   )
 }
 
@@ -38,7 +55,7 @@ function Card({
 
 export default function() {
   return (
-    <Layout type="parent" className={styles.report}>
+    <Layout type="parent" className={page}>
       <Layout fixed="top">
         <Layout dev={1}>
           <Root>
@@ -82,43 +99,19 @@ export default function() {
           </Root>
         </Layout>
       </Layout>
-      <Layout type="parent" className={styles.main} dev={2}>
+      <Layout type="parent" className={styles.reportMain} dev={2}>
         <Layout type="stretch">
           <Root>
             <Grid>
               <Grid size={1} align="top" padding={top} margin={horizontalHalf}>
                 <Grid>
                   <ul>
-                    <li>
-                      <Grid size="fit" dev={5}>
-                        Item 1
-                      </Grid>
-                    </li>
-                    <li>
-                      <Grid size="fit" dev={1}>
-                        Item 2
-                      </Grid>
-                    </li>
-                    <li>
-                      <Grid size="fit" dev={5}>
-                        Item 3
-                      </Grid>
-                    </li>
-                    <li>
-                      <Grid size="fit" dev={1}>
-                        Item 4
-                      </Grid>
-                    </li>
-                    <li>
-                      <Grid size="fit" dev={5}>
-                        Item 5
-                      </Grid>
-                    </li>
-                    <li>
-                      <Grid size="fit" dev={1}>
-                        Item 6
-                      </Grid>
-                    </li>
+                    <Li index={1} />
+                    <Li index={2} />
+                    <Li index={3} />
+                    <Li index={4} />
+                    <Li index={5} />
+                    <Li index={6} />
                   </ul>
                 </Grid>
               </Grid>

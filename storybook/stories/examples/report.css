@@ -1,40 +1,23 @@
 @import "../../shared/variables.css";
 
-.report {
-  position: absolute;
-  top: 0;
+/* header heights, hard coded offsets */
+.reportMain {
+  margin-top: 157px;
+}
+/* end of hard coded offsets */
 
-  & p,
-  & ul,
-  & li,
-  & h1,
-  & h2 {
-    margin: 0;
-    padding: 0;
-  }
+li:nth-child(2n + 1) {
+  color: var(--axonBlack);
+  background-color: white;
+}
 
-  /* header heights, hard coded offsets */
-  & .main {
-    margin-top: 157px;
-  }
-  /* end of hard coded offsets */
+li:nth-child(2n) {
+  color: var(--axonGold);
+  background-color: var(--axonBlack);
+}
 
-  & .card,
-  & li:nth-child(2n + 1) {
-    color: var(--axonBlack);
-    background-color: white;
-  }
-
-  & li:nth-child(2n) {
-    color: var(--axonGold);
-    background-color: var(--axonBlack);
-  }
-
-  & li {
-    display: block;
-    width: calc(24px * 2);
-    height: calc(24px * 2 - 17px);
-    text-align: center;
-    padding-top: 17px;
-  }
+li {
+  display: block;
+  width: calc(24px * 2);
+  text-align: center;
 }
