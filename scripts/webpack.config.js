@@ -29,6 +29,20 @@ const cssLoaders = [
   },
 ]
 
+function apply(compiler) {
+  compiler.plugin('compilation', (compilation, params) => {
+    params.normalModuleFactory.plugin('parser', parser => {
+      parser.plugin('expression global', function expressionGlobalPlugin() {
+        this.state.module.addVariable(
+          'global',
+          "(function() { return this; }()) || Function('return this')()"
+        )
+        return false
+      })
+    })
+  })
+}
+
 module.exports = {
   entry: resolve(__dirname, '../src/index.js'),
   output: {
@@ -37,16 +51,15 @@ module.exports = {
     library: 'reflex',
     libraryTarget: 'umd',
   },
-  node: {
-    fs: 'empty',
-  },
+  target: 'web',
   plugins: compact([
-    !isProd && new ExtractTextPlugin('reflex.css'),
     new CleanWebpackPlugin([root], {
       root,
       dry: false,
       verbose: false,
     }),
+    !isProd && new ExtractTextPlugin('reflex.css'),
+    { apply },
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       reportFilename: 'stats.html',
@@ -65,6 +78,7 @@ module.exports = {
         sourceMap: true,
       }),
   ]),
+  devtool: 'source-map',
   externals: isProd
     ? {
         react: 'react',
