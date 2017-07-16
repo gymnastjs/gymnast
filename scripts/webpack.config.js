@@ -1,6 +1,7 @@
 const { optimize } = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const replaceEval = require('./replaceEval')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
 const { DefinePlugin } = require('webpack')
@@ -37,16 +38,15 @@ module.exports = {
     library: 'reflex',
     libraryTarget: 'umd',
   },
-  node: {
-    fs: 'empty',
-  },
+  target: 'web',
   plugins: compact([
-    !isProd && new ExtractTextPlugin('reflex.css'),
     new CleanWebpackPlugin([root], {
       root,
       dry: false,
       verbose: false,
     }),
+    !isProd && new ExtractTextPlugin('reflex.css'),
+    replaceEval(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       reportFilename: 'stats.html',
@@ -65,6 +65,7 @@ module.exports = {
         sourceMap: true,
       }),
   ]),
+  devtool: 'source-map',
   externals: isProd
     ? {
         react: 'react',
