@@ -1,6 +1,7 @@
 const { optimize } = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const replaceEval = require('./replaceEval')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
 const { DefinePlugin } = require('webpack')
@@ -29,20 +30,6 @@ const cssLoaders = [
   },
 ]
 
-function apply(compiler) {
-  compiler.plugin('compilation', (compilation, params) => {
-    params.normalModuleFactory.plugin('parser', parser => {
-      parser.plugin('expression global', function expressionGlobalPlugin() {
-        this.state.module.addVariable(
-          'global',
-          "(function() { return this; }()) || Function('return this')()"
-        )
-        return false
-      })
-    })
-  })
-}
-
 module.exports = {
   entry: resolve(__dirname, '../src/index.js'),
   output: {
@@ -59,7 +46,7 @@ module.exports = {
       verbose: false,
     }),
     !isProd && new ExtractTextPlugin('reflex.css'),
-    { apply },
+    replaceEval(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       reportFilename: 'stats.html',
