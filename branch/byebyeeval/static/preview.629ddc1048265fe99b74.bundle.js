@@ -804,11 +804,13 @@ $exports.store = store;
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 (function webpackUniversalModuleDefinition(root, factory) {
-  if (( false ? 'undefined' : babelHelpers.typeof(exports)) === 'object' && ( false ? 'undefined' : babelHelpers.typeof(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+  if (( false ? 'undefined' : _typeof2(exports)) === 'object' && ( false ? 'undefined' : _typeof2(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else if ((typeof exports === 'undefined' ? 'undefined' : babelHelpers.typeof(exports)) === 'object') exports["reflex"] = factory();else root["reflex"] = factory();
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else if ((typeof exports === 'undefined' ? 'undefined' : _typeof2(exports)) === 'object') exports["reflex"] = factory();else root["reflex"] = factory();
 })(undefined, function () {
   return (/******/function (modules) {
       // webpackBootstrap
@@ -894,6 +896,12 @@ $exports.store = store;
 
       "use strict";
 
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
+
       /**
        * Copyright 2013-present, Facebook, Inc.
        * All rights reserved.
@@ -907,7 +915,7 @@ $exports.store = store;
         var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element') || 0xeac7;
 
         var isValidElement = function isValidElement(object) {
-          return (typeof object === 'undefined' ? 'undefined' : babelHelpers.typeof(object)) === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+          return (typeof object === 'undefined' ? 'undefined' : _typeof(object)) === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
         };
 
         // By explicitly using `prop-types` you are opting into new development behavior.
@@ -1149,6 +1157,12 @@ $exports.store = store;
        * of patent rights can be found in the PATENTS file in the same directory.
        *
        */
+
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
 
       var _assign = __webpack_require__(8);
 
@@ -1474,7 +1488,7 @@ $exports.store = store;
        * @final
        */
       ReactElement.isValidElement = function (object) {
-        return (typeof object === 'undefined' ? 'undefined' : babelHelpers.typeof(object)) === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+        return (typeof object === 'undefined' ? 'undefined' : _typeof(object)) === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
       };
 
       module.exports = ReactElement;
@@ -1545,25 +1559,83 @@ $exports.store = store;
 
       var _compact2 = __webpack_require__(14);
 
-      var _compact3 = babelHelpers.interopRequireDefault(_compact2);
+      var _compact3 = _interopRequireDefault(_compact2);
+
+      var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }return target;
+      };
+
+      var _createClass = function () {
+        function defineProperties(target, props) {
+          for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+          }
+        }return function (Constructor, protoProps, staticProps) {
+          if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+        };
+      }();
 
       var _react = __webpack_require__(6);
 
-      var _react2 = babelHelpers.interopRequireDefault(_react);
+      var _react2 = _interopRequireDefault(_react);
 
       var _propTypes = __webpack_require__(0);
 
-      var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+      var _propTypes2 = _interopRequireDefault(_propTypes);
 
       var _utils = __webpack_require__(18);
 
       var _grid = __webpack_require__(83);
 
-      var _grid2 = babelHelpers.interopRequireDefault(_grid);
+      var _grid2 = _interopRequireDefault(_grid);
 
       var _dev = __webpack_require__(31);
 
-      var _dev2 = babelHelpers.interopRequireDefault(_dev);
+      var _dev2 = _interopRequireDefault(_dev);
+
+      function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : { default: obj };
+      }
+
+      function _toConsumableArray(arr) {
+        if (Array.isArray(arr)) {
+          for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+            arr2[i] = arr[i];
+          }return arr2;
+        } else {
+          return Array.from(arr);
+        }
+      }
+
+      function _objectWithoutProperties(obj, keys) {
+        var target = {};for (var i in obj) {
+          if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
+        }return target;
+      }
+
+      function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+          throw new TypeError("Cannot call a class as a function");
+        }
+      }
+
+      function _possibleConstructorReturn(self, call) {
+        if (!self) {
+          throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        }return call && ((typeof call === 'undefined' ? 'undefined' : _typeof2(call)) === "object" || typeof call === "function") ? call : self;
+      }
+
+      function _inherits(subClass, superClass) {
+        if (typeof superClass !== "function" && superClass !== null) {
+          throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof2(superClass)));
+        }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+      }
 
       var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
@@ -1590,14 +1662,15 @@ $exports.store = store;
       });
 
       var Grid = function (_React$Component) {
-        babelHelpers.inherits(Grid, _React$Component);
+        _inherits(Grid, _React$Component);
 
         function Grid() {
-          babelHelpers.classCallCheck(this, Grid);
-          return babelHelpers.possibleConstructorReturn(this, (Grid.__proto__ || Object.getPrototypeOf(Grid)).apply(this, arguments));
+          _classCallCheck(this, Grid);
+
+          return _possibleConstructorReturn(this, (Grid.__proto__ || Object.getPrototypeOf(Grid)).apply(this, arguments));
         }
 
-        babelHelpers.createClass(Grid, [{
+        _createClass(Grid, [{
           key: 'render',
           value: function render() {
             var _props = this.props,
@@ -1609,14 +1682,15 @@ $exports.store = store;
                 margin = _props.margin,
                 padding = _props.padding,
                 size = _props.size,
-                props = babelHelpers.objectWithoutProperties(_props, ['dev', 'align', 'children', 'className', 'justify', 'margin', 'padding', 'size']);
+                props = _objectWithoutProperties(_props, ['dev', 'align', 'children', 'className', 'justify', 'margin', 'padding', 'size']);
 
-            var classes = (0, _compact3.default)([].concat(babelHelpers.toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), babelHelpers.toConsumableArray((0, _utils.getSpacingClasses)(padding, 'Padding')), [className, size && _grid2.default.col, size && _grid2.default['col-' + String(size)], dev && this.context.devMode && "development" !== 'production' && _dev2.default['colors' + String(dev)], _grid2.default.grid]));
+            var classes = (0, _compact3.default)([].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), _toConsumableArray((0, _utils.getSpacingClasses)(padding, 'Padding')), [className, size && _grid2.default.col, size && _grid2.default['col-' + String(size)], dev && this.context.devMode && "development" !== 'production' && _dev2.default['colors' + String(dev)], _grid2.default.grid]));
             var offsetClasses = (0, _compact3.default)([align && _grid2.default[align + 'Align'], justify && _grid2.default[justify + 'Justify']]);
 
-            return _react2.default.createElement('div', babelHelpers.extends({}, props, { className: [].concat(babelHelpers.toConsumableArray(classes), babelHelpers.toConsumableArray(offsetClasses)).join(' ') }), children);
+            return _react2.default.createElement('div', _extends({}, props, { className: [].concat(_toConsumableArray(classes), _toConsumableArray(offsetClasses)).join(' ') }), children);
           }
         }]);
+
         return Grid;
       }(_react2.default.Component);
 
@@ -2035,6 +2109,12 @@ $exports.store = store;
        * 
        */
 
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
+
       var _prodInvariant = __webpack_require__(5);
 
       var ReactCurrentOwner = __webpack_require__(10);
@@ -2199,7 +2279,7 @@ $exports.store = store;
             var nextChildID = nextChildIDs[i];
             var nextChild = getItem(nextChildID);
             !nextChild ? true ? invariant(false, 'Expected hook events to fire for the child before its parent includes it in onSetChildren().') : _prodInvariant('140') : void 0;
-            !(nextChild.childIDs != null || babelHelpers.typeof(nextChild.element) !== 'object' || nextChild.element == null) ? true ? invariant(false, 'Expected onSetChildren() to fire for a container child before its parent includes it in onSetChildren().') : _prodInvariant('141') : void 0;
+            !(nextChild.childIDs != null || _typeof(nextChild.element) !== 'object' || nextChild.element == null) ? true ? invariant(false, 'Expected onSetChildren() to fire for a container child before its parent includes it in onSetChildren().') : _prodInvariant('141') : void 0;
             !nextChild.isMounted ? true ? invariant(false, 'Expected onMountComponent() to fire for the child before its parent includes it in onSetChildren().') : _prodInvariant('71') : void 0;
             if (nextChild.parentID == null) {
               nextChild.parentID = id;
@@ -2414,17 +2494,21 @@ $exports.store = store;
 
       var _compact2 = __webpack_require__(14);
 
-      var _compact3 = babelHelpers.interopRequireDefault(_compact2);
+      var _compact3 = _interopRequireDefault(_compact2);
 
       var _memoize2 = __webpack_require__(50);
 
-      var _memoize3 = babelHelpers.interopRequireDefault(_memoize2);
+      var _memoize3 = _interopRequireDefault(_memoize2);
 
       exports.getDisplayName = getDisplayName;
 
       var _spacing = __webpack_require__(82);
 
-      var _spacing2 = babelHelpers.interopRequireDefault(_spacing);
+      var _spacing2 = _interopRequireDefault(_spacing);
+
+      function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : { default: obj };
+      }
 
       var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(0).any;
 
@@ -2510,10 +2594,16 @@ $exports.store = store;
 
       "use strict";
 
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
+
       var freeGlobal = __webpack_require__(58);
 
       /** Detect free variable `self`. */
-      var freeSelf = (typeof self === 'undefined' ? 'undefined' : babelHelpers.typeof(self)) == 'object' && self && self.Object === Object && self;
+      var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
 
       /** Used as a reference to the global object. */
       var root = freeGlobal || freeSelf || Function('return this')();
@@ -2535,6 +2625,12 @@ $exports.store = store;
        * of patent rights can be found in the PATENTS file in the same directory.
        *
        */
+
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
 
       var _prodInvariant = __webpack_require__(5),
           _assign = __webpack_require__(8);
@@ -2586,7 +2682,7 @@ $exports.store = store;
        * @protected
        */
       ReactComponent.prototype.setState = function (partialState, callback) {
-        !((typeof partialState === 'undefined' ? 'undefined' : babelHelpers.typeof(partialState)) === 'object' || typeof partialState === 'function' || partialState == null) ? true ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : _prodInvariant('85') : void 0;
+        !((typeof partialState === 'undefined' ? 'undefined' : _typeof(partialState)) === 'object' || typeof partialState === 'function' || partialState == null) ? true ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : _prodInvariant('85') : void 0;
         this.updater.enqueueSetState(this, partialState);
         if (callback) {
           this.updater.enqueueCallback(this, callback, 'setState');
@@ -2882,6 +2978,12 @@ $exports.store = store;
        * that support it.
        */
 
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
+
       var ReactCurrentOwner = __webpack_require__(10);
       var ReactComponentTreeHook = __webpack_require__(17);
       var ReactElement = __webpack_require__(4);
@@ -2979,7 +3081,7 @@ $exports.store = store;
        * @param {*} parentType node's parent's type.
        */
       function validateChildKeys(node, parentType) {
-        if ((typeof node === 'undefined' ? 'undefined' : babelHelpers.typeof(node)) !== 'object') {
+        if ((typeof node === 'undefined' ? 'undefined' : _typeof(node)) !== 'object') {
           return;
         }
         if (Array.isArray(node)) {
@@ -3039,7 +3141,7 @@ $exports.store = store;
           if (!validType) {
             if (typeof type !== 'function' && typeof type !== 'string') {
               var info = '';
-              if (type === undefined || (typeof type === 'undefined' ? 'undefined' : babelHelpers.typeof(type)) === 'object' && type !== null && Object.keys(type).length === 0) {
+              if (type === undefined || (typeof type === 'undefined' ? 'undefined' : _typeof(type)) === 'object' && type !== null && Object.keys(type).length === 0) {
                 info += ' You likely forgot to export your component from the file ' + "it's defined in.";
               }
 
@@ -3054,7 +3156,7 @@ $exports.store = store;
 
               var currentSource = props !== null && props !== undefined && props.__source !== undefined ? props.__source : null;
               ReactComponentTreeHook.pushNonStandardWarningStack(true, currentSource);
-              true ? warning(false, 'React.createElement: type is invalid -- expected a string (for ' + 'built-in components) or a class/function (for composite ' + 'components) but got: %s.%s', type == null ? type : typeof type === 'undefined' ? 'undefined' : babelHelpers.typeof(type), info) : void 0;
+              true ? warning(false, 'React.createElement: type is invalid -- expected a string (for ' + 'built-in components) or a class/function (for composite ' + 'components) but got: %s.%s', type == null ? type : typeof type === 'undefined' ? 'undefined' : _typeof(type), info) : void 0;
               ReactComponentTreeHook.popNonStandardWarningStack();
             }
           }
@@ -3132,6 +3234,12 @@ $exports.store = store;
        * LICENSE file in the root directory of this source tree. An additional grant
        * of patent rights can be found in the PATENTS file in the same directory.
        */
+
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
 
       var emptyFunction = __webpack_require__(15);
       var invariant = __webpack_require__(3);
@@ -3482,7 +3590,7 @@ $exports.store = store;
         }
 
         function isNode(propValue) {
-          switch (typeof propValue === 'undefined' ? 'undefined' : babelHelpers.typeof(propValue)) {
+          switch (typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue)) {
             case 'number':
             case 'string':
             case 'undefined':
@@ -3549,7 +3657,7 @@ $exports.store = store;
 
         // Equivalent of `typeof` but with special handling for array and regexp.
         function getPropType(propValue) {
-          var propType = typeof propValue === 'undefined' ? 'undefined' : babelHelpers.typeof(propValue);
+          var propType = typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue);
           if (Array.isArray(propValue)) {
             return 'array';
           }
@@ -3678,6 +3786,12 @@ $exports.store = store;
 
       "use strict";
 
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
+
       /**
        * Checks if `value` is the
        * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -3703,9 +3817,8 @@ $exports.store = store;
        * _.isObject(null);
        * // => false
        */
-
       function isObject(value) {
-        var type = typeof value === 'undefined' ? 'undefined' : babelHelpers.typeof(value);
+        var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
         return value != null && (type == 'object' || type == 'function');
       }
 
@@ -3736,7 +3849,7 @@ $exports.store = store;
       Object.defineProperty(exports, 'Grid', {
         enumerable: true,
         get: function get() {
-          return babelHelpers.interopRequireDefault(_grid).default;
+          return _interopRequireDefault(_grid).default;
         }
       });
 
@@ -3745,7 +3858,7 @@ $exports.store = store;
       Object.defineProperty(exports, 'Layout', {
         enumerable: true,
         get: function get() {
-          return babelHelpers.interopRequireDefault(_layout).default;
+          return _interopRequireDefault(_layout).default;
         }
       });
 
@@ -3763,7 +3876,7 @@ $exports.store = store;
       Object.defineProperty(exports, 'Col', {
         enumerable: true,
         get: function get() {
-          return babelHelpers.interopRequireDefault(_col).default;
+          return _interopRequireDefault(_col).default;
         }
       });
 
@@ -3772,7 +3885,7 @@ $exports.store = store;
       Object.defineProperty(exports, 'Root', {
         enumerable: true,
         get: function get() {
-          return babelHelpers.interopRequireDefault(_root).default;
+          return _interopRequireDefault(_root).default;
         }
       });
 
@@ -3781,13 +3894,30 @@ $exports.store = store;
       Object.defineProperty(exports, 'Offset', {
         enumerable: true,
         get: function get() {
-          return babelHelpers.interopRequireDefault(_offset).default;
+          return _interopRequireDefault(_offset).default;
         }
       });
 
       var _utils = __webpack_require__(18);
 
-      var srcUtils = babelHelpers.interopRequireWildcard(_utils);
+      var srcUtils = _interopRequireWildcard(_utils);
+
+      function _interopRequireWildcard(obj) {
+        if (obj && obj.__esModule) {
+          return obj;
+        } else {
+          var newObj = {};if (obj != null) {
+            for (var key in obj) {
+              if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+            }
+          }newObj.default = obj;return newObj;
+        }
+      }
+
+      function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : { default: obj };
+      }
+
       var utils = exports.utils = srcUtils;
 
       /***/
@@ -4252,6 +4382,12 @@ $exports.store = store;
        *
        */
 
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
+
       var _prodInvariant = __webpack_require__(5);
 
       var ReactCurrentOwner = __webpack_require__(10);
@@ -4288,7 +4424,7 @@ $exports.store = store;
       function getComponentKey(component, index) {
         // Do some typechecking here since we call this blindly. We want to ensure
         // that we don't block potential future ES APIs.
-        if (component && (typeof component === 'undefined' ? 'undefined' : babelHelpers.typeof(component)) === 'object' && component.key != null) {
+        if (component && (typeof component === 'undefined' ? 'undefined' : _typeof(component)) === 'object' && component.key != null) {
           // Explicit key
           return KeyEscapeUtils.escape(component.key);
         }
@@ -4305,7 +4441,7 @@ $exports.store = store;
        * @return {!number} The number of children in this subtree.
        */
       function traverseAllChildrenImpl(children, nameSoFar, callback, traverseContext) {
-        var type = typeof children === 'undefined' ? 'undefined' : babelHelpers.typeof(children);
+        var type = typeof children === 'undefined' ? 'undefined' : _typeof(children);
 
         if (type === 'undefined' || type === 'boolean') {
           // All of the above are perceived as null.
@@ -4670,6 +4806,12 @@ $exports.store = store;
         *
         */
 
+        var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+          return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+        } : function (obj) {
+          return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+        };
+
         var _prodInvariant = __webpack_require__(5);
 
         var ReactPropTypeLocationNames = __webpack_require__(41);
@@ -4718,7 +4860,7 @@ $exports.store = store;
               } catch (ex) {
                 error = ex;
               }
-              true ? warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName, typeof error === 'undefined' ? 'undefined' : babelHelpers.typeof(error)) : void 0;
+              true ? warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName, typeof error === 'undefined' ? 'undefined' : _typeof(error)) : void 0;
               if (error instanceof Error && !(error.message in loggedTypeFailures)) {
                 // Only monitor this failure once because there tends to be a lot of the
                 // same error.
@@ -5056,6 +5198,12 @@ $exports.store = store;
        * of patent rights can be found in the PATENTS file in the same directory.
        */
 
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
+
       if (true) {
         var invariant = __webpack_require__(3);
         var warning = __webpack_require__(2);
@@ -5090,7 +5238,7 @@ $exports.store = store;
               } catch (ex) {
                 error = ex;
               }
-              warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error === 'undefined' ? 'undefined' : babelHelpers.typeof(error));
+              warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error === 'undefined' ? 'undefined' : _typeof(error));
               if (error instanceof Error && !(error.message in loggedTypeFailures)) {
                 // Only monitor this failure once because there tends to be a lot of the
                 // same error.
@@ -5167,6 +5315,12 @@ $exports.store = store;
        * of patent rights can be found in the PATENTS file in the same directory.
        *
        */
+
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
 
       var _assign = __webpack_require__(8);
 
@@ -5533,7 +5687,7 @@ $exports.store = store;
         function mixSpecIntoComponent(Constructor, spec) {
           if (!spec) {
             if (true) {
-              var typeofSpec = typeof spec === 'undefined' ? 'undefined' : babelHelpers.typeof(spec);
+              var typeofSpec = typeof spec === 'undefined' ? 'undefined' : _typeof(spec);
               var isMixinValid = typeofSpec === 'object' && spec !== null;
 
               if (true) {
@@ -5641,7 +5795,7 @@ $exports.store = store;
          * @return {object} one after it has been mutated to contain everything in two.
          */
         function mergeIntoWithNoDuplicateKeys(one, two) {
-          _invariant(one && two && (typeof one === 'undefined' ? 'undefined' : babelHelpers.typeof(one)) === 'object' && (typeof two === 'undefined' ? 'undefined' : babelHelpers.typeof(two)) === 'object', 'mergeIntoWithNoDuplicateKeys(): Cannot merge non-objects.');
+          _invariant(one && two && (typeof one === 'undefined' ? 'undefined' : _typeof(one)) === 'object' && (typeof two === 'undefined' ? 'undefined' : _typeof(two)) === 'object', 'mergeIntoWithNoDuplicateKeys(): Cannot merge non-objects.');
 
           for (var key in two) {
             if (two.hasOwnProperty(key)) {
@@ -5835,7 +5989,7 @@ $exports.store = store;
                 initialState = null;
               }
             }
-            _invariant((typeof initialState === 'undefined' ? 'undefined' : babelHelpers.typeof(initialState)) === 'object' && !Array.isArray(initialState), '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent');
+            _invariant((typeof initialState === 'undefined' ? 'undefined' : _typeof(initialState)) === 'object' && !Array.isArray(initialState), '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent');
 
             this.state = initialState;
           });
@@ -6285,8 +6439,14 @@ $exports.store = store;
       /* WEBPACK VAR INJECTION */
       (function (global) {
 
+        var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+          return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+        } : function (obj) {
+          return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+        };
+
         /** Detect free variable `global` from Node.js. */
-        var freeGlobal = (typeof global === 'undefined' ? 'undefined' : babelHelpers.typeof(global)) == 'object' && global && global.Object === Object && global;
+        var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
 
         module.exports = freeGlobal;
         /* WEBPACK VAR INJECTION */
@@ -6888,6 +7048,12 @@ $exports.store = store;
 
       "use strict";
 
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+      };
+
       /**
        * Checks if `value` is suitable for use as unique object key.
        *
@@ -6895,9 +7061,8 @@ $exports.store = store;
        * @param {*} value The value to check.
        * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
        */
-
       function isKeyable(value) {
-        var type = typeof value === 'undefined' ? 'undefined' : babelHelpers.typeof(value);
+        var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
         return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
       }
 
@@ -7010,25 +7175,83 @@ $exports.store = store;
 
       var _compact2 = __webpack_require__(14);
 
-      var _compact3 = babelHelpers.interopRequireDefault(_compact2);
+      var _compact3 = _interopRequireDefault(_compact2);
+
+      var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }return target;
+      };
+
+      var _createClass = function () {
+        function defineProperties(target, props) {
+          for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+          }
+        }return function (Constructor, protoProps, staticProps) {
+          if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+        };
+      }();
 
       var _react = __webpack_require__(6);
 
-      var _react2 = babelHelpers.interopRequireDefault(_react);
+      var _react2 = _interopRequireDefault(_react);
 
       var _propTypes = __webpack_require__(0);
 
-      var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+      var _propTypes2 = _interopRequireDefault(_propTypes);
 
       var _utils = __webpack_require__(18);
 
       var _layout = __webpack_require__(85);
 
-      var _layout2 = babelHelpers.interopRequireDefault(_layout);
+      var _layout2 = _interopRequireDefault(_layout);
 
       var _dev = __webpack_require__(31);
 
-      var _dev2 = babelHelpers.interopRequireDefault(_dev);
+      var _dev2 = _interopRequireDefault(_dev);
+
+      function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : { default: obj };
+      }
+
+      function _toConsumableArray(arr) {
+        if (Array.isArray(arr)) {
+          for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+            arr2[i] = arr[i];
+          }return arr2;
+        } else {
+          return Array.from(arr);
+        }
+      }
+
+      function _objectWithoutProperties(obj, keys) {
+        var target = {};for (var i in obj) {
+          if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
+        }return target;
+      }
+
+      function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+          throw new TypeError("Cannot call a class as a function");
+        }
+      }
+
+      function _possibleConstructorReturn(self, call) {
+        if (!self) {
+          throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        }return call && ((typeof call === 'undefined' ? 'undefined' : _typeof2(call)) === "object" || typeof call === "function") ? call : self;
+      }
+
+      function _inherits(subClass, superClass) {
+        if (typeof superClass !== "function" && superClass !== null) {
+          throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof2(superClass)));
+        }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+      }
 
       var babelPluginFlowReactPropTypes_proptype_LayoutType = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_LayoutType || __webpack_require__(0).any;
 
@@ -7072,14 +7295,15 @@ $exports.store = store;
       }
 
       var Layout = function (_React$Component) {
-        babelHelpers.inherits(Layout, _React$Component);
+        _inherits(Layout, _React$Component);
 
         function Layout() {
-          babelHelpers.classCallCheck(this, Layout);
-          return babelHelpers.possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
+          _classCallCheck(this, Layout);
+
+          return _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
         }
 
-        babelHelpers.createClass(Layout, [{
+        _createClass(Layout, [{
           key: 'getChildContext',
           value: function getChildContext() {
             return {
@@ -7097,13 +7321,14 @@ $exports.store = store;
                 type = _props.type,
                 devMode = _props.devMode,
                 dev = _props.dev,
-                props = babelHelpers.objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'type', 'devMode', 'dev']);
+                props = _objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'type', 'devMode', 'dev']);
 
-            var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(type)].concat(babelHelpers.toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "development" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
+            var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(type)].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "development" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
 
-            return _react2.default.createElement('div', babelHelpers.extends({}, props, { className: classes.join(' ') }));
+            return _react2.default.createElement('div', _extends({}, props, { className: classes.join(' ') }));
           }
         }]);
+
         return Layout;
       }(_react2.default.Component);
 
@@ -7152,13 +7377,33 @@ $exports.store = store;
         value: true
       });
 
+      var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }return target;
+      };
+
       var _react = __webpack_require__(6);
 
-      var _react2 = babelHelpers.interopRequireDefault(_react);
+      var _react2 = _interopRequireDefault(_react);
 
       var _grid = __webpack_require__(7);
 
-      var _grid2 = babelHelpers.interopRequireDefault(_grid);
+      var _grid2 = _interopRequireDefault(_grid);
+
+      function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : { default: obj };
+      }
+
+      function _objectWithoutProperties(obj, keys) {
+        var target = {};for (var i in obj) {
+          if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
+        }return target;
+      }
 
       var Col = function Col(_ref) {
         var _ref$marginTop = _ref.marginTop,
@@ -7169,9 +7414,10 @@ $exports.store = store;
             marginBottom = _ref$marginBottom === undefined ? 1 : _ref$marginBottom,
             _ref$marginLeft = _ref.marginLeft,
             marginLeft = _ref$marginLeft === undefined ? 0.5 : _ref$marginLeft,
-            props = babelHelpers.objectWithoutProperties(_ref, ['marginTop', 'marginRight', 'marginBottom', 'marginLeft']),
+            props = _objectWithoutProperties(_ref, ['marginTop', 'marginRight', 'marginBottom', 'marginLeft']),
             children = _ref.children;
-        return _react2.default.createElement(_grid2.default, babelHelpers.extends({}, props, { margin: [marginTop, marginRight, marginBottom, marginLeft] }), children);
+
+        return _react2.default.createElement(_grid2.default, _extends({}, props, { margin: [marginTop, marginRight, marginBottom, marginLeft] }), children);
       };
 
       Col.propTypes = {
@@ -7193,18 +7439,33 @@ $exports.store = store;
       Object.defineProperty(exports, "__esModule", {
         value: true
       });
+
+      var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }return target;
+      };
+
       exports.default = Root;
 
       var _react = __webpack_require__(6);
 
-      var _react2 = babelHelpers.interopRequireDefault(_react);
+      var _react2 = _interopRequireDefault(_react);
 
       var _grid = __webpack_require__(7);
 
-      var _grid2 = babelHelpers.interopRequireDefault(_grid);
+      var _grid2 = _interopRequireDefault(_grid);
+
+      function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : { default: obj };
+      }
 
       function Root(props) {
-        return _react2.default.createElement(_grid2.default, babelHelpers.extends({}, props, { margin: [0, 0.5], padding: [0, 1] }));
+        return _react2.default.createElement(_grid2.default, _extends({}, props, { margin: [0, 0.5], padding: [0, 1] }));
       }
       Root.propTypes = {};
 
@@ -7221,11 +7482,15 @@ $exports.store = store;
 
       var _react = __webpack_require__(6);
 
-      var _react2 = babelHelpers.interopRequireDefault(_react);
+      var _react2 = _interopRequireDefault(_react);
 
       var _grid = __webpack_require__(7);
 
-      var _grid2 = babelHelpers.interopRequireDefault(_grid);
+      var _grid2 = _interopRequireDefault(_grid);
+
+      function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : { default: obj };
+      }
 
       var babelPluginFlowReactPropTypes_proptype_Offset = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_Offset || __webpack_require__(0).any;
 
@@ -7696,7 +7961,7 @@ var _box = __webpack_require__(755);
 Object.defineProperty(exports, 'Box', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_box).default;
+    return _interopRequireDefault(_box).default;
   }
 });
 
@@ -7705,7 +7970,7 @@ var _margin = __webpack_require__(756);
 Object.defineProperty(exports, 'getMarginSelect', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_margin).default;
+    return _interopRequireDefault(_margin).default;
   }
 });
 
@@ -7714,7 +7979,7 @@ var _position = __webpack_require__(757);
 Object.defineProperty(exports, 'getPositionSelect', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_position).default;
+    return _interopRequireDefault(_position).default;
   }
 });
 
@@ -7723,7 +7988,7 @@ var _rootLayout = __webpack_require__(758);
 Object.defineProperty(exports, 'RootLayout', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_rootLayout).default;
+    return _interopRequireDefault(_rootLayout).default;
   }
 });
 
@@ -7732,7 +7997,7 @@ var _withExtensions = __webpack_require__(760);
 Object.defineProperty(exports, 'WithExtensions', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_withExtensions).default;
+    return _interopRequireDefault(_withExtensions).default;
   }
 });
 
@@ -7756,7 +8021,9 @@ Object.defineProperty(exports, 'storyFolders', {
 
 var _loremIpsum = __webpack_require__(1035);
 
-var _loremIpsum2 = babelHelpers.interopRequireDefault(_loremIpsum);
+var _loremIpsum2 = _interopRequireDefault(_loremIpsum);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var loremIpsum = exports.loremIpsum = _loremIpsum2.default;
 
@@ -19958,25 +20225,41 @@ Object.defineProperty(exports, "__esModule", {
 
 var _compact2 = __webpack_require__(387);
 
-var _compact3 = babelHelpers.interopRequireDefault(_compact2);
+var _compact3 = _interopRequireDefault(_compact2);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = __webpack_require__(0);
 
-var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _utils = __webpack_require__(263);
 
 var _grid = __webpack_require__(1151);
 
-var _grid2 = babelHelpers.interopRequireDefault(_grid);
+var _grid2 = _interopRequireDefault(_grid);
 
 var _dev = __webpack_require__(672);
 
-var _dev2 = babelHelpers.interopRequireDefault(_dev);
+var _dev2 = _interopRequireDefault(_dev);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
@@ -20003,14 +20286,15 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
 });
 
 var Grid = function (_React$Component) {
-  babelHelpers.inherits(Grid, _React$Component);
+  _inherits(Grid, _React$Component);
 
   function Grid() {
-    babelHelpers.classCallCheck(this, Grid);
-    return babelHelpers.possibleConstructorReturn(this, (Grid.__proto__ || Object.getPrototypeOf(Grid)).apply(this, arguments));
+    _classCallCheck(this, Grid);
+
+    return _possibleConstructorReturn(this, (Grid.__proto__ || Object.getPrototypeOf(Grid)).apply(this, arguments));
   }
 
-  babelHelpers.createClass(Grid, [{
+  _createClass(Grid, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -20022,19 +20306,19 @@ var Grid = function (_React$Component) {
           margin = _props.margin,
           padding = _props.padding,
           size = _props.size,
-          props = babelHelpers.objectWithoutProperties(_props, ['dev', 'align', 'children', 'className', 'justify', 'margin', 'padding', 'size']);
+          props = _objectWithoutProperties(_props, ['dev', 'align', 'children', 'className', 'justify', 'margin', 'padding', 'size']);
 
-
-      var classes = (0, _compact3.default)([].concat(babelHelpers.toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), babelHelpers.toConsumableArray((0, _utils.getSpacingClasses)(padding, 'Padding')), [className, size && _grid2.default.col, size && _grid2.default['col-' + String(size)], dev && this.context.devMode && "production" !== 'production' && _dev2.default['colors' + String(dev)], _grid2.default.grid]));
+      var classes = (0, _compact3.default)([].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), _toConsumableArray((0, _utils.getSpacingClasses)(padding, 'Padding')), [className, size && _grid2.default.col, size && _grid2.default['col-' + String(size)], dev && this.context.devMode && "production" !== 'production' && _dev2.default['colors' + String(dev)], _grid2.default.grid]));
       var offsetClasses = (0, _compact3.default)([align && _grid2.default[align + 'Align'], justify && _grid2.default[justify + 'Justify']]);
 
       return _react2.default.createElement(
         'div',
-        babelHelpers.extends({}, props, { className: [].concat(babelHelpers.toConsumableArray(classes), babelHelpers.toConsumableArray(offsetClasses)).join(' ') }),
+        _extends({}, props, { className: [].concat(_toConsumableArray(classes), _toConsumableArray(offsetClasses)).join(' ') }),
         children
       );
     }
   }]);
+
   return Grid;
 }(_react2.default.Component);
 
@@ -22737,17 +23021,19 @@ exports.getSpacingClasses = exports.log = undefined;
 
 var _compact2 = __webpack_require__(387);
 
-var _compact3 = babelHelpers.interopRequireDefault(_compact2);
+var _compact3 = _interopRequireDefault(_compact2);
 
 var _memoize2 = __webpack_require__(245);
 
-var _memoize3 = babelHelpers.interopRequireDefault(_memoize2);
+var _memoize3 = _interopRequireDefault(_memoize2);
 
 exports.getDisplayName = getDisplayName;
 
 var _spacing = __webpack_require__(1153);
 
-var _spacing2 = babelHelpers.interopRequireDefault(_spacing);
+var _spacing2 = _interopRequireDefault(_spacing);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(0).any;
 
@@ -44261,13 +44547,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
 var _stories = __webpack_require__(249);
 
-var _stories2 = babelHelpers.interopRequireDefault(_stories);
+var _stories2 = _interopRequireDefault(_stories);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 506 */
@@ -44279,18 +44567,23 @@ var _stories2 = babelHelpers.interopRequireDefault(_stories);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = SearchFilters;
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SearchFilters(props) {
   return _react2.default.createElement(
     _reflex.Col,
-    babelHelpers.extends({}, props, { dev: 4, align: 'top' }),
+    _extends({}, props, { dev: 4, align: 'top' }),
     _react2.default.createElement(
       _reflex.Col,
       { marginLeft: 0 },
@@ -44372,9 +44665,11 @@ exports.default = SearchNav;
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SearchNav() {
   return _react2.default.createElement(
@@ -44475,21 +44770,23 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
 
 exports.default = SearchResults;
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
 var _stories = __webpack_require__(249);
 
-var _stories2 = babelHelpers.interopRequireDefault(_stories);
+var _stories2 = _interopRequireDefault(_stories);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SearchResults(_ref) {
   var _ref$results = _ref.results,
@@ -45786,15 +46083,17 @@ window.STORYBOOK_REACT_CLASSES = {};
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; /* eslint-disable global-require, no-underscore-dangle */
+
 var _react = __webpack_require__(498);
 
 var _storybookAddonJsx = __webpack_require__(1144);
 
-var _storybookAddonJsx2 = babelHelpers.interopRequireDefault(_storybookAddonJsx);
+var _storybookAddonJsx2 = _interopRequireDefault(_storybookAddonJsx);
 
-/* eslint-disable global-require, no-underscore-dangle */
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-if ((typeof window === 'undefined' ? 'undefined' : babelHelpers.typeof(window)) === 'object' && window.navigator && /node\.js/i.test(window.navigator.userAgent)) {
+if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object' && window.navigator && /node\.js/i.test(window.navigator.userAgent)) {
   var addons = __webpack_require__(45).default;
   var Channel = __webpack_require__(220).default;
   addons.setChannel(new Channel({
@@ -47588,13 +47887,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _grid = __webpack_require__(222);
 
-var _grid2 = babelHelpers.interopRequireDefault(_grid);
+var _grid2 = _interopRequireDefault(_grid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var Col = function Col(_ref) {
   var _ref$marginTop = _ref.marginTop,
@@ -47605,11 +47910,12 @@ var Col = function Col(_ref) {
       marginBottom = _ref$marginBottom === undefined ? 1 : _ref$marginBottom,
       _ref$marginLeft = _ref.marginLeft,
       marginLeft = _ref$marginLeft === undefined ? 0.5 : _ref$marginLeft,
-      props = babelHelpers.objectWithoutProperties(_ref, ['marginTop', 'marginRight', 'marginBottom', 'marginLeft']),
+      props = _objectWithoutProperties(_ref, ['marginTop', 'marginRight', 'marginBottom', 'marginLeft']),
       children = _ref.children;
+
   return _react2.default.createElement(
     _grid2.default,
-    babelHelpers.extends({}, props, { margin: [marginTop, marginRight, marginBottom, marginLeft] }),
+    _extends({}, props, { margin: [marginTop, marginRight, marginBottom, marginLeft] }),
     children
   );
 };
@@ -47636,11 +47942,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _grid = __webpack_require__(222);
 
-var _grid2 = babelHelpers.interopRequireDefault(_grid);
+var _grid2 = _interopRequireDefault(_grid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var babelPluginFlowReactPropTypes_proptype_Offset = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Offset || __webpack_require__(0).any;
 
@@ -47684,18 +47992,23 @@ if (typeof STORYBOOK_REACT_CLASSES !== 'undefined') {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = Root;
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _grid = __webpack_require__(222);
 
-var _grid2 = babelHelpers.interopRequireDefault(_grid);
+var _grid2 = _interopRequireDefault(_grid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Root(props) {
-  return _react2.default.createElement(_grid2.default, babelHelpers.extends({}, props, { margin: [0, 0.5], padding: [0, 1] }));
+  return _react2.default.createElement(_grid2.default, _extends({}, props, { margin: [0, 0.5], padding: [0, 1] }));
 }
 Root.propTypes = {};
 
@@ -47716,7 +48029,7 @@ var _grid = __webpack_require__(222);
 Object.defineProperty(exports, 'Grid', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_grid).default;
+    return _interopRequireDefault(_grid).default;
   }
 });
 
@@ -47725,7 +48038,7 @@ var _layout = __webpack_require__(753);
 Object.defineProperty(exports, 'Layout', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_layout).default;
+    return _interopRequireDefault(_layout).default;
   }
 });
 
@@ -47743,7 +48056,7 @@ var _col = __webpack_require__(749);
 Object.defineProperty(exports, 'Col', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_col).default;
+    return _interopRequireDefault(_col).default;
   }
 });
 
@@ -47752,7 +48065,7 @@ var _root = __webpack_require__(751);
 Object.defineProperty(exports, 'Root', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_root).default;
+    return _interopRequireDefault(_root).default;
   }
 });
 
@@ -47761,13 +48074,18 @@ var _offset = __webpack_require__(750);
 Object.defineProperty(exports, 'Offset', {
   enumerable: true,
   get: function get() {
-    return babelHelpers.interopRequireDefault(_offset).default;
+    return _interopRequireDefault(_offset).default;
   }
 });
 
 var _utils = __webpack_require__(263);
 
-var srcUtils = babelHelpers.interopRequireWildcard(_utils);
+var srcUtils = _interopRequireWildcard(_utils);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var utils = exports.utils = srcUtils;
 
 /***/ }),
@@ -47783,25 +48101,41 @@ Object.defineProperty(exports, "__esModule", {
 
 var _compact2 = __webpack_require__(387);
 
-var _compact3 = babelHelpers.interopRequireDefault(_compact2);
+var _compact3 = _interopRequireDefault(_compact2);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = __webpack_require__(0);
 
-var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _utils = __webpack_require__(263);
 
 var _layout = __webpack_require__(1152);
 
-var _layout2 = babelHelpers.interopRequireDefault(_layout);
+var _layout2 = _interopRequireDefault(_layout);
 
 var _dev = __webpack_require__(672);
 
-var _dev2 = babelHelpers.interopRequireDefault(_dev);
+var _dev2 = _interopRequireDefault(_dev);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var babelPluginFlowReactPropTypes_proptype_LayoutType = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_LayoutType || __webpack_require__(0).any;
 
@@ -47845,14 +48179,15 @@ function getOverflow(overflow) {
 }
 
 var Layout = function (_React$Component) {
-  babelHelpers.inherits(Layout, _React$Component);
+  _inherits(Layout, _React$Component);
 
   function Layout() {
-    babelHelpers.classCallCheck(this, Layout);
-    return babelHelpers.possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
+    _classCallCheck(this, Layout);
+
+    return _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
   }
 
-  babelHelpers.createClass(Layout, [{
+  _createClass(Layout, [{
     key: 'getChildContext',
     value: function getChildContext() {
       return {
@@ -47870,13 +48205,14 @@ var Layout = function (_React$Component) {
           type = _props.type,
           devMode = _props.devMode,
           dev = _props.dev,
-          props = babelHelpers.objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'type', 'devMode', 'dev']);
+          props = _objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'type', 'devMode', 'dev']);
 
-      var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(type)].concat(babelHelpers.toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "production" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
+      var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(type)].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "production" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
 
-      return _react2.default.createElement('div', babelHelpers.extends({}, props, { className: classes.join(' ') }));
+      return _react2.default.createElement('div', _extends({}, props, { className: classes.join(' ') }));
     }
   }]);
+
   return Layout;
 }(_react2.default.Component);
 
@@ -47968,11 +48304,11 @@ if (typeof STORYBOOK_REACT_CLASSES !== 'undefined') {
 
 var _each2 = __webpack_require__(388);
 
-var _each3 = babelHelpers.interopRequireDefault(_each2);
+var _each3 = _interopRequireDefault(_each2);
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _react3 = __webpack_require__(498);
 
@@ -47981,6 +48317,8 @@ var _addonKnobs = __webpack_require__(31);
 var _src = __webpack_require__(752);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * storyFolders dynamically fetches all files within `/stories`
@@ -48055,13 +48393,20 @@ function addStories(content, component) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = Box;
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
@@ -48081,11 +48426,11 @@ function Box(_ref) {
       type = _ref.type,
       _ref$value = _ref.value,
       value = _ref$value === undefined ? type : _ref$value,
-      props = babelHelpers.objectWithoutProperties(_ref, ['children', 'margin', 'style', 'type', 'value']);
+      props = _objectWithoutProperties(_ref, ['children', 'margin', 'style', 'type', 'value']);
 
   return _react2.default.createElement(
     _reflex.Grid,
-    babelHelpers.extends({ margin: margin }, props),
+    _extends({ margin: margin }, props),
     _react2.default.createElement(
       _reflex.Grid,
       {
@@ -48202,14 +48547,18 @@ exports.default = RootLayout;
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function RootLayout(_ref) {
   var _ref$type = _ref.type,
       type = _ref$type === undefined ? 'parent' : _ref$type,
-      props = babelHelpers.objectWithoutProperties(_ref, ['type']);
+      props = _objectWithoutProperties(_ref, ['type']);
 
   return _react2.default.createElement(
     _reflex.Layout,
@@ -48235,23 +48584,26 @@ exports.storyFolders = undefined;
 
 var _negate2 = __webpack_require__(1013);
 
-var _negate3 = babelHelpers.interopRequireDefault(_negate2);
+var _negate3 = _interopRequireDefault(_negate2);
 
 var _set2 = __webpack_require__(1016);
 
-var _set3 = babelHelpers.interopRequireDefault(_set2);
+var _set3 = _interopRequireDefault(_set2);
 
 var _tail2 = __webpack_require__(1017);
 
-var _tail3 = babelHelpers.interopRequireDefault(_tail2);
+var _tail3 = _interopRequireDefault(_tail2);
 
 var _initial2 = __webpack_require__(1011);
 
-var _initial3 = babelHelpers.interopRequireDefault(_initial2);
+var _initial3 = _interopRequireDefault(_initial2);
 
 var _fromPairs2 = __webpack_require__(1008);
 
-var _fromPairs3 = babelHelpers.interopRequireDefault(_fromPairs2);
+var _fromPairs3 = _interopRequireDefault(_fromPairs2);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+/* eslint-disable global-require, import/no-dynamic-require */
 
 var _fs = __webpack_require__(1032);
 
@@ -48259,9 +48611,11 @@ var _path = __webpack_require__(1033);
 
 var _getName = __webpack_require__(504);
 
-var isTest = "production" === 'test' || "production" === 'test:image';
-/* eslint-disable global-require, import/no-dynamic-require */
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var isTest = "production" === 'test' || "production" === 'test:image';
 var baseUrl = 'https://github.com/obartra/reflex/tree/master/storybook/stories/';
 
 function getFilesAndFolders(path) {
@@ -48337,7 +48691,7 @@ function loadTestFolder(path) {
   var directChildren = (0, _fromPairs3.default)(files.filter(endsWith('.js')).filter(doesntEndWith('.spec.js')).map(fileTestMapper(origin)));
 
   return folders.reduce(function (acc, folder) {
-    return babelHelpers.extends({}, acc, babelHelpers.defineProperty({}, (0, _getName.getName)(folder), loadTestFolder(folder, (0, _getName.getName)(folder))));
+    return _extends({}, acc, _defineProperty({}, (0, _getName.getName)(folder), loadTestFolder(folder, (0, _getName.getName)(folder))));
   }, directChildren);
 }
 
@@ -48384,13 +48738,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = __webpack_require__(0);
 
-var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _addonNotes = __webpack_require__(701);
 
@@ -48398,32 +48754,42 @@ var _addonKnobs = __webpack_require__(31);
 
 var _designGrid = __webpack_require__(1154);
 
-var _designGrid2 = babelHelpers.interopRequireDefault(_designGrid);
+var _designGrid2 = _interopRequireDefault(_designGrid);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var WithExtensions = function (_React$PureComponent) {
-  babelHelpers.inherits(WithExtensions, _React$PureComponent);
+  _inherits(WithExtensions, _React$PureComponent);
 
   function WithExtensions() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    babelHelpers.classCallCheck(this, WithExtensions);
+    _classCallCheck(this, WithExtensions);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = babelHelpers.possibleConstructorReturn(this, (_ref = WithExtensions.__proto__ || Object.getPrototypeOf(WithExtensions)).call.apply(_ref, [this].concat(args))), _this), _this.getDesignGrid = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = WithExtensions.__proto__ || Object.getPrototypeOf(WithExtensions)).call.apply(_ref, [this].concat(args))), _this), _this.getDesignGrid = function () {
       return _react2.default.createElement(
         'div',
         { className: _designGrid2.default.designGrid },
         _react2.default.createElement('div', { className: _designGrid2.default.contentArea })
       );
-    }, _temp), babelHelpers.possibleConstructorReturn(_this, _ret);
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  babelHelpers.createClass(WithExtensions, [{
+  _createClass(WithExtensions, [{
     key: 'getChildContext',
     value: function getChildContext() {
       return {
@@ -48436,8 +48802,9 @@ var WithExtensions = function (_React$PureComponent) {
       var _props = this.props,
           notes = _props.notes,
           className = _props.className,
-          props = babelHelpers.objectWithoutProperties(_props, ['notes', 'className']);
+          props = _objectWithoutProperties(_props, ['notes', 'className']);
       // defaults to last used value, when changed it updates it. This allows us to persist the 'show overlay' setting across examples
+
 
       var showOverlay = (0, _addonKnobs.boolean)('Overlay', false);
 
@@ -48464,6 +48831,7 @@ var WithExtensions = function (_React$PureComponent) {
       );
     }
   }]);
+
   return WithExtensions;
 }(_react2.default.PureComponent);
 
@@ -48668,13 +49036,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 762 */
@@ -48916,13 +49286,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 763 */
@@ -49067,7 +49439,7 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
@@ -49075,9 +49447,11 @@ var _shared = __webpack_require__(26);
 
 var _stories = __webpack_require__(249);
 
-var _stories2 = babelHelpers.interopRequireDefault(_stories);
+var _stories2 = _interopRequireDefault(_stories);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 764 */
@@ -49220,13 +49594,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 765 */
@@ -49241,7 +49617,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var items = (0, _addonKnobs.number)('Items', 6, { range: true, min: 1, max: 6 });
@@ -49282,13 +49658,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 766 */
@@ -49336,13 +49714,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 767 */
@@ -49443,7 +49823,7 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
@@ -49451,9 +49831,11 @@ var _shared = __webpack_require__(26);
 
 var _layout = __webpack_require__(217);
 
-var _layout2 = babelHelpers.interopRequireDefault(_layout);
+var _layout2 = _interopRequireDefault(_layout);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SIZE = {
   TALL: { height: 200 },
@@ -49583,7 +49965,7 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
@@ -49593,9 +49975,11 @@ var _shared = __webpack_require__(26);
 
 var _layout = __webpack_require__(217);
 
-var _layout2 = babelHelpers.interopRequireDefault(_layout);
+var _layout2 = _interopRequireDefault(_layout);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 769 */
@@ -49853,7 +50237,7 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
@@ -49861,11 +50245,13 @@ var _shared = __webpack_require__(26);
 
 var _report = __webpack_require__(1156);
 
-var _report2 = babelHelpers.interopRequireDefault(_report);
+var _report2 = _interopRequireDefault(_report);
 
 var _layout = __webpack_require__(217);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function P(props) {
   return _react2.default.createElement(
@@ -49930,6 +50316,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = function () {
   var results = (0, _addonKnobs.number)('Results', 5, { range: true, min: 1, max: 10 });
   var pages = (0, _addonKnobs.number)('Pages', 3, { range: true, min: 1, max: 5 });
@@ -49955,7 +50343,7 @@ exports.default = function () {
             _reflex.Grid,
             { margin: [1, 0, 0, 0] },
             _react2.default.createElement(_filters2.default, { size: 3 }),
-            _react2.default.createElement(_results2.default, babelHelpers.extends({ size: 9 }, { pages: pages, results: results }))
+            _react2.default.createElement(_results2.default, _extends({ size: 9 }, { pages: pages, results: results }))
           )
         )
       )
@@ -49982,7 +50370,7 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
@@ -49990,25 +50378,27 @@ var _addonKnobs = __webpack_require__(31);
 
 var _layout = __webpack_require__(217);
 
-var _layout2 = babelHelpers.interopRequireDefault(_layout);
+var _layout2 = _interopRequireDefault(_layout);
 
 var _app = __webpack_require__(505);
 
-var _app2 = babelHelpers.interopRequireDefault(_app);
+var _app2 = _interopRequireDefault(_app);
 
 var _filters = __webpack_require__(506);
 
-var _filters2 = babelHelpers.interopRequireDefault(_filters);
+var _filters2 = _interopRequireDefault(_filters);
 
 var _nav = __webpack_require__(507);
 
-var _nav2 = babelHelpers.interopRequireDefault(_nav);
+var _nav2 = _interopRequireDefault(_nav);
 
 var _results = __webpack_require__(508);
 
-var _results2 = babelHelpers.interopRequireDefault(_results);
+var _results2 = _interopRequireDefault(_results);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 771 */
@@ -50126,7 +50516,7 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
@@ -50136,9 +50526,11 @@ var _shared = __webpack_require__(26);
 
 var _layout = __webpack_require__(217);
 
-var _layout2 = babelHelpers.interopRequireDefault(_layout);
+var _layout2 = _interopRequireDefault(_layout);
 
 var _marginTypes = __webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 772 */
@@ -50153,7 +50545,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var items = (0, _addonKnobs.number)('Items', 5, { range: true, min: 0, max: 100 });
@@ -50196,13 +50588,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 773 */
@@ -50217,7 +50611,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var items = (0, _addonKnobs.number)('Items', 0, { range: true, min: 0, max: 5 });
@@ -50322,13 +50716,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 774 */
@@ -50383,13 +50779,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var justifyType = {
   Default: undefined,
@@ -50411,7 +50809,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var itemMargin = (0, _shared.getMarginSelect)('Yellow Item Margin', 'Yellow Item Margin Size');
@@ -50446,13 +50844,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 776 */
@@ -50467,7 +50867,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 exports.default = function () {
   var paddingMap = {
@@ -50481,7 +50883,7 @@ exports.default = function () {
   var paddingOptions = Object.keys(paddingMap);
   var items = (0, _addonKnobs.number)('Items', 6, { range: true, min: 1, max: 24 });
   var margin = (0, _shared.getMarginSelect)();
-  var params = babelHelpers.extends({
+  var params = _extends({
     padding: paddingMap[(0, _addonKnobs.select)('Padding', paddingOptions)]
   }, (0, _shared.getPositionSelect)());
   var height = {
@@ -50505,13 +50907,13 @@ exports.default = function () {
       null,
       _react2.default.createElement(
         _reflex.Grid,
-        babelHelpers.extends({}, params, { dev: 2 }),
+        _extends({}, params, { dev: 2 }),
         _react2.default.createElement(
           _reflex.Grid,
-          babelHelpers.extends({ size: 6 }, params, { margin: margin, dev: 1, style: height }),
+          _extends({ size: 6 }, params, { margin: margin, dev: 1, style: height }),
           _react2.default.createElement(
             _reflex.Grid,
-            babelHelpers.extends({ size: 6 }, params, { margin: margin, dev: 3 }),
+            _extends({ size: 6 }, params, { margin: margin, dev: 3 }),
             _react2.default.createElement(
               _reflex.Grid,
               { size: 6, margin: margin, dev: 4, align: 'center' },
@@ -50538,7 +50940,7 @@ exports.default = function () {
         { size: 6 },
         _react2.default.createElement(
           _reflex.Grid,
-          babelHelpers.extends({}, params, { dev: 2 }),
+          _extends({}, params, { dev: 2 }),
           (0, _times3.default)(items, function (index) {
             return _react2.default.createElement(
               _shared.Box,
@@ -50554,13 +50956,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 777 */
@@ -50629,13 +51033,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 778 */
@@ -50908,7 +51314,7 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
@@ -50918,7 +51324,9 @@ var _marginTypes = __webpack_require__(58);
 
 var _stories = __webpack_require__(249);
 
-var _stories2 = babelHelpers.interopRequireDefault(_stories);
+var _stories2 = _interopRequireDefault(_stories);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 779 */
@@ -50933,7 +51341,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var size = (0, _addonKnobs.number)('Size', 12, { range: true, min: 1, max: 12 });
@@ -50991,13 +51399,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 780 */
@@ -51012,7 +51422,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var stretch = (0, _addonKnobs.boolean)('Stretch', false);
@@ -51092,13 +51502,15 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _addonKnobs = __webpack_require__(31);
 
 var _reflex = __webpack_require__(18);
 
 var _shared = __webpack_require__(26);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ReferenceColumn(_ref) {
   var height = _ref.height;
@@ -51130,7 +51542,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _times2 = __webpack_require__(89);
 
-var _times3 = babelHelpers.interopRequireDefault(_times2);
+var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
   var subSections = (0, _addonKnobs.number)('Subsections', 3, { range: true, min: 1, max: 20 });
@@ -51147,7 +51559,7 @@ exports.default = function () {
 
 var _react = __webpack_require__(1);
 
-var _react2 = babelHelpers.interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reflex = __webpack_require__(18);
 
@@ -51157,7 +51569,9 @@ var _marginTypes = __webpack_require__(58);
 
 var _layout = __webpack_require__(1155);
 
-var _layout2 = babelHelpers.interopRequireDefault(_layout);
+var _layout2 = _interopRequireDefault(_layout);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function getStaticSection(index) {
   return _react2.default.createElement(
@@ -59253,4 +59667,4 @@ module.exports = __webpack_require__(676);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.886bfeeafe1fcf8b7bbc.bundle.js.map
+//# sourceMappingURL=preview.629ddc1048265fe99b74.bundle.js.map
