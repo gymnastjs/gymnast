@@ -1,15 +1,6 @@
-@import "../../shared/variables.css";
+@import "../../shared/layout.css";
 
 .page {
-  position: absolute;
-  top: 0;
-
-  & h1,
-  & h2,
-  & p {
-    margin: 0;
-  }
-
   /* header heights, hard coded offsets */
 
   & .main {
