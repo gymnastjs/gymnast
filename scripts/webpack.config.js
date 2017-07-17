@@ -45,11 +45,11 @@ module.exports = {
       dry: false,
       verbose: false,
     }),
-    !isProd && new ExtractTextPlugin('reflex.css'),
+    new ExtractTextPlugin('reflex.css'),
     replaceEval(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      reportFilename: 'stats.html',
+      reportFilename: `stats${isProd ? '' : '.dev'}.html`,
       logLevel: 'error',
       openAnalyzer: false,
     }),
@@ -81,12 +81,10 @@ module.exports = {
       {
         test: /\.css$/,
         include: resolve(__dirname, '../'),
-        loader: isProd
-          ? ['style-loader', ...cssLoaders]
-          : ExtractTextPlugin.extract({
-              fallback: 'style-loader',
-              use: cssLoaders,
-            }),
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: cssLoaders,
+        }),
       },
     ],
   },

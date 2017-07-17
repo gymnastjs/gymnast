@@ -29,7 +29,7 @@ The `Layout` Component defines sections in the page that have full width. `Grid`
 
 ## 🖥 Install
 
-Reflex is available as the `xn-reflex` package on [npm](https://www.npmjs.com/). It is also available on the [unpkg CDN](https://unpkg.com/xn-reflex) and the CSS [here](https://unpkg.com/xn-reflex/dist/reflex.css).
+Reflex is available as the `xn-reflex` package on [npm](https://www.npmjs.com/). It is also available on the [unpkg CDN](https://unpkg.com/xn-reflex/dist/reflex.min.js) and the CSS [here](https://unpkg.com/xn-reflex/dist/reflex.css).
 
 You can install it with:
 

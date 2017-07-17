@@ -38,6 +38,8 @@
     "babel-plugin-module-resolver": "2.7.1",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-runtime": "6.23.0",
     "bundlesize": "0.6.1",
     "clean-webpack-plugin": "0.1.16",
     "codeclimate-test-reporter": "0.5.0",
@@ -105,7 +107,7 @@
   "bundlesize": [
     {
       "path": "./dist/reflex.min.js",
-      "threshold": "9 Kb"
+      "threshold": "7 Kb"
     }
   ],
   "scripts": {
@@ -124,7 +126,7 @@
     "precommit": "lint-staged",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "start:storybook": "start-storybook -p 9001 -s ./storybook/static -c storybook/config",
-    "start:webpack": "webpack --config scripts/webpack.config.js --watch",
+    "start:webpack": "yarn build:dev -- --watch",
     "start": "npm-run-all --parallel start:*",
     "test:image": "babel-node node_modules/.bin/nightwatch --config test/screenshot/nightwatch.conf.js",
     "test:size": "bundlesize",
