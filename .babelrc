@@ -9,6 +9,14 @@
     "transform-object-rest-spread",
     "transform-class-properties",
     [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": false
+      }
+    ],
+    [
       "module-resolver",
       {
         "alias": {
