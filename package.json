@@ -40,7 +40,7 @@
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-runtime": "6.23.0",
-    "bundlesize": "0.6.1",
+    "bundlesize": "^0.12.0",
     "clean-webpack-plugin": "0.1.16",
     "codeclimate-test-reporter": "0.5.0",
     "commitizen": "2.9.6",
@@ -107,7 +107,11 @@
   "bundlesize": [
     {
       "path": "./dist/reflex.min.js",
-      "threshold": "7 Kb"
+      "maxSize": "6 Kb"
+    },
+    {
+      "path": "./dist/reflex.css",
+      "maxSize": "1.5 Kb"
     }
   ],
   "scripts": {
