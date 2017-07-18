@@ -1,21 +1,36 @@
 // @flow
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compact } from 'lodash'
+import { compact, omit } from 'lodash'
 import { getSpacingClasses } from './utils'
-import type { Dev, AlignGrid, Justify, Size, Spacing } from './types'
+import type {
+  Dev,
+  AlignGrid,
+  Justify,
+  Size,
+  Spacing,
+  SpacingValues,
+} from './types'
 import styles from './grid.css'
 import devStyles from './dev.css'
 
 export type Props = {
+  margin: Spacing,
   dev?: Dev,
   align?: AlignGrid,
   children?: React$Element<any> | Array<React$Element<any>>,
   className?: string,
   justify?: Justify,
-  margin?: Spacing,
   padding?: Spacing,
   size?: Size,
+  marginTop?: SpacingValues,
+  marginRight?: SpacingValues,
+  marginBottom?: SpacingValues,
+  marginLeft?: SpacingValues,
+  paddingTop?: SpacingValues,
+  paddingRight?: SpacingValues,
+  paddingBottom?: SpacingValues,
+  paddingLeft?: SpacingValues,
 }
 
 export default class Grid extends React.Component {
@@ -36,15 +51,13 @@ export default class Grid extends React.Component {
       children,
       className,
       justify,
-      margin,
-      padding,
       size,
       ...props
     } = this.props
 
     const classes = compact([
-      ...getSpacingClasses(margin, 'Margin'),
-      ...getSpacingClasses(padding, 'Padding'),
+      ...getSpacingClasses(props, 'Margin'),
+      ...getSpacingClasses(props, 'Padding'),
       className,
       size && styles.col,
       size && styles[`col-${String(size)}`],
@@ -60,7 +73,10 @@ export default class Grid extends React.Component {
     ])
 
     return (
-      <div {...props} className={[...classes, ...offsetClasses].join(' ')}>
+      <div
+        {...omit(props, 'margin', 'padding')}
+        className={[...classes, ...offsetClasses].join(' ')}
+      >
         {children}
       </div>
     )
