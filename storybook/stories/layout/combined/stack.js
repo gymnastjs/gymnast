@@ -3,8 +3,8 @@ import React from 'react'
 import { Grid, Layout, Root } from 'reflex'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { verticalHalf } from '../../shared/marginTypes'
-import style from '../../shared/layout.css'
+import { verticalHalf } from '../../../shared/marginTypes'
+import styles from '../../../shared/layout.css'
 
 function getStaticSection(index) {
   return (
@@ -46,7 +46,7 @@ export default function() {
   const sections = number('Sections', 2, { range: true, min: 2, max: 10 })
 
   return (
-    <Layout type="parent" className={style.page} style={{ maxHeight: '100%' }}>
+    <Layout type="parent" className={styles.page} style={{ maxHeight: '100%' }}>
       {times(sections, index => getSection(index, subSections))}
     </Layout>
   )
