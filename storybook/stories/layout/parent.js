@@ -9,7 +9,7 @@ export default function() {
   const repeats = number('Add text', 3, { range: true, min: 0, max: 5 })
 
   return (
-    <Layout type="parent" className={styles.page} dev={2}>
+    <Layout height="parent" className={styles.page} dev={2}>
       <Root>
         <Grid margin={[0, 0.5]}>
           <Grid padding={[1]}>

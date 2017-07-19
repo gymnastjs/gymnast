@@ -24,4 +24,4 @@ export type Fixed = 'top' | 'bottom' | void
 
 export type Overflow = 'scrollbars' | void
 
-export type LayoutType = 'parent' | 'stretch' | void
+export type Height = 'parent' | 'auto' | 'fit'

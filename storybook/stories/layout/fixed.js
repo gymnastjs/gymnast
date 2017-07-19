@@ -12,7 +12,7 @@ export default function() {
   const fixed = select('Fixed', Object.keys(options), 'Bottom')
 
   return (
-    <Layout type="parent" className={styles.page}>
+    <Layout height="parent" className={styles.page}>
       <Layout fixed={options[fixed]} dev={2}>
         <Root>
           <Grid margin={[0, 0.5]}>

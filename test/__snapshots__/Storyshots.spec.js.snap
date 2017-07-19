@@ -750,7 +750,7 @@ exports[`Storyshots  Components Header.App 1`] = `
 <div>
   <div>
     <div
-      className="fixedTop auto colors1 layout"
+      className="fixedTop fit colors1 layout"
     >
       <div
         className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid centerAlign"
@@ -1187,7 +1187,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
 <div>
   <div>
     <div
-      className="auto topSinglePadding colors4 layout"
+      className="fit topSinglePadding colors4 layout"
     >
       <div
         className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1436,10 +1436,10 @@ exports[`Storyshots  Examples Cards 1`] = `
       className="page hasSubheader parent layout"
     >
       <div
-        className="fixedTop auto layout"
+        className="fixedTop fit layout"
       >
         <div
-          className="auto colors1 layout"
+          className="fit colors1 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1454,7 +1454,7 @@ exports[`Storyshots  Examples Cards 1`] = `
           </div>
         </div>
         <div
-          className="subheader auto topSinglePadding colors2 layout"
+          className="subheader fit topSinglePadding colors2 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1526,7 +1526,7 @@ exports[`Storyshots  Examples Cards 1`] = `
         className="main parent layout"
       >
         <div
-          className="stretch layout"
+          className="auto layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1680,7 +1680,7 @@ exports[`Storyshots  Examples Cards 1`] = `
           </div>
         </div>
         <div
-          className="auto colors1 layout"
+          className="fit colors1 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1707,7 +1707,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
       className="page parent layout"
     >
       <div
-        className="fixedTop auto colors1 layout"
+        className="fixedTop fit colors1 layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1722,7 +1722,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
         </div>
       </div>
       <div
-        className="main stretch layout"
+        className="main auto layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1770,7 +1770,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
         </div>
       </div>
       <div
-        className="auto colors1 layout"
+        className="fit colors1 layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1796,10 +1796,10 @@ exports[`Storyshots  Examples Report 1`] = `
       className="page parent layout"
     >
       <div
-        className="fixedTop auto layout"
+        className="fixedTop fit layout"
       >
         <div
-          className="auto colors1 layout"
+          className="fit colors1 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1814,7 +1814,7 @@ exports[`Storyshots  Examples Report 1`] = `
           </div>
         </div>
         <div
-          className="auto colors4 layout"
+          className="fit colors4 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -1882,7 +1882,7 @@ exports[`Storyshots  Examples Report 1`] = `
         className="reportMain parent colors2 layout"
       >
         <div
-          className="stretch layout"
+          className="auto layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -2131,7 +2131,7 @@ exports[`Storyshots  Examples Report 1`] = `
           </div>
         </div>
         <div
-          className="auto colors1 layout"
+          className="fit colors1 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -2158,7 +2158,7 @@ exports[`Storyshots  Examples Search 1`] = `
       className="page parent layout"
     >
       <div
-        className="fixedTop auto colors1 layout"
+        className="fixedTop fit colors1 layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid centerAlign"
@@ -2238,7 +2238,7 @@ exports[`Storyshots  Examples Search 1`] = `
         </div>
       </div>
       <div
-        className="content stretch layout"
+        className="content auto layout"
         style={
           Object {
             "marginTop": 40,
@@ -2246,7 +2246,7 @@ exports[`Storyshots  Examples Search 1`] = `
         }
       >
         <div
-          className="auto topSinglePadding colors4 layout"
+          className="fit topSinglePadding colors4 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -2735,7 +2735,7 @@ exports[`Storyshots  Examples Search 1`] = `
         </div>
       </div>
       <div
-        className="auto colors1 layout"
+        className="fit colors1 layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -2761,7 +2761,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
       className="page parent layout"
     >
       <div
-        className="fixedTop auto colors1 layout"
+        className="fixedTop fit colors1 layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -2779,7 +2779,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
         className="main parent layout"
       >
         <div
-          className="top auto colors4 layout"
+          className="top fit colors4 layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -2806,7 +2806,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
           </div>
         </div>
         <div
-          className="stretch layout"
+          className="auto layout"
         >
           <div
             className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding content grid"
@@ -2829,7 +2829,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
         </div>
       </div>
       <div
-        className="auto colors1 layout"
+        className="fit colors1 layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -4853,6 +4853,34 @@ exports[`Storyshots  Grid Vertical Align 1`] = `
 </div>
 `;
 
+exports[`Storyshots  Layout Auto 1`] = `
+<div>
+  <div>
+    <div
+      className="page parent colors4 layout"
+    >
+      <div
+        className="auto colors2 layout"
+      >
+        <div
+          className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+        >
+          <div
+            className="rightHalfMargin leftHalfMargin grid"
+          >
+            <div
+              className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding grid"
+            >
+              test-file-stub
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots  Layout Combined.Stack 1`] = `
 <div>
   <div>
@@ -4865,7 +4893,7 @@ exports[`Storyshots  Layout Combined.Stack 1`] = `
       }
     >
       <div
-        className="auto layout"
+        className="fit layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -4923,7 +4951,7 @@ exports[`Storyshots  Layout Default 1`] = `
       className="page parent colors5 layout"
     >
       <div
-        className="auto layout"
+        className="fit layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -4941,7 +4969,7 @@ exports[`Storyshots  Layout Default 1`] = `
         </div>
       </div>
       <div
-        className="auto layout"
+        className="fit layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -4959,7 +4987,7 @@ exports[`Storyshots  Layout Default 1`] = `
         </div>
       </div>
       <div
-        className="auto layout"
+        className="fit layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -4977,7 +5005,7 @@ exports[`Storyshots  Layout Default 1`] = `
         </div>
       </div>
       <div
-        className="auto layout"
+        className="fit layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -5006,7 +5034,7 @@ exports[`Storyshots  Layout Fixed 1`] = `
       className="page parent layout"
     >
       <div
-        className="fixedBottom auto colors2 layout"
+        className="fixedBottom fit colors2 layout"
       >
         <div
           className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
@@ -5042,34 +5070,6 @@ exports[`Storyshots  Layout Parent 1`] = `
             className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding grid"
           >
             test-file-stubtest-file-stubtest-file-stub
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots  Layout Stretch 1`] = `
-<div>
-  <div>
-    <div
-      className="page parent colors4 layout"
-    >
-      <div
-        className="stretch colors2 layout"
-      >
-        <div
-          className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
-        >
-          <div
-            className="rightHalfMargin leftHalfMargin grid"
-          >
-            <div
-              className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding grid"
-            >
-              test-file-stub
-            </div>
           </div>
         </div>
       </div>

@@ -3,18 +3,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { getSpacingClasses } from './utils'
-import type { Dev, Overflow, Fixed, Spacing, LayoutType } from './types'
+import type { Dev, Overflow, Fixed, Spacing, Height } from './types'
 import styles from './layout.css'
 import devStyles from './dev.css'
 
-function getLayout(layout: LayoutType): string {
+function getLayout(layout?: Height): string {
   switch (layout) {
     case 'parent':
       return styles.parent
-    case 'stretch':
-      return styles.stretch
-    default:
+    case 'auto':
       return styles.auto
+    case 'fit':
+    default:
+      return styles.fit
   }
 }
 
@@ -60,7 +61,7 @@ export default class Layout extends React.Component {
     fixed?: Fixed,
     margin?: Spacing,
     overflow?: Overflow,
-    type?: LayoutType,
+    height?: Height,
   }
 
   render() {
@@ -69,7 +70,7 @@ export default class Layout extends React.Component {
       fixed,
       margin,
       overflow,
-      type,
+      height,
       devMode,
       dev,
       ...props
@@ -77,7 +78,7 @@ export default class Layout extends React.Component {
     const classes = compact([
       className,
       getFixed(fixed),
-      getLayout(type),
+      getLayout(height),
       ...getSpacingClasses(margin, 'Margin'),
       getOverflow(overflow),
       dev &&

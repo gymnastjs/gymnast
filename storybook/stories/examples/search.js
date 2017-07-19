@@ -14,15 +14,15 @@ export default function() {
   const results = number('Results', 5, { range: true, min: 1, max: 10 })
   const pages = number('Pages', 3, { range: true, min: 1, max: 5 })
   return (
-    <Layout type="parent" className={styles.page}>
+    <Layout height="parent" className={styles.page}>
       <Header />
       <Layout
-        type="stretch"
+        height="auto"
         className={styles.content}
         style={{ marginTop: 40 }}
       >
         <SearchNav />
-        <Layout type="parent" dev={2}>
+        <Layout height="parent" dev={2}>
           <Root>
             <Grid margin={[1, 0, 0, 0]}>
               <SearchFilters size={3} />

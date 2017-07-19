@@ -6,11 +6,11 @@ import { loremIpsum } from '../../shared'
 import styles from '../../shared/layout.css'
 
 export default function() {
-  const type = boolean('Stretch', true) ? 'stretch' : undefined
+  const height = boolean('Height Auto', true) ? 'auto' : undefined
 
   return (
-    <Layout type="parent" className={styles.page} dev={4}>
-      <Layout type={type} dev={2}>
+    <Layout height="parent" className={styles.page} dev={4}>
+      <Layout height={height} dev={2}>
         <Root>
           <Grid margin={[0, 0.5]}>
             <Grid padding={[1]}>

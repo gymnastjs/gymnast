@@ -10,7 +10,7 @@ export default function() {
   const repeats = number('Add text', 4, { range: true, min: 1, max: 10 })
 
   return (
-    <Layout type="parent" className={styles.page} dev={5}>
+    <Layout height="parent" className={styles.page} dev={5}>
       {times(repeats, key =>
         <Layout key={key}>
           <Root>
