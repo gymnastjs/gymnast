@@ -53486,7 +53486,7 @@ module.exports = "<h1 id=\"fixed-parameter\">Fixed Parameter</h1>\n<p>The Layout
 /* 885 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"parent-layout-height\">Parent Layout Height</h1>\n<p>The <code>parent</code> Layout height sets a minimum height of 100% of its container.</p>\n<p>When <code>&lt;Layout height=&quot;parent&quot; /&gt;</code> is added to the page body, it ensures that the content will be as tall as the page. If content exceeds 100%, it will allow overflow if appropriately.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Increase or decreate the text length to see how the <code>&lt;Layout /&gt;</code> allows overflow and how the height is always at least 100% regardless of the content.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how combining <code>parent</code>, <code>auto</code> and <code>fit</code> (default height), we can generate page layouts.</p>\n";
+module.exports = "<h1 id=\"parent-layout-height\">Parent Layout Height</h1>\n<p>The <code>parent</code> Layout <code>height</code> sets a minimum height of 100% of its container.</p>\n<p>When <code>&lt;Layout height=&quot;parent&quot; /&gt;</code> is added to the page body, it ensures that the content will be as tall as the page. If content exceeds 100%, it will allow overflow if appropriately.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Increase or decreate the text length to see how the <code>&lt;Layout /&gt;</code> allows overflow and how the height is always at least 100% regardless of the content.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how combining <code>parent</code>, <code>auto</code> and <code>fit</code> (default height), we can generate page layouts.</p>\n";
 
 /***/ }),
 /* 886 */,
@@ -59945,4 +59945,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.e3b43daa303c4818d4bd.bundle.js.map
+//# sourceMappingURL=preview.2ac38b6f5f4e75434e28.bundle.js.map
