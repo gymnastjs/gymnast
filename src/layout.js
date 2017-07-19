@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compact } from 'lodash'
+import { compact, omit } from 'lodash'
 import { getSpacingClasses } from './utils'
 import type { Dev, Overflow, Fixed, Spacing, LayoutType } from './types'
 import styles from './layout.css'
@@ -61,24 +61,26 @@ export default class Layout extends React.Component {
     margin?: Spacing,
     overflow?: Overflow,
     type?: LayoutType,
+    children: React$Element<*>,
   }
 
   render() {
     const {
       className,
       fixed,
-      margin,
       overflow,
       type,
       devMode,
       dev,
+      children,
       ...props
     } = this.props
+
     const classes = compact([
       className,
       getFixed(fixed),
       getLayout(type),
-      ...getSpacingClasses(margin, 'Margin'),
+      ...getSpacingClasses(props, 'Margin'),
       getOverflow(overflow),
       dev &&
         (devMode || this.context.devMode) &&
@@ -87,6 +89,11 @@ export default class Layout extends React.Component {
       styles.layout,
     ])
 
-    return <div {...props} className={classes.join(' ')} />
+    return (
+      <div
+        {...{ ...omit(props, 'margin', 'padding'), children }}
+        className={classes.join(' ')}
+      />
+    )
   }
 }

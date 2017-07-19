@@ -2,11 +2,11 @@ import { getSpacingClasses } from './utils'
 
 describe('getSpacingClasses', () => {
   it('should no expand 0 values', () => {
-    expect(getSpacingClasses([0])).toEqual([])
+    expect(getSpacingClasses({ margin: [0] }, 'Margin')).toEqual([])
   })
 
   it('should expand single values', () => {
-    expect(getSpacingClasses([0.5], 'Padding')).toEqual([
+    expect(getSpacingClasses({ padding: [0.5] }, 'Padding')).toEqual([
       'topHalfPadding',
       'rightHalfPadding',
       'bottomHalfPadding',
@@ -15,7 +15,7 @@ describe('getSpacingClasses', () => {
   })
 
   it('should use top/bottom and left/right when there are 2 values', () => {
-    expect(getSpacingClasses([1, 2], 'Margin')).toEqual([
+    expect(getSpacingClasses({ margin: [1, 2] }, 'Margin')).toEqual([
       'topSingleMargin',
       'rightDoubleMargin',
       'bottomSingleMargin',
@@ -24,7 +24,7 @@ describe('getSpacingClasses', () => {
   })
 
   it('should use right value for left when there are 3 values', () => {
-    expect(getSpacingClasses([0.5, 1, 2], 'Padding')).toEqual([
+    expect(getSpacingClasses({ padding: [0.5, 1, 2] }, 'Padding')).toEqual([
       'topHalfPadding',
       'rightSinglePadding',
       'bottomDoublePadding',
@@ -33,7 +33,7 @@ describe('getSpacingClasses', () => {
   })
 
   it('should ignore 0 values', () => {
-    expect(getSpacingClasses([0, 0.5, 1, 2], 'Margin')).toEqual([
+    expect(getSpacingClasses({ margin: [0, 0.5, 1, 2] }, 'Margin')).toEqual([
       'rightHalfMargin',
       'bottomSingleMargin',
       'leftDoubleMargin',
@@ -48,10 +48,40 @@ describe('getSpacingClasses', () => {
         sizes.forEach(bottom => {
           sizes.forEach(left => {
             expect(
-              getSpacingClasses([top, right, bottom, left], 'Margin')
+              getSpacingClasses(
+                { margin: [top, right, bottom, left] },
+                'Margin'
+              )
             ).toMatchSnapshot()
             expect(
-              getSpacingClasses([top, right, bottom, left], 'Padding')
+              getSpacingClasses(
+                { padding: [top, right, bottom, left] },
+                'Padding'
+              )
+            ).toMatchSnapshot()
+
+            expect(
+              getSpacingClasses(
+                {
+                  marginTop: top,
+                  marginRight: right,
+                  marginBottom: bottom,
+                  marginLeft: left,
+                },
+                'Margin'
+              )
+            ).toMatchSnapshot()
+
+            expect(
+              getSpacingClasses(
+                {
+                  paddingTop: top,
+                  paddingRight: right,
+                  paddingBottom: bottom,
+                  paddingLeft: left,
+                },
+                'Padding'
+              )
             ).toMatchSnapshot()
           })
         })

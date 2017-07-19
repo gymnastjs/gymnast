@@ -1,6 +1,7 @@
 // @flow
-import { memoize, compact } from 'lodash'
-import type { Spacing, Component } from './types'
+import { memoize, compact, capitalize } from 'lodash'
+import { type Component } from './types'
+import { type Props as GridProps } from './grid'
 import style from './spacing.css'
 
 /* eslint-disable no-unused-vars */
@@ -8,6 +9,8 @@ const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
 const { stringify } = JSON
+
+const directions = ['top', 'right', 'bottom', 'left']
 
 /* eslint-disable no-console */
 export const log = {
@@ -30,6 +33,7 @@ export function getDisplayName(WrappedComponent: string | Component): string {
 function getSizeName(size: number) {
   switch (size) {
     case 0:
+    case undefined:
       return ''
     case 0.5:
       return 'Half'
@@ -44,12 +48,43 @@ function getSizeName(size: number) {
   }
 }
 
+function combineSpacings(
+  props: GridProps = { margin: [], padding: [] },
+  type: 'Padding' | 'Margin'
+) {
+  const lowerCaseType = type.toLowerCase()
+  const spacing = props[lowerCaseType] || []
+  const spacingValues = directions.map(
+    direction => props[`${lowerCaseType}${capitalize(direction)}`]
+  )
+
+  if (
+    process.env.NODE_ENV !== 'production' &&
+    spacing.length > 0 &&
+    spacingValues.some(value => typeof value !== 'undefined')
+  ) {
+    const invalidSpacing = spacingValues.find(
+      value => typeof value !== 'undefined'
+    )
+
+    throw new Error(
+      `Cannot define ${lowerCaseType}, \`[${props[
+        lowerCaseType
+      ].toString()}]\`, and margin value, \`${String(
+        invalidSpacing
+      )}\` at the same time`
+    )
+  }
+
+  return spacing.length ? spacing : spacingValues
+}
+
 function getSpacing(
-  values: Spacing = [],
+  props: GridProps,
   type: 'Padding' | 'Margin'
 ): Array<string> {
+  const values = combineSpacings(props, type)
   const size = values.map(getSizeName)
-  const directions = ['top', 'right', 'bottom', 'left']
   let allSizes = []
 
   switch (size.length) {
@@ -77,4 +112,7 @@ function getSpacing(
   )
 }
 
-export const getSpacingClasses = memoize(getSpacing, stringify)
+export const getSpacingClasses = memoize(
+  getSpacing,
+  (props: GridProps, type: string) => type + stringify(props)
+)
