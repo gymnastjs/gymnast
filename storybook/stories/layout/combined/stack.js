@@ -20,7 +20,7 @@ function getStaticSection(index) {
 
 function getContainerSection(index, subsections) {
   return (
-    <Layout key={index} type="parent" overflow="scrollbars">
+    <Layout key={index} height="parent" overflow="scrollbars">
       <Root align="top">
         {times(subsections, i =>
           <Grid margin={verticalHalf} key={i}>
@@ -46,7 +46,11 @@ export default function() {
   const sections = number('Sections', 2, { range: true, min: 2, max: 10 })
 
   return (
-    <Layout type="parent" className={styles.page} style={{ maxHeight: '100%' }}>
+    <Layout
+      height="parent"
+      className={styles.page}
+      style={{ maxHeight: '100%' }}
+    >
       {times(sections, index => getSection(index, subSections))}
     </Layout>
   )

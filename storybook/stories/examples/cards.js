@@ -13,7 +13,7 @@ const SIZE = {
 
 export default function() {
   return (
-    <Layout type="parent" className={`${styles.page} ${styles.hasSubheader}`}>
+    <Layout height="parent" className={`${styles.page} ${styles.hasSubheader}`}>
       <Layout fixed="top">
         <Layout dev={1}>
           <Root>
@@ -33,8 +33,8 @@ export default function() {
           </Root>
         </Layout>
       </Layout>
-      <Layout type="parent" className={styles.main}>
-        <Layout type="stretch">
+      <Layout height="parent" className={styles.main}>
+        <Layout height="auto">
           <Root>
             <Grid padding={top}>
               <Box size={10} type="B" style={SIZE.TALL} />

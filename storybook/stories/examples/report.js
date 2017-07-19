@@ -55,7 +55,7 @@ function Card({
 
 export default function() {
   return (
-    <Layout type="parent" className={page}>
+    <Layout height="parent" className={page}>
       <Layout fixed="top">
         <Layout dev={1}>
           <Root>
@@ -99,8 +99,8 @@ export default function() {
           </Root>
         </Layout>
       </Layout>
-      <Layout type="parent" className={styles.reportMain} dev={2}>
-        <Layout type="stretch">
+      <Layout height="parent" className={styles.reportMain} dev={2}>
+        <Layout height="auto">
           <Root>
             <Grid>
               <Grid size={1} align="top" padding={top} margin={horizontalHalf}>

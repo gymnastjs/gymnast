@@ -1,8 +1,8 @@
-# Parent Layout Type
+# Parent Layout Height
 
-The `parent` Layout type sets a minimum height of 100% of its container.
+The `parent` Layout `height` sets a minimum height of 100% of its container.
 
-When `<Layout type="parent" />` is added to the page body, it ensures that the content will be as tall as the page. If content exceeds 100%, it will allow overflow if appropriately.
+When `<Layout height="parent" />` is added to the page body, it ensures that the content will be as tall as the page. If content exceeds 100%, it will allow overflow if appropriately.
 
 ## Knobs
 
@@ -10,5 +10,4 @@ Increase or decreate the text length to see how the `<Layout />` allows overflow
 
 ## Examples
 
-The [Cards](https://obartra.github.io/reflex/?selectedKind=%20Examples&selectedStory=Cards) and [Holy Grail](https://obartra.github.io/reflex/?selectedKind=%20Examples&selectedStory=Holy%20Grail) Examples show how combining `parent`, `stretch` and default type, we can generate page layouts.
-
+The [Cards](https://obartra.github.io/reflex/?selectedKind=%20Examples&selectedStory=Cards) and [Holy Grail](https://obartra.github.io/reflex/?selectedKind=%20Examples&selectedStory=Holy%20Grail) Examples show how combining `parent`, `auto` and `fit` (default height), we can generate page layouts.

@@ -15,7 +15,7 @@ export default function() {
   const includeText = boolean('Show text', false)
 
   return (
-    <Layout type="parent" className={styles.page}>
+    <Layout height="parent" className={styles.page}>
       <Layout dev={1} fixed="top">
         <Root>
           <Grid padding={allHalf}>
@@ -23,7 +23,7 @@ export default function() {
           </Grid>
         </Root>
       </Layout>
-      <Layout type="stretch" className={styles.main}>
+      <Layout height="auto" className={styles.main}>
         <Root>
           <Grid margin={horizontalHalf}>
             <Grid size={2} dev={4} padding={top} margin={horizontal}>

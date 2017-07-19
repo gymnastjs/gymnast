@@ -24,12 +24,12 @@
   overflow-x: hidden;
 }
 
-.auto {
+.fit {
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.stretch {
+.auto {
   flex-grow: 1;
 }
 

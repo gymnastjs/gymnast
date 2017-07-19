@@ -10,7 +10,7 @@ export default function() {
   const includeText = boolean('Show text', false)
 
   return (
-    <Layout type="parent" className={styles.page}>
+    <Layout height="parent" className={styles.page}>
       <Layout dev={1} fixed="top">
         <Root>
           <Grid margin={allHalf}>
@@ -18,7 +18,7 @@ export default function() {
           </Grid>
         </Root>
       </Layout>
-      <Layout type="parent" className={styles.main}>
+      <Layout height="parent" className={styles.main}>
         <Layout className={styles.top} dev={4}>
           <Root>
             <Grid justify="center" padding={[2, 0]}>
@@ -31,7 +31,7 @@ export default function() {
             </Grid>
           </Root>
         </Layout>
-        <Layout type="stretch">
+        <Layout height="auto">
           <Root className={styles.content}>
             <Grid align="top" padding={vertical}>
               <Col>
