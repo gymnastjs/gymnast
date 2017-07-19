@@ -4853,7 +4853,7 @@ exports[`Storyshots  Grid Vertical Align 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Layout Stack 1`] = `
+exports[`Storyshots  Layout Combined.Stack 1`] = `
 <div>
   <div>
     <div
@@ -4908,6 +4908,168 @@ exports[`Storyshots  Layout Stack 1`] = `
               SubSection 
               3
             </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Layout Default 1`] = `
+<div>
+  <div>
+    <div
+      className="page parent colors5 layout"
+    >
+      <div
+        className="auto layout"
+      >
+        <div
+          className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+        >
+          <div
+            className="rightHalfMargin leftHalfMargin grid"
+          >
+            <div
+              className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors2 grid"
+            >
+              test-file-stub
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="auto layout"
+      >
+        <div
+          className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+        >
+          <div
+            className="rightHalfMargin leftHalfMargin grid"
+          >
+            <div
+              className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors4 grid"
+            >
+              test-file-stub
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="auto layout"
+      >
+        <div
+          className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+        >
+          <div
+            className="rightHalfMargin leftHalfMargin grid"
+          >
+            <div
+              className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors2 grid"
+            >
+              test-file-stub
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="auto layout"
+      >
+        <div
+          className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+        >
+          <div
+            className="rightHalfMargin leftHalfMargin grid"
+          >
+            <div
+              className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding colors4 grid"
+            >
+              test-file-stub
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Layout Fixed 1`] = `
+<div>
+  <div>
+    <div
+      className="page parent layout"
+    >
+      <div
+        className="fixedBottom auto colors2 layout"
+      >
+        <div
+          className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+        >
+          <div
+            className="rightHalfMargin leftHalfMargin grid"
+          >
+            <h1>
+              Fixed to the 
+              Bottom
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Layout Parent 1`] = `
+<div>
+  <div>
+    <div
+      className="page parent colors2 layout"
+    >
+      <div
+        className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+      >
+        <div
+          className="rightHalfMargin leftHalfMargin grid"
+        >
+          <div
+            className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding grid"
+          >
+            test-file-stubtest-file-stubtest-file-stub
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots  Layout Stretch 1`] = `
+<div>
+  <div>
+    <div
+      className="page parent colors4 layout"
+    >
+      <div
+        className="stretch colors2 layout"
+      >
+        <div
+          className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+        >
+          <div
+            className="rightHalfMargin leftHalfMargin grid"
+          >
+            <div
+              className="topSinglePadding rightSinglePadding bottomSinglePadding leftSinglePadding grid"
+            >
+              test-file-stub
+            </div>
           </div>
         </div>
       </div>
