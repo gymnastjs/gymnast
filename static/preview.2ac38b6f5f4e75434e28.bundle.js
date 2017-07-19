@@ -939,12 +939,8 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }]),
         configurable: true
       });
-      if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_LayoutType', {
-        value: __webpack_require__(0).oneOfType([__webpack_require__(0).oneOf(['parent']), __webpack_require__(0).oneOf(['stretch']), function (props, propName, componentName) {
-          if (props[propName] != null) {
-            throw new Error('Invalid prop `' + propName + '` of value `' + props[propName] + '` passed to `' + componentName + '`. Expected undefined or null.');
-          }
-        }]),
+      if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Height', {
+        value: __webpack_require__(0).oneOf(['parent', 'auto', 'fit']),
         configurable: true
       });
 
@@ -7190,7 +7186,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
       }
 
-      var babelPluginFlowReactPropTypes_proptype_LayoutType = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_LayoutType || __webpack_require__(0).any;
+      var babelPluginFlowReactPropTypes_proptype_Height = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_Height || __webpack_require__(0).any;
 
       var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
@@ -7204,10 +7200,11 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         switch (layout) {
           case 'parent':
             return _layout2.default.parent;
-          case 'stretch':
-            return _layout2.default.stretch;
-          default:
+          case 'auto':
             return _layout2.default.auto;
+          case 'fit':
+          default:
+            return _layout2.default.fit;
         }
       }
 
@@ -7255,12 +7252,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
                 fixed = _props.fixed,
                 margin = _props.margin,
                 overflow = _props.overflow,
-                type = _props.type,
+                height = _props.height,
                 devMode = _props.devMode,
                 dev = _props.dev,
-                props = _objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'type', 'devMode', 'dev']);
+                props = _objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'height', 'devMode', 'dev']);
 
-            var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(type)].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "development" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
+            var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(height)].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "development" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
 
             return _react2.default.createElement('div', _extends({}, props, { className: classes.join(' ') }));
           }
@@ -7282,7 +7279,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         fixed: typeof babelPluginFlowReactPropTypes_proptype_Fixed === 'function' ? babelPluginFlowReactPropTypes_proptype_Fixed : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Fixed),
         margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
         overflow: typeof babelPluginFlowReactPropTypes_proptype_Overflow === 'function' ? babelPluginFlowReactPropTypes_proptype_Overflow : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Overflow),
-        type: typeof babelPluginFlowReactPropTypes_proptype_LayoutType === 'function' ? babelPluginFlowReactPropTypes_proptype_LayoutType : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_LayoutType)
+        height: typeof babelPluginFlowReactPropTypes_proptype_Height === 'function' ? babelPluginFlowReactPropTypes_proptype_Height : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Height)
       };
       exports.default = Layout;
 
@@ -7292,7 +7289,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
     /***/function (module, exports) {
 
       // removed by extract-text-webpack-plugin
-      module.exports = { "layout": "layout__layout___74Wzo", "parent": "layout__parent___2MI7Y", "overflow": "layout__overflow___2j6Gd", "auto": "layout__auto___15Qo_", "stretch": "layout__stretch___3Z7Y8", "fixedTop": "layout__fixedTop___dKj8O", "fixedBottom": "layout__fixedBottom___1CNXU" };
+      module.exports = { "layout": "layout__layout___74Wzo", "parent": "layout__parent___2MI7Y", "overflow": "layout__overflow___2j6Gd", "fit": "layout__fit___2LP-7", "auto": "layout__auto___15Qo_", "fixedTop": "layout__fixedTop___dKj8O", "fixedBottom": "layout__fixedBottom___1CNXU" };
 
       /***/
     },
@@ -8520,21 +8517,6 @@ module.exports = isArray;
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(183);
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-/** Used as a reference to the global object. */
-var root = freeGlobal || freeSelf || Function('return this')();
-
-module.exports = root;
-
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -8605,14 +8587,25 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
   }]),
   configurable: true
 });
-if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_LayoutType', {
-  value: __webpack_require__(0).oneOfType([__webpack_require__(0).oneOf(['parent']), __webpack_require__(0).oneOf(['stretch']), function (props, propName, componentName) {
-    if (props[propName] != null) {
-      throw new Error('Invalid prop `' + propName + '` of value `' + props[propName] + '` passed to `' + componentName + '`. Expected undefined or null.');
-    }
-  }]),
+if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Height', {
+  value: __webpack_require__(0).oneOf(['parent', 'auto', 'fit']),
   configurable: true
 });
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var freeGlobal = __webpack_require__(183);
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+module.exports = root;
+
 
 /***/ }),
 /* 36 */
@@ -11140,7 +11133,7 @@ module.exports = win;
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(34);
+var root = __webpack_require__(35);
 
 /** Built-in value references. */
 var Symbol = root.Symbol;
@@ -16613,7 +16606,7 @@ module.exports = getActiveElement;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(67),
-    root = __webpack_require__(34);
+    root = __webpack_require__(35);
 
 /* Built-in method references that are verified to be native. */
 var Map = getNative(root, 'Map');
@@ -16753,7 +16746,7 @@ module.exports = isPrototype;
 /* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(34),
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(35),
     stubFalse = __webpack_require__(393);
 
 /** Detect free variable `exports`. */
@@ -20292,15 +20285,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Size = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Size || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Size = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Size || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Justify = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Justify || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Justify = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Justify || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_AlignGrid = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_AlignGrid || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_AlignGrid = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_AlignGrid || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Dev = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Dev || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Dev = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Dev || __webpack_require__(0).any;
 
 if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Props', {
   value: {
@@ -23066,9 +23059,9 @@ var _spacing2 = _interopRequireDefault(_spacing);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
 /* eslint-disable no-unused-vars */
 var noop = function noop() {
@@ -32528,7 +32521,7 @@ module.exports = baseUnary;
 /* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(34);
+var root = __webpack_require__(35);
 
 /** Used to detect overreaching core-js shims. */
 var coreJsData = root['__core-js_shared__'];
@@ -47981,7 +47974,7 @@ var _grid2 = _interopRequireDefault(_grid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var babelPluginFlowReactPropTypes_proptype_Offset = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Offset || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Offset = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Offset || __webpack_require__(0).any;
 
 var Offset = function Offset(_ref) {
   var size = _ref.size;
@@ -48168,24 +48161,25 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_LayoutType = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_LayoutType || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Height = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Height || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Fixed = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Fixed || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Fixed = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Fixed || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Overflow = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Overflow || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Overflow = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Overflow || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Dev = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Dev || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Dev = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Dev || __webpack_require__(0).any;
 
 function getLayout(layout) {
   switch (layout) {
     case 'parent':
       return _layout2.default.parent;
-    case 'stretch':
-      return _layout2.default.stretch;
-    default:
+    case 'auto':
       return _layout2.default.auto;
+    case 'fit':
+    default:
+      return _layout2.default.fit;
   }
 }
 
@@ -48233,12 +48227,12 @@ var Layout = function (_React$Component) {
           fixed = _props.fixed,
           margin = _props.margin,
           overflow = _props.overflow,
-          type = _props.type,
+          height = _props.height,
           devMode = _props.devMode,
           dev = _props.dev,
-          props = _objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'type', 'devMode', 'dev']);
+          props = _objectWithoutProperties(_props, ['className', 'fixed', 'margin', 'overflow', 'height', 'devMode', 'dev']);
 
-      var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(type)].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "production" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
+      var classes = (0, _compact3.default)([className, getFixed(fixed), getLayout(height)].concat(_toConsumableArray((0, _utils.getSpacingClasses)(margin, 'Margin')), [getOverflow(overflow), dev && (devMode || this.context.devMode) && "production" !== 'production' && _dev2.default['colors' + String(dev)], _layout2.default.layout]));
 
       return _react2.default.createElement('div', _extends({}, props, { className: classes.join(' ') }));
     }
@@ -48260,7 +48254,7 @@ Layout.propTypes = {
   fixed: typeof babelPluginFlowReactPropTypes_proptype_Fixed === 'function' ? babelPluginFlowReactPropTypes_proptype_Fixed : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Fixed),
   margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
   overflow: typeof babelPluginFlowReactPropTypes_proptype_Overflow === 'function' ? babelPluginFlowReactPropTypes_proptype_Overflow : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Overflow),
-  type: typeof babelPluginFlowReactPropTypes_proptype_LayoutType === 'function' ? babelPluginFlowReactPropTypes_proptype_LayoutType : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_LayoutType)
+  height: typeof babelPluginFlowReactPropTypes_proptype_Height === 'function' ? babelPluginFlowReactPropTypes_proptype_Height : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Height)
 };
 exports.default = Layout;
 Layout.__docgenInfo = {
@@ -48308,9 +48302,9 @@ Layout.__docgenInfo = {
       'required': false,
       'description': ''
     },
-    'type': {
+    'height': {
       'flowType': {
-        'name': 'LayoutType'
+        'name': 'Height'
       },
       'required': false,
       'description': ''
@@ -48439,7 +48433,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
 var typeMap = {
   A: 1,
@@ -48497,7 +48491,7 @@ exports.default = getMarginSelect;
 
 var _addonKnobs = __webpack_require__(24);
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(35).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
 var marginMap = {
   Item: [0, 0.5, 1],
@@ -48586,19 +48580,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
+var babelPluginFlowReactPropTypes_proptype_Height = __webpack_require__(34).babelPluginFlowReactPropTypes_proptype_Height || __webpack_require__(0).any;
+
 function RootLayout(_ref) {
-  var _ref$type = _ref.type,
-      type = _ref$type === undefined ? 'parent' : _ref$type,
-      props = _objectWithoutProperties(_ref, ['type']);
+  var _ref$height = _ref.height,
+      height = _ref$height === undefined ? 'parent' : _ref$height,
+      props = _objectWithoutProperties(_ref, ['height']);
 
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: type },
+    { height: height },
     _react2.default.createElement(_reflex.Root, props)
   );
 }
 RootLayout.propTypes = {
-  type: __webpack_require__(0).string
+  height: typeof babelPluginFlowReactPropTypes_proptype_Height === 'function' ? babelPluginFlowReactPropTypes_proptype_Height : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Height)
 };
 
 /***/ }),
@@ -49769,7 +49765,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function () {
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page + ' ' + _layout2.default.hasSubheader },
+    { height: 'parent', className: _layout2.default.page + ' ' + _layout2.default.hasSubheader },
     _react2.default.createElement(
       _reflex.Layout,
       { fixed: 'top' },
@@ -49807,10 +49803,10 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Layout,
-      { type: 'parent', className: _layout2.default.main },
+      { height: 'parent', className: _layout2.default.main },
       _react2.default.createElement(
         _reflex.Layout,
-        { type: 'stretch' },
+        { height: 'auto' },
         _react2.default.createElement(
           _reflex.Root,
           null,
@@ -49890,7 +49886,7 @@ exports.default = function () {
 
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page },
+    { height: 'parent', className: _layout2.default.page },
     _react2.default.createElement(
       _reflex.Layout,
       { dev: 1, fixed: 'top' },
@@ -49910,7 +49906,7 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Layout,
-      { type: 'stretch', className: _layout2.default.main },
+      { height: 'auto', className: _layout2.default.main },
       _react2.default.createElement(
         _reflex.Root,
         null,
@@ -50026,7 +50022,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function () {
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout.page },
+    { height: 'parent', className: _layout.page },
     _react2.default.createElement(
       _reflex.Layout,
       { fixed: 'top' },
@@ -50116,10 +50112,10 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Layout,
-      { type: 'parent', className: _report2.default.reportMain, dev: 2 },
+      { height: 'parent', className: _report2.default.reportMain, dev: 2 },
       _react2.default.createElement(
         _reflex.Layout,
-        { type: 'stretch' },
+        { height: 'auto' },
         _react2.default.createElement(
           _reflex.Root,
           null,
@@ -50354,19 +50350,19 @@ exports.default = function () {
   var pages = (0, _addonKnobs.number)('Pages', 3, { range: true, min: 1, max: 5 });
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page },
+    { height: 'parent', className: _layout2.default.page },
     _react2.default.createElement(_app2.default, null),
     _react2.default.createElement(
       _reflex.Layout,
       {
-        type: 'stretch',
+        height: 'auto',
         className: _layout2.default.content,
         style: { marginTop: 40 }
       },
       _react2.default.createElement(_nav2.default, null),
       _react2.default.createElement(
         _reflex.Layout,
-        { type: 'parent', dev: 2 },
+        { height: 'parent', dev: 2 },
         _react2.default.createElement(
           _reflex.Root,
           null,
@@ -50447,7 +50443,7 @@ exports.default = function () {
 
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page },
+    { height: 'parent', className: _layout2.default.page },
     _react2.default.createElement(
       _reflex.Layout,
       { dev: 1, fixed: 'top' },
@@ -50467,7 +50463,7 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       _reflex.Layout,
-      { type: 'parent', className: _layout2.default.main },
+      { height: 'parent', className: _layout2.default.main },
       _react2.default.createElement(
         _reflex.Layout,
         { className: _layout2.default.top, dev: 4 },
@@ -50496,7 +50492,7 @@ exports.default = function () {
       ),
       _react2.default.createElement(
         _reflex.Layout,
-        { type: 'stretch' },
+        { height: 'auto' },
         _react2.default.createElement(
           _reflex.Root,
           { className: _layout2.default.content },
@@ -51571,6 +51567,59 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+exports.default = function () {
+  var height = (0, _addonKnobs.boolean)('Height Auto', true) ? 'auto' : undefined;
+
+  return _react2.default.createElement(
+    _reflex.Layout,
+    { height: 'parent', className: _layout2.default.page, dev: 4 },
+    _react2.default.createElement(
+      _reflex.Layout,
+      { height: height, dev: 2 },
+      _react2.default.createElement(
+        _reflex.Root,
+        null,
+        _react2.default.createElement(
+          _reflex.Grid,
+          { margin: [0, 0.5] },
+          _react2.default.createElement(
+            _reflex.Grid,
+            { padding: [1] },
+            _shared.loremIpsum
+          )
+        )
+      )
+    )
+  );
+};
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _addonKnobs = __webpack_require__(24);
+
+var _reflex = __webpack_require__(15);
+
+var _shared = __webpack_require__(22);
+
+var _layout = __webpack_require__(217);
+
+var _layout2 = _interopRequireDefault(_layout);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 783 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _times2 = __webpack_require__(75);
 
 var _times3 = _interopRequireDefault(_times2);
@@ -51581,7 +51630,11 @@ exports.default = function () {
 
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page, style: { maxHeight: '100%' } },
+    {
+      height: 'parent',
+      className: _layout2.default.page,
+      style: { maxHeight: '100%' }
+    },
     (0, _times3.default)(sections, function (index) {
       return getSection(index, subSections);
     })
@@ -51628,7 +51681,7 @@ function getStaticSection(index) {
 function getContainerSection(index, subsections) {
   return _react2.default.createElement(
     _reflex.Layout,
-    { key: index, type: 'parent', overflow: 'scrollbars' },
+    { key: index, height: 'parent', overflow: 'scrollbars' },
     _react2.default.createElement(
       _reflex.Root,
       { align: 'top' },
@@ -51656,7 +51709,7 @@ function getSection(index, subsections) {
 }
 
 /***/ }),
-/* 783 */
+/* 784 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51675,7 +51728,7 @@ exports.default = function () {
 
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page, dev: 5 },
+    { height: 'parent', className: _layout2.default.page, dev: 5 },
     (0, _times3.default)(repeats, function (key) {
       return _react2.default.createElement(
         _reflex.Layout,
@@ -51716,7 +51769,7 @@ var _layout2 = _interopRequireDefault(_layout);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 784 */
+/* 785 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51735,7 +51788,7 @@ exports.default = function () {
 
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page },
+    { height: 'parent', className: _layout2.default.page },
     _react2.default.createElement(
       _reflex.Layout,
       { fixed: options[fixed], dev: 2 },
@@ -51772,7 +51825,7 @@ var _layout2 = _interopRequireDefault(_layout);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 785 */
+/* 786 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51787,7 +51840,7 @@ exports.default = function () {
 
   return _react2.default.createElement(
     _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page, dev: 2 },
+    { height: 'parent', className: _layout2.default.page, dev: 2 },
     _react2.default.createElement(
       _reflex.Root,
       null,
@@ -51798,59 +51851,6 @@ exports.default = function () {
           _reflex.Grid,
           { padding: [1] },
           _shared.loremIpsum.repeat(repeats)
-        )
-      )
-    )
-  );
-};
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _addonKnobs = __webpack_require__(24);
-
-var _reflex = __webpack_require__(15);
-
-var _shared = __webpack_require__(22);
-
-var _layout = __webpack_require__(217);
-
-var _layout2 = _interopRequireDefault(_layout);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 786 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function () {
-  var type = (0, _addonKnobs.boolean)('Stretch', true) ? 'stretch' : undefined;
-
-  return _react2.default.createElement(
-    _reflex.Layout,
-    { type: 'parent', className: _layout2.default.page, dev: 4 },
-    _react2.default.createElement(
-      _reflex.Layout,
-      { type: type, dev: 2 },
-      _react2.default.createElement(
-        _reflex.Root,
-        null,
-        _react2.default.createElement(
-          _reflex.Grid,
-          { margin: [0, 0.5] },
-          _react2.default.createElement(
-            _reflex.Grid,
-            { padding: [1] },
-            _shared.loremIpsum
-          )
         )
       )
     )
@@ -53170,15 +53170,15 @@ exports = module.exports = __webpack_require__(81)(undefined);
 
 
 // module
-exports.push([module.i, ".layout__layout___74Wzo{display:flex;align-self:flex-start;align-items:center;flex-flow:column;box-sizing:border-box;width:100%;min-width:400px}.layout__layout___74Wzo>:not(.layout__layout___74Wzo){max-width:1224px}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto;overflow-x:hidden}.layout__auto___15Qo_{flex-grow:0;flex-shrink:0}.layout__stretch___3Z7Y8{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}", ""]);
+exports.push([module.i, ".layout__layout___74Wzo{display:flex;align-self:flex-start;align-items:center;flex-flow:column;box-sizing:border-box;width:100%;min-width:400px}.layout__layout___74Wzo>:not(.layout__layout___74Wzo){max-width:1224px}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto;overflow-x:hidden}.layout__fit___2LP-7{flex-grow:0;flex-shrink:0}.layout__auto___15Qo_{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}", ""]);
 
 // exports
 exports.locals = {
 	"layout": "layout__layout___74Wzo",
 	"parent": "layout__parent___2MI7Y",
 	"overflow": "layout__overflow___2j6Gd",
+	"fit": "layout__fit___2LP-7",
 	"auto": "layout__auto___15Qo_",
-	"stretch": "layout__stretch___3Z7Y8",
 	"fixedTop": "layout__fixedTop___dKj8O",
 	"fixedBottom": "layout__fixedBottom___1CNXU"
 };
@@ -53462,31 +53462,31 @@ module.exports = "<h1 id=\"vertical-align\">Vertical Align</h1>\n<p>Alignment de
 /* 881 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"stacked-layout-example\">Stacked Layout Example</h1>\n<p>A layout component defaults to vertically stacking elements, taking the full width and optionally sizing to fit or stretching elements.</p>\n<p>If the contents height exceeds the available space, it will overflow.</p>\n";
+module.exports = "<h1 id=\"auto-layout-height\">Auto Layout Height</h1>\n<p>The <code>auto</code> Layout height fills the remaining space. If multiple children are set to <code>height</code>, they distribute the available height evenly.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Set or unset <code>auto</code> see how the <code>&lt;Layout /&gt;</code> toggles between filling the parent container and not.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how combining <code>parent</code>, <code>auto</code> and <code>fit</code> (default height), we can generate page layouts.</p>\n";
 
 /***/ }),
 /* 882 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"default-layout-type\">Default Layout Type</h1>\n<p>The Layout Component (by default, when not setting a type) sizes height based on the content height. If multiple Layout siblings without type are rendered, they stack vertically one after the other.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Change the number of default type <code>&lt;Layout /&gt;</code> Components rendered to see how they stack after each other.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how combining <code>parent</code>, <code>stretch</code> and default type, we can generate page layouts.</p>\n";
+module.exports = "<h1 id=\"stacked-layout-example\">Stacked Layout Example</h1>\n<p>A layout component defaults to vertically stacking elements, taking the full width and optionally sizing to fit or stretching elements.</p>\n<p>If the contents height exceeds the available space, it will overflow.</p>\n";
 
 /***/ }),
 /* 883 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"fixed-parameter\">Fixed Parameter</h1>\n<p>The Layout Component can be position outside the normal flow to either the top (<code>fixed=&quot;top&quot;</code>) or bottom (<code>fixed=&quot;bottom&quot;</code>) of the page.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Change the fixed parameter from <code>Top</code> to <code>Bottom</code> to see the different rendering behavior.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how sticky headers implemented using the fixed parameter.</p>\n<p>Note that because <code>fixed</code> positions Components outside the normal flow of the page and Reflex doesn&#39;t know their size, additional CSS will be required to offset the content below.</p>\n";
+module.exports = "<h1 id=\"default-layout-height\">Default Layout Height</h1>\n<p>The Layout Component sizes height based on the content height when <code>height</code> is not specified. For consistency with <code>&lt;Grid/&gt;</code> sizing, default mode is also equivalent to <code>height=&quot;fit&quot;</code>.</p>\n<p>If multiple default height Layout siblings are rendered, they stack vertically one after the other.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Change the number of <code>&lt;Layout /&gt;</code> Components rendered to see how they stack after each other.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how combining <code>parent</code>, <code>auto</code> and <code>fit</code> (default height), we can generate page layouts.</p>\n";
 
 /***/ }),
 /* 884 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"parent-layout-type\">Parent Layout Type</h1>\n<p>The <code>parent</code> Layout type sets a minimum height of 100% of its container.</p>\n<p>When <code>&lt;Layout type=&quot;parent&quot; /&gt;</code> is added to the page body, it ensures that the content will be as tall as the page. If content exceeds 100%, it will allow overflow if appropriately.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Increase or decreate the text length to see how the <code>&lt;Layout /&gt;</code> allows overflow and how the height is always at least 100% regardless of the content.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how combining <code>parent</code>, <code>stretch</code> and default type, we can generate page layouts.</p>\n";
+module.exports = "<h1 id=\"fixed-parameter\">Fixed Parameter</h1>\n<p>The Layout Component can be position outside the normal flow to either the top (<code>fixed=&quot;top&quot;</code>) or bottom (<code>fixed=&quot;bottom&quot;</code>) of the page.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Change the fixed parameter from <code>Top</code> to <code>Bottom</code> to see the different rendering behavior.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how sticky headers implemented using the fixed parameter.</p>\n<p>Note that because <code>fixed</code> positions Components outside the normal flow of the page and Reflex doesn&#39;t know their size, additional CSS will be required to offset the content below.</p>\n";
 
 /***/ }),
 /* 885 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"stretch-layout-type\">Stretch Layout Type</h1>\n<p>The <code>stretch</code> Layout type fills the remaining space. If multiple children are set to <code>stretch</code>, they distribute the available height evenly.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Set or unset <code>stretch</code> see how the <code>&lt;Layout /&gt;</code> toggles between filling the parent container and not.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how combining <code>parent</code>, <code>stretch</code> and default type, we can generate page layouts.</p>\n";
+module.exports = "<h1 id=\"parent-layout-height\">Parent Layout Height</h1>\n<p>The <code>parent</code> Layout <code>height</code> sets a minimum height of 100% of its container.</p>\n<p>When <code>&lt;Layout height=&quot;parent&quot; /&gt;</code> is added to the page body, it ensures that the content will be as tall as the page. If content exceeds 100%, it will allow overflow if appropriately.</p>\n<h2 id=\"knobs\">Knobs</h2>\n<p>Increase or decreate the text length to see how the <code>&lt;Layout /&gt;</code> allows overflow and how the height is always at least 100% regardless of the content.</p>\n<h2 id=\"examples\">Examples</h2>\n<p>The <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Cards\">Cards</a> and <a href=\"https://obartra.github.io/reflex/?selectedKind=%20Examples&amp;selectedStory=Holy%20Grail\">Holy Grail</a> Examples show how combining <code>parent</code>, <code>auto</code> and <code>fit</code> (default height), we can generate page layouts.</p>\n";
 
 /***/ }),
 /* 886 */,
@@ -59902,21 +59902,21 @@ var map = {
 	"./grid/verticalAlign.js": 781,
 	"./grid/verticalAlign.md": 880,
 	"./grid/verticalAlign.spec.png": 910,
-	"./layout/combined/stack.js": 782,
-	"./layout/combined/stack.md": 881,
-	"./layout/combined/stack.spec.png": 911,
-	"./layout/default.js": 783,
-	"./layout/default.md": 882,
-	"./layout/default.spec.png": 912,
-	"./layout/fixed.js": 784,
-	"./layout/fixed.md": 883,
-	"./layout/fixed.spec.png": 913,
-	"./layout/parent.js": 785,
-	"./layout/parent.md": 884,
-	"./layout/parent.spec.png": 914,
-	"./layout/stretch.js": 786,
-	"./layout/stretch.md": 885,
-	"./layout/stretch.spec.png": 915
+	"./layout/auto.js": 782,
+	"./layout/auto.md": 881,
+	"./layout/auto.spec.png": 911,
+	"./layout/combined/stack.js": 783,
+	"./layout/combined/stack.md": 882,
+	"./layout/combined/stack.spec.png": 912,
+	"./layout/default.js": 784,
+	"./layout/default.md": 883,
+	"./layout/default.spec.png": 913,
+	"./layout/fixed.js": 785,
+	"./layout/fixed.md": 884,
+	"./layout/fixed.spec.png": 914,
+	"./layout/parent.js": 786,
+	"./layout/parent.md": 885,
+	"./layout/parent.spec.png": 915
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -59945,4 +59945,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.c63b0cc1a99da7fcc9e6.bundle.js.map
+//# sourceMappingURL=preview.2ac38b6f5f4e75434e28.bundle.js.map
