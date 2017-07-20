@@ -2848,6 +2848,154 @@ exports[`Storyshots  Examples Two Sections 1`] = `
 </div>
 `;
 
+exports[`Storyshots  Grid Align 1`] = `
+<div>
+  <div>
+    <div
+      className="parent layout"
+    >
+      <div
+        className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
+      >
+        <div
+          className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
+        >
+          <h1>
+            Item Align
+          </h1>
+        </div>
+        <div
+          className="grid"
+        >
+          <div
+            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-1 grid"
+          >
+            <div
+              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
+              style={
+                Object {
+                  "height": 300,
+                }
+              }
+            >
+               
+            </div>
+          </div>
+          <div
+            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-auto grid topAlign"
+          >
+            <div
+              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
+              style={undefined}
+            >
+              TOP
+            </div>
+          </div>
+          <div
+            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-auto grid centerAlign"
+          >
+            <div
+              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
+              style={undefined}
+            >
+              CENTER
+            </div>
+          </div>
+          <div
+            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-auto grid bottomAlign"
+          >
+            <div
+              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
+              style={undefined}
+            >
+              BOTTOM
+            </div>
+          </div>
+          <div
+            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-auto grid"
+          >
+            <div
+              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
+              style={undefined}
+            >
+              DEFAULT
+            </div>
+          </div>
+        </div>
+        <div
+          className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
+        >
+          <h1>
+            Grid Align
+          </h1>
+        </div>
+        <div
+          className="grid"
+        >
+          <div
+            className="col col-4 grid topAlign"
+            style={
+              Object {
+                "height": 300,
+              }
+            }
+          >
+            <div
+              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
+            >
+              <div
+                className="topSinglePadding bottomSinglePadding colors3 grid centerAlign centerJustify"
+                style={undefined}
+              >
+                TOP
+              </div>
+            </div>
+          </div>
+          <div
+            className="col col-4 grid centerAlign"
+            style={
+              Object {
+                "height": 300,
+              }
+            }
+          >
+            <div
+              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
+            >
+              <div
+                className="topSinglePadding bottomSinglePadding colors3 grid centerAlign centerJustify"
+                style={undefined}
+              >
+                CENTER
+              </div>
+            </div>
+          </div>
+          <div
+            className="col col-4 grid bottomAlign"
+            style={
+              Object {
+                "height": 300,
+              }
+            }
+          >
+            <div
+              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
+            >
+              <div
+                className="topSinglePadding bottomSinglePadding colors3 grid centerAlign centerJustify"
+                style={undefined}
+              >
+                BOTTOM
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots  Grid Autoflow 1`] = `
 <div>
   <div>
@@ -3484,7 +3632,7 @@ exports[`Storyshots  Grid Fraction 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Horizontal Align 1`] = `
+exports[`Storyshots  Grid Justify 1`] = `
 <div>
   <div>
     <div
@@ -4696,154 +4844,6 @@ exports[`Storyshots  Grid Sizing 1`] = `
               style={undefined}
             >
               12
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots  Grid Vertical Align 1`] = `
-<div>
-  <div>
-    <div
-      className="parent layout"
-    >
-      <div
-        className="rightHalfMargin leftHalfMargin rightSinglePadding leftSinglePadding grid"
-      >
-        <div
-          className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-        >
-          <h1>
-            Item Align
-          </h1>
-        </div>
-        <div
-          className="grid"
-        >
-          <div
-            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-1 grid"
-          >
-            <div
-              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
-              style={
-                Object {
-                  "height": 300,
-                }
-              }
-            >
-               
-            </div>
-          </div>
-          <div
-            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-auto grid topAlign"
-          >
-            <div
-              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
-              style={undefined}
-            >
-              TOP
-            </div>
-          </div>
-          <div
-            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-auto grid centerAlign"
-          >
-            <div
-              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
-              style={undefined}
-            >
-              CENTER
-            </div>
-          </div>
-          <div
-            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-auto grid bottomAlign"
-          >
-            <div
-              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
-              style={undefined}
-            >
-              BOTTOM
-            </div>
-          </div>
-          <div
-            className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-auto grid"
-          >
-            <div
-              className="topSinglePadding bottomSinglePadding colors1 grid centerAlign centerJustify"
-              style={undefined}
-            >
-              DEFAULT
-            </div>
-          </div>
-        </div>
-        <div
-          className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-        >
-          <h1>
-            Grid Align
-          </h1>
-        </div>
-        <div
-          className="grid"
-        >
-          <div
-            className="col col-4 grid topAlign"
-            style={
-              Object {
-                "height": 300,
-              }
-            }
-          >
-            <div
-              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-            >
-              <div
-                className="topSinglePadding bottomSinglePadding colors3 grid centerAlign centerJustify"
-                style={undefined}
-              >
-                TOP
-              </div>
-            </div>
-          </div>
-          <div
-            className="col col-4 grid centerAlign"
-            style={
-              Object {
-                "height": 300,
-              }
-            }
-          >
-            <div
-              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-            >
-              <div
-                className="topSinglePadding bottomSinglePadding colors3 grid centerAlign centerJustify"
-                style={undefined}
-              >
-                CENTER
-              </div>
-            </div>
-          </div>
-          <div
-            className="col col-4 grid bottomAlign"
-            style={
-              Object {
-                "height": 300,
-              }
-            }
-          >
-            <div
-              className="rightHalfMargin bottomSingleMargin leftHalfMargin grid"
-            >
-              <div
-                className="topSinglePadding bottomSinglePadding colors3 grid centerAlign centerJustify"
-                style={undefined}
-              >
-                BOTTOM
-              </div>
             </div>
           </div>
         </div>
