@@ -50575,6 +50575,126 @@ var _times2 = __webpack_require__(75);
 var _times3 = _interopRequireDefault(_times2);
 
 exports.default = function () {
+  var stretch = (0, _addonKnobs.boolean)('Stretch', false);
+  var items = (0, _addonKnobs.number)('Items', 1, { range: true, min: 1, max: 5 });
+  var height = (0, _addonKnobs.number)('Height', 300, {
+    range: true,
+    min: 100,
+    max: 500,
+    step: 25
+  });
+
+  return _react2.default.createElement(
+    _shared.RootLayout,
+    null,
+    _react2.default.createElement(
+      _reflex.Col,
+      null,
+      _react2.default.createElement(
+        'h1',
+        null,
+        'Item Align'
+      )
+    ),
+    _react2.default.createElement(
+      _reflex.Grid,
+      null,
+      _react2.default.createElement(ReferenceColumn, { height: height }),
+      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'TOP', align: 'top' }),
+      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'CENTER', align: 'center' }),
+      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'BOTTOM', align: 'bottom' }),
+      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'DEFAULT' })
+    ),
+    _react2.default.createElement(
+      _reflex.Col,
+      null,
+      _react2.default.createElement(
+        'h1',
+        null,
+        'Grid Align'
+      )
+    ),
+    _react2.default.createElement(
+      _reflex.Grid,
+      null,
+      _react2.default.createElement(
+        _reflex.Grid,
+        { size: 4, align: !stretch ? 'top' : undefined, style: { height: height } },
+        (0, _times3.default)(items, function (i) {
+          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'TOP' });
+        })
+      ),
+      _react2.default.createElement(
+        _reflex.Grid,
+        {
+          size: 4,
+          align: !stretch ? 'center' : undefined,
+          style: { height: height }
+        },
+        (0, _times3.default)(items, function (i) {
+          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'CENTER' });
+        })
+      ),
+      _react2.default.createElement(
+        _reflex.Grid,
+        {
+          size: 4,
+          align: !stretch ? 'bottom' : undefined,
+          style: { height: height }
+        },
+        (0, _times3.default)(items, function (i) {
+          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'BOTTOM' });
+        })
+      )
+    )
+  );
+};
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _addonKnobs = __webpack_require__(24);
+
+var _reflex = __webpack_require__(15);
+
+var _shared = __webpack_require__(22);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function ReferenceColumn(_ref) {
+  var height = _ref.height;
+
+  return _react2.default.createElement(_shared.Box, {
+    size: 1,
+    type: 'A',
+    value: '\xA0',
+    style: {
+      height: height
+    }
+  });
+}
+
+ReferenceColumn.propTypes = {
+  height: __webpack_require__(0).number.isRequired
+};
+
+/***/ }),
+/* 774 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _times2 = __webpack_require__(75);
+
+var _times3 = _interopRequireDefault(_times2);
+
+exports.default = function () {
   var items = (0, _addonKnobs.number)('Items', 5, { range: true, min: 0, max: 100 });
   var props = {
     align: !(0, _addonKnobs.boolean)('Stretch', true) ? 'top' : undefined
@@ -50626,7 +50746,7 @@ var _shared = __webpack_require__(22);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 774 */
+/* 775 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50754,7 +50874,7 @@ var _shared = __webpack_require__(22);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 775 */
+/* 776 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50824,7 +50944,7 @@ var justifyType = {
 };
 
 /***/ }),
-/* 776 */
+/* 777 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50882,7 +51002,7 @@ var _shared = __webpack_require__(22);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 777 */
+/* 778 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50994,7 +51114,7 @@ var _shared = __webpack_require__(22);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 778 */
+/* 779 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51071,7 +51191,7 @@ var _shared = __webpack_require__(22);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 779 */
+/* 780 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51356,7 +51476,7 @@ var _stories2 = _interopRequireDefault(_stories);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 780 */
+/* 781 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51435,126 +51555,6 @@ var _reflex = __webpack_require__(15);
 var _shared = __webpack_require__(22);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 781 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _times2 = __webpack_require__(75);
-
-var _times3 = _interopRequireDefault(_times2);
-
-exports.default = function () {
-  var stretch = (0, _addonKnobs.boolean)('Stretch', false);
-  var items = (0, _addonKnobs.number)('Items', 1, { range: true, min: 1, max: 5 });
-  var height = (0, _addonKnobs.number)('Height', 300, {
-    range: true,
-    min: 100,
-    max: 500,
-    step: 25
-  });
-
-  return _react2.default.createElement(
-    _shared.RootLayout,
-    null,
-    _react2.default.createElement(
-      _reflex.Col,
-      null,
-      _react2.default.createElement(
-        'h1',
-        null,
-        'Item Align'
-      )
-    ),
-    _react2.default.createElement(
-      _reflex.Grid,
-      null,
-      _react2.default.createElement(ReferenceColumn, { height: height }),
-      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'TOP', align: 'top' }),
-      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'CENTER', align: 'center' }),
-      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'BOTTOM', align: 'bottom' }),
-      _react2.default.createElement(_shared.Box, { size: 'auto', type: 'A', value: 'DEFAULT' })
-    ),
-    _react2.default.createElement(
-      _reflex.Col,
-      null,
-      _react2.default.createElement(
-        'h1',
-        null,
-        'Grid Align'
-      )
-    ),
-    _react2.default.createElement(
-      _reflex.Grid,
-      null,
-      _react2.default.createElement(
-        _reflex.Grid,
-        { size: 4, align: !stretch ? 'top' : undefined, style: { height: height } },
-        (0, _times3.default)(items, function (i) {
-          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'TOP' });
-        })
-      ),
-      _react2.default.createElement(
-        _reflex.Grid,
-        {
-          size: 4,
-          align: !stretch ? 'center' : undefined,
-          style: { height: height }
-        },
-        (0, _times3.default)(items, function (i) {
-          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'CENTER' });
-        })
-      ),
-      _react2.default.createElement(
-        _reflex.Grid,
-        {
-          size: 4,
-          align: !stretch ? 'bottom' : undefined,
-          style: { height: height }
-        },
-        (0, _times3.default)(items, function (i) {
-          return _react2.default.createElement(_shared.Box, { key: i, type: 'C', value: 'BOTTOM' });
-        })
-      )
-    )
-  );
-};
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _addonKnobs = __webpack_require__(24);
-
-var _reflex = __webpack_require__(15);
-
-var _shared = __webpack_require__(22);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function ReferenceColumn(_ref) {
-  var height = _ref.height;
-
-  return _react2.default.createElement(_shared.Box, {
-    size: 1,
-    type: 'A',
-    value: '\xA0',
-    style: {
-      height: height
-    }
-  });
-}
-
-ReferenceColumn.propTypes = {
-  height: __webpack_require__(0).number.isRequired
-};
 
 /***/ }),
 /* 782 */
@@ -53408,55 +53408,55 @@ module.exports = "<h1 id=\"two-main-sections-layout\">Two Main Sections Layout</
 /* 872 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"auto-flow\">Auto Flow</h1>\n<p>When adding elements that exceed the number of columns available, they will overflow to the next row automatically.</p>\n<p>Additionally, if <code>stretch</code> is selected all components within that row will stretch vertically to the same height.</p>\n";
+module.exports = "<h1 id=\"vertical-align\">Vertical Align</h1>\n<p>Alignment defaults to top but center and bottom are also available</p>\n<p>Note that while <code>align=&quot;top&quot;</code> has the same behavior than the default, <code>align=&quot;top&quot;</code> is useful to break inheritance.</p>\n<p>For instance, if the parent is set to <code>align=&quot;stretch&quot;</code>, setting a child to <code>align=&quot;top&quot;</code> will ensure its children align to the top.</p>\n";
 
 /***/ }),
 /* 873 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"fraction\">Fraction</h1>\n<p>Fraction-based layout allows to divide the available space without without respecting the columns.</p>\n<p>If no size is specified it&#39;s assumed to mean &quot;fill the remaining space&quot;. If multiple items with &quot;auto&quot; size are placed within a container they will share the space evenly.</p>\n";
+module.exports = "<h1 id=\"auto-flow\">Auto Flow</h1>\n<p>When adding elements that exceed the number of columns available, they will overflow to the next row automatically.</p>\n<p>Additionally, if <code>stretch</code> is selected all components within that row will stretch vertically to the same height.</p>\n";
 
 /***/ }),
 /* 874 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"horizontal-align\">Horizontal Align</h1>\n<p>Horizontal alignment allows left, right or center align of components</p>\n";
+module.exports = "<h1 id=\"fraction\">Fraction</h1>\n<p>Fraction-based layout allows to divide the available space without without respecting the columns.</p>\n<p>If no size is specified it&#39;s assumed to mean &quot;fill the remaining space&quot;. If multiple items with &quot;auto&quot; size are placed within a container they will share the space evenly.</p>\n";
 
 /***/ }),
 /* 875 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"margin\">Margin</h1>\n<p>This example allows toggling individual margins as well as global ones (the ones set by the grid). You can, for instance, define no margins globally but assign margin to a specific element within the Grid.</p>\n<p>Changing default margins may result in elements exceeding the grid size. Make sure to check the grid when testing layout changes.</p>\n";
+module.exports = "<h1 id=\"horizontal-align\">Horizontal Align</h1>\n<p>Horizontal alignment allows left, right or center align of components</p>\n";
 
 /***/ }),
 /* 876 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"nested-items\">Nested Items</h1>\n<p>Nested items create a new set of 12 columns within them.</p>\n<p>For instance, a 6-column child that sets its items size to 2-columns is equivalent to 1-column at the parent size (since 6 = 1/2*12).</p>\n<p>Note that nested Grids have no margins unless explicitly set. This is to allow for arbitrarily nested components. When a margin is needed, you can set it manually or use an Item (Items define margins by default).</p>\n<p>Play with the knobs to see the behavior of the different values.</p>\n";
+module.exports = "<h1 id=\"margin\">Margin</h1>\n<p>This example allows toggling individual margins as well as global ones (the ones set by the grid). You can, for instance, define no margins globally but assign margin to a specific element within the Grid.</p>\n<p>Changing default margins may result in elements exceeding the grid size. Make sure to check the grid when testing layout changes.</p>\n";
 
 /***/ }),
 /* 877 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"offset\">Offset</h1>\n<p>Adding an offset creates an empty number of columns between the current item and the previous one.</p>\n";
+module.exports = "<h1 id=\"nested-items\">Nested Items</h1>\n<p>Nested items create a new set of 12 columns within them.</p>\n<p>For instance, a 6-column child that sets its items size to 2-columns is equivalent to 1-column at the parent size (since 6 = 1/2*12).</p>\n<p>Note that nested Grids have no margins unless explicitly set. This is to allow for arbitrarily nested components. When a margin is needed, you can set it manually or use an Item (Items define margins by default).</p>\n<p>Play with the knobs to see the behavior of the different values.</p>\n";
 
 /***/ }),
 /* 878 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"padding\">Padding</h1>\n<p>Padding can be set for any Grid or Item components. Valid values are:</p>\n<ul>\n<li>top</li>\n<li>right</li>\n<li>bottom</li>\n<li>left</li>\n<li>horizontal</li>\n<li>vertical</li>\n<li>all</li>\n<li>none</li>\n</ul>\n<p>Additional sides always take precedence so &quot;none all&quot; is the same than &quot;all&quot;.</p>\n<p>&quot;vertical top bottom&quot; has no different meaning than just &quot;vertical&quot; since the same sides are affected. To define all sides but &quot;left&quot;, for instance, one could do &quot;top right bottom&quot; or &quot;vertical right&quot;</p>\n<p>Also note that while <code>Grid</code> has no margins by default but <code>Item</code> has a <code>24px</code> bottom margin and <code>12px</code> lateral ones. These are in addition to any padding.</p>\n<p>If you have trouble visualizing the padding effects, set Margin and Items Margin to <code>&quot;None&quot;</code>. That will show only the effects of padding.</p>\n";
+module.exports = "<h1 id=\"offset\">Offset</h1>\n<p>Adding an offset creates an empty number of columns between the current item and the previous one.</p>\n";
 
 /***/ }),
 /* 879 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"sizing\">Sizing</h1>\n<p>Any number from 1-12 defines the number of columns that each item takes</p>\n";
+module.exports = "<h1 id=\"padding\">Padding</h1>\n<p>Padding can be set for any Grid or Item components. Valid values are:</p>\n<ul>\n<li>top</li>\n<li>right</li>\n<li>bottom</li>\n<li>left</li>\n<li>horizontal</li>\n<li>vertical</li>\n<li>all</li>\n<li>none</li>\n</ul>\n<p>Additional sides always take precedence so &quot;none all&quot; is the same than &quot;all&quot;.</p>\n<p>&quot;vertical top bottom&quot; has no different meaning than just &quot;vertical&quot; since the same sides are affected. To define all sides but &quot;left&quot;, for instance, one could do &quot;top right bottom&quot; or &quot;vertical right&quot;</p>\n<p>Also note that while <code>Grid</code> has no margins by default but <code>Item</code> has a <code>24px</code> bottom margin and <code>12px</code> lateral ones. These are in addition to any padding.</p>\n<p>If you have trouble visualizing the padding effects, set Margin and Items Margin to <code>&quot;None&quot;</code>. That will show only the effects of padding.</p>\n";
 
 /***/ }),
 /* 880 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"vertical-align\">Vertical Align</h1>\n<p>Alignment defaults to top but center and bottom are also available</p>\n<p>Note that while <code>align=&quot;top&quot;</code> has the same behavior than the default, <code>align=&quot;top&quot;</code> is useful to break inheritance.</p>\n<p>For instance, if the parent is set to <code>align=&quot;stretch&quot;</code>, setting a child to <code>align=&quot;top&quot;</code> will ensure its children align to the top.</p>\n";
+module.exports = "<h1 id=\"sizing\">Sizing</h1>\n<p>Any number from 1-12 defines the number of columns that each item takes</p>\n";
 
 /***/ }),
 /* 881 */
@@ -59875,33 +59875,33 @@ var map = {
 	"./examples/twoSections.js": 772,
 	"./examples/twoSections.md": 871,
 	"./examples/twoSections.spec.png": 901,
-	"./grid/autoflow.js": 773,
-	"./grid/autoflow.md": 872,
-	"./grid/autoflow.spec.png": 902,
-	"./grid/fraction.js": 774,
-	"./grid/fraction.md": 873,
-	"./grid/fraction.spec.png": 903,
-	"./grid/horizontalAlign.js": 775,
-	"./grid/horizontalAlign.md": 874,
-	"./grid/horizontalAlign.spec.png": 904,
-	"./grid/margin.js": 776,
-	"./grid/margin.md": 875,
-	"./grid/margin.spec.png": 905,
-	"./grid/nested.js": 777,
-	"./grid/nested.md": 876,
-	"./grid/nested.spec.png": 906,
-	"./grid/offset.js": 778,
-	"./grid/offset.md": 877,
-	"./grid/offset.spec.png": 907,
-	"./grid/padding.js": 779,
-	"./grid/padding.md": 878,
-	"./grid/padding.spec.png": 908,
-	"./grid/sizing.js": 780,
-	"./grid/sizing.md": 879,
-	"./grid/sizing.spec.png": 909,
-	"./grid/verticalAlign.js": 781,
-	"./grid/verticalAlign.md": 880,
-	"./grid/verticalAlign.spec.png": 910,
+	"./grid/align.js": 773,
+	"./grid/align.md": 872,
+	"./grid/align.spec.png": 902,
+	"./grid/autoflow.js": 774,
+	"./grid/autoflow.md": 873,
+	"./grid/autoflow.spec.png": 903,
+	"./grid/fraction.js": 775,
+	"./grid/fraction.md": 874,
+	"./grid/fraction.spec.png": 904,
+	"./grid/justify.js": 776,
+	"./grid/justify.md": 875,
+	"./grid/justify.spec.png": 905,
+	"./grid/margin.js": 777,
+	"./grid/margin.md": 876,
+	"./grid/margin.spec.png": 906,
+	"./grid/nested.js": 778,
+	"./grid/nested.md": 877,
+	"./grid/nested.spec.png": 907,
+	"./grid/offset.js": 779,
+	"./grid/offset.md": 878,
+	"./grid/offset.spec.png": 908,
+	"./grid/padding.js": 780,
+	"./grid/padding.md": 879,
+	"./grid/padding.spec.png": 909,
+	"./grid/sizing.js": 781,
+	"./grid/sizing.md": 880,
+	"./grid/sizing.spec.png": 910,
 	"./layout/auto.js": 782,
 	"./layout/auto.md": 881,
 	"./layout/auto.spec.png": 911,
@@ -59945,4 +59945,4 @@ module.exports = __webpack_require__(677);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.2ac38b6f5f4e75434e28.bundle.js.map
+//# sourceMappingURL=preview.577d3204dbb37c9f0964.bundle.js.map
