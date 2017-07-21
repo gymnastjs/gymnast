@@ -1693,6 +1693,12 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         }
 
         _createClass(Grid, [{
+          key: 'componentWillReceiveProps',
+          value: function componentWillReceiveProps(newProps) {
+            (0, _utils.validateSpacingProps)(newProps, 'margin');
+            (0, _utils.validateSpacingProps)(newProps, 'padding');
+          }
+        }, {
           key: 'render',
           value: function render() {
             var _props = this.props,
@@ -5335,6 +5341,11 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
             return {
               devMode: this.props.devMode || this.context.devMode
             };
+          }
+        }, {
+          key: 'componentWillReceiveProps',
+          value: function componentWillReceiveProps(newProps) {
+            (0, _utils.validateSpacingProps)(newProps, 'margin');
           }
         }, {
           key: 'render',
@@ -20109,6 +20120,12 @@ var Grid = function (_React$Component) {
   }
 
   _createClass(Grid, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(newProps) {
+      (0, _utils.validateSpacingProps)(newProps, 'margin');
+      (0, _utils.validateSpacingProps)(newProps, 'padding');
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -50377,6 +50394,11 @@ var Layout = function (_React$Component) {
       };
     }
   }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(newProps) {
+      (0, _utils.validateSpacingProps)(newProps, 'margin');
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -66499,4 +66521,4 @@ module.exports = __webpack_require__(711);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.71fc22250db081a5b9b9.bundle.js.map
+//# sourceMappingURL=preview.03c480eabc9909ca4a47.bundle.js.map
