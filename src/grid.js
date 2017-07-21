@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { getSpacingClasses } from './utils'
-import type { Dev, AlignGrid, Justify, Size, Spacing } from './types'
+import type { Dev, AlignGrid, Justify, Size, Spacing, Space } from './types'
 import styles from './grid.css'
 import devStyles from './dev.css'
 
@@ -14,6 +14,14 @@ export type Props = {
   className?: string,
   justify?: Justify,
   margin?: Spacing,
+  marginTop?: Space,
+  marginRight?: Space,
+  marginBottom?: Space,
+  marginLeft?: Space,
+  paddingTop?: Space,
+  paddingRight?: Space,
+  paddingBottom?: Space,
+  paddingLeft?: Space,
   padding?: Spacing,
   size?: Size,
 }
@@ -37,14 +45,32 @@ export default class Grid extends React.Component {
       className,
       justify,
       margin,
+      marginTop,
+      marginRight,
+      marginBottom,
+      marginLeft,
       padding,
+      paddingTop,
+      paddingRight,
+      paddingBottom,
+      paddingLeft,
       size,
       ...props
     } = this.props
 
     const classes = compact([
-      ...getSpacingClasses(margin, 'Margin'),
-      ...getSpacingClasses(padding, 'Padding'),
+      ...getSpacingClasses(margin, 'Margin', {
+        top: marginTop,
+        right: marginRight,
+        bottom: marginBottom,
+        left: marginLeft,
+      }),
+      ...getSpacingClasses(padding, 'Padding', {
+        top: paddingTop,
+        right: paddingRight,
+        bottom: paddingBottom,
+        left: paddingLeft,
+      }),
       className,
       size && styles.col,
       size && styles[`col-${String(size)}`],
