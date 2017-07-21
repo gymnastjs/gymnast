@@ -2,7 +2,7 @@
 import React from 'react'
 import { Grid, Col } from 'reflex'
 import { RootLayout } from '../../../shared'
-import { bottom, xBottom } from '../../../shared/marginTypes'
+import { xBottom } from '../../../shared/marginTypes'
 
 export default function() {
   return (
@@ -18,7 +18,7 @@ export default function() {
           </Col>
 
           <Col size={8}>
-            <Grid margin={bottom}>
+            <Grid marginBottom={1}>
               <Grid dev={2} padding={xBottom}>
                 <Col marginLeft={0} size={9}>
                   <h2>Title</h2>

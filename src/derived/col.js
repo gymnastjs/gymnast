@@ -1,13 +1,14 @@
 // @flow
 import React from 'react'
 import Grid from '../grid'
+import type { SpacingValues } from '../types'
 
 type ColProps = {
-  marginTop?: number,
-  marginRight?: number,
-  marginBottom?: number,
-  marginLeft?: number,
-  children?: React$Element<*> | React$Element<*>[] | string,
+  marginTop?: SpacingValues,
+  marginRight?: SpacingValues,
+  marginBottom?: SpacingValues,
+  marginLeft?: SpacingValues,
+  children?: React$Element<*>,
 }
 
 const Col = ({
@@ -18,7 +19,7 @@ const Col = ({
   ...props,
   children,
 }: ColProps) =>
-  <Grid {...props} margin={[marginTop, marginRight, marginBottom, marginLeft]}>
+  <Grid {...props} {...{ marginTop, marginRight, marginBottom, marginLeft }}>
     {children}
   </Grid>
 

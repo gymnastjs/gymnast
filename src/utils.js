@@ -1,6 +1,8 @@
 // @flow
-import { memoize, compact } from 'lodash'
+import { memoize, compact, pick, capitalize, every, find } from 'lodash'
 import type { Spacing, Component } from './types'
+import type { Props as GridProps } from './grid'
+import type { Props as LayoutProps } from './layout'
 import style from './spacing.css'
 
 /* eslint-disable no-unused-vars */
@@ -17,6 +19,8 @@ export const log = {
 }
 /* eslint-enable no-console */
 
+const directions = ['top', 'right', 'bottom', 'left']
+
 export function getDisplayName(WrappedComponent: string | Component): string {
   const defaultName = 'Component'
 
@@ -27,9 +31,32 @@ export function getDisplayName(WrappedComponent: string | Component): string {
   return WrappedComponent || defaultName
 }
 
+export function validateSpacingProps(
+  props: GridProps | LayoutProps,
+  type: 'margin' | 'padding'
+) {
+  if (process.env.NODE_ENV !== 'production') {
+    const values = pick(props, directions.map(dir => type + capitalize(dir)))
+
+    // flow complains about props since `padding` cannot be found on `LayoutProps`
+    const value = (props: any)[type]
+
+    if (value && !every(values, val => typeof val === 'undefined')) {
+      const invalidSpacing = find(values, val => typeof val !== 'undefined')
+      const valueStr = value ? value.toString() : 'undefined'
+      throw new Error(
+        `Cannot define ${type}, \`[${valueStr}]\`, and value, \`${String(
+          invalidSpacing
+        )}\` at the same time`
+      )
+    }
+  }
+}
+
 function getSizeName(size: number) {
   switch (size) {
     case 0:
+    case undefined:
       return ''
     case 0.5:
       return 'Half'
@@ -49,7 +76,6 @@ function getSpacing(
   type: 'Padding' | 'Margin'
 ): Array<string> {
   const size = values.map(getSizeName)
-  const directions = ['top', 'right', 'bottom', 'left']
   let allSizes = []
 
   switch (size.length) {

@@ -2,13 +2,7 @@
 import React from 'react'
 import { Grid, Col } from 'reflex'
 import { RootLayout, Box } from '../../../shared'
-import {
-  all,
-  bottom,
-  horizontalHalf,
-  top,
-  topLeft,
-} from '../../../shared/marginTypes'
+import { all, horizontalHalf, topLeft } from '../../../shared/marginTypes'
 
 export default function() {
   return (
@@ -24,7 +18,7 @@ export default function() {
               <h2>Card Title</h2>
             </Grid>
 
-            <Grid size={7} margin={horizontalHalf} padding={top}>
+            <Grid size={7} margin={horizontalHalf} paddingTop={1}>
               <Col>
                 <h2>Section 1</h2>
               </Col>
@@ -62,7 +56,7 @@ export default function() {
               </Grid>
             </Grid>
             <Grid size={5} dev={4} padding={[1]} align="top">
-              <Grid margin={bottom}>
+              <Grid marginBottom={1}>
                 <h3>Subtitle here</h3>
               </Grid>
               <Grid>
