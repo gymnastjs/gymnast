@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { getSpacingClasses } from './utils'
-import type { Dev, Overflow, Fixed, Spacing, Height } from './types'
+import type { Dev, Overflow, Fixed, Spacing, Space, Height } from './types'
 import styles from './layout.css'
 import devStyles from './dev.css'
 
@@ -60,6 +60,10 @@ export default class Layout extends React.Component {
     className?: string,
     fixed?: Fixed,
     margin?: Spacing,
+    marginTop?: Space,
+    marginRight?: Space,
+    marginBottom?: Space,
+    marginLeft?: Space,
     overflow?: Overflow,
     height?: Height,
   }
@@ -69,6 +73,10 @@ export default class Layout extends React.Component {
       className,
       fixed,
       margin,
+      marginTop,
+      marginRight,
+      marginBottom,
+      marginLeft,
       overflow,
       height,
       devMode,
@@ -79,7 +87,12 @@ export default class Layout extends React.Component {
       className,
       getFixed(fixed),
       getLayout(height),
-      ...getSpacingClasses(margin, 'Margin'),
+      ...getSpacingClasses(margin, 'Margin', {
+        top: marginTop,
+        right: marginRight,
+        bottom: marginBottom,
+        left: marginLeft,
+      }),
       getOverflow(overflow),
       dev &&
         (devMode || this.context.devMode) &&

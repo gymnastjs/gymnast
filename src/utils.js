@@ -1,13 +1,13 @@
 // @flow
-import { memoize, compact } from 'lodash'
-import type { Spacing, Component } from './types'
+import { memoize, compact, mapValues, omitBy } from 'lodash'
+import type { Spacing, Direction, Space, Component } from './types'
 import style from './spacing.css'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
-const { stringify } = JSON
+const compactObject = obj => omitBy(obj, value => typeof value === 'undefined')
 
 /* eslint-disable no-console */
 export const log = {
@@ -44,37 +44,58 @@ function getSizeName(size: number) {
   }
 }
 
-function getSpacing(
-  values: Spacing = [],
-  type: 'Padding' | 'Margin'
-): Array<string> {
-  const size = values.map(getSizeName)
-  const directions = ['top', 'right', 'bottom', 'left']
-  let allSizes = []
+function spacingArrayToProps(array: Spacing = []): { [Direction]: Space } {
+  const props = {}
 
-  switch (size.length) {
-    case 0:
-      break
-    case 1:
-      allSizes = [size[0], size[0], size[0], size[0]]
-      break
-    case 2:
-      allSizes = [size[0], size[1], size[0], size[1]]
-      break
-    case 3:
-      allSizes = [size[0], size[1], size[2], size[1]]
-      break
-    default:
-      allSizes = size
-      break
+  if (!array.length) {
+    return props
   }
 
+  props.top = array[0]
+
+  switch (array.length) {
+    case 1:
+      props.right = array[0]
+      props.bottom = array[0]
+      props.left = array[0]
+      break
+    case 2:
+      props.right = array[1]
+      props.bottom = array[0]
+      props.left = array[1]
+      break
+    case 3:
+      props.right = array[1]
+      props.bottom = array[2]
+      props.left = array[1]
+      break
+    default:
+      props.right = array[1]
+      props.bottom = array[2]
+      props.left = array[3]
+      break
+  }
+  return props
+}
+
+function getSpacing(
+  values: Spacing = [],
+  type: 'Padding' | 'Margin',
+  overrides: { [Direction]: Space }
+): Array<string> {
+  const size = mapValues(
+    {
+      ...spacingArrayToProps(values),
+      ...compactObject(overrides),
+    },
+    getSizeName
+  )
   return compact(
-    allSizes.map(
-      (current, index) =>
-        current && style[`${directions[index]}${current}${type}`]
+    Object.keys(size).map(
+      direction =>
+        size[direction] && style[`${direction}${size[direction]}${type}`]
     )
   )
 }
 
-export const getSpacingClasses = memoize(getSpacing, stringify)
+export const getSpacingClasses = memoize(getSpacing, JSON.stringify)
