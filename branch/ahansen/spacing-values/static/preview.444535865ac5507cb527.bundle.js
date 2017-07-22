@@ -2544,10 +2544,8 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       };
       /* eslint-enable no-unused-vars */
       var isProd = "development" === 'production';
-      var stringify = JSON.stringify;
 
       /* eslint-disable no-console */
-
       var log = exports.log = {
         error: isProd ? noop : console.error.bind(console),
         warn: isProd ? noop : console.warn.bind(console),
@@ -23922,10 +23920,8 @@ var noop = function noop() {
 };
 /* eslint-enable no-unused-vars */
 var isProd = "production" === 'production';
-var stringify = JSON.stringify;
 
 /* eslint-disable no-console */
-
 var log = exports.log = {
   error: isProd ? noop : console.error.bind(console),
   warn: isProd ? noop : console.warn.bind(console),
@@ -61106,4 +61102,4 @@ module.exports = __webpack_require__(678);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.0da9b60fc24607de7eac.bundle.js.map
+//# sourceMappingURL=preview.444535865ac5507cb527.bundle.js.map
