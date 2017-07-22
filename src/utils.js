@@ -7,7 +7,6 @@ import style from './spacing.css'
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
-const { stringify } = JSON
 
 /* eslint-disable no-console */
 export const log = {
@@ -42,21 +41,19 @@ export function validateSpacingProps(
   props: SpacingProps,
   type: 'margin' | 'padding'
 ) {
-  if (process.env.NODE_ENV !== 'production') {
-    const values = getSpacingValues(props, type)
-    // flow is having trouble understanding what `props[type]` could be
-    const value: any = props[type]
+  const values = getSpacingValues(props, type)
+  // flow is having trouble understanding what `props[type]` could be
+  const value: SpacingProps = (props[type]: any)
 
-    if (value && !values.every(val => typeof val === 'undefined')) {
-      const invalidSpacing = values.find(val => typeof val !== 'undefined')
-      const valueStr = value ? value.toString() : 'undefined'
+  if (value && !values.every(val => typeof val === 'undefined')) {
+    const invalidSpacing = values.find(val => typeof val !== 'undefined')
+    const valueStr = value ? value.toString() : 'undefined'
 
-      throw new Error(
-        `Cannot define ${type}, \`[${valueStr}]\`, and value, \`${String(
-          invalidSpacing
-        )}\` at the same time`
-      )
-    }
+    throw new Error(
+      `Cannot define ${type}, \`[${valueStr}]\`, and value, \`${String(
+        invalidSpacing
+      )}\` at the same time`
+    )
   }
 }
 
@@ -119,7 +116,9 @@ export function combineSpacingClasses(
   props: SpacingProps,
   type: 'margin' | 'padding'
 ) {
-  validateSpacingProps(props, type)
+  if (process.env.NODE_ENV !== 'production') {
+    validateSpacingProps(props, type)
+  }
 
   return getSpacingClasses(
     props[type] || [
