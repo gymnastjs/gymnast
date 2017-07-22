@@ -18,10 +18,33 @@ export type AlignGrid = 'bottom' | 'center' | 'top' | void
 
 export type Justify = 'left' | 'center' | 'right' | void
 
-export type Spacing = Array<0 | 0.5 | 1 | 2>
+export type SpacingValues = 0 | 0.5 | 1 | 2
+
+export type Spacing = Array<SpacingValues>
 
 export type Fixed = 'top' | 'bottom' | void
 
 export type Overflow = 'scrollbars' | void
 
 export type Height = 'parent' | 'auto' | 'fit'
+
+export type PaddingProps = {
+  padding?: Spacing,
+  paddingTop?: SpacingValues,
+  paddingRight?: SpacingValues,
+  paddingBottom?: SpacingValues,
+  paddingLeft?: SpacingValues,
+}
+
+export type MarginProps = {
+  margin?: Spacing,
+  marginTop?: SpacingValues,
+  marginRight?: SpacingValues,
+  marginBottom?: SpacingValues,
+  marginLeft?: SpacingValues,
+}
+
+export type SpacingProps = {
+  ...MarginProps,
+  ...PaddingProps,
+}

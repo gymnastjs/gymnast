@@ -2,7 +2,7 @@
 import React from 'react'
 import { Grid, Col } from 'reflex'
 import { RootLayout } from '../../../shared'
-import { all, xItem, none, horizontalHalf } from '../../../shared/marginTypes'
+import { all, xItem, horizontalHalf } from '../../../shared/marginTypes'
 
 export default function() {
   return (
@@ -32,25 +32,25 @@ export default function() {
             <Col>Padding</Col>
           </Grid>
           <Grid size={4} dev={4}>
-            <Grid margin={none}>No padding</Grid>
+            <Grid>No padding</Grid>
           </Grid>
         </Col>
 
         <Col size={6}>
           <Grid size={4} dev={4}>
-            <Grid margin={none}>No padding</Grid>
+            <Grid>No padding</Grid>
           </Grid>
           <Grid size={4} dev={2} padding={xItem}>
             <Col>Padding</Col>
           </Grid>
           <Grid size={4} dev={4}>
-            <Grid margin={none}>No padding</Grid>
+            <Grid>No padding</Grid>
           </Grid>
         </Col>
 
         <Col size={6}>
           <Grid size={4} dev={4}>
-            <Grid margin={none}>No padding</Grid>
+            <Grid>No padding</Grid>
           </Grid>
           <Grid size={8} dev={2} padding={xItem}>
             <Col>Padding</Col>
@@ -61,7 +61,7 @@ export default function() {
             <Col>Padding</Col>
           </Grid>
           <Grid dev={4}>
-            <Grid margin={none}>No padding</Grid>
+            <Grid>No padding</Grid>
           </Grid>
         </Col>
       </Grid>

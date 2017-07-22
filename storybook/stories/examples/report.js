@@ -5,12 +5,9 @@ import { loremIpsum } from '../../shared'
 import styles from './report.css'
 import { page } from './layout.css'
 import {
-  bottom,
   horizontal,
   horizontalHalf,
   allHalf,
-  rightDouble,
-  top,
   verticalHalf,
 } from '../../shared/marginTypes'
 
@@ -70,29 +67,29 @@ export default function() {
               <h2>Subheader</h2>
             </Grid>
             <Grid size={10} margin={horizontalHalf}>
-              <Grid margin={rightDouble} size="fit">
-                <Grid padding={top} dev={3}>
+              <Grid marginRight={2} size="fit">
+                <Grid paddingTop={1} dev={3}>
                   Lorem
                 </Grid>
               </Grid>
-              <Grid margin={rightDouble} size="fit">
-                <Grid padding={top} dev={3}>
+              <Grid marginRight={2} size="fit">
+                <Grid paddingTop={1} dev={3}>
                   ipsum
                 </Grid>
               </Grid>
-              <Grid margin={rightDouble} size="fit">
-                <Grid padding={top} dev={3}>
+              <Grid marginRight={2} size="fit">
+                <Grid paddingTop={1} dev={3}>
                   dolor
                 </Grid>
               </Grid>
-              <Grid margin={rightDouble} size="fit">
-                <Grid padding={top} dev={3}>
+              <Grid marginRight={2} size="fit">
+                <Grid paddingTop={1} dev={3}>
                   sit amet, consectetur
                 </Grid>
               </Grid>
             </Grid>
             <Grid margin={horizontalHalf} size={2}>
-              <Grid padding={top} dev={3}>
+              <Grid paddingTop={1} dev={3}>
                 sit amet
               </Grid>
             </Grid>
@@ -103,7 +100,7 @@ export default function() {
         <Layout height="auto">
           <Root>
             <Grid>
-              <Grid size={1} align="top" padding={top} margin={horizontalHalf}>
+              <Grid size={1} align="top" paddingTop={1} margin={horizontalHalf}>
                 <Grid>
                   <ul>
                     <Li index={1} />
@@ -119,7 +116,7 @@ export default function() {
                 size={7}
                 className={styles.content}
                 align="top"
-                padding={top}
+                paddingTop={1}
               >
                 <P>Text A</P>
                 <Card height={140}>First Block</Card>
@@ -140,8 +137,8 @@ export default function() {
                 </P>
               </Grid>
               <Grid size={4} className={styles.clippy} padding={horizontalHalf}>
-                <Grid align="top" dev={1} padding={top} margin={horizontal}>
-                  <Grid margin={bottom}>Side bar</Grid>
+                <Grid align="top" dev={1} paddingTop={1} margin={horizontal}>
+                  <Grid marginBottom={1}>Side bar</Grid>
                 </Grid>
               </Grid>
             </Grid>

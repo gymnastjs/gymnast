@@ -2,8 +2,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import { getSpacingClasses } from './utils'
-import type { Dev, Overflow, Fixed, Spacing, Height } from './types'
+import { combineSpacingClasses } from './utils'
+import type {
+  SpacingValues,
+  Dev,
+  Overflow,
+  Fixed,
+  Spacing,
+  Height,
+} from './types'
 import styles from './layout.css'
 import devStyles from './dev.css'
 
@@ -39,6 +46,20 @@ function getOverflow(overflow: Overflow): string {
   }
 }
 
+export type Props = {
+  dev?: Dev,
+  devMode?: boolean,
+  className?: string,
+  fixed?: Fixed,
+  margin?: Spacing,
+  marginTop?: SpacingValues,
+  marginRight?: SpacingValues,
+  marginBottom?: SpacingValues,
+  marginLeft?: SpacingValues,
+  overflow?: Overflow,
+  height?: Height,
+}
+
 export default class Layout extends React.Component {
   static contextTypes = {
     devMode: PropTypes.bool,
@@ -54,32 +75,37 @@ export default class Layout extends React.Component {
     }
   }
 
-  props: {
-    dev?: Dev,
-    devMode?: boolean,
-    className?: string,
-    fixed?: Fixed,
-    margin?: Spacing,
-    overflow?: Overflow,
-    height?: Height,
-  }
+  props: Props
 
   render() {
     const {
       className,
       fixed,
       margin,
+      marginTop,
+      marginRight,
+      marginBottom,
+      marginLeft,
       overflow,
       height,
       devMode,
       dev,
       ...props
     } = this.props
+
+    const spacingProps = {
+      margin,
+      marginTop,
+      marginRight,
+      marginBottom,
+      marginLeft,
+    }
+
     const classes = compact([
       className,
       getFixed(fixed),
       getLayout(height),
-      ...getSpacingClasses(margin, 'Margin'),
+      ...combineSpacingClasses(spacingProps, 'margin'),
       getOverflow(overflow),
       dev &&
         (devMode || this.context.devMode) &&
