@@ -2569,21 +2569,19 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       }
 
       function validateSpacingProps(props, type) {
-        if (true) {
-          var values = getSpacingValues(props, type);
-          // flow is having trouble understanding what `props[type]` could be
-          var value = props[type];
+        var values = getSpacingValues(props, type);
+        // flow is having trouble understanding what `props[type]` could be
+        var value = props[type];
 
-          if (value && !values.every(function (val) {
-            return typeof val === 'undefined';
-          })) {
-            var invalidSpacing = values.find(function (val) {
-              return typeof val !== 'undefined';
-            });
-            var valueStr = value ? value.toString() : 'undefined';
+        if (value && !values.every(function (val) {
+          return typeof val === 'undefined';
+        })) {
+          var invalidSpacing = values.find(function (val) {
+            return typeof val !== 'undefined';
+          });
+          var valueStr = value ? value.toString() : 'undefined';
 
-            throw new Error('Cannot define ' + type + ', `[' + valueStr + ']`, and value, `' + String(invalidSpacing) + '` at the same time');
-          }
+          throw new Error('Cannot define ' + type + ', `[' + valueStr + ']`, and value, `' + String(invalidSpacing) + '` at the same time');
         }
       }
 
@@ -2637,7 +2635,9 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       });
 
       function combineSpacingClasses(props, type) {
-        validateSpacingProps(props, type);
+        if (true) {
+          validateSpacingProps(props, type);
+        }
 
         return getSpacingClasses(props[type] || [props[type + 'Top'], props[type + 'Right'], props[type + 'Bottom'], props[type + 'Left']], (0, _capitalize3.default)(type));
       }
@@ -23945,21 +23945,19 @@ function getDisplayName(WrappedComponent) {
 }
 
 function validateSpacingProps(props, type) {
-  if (false) {
-    var values = getSpacingValues(props, type);
-    // flow is having trouble understanding what `props[type]` could be
-    var value = props[type];
+  var values = getSpacingValues(props, type);
+  // flow is having trouble understanding what `props[type]` could be
+  var value = props[type];
 
-    if (value && !values.every(function (val) {
-      return typeof val === 'undefined';
-    })) {
-      var invalidSpacing = values.find(function (val) {
-        return typeof val !== 'undefined';
-      });
-      var valueStr = value ? value.toString() : 'undefined';
+  if (value && !values.every(function (val) {
+    return typeof val === 'undefined';
+  })) {
+    var invalidSpacing = values.find(function (val) {
+      return typeof val !== 'undefined';
+    });
+    var valueStr = value ? value.toString() : 'undefined';
 
-      throw new Error('Cannot define ' + type + ', `[' + valueStr + ']`, and value, `' + String(invalidSpacing) + '` at the same time');
-    }
+    throw new Error('Cannot define ' + type + ', `[' + valueStr + ']`, and value, `' + String(invalidSpacing) + '` at the same time');
   }
 }
 
@@ -24013,7 +24011,9 @@ var getSpacingClasses = exports.getSpacingClasses = (0, _memoize3.default)(getSp
 });
 
 function combineSpacingClasses(props, type) {
-  validateSpacingProps(props, type);
+  if (false) {
+    validateSpacingProps(props, type);
+  }
 
   return getSpacingClasses(props[type] || [props[type + 'Top'], props[type + 'Right'], props[type + 'Bottom'], props[type + 'Left']], (0, _capitalize3.default)(type));
 }
@@ -61102,4 +61102,4 @@ module.exports = __webpack_require__(678);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.444535865ac5507cb527.bundle.js.map
+//# sourceMappingURL=preview.f95f9e221cd9a3bd30f0.bundle.js.map
