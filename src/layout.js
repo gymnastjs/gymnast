@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import { getSpacingClasses, validateSpacingProps } from './utils'
+import { combineSpacingClasses } from './utils'
 import type {
   SpacingValues,
   Dev,
@@ -75,10 +75,6 @@ export default class Layout extends React.Component {
     }
   }
 
-  componentWillReceiveProps(newProps: Props) {
-    validateSpacingProps(newProps, 'margin')
-  }
-
   props: Props
 
   render() {
@@ -97,14 +93,19 @@ export default class Layout extends React.Component {
       ...props
     } = this.props
 
+    const spacingProps = {
+      margin,
+      marginTop,
+      marginRight,
+      marginBottom,
+      marginLeft,
+    }
+
     const classes = compact([
       className,
       getFixed(fixed),
       getLayout(height),
-      ...getSpacingClasses(
-        margin || [marginTop, marginRight, marginBottom, marginLeft],
-        'Margin'
-      ),
+      ...combineSpacingClasses(spacingProps, 'margin'),
       getOverflow(overflow),
       dev &&
         (devMode || this.context.devMode) &&

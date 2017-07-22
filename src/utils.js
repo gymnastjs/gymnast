@@ -1,8 +1,6 @@
 // @flow
-import { memoize, compact, pick, capitalize, every, find } from 'lodash'
-import type { Spacing, Component } from './types'
-import type { Props as GridProps } from './grid'
-import type { Props as LayoutProps } from './layout'
+import { memoize, compact, capitalize } from 'lodash'
+import type { Spacing, Component, SpacingProps } from './types'
 import style from './spacing.css'
 
 /* eslint-disable no-unused-vars */
@@ -21,6 +19,15 @@ export const log = {
 
 const directions = ['top', 'right', 'bottom', 'left']
 
+function getSpacingValues(props: SpacingProps, type: 'margin' | 'padding') {
+  return [
+    props[`${type}Top`],
+    props[`${type}Right`],
+    props[`${type}Bottom`],
+    props[`${type}Left`],
+  ]
+}
+
 export function getDisplayName(WrappedComponent: string | Component): string {
   const defaultName = 'Component'
 
@@ -32,18 +39,18 @@ export function getDisplayName(WrappedComponent: string | Component): string {
 }
 
 export function validateSpacingProps(
-  props: GridProps | LayoutProps,
+  props: SpacingProps,
   type: 'margin' | 'padding'
 ) {
   if (process.env.NODE_ENV !== 'production') {
-    const values = pick(props, directions.map(dir => type + capitalize(dir)))
+    const values = getSpacingValues(props, type)
+    // flow is having trouble understanding what `props[type]` could be
+    const value: any = props[type]
 
-    // flow complains about props since `padding` cannot be found on `LayoutProps`
-    const value = (props: any)[type]
-
-    if (value && !every(values, val => typeof val === 'undefined')) {
-      const invalidSpacing = find(values, val => typeof val !== 'undefined')
+    if (value && !values.every(val => typeof val === 'undefined')) {
+      const invalidSpacing = values.find(val => typeof val !== 'undefined')
       const valueStr = value ? value.toString() : 'undefined'
+
       throw new Error(
         `Cannot define ${type}, \`[${valueStr}]\`, and value, \`${String(
           invalidSpacing
@@ -98,9 +105,29 @@ function getSpacing(
   return compact(
     allSizes.map(
       (current, index) =>
-        current && style[`${directions[index]}${current}${type}`]
+        current && style[`${directions[index]}${current}${capitalize(type)}`]
     )
   )
 }
 
-export const getSpacingClasses = memoize(getSpacing, stringify)
+export const getSpacingClasses = memoize(
+  getSpacing,
+  (values, type) => type + values.toString()
+)
+
+export function combineSpacingClasses(
+  props: SpacingProps,
+  type: 'margin' | 'padding'
+) {
+  validateSpacingProps(props, type)
+
+  return getSpacingClasses(
+    props[type] || [
+      props[`${type}Top`],
+      props[`${type}Right`],
+      props[`${type}Bottom`],
+      props[`${type}Left`],
+    ],
+    capitalize(type)
+  )
+}

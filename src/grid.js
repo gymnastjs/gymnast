@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import { getSpacingClasses, validateSpacingProps } from './utils'
+import { combineSpacingClasses } from './utils'
 import type {
   SpacingValues,
   Dev,
@@ -39,11 +39,6 @@ export default class Grid extends React.Component {
     devMode: PropTypes.bool,
   }
 
-  componentWillReceiveProps(newProps: Props) {
-    validateSpacingProps(newProps, 'margin')
-    validateSpacingProps(newProps, 'padding')
-  }
-
   props: Props
 
   render() {
@@ -53,29 +48,40 @@ export default class Grid extends React.Component {
       children,
       className,
       justify,
+      size,
       margin,
       marginTop,
-      marginLeft,
-      marginBottom,
       marginRight,
+      marginBottom,
+      marginLeft,
+      padding,
       paddingTop,
       paddingRight,
       paddingBottom,
       paddingLeft,
-      padding,
-      size,
       ...props
     } = this.props
 
+    // these need to be separated out since
+    const marginProps = {
+      margin,
+      marginTop,
+      marginRight,
+      marginBottom,
+      marginLeft,
+    }
+
+    const paddingProps = {
+      padding,
+      paddingTop,
+      paddingRight,
+      paddingBottom,
+      paddingLeft,
+    }
+
     const classes = compact([
-      ...getSpacingClasses(
-        margin || [marginTop, marginRight, marginBottom, marginLeft],
-        'Margin'
-      ),
-      ...getSpacingClasses(
-        padding || [paddingTop, paddingRight, paddingBottom, paddingLeft],
-        'Padding'
-      ),
+      ...combineSpacingClasses(marginProps, 'margin'),
+      ...combineSpacingClasses(paddingProps, 'padding'),
       className,
       size && styles.col,
       size && styles[`col-${String(size)}`],
@@ -85,6 +91,7 @@ export default class Grid extends React.Component {
         devStyles[`colors${String(dev)}`],
       styles.grid,
     ])
+
     const offsetClasses = compact([
       align && styles[`${align}Align`],
       justify && styles[`${justify}Justify`],

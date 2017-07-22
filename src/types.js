@@ -27,3 +27,24 @@ export type Fixed = 'top' | 'bottom' | void
 export type Overflow = 'scrollbars' | void
 
 export type Height = 'parent' | 'auto' | 'fit'
+
+export type PaddingProps = {
+  padding?: Spacing,
+  paddingTop?: SpacingValues,
+  paddingRight?: SpacingValues,
+  paddingBottom?: SpacingValues,
+  paddingLeft?: SpacingValues,
+}
+
+export type MarginProps = {
+  margin?: Spacing,
+  marginTop?: SpacingValues,
+  marginRight?: SpacingValues,
+  marginBottom?: SpacingValues,
+  marginLeft?: SpacingValues,
+}
+
+export type SpacingProps = {
+  ...MarginProps,
+  ...PaddingProps,
+}
