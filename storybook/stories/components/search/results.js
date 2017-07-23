@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { Col, Grid } from 'reflex'
+import { Col, Grid, type Size } from 'reflex'
 import { times } from 'lodash'
 import styles from '../../../shared/stories.css'
 
@@ -11,7 +11,7 @@ export default function SearchResults({
 }: {
   results?: number,
   pages?: number,
-  size?: number,
+  size?: Size,
 }) {
   return (
     <Grid size={size} dev={5} align="top">
