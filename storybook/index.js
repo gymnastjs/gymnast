@@ -3,7 +3,7 @@ import React from 'react'
 import { each } from 'lodash'
 import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
-import { utils } from '../src'
+import { utils } from '../src/reflex'
 import { storyFolders, WithExtensions, getName } from './shared'
 
 /**

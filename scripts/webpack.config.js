@@ -31,7 +31,7 @@ const cssLoaders = [
 ]
 
 module.exports = {
-  entry: resolve(__dirname, '../src/index.js'),
+  entry: resolve(__dirname, '../src/reflex.js'),
   output: {
     path: root,
     filename: isProd ? 'reflex.min.js' : 'reflex.js',

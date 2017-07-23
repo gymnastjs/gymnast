@@ -1,4 +1,5 @@
 [ignore]
+<PROJECT_ROOT>/dist
 .*/node_modules/stylelint/.*
 .*/node_modules/eslint-plugin-jsx-a11y/.*
 .*/node_modules/config-chain/test/broken.json
@@ -10,7 +11,8 @@
 [libs]
 
 [options]
-module.name_mapper='reflex' -> '<PROJECT_ROOT>/dist/reflex.js'
+module.name_mapper='reflex' -> '<PROJECT_ROOT>/src/reflex.js'
+module.name_mapper='.*\(.css\)' -> 'CSSModule'
 module.name_mapper.extension='txt' -> '<PROJECT_ROOT>/test/stringStub.js'
 module.name_mapper.extension='md' -> '<PROJECT_ROOT>/test/stringStub.js'
 module.ignore_non_literal_requires=true

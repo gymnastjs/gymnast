@@ -32,7 +32,7 @@
           "module-resolver",
           {
             "alias": {
-              "reflex": "./src/index"
+              "reflex": "./src/reflex"
             }
           }
         ]
