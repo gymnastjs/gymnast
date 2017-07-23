@@ -45583,7 +45583,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function SearchNav() {
   return _react2.default.createElement(
     _reflex.Layout,
-    { dev: 4, margin: [3, 1, 4, 0] },
+    { dev: 4, margin: [1, 0, 0, 0] },
     _react2.default.createElement(
       _reflex.Root,
       null,
@@ -61102,4 +61102,4 @@ module.exports = __webpack_require__(678);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.3136d307b3a0f8d82de1.bundle.js.map
+//# sourceMappingURL=preview.deb889f11766ef2a0bb8.bundle.js.map
