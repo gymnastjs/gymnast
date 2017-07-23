@@ -54357,7 +54357,7 @@ module.exports = "<h1 id=\"two-main-sections-layout\">Two Main Sections Layout</
 /* 873 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"vertical-align\">Vertical Align</h1>\n<p>Alignment defaults to top but center and bottom are also available</p>\n<p>Note that while <code>align=&quot;top&quot;</code> has the same behavior than the default, <code>align=&quot;top&quot;</code> is useful to break inheritance.</p>\n<p>For instance, if the parent is set to <code>align=&quot;stretch&quot;</code>, setting a child to <code>align=&quot;top&quot;</code> will ensure its children align to the top.</p>\n";
+module.exports = "<h1 id=\"align\">Align</h1>\n<p><code>align</code> parameter determines the vertical alignment. It allows for <code>top</code>, <code>bottom</code> or <code>center</code> values.</p>\n<p>Note that while <code>align=&quot;top&quot;</code> has the same behavior than the default, <code>align=&quot;top&quot;</code> is useful to break inheritance.</p>\n<p>For instance, if the parent is set to <code>align=&quot;center&quot;</code>, setting a child to <code>align=&quot;top&quot;</code> will ensure its children align to the top.</p>\n";
 
 /***/ }),
 /* 874 */
@@ -54369,13 +54369,13 @@ module.exports = "<h1 id=\"auto-flow\">Auto Flow</h1>\n<p>When adding elements t
 /* 875 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"fraction\">Fraction</h1>\n<p>Fraction-based layout allows to divide the available space without without respecting the columns.</p>\n<p>If no size is specified it&#39;s assumed to mean &quot;fill the remaining space&quot;. If multiple items with &quot;auto&quot; size are placed within a container they will share the space evenly.</p>\n";
+module.exports = "<h1 id=\"fraction\">Fraction</h1>\n<p>Fraction-based layout allows to divide the available space without without respecting the columns.</p>\n<p>If size <code>auto</code> is specified, it will fill the remaining space. If multiple items with <code>auto</code> size are placed within a container they will share the space evenly.</p>\n<p>You can combine specific sizes (1-12) and <code>auto</code> or <code>fit</code> values.</p>\n";
 
 /***/ }),
 /* 876 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 id=\"horizontal-align\">Horizontal Align</h1>\n<p>Horizontal alignment allows left, right or center align of components</p>\n";
+module.exports = "<h1 id=\"justify\">Justify</h1>\n<p><code>justify</code> parameter determines the horizontal alignment. It allows for <code>left</code>, <code>right</code> or <code>center</code> alignment of components within its parent Grid.</p>\n";
 
 /***/ }),
 /* 877 */
@@ -61102,4 +61102,4 @@ module.exports = __webpack_require__(678);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.f95f9e221cd9a3bd30f0.bundle.js.map
+//# sourceMappingURL=preview.09375d5cf4e39bc042de.bundle.js.map
