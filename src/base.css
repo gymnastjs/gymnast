@@ -1,6 +1,6 @@
 @import "./variables";
 
-.grid {
+.base {
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;

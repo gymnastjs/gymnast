@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import { combineSpacingClasses } from './utils'
+import { combineSpacing } from './utils'
 import type {
   SpacingValues,
   Dev,
@@ -58,6 +58,7 @@ export type Props = {
   marginLeft?: SpacingValues,
   overflow?: Overflow,
   height?: Height,
+  style?: { [string]: string | number },
 }
 
 export default class Layout extends React.Component {
@@ -88,24 +89,16 @@ export default class Layout extends React.Component {
       marginLeft,
       overflow,
       height,
+      style,
       devMode,
       dev,
       ...props
     } = this.props
 
-    const spacingProps = {
-      margin,
-      marginTop,
-      marginRight,
-      marginBottom,
-      marginLeft,
-    }
-
     const classes = compact([
       className,
       getFixed(fixed),
       getLayout(height),
-      ...combineSpacingClasses(spacingProps, 'margin'),
       getOverflow(overflow),
       dev &&
         (devMode || this.context.devMode) &&
@@ -114,6 +107,21 @@ export default class Layout extends React.Component {
       styles.layout,
     ])
 
-    return <div {...props} className={classes.join(' ')} />
+    return (
+      <div
+        {...props}
+        className={classes.join(' ')}
+        style={{
+          ...style,
+          ...combineSpacing({
+            margin,
+            marginTop,
+            marginRight,
+            marginBottom,
+            marginLeft,
+          }),
+        }}
+      />
+    )
   }
 }

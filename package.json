@@ -108,11 +108,11 @@
   "bundlesize": [
     {
       "path": "./dist/reflex.min.js",
-      "maxSize": "7 Kb"
+      "maxSize": "6.0 Kb"
     },
     {
       "path": "./dist/reflex.css",
-      "maxSize": "1.5 Kb"
+      "maxSize": "1.0 Kb"
     }
   ],
   "scripts": {
@@ -136,7 +136,8 @@
     "start": "npm-run-all --parallel start:*",
     "test:image": "babel-node node_modules/.bin/nightwatch --config test/screenshot/nightwatch.conf.js",
     "test:size": "bundlesize",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "release": {
     "verifyConditions": "condition-circle",
