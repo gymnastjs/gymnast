@@ -45842,7 +45842,7 @@ function SearchResults(_ref) {
 SearchResults.propTypes = {
   results: __webpack_require__(0).number,
   pages: __webpack_require__(0).number,
-  size: __webpack_require__(0).number
+  size: typeof Size === 'function' ? __webpack_require__(0).instanceOf(Size) : __webpack_require__(0).any
 };
 
 /***/ }),
@@ -48926,82 +48926,6 @@ Root.propTypes = {};
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Offset = exports.Root = exports.Col = exports.utils = exports.version = exports.Layout = exports.Grid = undefined;
-
-var _grid = __webpack_require__(224);
-
-Object.defineProperty(exports, 'Grid', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_grid).default;
-  }
-});
-
-var _layout = __webpack_require__(755);
-
-Object.defineProperty(exports, 'Layout', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_layout).default;
-  }
-});
-
-var _version = __webpack_require__(788);
-
-Object.defineProperty(exports, 'version', {
-  enumerable: true,
-  get: function get() {
-    return _version.version;
-  }
-});
-
-var _col = __webpack_require__(751);
-
-Object.defineProperty(exports, 'Col', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_col).default;
-  }
-});
-
-var _root = __webpack_require__(753);
-
-Object.defineProperty(exports, 'Root', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_root).default;
-  }
-});
-
-var _offset = __webpack_require__(752);
-
-Object.defineProperty(exports, 'Offset', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_offset).default;
-  }
-});
-
-var _utils = __webpack_require__(265);
-
-var srcUtils = _interopRequireWildcard(_utils);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var utils = exports.utils = srcUtils;
-
-/***/ }),
-/* 755 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
 var _compact2 = __webpack_require__(390);
 
@@ -49264,6 +49188,82 @@ if (typeof STORYBOOK_REACT_CLASSES !== 'undefined') {
 }
 
 /***/ }),
+/* 755 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Offset = exports.Root = exports.Col = exports.utils = exports.version = exports.Layout = exports.Grid = undefined;
+
+var _grid = __webpack_require__(224);
+
+Object.defineProperty(exports, 'Grid', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_grid).default;
+  }
+});
+
+var _layout = __webpack_require__(754);
+
+Object.defineProperty(exports, 'Layout', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_layout).default;
+  }
+});
+
+var _version = __webpack_require__(788);
+
+Object.defineProperty(exports, 'version', {
+  enumerable: true,
+  get: function get() {
+    return _version.version;
+  }
+});
+
+var _col = __webpack_require__(751);
+
+Object.defineProperty(exports, 'Col', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_col).default;
+  }
+});
+
+var _root = __webpack_require__(753);
+
+Object.defineProperty(exports, 'Root', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_root).default;
+  }
+});
+
+var _offset = __webpack_require__(752);
+
+Object.defineProperty(exports, 'Offset', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_offset).default;
+  }
+});
+
+var _utils = __webpack_require__(265);
+
+var srcUtils = _interopRequireWildcard(_utils);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var utils = exports.utils = srcUtils;
+
+/***/ }),
 /* 756 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49282,7 +49282,7 @@ var _react3 = __webpack_require__(500);
 
 var _addonKnobs = __webpack_require__(24);
 
-var _src = __webpack_require__(754);
+var _reflex = __webpack_require__(755);
 
 var _shared = __webpack_require__(22);
 
@@ -49310,7 +49310,7 @@ function configStories(storiesOfName, storiesModule) {
       useBooleanShorthandSyntax: true,
       skip: 1, // assumes each story will have a WithExtensions wrapper, this config option skips that wrapper
       displayName: function displayName(element) {
-        return unwrapDisplayNameFromHOC(_src.utils.getDisplayName(element.type));
+        return unwrapDisplayNameFromHOC(_reflex.utils.getDisplayName(element.type));
       }
     });
   };
@@ -61102,4 +61102,4 @@ module.exports = __webpack_require__(678);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.09375d5cf4e39bc042de.bundle.js.map
+//# sourceMappingURL=preview.af52ad0d9c7856c493bc.bundle.js.map
