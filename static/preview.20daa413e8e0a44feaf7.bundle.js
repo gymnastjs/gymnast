@@ -50153,7 +50153,7 @@ exports.default = function () {
                 { dev: 2 },
                 _react2.default.createElement(
                   _reflex.Grid,
-                  { dev: 1, padding: _marginTypes.all },
+                  { dev: 1, padding: [1, 0.5, 0, 0.5] },
                   _react2.default.createElement(
                     _reflex.Col,
                     { size: 6 },
@@ -61102,4 +61102,4 @@ module.exports = __webpack_require__(678);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.af52ad0d9c7856c493bc.bundle.js.map
+//# sourceMappingURL=preview.20daa413e8e0a44feaf7.bundle.js.map
