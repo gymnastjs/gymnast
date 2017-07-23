@@ -321,7 +321,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
                     className="colors2 grid"
                   >
                     <div
-                      className="topSinglePadding rightHalfPadding bottomSinglePadding leftHalfPadding colors1 grid"
+                      className="topSinglePadding rightHalfPadding leftHalfPadding colors1 grid"
                     >
                       <div
                         className="rightHalfMargin bottomSingleMargin leftHalfMargin col col-6 grid"
