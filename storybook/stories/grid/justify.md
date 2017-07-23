@@ -1,3 +1,3 @@
-# Horizontal Align
+# Justify
 
-Horizontal alignment allows left, right or center align of components
+`justify` parameter determines the horizontal alignment. It allows for `left`, `right` or `center` alignment of components within its parent Grid.
