@@ -3,17 +3,22 @@ const fs = require('fs')
 
 const distDir = path.resolve(__dirname, '../dist')
 
-if (!fs.existsSync(distDir)) {
-  throw new Error('dist folder not available')
+function isCSSFile(file) {
+  return (
+    path.parse(file).name.endsWith('.css') && !fs.lstatSync(file).isDirectory()
+  )
 }
 
-const files = fs.readdirSync(distDir)
+function getTargetPath(file) {
+  return path.resolve(__dirname, '../dist', file)
+}
 
-files.forEach(file => {
-  const parsed = path.parse(file)
-  if (parsed.name.endsWith('.css')) {
-    const fullPath = path.resolve(__dirname, '../dist', file)
-    console.log('stubbing css file', fullPath)
-    fs.writeFileSync(fullPath, '')
-  }
-})
+function writeEmptyFile(filePath) {
+  return fs.writeFileSync(filePath, '')
+}
+
+fs
+  .readdirSync(distDir)
+  .map(getTargetPath)
+  .filter(isCSSFile)
+  .forEach(writeEmptyFile)

@@ -127,7 +127,7 @@
     "format": "prettier --write --single-quote --no-semi --trailing-comma es5",
     "lint:css": "stylelint src/*.css stories/*.css",
     "lint:flow": "flow stop && flow --show-all-errors",
-    "lint:js": "eslint src stories storybook",
+    "lint:js": "eslint scripts src stories storybook",
     "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
