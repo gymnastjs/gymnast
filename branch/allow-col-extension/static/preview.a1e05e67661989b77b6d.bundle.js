@@ -1913,6 +1913,10 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       }
 
       function validateSpacingProps(props) {
+        if (isProd) {
+          return true;
+        }
+
         var margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'];
         var paddings = ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'];
 
@@ -20717,6 +20721,10 @@ var log = exports.log = {
 }
 
 function validateSpacingProps(props) {
+  if (isProd) {
+    return true;
+  }
+
   var margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'];
   var paddings = ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'];
 
@@ -60298,4 +60306,4 @@ module.exports = __webpack_require__(681);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.0eb374deda1359da1891.bundle.js.map
+//# sourceMappingURL=preview.a1e05e67661989b77b6d.bundle.js.map
