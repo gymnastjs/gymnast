@@ -28,6 +28,10 @@ export function getDisplayName(WrappedComponent: string | Component): string {
 }
 
 export function validateSpacingProps(props: SpacingProps) {
+  if (isProd) {
+    return true
+  }
+
   const margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft']
   const paddings = [
     'paddingTop',
@@ -43,7 +47,9 @@ export function validateSpacingProps(props: SpacingProps) {
     log.error(
       'Cannot define margin or padding and a direction at the same time'
     )
+    return false
   }
+  return true
 }
 
 function getSpacing(
@@ -100,8 +106,8 @@ function getCSS(prop, value) {
 }
 
 export function combineSpacing({ margin, padding, ...props }: SpacingProps) {
-  if (process.env.NODE_ENV !== 'production') {
-    validateSpacingProps({ margin, padding, ...props })
+  if (!validateSpacingProps({ margin, padding, ...props })) {
+    return {}
   }
 
   const flatProps = {
@@ -115,13 +121,7 @@ export function combineSpacing({ margin, padding, ...props }: SpacingProps) {
       ...acc,
       ...getCSS(prop, flatProps[prop]),
     }),
-    {
-      paddingTop: 0,
-      paddingRight: 0,
-      paddingBottom: 0,
-      paddingLeft: 0,
-      border: '0 transparent solid',
-    }
+    {}
   )
 }
 

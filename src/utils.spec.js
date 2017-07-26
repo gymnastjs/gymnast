@@ -39,13 +39,8 @@ describe('combineSpacing', () => {
         marginBottom: 2,
       })
     ).toEqual({
-      border: '0 transparent solid',
       borderBottomWidth: 48,
       borderTopWidth: 24,
-      paddingBottom: 0,
-      paddingLeft: 0,
-      paddingRight: 0,
-      paddingTop: 0,
     })
   })
 })

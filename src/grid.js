@@ -4,7 +4,7 @@ import Base from './base'
 import type { SpacingValues, Spacing } from './types'
 import { combineSpacing } from './utils'
 
-type Props = {
+export type Props = {
   margin?: Spacing,
   padding?: Spacing,
   style?: { [string]: string | number },

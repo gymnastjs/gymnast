@@ -124,7 +124,7 @@
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:gen": "all-contributors generate",
-    "format-all": "git ls-files {,**/**/}*.{js,css} | xargs yarn format",
+    "format-all": "git ls-files {src,test,storybook}*.{js,css} | xargs yarn format",
     "format": "prettier --write --single-quote --no-semi --trailing-comma es5",
     "lint:css": "stylelint src/*.css stories/*.css",
     "lint:flow": "flow stop && flow --show-all-errors",
