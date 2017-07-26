@@ -1,7 +1,7 @@
 const { optimize } = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const replaceEval = require('./replaceEval')
+const overrideGlobal = require('./overrideGlobal')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
 const { DefinePlugin } = require('webpack')
@@ -46,7 +46,7 @@ module.exports = {
       verbose: false,
     }),
     new ExtractTextPlugin('reflex.css'),
-    replaceEval(),
+    overrideGlobal(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       reportFilename: `stats${isProd ? '' : '.dev'}.html`,
