@@ -40,7 +40,7 @@ export function validateSpacingProps(props: SpacingProps) {
     (props.margin instanceof Array && margins.some(isNumber(props))) ||
     (props.padding instanceof Array && paddings.some(isNumber(props)))
   ) {
-    throw new Error(
+    log.error(
       'Cannot define margin or padding and a direction at the same time'
     )
   }
