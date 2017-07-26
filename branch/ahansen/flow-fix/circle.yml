@@ -24,7 +24,6 @@ dependencies:
 test:
   override:
     - yarn build
-    - node scripts/generateCssFlow.js
     - scripts/citests.sh:
         parallel: true
 deployment:
