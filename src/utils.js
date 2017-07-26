@@ -1,12 +1,13 @@
 // @flow
-import { memoize, compact, capitalize } from 'lodash'
-import type { Spacing, Component, SpacingProps } from './types'
-import style from './spacing.css'
+import { memoize } from 'lodash'
+import type { Spacing, SpacingValues, Component, SpacingProps } from './types'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
+const isNumber = keys => key => typeof keys[key] === 'number'
+const gutter = 24
 
 /* eslint-disable no-console */
 export const log = {
@@ -15,17 +16,6 @@ export const log = {
   info: isProd ? noop : console.log.bind(console),
 }
 /* eslint-enable no-console */
-
-const directions = ['top', 'right', 'bottom', 'left']
-
-function getSpacingValues(props: SpacingProps, type: 'margin' | 'padding') {
-  return [
-    props[`${type}Top`],
-    props[`${type}Right`],
-    props[`${type}Bottom`],
-    props[`${type}Left`],
-  ]
-}
 
 export function getDisplayName(WrappedComponent: string | Component): string {
   const defaultName = 'Component'
@@ -37,74 +27,58 @@ export function getDisplayName(WrappedComponent: string | Component): string {
   return WrappedComponent || defaultName
 }
 
-export function validateSpacingProps(
-  props: SpacingProps,
-  type: 'margin' | 'padding'
-) {
-  const values = getSpacingValues(props, type)
-  // flow is having trouble understanding what `props[type]` could be
-  const value: SpacingProps = (props[type]: any)
+export function validateSpacingProps(props: SpacingProps) {
+  const margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft']
+  const paddings = [
+    'paddingTop',
+    'paddingRight',
+    'paddingBottom',
+    'paddingLeft',
+  ]
 
-  if (value && !values.every(val => typeof val === 'undefined')) {
-    const invalidSpacing = values.find(val => typeof val !== 'undefined')
-    const valueStr = value ? value.toString() : 'undefined'
-
+  if (
+    (props.margin instanceof Array && margins.some(isNumber(props))) ||
+    (props.padding instanceof Array && paddings.some(isNumber(props)))
+  ) {
     throw new Error(
-      `Cannot define ${type}, \`[${valueStr}]\`, and value, \`${String(
-        invalidSpacing
-      )}\` at the same time`
+      'Cannot define margin or padding and a direction at the same time'
     )
-  }
-}
-
-function getSizeName(size: number) {
-  switch (size) {
-    case 0:
-    case undefined:
-      return ''
-    case 0.5:
-      return 'Half'
-    case 1:
-      return 'Single'
-    case 2:
-      return 'Double'
-    default:
-      throw new Error(
-        `Invalid size number. Valid values are: 0, 0.5, 1 and 2. ${size} provided`
-      )
   }
 }
 
 function getSpacing(
-  values: Spacing = [],
-  type: 'Padding' | 'Margin'
-): Array<string> {
-  const size = values.map(getSizeName)
-  let allSizes = []
-
-  switch (size.length) {
-    case 0:
-      break
-    case 1:
-      allSizes = [size[0], size[0], size[0], size[0]]
-      break
-    case 2:
-      allSizes = [size[0], size[1], size[0], size[1]]
-      break
-    case 3:
-      allSizes = [size[0], size[1], size[2], size[1]]
-      break
-    default:
-      allSizes = size
-      break
+  values?: Spacing = [],
+  type: 'margin' | 'padding'
+): { [string]: number } {
+  if (!values || !values.length) {
+    return {}
   }
 
-  return compact(
-    allSizes.map(
-      (current, index) =>
-        current && style[`${directions[index]}${current}${capitalize(type)}`]
-    )
-  )
+  let allValues = []
+
+  switch (values.length) {
+    case 1:
+      allValues = [values[0], values[0], values[0], values[0]]
+      break
+    case 2:
+      allValues = [values[0], values[1], values[0], values[1]]
+      break
+    case 3:
+      allValues = [values[0], values[1], values[2], values[1]]
+      break
+    case 4:
+      allValues = values
+      break
+    default:
+      throw new Error('Invalid Spacing Array Size')
+  }
+
+  return {
+    [`${type}Top`]: allValues[0],
+    [`${type}Right`]: allValues[1],
+    [`${type}Bottom`]: allValues[2],
+    [`${type}Left`]: allValues[3],
+  }
 }
 
 export const getSpacingClasses = memoize(
@@ -112,21 +86,53 @@ export const getSpacingClasses = memoize(
   (values, type) => type + values.toString()
 )
 
-export function combineSpacingClasses(
-  props: SpacingProps,
-  type: 'margin' | 'padding'
-) {
+function getCSS(prop, value) {
+  if (typeof value === 'undefined') {
+    return {}
+  } else if (prop.includes('padding')) {
+    return { [prop]: value * gutter }
+  } else if (prop.includes('margin')) {
+    return {
+      [`${prop.replace('margin', 'border')}Width`]: value * gutter,
+    }
+  }
+  throw new Error(`Invalid css prop: ${prop}`)
+}
+
+export function combineSpacing({ margin, padding, ...props }: SpacingProps) {
   if (process.env.NODE_ENV !== 'production') {
-    validateSpacingProps(props, type)
+    validateSpacingProps({ margin, padding, ...props })
   }
 
-  return getSpacingClasses(
-    props[type] || [
-      props[`${type}Top`],
-      props[`${type}Right`],
-      props[`${type}Bottom`],
-      props[`${type}Left`],
-    ],
-    capitalize(type)
+  const flatProps = {
+    ...props,
+    ...getSpacing(margin, 'margin'),
+    ...getSpacing(padding, 'padding'),
+  }
+
+  return Object.keys(flatProps).reduce(
+    (acc, prop) => ({
+      ...acc,
+      ...getCSS(prop, flatProps[prop]),
+    }),
+    {
+      paddingTop: 0,
+      paddingRight: 0,
+      paddingBottom: 0,
+      paddingLeft: 0,
+      border: '0 transparent solid',
+    }
   )
+}
+
+export function toPx(
+  gutterFraction?: Spacing | SpacingValues
+): SpacingValues | void {
+  return typeof gutterFraction === 'number'
+    ? gutterFraction * gutter
+    : undefined
+}
+
+export function toPxArray(array?: Spacing | SpacingValues): Spacing | void {
+  return array instanceof Array ? (array.map(toPx): any) : undefined
 }
