@@ -1851,7 +1851,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       };
 
       exports.getDisplayName = getDisplayName;
-      exports.validSpacingProps = validSpacingProps;
+      exports.validateSpacingProps = validateSpacingProps;
       exports.combineSpacing = combineSpacing;
       exports.toPx = toPx;
       exports.toPxArray = toPxArray;
@@ -1912,7 +1912,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         return WrappedComponent || defaultName;
       }
 
-      function validSpacingProps(props) {
+      function validateSpacingProps(props) {
         var margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'];
         var paddings = ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'];
 
@@ -1975,21 +1975,15 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
             padding = _ref4.padding,
             props = _objectWithoutProperties(_ref4, ['margin', 'padding']);
 
-        if (true) {
-          validSpacingProps(_extends({ margin: margin, padding: padding }, props));
+        if (!validateSpacingProps(_extends({ margin: margin, padding: padding }, props))) {
+          return {};
         }
 
         var flatProps = _extends({}, props, getSpacing(margin, 'margin'), getSpacing(padding, 'padding'));
 
         return Object.keys(flatProps).reduce(function (acc, prop) {
           return _extends({}, acc, getCSS(prop, flatProps[prop]));
-        }, {
-          paddingTop: 0,
-          paddingRight: 0,
-          paddingBottom: 0,
-          paddingLeft: 0,
-          border: '0 transparent solid'
-        });
+        }, {});
       }
 
       function toPx(gutterFraction) {
@@ -7601,9 +7595,9 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       };
 
       function Col(props) {
-        if (!(0, _utils.validSpacingProps)(props)) {
-          return null;
-        } else if (!props.margin) {
+        (0, _utils.validateSpacingProps)(props);
+
+        if (!props.margin) {
           return _react2.default.createElement(_grid2.default, _extends({}, defaults, props));
         }
         return _react2.default.createElement(_grid2.default, props);
@@ -20673,7 +20667,7 @@ var _memoize3 = _interopRequireDefault(_memoize2);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 exports.getDisplayName = getDisplayName;
-exports.validSpacingProps = validSpacingProps;
+exports.validateSpacingProps = validateSpacingProps;
 exports.combineSpacing = combineSpacing;
 exports.toPx = toPx;
 exports.toPxArray = toPxArray;
@@ -20722,7 +20716,7 @@ var log = exports.log = {
   return WrappedComponent || defaultName;
 }
 
-function validSpacingProps(props) {
+function validateSpacingProps(props) {
   var margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'];
   var paddings = ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'];
 
@@ -20785,21 +20779,15 @@ function combineSpacing(_ref4) {
       padding = _ref4.padding,
       props = _objectWithoutProperties(_ref4, ['margin', 'padding']);
 
-  if (false) {
-    validSpacingProps(_extends({ margin: margin, padding: padding }, props));
+  if (!validateSpacingProps(_extends({ margin: margin, padding: padding }, props))) {
+    return {};
   }
 
   var flatProps = _extends({}, props, getSpacing(margin, 'margin'), getSpacing(padding, 'padding'));
 
   return Object.keys(flatProps).reduce(function (acc, prop) {
     return _extends({}, acc, getCSS(prop, flatProps[prop]));
-  }, {
-    paddingTop: 0,
-    paddingRight: 0,
-    paddingBottom: 0,
-    paddingLeft: 0,
-    border: '0 transparent solid'
-  });
+  }, {});
 }
 
 function toPx(gutterFraction) {
@@ -48404,9 +48392,9 @@ var defaults = {
 };
 
 function Col(props) {
-  if (!(0, _utils.validSpacingProps)(props)) {
-    return null;
-  } else if (!props.margin) {
+  (0, _utils.validateSpacingProps)(props);
+
+  if (!props.margin) {
     return _react2.default.createElement(_grid2.default, _extends({}, defaults, props));
   }
   return _react2.default.createElement(_grid2.default, props);
@@ -53540,7 +53528,7 @@ exports = module.exports = __webpack_require__(98)(undefined);
 
 
 // module
-exports.push([module.i, ".base__base___XNA8W{box-sizing:border-box;display:flex;flex-flow:row wrap;width:100%}.base__base___XNA8W:not(.base__col___JimFV){flex-grow:1}.base__base___XNA8W.base__leftJustify___269wK{justify-content:flex-start;margin-right:auto}.base__base___XNA8W.base__centerJustify___JI-yn{justify-content:center;margin-left:auto;margin-right:auto}.base__base___XNA8W.base__rightJustify___3ra_v{justify-content:flex-end;margin-left:auto}.base__base___XNA8W.base__topAlign___2dP8_{align-content:flex-start;align-items:flex-start}.base__base___XNA8W.base__centerAlign___3lzlJ{align-content:center;align-items:center}.base__base___XNA8W.base__bottomAlign___1e9gH{align-content:flex-end;align-items:flex-end}.base__base___XNA8W.base__col-fit___lugzp{flex-basis:0;white-space:nowrap}.base__base___XNA8W.base__col-auto___1FbdF{flex:1 1 0%}.base__col-1___1MUH-{flex-basis:8.33333%;max-width:8.33333%}.base__col-2___3-5Wb{flex-basis:16.66667%;max-width:16.66667%}.base__col-3___1ibrs{flex-basis:25%;max-width:25%}.base__col-4___1SoPj{flex-basis:33.33333%;max-width:33.33333%}.base__col-5___uyt37{flex-basis:41.66667%;max-width:41.66667%}.base__col-6___C0vJ7{flex-basis:50%;max-width:50%}.base__col-7___eQOOR{flex-basis:58.33333%;max-width:58.33333%}.base__col-8___2JEFq{flex-basis:66.66667%;max-width:66.66667%}.base__col-9___3azj3{flex-basis:75%;max-width:75%}.base__col-10___12exz{flex-basis:83.33333%;max-width:83.33333%}.base__col-11___1Ym4U{flex-basis:91.66667%;max-width:91.66667%}.base__col-12___3GoDs{flex-basis:100%;max-width:100%}", ""]);
+exports.push([module.i, ".base__base___XNA8W{border:0 solid transparent;box-sizing:border-box;display:flex;flex-flow:row wrap;padding:0;width:100%}.base__base___XNA8W:not(.base__col___JimFV){flex-grow:1}.base__base___XNA8W.base__leftJustify___269wK{justify-content:flex-start;margin-right:auto}.base__base___XNA8W.base__centerJustify___JI-yn{justify-content:center;margin-left:auto;margin-right:auto}.base__base___XNA8W.base__rightJustify___3ra_v{justify-content:flex-end;margin-left:auto}.base__base___XNA8W.base__topAlign___2dP8_{align-content:flex-start;align-items:flex-start}.base__base___XNA8W.base__centerAlign___3lzlJ{align-content:center;align-items:center}.base__base___XNA8W.base__bottomAlign___1e9gH{align-content:flex-end;align-items:flex-end}.base__base___XNA8W.base__col-fit___lugzp{flex-basis:0;white-space:nowrap}.base__base___XNA8W.base__col-auto___1FbdF{flex:1 1 0%}.base__col-1___1MUH-{flex-basis:8.33333%;max-width:8.33333%}.base__col-2___3-5Wb{flex-basis:16.66667%;max-width:16.66667%}.base__col-3___1ibrs{flex-basis:25%;max-width:25%}.base__col-4___1SoPj{flex-basis:33.33333%;max-width:33.33333%}.base__col-5___uyt37{flex-basis:41.66667%;max-width:41.66667%}.base__col-6___C0vJ7{flex-basis:50%;max-width:50%}.base__col-7___eQOOR{flex-basis:58.33333%;max-width:58.33333%}.base__col-8___2JEFq{flex-basis:66.66667%;max-width:66.66667%}.base__col-9___3azj3{flex-basis:75%;max-width:75%}.base__col-10___12exz{flex-basis:83.33333%;max-width:83.33333%}.base__col-11___1Ym4U{flex-basis:91.66667%;max-width:91.66667%}.base__col-12___3GoDs{flex-basis:100%;max-width:100%}", ""]);
 
 // exports
 exports.locals = {
@@ -53611,7 +53599,7 @@ exports = module.exports = __webpack_require__(98)(undefined);
 
 
 // module
-exports.push([module.i, ".layout__layout___74Wzo{display:flex;align-self:flex-start;align-items:center;flex-flow:column;box-sizing:border-box;width:100%;min-width:400px}.layout__layout___74Wzo>:not(.layout__layout___74Wzo){max-width:1224px}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto;overflow-x:hidden}.layout__fit___2LP-7{flex-grow:0;flex-shrink:0}.layout__auto___15Qo_{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}", ""]);
+exports.push([module.i, ".layout__layout___74Wzo{align-items:center;align-self:flex-start;border:0 solid transparent;box-sizing:border-box;display:flex;flex-flow:column;min-width:400px;padding:0;width:100%}.layout__layout___74Wzo>:not(.layout__layout___74Wzo){max-width:1224px}.layout__parent___2MI7Y{flex-grow:1;min-height:100%}.layout__overflow___2j6Gd{overflow-y:auto;overflow-x:hidden}.layout__fit___2LP-7{flex-grow:0;flex-shrink:0}.layout__auto___15Qo_{flex-grow:1}.layout__fixedTop___dKj8O{position:fixed;top:0}.layout__fixedBottom___1CNXU{position:fixed;bottom:0}", ""]);
 
 // exports
 exports.locals = {
@@ -60310,4 +60298,4 @@ module.exports = __webpack_require__(681);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.0e0228fff183a0e71faa.bundle.js.map
+//# sourceMappingURL=preview.0eb374deda1359da1891.bundle.js.map
