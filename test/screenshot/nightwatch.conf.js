@@ -1,9 +1,10 @@
 import path from 'path'
 
 const targetUrlIndex = process.argv.indexOf('--url')
-const targetUrl = targetUrlIndex === -1
-  ? 'http://localhost:9001/iframe.html'
-  : process.argv[targetUrlIndex + 1]
+const targetUrl =
+  targetUrlIndex === -1
+    ? 'http://localhost:9001/iframe.html'
+    : process.argv[targetUrlIndex + 1]
 
 process.env.NODE_ENV = 'test:image'
 

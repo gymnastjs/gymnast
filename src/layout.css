@@ -1,13 +1,15 @@
 @import "./variables";
 
 .layout {
-  display: flex;
-  align-self: flex-start;
   align-items: center;
-  flex-flow: column;
+  align-self: flex-start;
+  border: 0 transparent solid;
   box-sizing: border-box;
-  width: 100%;
+  display: flex;
+  flex-flow: column;
   min-width: var(--min-width);
+  padding: 0;
+  width: 100%;
 
   & > :not(.layout) {
     max-width: var(--max-width);

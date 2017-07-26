@@ -1,26 +1,21 @@
 // @flow
 import React from 'react'
 import Grid from '../grid'
-import type { SpacingValues } from '../types'
+import type { Props } from '../grid'
+import { validateSpacingProps } from '../utils'
 
-type ColProps = {
-  marginTop?: SpacingValues,
-  marginRight?: SpacingValues,
-  marginBottom?: SpacingValues,
-  marginLeft?: SpacingValues,
-  children?: React$Element<*>,
+const defaults = {
+  marginTop: 0,
+  marginRight: 0.5,
+  marginBottom: 1,
+  marginLeft: 0.5,
 }
 
-const Col = ({
-  marginTop = 0,
-  marginRight = 0.5,
-  marginBottom = 1,
-  marginLeft = 0.5,
-  ...props,
-  children,
-}: ColProps) =>
-  <Grid {...props} {...{ marginTop, marginRight, marginBottom, marginLeft }}>
-    {children}
-  </Grid>
+export default function Col(props: Props) {
+  validateSpacingProps(props)
 
-export default Col
+  if (!props.margin) {
+    return <Grid {...defaults} {...props} />
+  }
+  return <Grid {...props} />
+}

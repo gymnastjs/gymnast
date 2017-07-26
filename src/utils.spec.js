@@ -1,4 +1,10 @@
-import { toPx, toPxArray, combineSpacing, validateSpacingProps } from './utils'
+import {
+  log,
+  toPx,
+  toPxArray,
+  combineSpacing,
+  validateSpacingProps,
+} from './utils'
 
 const gutter = 24
 
@@ -33,13 +39,8 @@ describe('combineSpacing', () => {
         marginBottom: 2,
       })
     ).toEqual({
-      border: '0 transparent solid',
       borderBottomWidth: 48,
       borderTopWidth: 24,
-      paddingBottom: 0,
-      paddingLeft: 0,
-      paddingRight: 0,
-      paddingTop: 0,
     })
   })
 })
@@ -54,20 +55,24 @@ describe('validateSpacingProps', () => {
   })
 
   it('should throw an error for invalid props', () => {
-    expect(() =>
-      validateSpacingProps({ marginTop: 1, margin: [1] })
-    ).toThrowError()
+    spyOn(log, 'error')
+
+    validateSpacingProps({ marginTop: 1, margin: [1] })
+
+    expect(log.error).toHaveBeenCalled()
   })
 
   it('should throw an error for invalid props', () => {
-    expect(() =>
-      validateSpacingProps({
-        marginTop: 1,
-        marginRight: 2,
-        marginBottom: 0.5,
-        marginLeft: 0,
-        margin: [1, 2, 0.5, 0],
-      })
-    ).toThrowError()
+    spyOn(log, 'error')
+
+    validateSpacingProps({
+      marginTop: 1,
+      marginRight: 2,
+      marginBottom: 0.5,
+      marginLeft: 0,
+      margin: [1, 2, 0.5, 0],
+    })
+
+    expect(log.error).toHaveBeenCalled()
   })
 })
