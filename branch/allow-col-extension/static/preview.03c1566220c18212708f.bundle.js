@@ -1870,7 +1870,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       };
 
       exports.getDisplayName = getDisplayName;
-      exports.validateSpacingProps = validateSpacingProps;
+      exports.validSpacingProps = validSpacingProps;
       exports.combineSpacing = combineSpacing;
       exports.toPx = toPx;
       exports.toPxArray = toPxArray;
@@ -1931,13 +1931,15 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         return WrappedComponent || defaultName;
       }
 
-      function validateSpacingProps(props) {
+      function validSpacingProps(props) {
         var margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'];
         var paddings = ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'];
 
         if (props.margin instanceof Array && margins.some(isNumber(props)) || props.padding instanceof Array && paddings.some(isNumber(props))) {
           log.error('Cannot define margin or padding and a direction at the same time');
+          return false;
         }
+        return true;
       }
 
       function getSpacing() {
@@ -1993,7 +1995,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
             props = _objectWithoutProperties(_ref4, ['margin', 'padding']);
 
         if (true) {
-          validateSpacingProps(_extends({ margin: margin, padding: padding }, props));
+          validSpacingProps(_extends({ margin: margin, padding: padding }, props));
         }
 
         var flatProps = _extends({}, props, getSpacing(margin, 'margin'), getSpacing(padding, 'padding'));
@@ -7846,15 +7848,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         return obj && obj.__esModule ? obj : { default: obj };
       }
 
-      function _objectWithoutProperties(obj, keys) {
-        var target = {};for (var i in obj) {
-          if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
-        }return target;
-      }
-
       var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
-
-      var babelPluginFlowReactPropTypes_proptype_SpacingValues = __webpack_require__(1).babelPluginFlowReactPropTypes_proptype_SpacingValues || __webpack_require__(0).any;
 
       var defaults = {
         marginTop: 0,
@@ -7862,28 +7856,20 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         marginBottom: 1,
         marginLeft: 0.5
       };
+
       var marginDirections = Object.keys(defaults);
 
-      var Col = function Col(_ref) {
-        var margin = _ref.margin,
-            props = _objectWithoutProperties(_ref, ['margin']);
-
-        if (margin && marginDirections.some(function (prop) {
-          return prop in props;
-        })) {
-          _utils.log.error('You cannot define both, margin and ' + marginDirections.join(' ') + ' at the same time');
-        } else if (!margin) {
+      var Col = function Col(props) {
+        if (!(0, _utils.validSpacingProps)(props)) {
+          return null;
+        } else if (!props.margin) {
           return _react2.default.createElement(_grid2.default, _extends({}, props, defaults, (0, _pick3.default)(props, marginDirections)));
         }
-        return _react2.default.createElement(_grid2.default, _extends({}, props, { margin: margin }));
+        return _react2.default.createElement(_grid2.default, props);
       };
 
       Col.propTypes = {
-        margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
-        marginTop: typeof babelPluginFlowReactPropTypes_proptype_SpacingValues === 'function' ? babelPluginFlowReactPropTypes_proptype_SpacingValues : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_SpacingValues),
-        marginRight: typeof babelPluginFlowReactPropTypes_proptype_SpacingValues === 'function' ? babelPluginFlowReactPropTypes_proptype_SpacingValues : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_SpacingValues),
-        marginBottom: typeof babelPluginFlowReactPropTypes_proptype_SpacingValues === 'function' ? babelPluginFlowReactPropTypes_proptype_SpacingValues : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_SpacingValues),
-        marginLeft: typeof babelPluginFlowReactPropTypes_proptype_SpacingValues === 'function' ? babelPluginFlowReactPropTypes_proptype_SpacingValues : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_SpacingValues)
+        margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing)
       };
       exports.default = Col;
 
@@ -9362,6 +9348,33 @@ function withKnobsOptions() {
 
 /***/ }),
 /* 25 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9517,33 +9530,6 @@ if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype
   },
   configurable: true
 });
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
 
 /***/ }),
 /* 27 */
@@ -12701,7 +12687,7 @@ if (typeof window !== "undefined") {
 
 module.exports = win;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 84 */,
@@ -18402,7 +18388,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 module.exports = freeGlobal;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 187 */
@@ -22013,9 +21999,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_SpacingValues = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_SpacingValues || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_SpacingValues = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_SpacingValues || __webpack_require__(0).any;
 
 function Grid(_ref) {
   var margin = _ref.margin,
@@ -22079,7 +22065,7 @@ var _memoize3 = _interopRequireDefault(_memoize2);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 exports.getDisplayName = getDisplayName;
-exports.validateSpacingProps = validateSpacingProps;
+exports.validSpacingProps = validSpacingProps;
 exports.combineSpacing = combineSpacing;
 exports.toPx = toPx;
 exports.toPxArray = toPxArray;
@@ -22091,13 +22077,13 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /* eslint-disable no-unused-vars */
-var babelPluginFlowReactPropTypes_proptype_SpacingProps = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_SpacingProps || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_SpacingProps = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_SpacingProps || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Component = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Component || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_SpacingValues = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_SpacingValues || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_SpacingValues = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_SpacingValues || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
 var noop = function noop() {
   return null;
@@ -22128,13 +22114,15 @@ var log = exports.log = {
   return WrappedComponent || defaultName;
 }
 
-function validateSpacingProps(props) {
+function validSpacingProps(props) {
   var margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'];
   var paddings = ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'];
 
   if (props.margin instanceof Array && margins.some(isNumber(props)) || props.padding instanceof Array && paddings.some(isNumber(props))) {
     log.error('Cannot define margin or padding and a direction at the same time');
+    return false;
   }
+  return true;
 }
 
 function getSpacing() {
@@ -22190,7 +22178,7 @@ function combineSpacing(_ref4) {
       props = _objectWithoutProperties(_ref4, ['margin', 'padding']);
 
   if (false) {
-    validateSpacingProps(_extends({ margin: margin, padding: padding }, props));
+    validSpacingProps(_extends({ margin: margin, padding: padding }, props));
   }
 
   var flatProps = _extends({}, props, getSpacing(margin, 'margin'), getSpacing(padding, 'padding'));
@@ -24732,7 +24720,7 @@ module.exports = function includes(searchElement) {
 	return false;
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 267 */
@@ -32830,7 +32818,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
   return globals;
 }));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26), __webpack_require__(102)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25), __webpack_require__(102)))
 
 /***/ }),
 /* 330 */
@@ -46242,7 +46230,7 @@ var renderUI = function renderUI() {
 };
 
 reduxStore.subscribe(renderUI);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 509 */,
@@ -49816,13 +49804,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Size = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Size || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Size = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Size || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Justify = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Justify || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Justify = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Justify || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_AlignGrid = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_AlignGrid || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_AlignGrid = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_AlignGrid || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Dev = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Dev || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Dev = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Dev || __webpack_require__(0).any;
 
 /* eslint-disable react/prefer-stateless-function */
 if (true) Object.defineProperty(exports, 'babelPluginFlowReactPropTypes_proptype_Props', {
@@ -49915,11 +49903,7 @@ var _utils = __webpack_require__(228);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
-
-var babelPluginFlowReactPropTypes_proptype_SpacingValues = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_SpacingValues || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
 var defaults = {
   marginTop: 0,
@@ -49927,28 +49911,20 @@ var defaults = {
   marginBottom: 1,
   marginLeft: 0.5
 };
+
 var marginDirections = Object.keys(defaults);
 
-var Col = function Col(_ref) {
-  var margin = _ref.margin,
-      props = _objectWithoutProperties(_ref, ['margin']);
-
-  if (margin && marginDirections.some(function (prop) {
-    return prop in props;
-  })) {
-    _utils.log.error('You cannot define both, margin and ' + marginDirections.join(' ') + ' at the same time');
-  } else if (!margin) {
+var Col = function Col(props) {
+  if (!(0, _utils.validSpacingProps)(props)) {
+    return null;
+  } else if (!props.margin) {
     return _react2.default.createElement(_grid2.default, _extends({}, props, defaults, (0, _pick3.default)(props, marginDirections)));
   }
-  return _react2.default.createElement(_grid2.default, _extends({}, props, { margin: margin }));
+  return _react2.default.createElement(_grid2.default, props);
 };
 
 Col.propTypes = {
-  margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing),
-  marginTop: typeof babelPluginFlowReactPropTypes_proptype_SpacingValues === 'function' ? babelPluginFlowReactPropTypes_proptype_SpacingValues : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_SpacingValues),
-  marginRight: typeof babelPluginFlowReactPropTypes_proptype_SpacingValues === 'function' ? babelPluginFlowReactPropTypes_proptype_SpacingValues : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_SpacingValues),
-  marginBottom: typeof babelPluginFlowReactPropTypes_proptype_SpacingValues === 'function' ? babelPluginFlowReactPropTypes_proptype_SpacingValues : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_SpacingValues),
-  marginLeft: typeof babelPluginFlowReactPropTypes_proptype_SpacingValues === 'function' ? babelPluginFlowReactPropTypes_proptype_SpacingValues : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_SpacingValues)
+  margin: typeof babelPluginFlowReactPropTypes_proptype_Spacing === 'function' ? babelPluginFlowReactPropTypes_proptype_Spacing : __webpack_require__(0).shape(babelPluginFlowReactPropTypes_proptype_Spacing)
 };
 exports.default = Col;
 Col.__docgenInfo = {
@@ -49957,34 +49933,6 @@ Col.__docgenInfo = {
     'margin': {
       'flowType': {
         'name': 'Spacing'
-      },
-      'required': false,
-      'description': ''
-    },
-    'marginTop': {
-      'flowType': {
-        'name': 'SpacingValues'
-      },
-      'required': false,
-      'description': ''
-    },
-    'marginRight': {
-      'flowType': {
-        'name': 'SpacingValues'
-      },
-      'required': false,
-      'description': ''
-    },
-    'marginBottom': {
-      'flowType': {
-        'name': 'SpacingValues'
-      },
-      'required': false,
-      'description': ''
-    },
-    'marginLeft': {
-      'flowType': {
-        'name': 'SpacingValues'
       },
       'required': false,
       'description': ''
@@ -50021,7 +49969,7 @@ var _grid2 = _interopRequireDefault(_grid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var babelPluginFlowReactPropTypes_proptype_Offset = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Offset || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Offset = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Offset || __webpack_require__(0).any;
 
 var Offset = function Offset(_ref) {
   var size = _ref.size;
@@ -50130,17 +50078,17 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var babelPluginFlowReactPropTypes_proptype_Height = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Height || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Height = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Height || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Fixed = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Fixed || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Fixed = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Fixed || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Overflow = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Overflow || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Overflow = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Overflow || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_Dev = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Dev || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Dev = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Dev || __webpack_require__(0).any;
 
-var babelPluginFlowReactPropTypes_proptype_SpacingValues = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_SpacingValues || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_SpacingValues = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_SpacingValues || __webpack_require__(0).any;
 
 function getLayout(layout) {
   switch (layout) {
@@ -50455,7 +50403,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
 var typeMap = {
   A: 1,
@@ -50513,7 +50461,7 @@ exports.default = getMarginSelect;
 
 var _addonKnobs = __webpack_require__(24);
 
-var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Spacing = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Spacing || __webpack_require__(0).any;
 
 var marginMap = {
   Item: [0, 0.5, 1],
@@ -50602,7 +50550,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var babelPluginFlowReactPropTypes_proptype_Height = __webpack_require__(25).babelPluginFlowReactPropTypes_proptype_Height || __webpack_require__(0).any;
+var babelPluginFlowReactPropTypes_proptype_Height = __webpack_require__(26).babelPluginFlowReactPropTypes_proptype_Height || __webpack_require__(0).any;
 
 function RootLayout(_ref) {
   var _ref$height = _ref.height,
@@ -55830,7 +55778,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(25)))
 
 /***/ }),
 /* 961 */
@@ -59879,7 +59827,7 @@ if (hadRuntime) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 1170 */
@@ -60622,7 +60570,7 @@ if (hadRuntime) {
   typeof self === "object" ? self : this
 );
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 1171 */
@@ -61516,7 +61464,7 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26), __webpack_require__(57)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25), __webpack_require__(57)(module)))
 
 /***/ }),
 /* 1188 */
@@ -61940,7 +61888,7 @@ function config (name) {
   return String(val).toLowerCase() === 'true';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 1192 */
@@ -62009,7 +61957,7 @@ if (!rng) {
 
 module.exports = rng;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 1194 */
@@ -62245,4 +62193,4 @@ module.exports = __webpack_require__(685);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.96d4def70527f1f2b2fa.bundle.js.map
+//# sourceMappingURL=preview.03c1566220c18212708f.bundle.js.map
