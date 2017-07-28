@@ -1,11 +1,13 @@
 // @flow
 import * as srcUtils from './utils'
 
+export { default as Base } from './base'
 export { default as Grid } from './grid'
 export { default as Layout } from './layout'
 export { version } from '../version'
 export const utils = srcUtils
 
+export { default as Grid8 } from './derived/grid8'
 export { default as Col } from './derived/col'
 export { default as Root } from './derived/root'
 export { default as Offset } from './derived/offset'

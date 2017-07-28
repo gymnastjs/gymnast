@@ -2,17 +2,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
-import type { Dev, AlignGrid, Justify, Size } from './types'
+import type {
+  Dev,
+  AlignGrid,
+  Justify,
+  Size,
+  SpacingValues,
+  Spacing,
+} from './types'
 import styles from './base.css'
 import devStyles from './dev.css'
+import { combineSpacing } from './utils'
 
 export type Props = {
-  dev?: Dev,
   align?: AlignGrid,
+  base?: number,
   children?: React$Element<any> | Array<React$Element<any>>,
   className?: string,
+  dev?: Dev,
   justify?: Justify,
+  margin?: Spacing,
+  marginBottom?: SpacingValues,
+  marginLeft?: SpacingValues,
+  marginRight?: SpacingValues,
+  marginTop?: SpacingValues,
+  padding?: Spacing,
+  paddingBottom?: SpacingValues,
+  paddingLeft?: SpacingValues,
+  paddingRight?: SpacingValues,
+  paddingTop?: SpacingValues,
   size?: Size,
+  style?: { [string]: string | number },
   style?: { [string]: string | number },
 }
 
@@ -22,16 +42,32 @@ export default class Base extends React.Component {
     devMode: PropTypes.bool,
   }
 
+  static defaultProps = {
+    style: {},
+  }
+
   props: Props
 
   render() {
     const {
-      dev,
       align,
       children,
       className,
+      dev,
+      base,
       justify,
       size,
+      style,
+      margin,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      marginTop,
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
       ...props
     } = this.props
 
@@ -47,9 +83,27 @@ export default class Base extends React.Component {
       align && styles[`${align}Align`],
       justify && styles[`${justify}Justify`],
     ])
+    const cssStyle = {
+      ...style,
+      ...combineSpacing(
+        {
+          margin,
+          padding,
+          marginTop,
+          marginRight,
+          marginBottom,
+          marginLeft,
+          paddingTop,
+          paddingRight,
+          paddingBottom,
+          paddingLeft,
+        },
+        base
+      ),
+    }
 
     return (
-      <div {...props} className={classes.join(' ')}>
+      <div {...props} className={classes.join(' ')} style={cssStyle}>
         {children}
       </div>
     )

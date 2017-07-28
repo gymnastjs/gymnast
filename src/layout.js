@@ -113,13 +113,16 @@ export default class Layout extends React.Component {
         className={classes.join(' ')}
         style={{
           ...style,
-          ...combineSpacing({
-            margin,
-            marginTop,
-            marginRight,
-            marginBottom,
-            marginLeft,
-          }),
+          ...combineSpacing(
+            {
+              margin,
+              marginTop,
+              marginRight,
+              marginBottom,
+              marginLeft,
+            },
+            24
+          ),
         }}
       />
     )

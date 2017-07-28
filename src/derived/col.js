@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import Grid from '../grid'
-import type { Props } from '../grid'
+import type { Props } from '../base'
 import { validateSpacingProps } from '../utils'
 
 const defaults = {
