@@ -1,6 +1,7 @@
 // @flow
 import * as srcUtils from './utils'
 
+export { default as Base } from './base'
 export { default as Grid } from './grid'
 export { default as Layout } from './layout'
 export { version } from '../version'

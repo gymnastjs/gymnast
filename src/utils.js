@@ -1,13 +1,12 @@
 // @flow
 import { memoize } from 'lodash'
-import type { Spacing, SpacingValues, Component, SpacingProps } from './types'
+import type { Spacing, Component, SpacingProps } from './types'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
 /* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
 const isNumber = keys => key => typeof keys[key] === 'number'
-const gutter = 24
 
 /* eslint-disable no-console */
 export const log = {
@@ -92,20 +91,23 @@ export const getSpacingClasses = memoize(
   (values, type) => type + values.toString()
 )
 
-function getCSS(prop, value) {
+function getCSS(prop, value, base) {
   if (typeof value === 'undefined') {
     return {}
   } else if (prop.includes('padding')) {
-    return { [prop]: value * gutter }
+    return { [prop]: value * base }
   } else if (prop.includes('margin')) {
     return {
-      [`${prop.replace('margin', 'border')}Width`]: value * gutter,
+      [`${prop.replace('margin', 'border')}Width`]: value * base,
     }
   }
   throw new Error(`Invalid css prop: ${prop}`)
 }
 
-export function combineSpacing({ margin, padding, ...props }: SpacingProps) {
+export function combineSpacing(
+  { margin, padding, ...props }: SpacingProps,
+  base: number
+) {
   if (!validateSpacingProps({ margin, padding, ...props })) {
     return {}
   }
@@ -119,20 +121,8 @@ export function combineSpacing({ margin, padding, ...props }: SpacingProps) {
   return Object.keys(flatProps).reduce(
     (acc, prop) => ({
       ...acc,
-      ...getCSS(prop, flatProps[prop]),
+      ...getCSS(prop, flatProps[prop], base),
     }),
     {}
   )
-}
-
-export function toPx(
-  gutterFraction?: Spacing | SpacingValues
-): SpacingValues | void {
-  return typeof gutterFraction === 'number'
-    ? gutterFraction * gutter
-    : undefined
-}
-
-export function toPxArray(array?: Spacing | SpacingValues): Spacing | void {
-  return array instanceof Array ? (array.map(toPx): any) : undefined
 }
