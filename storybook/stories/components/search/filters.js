@@ -1,8 +1,9 @@
 // @flow
 import React from 'react'
 import { Col, Grid } from 'reflex'
+import type { Size } from '../../../../src/types'
 
-export default function SearchFilters(props: { size?: number }) {
+export default function SearchFilters(props: { size?: Size }) {
   return (
     <Col {...props} dev={4} align="top">
       <Col marginLeft={0}>Filter by</Col>

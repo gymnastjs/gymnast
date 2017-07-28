@@ -7,7 +7,6 @@ export { default as Layout } from './layout'
 export { version } from '../version'
 export const utils = srcUtils
 
-export { default as Grid8 } from './derived/grid8'
 export { default as Col } from './derived/col'
 export { default as Root } from './derived/root'
 export { default as Offset } from './derived/offset'

@@ -16,7 +16,6 @@ import { combineSpacing } from './utils'
 
 export type Props = {
   align?: AlignGrid,
-  base?: number,
   children?: React$Element<any> | Array<React$Element<any>>,
   className?: string,
   dev?: Dev,
@@ -46,18 +45,16 @@ export default class Base extends React.Component {
     style: {},
   }
 
-  props: Props
+  props: Props & { base: number }
 
   render() {
     const {
       align,
+      base,
       children,
       className,
       dev,
-      base,
       justify,
-      size,
-      style,
       margin,
       marginBottom,
       marginLeft,
@@ -68,6 +65,8 @@ export default class Base extends React.Component {
       paddingLeft,
       paddingRight,
       paddingTop,
+      size,
+      style,
       ...props
     } = this.props
 
