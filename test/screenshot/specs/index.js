@@ -1,5 +1,5 @@
-import { flattenDeep } from 'lodash'
-import { storyFolders } from '../../../storybook/shared/storyFolders'
+const { flattenDeep } = require('lodash')
+const { storyFolders } = require('../../../storybook/shared/storyFolders')
 
 const targetUrlIndex = process.argv.indexOf('--url')
 
@@ -18,26 +18,33 @@ const scenarios = Object.keys(storyFolders)
     storyNames: flattenDeep(getStories(storyFolders[kind])),
   }))
   .reduce(
-    (prev, story) => [
-      ...prev,
-      ...story.storyNames.map(({ namepath, image }) => ({
-        label: `${story.kind}__${namepath}`,
-        image,
-        url: `${BASE_URL}?selectedKind=%20${encodeURIComponent(
-          story.kind
-        )}&selectedStory=${encodeURIComponent(namepath)}`,
-      })),
-    ],
+    (prev, story) =>
+      prev.concat(
+        story.storyNames.map(({ namepath, image }) => ({
+          label: `${story.kind}__${namepath}`,
+          image,
+          url: `${BASE_URL}?selectedKind=%20${encodeURIComponent(
+            story.kind
+          )}&selectedStory=${encodeURIComponent(namepath)}`,
+        }))
+      ),
     []
   )
 
 module.exports = scenarios.reduce(
-  (prev, { label, url, image }) => ({
-    ...prev,
-    [label]: browser => {
-      process.stdout.write(`loading story at ${url}\n`)
-      browser.url(url).compareScreenshot(`${label}.png`, image).end()
-    },
-  }),
+  (prev, { label, url, image }) =>
+    Object.assign(prev, {
+      [label]: browser => {
+        process.stdout.write(`loading story at ${url}\n`)
+
+        browser.session(session =>
+          browser
+            .url(url)
+            .compareScreenshot(`${label}.png`, image, session)
+            .sauceEnd()
+            .end()
+        )
+      },
+    }),
   {}
 )
