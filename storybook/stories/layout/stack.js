@@ -3,8 +3,8 @@ import React from 'react'
 import { Grid, Layout, Root } from 'reflex'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { verticalHalf } from '../../../shared/marginTypes'
-import styles from '../../../shared/layout.css'
+import { verticalHalf } from '../../shared/marginTypes'
+import styles from '../../shared/layout.css'
 
 function getStaticSection(index) {
   return (

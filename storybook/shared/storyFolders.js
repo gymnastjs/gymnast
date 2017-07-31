@@ -1,6 +1,6 @@
 /* eslint-disable global-require, import/no-dynamic-require */
 
-const { fromPairs, initial, tail, set, negate } = require('lodash')
+const { fromPairs, initial, tail, last, set, negate } = require('lodash')
 const { readdirSync, lstatSync } = require('fs')
 const { join } = require('path')
 const { getName } = require('./getName')
@@ -45,6 +45,7 @@ const doesntEndWith = str => negate(endsWith(str))
 function fileTestMapper(origin) {
   return filepath => {
     const name = getName(filepath)
+    const namepath = origin ? `${origin}.${name}` : name
 
     return [
       name,
@@ -53,7 +54,9 @@ function fileTestMapper(origin) {
         notes: '',
         filepath,
         image: getImagePath(filepath),
+        name,
         namepath: origin ? `${origin}.${name}` : name,
+        folderpath: initial(namepath.split('.')).join('.'),
       },
     ]
   }
@@ -109,6 +112,8 @@ function loadWebpack(loader) {
         image: getImagePath(filepath),
         filepath,
         namepath: tail(namepath.split('.')).join('.'),
+        folderpath: initial(namepath.split('.')).join('.'),
+        name: last(namepath.split('.')),
       })
       return acc
     }, {})

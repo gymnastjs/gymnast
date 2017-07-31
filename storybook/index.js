@@ -4,7 +4,7 @@ import { each } from 'lodash'
 import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { utils } from '../src/reflex'
-import { storyFolders, WithExtensions, getName } from './shared'
+import { storyFolders, WithExtensions } from './shared'
 
 /**
  * storyFolders dynamically fetches all files within `/stories`
@@ -33,26 +33,27 @@ function configStories(storiesOfName: string, storiesModule: typeof module) {
   }
 }
 
-function addStory({ story: WrappedComponent, notes, namepath }, component) {
-  component.add(namepath, () =>
+function addStory({ story: WrappedComponent, notes, name }, component) {
+  component.add(name, () =>
     <WithExtensions notes={notes}>
       <WrappedComponent />
     </WithExtensions>
   )
 }
 
-function addStories(content, component) {
+const stories = {}
+
+function addStories(content) {
   each(content, props => {
     if ('story' in props) {
-      addStory(props, component)
+      if (!(props.folderpath in stories)) {
+        stories[props.folderpath] = configStories(props.folderpath, module)
+      }
+      addStory(props, stories[props.folderpath])
     } else {
-      addStories(props, component)
+      addStories(props)
     }
   })
 }
 
-each(storyFolders, (content, folder) => {
-  const component = configStories(getName(folder), module)
-
-  addStories(content, component)
-})
+each(storyFolders, addStories)

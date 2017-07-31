@@ -1,6 +1,7 @@
 /* eslint-disable global-require, no-underscore-dangle */
 
 import { configure, setAddon } from '@storybook/react'
+import { setOptions } from '@storybook/addon-options'
 import JSXAddon from 'storybook-addon-jsx'
 
 if (
@@ -19,6 +20,13 @@ if (
     })
   )
 }
+
+setOptions({
+  name: 'Reflex',
+  url: 'https://github.com/obartra/reflex',
+  downPanelInRight: true,
+  hierarchySeparator: /\./,
+})
 
 setAddon(JSXAddon)
 

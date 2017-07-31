@@ -2,7 +2,7 @@
 import React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
-import { RootLayout, Box } from '../../shared'
+import { RootLayout, Box } from '../../../shared'
 
 export default function() {
   const size = number('Size', 12, { range: true, min: 7, max: 12 })
