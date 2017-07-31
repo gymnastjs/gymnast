@@ -20,12 +20,12 @@ const scenarios = Object.keys(storyFolders)
   .reduce(
     (prev, story) =>
       prev.concat(
-        story.storyNames.map(({ namepath, image }) => ({
-          label: `${story.kind}__${namepath}`,
+        story.storyNames.map(({ folderpath, name, image }) => ({
+          label: `${folderpath}__${name}`,
           image,
-          url: `${BASE_URL}?selectedKind=%20${encodeURIComponent(
-            story.kind
-          )}&selectedStory=${encodeURIComponent(namepath)}`,
+          url: `${BASE_URL}?selectedKind=${encodeURIComponent(
+            folderpath
+          )}&selectedStory=${encodeURIComponent(name)}`,
         }))
       ),
     []
