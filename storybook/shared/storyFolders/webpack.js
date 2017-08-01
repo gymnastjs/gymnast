@@ -21,19 +21,22 @@ function getNote(files, filepath, loader) {
   return `${note}${footer.replace('[[url]]', url)}`
 }
 
-function storyAccumulator(acc, filepath, files, loader) {
-  const basePath = join(__dirname, '../')
-  const paths = getStoryPaths(filepath, basePath)
-  set(
-    acc,
-    paths.namepath,
-    Object.assign(getStoryPaths(filepath, basePath), {
-      story: loader(filepath).default || loader(filepath),
-      notes: getNote(files, filepath, loader),
-      image: getImagePath(filepath),
-    })
-  )
-  return acc
+function storyAccumulator(files, loader) {
+  return (acc, filepath) => {
+    const basePath = join(__dirname, '../')
+    const paths = getStoryPaths(filepath, basePath)
+
+    set(
+      acc,
+      `${paths.folderpath}.${paths.name}`,
+      Object.assign(getStoryPaths(filepath, basePath), {
+        story: loader(filepath).default || loader(filepath),
+        notes: getNote(files, filepath, loader),
+        image: getImagePath(filepath),
+      })
+    )
+    return acc
+  }
 }
 
 function loadWebpack(loader) {
@@ -42,10 +45,7 @@ function loadWebpack(loader) {
   return files
     .filter(endsWith('.js'))
     .filter(doesntEndWith('.spec.js'))
-    .reduce(
-      (acc, filepath) => storyAccumulator(acc, filepath, files, loader),
-      {}
-    )
+    .reduce(storyAccumulator(files, loader), {})
 }
 
 module.exports = { loadWebpack }
