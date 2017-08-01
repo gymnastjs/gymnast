@@ -20,14 +20,18 @@ function getFilesAndFolders(path) {
 
 function getStoryPaths(filepath) {
   const path = filepath
-    .substring(__dirname.length + 2)
+    .substring(__dirname.length + 1)
     .replace(/(\/|\\)/g, '.')
+    .replace(/^\./, '')
     .replace(/\.js$/, '')
     .split('.')
+    .map(getName)
 
   return {
-    folderpath: initial(path).map(getName).join('.'),
-    name: getName(last(path)),
+    folderpath: initial(path).join('.'),
+    filepath,
+    namepath: tail(path).join('.'),
+    name: last(path),
   }
 }
 
@@ -55,23 +59,17 @@ function endsWith(str) {
 
 const doesntEndWith = str => negate(endsWith(str))
 
-function fileTestMapper(origin) {
-  return filepath => {
-    const { folderpath, name } = getStoryPaths(filepath)
+function fileTestMapper(filepath) {
+  const paths = getStoryPaths(filepath)
 
-    return [
-      name,
-      {
-        story: process.env.NODE_ENV === 'test' && require(filepath).default,
-        notes: '',
-        filepath,
-        image: getImagePath(filepath),
-        namepath: origin ? `${origin}.${name}` : name,
-        folderpath,
-        name,
-      },
-    ]
-  }
+  return [
+    paths.name,
+    Object.assign(paths, {
+      story: process.env.NODE_ENV === 'test' && require(filepath).default,
+      notes: '',
+      image: getImagePath(filepath),
+    }),
+  ]
 }
 
 /**
@@ -81,20 +79,20 @@ function fileTestMapper(origin) {
  * `require.context` (it's webpack specific).
  *
  */
-function loadTestFolder(path, origin = '') {
+function loadTestFolder(path) {
   const { files, folders } = getFilesAndFolders(path)
 
   const directChildren = fromPairs(
     files
       .filter(endsWith('.js'))
       .filter(doesntEndWith('.spec.js'))
-      .map(fileTestMapper(origin))
+      .map(fileTestMapper)
   )
 
   return folders.reduce(
     (acc, folder) =>
       Object.assign(acc, {
-        [getName(folder)]: loadTestFolder(folder, getName(folder)),
+        [getName(folder)]: loadTestFolder(folder),
       }),
     directChildren
   )
@@ -117,17 +115,16 @@ function loadWebpack(loader) {
     .reduce((acc, filepath) => {
       const path = dropEnds(filepath.split('/')).map(getName).join('.')
       const namepath = `${path}.${getName(filepath)}`
-      const { folderpath, name } = getStoryPaths(filepath)
 
-      set(acc, namepath, {
-        story: loader(filepath).default || loader(filepath),
-        notes: getNote(files, filepath, loader),
-        image: getImagePath(filepath),
-        filepath,
-        namepath: tail(namepath.split('.')).join('.'),
-        folderpath,
-        name,
-      })
+      set(
+        acc,
+        namepath,
+        Object.assign(getStoryPaths(filepath), {
+          story: loader(filepath).default || loader(filepath),
+          notes: getNote(files, filepath, loader),
+          image: getImagePath(filepath),
+        })
+      )
       return acc
     }, {})
 }
