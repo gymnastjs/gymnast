@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots  Components Card.Base 1`] = `
+exports[`Storyshots Components.Card Base 1`] = `
 <div>
   <div>
     <div
@@ -330,7 +330,7 @@ exports[`Storyshots  Components Card.Base 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Card.Composite 1`] = `
+exports[`Storyshots Components.Card Composite 1`] = `
 <div>
   <div>
     <div
@@ -922,7 +922,7 @@ exports[`Storyshots  Components Card.Composite 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Card.Filter 1`] = `
+exports[`Storyshots Components.Card Filter 1`] = `
 <div>
   <div>
     <div
@@ -1337,7 +1337,7 @@ exports[`Storyshots  Components Card.Filter 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Card.Profile 1`] = `
+exports[`Storyshots Components.Card Profile 1`] = `
 <div>
   <div>
     <div
@@ -1650,7 +1650,7 @@ exports[`Storyshots  Components Card.Profile 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Header.App 1`] = `
+exports[`Storyshots Components.Header App 1`] = `
 <div>
   <div>
     <div
@@ -1827,7 +1827,7 @@ exports[`Storyshots  Components Header.App 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Header.Basic 1`] = `
+exports[`Storyshots Components.Header Basic 1`] = `
 <div>
   <div>
     <div
@@ -2147,7 +2147,7 @@ exports[`Storyshots  Components Header.Basic 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Pagination 1`] = `
+exports[`Storyshots Components.Pagination Pagination 1`] = `
 <div>
   <div>
     <div
@@ -2480,7 +2480,7 @@ exports[`Storyshots  Components Pagination 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Search.Filters 1`] = `
+exports[`Storyshots Components.Search Filters 1`] = `
 <div>
   <div>
     <div
@@ -2608,7 +2608,7 @@ exports[`Storyshots  Components Search.Filters 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Search.Nav 1`] = `
+exports[`Storyshots Components.Search Nav 1`] = `
 <div>
   <div>
     <div
@@ -2753,7 +2753,7 @@ exports[`Storyshots  Components Search.Nav 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Components Search.Results 1`] = `
+exports[`Storyshots Components.Search Results 1`] = `
 <div>
   <div>
     <div
@@ -3068,7 +3068,7 @@ exports[`Storyshots  Components Search.Results 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Examples Cards 1`] = `
+exports[`Storyshots Examples Cards 1`] = `
 <div>
   <div>
     <div
@@ -3650,7 +3650,7 @@ exports[`Storyshots  Examples Cards 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Examples Holy Grail 1`] = `
+exports[`Storyshots Examples Holy Grail 1`] = `
 <div>
   <div>
     <div
@@ -3834,7 +3834,7 @@ exports[`Storyshots  Examples Holy Grail 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Examples Report 1`] = `
+exports[`Storyshots Examples Report 1`] = `
 <div>
   <div>
     <div
@@ -4574,7 +4574,7 @@ exports[`Storyshots  Examples Report 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Examples Search 1`] = `
+exports[`Storyshots Examples Search 1`] = `
 <div>
   <div>
     <div
@@ -5744,7 +5744,7 @@ exports[`Storyshots  Examples Search 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Examples Two Sections 1`] = `
+exports[`Storyshots Examples Two Sections 1`] = `
 <div>
   <div>
     <div
@@ -5956,7 +5956,7 @@ exports[`Storyshots  Examples Two Sections 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Align 1`] = `
+exports[`Storyshots Grid Align 1`] = `
 <div>
   <div>
     <div
@@ -6252,7 +6252,7 @@ exports[`Storyshots  Grid Align 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Autoflow 1`] = `
+exports[`Storyshots Grid Autoflow 1`] = `
 <div>
   <div>
     <div
@@ -6536,7 +6536,7 @@ exports[`Storyshots  Grid Autoflow 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Fraction 1`] = `
+exports[`Storyshots Grid Fraction 1`] = `
 <div>
   <div>
     <div
@@ -7737,7 +7737,7 @@ exports[`Storyshots  Grid Fraction 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Justify 1`] = `
+exports[`Storyshots Grid Justify 1`] = `
 <div>
   <div>
     <div
@@ -7915,7 +7915,7 @@ exports[`Storyshots  Grid Justify 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Margin 1`] = `
+exports[`Storyshots Grid Margin 1`] = `
 <div>
   <div>
     <div
@@ -8373,7 +8373,7 @@ exports[`Storyshots  Grid Margin 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Nested 1`] = `
+exports[`Storyshots Grid Nested 1`] = `
 <div>
   <div>
     <div
@@ -8658,7 +8658,7 @@ exports[`Storyshots  Grid Nested 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Offset 1`] = `
+exports[`Storyshots Grid Offset 1`] = `
 <div>
   <div>
     <div
@@ -9084,7 +9084,7 @@ exports[`Storyshots  Grid Offset 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Padding 1`] = `
+exports[`Storyshots Grid Padding 1`] = `
 <div>
   <div>
     <div
@@ -9620,7 +9620,7 @@ exports[`Storyshots  Grid Padding 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Sizing 1`] = `
+exports[`Storyshots Grid Sizing 1`] = `
 <div>
   <div>
     <div
@@ -10408,7 +10408,7 @@ exports[`Storyshots  Grid Sizing 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Grid Stretch 1`] = `
+exports[`Storyshots Grid Stretch 1`] = `
 <div>
   <div>
     <div
@@ -10567,7 +10567,7 @@ exports[`Storyshots  Grid Stretch 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Layout Auto 1`] = `
+exports[`Storyshots Layout Auto 1`] = `
 <div>
   <div>
     <div
@@ -10625,128 +10625,7 @@ exports[`Storyshots  Layout Auto 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Layout Combined.Stack 1`] = `
-<div>
-  <div>
-    <div
-      className="page parent layout"
-      style={
-        Object {
-          "maxHeight": "100%",
-        }
-      }
-    >
-      <div
-        className="fit layout"
-        style={Object {}}
-      >
-        <div
-          className="base"
-          style={
-            Object {
-              "borderBottomWidth": 0,
-              "borderLeftWidth": 12,
-              "borderRightWidth": 12,
-              "borderTopWidth": 0,
-              "paddingBottom": 0,
-              "paddingLeft": 24,
-              "paddingRight": 24,
-              "paddingTop": 0,
-            }
-          }
-        >
-          <div
-            className="colors3 base"
-            style={
-              Object {
-                "borderBottomWidth": 12,
-                "borderLeftWidth": 0,
-                "borderRightWidth": 0,
-                "borderTopWidth": 12,
-              }
-            }
-          >
-            <h1>
-              Section 1
-            </h1>
-          </div>
-        </div>
-      </div>
-      <div
-        className="parent overflow layout"
-        style={Object {}}
-      >
-        <div
-          className="base topAlign"
-          style={
-            Object {
-              "borderBottomWidth": 0,
-              "borderLeftWidth": 12,
-              "borderRightWidth": 12,
-              "borderTopWidth": 0,
-              "paddingBottom": 0,
-              "paddingLeft": 24,
-              "paddingRight": 24,
-              "paddingTop": 0,
-            }
-          }
-        >
-          <div
-            className="base"
-            style={
-              Object {
-                "borderBottomWidth": 12,
-                "borderLeftWidth": 0,
-                "borderRightWidth": 0,
-                "borderTopWidth": 12,
-              }
-            }
-          >
-            <h1>
-              SubSection 
-              1
-            </h1>
-          </div>
-          <div
-            className="base"
-            style={
-              Object {
-                "borderBottomWidth": 12,
-                "borderLeftWidth": 0,
-                "borderRightWidth": 0,
-                "borderTopWidth": 12,
-              }
-            }
-          >
-            <h1>
-              SubSection 
-              2
-            </h1>
-          </div>
-          <div
-            className="base"
-            style={
-              Object {
-                "borderBottomWidth": 12,
-                "borderLeftWidth": 0,
-                "borderRightWidth": 0,
-                "borderTopWidth": 12,
-              }
-            }
-          >
-            <h1>
-              SubSection 
-              3
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots  Layout Default 1`] = `
+exports[`Storyshots Layout Default 1`] = `
 <div>
   <div>
     <div
@@ -10946,7 +10825,7 @@ exports[`Storyshots  Layout Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Layout Fixed 1`] = `
+exports[`Storyshots Layout Fixed 1`] = `
 <div>
   <div>
     <div
@@ -10995,7 +10874,7 @@ exports[`Storyshots  Layout Fixed 1`] = `
 </div>
 `;
 
-exports[`Storyshots  Layout Parent 1`] = `
+exports[`Storyshots Layout Parent 1`] = `
 <div>
   <div>
     <div
@@ -11040,6 +10919,127 @@ exports[`Storyshots  Layout Parent 1`] = `
             }
           >
             test-file-stubtest-file-stubtest-file-stub
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Layout Stack 1`] = `
+<div>
+  <div>
+    <div
+      className="page parent layout"
+      style={
+        Object {
+          "maxHeight": "100%",
+        }
+      }
+    >
+      <div
+        className="fit layout"
+        style={Object {}}
+      >
+        <div
+          className="base"
+          style={
+            Object {
+              "borderBottomWidth": 0,
+              "borderLeftWidth": 12,
+              "borderRightWidth": 12,
+              "borderTopWidth": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 24,
+              "paddingRight": 24,
+              "paddingTop": 0,
+            }
+          }
+        >
+          <div
+            className="colors3 base"
+            style={
+              Object {
+                "borderBottomWidth": 12,
+                "borderLeftWidth": 0,
+                "borderRightWidth": 0,
+                "borderTopWidth": 12,
+              }
+            }
+          >
+            <h1>
+              Section 1
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div
+        className="parent overflow layout"
+        style={Object {}}
+      >
+        <div
+          className="base topAlign"
+          style={
+            Object {
+              "borderBottomWidth": 0,
+              "borderLeftWidth": 12,
+              "borderRightWidth": 12,
+              "borderTopWidth": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 24,
+              "paddingRight": 24,
+              "paddingTop": 0,
+            }
+          }
+        >
+          <div
+            className="base"
+            style={
+              Object {
+                "borderBottomWidth": 12,
+                "borderLeftWidth": 0,
+                "borderRightWidth": 0,
+                "borderTopWidth": 12,
+              }
+            }
+          >
+            <h1>
+              SubSection 
+              1
+            </h1>
+          </div>
+          <div
+            className="base"
+            style={
+              Object {
+                "borderBottomWidth": 12,
+                "borderLeftWidth": 0,
+                "borderRightWidth": 0,
+                "borderTopWidth": 12,
+              }
+            }
+          >
+            <h1>
+              SubSection 
+              2
+            </h1>
+          </div>
+          <div
+            className="base"
+            style={
+              Object {
+                "borderBottomWidth": 12,
+                "borderLeftWidth": 0,
+                "borderRightWidth": 0,
+                "borderTopWidth": 12,
+              }
+            }
+          >
+            <h1>
+              SubSection 
+              3
+            </h1>
           </div>
         </div>
       </div>
