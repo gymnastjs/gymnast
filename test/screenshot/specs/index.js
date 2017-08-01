@@ -20,13 +20,17 @@ const scenarios = Object.keys(storyFolders)
   .reduce(
     (prev, story) =>
       prev.concat(
-        story.storyNames.map(({ folderpath, name, image }) => ({
-          label: `${folderpath}__${name}`,
-          image,
-          url: `${BASE_URL}?selectedKind=${encodeURIComponent(
-            folderpath
-          )}&selectedStory=${encodeURIComponent(name)}`,
-        }))
+        story.storyNames.map(props => {
+          const { folderpath, name, image } = props
+          console.log('PROPS', props)
+          return {
+            label: `${folderpath}__${name}`,
+            image,
+            url: `${BASE_URL}?selectedKind=${encodeURIComponent(
+              folderpath
+            )}&selectedStory=${encodeURIComponent(name)}`,
+          }
+        })
       ),
     []
   )

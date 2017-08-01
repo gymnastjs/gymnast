@@ -18,6 +18,19 @@ function getFilesAndFolders(path) {
   }
 }
 
+function getStoryPaths(filepath) {
+  const path = filepath
+    .substring(__dirname.length + 2)
+    .replace(/(\/|\\)/g, '.')
+    .replace(/\.js$/, '')
+    .split('.')
+
+  return {
+    folderpath: initial(path).map(getName).join('.'),
+    name: getName(last(path)),
+  }
+}
+
 function getImagePath(filepath) {
   return filepath.replace(/\.js$/, '.spec.png')
 }
@@ -44,8 +57,7 @@ const doesntEndWith = str => negate(endsWith(str))
 
 function fileTestMapper(origin) {
   return filepath => {
-    const name = getName(filepath)
-    const namepath = origin ? `${origin}.${name}` : name
+    const { folderpath, name } = getStoryPaths(filepath)
 
     return [
       name,
@@ -54,9 +66,9 @@ function fileTestMapper(origin) {
         notes: '',
         filepath,
         image: getImagePath(filepath),
-        name,
         namepath: origin ? `${origin}.${name}` : name,
-        folderpath: initial(namepath.split('.')).join('.'),
+        folderpath,
+        name,
       },
     ]
   }
@@ -105,6 +117,7 @@ function loadWebpack(loader) {
     .reduce((acc, filepath) => {
       const path = dropEnds(filepath.split('/')).map(getName).join('.')
       const namepath = `${path}.${getName(filepath)}`
+      const { folderpath, name } = getStoryPaths(filepath)
 
       set(acc, namepath, {
         story: loader(filepath).default || loader(filepath),
@@ -112,8 +125,8 @@ function loadWebpack(loader) {
         image: getImagePath(filepath),
         filepath,
         namepath: tail(namepath.split('.')).join('.'),
-        folderpath: initial(namepath.split('.')).join('.'),
-        name: last(namepath.split('.')),
+        folderpath,
+        name,
       })
       return acc
     }, {})
