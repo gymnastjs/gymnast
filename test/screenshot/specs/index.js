@@ -22,7 +22,7 @@ const scenarios = Object.keys(storyFolders)
       prev.concat(
         story.storyNames.map(props => {
           const { folderpath, name, image } = props
-          console.log('PROPS', props)
+
           return {
             label: `${folderpath}__${name}`,
             image,

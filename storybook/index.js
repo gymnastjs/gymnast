@@ -41,15 +41,19 @@ function addStory({ story: WrappedComponent, notes, name }, component) {
   )
 }
 
-const stories = {}
+const components = {}
+
+function addComponent(folderpath) {
+  if (!(folderpath in components)) {
+    components[folderpath] = configStories(folderpath, module)
+  }
+}
 
 function addStories(content) {
   each(content, props => {
     if ('story' in props) {
-      if (!(props.folderpath in stories)) {
-        stories[props.folderpath] = configStories(props.folderpath, module)
-      }
-      addStory(props, stories[props.folderpath])
+      addComponent(props.folderpath)
+      addStory(props, components[props.folderpath])
     } else {
       addStories(props)
     }
