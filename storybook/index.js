@@ -60,4 +60,4 @@ function addStories(content) {
   })
 }
 
-each(storyFolders, addStories)
+addStories(storyFolders)

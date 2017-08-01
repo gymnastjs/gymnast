@@ -1,7 +1,6 @@
 /* eslint-disable global-require, import/no-dynamic-require */
-
-const { initial, tail, set } = require('lodash')
-const { getName } = require('../getName')
+const { join } = require('path')
+const { set } = require('lodash')
 const {
   getStoryPaths,
   endsWith,
@@ -11,10 +10,6 @@ const {
 
 const baseUrl =
   'https://github.com/obartra/reflex/tree/master/storybook/stories/'
-
-function dropEnds(array) {
-  return tail(initial(array))
-}
 
 function getNote(files, filepath, loader) {
   const mdFile = filepath.replace(/\.js$/, '.md')
@@ -26,27 +21,31 @@ function getNote(files, filepath, loader) {
   return `${note}${footer.replace('[[url]]', url)}`
 }
 
+function storyAccumulator(acc, filepath, files, loader) {
+  const basePath = join(__dirname, '../')
+  const paths = getStoryPaths(filepath, basePath)
+  set(
+    acc,
+    paths.namepath,
+    Object.assign(getStoryPaths(filepath, basePath), {
+      story: loader(filepath).default || loader(filepath),
+      notes: getNote(files, filepath, loader),
+      image: getImagePath(filepath),
+    })
+  )
+  return acc
+}
+
 function loadWebpack(loader) {
   const files = loader.keys()
 
   return files
     .filter(endsWith('.js'))
     .filter(doesntEndWith('.spec.js'))
-    .reduce((acc, filepath) => {
-      const path = dropEnds(filepath.split('/')).map(getName).join('.')
-      const namepath = `${path}.${getName(filepath)}`
-
-      set(
-        acc,
-        namepath,
-        Object.assign(getStoryPaths(filepath, __dirname), {
-          story: loader(filepath).default || loader(filepath),
-          notes: getNote(files, filepath, loader),
-          image: getImagePath(filepath),
-        })
-      )
-      return acc
-    }, {})
+    .reduce(
+      (acc, filepath) => storyAccumulator(acc, filepath, files, loader),
+      {}
+    )
 }
 
 module.exports = { loadWebpack }

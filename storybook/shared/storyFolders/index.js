@@ -6,10 +6,9 @@ const { loadWebpack } = require('./webpack')
 
 const isTest =
   process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'test:image'
-const path = '../../stories'
 
 const storyFolders = !isTest
-  ? loadWebpack(require.context(path, true, /.+\.(md|png|js)$/i))
-  : loadTest(join(__dirname, path))
+  ? loadWebpack(require.context('../../stories', true, /.+\.(md|png|js)$/i))
+  : loadTest(join(__dirname, '../../stories'))
 
 module.exports = { storyFolders }
