@@ -1,13 +1,10 @@
 const path = require('path')
 const { merge } = require('lodash')
+const { isCIMaster, username, accessKey } = require('./shared')
 
 process.env.NODE_ENV = 'test:image'
 
-const targetUrlIndex = process.argv.indexOf('--url')
-const targetUrl =
-  targetUrlIndex === -1
-    ? 'http://localhost:9001/iframe.html'
-    : process.argv[targetUrlIndex + 1]
+const targetUrl = process.argv[process.argv.indexOf('--url') + 1]
 const selenium = {
   start_process: false,
   host: '127.0.0.1',
@@ -18,12 +15,6 @@ const selenium = {
   },
 }
 
-const isCIMaster = process.env.CI && process.env.CIRCLE_BRANCH === 'master'
-const suffix = isCIMaster ? '_MASTER' : ''
-const username = process.env[`SAUCE_USERNAME${suffix}`] || 'obartra+reflex'
-const accessKey =
-  process.env[`SAUCE_ACCESS_KEY${suffix}`] ||
-  '3a5b5331-9c57-4eeb-bf58-2da74c4b4646'
 const commonSettings = {
   launch_url: targetUrl,
   selenium_host: 'ondemand.saucelabs.com',
