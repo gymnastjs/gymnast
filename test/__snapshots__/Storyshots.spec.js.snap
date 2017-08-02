@@ -2170,7 +2170,7 @@ exports[`Storyshots Components.Pagination Pagination 1`] = `
         }
       >
         <div
-          className="col col-12 base"
+          className="col col-12 base topAlign"
           style={Object {}}
         >
           <div

@@ -35,16 +35,30 @@ const scenarios = Object.keys(storyFolders)
     []
   )
 
+function getBrowserName({ options }) {
+  const browserName = options.desiredCapabilities.browserName.toLowerCase()
+
+  switch (browserName) {
+    case 'internet explorer':
+      return 'ie'
+    case 'MicrosoftEdge':
+      return 'edge'
+    default:
+      return browserName
+  }
+}
+
 module.exports = scenarios.reduce(
   (prev, { label, url, image }) =>
     Object.assign(prev, {
       [label]: browser => {
         process.stdout.write(`loading story at ${url}\n`)
+        const browserName = getBrowserName(browser)
 
         browser.session(session =>
           browser
             .url(url)
-            .compareScreenshot(`${label}.png`, image, session)
+            .compareScreenshot(`${label}.png`, image, session, browserName)
             .sauceEnd()
             .end()
         )
