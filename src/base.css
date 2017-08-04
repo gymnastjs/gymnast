@@ -44,12 +44,15 @@
   }
 
   &.col-fit {
-    flex-basis: 0;
+    flex-basis: 0%; /* % is required for Edge */
     white-space: nowrap;
   }
 
   &.col-auto {
-    flex: 1 1 0%;
+    /* expanded shorthand for Edge */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%; /* % is required for Edge */
   }
 }
 

@@ -1,12 +1,11 @@
 .page {
   position: absolute;
   top: 0;
+  line-height: 1;
 
   & p,
   & ul,
-  & li,
-  & h1,
-  & h2 {
+  & li {
     margin: 0;
     padding: 0;
   }

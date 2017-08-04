@@ -1,5 +1,21 @@
 @import "./variables.css";
 
+html {
+  line-height: 1.15;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
 body {
   margin: 0;
   padding: 50px 0;

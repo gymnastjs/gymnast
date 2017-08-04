@@ -33,7 +33,10 @@ export default function SearchResults({
         </Col>
       </Grid>
       {times(results, key =>
-        <Grid key={key}>
+        <Grid key={key} style={{ height: 159 }}>
+          {/**
+            * Explicitly setting height to work around cross browser font height differences
+            */}
           <Col size={5}>
             <Grid marginBottom={0.5} dev={1}>
               Orci tempus venenatis
