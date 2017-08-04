@@ -1,6 +1,12 @@
 const path = require('path')
 const { merge } = require('lodash')
-const { isCIMaster, username, accessKey } = require('./shared')
+const {
+  isCIMaster,
+  username,
+  accessKey,
+  browserWidth,
+  browserHeight,
+} = require('./shared')
 
 process.env.NODE_ENV = 'test:image'
 
@@ -25,7 +31,7 @@ const commonSettings = {
     enabled: false,
   },
   desiredCapabilities: {
-    screenResolution: '1280x960',
+    screenResolution: `${browserWidth}x${browserHeight}`,
     tags: [
       isCIMaster ? 'reflex' : 'reflex-branch',
       process.env.CIRCLE_BRANCH || 'local',
@@ -49,6 +55,7 @@ module.exports = {
         version: 'latest',
         browserName: 'chrome',
         chromedriverVersion: '2.24',
+        args: [`window-size=${browserWidth},${browserHeight}`],
       },
     }),
     ie11: merge({}, commonSettings, {
@@ -56,6 +63,27 @@ module.exports = {
         platform: 'Windows 10',
         version: '11.103',
         browserName: 'internet explorer',
+      },
+    }),
+    edge: merge({}, commonSettings, {
+      desiredCapabilities: {
+        platform: 'Windows 10',
+        version: '14.14393',
+        browserName: 'MicrosoftEdge',
+      },
+    }),
+    firefox: merge({}, commonSettings, {
+      desiredCapabilities: {
+        platform: 'macOS 10.12',
+        version: '54.0',
+        browserName: 'firefox',
+      },
+    }),
+    safari: merge({}, commonSettings, {
+      desiredCapabilities: {
+        platform: 'macOS 10.12',
+        version: '10.0',
+        browserName: 'safari',
       },
     }),
   },

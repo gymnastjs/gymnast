@@ -9,7 +9,7 @@ export default function() {
 
   return (
     <RootLayout>
-      <Grid size={size}>
+      <Grid size={size} align="top">
         <Box size={1} type="B" value="<" />
         <Box size={1} type="B" value="1" />
         <Box size={1} type="A">

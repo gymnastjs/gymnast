@@ -30,13 +30,13 @@ function compareImages(baselinePath, resultPath, callback) {
   resemblejs(baselinePath).compareTo(resultPath).onComplete(callback)
 }
 
-exports.assertion = function assertion(filename, baselinePath, expected) {
+exports.assertion = function assertion(filename, baselinePath, browserName) {
   const screenshotPath = 'test/screenshot/images'
-  const resultPath = `${screenshotPath}/results/${filename}`
-  const diffPath = `${screenshotPath}/diffs/${filename}`
+  const resultPath = `${screenshotPath}/results/${browserName}-${filename}`
+  const diffPath = `${screenshotPath}/diffs/${browserName}-${filename}`
 
   this.message = 'Unexpected compareScreenshot error.'
-  this.expected = expected || 0 // misMatchPercentage tolerance default 0%
+  this.expected = browserName === 'chrome' ? 0 : 5 // misMatchPercentage tolerance 5% for non chrome
 
   this.command = callback => {
     makeDir(path.dirname(resultPath)).then(() =>
@@ -44,28 +44,35 @@ exports.assertion = function assertion(filename, baselinePath, expected) {
     )
 
     // create new baseline photo if none exists
-    if (!fs.existsSync(baselinePath)) {
+    if (!fs.existsSync(baselinePath) && browserName === 'chrome') {
       process.stdout.write('Image did not exist, updating test...\n')
       fs.writeFileSync(baselinePath, fs.readFileSync(resultPath))
     }
 
-    compareImages(baselinePath, resultPath, callback)
+    if (fs.existsSync(baselinePath)) {
+      compareImages(baselinePath, resultPath, callback)
+    } else {
+      callback()
+    }
 
     return this
   }
 
   this.value = result => {
-    result.getDiffImage().pack().pipe(fs.createWriteStream(diffPath))
-    return parseFloat(result.misMatchPercentage, 10) // value this.pass is called with
+    if (result) {
+      result.getDiffImage().pack().pipe(fs.createWriteStream(diffPath))
+      return parseFloat(result.misMatchPercentage, 10) // value this.pass is called with
+    }
+    return 0
   }
 
   this.pass = function passFn(value) {
     const pass = value <= this.expected
 
-    if (pass) {
+    if (pass === true) {
       this.message = `Screenshots Matched for ${filename} with a tolerance of ${this
         .expected}%.`
-    } else {
+    } else if (pass === false) {
       this.message =
         `Screenshots Match Failed for ${filename} with a tolerance of ${this
           .expected}%.\n` +
@@ -76,6 +83,9 @@ exports.assertion = function assertion(filename, baselinePath, expected) {
         `   Open ${diffPath} to see how the screenshot has changed.\n` +
         `   If the Result Screenshot is correct you can use it to update the Baseline Screenshot and re-run your test:\n` +
         `    cp ${resultPath} ${baselinePath}`
+    } else {
+      this.message = `Screenshot results not collected for this browser`
+      return false
     }
     return pass
   }
