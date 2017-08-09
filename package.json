@@ -73,6 +73,7 @@
     "postcss-cli": "4.1.0",
     "postcss-cssnext": "3.0.2",
     "postcss-discard-comments": "2.0.4",
+    "postcss-flexbugs-fixes": "3.2.0",
     "postcss-for": "2.1.1",
     "postcss-import": "10.0.0",
     "postcss-loader": "2.0.6",
@@ -138,7 +139,7 @@
     "start:storybook": "start-storybook -p 9001 -s ./storybook/static -c storybook/config",
     "start:webpack": "yarn build:dev -- --watch",
     "start": "npm-run-all --parallel start:*",
-    "test:image": "nightwatch --config test/screenshot/nightwatch.conf.js --env chrome,firefox",
+    "test:image": "nightwatch --config test/screenshot/nightwatch.conf.js --env chrome,firefox,edge",
     "test:size": "bundlesize",
     "test": "jest",
     "test:watch": "jest --watch"

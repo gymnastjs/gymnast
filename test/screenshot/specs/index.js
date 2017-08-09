@@ -41,7 +41,7 @@ function getBrowserName({ options }) {
   switch (browserName) {
     case 'internet explorer':
       return 'ie'
-    case 'MicrosoftEdge':
+    case 'microsoftedge':
       return 'edge'
     default:
       return browserName

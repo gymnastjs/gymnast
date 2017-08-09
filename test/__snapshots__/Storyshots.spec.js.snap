@@ -2838,7 +2838,11 @@ exports[`Storyshots Components.Search Results 1`] = `
       </div>
       <div
         className="base"
-        style={Object {}}
+        style={
+          Object {
+            "height": 159,
+          }
+        }
       >
         <div
           className="col col-5 base"
@@ -5130,7 +5134,11 @@ exports[`Storyshots Examples Search 1`] = `
                 </div>
                 <div
                   className="base"
-                  style={Object {}}
+                  style={
+                    Object {
+                      "height": 159,
+                    }
+                  }
                 >
                   <div
                     className="col col-5 base"
@@ -5219,7 +5227,11 @@ exports[`Storyshots Examples Search 1`] = `
                 </div>
                 <div
                   className="base"
-                  style={Object {}}
+                  style={
+                    Object {
+                      "height": 159,
+                    }
+                  }
                 >
                   <div
                     className="col col-5 base"
@@ -5308,7 +5320,11 @@ exports[`Storyshots Examples Search 1`] = `
                 </div>
                 <div
                   className="base"
-                  style={Object {}}
+                  style={
+                    Object {
+                      "height": 159,
+                    }
+                  }
                 >
                   <div
                     className="col col-5 base"
@@ -5397,7 +5413,11 @@ exports[`Storyshots Examples Search 1`] = `
                 </div>
                 <div
                   className="base"
-                  style={Object {}}
+                  style={
+                    Object {
+                      "height": 159,
+                    }
+                  }
                 >
                   <div
                     className="col col-5 base"
@@ -5486,7 +5506,11 @@ exports[`Storyshots Examples Search 1`] = `
                 </div>
                 <div
                   className="base"
-                  style={Object {}}
+                  style={
+                    Object {
+                      "height": 159,
+                    }
+                  }
                 >
                   <div
                     className="col col-5 base"
@@ -9122,6 +9146,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9146,9 +9171,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
         </div>
@@ -9168,6 +9198,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9180,6 +9211,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9211,9 +9243,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
           <div
@@ -9237,9 +9274,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
         </div>
@@ -9259,6 +9301,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9271,6 +9314,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9302,9 +9346,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
           <div
@@ -9328,9 +9377,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
         </div>
@@ -9350,6 +9404,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9362,6 +9417,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9390,9 +9446,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
           <div
@@ -9413,9 +9474,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
         </div>
@@ -9435,6 +9501,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9447,6 +9514,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9478,9 +9546,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
           <div
@@ -9504,9 +9577,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
         </div>
@@ -9526,6 +9604,7 @@ exports[`Storyshots Grid Padding 1`] = `
             style={
               Object {
                 "borderBottomWidth": 24,
+                "height": 61,
               }
             }
           >
@@ -9580,9 +9659,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
           <div
@@ -9608,9 +9692,14 @@ exports[`Storyshots Grid Padding 1`] = `
             >
               <div
                 className="colors1"
-              >
-                test-file-stub
-              </div>
+                style={
+                  Object {
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
             </div>
           </div>
         </div>
@@ -10615,7 +10704,7 @@ exports[`Storyshots Layout Auto 1`] = `
                 }
               }
             >
-              test-file-stub
+              The auto Layout height fills the remaining space
             </div>
           </div>
         </div>
@@ -10908,18 +10997,17 @@ exports[`Storyshots Layout Parent 1`] = `
           }
         >
           <div
-            className="base"
+            className="colors1 base"
             style={
               Object {
+                "height": 0,
                 "paddingBottom": 24,
                 "paddingLeft": 24,
                 "paddingRight": 24,
                 "paddingTop": 24,
               }
             }
-          >
-            test-file-stubtest-file-stubtest-file-stub
-          </div>
+          />
         </div>
       </div>
     </div>
