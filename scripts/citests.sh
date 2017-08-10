@@ -10,6 +10,7 @@ echo "Running node $CIRCLE_NODE_INDEX"
 
 if [ "$CIRCLE_NODE_INDEX" -eq "0" ]; then
   yarn test:size                          # Validate bundle gzipped size
+  yarn test:bithound                      # Analyze code with bithound
   yarn lint                               # Validate linting
   yarn test -- --coverage                 # Validate unit tests
   cat ./coverage/lcov.info | node_modules/.bin/codeclimate-test-reporter
