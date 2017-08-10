@@ -11,9 +11,18 @@
   padding: 0;
   width: 100%;
 
-  & > :not(.layout) {
+  & > :not(.layout):not(.wrapper),
+  & > :not(.layout):not(.wrapper) > :not(.layout):not(.wrapper) {
     max-width: var(--max-width);
   }
+}
+
+/* workaround for IE10-11 flex min-height bug */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
 }
 
 .parent {
@@ -35,12 +44,17 @@
   flex-grow: 1;
 }
 
-.fixedTop {
+.fixedTop,
+.fixedBottom {
   position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fixedTop {
   top: 0;
 }
 
 .fixedBottom {
-  position: fixed;
   bottom: 0;
 }

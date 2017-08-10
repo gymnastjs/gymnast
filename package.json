@@ -141,7 +141,7 @@
     "start:webpack": "yarn build:dev -- --watch",
     "start": "npm-run-all --parallel start:*",
     "test:bithound": "bithound check git@github.com:obartra/reflex.git",
-    "test:image": "nightwatch --config test/screenshot/nightwatch.conf.js --env chrome,firefox,edge,safari",
+    "test:image": "nightwatch --config test/screenshot/nightwatch.conf.js --env chrome,firefox,edge,safari,ie11",
     "test:size": "bundlesize",
     "test": "jest",
     "test:watch": "jest --watch"
