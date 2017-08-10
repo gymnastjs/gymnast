@@ -32,13 +32,14 @@ export default class WithExtensions extends React.PureComponent {
     const showOverlay = boolean('Overlay', false)
 
     const designGrid = showOverlay && this.getDesignGrid()
+    const isCI = window.location.href.indexOf('isCI') !== -1
 
     if (notes) {
       return (
         <div>
           {designGrid}
           <WithNotes notes={notes}>
-            <div {...props} />
+            <div {...props} className={isCI && style.isCI} />
           </WithNotes>
         </div>
       )
@@ -47,7 +48,7 @@ export default class WithExtensions extends React.PureComponent {
     return (
       <div>
         {designGrid}
-        <div {...props} />
+        <div {...props} className={isCI && style.isCI} />
       </div>
     )
   }

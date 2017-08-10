@@ -44,7 +44,9 @@
   }
 
   &.col-fit {
-    flex-basis: 0%; /* % is required for Edge */
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: auto;
     white-space: nowrap;
   }
 
