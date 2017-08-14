@@ -140,8 +140,8 @@
     "start:storybook": "start-storybook -p 9001 -s ./storybook/static -c storybook/config",
     "start:webpack": "yarn build:dev -- --watch",
     "start": "npm-run-all --parallel start:*",
-    "test:image": "nightwatch --config test/screenshot/nightwatch.conf.js --env chrome,firefox,edge",
     "test:bithound": "bithound check git@github.com:obartra/reflex.git",
+    "test:image": "nightwatch --config test/screenshot/nightwatch.conf.js --env chrome,firefox,edge,safari",
     "test:size": "bundlesize",
     "test": "jest",
     "test:watch": "jest --watch"

@@ -7,6 +7,11 @@ import { Box, RootLayout, getMarginSelect } from '../../shared'
 
 export default function() {
   const items = number('Items', 5, { range: true, min: 0, max: 24 })
+  const height = number('Container Height', 500, {
+    range: true,
+    min: 100,
+    max: 10000,
+  })
   const align = boolean('Stretch Items (align)', true) ? undefined : 'top'
   const alignContainer = boolean('Stretch Container (align)', true)
     ? undefined
@@ -14,10 +19,7 @@ export default function() {
   const margin = getMarginSelect()
 
   return (
-    <RootLayout
-      style={{ height: 'calc(100vh - 100px)' }}
-      align={alignContainer}
-    >
+    <RootLayout style={{ height }} align={alignContainer}>
       <Grid align={align} dev={2}>
         {times(items, index =>
           <Box

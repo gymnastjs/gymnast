@@ -10512,7 +10512,7 @@ exports[`Storyshots Grid Stretch 1`] = `
             "borderLeftWidth": 12,
             "borderRightWidth": 12,
             "borderTopWidth": 0,
-            "height": "calc(100vh - 100px)",
+            "height": 500,
             "paddingBottom": 0,
             "paddingLeft": 24,
             "paddingRight": 24,
