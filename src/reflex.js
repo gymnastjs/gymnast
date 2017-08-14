@@ -1,6 +1,8 @@
 // @flow
 import * as srcUtils from './utils'
 
+export { default as GridHoc } from './grid.hoc'
+export { default as BaseHoc } from './base.hoc'
 export { default as Base } from './base'
 export { default as Grid } from './grid'
 export { default as Layout } from './layout'
