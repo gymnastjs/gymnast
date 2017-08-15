@@ -32,10 +32,8 @@ export type Props = {
   paddingTop?: SpacingValues,
   size?: Size,
   style?: { [string]: string | number },
-  style?: { [string]: string | number },
 }
 
-/* eslint-disable react/prefer-stateless-function */
 export default function withBase(Component: any) {
   return class Base extends React.Component {
     static contextTypes = {
