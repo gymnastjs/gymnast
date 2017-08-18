@@ -107,7 +107,7 @@ export default class Layout extends React.Component {
       styles.layout,
     ])
 
-    const content = (
+    return (
       <div
         {...props}
         className={classes.join(' ')}
@@ -126,15 +126,5 @@ export default class Layout extends React.Component {
         }}
       />
     )
-
-    if (height === 'parent') {
-      return (
-        <div className={styles.wrapper}>
-          {content}
-        </div>
-      )
-    }
-
-    return content
   }
 }
