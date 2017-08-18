@@ -63,7 +63,6 @@ module.exports = {
         platform: 'Windows 10',
         version: '11.103',
         browserName: 'internet explorer',
-        screenResolution: `${browserWidth}x${browserHeight - 45}`,
       },
     }),
     edge: merge({}, commonSettings, {

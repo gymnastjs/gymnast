@@ -1,5 +1,6 @@
 /* eslint-disable no-console, prefer-arrow-callback */
 const { noop } = require('lodash')
+const { browserWidth, getActualHeight } = require('../shared')
 
 exports.command = function command(
   filename,
@@ -14,13 +15,15 @@ exports.command = function command(
   return this.execute(function inBrowser() {
     document.body.style.overflow = 'hidden'
     return true
-  }).saveScreenshot(resultPath, screenshot => {
-    if (screenshot.status !== 0) {
-      console.log('Error saving screenshot...', screenshot)
-      callback(false)
-    }
-    this.assert.compareScreenshot(filename, baseline, browserName, result => {
-      callback(result)
-    })
   })
+    .resizeWindow(browserWidth, getActualHeight(browserName))
+    .saveScreenshot(resultPath, screenshot => {
+      if (screenshot.status !== 0) {
+        console.log('Error saving screenshot...', screenshot)
+        callback(false)
+      }
+      this.assert.compareScreenshot(filename, baseline, browserName, result => {
+        callback(result)
+      })
+    })
 }
