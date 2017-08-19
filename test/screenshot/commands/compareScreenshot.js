@@ -1,6 +1,6 @@
 /* eslint-disable no-console, prefer-arrow-callback */
 const { noop } = require('lodash')
-const { browserWidth, getActualHeight } = require('../shared')
+const { getWidth, getHeight } = require('../shared')
 
 exports.command = function command(
   filename,
@@ -16,7 +16,7 @@ exports.command = function command(
     document.body.style.overflow = 'hidden'
     return true
   })
-    .resizeWindow(browserWidth, getActualHeight(browserName))
+    .resizeWindow(getWidth(browserName), getHeight(browserName))
     .saveScreenshot(resultPath, screenshot => {
       if (screenshot.status !== 0) {
         console.log('Error saving screenshot...', screenshot)
