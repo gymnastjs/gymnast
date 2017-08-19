@@ -16,7 +16,6 @@
   }
 }
 
-/* workaround for IE10-11 flex min-height bug */
 .parent {
   flex-grow: 1;
   height: 100%;

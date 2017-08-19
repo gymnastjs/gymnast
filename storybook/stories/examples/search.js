@@ -17,12 +17,12 @@ export default function() {
     <Layout height="parent" className={styles.page}>
       <Header />
       <Layout
-        height="auto"
+        height="parent"
         className={styles.content}
         style={{ marginTop: 40 }}
       >
         <SearchNav />
-        <Layout height="parent" dev={2}>
+        <Layout height="auto" dev={2}>
           <Root>
             <Grid margin={[1, 0, 0, 0]}>
               <SearchFilters size={3} />
