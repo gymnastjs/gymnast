@@ -96,8 +96,8 @@ export default function() {
           </Root>
         </Layout>
       </Layout>
-      <Layout height="parent" className={styles.reportMain} dev={2}>
-        <Layout height="auto">
+      <Layout height="parent" className={styles.reportMain}>
+        <Layout height="auto" dev={2}>
           <Root>
             <Grid>
               <Grid size={1} align="top" paddingTop={1} margin={horizontalHalf}>

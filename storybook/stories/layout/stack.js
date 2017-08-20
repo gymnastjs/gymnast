@@ -46,11 +46,7 @@ export default function() {
   const sections = number('Sections', 2, { range: true, min: 2, max: 10 })
 
   return (
-    <Layout
-      height="parent"
-      className={styles.page}
-      style={{ maxHeight: '100%' }}
-    >
+    <Layout height="parent" className={styles.page}>
       {times(sections, index => getSection(index, subSections))}
     </Layout>
   )

@@ -2,7 +2,9 @@
 
 exports[`Storyshots Components.Card Base 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -332,7 +334,9 @@ exports[`Storyshots Components.Card Base 1`] = `
 
 exports[`Storyshots Components.Card Composite 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -924,7 +928,9 @@ exports[`Storyshots Components.Card Composite 1`] = `
 
 exports[`Storyshots Components.Card Filter 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -1339,7 +1345,9 @@ exports[`Storyshots Components.Card Filter 1`] = `
 
 exports[`Storyshots Components.Card Profile 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -1652,7 +1660,9 @@ exports[`Storyshots Components.Card Profile 1`] = `
 
 exports[`Storyshots Components.Header App 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="fixedTop fit colors1 layout"
       style={Object {}}
@@ -1829,7 +1839,9 @@ exports[`Storyshots Components.Header App 1`] = `
 
 exports[`Storyshots Components.Header Basic 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -2149,7 +2161,9 @@ exports[`Storyshots Components.Header Basic 1`] = `
 
 exports[`Storyshots Components.Pagination Pagination 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -2482,7 +2496,9 @@ exports[`Storyshots Components.Pagination Pagination 1`] = `
 
 exports[`Storyshots Components.Search Filters 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="colors4 base topAlign"
       style={
@@ -2610,7 +2626,9 @@ exports[`Storyshots Components.Search Filters 1`] = `
 
 exports[`Storyshots Components.Search Nav 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="fit colors4 layout"
       style={
@@ -2755,7 +2773,9 @@ exports[`Storyshots Components.Search Nav 1`] = `
 
 exports[`Storyshots Components.Search Results 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="colors5 base topAlign"
       style={Object {}}
@@ -3074,7 +3094,9 @@ exports[`Storyshots Components.Search Results 1`] = `
 
 exports[`Storyshots Examples Cards 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page hasSubheader parent layout"
       style={Object {}}
@@ -3656,7 +3678,9 @@ exports[`Storyshots Examples Cards 1`] = `
 
 exports[`Storyshots Examples Holy Grail 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent layout"
       style={Object {}}
@@ -3840,7 +3864,9 @@ exports[`Storyshots Examples Holy Grail 1`] = `
 
 exports[`Storyshots Examples Report 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent layout"
       style={Object {}}
@@ -4033,11 +4059,11 @@ exports[`Storyshots Examples Report 1`] = `
         </div>
       </div>
       <div
-        className="reportMain parent colors2 layout"
+        className="reportMain parent layout"
         style={Object {}}
       >
         <div
-          className="auto layout"
+          className="auto colors2 layout"
           style={Object {}}
         >
           <div
@@ -4580,7 +4606,9 @@ exports[`Storyshots Examples Report 1`] = `
 
 exports[`Storyshots Examples Search 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent layout"
       style={Object {}}
@@ -4756,7 +4784,7 @@ exports[`Storyshots Examples Search 1`] = `
         </div>
       </div>
       <div
-        className="content auto layout"
+        className="content parent layout"
         style={
           Object {
             "marginTop": 40,
@@ -4902,7 +4930,7 @@ exports[`Storyshots Examples Search 1`] = `
           </div>
         </div>
         <div
-          className="parent colors2 layout"
+          className="auto colors2 layout"
           style={Object {}}
         >
           <div
@@ -5726,40 +5754,40 @@ exports[`Storyshots Examples Search 1`] = `
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="fit colors1 layout"
-        style={Object {}}
-      >
         <div
-          className="base"
-          style={
-            Object {
-              "borderBottomWidth": 0,
-              "borderLeftWidth": 12,
-              "borderRightWidth": 12,
-              "borderTopWidth": 0,
-              "paddingBottom": 0,
-              "paddingLeft": 24,
-              "paddingRight": 24,
-              "paddingTop": 0,
-            }
-          }
+          className="fit colors1 layout"
+          style={Object {}}
         >
           <div
             className="base"
             style={
               Object {
-                "borderBottomWidth": 12,
+                "borderBottomWidth": 0,
                 "borderLeftWidth": 12,
                 "borderRightWidth": 12,
-                "borderTopWidth": 12,
+                "borderTopWidth": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 24,
+                "paddingRight": 24,
+                "paddingTop": 0,
               }
             }
           >
-            <h1>
-              Footer
-            </h1>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 12,
+                }
+              }
+            >
+              <h1>
+                Footer
+              </h1>
+            </div>
           </div>
         </div>
       </div>
@@ -5770,7 +5798,9 @@ exports[`Storyshots Examples Search 1`] = `
 
 exports[`Storyshots Examples Two Sections 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent layout"
       style={Object {}}
@@ -5938,40 +5968,40 @@ exports[`Storyshots Examples Two Sections 1`] = `
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="fit colors1 layout"
-        style={Object {}}
-      >
         <div
-          className="base"
-          style={
-            Object {
-              "borderBottomWidth": 0,
-              "borderLeftWidth": 12,
-              "borderRightWidth": 12,
-              "borderTopWidth": 0,
-              "paddingBottom": 0,
-              "paddingLeft": 24,
-              "paddingRight": 24,
-              "paddingTop": 0,
-            }
-          }
+          className="fit colors1 layout"
+          style={Object {}}
         >
           <div
             className="base"
             style={
               Object {
-                "borderBottomWidth": 12,
+                "borderBottomWidth": 0,
                 "borderLeftWidth": 12,
                 "borderRightWidth": 12,
-                "borderTopWidth": 12,
+                "borderTopWidth": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 24,
+                "paddingRight": 24,
+                "paddingTop": 0,
               }
             }
           >
-            <h1>
-              Footer
-            </h1>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 12,
+                }
+              }
+            >
+              <h1>
+                Footer
+              </h1>
+            </div>
           </div>
         </div>
       </div>
@@ -5982,7 +6012,9 @@ exports[`Storyshots Examples Two Sections 1`] = `
 
 exports[`Storyshots Grid Align 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -6278,7 +6310,9 @@ exports[`Storyshots Grid Align 1`] = `
 
 exports[`Storyshots Grid Autoflow 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -6562,7 +6596,9 @@ exports[`Storyshots Grid Autoflow 1`] = `
 
 exports[`Storyshots Grid Fraction 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -7763,7 +7799,9 @@ exports[`Storyshots Grid Fraction 1`] = `
 
 exports[`Storyshots Grid Justify 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -7941,7 +7979,9 @@ exports[`Storyshots Grid Justify 1`] = `
 
 exports[`Storyshots Grid Margin 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -8399,7 +8439,9 @@ exports[`Storyshots Grid Margin 1`] = `
 
 exports[`Storyshots Grid Nested 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -8684,7 +8726,9 @@ exports[`Storyshots Grid Nested 1`] = `
 
 exports[`Storyshots Grid Offset 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -9110,7 +9154,9 @@ exports[`Storyshots Grid Offset 1`] = `
 
 exports[`Storyshots Grid Padding 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -9711,7 +9757,9 @@ exports[`Storyshots Grid Padding 1`] = `
 
 exports[`Storyshots Grid Sizing 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -10499,7 +10547,9 @@ exports[`Storyshots Grid Sizing 1`] = `
 
 exports[`Storyshots Grid Stretch 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="parent layout"
       style={Object {}}
@@ -10658,7 +10708,9 @@ exports[`Storyshots Grid Stretch 1`] = `
 
 exports[`Storyshots Layout Auto 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent colors4 layout"
       style={Object {}}
@@ -10716,7 +10768,9 @@ exports[`Storyshots Layout Auto 1`] = `
 
 exports[`Storyshots Layout Default 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent colors5 layout"
       style={Object {}}
@@ -10916,7 +10970,9 @@ exports[`Storyshots Layout Default 1`] = `
 
 exports[`Storyshots Layout Fixed 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent layout"
       style={Object {}}
@@ -10965,7 +11021,9 @@ exports[`Storyshots Layout Fixed 1`] = `
 
 exports[`Storyshots Layout Parent 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent colors2 layout"
       style={Object {}}
@@ -11017,14 +11075,12 @@ exports[`Storyshots Layout Parent 1`] = `
 
 exports[`Storyshots Layout Stack 1`] = `
 <div>
-  <div>
+  <div
+    className={false}
+  >
     <div
       className="page parent layout"
-      style={
-        Object {
-          "maxHeight": "100%",
-        }
-      }
+      style={Object {}}
     >
       <div
         className="fit layout"
