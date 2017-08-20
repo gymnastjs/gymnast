@@ -28,7 +28,7 @@ const scenarios = Object.keys(storyFolders)
             image,
             url: `${BASE_URL}?selectedKind=${encodeURIComponent(
               folderpath
-            )}&selectedStory=${encodeURIComponent(name)}`,
+            )}&selectedStory=${encodeURIComponent(name)}&isCI`,
           }
         })
       ),
