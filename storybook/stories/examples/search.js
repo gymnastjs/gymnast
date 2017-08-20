@@ -30,13 +30,13 @@ export default function() {
             </Grid>
           </Root>
         </Layout>
-      </Layout>
-      <Layout dev={1}>
-        <Root>
-          <Grid margin={allHalf}>
-            <h1>Footer</h1>
-          </Grid>
-        </Root>
+        <Layout dev={1}>
+          <Root>
+            <Grid margin={allHalf}>
+              <h1>Footer</h1>
+            </Grid>
+          </Root>
+        </Layout>
       </Layout>
     </Layout>
   )

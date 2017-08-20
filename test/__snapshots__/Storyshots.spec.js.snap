@@ -5754,40 +5754,40 @@ exports[`Storyshots Examples Search 1`] = `
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="fit colors1 layout"
-        style={Object {}}
-      >
         <div
-          className="base"
-          style={
-            Object {
-              "borderBottomWidth": 0,
-              "borderLeftWidth": 12,
-              "borderRightWidth": 12,
-              "borderTopWidth": 0,
-              "paddingBottom": 0,
-              "paddingLeft": 24,
-              "paddingRight": 24,
-              "paddingTop": 0,
-            }
-          }
+          className="fit colors1 layout"
+          style={Object {}}
         >
           <div
             className="base"
             style={
               Object {
-                "borderBottomWidth": 12,
+                "borderBottomWidth": 0,
                 "borderLeftWidth": 12,
                 "borderRightWidth": 12,
-                "borderTopWidth": 12,
+                "borderTopWidth": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 24,
+                "paddingRight": 24,
+                "paddingTop": 0,
               }
             }
           >
-            <h1>
-              Footer
-            </h1>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 12,
+                }
+              }
+            >
+              <h1>
+                Footer
+              </h1>
+            </div>
           </div>
         </div>
       </div>
@@ -5968,40 +5968,40 @@ exports[`Storyshots Examples Two Sections 1`] = `
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="fit colors1 layout"
-        style={Object {}}
-      >
         <div
-          className="base"
-          style={
-            Object {
-              "borderBottomWidth": 0,
-              "borderLeftWidth": 12,
-              "borderRightWidth": 12,
-              "borderTopWidth": 0,
-              "paddingBottom": 0,
-              "paddingLeft": 24,
-              "paddingRight": 24,
-              "paddingTop": 0,
-            }
-          }
+          className="fit colors1 layout"
+          style={Object {}}
         >
           <div
             className="base"
             style={
               Object {
-                "borderBottomWidth": 12,
+                "borderBottomWidth": 0,
                 "borderLeftWidth": 12,
                 "borderRightWidth": 12,
-                "borderTopWidth": 12,
+                "borderTopWidth": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 24,
+                "paddingRight": 24,
+                "paddingTop": 0,
               }
             }
           >
-            <h1>
-              Footer
-            </h1>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 12,
+                }
+              }
+            >
+              <h1>
+                Footer
+              </h1>
+            </div>
           </div>
         </div>
       </div>
