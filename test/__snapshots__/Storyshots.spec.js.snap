@@ -6594,6 +6594,91 @@ exports[`Storyshots Grid Autoflow 1`] = `
 </div>
 `;
 
+exports[`Storyshots Grid Fit 1`] = `
+<div>
+  <div
+    className={false}
+  >
+    <div
+      className="parent layout"
+      style={Object {}}
+    >
+      <div
+        className="base"
+        style={
+          Object {
+            "borderBottomWidth": 0,
+            "borderLeftWidth": 12,
+            "borderRightWidth": 12,
+            "borderTopWidth": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 0,
+          }
+        }
+      >
+        <div
+          className="col col-fit colors2 base centerJustify"
+          style={Object {}}
+        >
+          <div
+            className="col col-auto base"
+            style={
+              Object {
+                "borderBottomWidth": 12,
+                "borderLeftWidth": 12,
+                "borderRightWidth": 12,
+                "borderTopWidth": 12,
+              }
+            }
+          >
+            <div
+              className="colors1 base"
+              style={
+                Object {
+                  "paddingBottom": 12,
+                  "paddingLeft": 12,
+                  "paddingRight": 12,
+                  "paddingTop": 12,
+                }
+              }
+            >
+              Auto 1
+            </div>
+          </div>
+          <div
+            className="col col-fit base"
+            style={
+              Object {
+                "borderBottomWidth": 12,
+                "borderLeftWidth": 12,
+                "borderRightWidth": 12,
+                "borderTopWidth": 12,
+              }
+            }
+          >
+            <div
+              className="colors1 base"
+              style={
+                Object {
+                  "paddingBottom": 12,
+                  "paddingLeft": 12,
+                  "paddingRight": 12,
+                  "paddingTop": 12,
+                }
+              }
+            >
+              Fit 1
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Grid Fraction 1`] = `
 <div>
   <div
