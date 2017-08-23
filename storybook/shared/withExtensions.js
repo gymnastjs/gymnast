@@ -1,11 +1,14 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import { WithNotes } from '@storybook/addon-notes'
 import { boolean } from '@storybook/addon-knobs'
 import style from './designGrid.css'
 
-export default class WithExtensions extends React.PureComponent {
+export default class WithExtensions extends React.PureComponent<{
+  notes?: string,
+  className?: string,
+}> {
   static childContextTypes = {
     devMode: PropTypes.bool,
   }
@@ -20,11 +23,6 @@ export default class WithExtensions extends React.PureComponent {
     <div className={style.designGrid}>
       <div className={style.contentArea} />
     </div>
-
-  props: {
-    notes?: string,
-    className?: string,
-  }
 
   render() {
     const { notes, className, ...props } = this.props

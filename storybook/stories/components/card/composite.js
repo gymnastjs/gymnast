@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { Grid, Col } from 'reflex'
 import { RootLayout, Box } from '../../../shared'
 import { horizontalHalf, topLeft } from '../../../shared/marginTypes'

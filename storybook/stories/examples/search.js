@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react'
+import * as React from 'react'
 import { Grid, Layout, Root } from 'reflex'
 import { number } from '@storybook/addon-knobs'
 import styles from './layout.css'

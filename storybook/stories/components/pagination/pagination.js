@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
 import { RootLayout, Box } from '../../../shared'

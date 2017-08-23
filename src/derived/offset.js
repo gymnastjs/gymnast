@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import Grid from '../grid'
 import type { Offset as OffsetType } from '../types'
 

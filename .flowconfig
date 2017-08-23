@@ -1,5 +1,8 @@
 [ignore]
 <PROJECT_ROOT>/dist
+.*/node_modules/conventional-changelog-core/test
+.*/node_modules/editions/.*
+.*/node_modules/radium/.*
 .*/node_modules/stylelint/.*
 .*/node_modules/eslint-plugin-jsx-a11y/.*
 .*/node_modules/config-chain/test/broken.json

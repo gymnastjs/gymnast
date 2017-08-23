@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import Grid from '../grid'
 
 export default function Root(props: { [string]: any }) {

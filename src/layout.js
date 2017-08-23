@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { combineSpacing } from './utils'
@@ -61,7 +61,7 @@ export type Props = {
   style?: { [string]: string | number },
 }
 
-export default class Layout extends React.Component {
+export default class Layout extends React.Component<Props> {
   static contextTypes = {
     devMode: PropTypes.bool,
   }
@@ -75,8 +75,6 @@ export default class Layout extends React.Component {
       devMode: this.props.devMode || this.context.devMode,
     }
   }
-
-  props: Props
 
   render() {
     const {
