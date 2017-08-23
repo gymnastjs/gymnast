@@ -1,0 +1,31 @@
+machine:
+  environment:
+    TARGET_URL: "https://obartra.github.io/reflex/branch/$CIRCLE_BRANCH"
+  node:
+    version: 8.1.2
+general:
+  artifacts:
+    - "dist"
+    - "coverage"
+    - test/screenshot/images
+  branches:
+    ignore:
+      - gh-pages
+dependencies:
+  cache_directories:
+    - ~/.cache/yarn
+  override:
+    - ./scripts/deploystorybook.sh
+    - git checkout $CIRCLE_SHA1
+    - yarn
+test:
+  override:
+    - yarn build
+    - scripts/citests.sh:
+        parallel: true
+deployment:
+  publish:
+    owner: obartra
+    branch: master
+    commands:
+      - ./scripts/deploynpm.sh
