@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { Grid, Col } from 'reflex'
 import { RootLayout, loremIpsum } from '../../../shared'
 import styles from '../../../shared/stories.css'

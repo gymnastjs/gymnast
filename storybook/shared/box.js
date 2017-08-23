@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { Grid } from 'reflex'
 import type { Spacing } from '../../src/types'
 
@@ -12,9 +12,9 @@ const typeMap = {
 }
 
 type BoxProps = {
-  type: 'A' | 'B' | 'C' | 'D' | 'E',
+  type: $Keys<typeof typeMap>,
   style?: Object,
-  children?: any,
+  children?: React.Node,
   value?: string,
   margin?: Spacing,
 }

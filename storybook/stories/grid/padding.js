@@ -1,6 +1,5 @@
 // @flow
-import React from 'react'
-import type { Children } from 'react'
+import * as React from 'react'
 import { Grid, Col } from 'reflex'
 import type { Size } from '../../../src/types'
 import { RootLayout, getMarginSelect } from '../../shared'
@@ -8,7 +7,7 @@ import { all, topRight, xBottom } from '../../shared/marginTypes'
 import styles from '../../shared/stories.css'
 
 type HeadingProps = {
-  children: Children,
+  children: React.Node,
   size?: Size,
 }
 

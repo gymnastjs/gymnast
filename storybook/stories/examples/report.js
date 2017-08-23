@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { Grid, Root, Layout, Col } from 'reflex'
 import { loremIpsum } from '../../shared'
 import styles from './report.css'
@@ -40,7 +40,7 @@ function Card({
 }: {
   children?: any,
   height?: number,
-}): React$Element<any> {
+}): React.Element<any> {
   return (
     <Col style={{ minHeight: height }}>
       <Grid padding={[1]} dev={5}>

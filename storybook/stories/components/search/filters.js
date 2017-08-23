@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { Col, Grid } from 'reflex'
 import type { Size } from '../../../../src/types'
 

@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import BaseHoc, { type Props as BaseProps } from './base.hoc'
 
 function Base(props: BaseProps) {

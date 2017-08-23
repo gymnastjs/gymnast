@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
 import { Grid, Col } from 'reflex'

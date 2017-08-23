@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import type {
@@ -16,7 +16,7 @@ import { combineSpacing } from './utils'
 
 export type Props = {
   align?: AlignGrid,
-  children?: React$Element<any> | Array<React$Element<any>>,
+  children?: React.Node,
   className?: string,
   dev?: Dev,
   justify?: Justify,
@@ -34,8 +34,8 @@ export type Props = {
   style?: { [string]: string | number },
 }
 
-export default function withBase(Component: any) {
-  return class Base extends React.Component {
+export default function withBase(Component: React.ComponentType<*>) {
+  return class Base extends React.Component<Props & { base: number }> {
     static contextTypes = {
       devMode: PropTypes.bool,
     }
@@ -43,8 +43,6 @@ export default function withBase(Component: any) {
     static defaultProps = {
       style: {},
     }
-
-    props: Props & { base: number }
 
     render() {
       const {
