@@ -12,6 +12,7 @@ export const utils = srcUtils
 export { default as Col } from './derived/col'
 export { default as Root } from './derived/root'
 export { default as Offset } from './derived/offset'
+export { default as initDevMode } from './dev'
 export type {
   Size,
   AlignGrid,

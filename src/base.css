@@ -64,3 +64,27 @@
     max-width: calc(($i / 12) * 100%);
   }
 }
+
+:global(.reflex-dev-mode) .base {
+  position: relative;
+  outline: 1px solid var(--nomuraGray);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+          90deg,
+          transparent 1px,
+          var(--axonBlack) 1px,
+          transparent 2px
+        )
+        calc((1 / 11 * 100%) - 1px) 0px,
+      transparent;
+    background-size: calc(1 / 12 * 100% + 0.5px) 2px;
+    background-repeat: repeat-x;
+  }
+}

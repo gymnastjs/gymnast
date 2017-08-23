@@ -3,6 +3,7 @@
   --axonGold: #ffd700;
   --bolt: #1469cc;
   --nomuraGray: #efefef;
+  --white: #ffffff;
   --base: 8px;
   --gutter: calc(var(--base) * 3); /* 24px */
   --vertical-gutter: var(--gutter); /* 24px */
