@@ -36,7 +36,7 @@ exports.assertion = function assertion(filename, baselinePath, browserName) {
   const diffPath = `${screenshotPath}/diffs/${browserName}-${filename}`
 
   this.message = 'Unexpected compareScreenshot error.'
-  this.expected = browserName === 'chrome' ? 0 : 5 // misMatchPercentage tolerance 5% for non chrome
+  this.expected = browserName === 'chrome' ? 0 : 3.7 // misMatchPercentage tolerance 3.7% for non chrome
 
   this.command = callback => {
     makeDir(path.dirname(resultPath)).then(() =>
@@ -52,7 +52,7 @@ exports.assertion = function assertion(filename, baselinePath, browserName) {
     if (fs.existsSync(baselinePath)) {
       compareImages(baselinePath, resultPath, callback)
     } else {
-      callback()
+      callback(false)
     }
 
     return this
