@@ -1,7 +1,15 @@
 // @flow
 import * as React from 'react'
 import Grid from '../grid'
+import styles from './root.css'
+import type { Props } from '../base.hoc'
 
-export default function Root(props: { [string]: any }) {
-  return <Grid {...props} margin={[0, 0.5]} padding={[0, 1]} />
+export default function Root({ children, justify, ...props }: Props) {
+  return (
+    <Grid {...props} className={styles.root} justify="center">
+      <Grid justify={justify}>
+        {children}
+      </Grid>
+    </Grid>
+  )
 }
