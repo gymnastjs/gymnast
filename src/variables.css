@@ -7,6 +7,7 @@
   --gutter: calc(var(--base) * 3); /* 24px */
   --vertical-gutter: var(--gutter); /* 24px */
   --page-margin: calc(var(--base) * 6); /* 48px */
+  --small-page-margin: var(--base); /* 8px */
   --max-width: calc(var(--base) * 153); /* 1224px */
   --min-width: calc(var(--base) * 50); /* 400px */
 
