@@ -1,12 +1,7 @@
 const path = require('path')
-const { merge } = require('lodash')
-const {
-  isCIMaster,
-  username,
-  accessKey,
-  browserWidth,
-  browserHeight,
-} = require('./shared')
+const { merge, mapValues } = require('lodash')
+const { isCIMaster, username, accessKey } = require('./shared')
+const browsers = require('./browsers.json')
 
 process.env.NODE_ENV = 'test:image'
 
@@ -31,7 +26,6 @@ const commonSettings = {
     enabled: false,
   },
   desiredCapabilities: {
-    screenResolution: `${browserWidth}x${browserHeight}`,
     tags: [
       isCIMaster ? 'reflex' : 'reflex-branch',
       process.env.CIRCLE_BRANCH || 'local',
@@ -47,44 +41,10 @@ module.exports = {
   custom_assertions_path: path.resolve(__dirname, './assertions'),
   selenium,
   test_workers: { enabled: true, workers: 'auto' },
-  test_settings: {
-    default: commonSettings,
-    chrome: merge({}, commonSettings, {
-      desiredCapabilities: {
-        platform: 'macOS 10.12',
-        version: 'latest',
-        browserName: 'chrome',
-        chromedriverVersion: '2.24',
-        args: [`window-size=${browserWidth},${browserHeight}`],
-      },
-    }),
-    ie11: merge({}, commonSettings, {
-      desiredCapabilities: {
-        platform: 'Windows 10',
-        version: '11.103',
-        browserName: 'internet explorer',
-      },
-    }),
-    edge: merge({}, commonSettings, {
-      desiredCapabilities: {
-        platform: 'Windows 10',
-        version: '14.14393',
-        browserName: 'MicrosoftEdge',
-      },
-    }),
-    firefox: merge({}, commonSettings, {
-      desiredCapabilities: {
-        platform: 'macOS 10.12',
-        version: '54.0',
-        browserName: 'firefox',
-      },
-    }),
-    safari: merge({}, commonSettings, {
-      desiredCapabilities: {
-        platform: 'macOS 10.12',
-        version: '10.0',
-        browserName: 'safari',
-      },
-    }),
-  },
+  test_settings: Object.assign(
+    {
+      default: commonSettings,
+    },
+    mapValues(browsers, browser => merge({}, commonSettings, browser))
+  ),
 }

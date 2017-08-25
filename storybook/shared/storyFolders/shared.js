@@ -22,8 +22,17 @@ function getStoryPaths(filepath, basePath) {
   }
 }
 
-function getImagePath(filepath) {
-  return filepath.replace(/\.js$/, '.spec.png')
+function getImagePath(filepath, suffix = '.spec.png') {
+  const path = filepath.split('/')
+
+  path.splice(path.length - 1, 0, '__screenshots__')
+  path[path.length - 1] = path[path.length - 1].replace(/\.js$/, suffix)
+
+  return path.join('/')
+}
+
+function getMobilePath(filepath) {
+  return getImagePath(filepath, '_mobile.spec.png')
 }
 
 function endsWith(str) {
@@ -37,4 +46,5 @@ module.exports = {
   endsWith,
   doesntEndWith,
   getImagePath,
+  getMobilePath,
 }
