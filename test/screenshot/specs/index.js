@@ -48,21 +48,21 @@ function getBrowserName({ options }) {
   }
 }
 
-module.exports = scenarios.reduce(
-  (prev, { label, url, image }) =>
-    Object.assign(prev, {
-      [label]: browser => {
-        process.stdout.write(`loading story at ${url}\n`)
-        const browserName = getBrowserName(browser)
+module.exports = {
+  test: browser => {
+    const browserName = getBrowserName(browser)
 
-        browser.session(session =>
+    browser.session(session => {
+      scenarios
+        .reduce(
+          (b, { url, label, image }) =>
+            b
+              .url(url)
+              .compareScreenshot(`${label}.png`, image, session, browserName),
           browser
-            .url(url)
-            .compareScreenshot(`${label}.png`, image, session, browserName)
-            .sauceEnd()
-            .end()
         )
-      },
-    }),
-  {}
-)
+        .sauceEnd()
+        .end()
+    })
+  },
+}

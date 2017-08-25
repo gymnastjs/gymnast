@@ -21,6 +21,10 @@
   max-height: 859px;
 }
 
+.isCI * {
+  color: transparent !important;
+}
+
 .contentArea {
   position: relative;
   margin: 0 auto;
