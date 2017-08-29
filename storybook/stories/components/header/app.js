@@ -28,21 +28,14 @@ export default function() {
         <Col marginBottom={0} justify="right" size={3} dev={4}>
           <input placeholder="Search for anything..." />
         </Col>
-        <Col
-          align="center"
-          marginBottom={0}
-          size="fit"
-          style={{ flexWrap: 'nowrap' }}
-        >
+        <Col align="center" marginBottom={0} size="fit">
           <Col size="fit" marginLeft={0} marginBottom={0}>
             <div className={styles.block} />
           </Col>
           <Col size="fit" marginBottom={0}>
             <div className={styles.block} />
           </Col>
-          <Grid style={{ whiteSpace: 'nowrap' }} size="auto" justify="right">
-            Lorem ipsum
-          </Grid>
+          <Grid size="fit">Lorem ipsum</Grid>
         </Col>
       </Root>
     </Layout>
