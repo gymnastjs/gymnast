@@ -18,9 +18,9 @@ export type AlignGrid = 'bottom' | 'center' | 'top' | void
 
 export type Justify = 'left' | 'center' | 'right' | void
 
-export type SpacingValues = number | void
+export type SpacingValues = number | string | void
 
-export type Spacing = Array<SpacingValues> | void
+export type Spacing = Array<SpacingValues> | SpacingValues
 
 export type Fixed = 'top' | 'bottom' | void
 

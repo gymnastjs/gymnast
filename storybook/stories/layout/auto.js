@@ -12,7 +12,7 @@ export default function() {
       <Layout height={height} dev={2}>
         <Root>
           <Grid margin={[0, 0.5]}>
-            <Grid padding={[1]}>
+            <Grid padding={1}>
               The auto Layout height fills the remaining space
             </Grid>
           </Grid>

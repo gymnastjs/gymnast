@@ -11,7 +11,7 @@ export default function() {
     <Layout height="parent" className={styles.page} dev={2}>
       <Root>
         <Grid margin={[0, 0.5]}>
-          <Grid padding={[1]} style={{ height }} dev={1} />
+          <Grid padding={1} style={{ height }} dev={1} />
         </Grid>
       </Root>
     </Layout>

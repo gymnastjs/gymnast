@@ -15,7 +15,7 @@ export default function() {
         <Layout key={key}>
           <Root>
             <Grid margin={[0, 0.5]}>
-              <Grid dev={key % 2 === 0 ? 2 : 4} padding={[1]}>
+              <Grid dev={key % 2 === 0 ? 2 : 4} padding={1}>
                 {loremIpsum.slice(0, 150 * (key % 3 + 1))}...
               </Grid>
             </Grid>
