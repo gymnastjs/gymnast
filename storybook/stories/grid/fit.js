@@ -10,8 +10,8 @@ type ItemProps = {
 }
 
 const Item = ({ text, ...props }: ItemProps) =>
-  <Col margin={[0.5]} {...props}>
-    <Grid padding={[0.5]} dev={1}>
+  <Col margin={0.5} {...props}>
+    <Grid padding={0.5} dev={1}>
       {text}
     </Grid>
   </Col>

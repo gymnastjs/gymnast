@@ -1,6 +1,6 @@
 // @flow
 import { memoize } from 'lodash'
-import type { Spacing, Component, SpacingProps } from './types'
+import type { Component, SpacingProps } from './types'
 
 /* eslint-disable no-unused-vars */
 const noop = (...params: any[]) => null
@@ -40,8 +40,8 @@ export function validateSpacingProps(props: SpacingProps) {
   ]
 
   if (
-    (props.margin instanceof Array && margins.some(isNumber(props))) ||
-    (props.padding instanceof Array && paddings.some(isNumber(props)))
+    (props.marginArray && margins.some(isNumber(props))) ||
+    (props.paddingArray && paddings.some(isNumber(props)))
   ) {
     log.error(
       'Cannot define margin or padding and a direction at the same time'
@@ -52,7 +52,7 @@ export function validateSpacingProps(props: SpacingProps) {
 }
 
 function getSpacing(
-  values?: Spacing = [],
+  values?: Array<number> = [],
   type: 'margin' | 'padding'
 ): { [string]: number } {
   if (!values || !values.length) {
@@ -91,31 +91,71 @@ export const getSpacingClasses = memoize(
   (values, type) => type + values.toString()
 )
 
-function getCSS(prop, value, base) {
+function getCSS(
+  prop: string,
+  value: number | string,
+  base: number
+): { [string]: number } {
+  const num = typeof value === 'number' ? value : parseFloat(value || 0)
+
   if (typeof value === 'undefined') {
     return {}
   } else if (prop.includes('padding')) {
-    return { [prop]: value * base }
+    return { [prop]: num * base }
   } else if (prop.includes('margin')) {
     return {
-      [`${prop.replace('margin', 'border')}Width`]: value * base,
+      [`${prop.replace('margin', 'border')}Width`]: num * base,
     }
   }
-  throw new Error(`Invalid css prop: ${prop}`)
+  log.error(`Invalid css prop: ${prop}`)
+  return {}
+}
+
+/**
+ * parseSpacing allows using different kinds of input for spacing parameters. Instead of allowing
+ * only number arrays, the following are also valid:
+ *
+ * - arrays of strings or numbers (converted to float):
+ *   - `margin={["1", 0, "0.5"]}` becomes `[1, 0, 0.5]`
+ * - space-separated or comma-separated strings
+ *   - `margin="0"` becomes `[0]`
+ *   - `margin="1 0"` becomes `[1, 0]`
+ *   - `margin="1,0"` becomes `[2, 0]`
+ * - numbers
+ *   - `margin={1}` becomes `[1]`
+ */
+function parseSpacing(spacing): number[] | void {
+  if (spacing instanceof Array) {
+    return spacing.map(parseFloat)
+  } else if (typeof spacing === 'undefined') {
+    return spacing
+  } else if (typeof spacing === 'string') {
+    // regex case examples: https://regex101.com/r/bs73rZ/1
+    return spacing.split(/(?:(?:\s+)?,(?:\s+)?|\s+)/).map(parseFloat)
+  } else if (typeof spacing === 'number') {
+    return [spacing]
+  }
+  log.error(
+    `Invalid spacing type "${typeof spacing}" used, only array, undefined, string or numbers allowed`
+  )
+  return undefined
 }
 
 export function combineSpacing(
   { margin, padding, ...props }: SpacingProps,
   base: number
 ) {
-  if (!validateSpacingProps({ margin, padding, ...props })) {
+  const marginArray = parseSpacing(margin)
+  const paddingArray = parseSpacing(padding)
+
+  if (!validateSpacingProps({ marginArray, paddingArray, ...props })) {
     return {}
   }
 
   const flatProps = {
     ...props,
-    ...getSpacing(margin, 'margin'),
-    ...getSpacing(padding, 'padding'),
+    ...getSpacing(marginArray, 'margin'),
+    ...getSpacing(paddingArray, 'padding'),
   }
 
   return Object.keys(flatProps).reduce(

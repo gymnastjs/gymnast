@@ -21,14 +21,17 @@ type BoxProps = {
 
 export default function Box({
   children,
-  margin = [0, 0.5, 1],
+  margin,
   style,
   type,
   value = type,
   ...props
 }: BoxProps) {
   return (
-    <Grid margin={margin} {...props}>
+    <Grid
+      margin={typeof margin === 'undefined' ? [0, 0.5, 1] : margin}
+      {...props}
+    >
       <Grid
         dev={typeMap[type]}
         padding={[1, 0]}
