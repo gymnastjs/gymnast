@@ -16,14 +16,14 @@ describe('Col', () => {
   })
 
   it('should override defaults when passing margin prop', () => {
-    wrapper = shallow(<Col margin={[1]} />)
+    wrapper = shallow(<Col margin={1} />)
     const gridProps = wrapper.find(Grid).props()
 
     expect(gridProps.marginTop).not.toBeDefined()
     expect(gridProps.marginRight).not.toBeDefined()
     expect(gridProps.marginBottom).not.toBeDefined()
     expect(gridProps.marginLeft).not.toBeDefined()
-    expect(gridProps.margin).toEqual([1])
+    expect(gridProps.margin).toEqual(1)
   })
 
   afterEach(() => {

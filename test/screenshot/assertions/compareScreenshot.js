@@ -2,17 +2,10 @@ const resemblejs = require('node-resemble-js')
 const fs = require('fs')
 const mkdirp = require('mkdirp')
 const path = require('path')
+const { getBrowserData } = require('../shared')
 
 function makeDir(dirPath) {
-  return new Promise((resolve, reject) => {
-    mkdirp(dirPath, err => {
-      if (err) {
-        reject(err)
-      }
-
-      resolve()
-    })
-  })
+  return mkdirp.sync(dirPath)
 }
 
 function compareImages(baselinePath, resultPath, callback) {
@@ -32,6 +25,7 @@ function compareImages(baselinePath, resultPath, callback) {
 
 exports.assertion = function assertion(filename, baselinePath, browserName) {
   const screenshotPath = 'test/screenshot/images'
+  const { platform } = getBrowserData(browserName)
   const resultPath = `${screenshotPath}/results/${browserName}-${filename}`
   const diffPath = `${screenshotPath}/diffs/${browserName}-${filename}`
 
@@ -39,14 +33,20 @@ exports.assertion = function assertion(filename, baselinePath, browserName) {
   this.expected = browserName === 'chrome' ? 0 : 3.7 // misMatchPercentage tolerance 3.7% for non chrome
 
   this.command = callback => {
-    makeDir(path.dirname(resultPath)).then(() =>
-      makeDir(path.dirname(diffPath))
-    )
+    makeDir(path.dirname(resultPath))
+    makeDir(path.dirname(diffPath))
+    makeDir(path.dirname(baselinePath))
 
     // create new baseline photo if none exists
-    if (!fs.existsSync(baselinePath) && browserName === 'chrome') {
-      process.stdout.write('Image did not exist, updating test...\n')
-      fs.writeFileSync(baselinePath, fs.readFileSync(resultPath))
+    if (!fs.existsSync(baselinePath)) {
+      // baseline is chrome for desktop, iphone for mobile
+      if (
+        (platform === 'desktop' && browserName === 'chrome') ||
+        (platform === 'mobile' && browserName === 'iphone7')
+      ) {
+        process.stdout.write('Image did not exist, updating test...\n')
+        fs.writeFileSync(baselinePath, fs.readFileSync(resultPath))
+      }
     }
 
     if (fs.existsSync(baselinePath)) {

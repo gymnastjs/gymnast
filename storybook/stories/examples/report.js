@@ -43,7 +43,7 @@ function Card({
 }): React.Element<any> {
   return (
     <Col style={{ minHeight: height }}>
-      <Grid padding={[1]} dev={5}>
+      <Grid padding={1} dev={5}>
         {children}
       </Grid>
     </Col>

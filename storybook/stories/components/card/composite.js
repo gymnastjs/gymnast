@@ -55,13 +55,13 @@ export default function() {
                 <Box type="D">Box 3</Box>
               </Grid>
             </Grid>
-            <Grid size={5} dev={4} padding={[1]} align="top">
+            <Grid size={5} dev={4} padding={1} align="top">
               <Grid marginBottom={1}>
                 <h3>Subtitle here</h3>
               </Grid>
               <Grid>
                 <Grid dev={2}>
-                  <Grid dev={1} padding={[1, 0.5, 0, 0.5]}>
+                  <Grid dev={1} padding="1, 0.5, 0">
                     <Col size={6}>
                       <h3>Title</h3>
                     </Col>
@@ -69,7 +69,7 @@ export default function() {
                       test
                     </Col>
                   </Grid>
-                  <Grid padding={[1, 0.5, 0, 0.5]}>
+                  <Grid padding="1, 0.5, 0">
                     <Col size={4}>
                       <Grid dev={4} justify="center">
                         Box 1

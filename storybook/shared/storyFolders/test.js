@@ -4,10 +4,11 @@ const { fromPairs } = require('lodash')
 const { readdirSync, lstatSync } = require('fs')
 const { join } = require('path')
 const {
-  getStoryPaths,
-  endsWith,
   doesntEndWith,
+  endsWith,
   getImagePath,
+  getMobilePath,
+  getStoryPaths,
 } = require('./shared')
 const { getName } = require('../getName')
 
@@ -28,6 +29,7 @@ function fileTestMapper(basePath) {
       Object.assign(paths, {
         story: process.env.NODE_ENV === 'test' && require(filepath).default,
         notes: '',
+        mobile: getMobilePath(filepath),
         image: getImagePath(filepath),
       }),
     ]
