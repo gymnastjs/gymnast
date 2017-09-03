@@ -11,7 +11,7 @@ export default function() {
 
   return (
     <Layout height="parent" className={styles.page} dev={5}>
-      {times(repeats, key =>
+      {times(repeats, key => (
         <Layout key={key}>
           <Root>
             <Grid margin={[0, 0.5]}>
@@ -21,7 +21,7 @@ export default function() {
             </Grid>
           </Root>
         </Layout>
-      )}
+      ))}
     </Layout>
   )
 }

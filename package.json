@@ -52,6 +52,7 @@
     "css-loader": "0.28.7",
     "cz-conventional-changelog": "2.0.0",
     "enzyme": "2.9.1",
+    "enzyme-to-json": "1.5.1",
     "eslint": "4.6.0",
     "eslint-config-airbnb": "15.1.0",
     "eslint-config-prettier": "2.4.0",
@@ -105,6 +106,7 @@
     ]
   },
   "jest": {
+    "collectCoverageFrom": ["src/{,**/}*.js"],
     "moduleNameMapper": {
       "^.+[.]css$": "identity-obj-proxy",
       "^.+[.](md|txt)$": "<rootDir>/test/stringStub.js"
@@ -147,6 +149,7 @@
     "test:image": "nightwatch --config test/screenshot/nightwatch.conf.js --env iphone7,ie11,safari,firefox,edge,chrome",
     "test:size": "bundlesize",
     "test": "jest",
+    "test:cover": "jest --coverage",
     "test:watch": "jest --watch"
   },
   "release": {

@@ -22,13 +22,11 @@ function getContainerSection(index, subsections) {
   return (
     <Layout key={index} height="parent" overflow="scrollbars">
       <Root align="top">
-        {times(subsections, i =>
+        {times(subsections, i => (
           <Grid margin={verticalHalf} key={i}>
-            <h1>
-              SubSection {i + 1}
-            </h1>
+            <h1>SubSection {i + 1}</h1>
           </Grid>
-        )}
+        ))}
       </Root>
     </Layout>
   )

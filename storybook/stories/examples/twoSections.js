@@ -38,10 +38,7 @@ export default function() {
                 <h2>Content</h2>
               </Col>
               <Grid margin={horizontalHalf}>
-                {includeText &&
-                  <p>
-                    {loremIpsum}
-                  </p>}
+                {includeText && <p>{loremIpsum}</p>}
               </Grid>
             </Grid>
           </Root>

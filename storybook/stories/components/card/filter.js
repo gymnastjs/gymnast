@@ -63,9 +63,7 @@ export default function() {
                 <ListItem index={4} />
 
                 <Grid>
-                  <p>
-                    {loremIpsum.substr(0, 100)}
-                  </p>
+                  <p>{loremIpsum.substr(0, 100)}</p>
                 </Grid>
                 <Grid size={4} margin={[0, 0.5, 1, 0]}>
                   <button>Cancel</button>

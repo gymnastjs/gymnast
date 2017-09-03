@@ -13,7 +13,7 @@ export default function() {
   const margin = getMarginSelect('All Items Margins', 'All Items Margin Size')
   const align = !boolean('Stretch', true) ? 'top' : undefined
 
-  const getBox = index =>
+  const getBox = index => (
     <Box
       key={index}
       margin={margin}
@@ -22,6 +22,7 @@ export default function() {
       type="A"
       value="global"
     />
+  )
 
   return (
     <RootLayout>
