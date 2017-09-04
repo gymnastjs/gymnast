@@ -1,5 +1,6 @@
 /* eslint-disable no-console, prefer-arrow-callback, prefer-rest-params */
-const { resolve, existsSync } = require('path')
+const { existsSync } = require('fs')
+const { resolve } = require('path')
 const { moveSync } = require('fs-extra')
 const sharp = require('sharp')
 const { noop } = require('lodash')
