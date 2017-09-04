@@ -32,7 +32,7 @@ export default function SearchResults({
           </Grid>
         </Col>
       </Grid>
-      {times(results, key =>
+      {times(results, key => (
         <Grid key={key} style={{ height: 159 }}>
           {/**
             * Explicitly setting height to work around cross browser font height differences
@@ -62,7 +62,7 @@ export default function SearchResults({
             </Grid>
           </Col>
         </Grid>
-      )}
+      ))}
       <Col justify="center" size="auto">
         <Col marginBottom={0} size="fit">
           <Grid justify="center" className={styles.paginationArrow}>
@@ -70,11 +70,11 @@ export default function SearchResults({
           </Grid>
         </Col>
         <Col marginBottom={0} size={4} align="center">
-          {times(pages, num =>
+          {times(pages, num => (
             <Col marginBottom={0} size="auto" key={num}>
               {num + 1}
             </Col>
-          )}
+          ))}
           <Col marginLeft={0} marginBottom={0} size="auto">
             ...
           </Col>

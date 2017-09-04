@@ -20,7 +20,9 @@ function compareImages(baselinePath, resultPath, callback) {
     largeImageThreshold: 1200,
   })
 
-  resemblejs(baselinePath).compareTo(resultPath).onComplete(callback)
+  resemblejs(baselinePath)
+    .compareTo(resultPath)
+    .onComplete(callback)
 }
 
 exports.assertion = function assertion(filename, baselinePath, browserName) {
@@ -60,7 +62,10 @@ exports.assertion = function assertion(filename, baselinePath, browserName) {
 
   this.value = result => {
     if (result) {
-      result.getDiffImage().pack().pipe(fs.createWriteStream(diffPath))
+      result
+        .getDiffImage()
+        .pack()
+        .pipe(fs.createWriteStream(diffPath))
       return parseFloat(result.misMatchPercentage, 10) // value this.pass is called with
     }
     return 0

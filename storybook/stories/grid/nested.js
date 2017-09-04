@@ -52,11 +52,11 @@ export default function() {
       <Grid>
         <Col size={6}>
           <Grid {...params} dev={2}>
-            {times(items, index =>
+            {times(items, index => (
               <Box size={2} margin={margin} key={index} type="A">
-                {`${index * 2 % 12 + 2}`}
+                {`${(index * 2) % 12 + 2}`}
               </Box>
-            )}
+            ))}
           </Grid>
         </Col>
       </Grid>

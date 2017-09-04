@@ -1,26 +1,93 @@
-@import "./variables";
+@import './variables';
 
-.colors1 {
-  color: var(--axonGold);
-  background-color: var(--axonBlack);
+:root {
+  --colWidth: calc(var(--page-content-width) / 12 - var(--gutter));
+  --smallPageWidth: calc(100vw - var(--page-margin) * 2);
+  --col: calc(var(--smallPageWidth) / 12 - var(--gutter));
 }
 
-.colors2 {
-  color: var(--bolt);
-  background-color: var(--nomuraGray);
+:global .reflex-color-mode {
+  & :local(.colors1) {
+    color: var(--axonGold);
+    background-color: var(--axonBlack);
+  }
+
+  & :local(.colors2) {
+    color: var(--bolt);
+    background-color: var(--nomuraGray);
+  }
+
+  & :local(.colors3) {
+    color: var(--axonBlack);
+    background-color: var(--axonGold);
+  }
+
+  & :local(.colors4) {
+    color: var(--nomuraGray);
+    background-color: var(--bolt);
+  }
+
+  & :local(.colors5) {
+    color: var(--axonBlack);
+    background-color: white;
+  }
 }
 
-.colors3 {
-  color: var(--axonBlack);
-  background-color: var(--axonGold);
+:global .reflex-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  pointer-events: none;
 }
 
-.colors4 {
-  color: var(--nomuraGray);
-  background-color: var(--bolt);
+.content {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  pointer-events: none;
+  max-width: calc(var(--max-width) - var(--page-margin) * 2);
+  background-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    transparent var(--colWidth),
+    color(var(--bolt) alpha(0.1)) var(--gutter)
+  );
+  background-size: calc(var(--colWidth) + var(--gutter)) 1px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: var(--page-margin);
+    height: 100%;
+    background-color: color(var(--axonGold) alpha(0.15));
+  }
+
+  &:before {
+    left: calc(-1 * var(--page-margin));
+  }
+
+  &:after {
+    right: calc(-1 * var(--page-margin));
+  }
 }
 
-.colors5 {
-  color: var(--axonBlack);
-  background-color: white;
+@media (max-width: 1224px) {
+  .content {
+    width: var(--smallPageWidth);
+    min-width: 400px;
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent var(--col),
+      color(var(--axonGold) alpha(0.1)) calc(var(--col) + 1px),
+      color(var(--axonGold) alpha(0.1)) calc(var(--col) + var(--gutter) + 2px)
+    );
+    background-size: calc(var(--col) + var(--gutter) + 2px) 1px;
+  }
 }

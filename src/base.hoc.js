@@ -1,6 +1,5 @@
 // @flow
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import type {
   Dev,
@@ -35,74 +34,61 @@ export type Props = {
 }
 
 export default function withBase(Component: React.ComponentType<*>) {
-  return class Base extends React.Component<Props & { base: number }> {
-    static contextTypes = {
-      devMode: PropTypes.bool,
+  return function Base({
+    align,
+    base,
+    children,
+    className,
+    dev,
+    justify,
+    margin,
+    marginBottom,
+    marginLeft,
+    marginRight,
+    marginTop,
+    padding,
+    paddingBottom,
+    paddingLeft,
+    paddingRight,
+    paddingTop,
+    size,
+    style = {},
+    ...props
+  }: Props & { base: number }) {
+    const classes = compact([
+      className,
+      size && styles.col,
+      size && styles[`col-${String(size)}`],
+      dev &&
+        process.env.NODE_ENV !== 'production' &&
+        devStyles[`colors${String(dev)}`],
+      styles.base,
+      align && styles[`${align}Align`],
+      justify && styles[`${justify}Justify`],
+    ])
+    const cssStyle = {
+      ...style,
+      ...combineSpacing(
+        {
+          margin,
+          padding,
+          marginTop,
+          marginRight,
+          marginBottom,
+          marginLeft,
+          paddingTop,
+          paddingRight,
+          paddingBottom,
+          paddingLeft,
+        },
+        base
+      ),
     }
 
-    static defaultProps = {
-      style: {},
-    }
-
-    render() {
-      const {
-        align,
-        base,
-        children,
-        className,
-        dev,
-        justify,
-        margin,
-        marginBottom,
-        marginLeft,
-        marginRight,
-        marginTop,
-        padding,
-        paddingBottom,
-        paddingLeft,
-        paddingRight,
-        paddingTop,
-        size,
-        style,
-        ...props
-      } = this.props
-
-      const classes = compact([
-        className,
-        size && styles.col,
-        size && styles[`col-${String(size)}`],
-        dev &&
-          this.context.devMode &&
-          process.env.NODE_ENV !== 'production' &&
-          devStyles[`colors${String(dev)}`],
-        styles.base,
-        align && styles[`${align}Align`],
-        justify && styles[`${justify}Justify`],
-      ])
-      const cssStyle = {
-        ...style,
-        ...combineSpacing(
-          {
-            margin,
-            padding,
-            marginTop,
-            marginRight,
-            marginBottom,
-            marginLeft,
-            paddingTop,
-            paddingRight,
-            paddingBottom,
-            paddingLeft,
-          },
-          base
-        ),
-      }
-
-      return (
-        <Component {...props} className={classes.join(' ')} style={cssStyle}>
-          {children}
-        </Component>
-      )
-    }
+    return (
+      <Component {...props} className={classes.join(' ')} style={cssStyle}>
+        {children}
+      </Component>
+    )
   }
 }

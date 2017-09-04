@@ -15,12 +15,11 @@ type HeadingProps = {
  * fonts render differently between browsers, which impacts image comparison tests. To reduce these
  * differences, we lock the header height
  */
-const Heading = ({ children, size }: HeadingProps) =>
+const Heading = ({ children, size }: HeadingProps) => (
   <Grid marginBottom={1} size={size} style={{ height: 61 }}>
-    <h1>
-      {children}
-    </h1>
+    <h1>{children}</h1>
   </Grid>
+)
 
 export default function() {
   const margin = getMarginSelect()

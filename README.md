@@ -39,6 +39,20 @@ yarn add xn-reflex
 
 `React` and `PropTypes` are dependencies of the generated bundle and you'll need to make sure you include the CSS file from `xn-reflex/dist/reflex.css`.
 
+## ⚙️ Dev Mode
+
+Ensuring a layout adheres to the grid can be difficult. To simplify this task, Reflex includes 2 tools to assist you: a grid overlay and a dev background color mode. You can initialize both invoking `initDevMode`.
+
+Learn more about dev mode in the [wiki](https://github.com/obartra/reflex/wiki/Dev-Mode).
+
+<img src="/img/devMode.png" width="300px" alt="Dev Mode Example" />
+
+```js
+import { initDevMode } from 'xn-reflex'
+
+const { toggleColor, toggleOverlay } = initDevMode()
+```
+
 ## 👥 Contributors
 
 The main purpose of this repository is to continue to evolve Reflex, making it more capable and easier to use. Development of Reflex happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Check the [contributing.md](./CONTRIBUTING.md) to learn how you can take part in improving Reflex.
@@ -59,7 +73,7 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 | Code Quality  | [![CircleCI](https://circleci.com/gh/obartra/reflex/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/reflex/tree/master) [![Test Coverage](https://codeclimate.com/github/obartra/reflex/badges/coverage.svg)](https://codeclimate.com/github/obartra/reflex/coverage) [![Code Climate](https://codeclimate.com/github/obartra/reflex/badges/gpa.svg)](https://codeclimate.com/github/obartra/reflex) [![codebeat badge](https://codebeat.co/badges/d3b5abcd-60b2-4ab3-96b6-b3ab392b789d)](https://codebeat.co/projects/github-com-obartra-reflex-master) [![Package Quality](http://npm.packagequality.com/shield/xn-reflex.svg)](http://npm.packagequality.com/#?package=xn-reflex) [![Sauce Test Status](https://saucelabs.com/buildstatus/reflex)](https://saucelabs.com/u/reflex) |
 | Versioning    | [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm](https://img.shields.io/npm/v/xn-reflex.svg)](https://www.npmjs.com/package/xn-reflex) |
 | Dependencies  | [![Known Vulnerabilities](https://snyk.io/test/github/obartra/reflex/badge.svg)](https://snyk.io/test/github/obartra/reflex) [![DavidDM](https://david-dm.org/obartra/reflex.svg)](https://david-dm.org/obartra/reflex) [![bitHound Overall Score](https://www.bithound.io/github/obartra/reflex/badges/score.svg)](https://www.bithound.io/github/obartra/reflex) |
-| File Size     | ![max gzipped bundle size](https://img.shields.io/badge/gzip-7.5kb-brightgreen.svg) |
+| File Size     | ![max gzipped bundle size](https://img.shields.io/badge/gzip-8.0kb-brightgreen.svg) |
 | Questions     | [![Join the chat at https://gitter.im/react-reflex/Lobby](https://badges.gitter.im/react-reflex/Lobby.svg)](https://gitter.im/react-reflex/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![xn-reflex StackOverflow tags](https://img.shields.io/badge/stackoverflow-xn--reflex-f48024.svg)](https://stackoverflow.com/questions/tagged/xn-reflex)|
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/reflex.svg)](https://saucelabs.com/u/reflex)

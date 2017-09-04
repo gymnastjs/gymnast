@@ -3,8 +3,12 @@ import * as React from 'react'
 import { each } from 'lodash'
 import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
-import { utils } from '../src/reflex'
+import { utils, initDevMode } from '../src/reflex'
 import { storyFolders, WithExtensions } from './shared'
+
+const { toggleColor } = initDevMode({ force: true })
+
+toggleColor()
 
 /**
  * storyFolders dynamically fetches all files within `/stories`
@@ -34,11 +38,11 @@ function configStories(storiesOfName: string, storiesModule: typeof module) {
 }
 
 function addStory({ story: WrappedComponent, notes, name }, component) {
-  component.add(name, () =>
+  component.add(name, () => (
     <WithExtensions notes={notes}>
       <WrappedComponent />
     </WithExtensions>
-  )
+  ))
 }
 
 const components = {}

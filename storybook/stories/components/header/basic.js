@@ -19,9 +19,9 @@ export default function() {
         <Box size={2} type="D" value="Action 2" />
       </Grid>
       <Grid size={6}>
-        {times(items, i =>
+        {times(items, i => (
           <Box size={2} type="A" key={i} value={`${i + 1}`} />
-        )}
+        ))}
       </Grid>
       <Grid size={6}>
         <Box type="A" />

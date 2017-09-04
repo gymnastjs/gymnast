@@ -1,5 +1,5 @@
 /* eslint-disable no-console, prefer-arrow-callback, prefer-rest-params */
-const { resolve } = require('path')
+const { resolve, existsSync } = require('path')
 const { moveSync } = require('fs-extra')
 const sharp = require('sharp')
 const { noop } = require('lodash')
@@ -25,6 +25,12 @@ function isValid(
   })
 }
 
+function move(origin, destination) {
+  if (existsSync(origin)) {
+    moveSync(origin, destination, { overwrite: true })
+  }
+}
+
 exports.command = function command(filename, baseline, sessionId, browserName) {
   const screenshotPath = 'test/screenshot/images'
   const resultPath = `${screenshotPath}/results/${browserName}-${filename}`
@@ -39,11 +45,12 @@ exports.command = function command(filename, baseline, sessionId, browserName) {
     if (extract) {
       const target = resolve(__dirname, '../../..', resultPath)
       const temp = resolve(__dirname, '../../../temp.png')
+      const movePartial = move.bind(this, temp, target)
 
       return sharp(target)
         .extract(extract)
         .toFile(temp)
-        .then(() => moveSync(temp, target, { overwrite: true }))
+        .then(movePartial)
         .then(check)
     }
 
