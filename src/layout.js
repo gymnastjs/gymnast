@@ -1,6 +1,5 @@
 // @flow
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import { compact } from 'lodash'
 import { combineSpacing } from './utils'
 import type {
@@ -61,68 +60,48 @@ export type Props = {
   style?: { [string]: string | number },
 }
 
-export default class Layout extends React.Component<Props> {
-  static contextTypes = {
-    devMode: PropTypes.bool,
-  }
+export default function Layout({
+  className,
+  dev,
+  fixed,
+  height,
+  margin,
+  marginBottom,
+  marginLeft,
+  marginRight,
+  marginTop,
+  overflow,
+  style,
+  ...props
+}: Props) {
+  const classes = compact([
+    className,
+    getFixed(fixed),
+    getLayout(height),
+    getOverflow(overflow),
+    dev &&
+      process.env.NODE_ENV !== 'production' &&
+      devStyles[`colors${String(dev)}`],
+    styles.layout,
+  ])
 
-  static childContextTypes = {
-    devMode: PropTypes.bool,
-  }
-
-  getChildContext() {
-    return {
-      devMode: this.props.devMode || this.context.devMode,
-    }
-  }
-
-  render() {
-    const {
-      className,
-      fixed,
-      margin,
-      marginTop,
-      marginRight,
-      marginBottom,
-      marginLeft,
-      overflow,
-      height,
-      style,
-      devMode,
-      dev,
-      ...props
-    } = this.props
-
-    const classes = compact([
-      className,
-      getFixed(fixed),
-      getLayout(height),
-      getOverflow(overflow),
-      dev &&
-        (devMode || this.context.devMode) &&
-        process.env.NODE_ENV !== 'production' &&
-        devStyles[`colors${String(dev)}`],
-      styles.layout,
-    ])
-
-    return (
-      <div
-        {...props}
-        className={classes.join(' ')}
-        style={{
-          ...style,
-          ...combineSpacing(
-            {
-              margin,
-              marginTop,
-              marginRight,
-              marginBottom,
-              marginLeft,
-            },
-            24
-          ),
-        }}
-      />
-    )
-  }
+  return (
+    <div
+      {...props}
+      className={classes.join(' ')}
+      style={{
+        ...style,
+        ...combineSpacing(
+          {
+            margin,
+            marginTop,
+            marginRight,
+            marginBottom,
+            marginLeft,
+          },
+          24
+        ),
+      }}
+    />
+  )
 }

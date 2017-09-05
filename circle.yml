@@ -2,7 +2,7 @@ machine:
   environment:
     TARGET_URL: "https://obartra.github.io/reflex/branch/$CIRCLE_BRANCH"
   node:
-    version: 8.1.2
+    version: 8.4.0
 general:
   artifacts:
     - "dist"

@@ -1,4 +1,4 @@
-@import "../variables.css";
+@import '../variables.css';
 
 .root {
   padding: 0 calc(var(--page-margin) - var(--gutter) / 2);

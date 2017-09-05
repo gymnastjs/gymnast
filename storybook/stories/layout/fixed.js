@@ -16,9 +16,7 @@ export default function() {
       <Layout fixed={options[fixed]} dev={2}>
         <Root>
           <Grid margin={[0, 0.5]}>
-            <h1>
-              Fixed to the {fixed}
-            </h1>
+            <h1>Fixed to the {fixed}</h1>
           </Grid>
         </Root>
       </Layout>

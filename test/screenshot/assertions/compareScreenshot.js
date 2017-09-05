@@ -20,7 +20,9 @@ function compareImages(baselinePath, resultPath, callback) {
     largeImageThreshold: 1200,
   })
 
-  resemblejs(baselinePath).compareTo(resultPath).onComplete(callback)
+  resemblejs(baselinePath)
+    .compareTo(resultPath)
+    .onComplete(callback)
 }
 
 exports.assertion = function assertion(filename, baselinePath, browserName) {
@@ -30,7 +32,7 @@ exports.assertion = function assertion(filename, baselinePath, browserName) {
   const diffPath = `${screenshotPath}/diffs/${browserName}-${filename}`
 
   this.message = 'Unexpected compareScreenshot error.'
-  this.expected = browserName === 'chrome' ? 0 : 3.7 // misMatchPercentage tolerance 3.7% for non chrome
+  this.expected = browserName === 'chrome' ? 0 : 3.7 // misMatchPercentage tolerance 3.0% for non chrome
 
   this.command = callback => {
     makeDir(path.dirname(resultPath))
@@ -60,7 +62,10 @@ exports.assertion = function assertion(filename, baselinePath, browserName) {
 
   this.value = result => {
     if (result) {
-      result.getDiffImage().pack().pipe(fs.createWriteStream(diffPath))
+      result
+        .getDiffImage()
+        .pack()
+        .pipe(fs.createWriteStream(diffPath))
       return parseFloat(result.misMatchPercentage, 10) // value this.pass is called with
     }
     return 0

@@ -1,53 +1,29 @@
 // @flow
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import { WithNotes } from '@storybook/addon-notes'
-import { boolean } from '@storybook/addon-knobs'
-import style from './designGrid.css'
+import layoutStyle from './layout.css'
 
-export default class WithExtensions extends React.PureComponent<{
+type Props = {
   notes?: string,
   className?: string,
-}> {
-  static childContextTypes = {
-    devMode: PropTypes.bool,
-  }
+}
 
-  getChildContext() {
-    return {
-      devMode: boolean('Dev Mode', true),
-    }
-  }
+export default function WithExtensions({ notes, className, ...props }: Props) {
+  const isCI = window.location.href.indexOf('isCI') !== -1
 
-  getDesignGrid = () =>
-    <div className={style.designGrid}>
-      <div className={style.contentArea} />
-    </div>
-
-  render() {
-    const { notes, className, ...props } = this.props
-    // defaults to last used value, when changed it updates it. This allows us to persist the 'show overlay' setting across examples
-    const showOverlay = boolean('Overlay', false)
-
-    const designGrid = showOverlay && this.getDesignGrid()
-    const isCI = window.location.href.indexOf('isCI') !== -1
-
-    if (notes) {
-      return (
-        <div>
-          {designGrid}
-          <WithNotes notes={notes}>
-            <div {...props} className={isCI && style.isCI} />
-          </WithNotes>
-        </div>
-      )
-    }
-
+  if (notes) {
     return (
       <div>
-        {designGrid}
-        <div {...props} className={isCI && style.isCI} />
+        <WithNotes notes={notes}>
+          <div {...props} className={isCI && layoutStyle.isCI} />
+        </WithNotes>
       </div>
     )
   }
+
+  return (
+    <div>
+      <div {...props} className={isCI && layoutStyle.isCI} />
+    </div>
+  )
 }

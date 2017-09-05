@@ -9,3 +9,4 @@ test/screenshot/images/results
 tests_output/
 selenium-server-standalone-*
 nohup.out
+temp.png

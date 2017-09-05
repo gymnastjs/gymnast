@@ -36,12 +36,7 @@ export default function() {
               <Grid>
                 <h2>Content</h2>
               </Grid>
-              <Grid>
-                {includeText &&
-                  <p>
-                    {loremIpsum}
-                  </p>}
-              </Grid>
+              <Grid>{includeText && <p>{loremIpsum}</p>}</Grid>
             </Grid>
             <Grid size={2} dev={3} paddingTop={1} margin={horizontal}>
               <Grid>

@@ -2,7 +2,6 @@
   "rules": {
     "color-no-invalid-hex": true,
     "declaration-colon-space-after": "always",
-    "indentation": 2,
     "max-empty-lines": 2,
     "rule-empty-line-before": [
       "always",

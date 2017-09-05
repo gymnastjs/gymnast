@@ -28,7 +28,7 @@ export default function() {
             height: 100,
           }}
         />
-        {times(items, index =>
+        {times(items, index => (
           <Box
             size={2}
             margin={margin}
@@ -36,7 +36,7 @@ export default function() {
             type="A"
             value={`${index + 6}`}
           />
-        )}
+        ))}
       </Grid>
     </RootLayout>
   )

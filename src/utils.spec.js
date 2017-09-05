@@ -1,4 +1,11 @@
-import { log, combineSpacing, validateSpacingProps } from './utils'
+import {
+  combineSpacing,
+  getCSS,
+  getSpacingClasses,
+  log,
+  parseSpacing,
+  validateSpacingProps,
+} from './utils'
 
 const base = 24
 
@@ -19,15 +26,13 @@ describe('combineSpacing', () => {
       }))
   )
   ;[
-    (
-      '1 0.5 2 0',
-      '1,0.5,2,0',
-      '1   0.5  2 0',
-      '1, 0.5, 2, 0',
-      '1 , 0.5  , 2 ,  0'
-    ),
+    ('1 0.5 2 0',
+    '1,0.5,2,0',
+    '1   0.5  2 0',
+    '1, 0.5, 2, 0',
+    '1 , 0.5  , 2 ,  0'),
   ].forEach(margin =>
-    it(`should convert space sparated strings to valid spacing props for "${margin}"`, () =>
+    it(`should convert space separated strings to valid spacing props for "${margin}"`, () =>
       expect(
         combineSpacing(
           {
@@ -92,6 +97,36 @@ describe('combineSpacing', () => {
   })
 })
 
+describe('getSpacingClasses', () => {
+  it('should throw if more than 4 values are passed', () => {
+    expect(() => {
+      getSpacingClasses([1, 2, 3, 4, 5], 'margin')
+    }).toThrow()
+  })
+
+  it('should return "{}" if no spacing values are requested', () => {
+    expect(getSpacingClasses([], 'padding')).toEqual({})
+  })
+
+  it('should expand shorthand values', () => {
+    expect(getSpacingClasses([1], 'margin')).toEqual({
+      marginTop: 1,
+      marginRight: 1,
+      marginBottom: 1,
+      marginLeft: 1,
+    })
+  })
+
+  it('should keep the input if it has full size', () => {
+    expect(getSpacingClasses([1, 0, 0.5, 2], 'margin')).toEqual({
+      marginTop: 1,
+      marginRight: 0,
+      marginBottom: 0.5,
+      marginLeft: 2,
+    })
+  })
+})
+
 describe('validateSpacingProps', () => {
   it('should not throw for valid props', () => {
     expect(() => validateSpacingProps({})).not.toThrowError()
@@ -119,6 +154,64 @@ describe('validateSpacingProps', () => {
       marginLeft: 0,
       marginArray: [1, 2, 0.5, 0],
     })
+
+    expect(log.error).toHaveBeenCalled()
+  })
+})
+
+describe('getCSS', () => {
+  it('should log an error if there are invalid props', () => {
+    spyOn(log, 'error')
+
+    getCSS('meow', 3, 24)
+
+    expect(log.error).toHaveBeenCalled()
+  })
+
+  it('should return "{}" if value is not set', () => {
+    const css = getCSS('marginTop')
+
+    expect(css).toEqual({})
+  })
+
+  it('should set padding as is', () => {
+    const css = getCSS('paddingLeft', 3, 5)
+
+    expect(css).toEqual({
+      paddingLeft: 3 * 5,
+    })
+  })
+
+  it('should set margin as border width', () => {
+    const css = getCSS('marginBottom', 2, 4)
+
+    expect(css).toEqual({
+      borderBottomWidth: 2 * 4,
+    })
+  })
+})
+
+describe('parseSpacing', () => {
+  it('should return a number array as is', () => {
+    expect(parseSpacing([1, 0.5])).toEqual([1, 0.5])
+  })
+
+  it('should cast a mixed or string array to floats', () => {
+    expect(parseSpacing(['2.5'])).toEqual([2.5])
+  })
+
+  it('should convert a string to array', () => {
+    expect(parseSpacing('1')).toEqual([1])
+  })
+
+  it('should convert a number to array', () => {
+    expect(parseSpacing(2)).toEqual([2])
+  })
+
+  it('should log an error if using another format', () => {
+    spyOn(log, 'error')
+
+    parseSpacing({})
 
     expect(log.error).toHaveBeenCalled()
   })

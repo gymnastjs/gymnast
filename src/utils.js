@@ -91,7 +91,7 @@ export const getSpacingClasses = memoize(
   (values, type) => type + values.toString()
 )
 
-function getCSS(
+export function getCSS(
   prop: string,
   value: number | string,
   base: number
@@ -124,7 +124,7 @@ function getCSS(
  * - numbers
  *   - `margin={1}` becomes `[1]`
  */
-function parseSpacing(spacing): number[] | void {
+export function parseSpacing(spacing: any): number[] | void {
   if (spacing instanceof Array) {
     return spacing.map(parseFloat)
   } else if (typeof spacing === 'undefined') {

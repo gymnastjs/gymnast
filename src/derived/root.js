@@ -7,9 +7,7 @@ import type { Props } from '../base.hoc'
 export default function Root({ children, justify, ...props }: Props) {
   return (
     <Grid {...props} className={styles.root} justify="center">
-      <Grid justify={justify}>
-        {children}
-      </Grid>
+      <Grid justify={justify}>{children}</Grid>
     </Grid>
   )
 }

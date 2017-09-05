@@ -14,9 +14,9 @@ export default function() {
       <Col>
         <h1>Auto Size</h1>
       </Col>
-      {times(9, size =>
+      {times(9, size => (
         <Grid key={size}>
-          {times(size + items, i =>
+          {times(size + items, i => (
             <Box
               size="auto"
               margin={margin}
@@ -24,9 +24,9 @@ export default function() {
               type="A"
               value={`1 / ${size + items}`}
             />
-          )}
+          ))}
         </Grid>
-      )}
+      ))}
 
       <Col>
         <h1>8 - auto</h1>
@@ -49,7 +49,7 @@ export default function() {
         <h1>Custom</h1>
       </Col>
       <Grid>
-        {times(items, index =>
+        {times(items, index => (
           <Box
             margin={margin}
             size="auto"
@@ -57,11 +57,11 @@ export default function() {
             type="A"
             value={`${index + 1}`}
           />
-        )}
+        ))}
       </Grid>
       <Grid>
         <Box margin={margin} size={6} type="A" value="6 (fixed)" />
-        {times(items, index =>
+        {times(items, index => (
           <Box
             margin={margin}
             size="auto"
@@ -69,7 +69,7 @@ export default function() {
             type="A"
             value={`${index + 2}`}
           />
-        )}
+        ))}
       </Grid>
     </RootLayout>
   )

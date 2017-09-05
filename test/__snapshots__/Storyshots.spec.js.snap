@@ -1755,7 +1755,6 @@ exports[`Storyshots Components.Header App 1`] = `
                 "borderLeftWidth": 12,
                 "borderRightWidth": 12,
                 "borderTopWidth": 0,
-                "flexWrap": "nowrap",
               }
             }
           >
@@ -1790,12 +1789,8 @@ exports[`Storyshots Components.Header App 1`] = `
               />
             </div>
             <div
-              className="col col-auto base rightJustify"
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
+              className="col col-fit base"
+              style={Object {}}
             >
               Lorem ipsum
             </div>
@@ -4615,7 +4610,6 @@ exports[`Storyshots Examples Search 1`] = `
                   "borderLeftWidth": 12,
                   "borderRightWidth": 12,
                   "borderTopWidth": 0,
-                  "flexWrap": "nowrap",
                 }
               }
             >
@@ -4650,12 +4644,8 @@ exports[`Storyshots Examples Search 1`] = `
                 />
               </div>
               <div
-                className="col col-auto base rightJustify"
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
+                className="col col-fit base"
+                style={Object {}}
               >
                 Lorem ipsum
               </div>
@@ -6489,6 +6479,594 @@ exports[`Storyshots Grid Fit 1`] = `
                 }
               >
                 Fit 1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Format 1`] = `
+<div>
+  <div
+    className={false}
+  >
+    <div
+      className="parent layout"
+      style={Object {}}
+    >
+      <div
+        className="root base centerJustify"
+        style={Object {}}
+      >
+        <div
+          className="base"
+          style={Object {}}
+        >
+          <div
+            className="base"
+            style={Object {}}
+          >
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <h1>
+                Array
+              </h1>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 0,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <code>
+                [1,0.5]
+              </code>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 24,
+                }
+              }
+            >
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 24,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 24,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 24,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 24,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="base"
+            style={Object {}}
+          >
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <h1>
+                Comma-separated
+              </h1>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 0,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <code>
+                "1,0.5"
+              </code>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 24,
+                }
+              }
+            >
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 24,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 24,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 24,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 24,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="base"
+            style={Object {}}
+          >
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <h1>
+                Space-separated
+              </h1>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 0,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <code>
+                "1 0.5"
+              </code>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 24,
+                }
+              }
+            >
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 24,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 24,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 24,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 24,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="base"
+            style={Object {}}
+          >
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <h1>
+                Mixed Separation
+              </h1>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 0,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <code>
+                "1, 0.5"
+              </code>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 24,
+                }
+              }
+            >
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 24,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 24,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 24,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 24,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="base"
+            style={Object {}}
+          >
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <h1>
+                Number as String
+              </h1>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 0,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <code>
+                "0.5"
+              </code>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 24,
+                }
+              }
+            >
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 12,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 12,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 12,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 12,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="base"
+            style={Object {}}
+          >
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 12,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <h1>
+                Number
+              </h1>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 0,
+                  "borderLeftWidth": 12,
+                  "borderRightWidth": 12,
+                  "borderTopWidth": 0,
+                }
+              }
+            >
+              <code>
+                0.5
+              </code>
+            </div>
+            <div
+              className="base"
+              style={
+                Object {
+                  "borderBottomWidth": 24,
+                }
+              }
+            >
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 12,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 12,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
+              </div>
+              <div
+                className="col col-auto base"
+                style={
+                  Object {
+                    "borderBottomWidth": 12,
+                    "borderLeftWidth": 12,
+                    "borderRightWidth": 12,
+                    "borderTopWidth": 12,
+                  }
+                }
+              >
+                <div
+                  className="colors1 base centerAlign centerJustify"
+                  style={
+                    Object {
+                      "paddingBottom": 24,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 24,
+                    }
+                  }
+                >
+                  A
+                </div>
               </div>
             </div>
           </div>
