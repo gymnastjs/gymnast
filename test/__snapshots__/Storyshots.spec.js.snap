@@ -1755,7 +1755,6 @@ exports[`Storyshots Components.Header App 1`] = `
                 "borderLeftWidth": 12,
                 "borderRightWidth": 12,
                 "borderTopWidth": 0,
-                "flexWrap": "nowrap",
               }
             }
           >
@@ -1790,12 +1789,8 @@ exports[`Storyshots Components.Header App 1`] = `
               />
             </div>
             <div
-              className="col col-auto base rightJustify"
-              style={
-                Object {
-                  "whiteSpace": "nowrap",
-                }
-              }
+              className="col col-fit base"
+              style={Object {}}
             >
               Lorem ipsum
             </div>
@@ -4615,7 +4610,6 @@ exports[`Storyshots Examples Search 1`] = `
                   "borderLeftWidth": 12,
                   "borderRightWidth": 12,
                   "borderTopWidth": 0,
-                  "flexWrap": "nowrap",
                 }
               }
             >
@@ -4650,12 +4644,8 @@ exports[`Storyshots Examples Search 1`] = `
                 />
               </div>
               <div
-                className="col col-auto base rightJustify"
-                style={
-                  Object {
-                    "whiteSpace": "nowrap",
-                  }
-                }
+                className="col col-fit base"
+                style={Object {}}
               >
                 Lorem ipsum
               </div>
