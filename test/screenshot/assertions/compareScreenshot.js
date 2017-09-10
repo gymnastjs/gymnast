@@ -2,13 +2,13 @@ const resemblejs = require('node-resemble-js')
 const fs = require('fs')
 const mkdirp = require('mkdirp')
 const path = require('path')
-const { getBrowserData } = require('../shared')
+const { getBrowserData, retry } = require('../shared')
 
 function makeDir(dirPath) {
   return mkdirp.sync(dirPath)
 }
 
-function compareImages(baselinePath, resultPath, callback) {
+function compareImages(baselinePath, resultPath) {
   resemblejs.outputSettings({
     errorColor: {
       red: 225,
@@ -20,14 +20,40 @@ function compareImages(baselinePath, resultPath, callback) {
     largeImageThreshold: 1200,
   })
 
-  resemblejs(baselinePath)
-    .compareTo(resultPath)
-    .onComplete(callback)
+  return new Promise(resolve => {
+    resemblejs(baselinePath)
+      .compareTo(resultPath)
+      .onComplete(resolve)
+  })
+}
+
+function compareScreenshot({ baseline, result, diff }, browserName) {
+  const { platform } = getBrowserData(browserName)
+
+  makeDir(path.dirname(result))
+  makeDir(path.dirname(diff))
+  makeDir(path.dirname(baseline))
+
+  // create new baseline photo if none exists
+  if (!fs.existsSync(baseline)) {
+    // baseline is chrome for desktop, iphone for mobile
+    if (
+      (platform === 'desktop' && browserName === 'chrome') ||
+      (platform === 'mobile' && browserName === 'iphone7')
+    ) {
+      process.stdout.write('Image did not exist, updating test...\n')
+      fs.writeFileSync(baseline, fs.readFileSync(result))
+    }
+  }
+
+  if (fs.existsSync(baseline)) {
+    return compareImages(baseline, result)
+  }
+  return Promise.reject()
 }
 
 exports.assertion = function assertion(filename, baselinePath, browserName) {
   const screenshotPath = 'test/screenshot/images'
-  const { platform } = getBrowserData(browserName)
   const resultPath = `${screenshotPath}/results/${browserName}-${filename}`
   const diffPath = `${screenshotPath}/diffs/${browserName}-${filename}`
 
@@ -35,28 +61,16 @@ exports.assertion = function assertion(filename, baselinePath, browserName) {
   this.expected = browserName === 'chrome' ? 0 : 3.7 // misMatchPercentage tolerance 3.0% for non chrome
 
   this.command = callback => {
-    makeDir(path.dirname(resultPath))
-    makeDir(path.dirname(diffPath))
-    makeDir(path.dirname(baselinePath))
-
-    // create new baseline photo if none exists
-    if (!fs.existsSync(baselinePath)) {
-      // baseline is chrome for desktop, iphone for mobile
-      if (
-        (platform === 'desktop' && browserName === 'chrome') ||
-        (platform === 'mobile' && browserName === 'iphone7')
-      ) {
-        process.stdout.write('Image did not exist, updating test...\n')
-        fs.writeFileSync(baselinePath, fs.readFileSync(resultPath))
-      }
-    }
-
-    if (fs.existsSync(baselinePath)) {
-      compareImages(baselinePath, resultPath, callback)
-    } else {
-      callback(false)
-    }
-
+    retry(() =>
+      compareScreenshot(
+        {
+          baseline: baselinePath,
+          result: resultPath,
+          diff: diffPath,
+        },
+        browserName
+      ).then(callback)
+    ).catch(() => callback(false))
     return this
   }
 
