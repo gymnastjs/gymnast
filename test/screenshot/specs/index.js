@@ -45,18 +45,17 @@ function storyBookImageComparison(browser) {
 
   return browser.session(session =>
     scenarios
-      .reduce(
-        (b, { url, label, image, mobile }) =>
-          b
-            .url(url)
-            .compareScreenshot(
-              `${label}${isMobile ? '_mobile' : ''}.png`,
-              isMobile ? mobile : image,
-              session,
-              name
-            ),
-        browser
-      )
+      .reduce((b, { url, label, image, mobile }) => {
+        b
+          .url(url)
+          .compareScreenshot(
+            `${label}${isMobile ? '_mobile' : ''}.png`,
+            isMobile ? mobile : image,
+            session,
+            name
+          )
+        return b
+      }, browser)
       .sauceEnd()
       .end()
   )

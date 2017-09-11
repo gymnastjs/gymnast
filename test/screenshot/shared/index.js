@@ -19,9 +19,36 @@ function getBrowserData(browserName) {
   return {}
 }
 
+function delay(time) {
+  return new Promise(done => setTimeout(done, time))
+}
+
+function retry(promiseCalls, maxAttempts = 3, attempt = 0) {
+  return new Promise((success, fail) => {
+    try {
+      promiseCalls()
+        .then(success)
+        .catch(fail)
+    } catch (e) {
+      fail(e)
+    }
+  }).catch(e => {
+    if (attempt < maxAttempts) {
+      return delay(1000).then(() =>
+        retry(promiseCalls, maxAttempts, attempt + 1)
+      )
+    }
+    throw new Error(
+      `Max retries (${maxAttempts}) exceeded. ${e.stack || e.message}`
+    )
+  })
+}
+
 module.exports = {
-  isCIMaster,
-  getBrowserData,
-  username: process.env[`SAUCE_USERNAME${suffix}`],
   accessKey: process.env[`SAUCE_ACCESS_KEY${suffix}`],
+  delay,
+  getBrowserData,
+  isCIMaster,
+  retry,
+  username: process.env[`SAUCE_USERNAME${suffix}`],
 }

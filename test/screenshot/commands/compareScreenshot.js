@@ -4,7 +4,7 @@ const { resolve } = require('path')
 const { moveSync } = require('fs-extra')
 const sharp = require('sharp')
 const { noop } = require('lodash')
-const { getBrowserData } = require('../shared')
+const { getBrowserData, delay, retry } = require('../shared')
 
 sharp.concurrency(1)
 
@@ -26,19 +26,10 @@ function isValid(
   })
 }
 
-function move(origin, destination, attempt = 0) {
-  return new Promise((done, reject) => {
-    if (existsSync(origin)) {
-      moveSync(origin, destination, { overwrite: true })
-      done()
-    } else if (attempt < 3) {
-      setTimeout(() => {
-        move(origin, destination, attempt + 1)
-      }, 100)
-    } else {
-      reject('Unable to find file')
-    }
-  })
+function move(origin, destination) {
+  if (existsSync(origin)) {
+    moveSync(origin, destination, { overwrite: true })
+  }
 }
 
 exports.command = function command(filename, baseline, sessionId, browserName) {
@@ -57,11 +48,14 @@ exports.command = function command(filename, baseline, sessionId, browserName) {
       const temp = resolve(__dirname, '../../../temp.png')
       const movePartial = move.bind(this, temp, target, 0)
 
-      return sharp(target)
-        .extract(extract)
-        .toFile(temp)
-        .then(movePartial)
-        .then(check)
+      return retry(() =>
+        sharp(target)
+          .extract(extract)
+          .toFile(temp)
+          .then(movePartial)
+          .then(() => delay(100))
+          .then(check)
+      )
     }
 
     return check()
