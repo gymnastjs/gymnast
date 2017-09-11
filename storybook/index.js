@@ -8,7 +8,7 @@ import { storyFolders, WithExtensions } from './shared'
 
 const { toggleColor } = initDevMode({ force: true })
 
-toggleColor()
+toggleColor(true)
 
 /**
  * storyFolders dynamically fetches all files within `/stories`

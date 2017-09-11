@@ -1,22 +1,25 @@
 // @flow
 import styles from './dev.css'
+import { noop } from './utils'
 
 const KEY_CODE_K = 75
 const KEY_CODE_S = 83
-const noop = () => null
 const body = ((document: any).body: HTMLElement)
 
-function toggleColor() {
-  body.classList.toggle('reflex-color-mode')
+function toggleColor(force?: boolean) {
+  body.classList.toggle('reflex-color-mode', force)
 }
 
-function toggleOverlayMode(overlay) {
-  if (body.contains(overlay)) {
-    body.classList.remove('reflex-dev-mode')
-    body.removeChild(overlay)
-  } else {
-    body.classList.add('reflex-dev-mode')
+function toggleOverlayMode(overlay, force?: boolean) {
+  const hasOverlay = body.contains(overlay)
+  const set = typeof force === 'undefined' ? !hasOverlay : force
+
+  body.classList.toggle('reflex-dev-mode', set)
+
+  if (set && !hasOverlay) {
     body.appendChild(overlay)
+  } else if (!set && hasOverlay) {
+    body.removeChild(overlay)
   }
 }
 
