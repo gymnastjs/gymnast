@@ -1,12 +1,11 @@
 // @flow
 import { memoize } from 'lodash'
-import type { Component, SpacingProps } from './types'
+import type { Component, SpacingProps, Noop } from './types'
 
-/* eslint-disable no-unused-vars */
-const noop = (...params: any[]) => null
-/* eslint-enable no-unused-vars */
 const isProd = process.env.NODE_ENV === 'production'
 const isNumber = keys => key => typeof keys[key] === 'number'
+
+export const noop: Noop = () => null
 
 /* eslint-disable no-console */
 export const log = {
