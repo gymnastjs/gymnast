@@ -1,5 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
+import { log } from './../utils'
 import Col from './col'
 import Grid from '../grid'
 
@@ -24,6 +25,14 @@ describe('Col', () => {
     expect(gridProps.marginBottom).not.toBeDefined()
     expect(gridProps.marginLeft).not.toBeDefined()
     expect(gridProps.margin).toEqual(1)
+  })
+
+  it('should not error when passed valid props', () => {
+    spyOn(log, 'error')
+
+    wrapper = mount(<Col margin={0} />)
+
+    expect(log.error).not.toHaveBeenCalled()
   })
 
   afterEach(() => {

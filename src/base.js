@@ -1,9 +1,9 @@
 // @flow
 import * as React from 'react'
-import BaseHoc, { type Props as BaseProps } from './base.hoc'
+import withBase, { type Props as BaseProps } from './withBase'
 
 function Base(props: BaseProps) {
   return <div {...props} />
 }
 
-export default BaseHoc(Base)
+export default withBase(Base)
