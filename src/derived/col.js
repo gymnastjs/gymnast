@@ -2,7 +2,6 @@
 import * as React from 'react'
 import Grid from '../grid'
 import type { Props } from '../base.hoc'
-import { validateSpacingProps } from '../utils'
 
 const defaults = {
   marginTop: 0,
@@ -12,9 +11,7 @@ const defaults = {
 }
 
 export default function Col(props: Props) {
-  validateSpacingProps(props)
-
-  if (!props.margin) {
+  if (typeof props.margin === 'undefined') {
     return <Grid {...defaults} {...props} />
   }
   return <Grid {...props} />
