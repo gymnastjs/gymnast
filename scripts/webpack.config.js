@@ -66,12 +66,10 @@ module.exports = {
       }),
   ]),
   devtool: 'source-map',
-  externals: isProd
-    ? {
-        react: 'react',
-        'prop-types': 'PropTypes',
-      }
-    : {},
+  externals: {
+    react: 'react',
+    'prop-types': 'PropTypes',
+  },
   module: {
     rules: [
       {

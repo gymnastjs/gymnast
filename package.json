@@ -40,7 +40,7 @@
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-plugin-transform-runtime": "6.23.0",
-    "babel-preset-es2015": "6.24.1",
+    "babel-preset-env": "1.6.0",
     "babel-runtime": "6.26.0",
     "bithound": "1.7.0",
     "bundlesize": "0.14.4",
@@ -106,7 +106,9 @@
     ]
   },
   "jest": {
-    "collectCoverageFrom": ["src/{,**/}*.js"],
+    "collectCoverageFrom": [
+      "src/{,**/}*.js"
+    ],
     "moduleNameMapper": {
       "^.+[.]css$": "identity-obj-proxy",
       "^.+[.](md|txt)$": "<rootDir>/test/stringStub.js"
@@ -157,12 +159,15 @@
     "analyzeCommits": "@bubltechnology/customizable-commit-analyzer"
   },
   "dependencies": {
-    "lodash": "4.17.4",
-    "react": "15.6.1"
+    "lodash": "4.17.4"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=15"
   }
 }
