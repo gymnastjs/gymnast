@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import type { Props as GridProps } from './base.hoc'
+import type { Props as GridProps } from './withBase'
 import Base from './base'
 
 function Grid(props: GridProps) {

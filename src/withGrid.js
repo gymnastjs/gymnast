@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import BaseHoc, { type Props as GridProps } from './base.hoc'
+import BaseHoc, { type Props as GridProps } from './withBase'
 
 export default function withGrid(Component: any) {
   const BaseGrid = BaseHoc(Component)

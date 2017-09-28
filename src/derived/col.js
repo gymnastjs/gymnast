@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import Grid from '../grid'
-import type { Props } from '../base.hoc'
+import type { Props } from '../withBase'
 
 const defaults = {
   marginTop: 0,
