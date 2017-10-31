@@ -4,15 +4,17 @@ import { Col, Grid, type Size } from 'reflex'
 import { times } from 'lodash'
 import styles from '../../../shared/stories.css'
 
-export default function SearchResults({
-  results = 1,
-  pages = 4,
-  size,
-}: {
-  results?: number,
-  pages?: number,
-  size?: Size,
-}) {
+export default function SearchResults(
+  {
+    results = 1,
+    pages = 4,
+    size,
+  }: {
+    results?: number,
+    pages?: number,
+    size?: Size,
+  } = {}
+) {
   return (
     <Grid size={size} dev={5} align="top">
       <Grid>

@@ -1,6 +1,6 @@
 // @flow
 import { memoize } from 'lodash'
-import type { Component, SpacingProps, Noop } from './types'
+import type { SpacingProps, Noop } from './types'
 
 const isProd = process.env.NODE_ENV === 'production'
 const isNumber = keys => key => typeof keys[key] === 'number'
@@ -14,16 +14,6 @@ export const log = {
   info: isProd ? noop : console.log.bind(console),
 }
 /* eslint-enable no-console */
-
-export function getDisplayName(WrappedComponent: string | Component): string {
-  const defaultName = 'Component'
-
-  if (typeof WrappedComponent !== 'string') {
-    return WrappedComponent.displayName || WrappedComponent.name || defaultName
-  }
-
-  return WrappedComponent || defaultName
-}
 
 export function validateSpacingProps(props: SpacingProps) {
   if (isProd) {
