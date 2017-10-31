@@ -7,14 +7,12 @@ const {
   doesntEndWith,
   getImagePath,
 } = require('./shared')
-
-const baseUrl =
-  'https://github.com/obartra/reflex/tree/master/storybook/stories/'
+const { publicPath } = require('../../params')
 
 function getNote(files, filepath, loader) {
   const mdFile = filepath.replace(/\.js$/, '.md')
   const hasMd = files.indexOf(mdFile) !== -1
-  const url = filepath.replace('./', baseUrl)
+  const url = filepath.replace('./', publicPath)
   const note = hasMd ? loader(mdFile).default || loader(mdFile) : ''
   const footer = require('./footer.md') || ''
 

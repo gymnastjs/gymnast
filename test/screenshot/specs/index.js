@@ -1,6 +1,6 @@
 const { flattenDeep } = require('lodash')
 const { getBrowserData } = require('../shared')
-const { storyFolders } = require('../../../storybook/shared/storyFolders')
+const { storyFolders } = require('../../../pkg/shared/storyFolders')
 
 const targetUrlIndex = process.argv.indexOf('--url')
 

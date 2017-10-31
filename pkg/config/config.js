@@ -1,8 +1,9 @@
-/* eslint-disable global-require, no-underscore-dangle */
+/* eslint-disable */
 
 import { configure, setAddon } from '@storybook/react'
 import { setOptions } from '@storybook/addon-options'
 import JSXAddon from 'storybook-addon-jsx'
+import params from '../params'
 
 if (
   typeof window === 'object' &&
@@ -22,8 +23,7 @@ if (
 }
 
 setOptions({
-  name: 'Reflex',
-  url: 'https://github.com/obartra/reflex',
+  ...params.project,
   downPanelInRight: true,
   hierarchySeparator: /\./,
 })
@@ -31,5 +31,5 @@ setOptions({
 setAddon(JSXAddon)
 
 configure(() => {
-  require('../index.js')
+  require(preval`module.exports=require('../params').entryPoint`)
 }, module)

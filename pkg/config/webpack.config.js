@@ -1,5 +1,4 @@
 const { resolve } = require('path')
-const { merge } = require('lodash')
 
 module.exports = (baseConfig, env) => {
   baseConfig.node = {

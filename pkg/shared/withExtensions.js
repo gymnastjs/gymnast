@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { WithNotes } from '@storybook/addon-notes'
-import layoutStyle from './layout.css'
+import style from './ci.css'
 
 type Props = {
   notes?: string,
@@ -10,7 +10,7 @@ type Props = {
 
 export default function WithExtensions({ notes, className, ...props }: Props) {
   const isCI = window.location.href.indexOf('isCI') !== -1
-  const classCI = isCI ? layoutStyle.isCI : undefined
+  const classCI = isCI ? style.isCI : undefined
 
   if (notes) {
     return (

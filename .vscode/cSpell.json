@@ -6,13 +6,14 @@
     "language": "en",
     // words - list of words to be always considered correct
     "words": [
-        "Flexbox",
         "appium",
         "doesnt",
         "filepath",
+        "Flexbox",
         "flexbugs",
         "folderpath",
         "namepath",
+        "preval",
         "repo"
     ],
     // flagWords - list of words to be always considered incorrect

@@ -1,5 +1,4 @@
 import React from 'react'
-import toJson from 'enzyme-to-json'
 import { shallow, mount } from 'enzyme'
 import withGrid from './withGrid'
 import Grid from './grid'
@@ -15,11 +14,11 @@ describe('gridHOC', () => {
   })
 
   it('should match the rendering of a Grid when using a div', () => {
-    const Div = withGrid(<div />)
+    const Div = withGrid('div')
     const gridWrapper = shallow(<Grid />)
     wrapper = shallow(<Div />)
 
-    expect(toJson(wrapper)).toEqual(toJson(gridWrapper))
+    expect(wrapper.html()).toEqual(gridWrapper.html())
   })
 
   afterEach(() => {
