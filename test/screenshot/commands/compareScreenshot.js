@@ -36,7 +36,7 @@ function move(origin, destination, attempt = 0) {
         move(origin, destination, attempt + 1)
       }, 100)
     } else {
-      reject('Unable to find file')
+      reject(new Error('Unable to find file'))
     }
   })
 }
