@@ -10,12 +10,13 @@ type Props = {
 
 export default function WithExtensions({ notes, className, ...props }: Props) {
   const isCI = window.location.href.indexOf('isCI') !== -1
+  const classCI = isCI ? layoutStyle.isCI : undefined
 
   if (notes) {
     return (
       <div>
         <WithNotes notes={notes}>
-          <div {...props} className={isCI && layoutStyle.isCI} />
+          <div {...props} className={classCI} />
         </WithNotes>
       </div>
     )
@@ -23,7 +24,7 @@ export default function WithExtensions({ notes, className, ...props }: Props) {
 
   return (
     <div>
-      <div {...props} className={isCI && layoutStyle.isCI} />
+      <div {...props} className={classCI} />
     </div>
   )
 }
