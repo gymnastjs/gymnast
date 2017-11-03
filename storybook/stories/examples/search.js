@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { Grid, Layout, Root } from 'reflex'
-import { number } from '@storybook/addon-knobs'
+import { number } from 'picturebook/knobs'
 import styles from './layout.css'
 import Header from '../components/header/app'
 import SearchFilters from '../components/search/filters'

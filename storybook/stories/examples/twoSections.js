@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { boolean } from '@storybook/addon-knobs'
+import { boolean } from 'picturebook/knobs'
 import { Grid, Layout, Root, Col } from 'reflex'
 import { loremIpsum } from '../../shared'
 import styles from './layout.css'

@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { times } from 'lodash'
-import { number } from '@storybook/addon-knobs'
+import { number } from 'picturebook/knobs'
 import { Grid, Layout, Root } from 'reflex'
 import { loremIpsum } from '../../shared'
 import styles from '../../shared/layout.css'

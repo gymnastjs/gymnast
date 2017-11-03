@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { times } from 'lodash'
-import { boolean } from '@storybook/addon-knobs'
+import { boolean } from 'picturebook/knobs'
 import { Grid } from 'reflex'
 import { Box, RootLayout, getMarginSelect } from '../../shared'
 

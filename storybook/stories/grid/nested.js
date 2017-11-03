@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { number, select } from '@storybook/addon-knobs'
+import { number, select } from 'picturebook/knobs'
 import { times } from 'lodash'
 import { Grid, Col } from 'reflex'
 import {

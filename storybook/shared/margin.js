@@ -1,5 +1,5 @@
 // @flow
-import { select } from '@storybook/addon-knobs'
+import { select } from 'picturebook/knobs'
 import type { Spacing } from '../../src/types'
 
 const marginMap = {

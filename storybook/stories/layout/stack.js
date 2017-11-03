@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { Grid, Layout, Root } from 'reflex'
 import { times } from 'lodash'
-import { number } from '@storybook/addon-knobs'
+import { number } from 'picturebook/knobs'
 import { verticalHalf } from '../../shared/marginTypes'
 import styles from '../../shared/layout.css'
 
