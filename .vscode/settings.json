@@ -7,7 +7,8 @@
     ".all-contributorsrc": "json",
     ".babelrc": "json",
     ".eslintrc": "json",
-    ".stylelintrc": "json"
+    ".stylelintrc": "json",
+    ".picturebookrc": "json"
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
