@@ -3,5 +3,6 @@
   "projectUrl": "https://github.com/obartra/reflex",
   "storiesUrl": "https://github.com/obartra/reflex/tree/master/storybook/stories/",
   "storyPath": "storybook/stories",
-  "entryPoint": "storybook/index.js"
+  "entryPoint": "storybook/index.js",
+  "markdownFooter": "storybook/shared/footer.md"
 }
