@@ -7600,9 +7600,9 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-picturebook@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/picturebook/-/picturebook-1.0.5.tgz#def1c307a07f74355248cfbd343b320f4a872c27"
+picturebook@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/picturebook/-/picturebook-1.0.6.tgz#f540f1432325b2725468f40deb5081e3bcc0b4f4"
   dependencies:
     "@storybook/addon-actions" "3.2.14"
     "@storybook/addon-knobs" "3.2.14"
