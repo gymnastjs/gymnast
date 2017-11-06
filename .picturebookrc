@@ -1,8 +1,9 @@
 {
+  "entryPoint": "storybook/index.js",
+  "markdownFooter": "storybook/shared/footer.md",
+  "postcssConfig": "scripts/postcss.config",
   "projectName": "Reflex",
   "projectUrl": "https://github.com/obartra/reflex",
   "storiesUrl": "https://github.com/obartra/reflex/tree/master/storybook/stories/",
-  "storyPath": "storybook/stories",
-  "entryPoint": "storybook/index.js",
-  "markdownFooter": "storybook/shared/footer.md"
+  "storyPath": "storybook/stories"
 }
