@@ -7,13 +7,6 @@ export type Offset = zeroThroughEleven | void
 
 export type Size = zeroThroughEleven | 12 | 'fit' | 'auto' | void
 
-export type Component =
-  | {
-      displayName?: string,
-      name?: string,
-    }
-  | Function
-
 export type Dev = 1 | 2 | 3 | 4 | 5 | void
 
 export type AlignGrid = 'bottom' | 'center' | 'top' | void

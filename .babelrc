@@ -11,6 +11,7 @@
     "react"
   ],
   "plugins": [
+    "preval",
     "flow-react-proptypes",
     "lodash",
     "transform-object-rest-spread",
