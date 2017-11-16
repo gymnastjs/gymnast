@@ -8,5 +8,6 @@ test/screenshot/images/diffs
 test/screenshot/images/results
 tests_output/
 selenium-server-standalone-*
+selenium-debug.log
 nohup.out
 temp.png
