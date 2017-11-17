@@ -28,6 +28,78 @@ describe('combineSpacing', () => {
         borderTopWidth: 24,
       }))
   )
+  ;[
+    ('1 0.5 2 0',
+    '1,0.5,2,0',
+    '1   0.5  2 0',
+    '1, 0.5, 2, 0',
+    '1 , 0.5  , 2 ,  0'),
+  ].forEach(margin =>
+    it(`should convert space separated strings to valid spacing props for "${
+      margin
+    }"`, () =>
+      expect(
+        combineSpacing(
+          {
+            margin,
+          },
+          base
+        )
+      ).toEqual({
+        borderTopWidth: 24,
+        borderRightWidth: 12,
+        borderBottomWidth: 48,
+        borderLeftWidth: 0,
+      }))
+  )
+
+  it('should fail with multiple consecutive empty commas', () => {
+    expect(
+      combineSpacing(
+        {
+          margin: '1,,2',
+        },
+        base
+      )
+    ).toEqual({
+      borderTopWidth: 24,
+      borderRightWidth: NaN,
+      borderBottomWidth: 48,
+      borderLeftWidth: NaN,
+    })
+  })
+
+  it('should convert numbers to valid spacing props', () => {
+    expect(
+      combineSpacing(
+        {
+          margin: 1,
+        },
+        base
+      )
+    ).toEqual({
+      borderTopWidth: 24,
+      borderRightWidth: 24,
+      borderBottomWidth: 24,
+      borderLeftWidth: 24,
+    })
+  })
+
+  it('should convert mixed arrays to valid spacing props', () => {
+    expect(
+      combineSpacing(
+        {
+          margin: [1, '0', '2'],
+        },
+        base
+      )
+    ).toEqual({
+      borderTopWidth: 24,
+      borderRightWidth: 0,
+      borderBottomWidth: 48,
+      borderLeftWidth: 0,
+    })
+  })
 })
 
 describe('getSpacingClasses', () => {
