@@ -75,6 +75,7 @@ describe('combineSpacing', () => {
         {
           margin: 1,
         },
+
         base
       )
     ).toEqual({

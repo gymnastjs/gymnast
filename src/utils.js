@@ -82,8 +82,6 @@ export const getSpacingClasses = memoize(
   (values, type) => type + values.toString()
 )
 
-const isCastableToFiniteNumber = flow(parseFloat, isFinite)
-
 export function getCSS(
   prop: string,
   value: number | string | SpacingNames,
@@ -115,10 +113,7 @@ function getPropValue(value: number | string | SpacingNames, base: number) {
   if (value in spacingNames) {
     return spacingNames[value]
   }
-  if (isCastableToFiniteNumber(value)) {
-    return parseFloat(value) * base
-  }
-  return undefined
+  return parseFloat(value) * base
 }
 
 /**
@@ -161,6 +156,8 @@ export function parseSpacing(spacing: any): Array<number> | void {
     )
     return undefined
   }
+
+  const isCastableToFiniteNumber = flow(parseFloat, isFinite)
 
   if (spacingArray.every(isCastableToFiniteNumber)) {
     return spacingArray.map(parseFloat)
