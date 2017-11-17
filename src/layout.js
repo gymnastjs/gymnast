@@ -91,16 +91,16 @@ export default function Layout({
       className={classes.join(' ')}
       style={{
         ...style,
-        ...combineSpacing(
-          {
+        ...combineSpacing({
+          spacingProps: {
             margin,
             marginTop,
             marginRight,
             marginBottom,
             marginLeft,
           },
-          24
-        ),
+          base: 24,
+        }),
       }}
     />
   )
