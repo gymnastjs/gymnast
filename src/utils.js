@@ -1,9 +1,11 @@
 // @flow
-import { memoize } from 'lodash'
-import type { SpacingProps, Noop } from './types'
+import { memoize, isString, isFinite, flow } from 'lodash'
+import type { SpacingProps, Noop, SpacingNames } from './types'
+import defaults from './defaults.json'
 
 const isProd = process.env.NODE_ENV === 'production'
-const isNumber = keys => key => typeof keys[key] === 'number'
+const isObjPropNumber = keys => key => typeof keys[key] === 'number'
+const { spacingNames } = defaults
 
 export const noop: Noop = () => null
 
@@ -29,8 +31,8 @@ export function validateSpacingProps(props: SpacingProps) {
   ]
 
   if (
-    (props.marginArray && margins.some(isNumber(props))) ||
-    (props.paddingArray && paddings.some(isNumber(props)))
+    (props.marginArray && margins.some(isObjPropNumber(props))) ||
+    (props.paddingArray && paddings.some(isObjPropNumber(props)))
   ) {
     log.error(
       'Cannot define margin or padding and a direction at the same time'
@@ -80,24 +82,43 @@ export const getSpacingClasses = memoize(
   (values, type) => type + values.toString()
 )
 
+const isCastableToFiniteNumber = flow(parseFloat, isFinite)
+
 export function getCSS(
   prop: string,
-  value: number | string,
+  value: number | string | SpacingNames,
   base: number
 ): { [string]: number } {
-  const num = typeof value === 'number' ? value : parseFloat(value || 0)
-
   if (typeof value === 'undefined') {
     return {}
-  } else if (prop.includes('padding')) {
-    return { [prop]: num * base }
+  }
+  const propValue = getPropValue(value, base)
+
+  if (typeof propValue === 'undefined') {
+    log.error(`Invalid css value: ${value}`)
+    return {}
+  }
+
+  if (prop.includes('padding')) {
+    return { [prop]: propValue }
   } else if (prop.includes('margin')) {
     return {
-      [`${prop.replace('margin', 'border')}Width`]: num * base,
+      [`${prop.replace('margin', 'border')}Width`]: propValue,
     }
   }
+
   log.error(`Invalid css prop: ${prop}`)
   return {}
+}
+
+function getPropValue(value: number | string | SpacingNames, base: number) {
+  if (value in spacingNames) {
+    return spacingNames[value]
+  }
+  if (isCastableToFiniteNumber(value)) {
+    return parseFloat(value) * base
+  }
+  return undefined
 }
 
 /**
@@ -113,19 +134,46 @@ export function getCSS(
  * - numbers
  *   - `margin={1}` becomes `[1]`
  */
-export function parseSpacing(spacing: any): number[] | void {
-  if (spacing instanceof Array) {
-    return spacing.map(parseFloat)
-  } else if (typeof spacing === 'undefined') {
+
+export function parseSpacing(spacing: any): Array<number> | void {
+  if (typeof spacing === 'undefined') {
     return spacing
-  } else if (typeof spacing === 'string') {
-    // regex case examples: https://regex101.com/r/bs73rZ/1
-    return spacing.split(/(?:(?:\s+)?,(?:\s+)?|\s+)/).map(parseFloat)
-  } else if (typeof spacing === 'number') {
+  }
+
+  if (typeof spacing === 'number') {
     return [spacing]
   }
+
+  let spacingArray
+
+  if (typeof spacing === 'string') {
+    // regex case examples: https://regex101.com/r/bs73rZ/1
+    spacingArray = spacing.split(/(?:(?:\s+)?,(?:\s+)?|\s+)/)
+  }
+
+  if (spacing instanceof Array) {
+    spacingArray = spacing
+  }
+
+  if (!spacingArray) {
+    log.error(
+      `Invalid spacing type: "${typeof spacing}". Only array, undefined, string or numbers allowed.`
+    )
+    return undefined
+  }
+
+  if (spacingArray.every(isCastableToFiniteNumber)) {
+    return spacingArray.map(parseFloat)
+  }
+
+  if (spacingArray.every(isString)) {
+    return spacingArray
+  }
+
   log.error(
-    `Invalid spacing type "${typeof spacing}" used, only array, undefined, string or numbers allowed`
+    `Invalid spacing value: ${
+      spacingArray
+    }.  All values in array must be a string or a value that can be cast to a number.`
   )
   return undefined
 }

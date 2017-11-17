@@ -6,6 +6,9 @@ import {
   parseSpacing,
   validateSpacingProps,
 } from './utils'
+import defaults from './defaults.json'
+
+const { spacingNames } = defaults
 
 const base = 24
 
@@ -25,76 +28,6 @@ describe('combineSpacing', () => {
         borderTopWidth: 24,
       }))
   )
-  ;[
-    ('1 0.5 2 0',
-    '1,0.5,2,0',
-    '1   0.5  2 0',
-    '1, 0.5, 2, 0',
-    '1 , 0.5  , 2 ,  0'),
-  ].forEach(margin =>
-    it(`should convert space separated strings to valid spacing props for "${margin}"`, () =>
-      expect(
-        combineSpacing(
-          {
-            margin,
-          },
-          base
-        )
-      ).toEqual({
-        borderTopWidth: 24,
-        borderRightWidth: 12,
-        borderBottomWidth: 48,
-        borderLeftWidth: 0,
-      }))
-  )
-
-  it('should fail with multiple consecutive empty commas', () => {
-    expect(
-      combineSpacing(
-        {
-          margin: '1,,2',
-        },
-        base
-      )
-    ).toEqual({
-      borderTopWidth: 24,
-      borderRightWidth: NaN,
-      borderBottomWidth: 48,
-      borderLeftWidth: NaN,
-    })
-  })
-
-  it('should convert numbers to valid spacing props', () => {
-    expect(
-      combineSpacing(
-        {
-          margin: 1,
-        },
-        base
-      )
-    ).toEqual({
-      borderTopWidth: 24,
-      borderRightWidth: 24,
-      borderBottomWidth: 24,
-      borderLeftWidth: 24,
-    })
-  })
-
-  it('should convert mixed arrays to valid spacing props', () => {
-    expect(
-      combineSpacing(
-        {
-          margin: [1, '0', '2'],
-        },
-        base
-      )
-    ).toEqual({
-      borderTopWidth: 24,
-      borderRightWidth: 0,
-      borderBottomWidth: 48,
-      borderLeftWidth: 0,
-    })
-  })
 })
 
 describe('getSpacingClasses', () => {
@@ -189,9 +122,20 @@ describe('getCSS', () => {
       borderBottomWidth: 2 * 4,
     })
   })
+
+  it('should accept a key in spacingNames and return the pixel value', () => {
+    const css = getCSS('marginBottom', 'XL')
+
+    expect(css).toEqual({
+      borderBottomWidth: '32px',
+    })
+  })
 })
 
 describe('parseSpacing', () => {
+  it('should return undefined if spacing is undefined', () => {
+    expect(parseSpacing(undefined)).not.toBeDefined()
+  })
   it('should return a number array as is', () => {
     expect(parseSpacing([1, 0.5])).toEqual([1, 0.5])
   })
@@ -208,10 +152,24 @@ describe('parseSpacing', () => {
     expect(parseSpacing(2)).toEqual([2])
   })
 
+  it('should convert a space or comma separated string of strings to an array of strings', () => {
+    const expected = ['XS', 'S', 'M', 'L']
+    expect(parseSpacing('XS S M L')).toEqual(expected)
+    expect(parseSpacing('XS, S, M, L')).toEqual(expected)
+  })
+
   it('should log an error if using another format', () => {
     spyOn(log, 'error')
 
     parseSpacing({})
+
+    expect(log.error).toHaveBeenCalled()
+  })
+
+  it('should log an error if numbers and strings that are not castable to finite numbers are used together', () => {
+    spyOn(log, 'error')
+
+    parseSpacing([1, 'XS'])
 
     expect(log.error).toHaveBeenCalled()
   })

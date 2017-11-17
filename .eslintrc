@@ -47,6 +47,7 @@
         ]
       }
     ],
+    "no-use-before-define": "nofunc",
     "flowtype/define-flow-type": 2
   }
 }

@@ -1,4 +1,6 @@
 // @flow
+import defaults from './defaults.json'
+
 type zeroThroughEleven = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
 
 export type Noop = (...params: any[]) => null
@@ -13,7 +15,9 @@ export type AlignGrid = 'bottom' | 'center' | 'top' | void
 
 export type Justify = 'left' | 'center' | 'right' | void
 
-export type SpacingValues = number | string | void
+export type SpacingNames = $Keys<typeof defaults.spacingNames>
+
+export type SpacingValues = number | string | SpacingNames | void
 
 export type Spacing = Array<SpacingValues> | SpacingValues
 
