@@ -47,7 +47,7 @@
         ]
       }
     ],
-    "no-use-before-define": "nofunc",
+    "no-use-before-define": ["error", "nofunc"],
     "flowtype/define-flow-type": 2
   }
 }

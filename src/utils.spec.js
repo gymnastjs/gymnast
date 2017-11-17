@@ -200,7 +200,7 @@ describe('getCSS', () => {
     const css = getCSS('marginBottom', 'XL')
 
     expect(css).toEqual({
-      borderBottomWidth: '32px',
+      borderBottomWidth: spacingNames.XL,
     })
   })
 })
