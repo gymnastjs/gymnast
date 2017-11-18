@@ -12,6 +12,7 @@ import type {
 import styles from './base.css'
 import devStyles from './dev.css'
 import { combineSpacing } from './utils'
+import { SpacingAliasesContext } from './spacingAliasesProvider'
 
 export type Props = {
   align?: AlignGrid,
@@ -34,27 +35,30 @@ export type Props = {
 }
 
 export default function withBase(Component: React.ComponentType<*>) {
-  return function Base({
-    align,
-    base,
-    children,
-    className,
-    dev,
-    justify,
-    margin,
-    marginBottom,
-    marginLeft,
-    marginRight,
-    marginTop,
-    padding,
-    paddingBottom,
-    paddingLeft,
-    paddingRight,
-    paddingTop,
-    size,
-    style = {},
-    ...props
-  }: Props & { base: number }) {
+  function Base(
+    {
+      align,
+      base,
+      children,
+      className,
+      dev,
+      justify,
+      margin,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      marginTop,
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
+      size,
+      style = {},
+      ...props
+    }: Props & { base: number },
+    context: any
+  ) {
     const classes = compact([
       className,
       size && styles.col,
@@ -66,6 +70,7 @@ export default function withBase(Component: React.ComponentType<*>) {
       align && styles[`${align}Align`],
       justify && styles[`${justify}Justify`],
     ])
+
     const cssStyle = {
       ...style,
       ...combineSpacing(
@@ -81,7 +86,8 @@ export default function withBase(Component: React.ComponentType<*>) {
           paddingBottom,
           paddingLeft,
         },
-        base
+        base,
+        context.spacingAliases
       ),
     }
 
@@ -91,4 +97,7 @@ export default function withBase(Component: React.ComponentType<*>) {
       </Component>
     )
   }
+
+  Base.contextTypes = SpacingAliasesContext
+  return Base
 }

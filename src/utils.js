@@ -1,11 +1,10 @@
 // @flow
 import { memoize, isString, isFinite, flow } from 'lodash'
-import type { SpacingProps, Noop, SpacingNames } from './types'
-import defaults from './defaults.json'
+import type { SpacingProps, Noop } from './types'
+import type { SpacingAliases } from './spacingAliasesProvider'
 
 const isProd = process.env.NODE_ENV === 'production'
 const isObjPropNumber = keys => key => typeof keys[key] === 'number'
-const { spacingNames } = defaults
 
 export const noop: Noop = () => null
 
@@ -82,15 +81,23 @@ export const getSpacingClasses = memoize(
   (values, type) => type + values.toString()
 )
 
-export function getCSS(
+type getCSSProps = {
   prop: string,
-  value: number | string | SpacingNames,
-  base: number
-): { [string]: number } {
+  value: number | string,
+  base: number,
+  spacingAliases: ?SpacingAliases,
+}
+
+export function getCSS({
+  prop,
+  value,
+  base,
+  spacingAliases,
+}: getCSSProps): { [string]: number } {
   if (typeof value === 'undefined') {
     return {}
   }
-  const propValue = getPropValue(value, base)
+  const propValue = getPropValue(value, base, spacingAliases)
 
   if (typeof propValue === 'undefined') {
     log.error(`Invalid css value: ${value}`)
@@ -100,18 +107,16 @@ export function getCSS(
   if (prop.includes('padding')) {
     return { [prop]: propValue }
   } else if (prop.includes('margin')) {
-    return {
-      [`${prop.replace('margin', 'border')}Width`]: propValue,
-    }
+    return { [`${prop.replace('margin', 'border')}Width`]: propValue }
   }
 
   log.error(`Invalid css prop: ${prop}`)
   return {}
 }
 
-function getPropValue(value: number | string | SpacingNames, base: number) {
-  if (value in spacingNames) {
-    return spacingNames[value]
+function getPropValue(value: number | string, base: number, spacingAliases) {
+  if (spacingAliases && typeof value === 'string' && value in spacingAliases) {
+    return spacingAliases[value]
   }
   return parseFloat(value) * base
 }
@@ -177,12 +182,19 @@ export function parseSpacing(spacing: any): Array<number> | void {
 
 export function combineSpacing(
   { margin, padding, ...props }: SpacingProps,
-  base: number
+  base: number,
+  spacingAliases: ?SpacingAliases
 ) {
   const marginArray = parseSpacing(margin)
   const paddingArray = parseSpacing(padding)
 
-  if (!validateSpacingProps({ marginArray, paddingArray, ...props })) {
+  if (
+    !validateSpacingProps({
+      marginArray,
+      paddingArray,
+      ...props,
+    })
+  ) {
     return {}
   }
 
@@ -195,7 +207,7 @@ export function combineSpacing(
   return Object.keys(flatProps).reduce(
     (acc, prop) => ({
       ...acc,
-      ...getCSS(prop, flatProps[prop], base),
+      ...getCSS({ prop, value: flatProps[prop], base, spacingAliases }),
     }),
     {}
   )

@@ -6,9 +6,6 @@ import {
   parseSpacing,
   validateSpacingProps,
 } from './utils'
-import defaults from './defaults.json'
-
-const { spacingNames } = defaults
 
 const base = 24
 
@@ -169,19 +166,19 @@ describe('getCSS', () => {
   it('should log an error if there are invalid props', () => {
     spyOn(log, 'error')
 
-    getCSS('meow', 3, 24)
+    getCSS({ prop: 'meow', value: 3, base: 24 })
 
     expect(log.error).toHaveBeenCalled()
   })
 
   it('should return "{}" if value is not set', () => {
-    const css = getCSS('marginTop')
+    const css = getCSS({ prop: 'marginTop' })
 
     expect(css).toEqual({})
   })
 
   it('should set padding as is', () => {
-    const css = getCSS('paddingLeft', 3, 5)
+    const css = getCSS({ prop: 'paddingLeft', value: 3, base: 5 })
 
     expect(css).toEqual({
       paddingLeft: 3 * 5,
@@ -189,18 +186,26 @@ describe('getCSS', () => {
   })
 
   it('should set margin as border width', () => {
-    const css = getCSS('marginBottom', 2, 4)
+    const css = getCSS({ prop: 'marginBottom', value: 2, base: 4 })
 
     expect(css).toEqual({
       borderBottomWidth: 2 * 4,
     })
   })
 
-  it('should accept a key in spacingNames and return the pixel value', () => {
-    const css = getCSS('marginBottom', 'XL')
+  it('should accept a key in spacingAliases and return the pixel value', () => {
+    const spacingAliases = {
+      XL: '24px',
+    }
+    const css = getCSS({
+      prop: 'marginBottom',
+      value: 'XL',
+      base: 4,
+      spacingAliases,
+    })
 
     expect(css).toEqual({
-      borderBottomWidth: spacingNames.XL,
+      borderBottomWidth: spacingAliases.XL,
     })
   })
 })

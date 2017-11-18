@@ -11576,7 +11576,7 @@ exports[`Storyshots Layout Stack 1`] = `
 </div>
 `;
 
-exports[`Storyshots Spacing Names Default 1`] = `
+exports[`Storyshots Spacing Aliases Provider Default 1`] = `
 <div>
   <div
     className={undefined}
