@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Grid, Col, SpacingAliasesProvider } from 'reflex'
+import { Grid, Col, ConfigProvider } from 'reflex'
 
 export default function() {
   const spacingAliases = {
@@ -17,12 +17,12 @@ export default function() {
     XXL: 6,
   }
   return (
-    <SpacingAliasesProvider spacingAliases={spacingAliases}>
+    <ConfigProvider spacingAliases={spacingAliases}>
       <Grid base={8}>
         <Col base={8} margin={['XXL', 'L']} padding="L/2,L">
           My paddings and margins are set using aliases!
         </Col>
       </Grid>
-    </SpacingAliasesProvider>
+    </ConfigProvider>
   )
 }

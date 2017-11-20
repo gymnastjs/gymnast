@@ -6,7 +6,7 @@ export type GridProps = Props
 
 export { default as withGrid } from './withGrid'
 export { default as withBase } from './withBase'
-export { default as SpacingAliasesProvider } from './spacingAliasesProvider'
+export { default as ConfigProvider } from './configProvider'
 export { default as Base } from './base'
 export { default as Grid } from './grid'
 export { default as Layout } from './layout'

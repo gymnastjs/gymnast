@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { compact } from 'lodash'
+import { compact, get } from 'lodash'
 import type {
   Dev,
   AlignGrid,
@@ -12,10 +12,7 @@ import type {
 import styles from './base.css'
 import devStyles from './dev.css'
 import { combineSpacing } from './utils'
-import {
-  SpacingAliasesContext,
-  type SpacingAliases,
-} from './spacingAliasesProvider'
+import { ConfigContext, type ConfigContextFlow } from './configProvider'
 
 export type Props = {
   align?: AlignGrid,
@@ -60,7 +57,7 @@ export default function withBase(Component: React.ComponentType<*>) {
       style = {},
       ...props
     }: Props & { base: number },
-    context: { spacingAliases?: SpacingAliases }
+    context: ConfigContextFlow
   ) {
     const classes = compact([
       className,
@@ -90,7 +87,7 @@ export default function withBase(Component: React.ComponentType<*>) {
           paddingLeft,
         },
         base,
-        context.spacingAliases
+        get(context, 'xnReflex.spacingAliases')
       ),
     }
 
@@ -101,6 +98,6 @@ export default function withBase(Component: React.ComponentType<*>) {
     )
   }
 
-  Base.contextTypes = SpacingAliasesContext
+  Base.contextTypes = ConfigContext
   return Base
 }

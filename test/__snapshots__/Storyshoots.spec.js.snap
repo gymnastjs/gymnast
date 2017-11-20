@@ -6410,6 +6410,37 @@ exports[`Storyshots Grid Autoflow 1`] = `
 </div>
 `;
 
+exports[`Storyshots Grid Config Provider 1`] = `
+<div>
+  <div
+    className={undefined}
+  >
+    <div
+      className="base"
+      style={Object {}}
+    >
+      <div
+        className="base"
+        style={
+          Object {
+            "borderBottomWidth": 48,
+            "borderLeftWidth": 24,
+            "borderRightWidth": 24,
+            "borderTopWidth": 48,
+            "paddingBottom": 12,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 12,
+          }
+        }
+      >
+        My paddings and margins are set using aliases!
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Grid Fit 1`] = `
 <div>
   <div
@@ -10980,37 +11011,6 @@ exports[`Storyshots Grid Sizing 1`] = `
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Grid Spacing Aliases Provider 1`] = `
-<div>
-  <div
-    className={undefined}
-  >
-    <div
-      className="base"
-      style={Object {}}
-    >
-      <div
-        className="base"
-        style={
-          Object {
-            "borderBottomWidth": 48,
-            "borderLeftWidth": 24,
-            "borderRightWidth": 24,
-            "borderTopWidth": 48,
-            "paddingBottom": 12,
-            "paddingLeft": 24,
-            "paddingRight": 24,
-            "paddingTop": 12,
-          }
-        }
-      >
-        My paddings and margins are set using aliases!
       </div>
     </div>
   </div>

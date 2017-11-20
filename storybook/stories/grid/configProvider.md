@@ -1,4 +1,4 @@
-You can use the SpacingAliasesProvider along with base to set margins and paddings with convenient aliases.  The base is multiplied with the aliased value to obtain the pixel value.
+You can use the ConfigProvider along with base to set margins and paddings with convenient aliases.  The base is multiplied with the aliased value to obtain the pixel value.
 
 For example, if base is 8px and XS is aliased to 0.5, the final pixel value of XS is 4px.
 
