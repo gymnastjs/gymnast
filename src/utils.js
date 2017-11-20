@@ -1,9 +1,10 @@
 // @flow
 import { memoize } from 'lodash'
-import type { SpacingProps, Noop } from './types'
+import type { SpacingProps, Noop, SpacingValues } from './types'
+import type { SpacingAliases } from './configProvider'
 
 const isProd = process.env.NODE_ENV === 'production'
-const isNumber = keys => key => typeof keys[key] === 'number'
+const isObjPropNumber = keys => key => typeof keys[key] === 'number'
 
 export const noop: Noop = () => null
 
@@ -29,8 +30,8 @@ export function validateSpacingProps(props: SpacingProps) {
   ]
 
   if (
-    (props.marginArray && margins.some(isNumber(props))) ||
-    (props.paddingArray && paddings.some(isNumber(props)))
+    (props.marginArray && margins.some(isObjPropNumber(props))) ||
+    (props.paddingArray && paddings.some(isObjPropNumber(props)))
   ) {
     log.error(
       'Cannot define margin or padding and a direction at the same time'
@@ -99,7 +100,6 @@ export function getCSS(
   log.error(`Invalid css prop: ${prop}`)
   return {}
 }
-
 /**
  * parseSpacing allows using different kinds of input for spacing parameters. Instead of allowing
  * only number arrays, the following are also valid:
@@ -113,31 +113,70 @@ export function getCSS(
  * - numbers
  *   - `margin={1}` becomes `[1]`
  */
-export function parseSpacing(spacing: any): number[] | void {
-  if (spacing instanceof Array) {
-    return spacing.map(parseFloat)
-  } else if (typeof spacing === 'undefined') {
+
+export function parseSpacing(
+  spacing: any,
+  spacingAliases?: SpacingAliases
+): number[] | void {
+  if (typeof spacing === 'undefined') {
     return spacing
-  } else if (typeof spacing === 'string') {
-    // regex case examples: https://regex101.com/r/bs73rZ/1
-    return spacing.split(/(?:(?:\s+)?,(?:\s+)?|\s+)/).map(parseFloat)
-  } else if (typeof spacing === 'number') {
+  }
+  if (typeof spacing === 'number') {
     return [spacing]
   }
+
+  let spacingArray
+  if (spacing instanceof Array) {
+    spacingArray = spacing
+  } else if (typeof spacing === 'string') {
+    // regex case examples: https://regex101.com/r/bs73rZ/1
+    spacingArray = spacing.split(/(?:(?:\s+)?,(?:\s+)?|\s+)/)
+  }
+
+  if (spacingArray) {
+    return replaceAliases(spacingArray, spacingAliases).map(parseFloat)
+  }
+
   log.error(
     `Invalid spacing type "${typeof spacing}" used, only array, undefined, string or numbers allowed`
   )
   return undefined
 }
 
+export function replaceAliases(
+  spacingArray: Array<SpacingValues>,
+  spacingAliases?: SpacingAliases
+): Array<SpacingValues> {
+  if (!spacingAliases) {
+    return spacingArray
+  }
+  return spacingArray.map(value => {
+    if (
+      spacingAliases &&
+      typeof value === 'string' &&
+      value in spacingAliases
+    ) {
+      return spacingAliases[value]
+    }
+    return value
+  })
+}
+
 export function combineSpacing(
   { margin, padding, ...props }: SpacingProps,
-  base: number
+  base: number,
+  spacingAliases?: SpacingAliases
 ) {
-  const marginArray = parseSpacing(margin)
-  const paddingArray = parseSpacing(padding)
+  const marginArray = parseSpacing(margin, spacingAliases)
+  const paddingArray = parseSpacing(padding, spacingAliases)
 
-  if (!validateSpacingProps({ marginArray, paddingArray, ...props })) {
+  if (
+    !validateSpacingProps({
+      marginArray,
+      paddingArray,
+      ...props,
+    })
+  ) {
     return {}
   }
 
