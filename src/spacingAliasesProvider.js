@@ -3,7 +3,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 
 export type SpacingAliases = {
-  [spacingAlias: string]: string | number,
+  [spacingAlias: string]: number,
 }
 
 type Props = {

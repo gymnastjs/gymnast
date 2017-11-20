@@ -5,6 +5,7 @@ import {
   log,
   parseSpacing,
   validateSpacingProps,
+  replaceAliases,
 } from './utils'
 
 const base = 24
@@ -166,19 +167,19 @@ describe('getCSS', () => {
   it('should log an error if there are invalid props', () => {
     spyOn(log, 'error')
 
-    getCSS({ prop: 'meow', value: 3, base: 24 })
+    getCSS('meow', 3, 24)
 
     expect(log.error).toHaveBeenCalled()
   })
 
   it('should return "{}" if value is not set', () => {
-    const css = getCSS({ prop: 'marginTop' })
+    const css = getCSS('marginTop')
 
     expect(css).toEqual({})
   })
 
   it('should set padding as is', () => {
-    const css = getCSS({ prop: 'paddingLeft', value: 3, base: 5 })
+    const css = getCSS('paddingLeft', 3, 5)
 
     expect(css).toEqual({
       paddingLeft: 3 * 5,
@@ -186,26 +187,10 @@ describe('getCSS', () => {
   })
 
   it('should set margin as border width', () => {
-    const css = getCSS({ prop: 'marginBottom', value: 2, base: 4 })
+    const css = getCSS('marginBottom', 2, 4)
 
     expect(css).toEqual({
       borderBottomWidth: 2 * 4,
-    })
-  })
-
-  it('should accept a key in spacingAliases and return the pixel value', () => {
-    const spacingAliases = {
-      XL: '24px',
-    }
-    const css = getCSS({
-      prop: 'marginBottom',
-      value: 'XL',
-      base: 4,
-      spacingAliases,
-    })
-
-    expect(css).toEqual({
-      borderBottomWidth: spacingAliases.XL,
     })
   })
 })
@@ -230,12 +215,6 @@ describe('parseSpacing', () => {
     expect(parseSpacing(2)).toEqual([2])
   })
 
-  it('should convert a space or comma separated string of strings to an array of strings', () => {
-    const expected = ['XS', 'S', 'M', 'L']
-    expect(parseSpacing('XS S M L')).toEqual(expected)
-    expect(parseSpacing('XS, S, M, L')).toEqual(expected)
-  })
-
   it('should log an error if using another format', () => {
     spyOn(log, 'error')
 
@@ -244,11 +223,48 @@ describe('parseSpacing', () => {
     expect(log.error).toHaveBeenCalled()
   })
 
-  it('should log an error if numbers and strings that are not castable to finite numbers are used together', () => {
-    spyOn(log, 'error')
+  it('should accept strings and numbers in an array, space separated strings, and comma separated strings', () => {
+    const strAndNums = ['1', 0, '0.5']
+    const spaceSeparated = '1 0 0.5'
+    const commaSeparated = '1,0, 0.5'
+    const expected = [1, 0, 0.5]
 
-    parseSpacing([1, 'XS'])
+    expect(parseSpacing(spaceSeparated)).toEqual(expected)
+    expect(parseSpacing(commaSeparated)).toEqual(expected)
+    expect(parseSpacing(strAndNums)).toEqual(expected)
+  })
 
-    expect(log.error).toHaveBeenCalled()
+  it('should accept a single number or a string that is castable to a float', () => {
+    expect(parseSpacing(1)).toEqual([1])
+    expect(parseSpacing('1')).toEqual([1])
+  })
+
+  it('should replace spacing aliases with their aliases values', () => {
+    const spacingAliases = { XS: 0.5, S: 1 }
+    const spaing = [2, 'XS', 'S', 2]
+    const expected = [2, 0.5, 1, 2]
+
+    expect(parseSpacing(spaing, spacingAliases)).toEqual(expected)
+  })
+})
+
+describe('replaceAliases', () => {
+  it('should return the spacingArray unchanged if spacingAliases is not defined', () => {
+    const spacingArray = ['1', '2']
+    expect(replaceAliases(spacingArray)).toBe(spacingArray)
+  })
+
+  it('should replace all spacing aliases with their aliased values', () => {
+    const spacingAliases = {
+      XS: 0.5,
+      S: 1,
+    }
+
+    expect(replaceAliases([2, 'XS', 'S', 2], spacingAliases)).toEqual([
+      2,
+      0.5,
+      1,
+      2,
+    ])
   })
 })

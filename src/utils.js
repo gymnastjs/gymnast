@@ -1,5 +1,5 @@
 // @flow
-import { memoize, isString, isFinite, flow } from 'lodash'
+import { memoize } from 'lodash'
 import type { SpacingProps, Noop } from './types'
 import type { SpacingAliases } from './spacingAliasesProvider'
 
@@ -81,46 +81,25 @@ export const getSpacingClasses = memoize(
   (values, type) => type + values.toString()
 )
 
-type getCSSProps = {
+export function getCSS(
   prop: string,
   value: number | string,
-  base: number,
-  spacingAliases: ?SpacingAliases,
-}
+  base: number
+): { [string]: number } {
+  const num = typeof value === 'number' ? value : parseFloat(value || 0)
 
-export function getCSS({
-  prop,
-  value,
-  base,
-  spacingAliases,
-}: getCSSProps): { [string]: number } {
   if (typeof value === 'undefined') {
     return {}
-  }
-  const propValue = getPropValue(value, base, spacingAliases)
-
-  if (typeof propValue === 'undefined') {
-    log.error(`Invalid css value: ${value}`)
-    return {}
-  }
-
-  if (prop.includes('padding')) {
-    return { [prop]: propValue }
+  } else if (prop.includes('padding')) {
+    return { [prop]: num * base }
   } else if (prop.includes('margin')) {
-    return { [`${prop.replace('margin', 'border')}Width`]: propValue }
+    return {
+      [`${prop.replace('margin', 'border')}Width`]: num * base,
+    }
   }
-
   log.error(`Invalid css prop: ${prop}`)
   return {}
 }
-
-function getPropValue(value: number | string, base: number, spacingAliases) {
-  if (spacingAliases && typeof value === 'string' && value in spacingAliases) {
-    return spacingAliases[value]
-  }
-  return parseFloat(value) * base
-}
-
 /**
  * parseSpacing allows using different kinds of input for spacing parameters. Instead of allowing
  * only number arrays, the following are also valid:
@@ -135,58 +114,61 @@ function getPropValue(value: number | string, base: number, spacingAliases) {
  *   - `margin={1}` becomes `[1]`
  */
 
-export function parseSpacing(spacing: any): Array<number> | void {
+export function parseSpacing(
+  spacing: any,
+  spacingAliases?: SpacingAliases
+): number[] | void {
   if (typeof spacing === 'undefined') {
     return spacing
   }
-
   if (typeof spacing === 'number') {
     return [spacing]
   }
 
   let spacingArray
-
-  if (typeof spacing === 'string') {
+  if (spacing instanceof Array) {
+    spacingArray = spacing
+  } else if (typeof spacing === 'string') {
     // regex case examples: https://regex101.com/r/bs73rZ/1
     spacingArray = spacing.split(/(?:(?:\s+)?,(?:\s+)?|\s+)/)
   }
 
-  if (spacing instanceof Array) {
-    spacingArray = spacing
-  }
-
-  if (!spacingArray) {
-    log.error(
-      `Invalid spacing type: "${typeof spacing}". Only array, undefined, string or numbers allowed.`
-    )
-    return undefined
-  }
-
-  const isCastableToFiniteNumber = flow(parseFloat, isFinite)
-
-  if (spacingArray.every(isCastableToFiniteNumber)) {
-    return spacingArray.map(parseFloat)
-  }
-
-  if (spacingArray.every(isString)) {
-    return spacingArray
+  if (spacingArray) {
+    return replaceAliases(spacingArray, spacingAliases).map(parseFloat)
   }
 
   log.error(
-    `Invalid spacing value: ${
-      spacingArray
-    }.  All values in array must be a string or a value that can be cast to a number.`
+    `Invalid spacing type "${typeof spacing}" used, only array, undefined, string or numbers allowed`
   )
   return undefined
+}
+
+export function replaceAliases(
+  spacingArray: Array<*>,
+  spacingAliases?: SpacingAliases
+): Array<string | number> {
+  if (!spacingAliases) {
+    return spacingArray
+  }
+  return spacingArray.map(value => {
+    if (
+      spacingAliases &&
+      typeof value === 'string' &&
+      value in spacingAliases
+    ) {
+      return spacingAliases[value]
+    }
+    return value
+  })
 }
 
 export function combineSpacing(
   { margin, padding, ...props }: SpacingProps,
   base: number,
-  spacingAliases: ?SpacingAliases
+  spacingAliases?: SpacingAliases
 ) {
-  const marginArray = parseSpacing(margin)
-  const paddingArray = parseSpacing(padding)
+  const marginArray = parseSpacing(margin, spacingAliases)
+  const paddingArray = parseSpacing(padding, spacingAliases)
 
   if (
     !validateSpacingProps({
@@ -207,7 +189,7 @@ export function combineSpacing(
   return Object.keys(flatProps).reduce(
     (acc, prop) => ({
       ...acc,
-      ...getCSS({ prop, value: flatProps[prop], base, spacingAliases }),
+      ...getCSS(prop, flatProps[prop], base),
     }),
     {}
   )
