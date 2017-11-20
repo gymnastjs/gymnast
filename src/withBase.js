@@ -12,7 +12,10 @@ import type {
 import styles from './base.css'
 import devStyles from './dev.css'
 import { combineSpacing } from './utils'
-import { SpacingAliasesContext } from './spacingAliasesProvider'
+import {
+  SpacingAliasesContext,
+  type SpacingAliases,
+} from './spacingAliasesProvider'
 
 export type Props = {
   align?: AlignGrid,
@@ -57,7 +60,7 @@ export default function withBase(Component: React.ComponentType<*>) {
       style = {},
       ...props
     }: Props & { base: number },
-    context: any
+    context: { spacingAliases?: SpacingAliases }
   ) {
     const classes = compact([
       className,

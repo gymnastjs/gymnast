@@ -1,6 +1,6 @@
 // @flow
 import { memoize } from 'lodash'
-import type { SpacingProps, Noop } from './types'
+import type { SpacingProps, Noop, SpacingValues } from './types'
 import type { SpacingAliases } from './spacingAliasesProvider'
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -144,9 +144,9 @@ export function parseSpacing(
 }
 
 export function replaceAliases(
-  spacingArray: Array<*>,
+  spacingArray: Array<SpacingValues>,
   spacingAliases?: SpacingAliases
-): Array<string | number> {
+): Array<SpacingValues> {
   if (!spacingAliases) {
     return spacingArray
   }
