@@ -7,8 +7,7 @@
     ".all-contributorsrc": "json",
     ".babelrc": "json",
     ".eslintrc": "json",
-    ".stylelintrc": "json",
-    ".picturebookrc": "json"
+    ".stylelintrc": "json"
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -17,8 +16,5 @@
   "javascript.validate.enable": false,
   "prettier.semi": false,
   "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
-  "cSpell.words": [
-    "preval"
-  ]
+  "prettier.trailingComma": "es5"
 }

@@ -32,7 +32,9 @@ describe('combineSpacing', () => {
     '1, 0.5, 2, 0',
     '1 , 0.5  , 2 ,  0'),
   ].forEach(margin =>
-    it(`should convert space separated strings to valid spacing props for "${margin}"`, () =>
+    it(`should convert space separated strings to valid spacing props for "${
+      margin
+    }"`, () =>
       expect(
         combineSpacing(
           {
