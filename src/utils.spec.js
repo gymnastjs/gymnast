@@ -5,6 +5,7 @@ import {
   log,
   parseSpacing,
   validateSpacingProps,
+  replaceAliases,
 } from './utils'
 
 const base = 24
@@ -13,13 +14,13 @@ describe('combineSpacing', () => {
   ;[1, '1'].forEach(marginTop =>
     it(`should combine valid spacing props (${typeof marginTop})`, () =>
       expect(
-        combineSpacing(
-          {
+        combineSpacing({
+          spacingProps: {
             marginTop,
             marginBottom: 2,
           },
-          base
-        )
+          base,
+        })
       ).toEqual({
         borderBottomWidth: 48,
         borderTopWidth: 24,
@@ -36,12 +37,12 @@ describe('combineSpacing', () => {
       margin
     }"`, () =>
       expect(
-        combineSpacing(
-          {
+        combineSpacing({
+          spacingProps: {
             margin,
           },
-          base
-        )
+          base,
+        })
       ).toEqual({
         borderTopWidth: 24,
         borderRightWidth: 12,
@@ -52,12 +53,12 @@ describe('combineSpacing', () => {
 
   it('should fail with multiple consecutive empty commas', () => {
     expect(
-      combineSpacing(
-        {
+      combineSpacing({
+        spacingProps: {
           margin: '1,,2',
         },
-        base
-      )
+        base,
+      })
     ).toEqual({
       borderTopWidth: 24,
       borderRightWidth: NaN,
@@ -68,12 +69,12 @@ describe('combineSpacing', () => {
 
   it('should convert numbers to valid spacing props', () => {
     expect(
-      combineSpacing(
-        {
+      combineSpacing({
+        spacingProps: {
           margin: 1,
         },
-        base
-      )
+        base,
+      })
     ).toEqual({
       borderTopWidth: 24,
       borderRightWidth: 24,
@@ -84,12 +85,12 @@ describe('combineSpacing', () => {
 
   it('should convert mixed arrays to valid spacing props', () => {
     expect(
-      combineSpacing(
-        {
+      combineSpacing({
+        spacingProps: {
           margin: [1, '0', '2'],
         },
-        base
-      )
+        base,
+      })
     ).toEqual({
       borderTopWidth: 24,
       borderRightWidth: 0,
@@ -194,6 +195,9 @@ describe('getCSS', () => {
 })
 
 describe('parseSpacing', () => {
+  it('should return undefined if spacing is undefined', () => {
+    expect(parseSpacing(undefined)).not.toBeDefined()
+  })
   it('should return a number array as is', () => {
     expect(parseSpacing([1, 0.5])).toEqual([1, 0.5])
   })
@@ -216,5 +220,50 @@ describe('parseSpacing', () => {
     parseSpacing({})
 
     expect(log.error).toHaveBeenCalled()
+  })
+
+  it('should accept strings and numbers in an array, space separated strings, and comma separated strings', () => {
+    const strAndNums = ['1', 0, '0.5']
+    const spaceSeparated = '1 0 0.5'
+    const commaSeparated = '1,0, 0.5'
+    const expected = [1, 0, 0.5]
+
+    expect(parseSpacing(spaceSeparated)).toEqual(expected)
+    expect(parseSpacing(commaSeparated)).toEqual(expected)
+    expect(parseSpacing(strAndNums)).toEqual(expected)
+  })
+
+  it('should accept a single number or a string that is castable to a float', () => {
+    expect(parseSpacing(1)).toEqual([1])
+    expect(parseSpacing('1')).toEqual([1])
+  })
+
+  it('should replace spacing aliases with their aliases values', () => {
+    const spacingAliases = { XS: 0.5, S: 1 }
+    const spaing = [2, 'XS', 'S', 2]
+    const expected = [2, 0.5, 1, 2]
+
+    expect(parseSpacing(spaing, spacingAliases)).toEqual(expected)
+  })
+})
+
+describe('replaceAliases', () => {
+  it('should return the spacingArray unchanged if spacingAliases is not defined', () => {
+    const spacingArray = ['1', '2']
+    expect(replaceAliases(spacingArray)).toBe(spacingArray)
+  })
+
+  it('should replace all spacing aliases with their aliased values', () => {
+    const spacingAliases = {
+      XS: 0.5,
+      S: 1,
+    }
+
+    expect(replaceAliases([2, 'XS', 'S', 2], spacingAliases)).toEqual([
+      2,
+      0.5,
+      1,
+      2,
+    ])
   })
 })
