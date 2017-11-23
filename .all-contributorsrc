@@ -39,6 +39,17 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "andrewmtoy",
+      "name": "Andrew Toy",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1621615?v=4",
+      "profile": "https://github.com/andrewmtoy",
+      "contributions": [
+        "bug",
+        "code",
+        "example"
+      ]
     }
   ]
 }
