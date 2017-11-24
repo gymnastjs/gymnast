@@ -36,7 +36,7 @@
     "babel-cli": "6.26.0",
     "babel-eslint": "8.0.2",
     "babel-jest": "21.2.0",
-    "babel-plugin-flow-react-proptypes": "9.1.0",
+    "babel-plugin-flow-react-proptypes": "9.1.1",
     "babel-plugin-lodash": "3.3.2",
     "babel-plugin-module-resolver": "3.0.0",
     "babel-plugin-preval": "1.6.2",
@@ -86,7 +86,7 @@
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-for": "2.1.1",
     "postcss-import": "11.0.0",
-    "postcss-loader": "2.0.8",
+    "postcss-loader": "2.0.9",
     "postcss-nesting": "4.2.1",
     "prettier": "1.8.2",
     "raw-loader": "0.5.1",
@@ -98,7 +98,7 @@
     "saucelabs": "1.4.0",
     "selenium-standalone": "6.11.0",
     "semantic-release": "8.2.0",
-    "semantic-release-cli": "3.2.5",
+    "semantic-release-cli": "3.2.6",
     "storybook-addon-jsx": "5.0.0",
     "style-loader": "0.19.0",
     "stylelint": "8.2.0",
@@ -114,7 +114,7 @@
   "bundlesize": [
     {
       "path": "./dist/reflex.min.js",
-      "maxSize": "7.5 Kb"
+      "maxSize": "8 Kb"
     },
     {
       "path": "./dist/reflex.css",

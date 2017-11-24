@@ -4,8 +4,8 @@ import {
   getSpacingClasses,
   log,
   parseSpacing,
-  validateSpacingProps,
   replaceAliases,
+  validateSpacingProps,
 } from './utils'
 
 const base = 24

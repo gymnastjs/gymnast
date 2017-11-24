@@ -2,17 +2,18 @@
 import * as React from 'react'
 import { compact, get } from 'lodash'
 import type {
-  Dev,
   AlignGrid,
+  ConfigProviderContext,
+  Dev,
   Justify,
   Size,
-  SpacingValues,
   Spacing,
+  SpacingValues,
 } from './types'
 import styles from './base.css'
 import devStyles from './dev.css'
 import { combineSpacing } from './utils'
-import { ConfigContext, type ConfigContextFlow } from './configProvider'
+import { ConfigContextPropTypes } from './configProvider'
 
 export type Props = {
   align?: AlignGrid,
@@ -34,7 +35,7 @@ export type Props = {
   style?: { [string]: string | number },
 }
 
-export default function withBase(Component: React.ComponentType<*>) {
+export default function withBase(Component: *) {
   function Base(
     {
       align,
@@ -57,7 +58,7 @@ export default function withBase(Component: React.ComponentType<*>) {
       style = {},
       ...props
     }: Props & { base: number },
-    context: ConfigContextFlow
+    context: ConfigProviderContext
   ) {
     const classes = compact([
       className,
@@ -98,6 +99,6 @@ export default function withBase(Component: React.ComponentType<*>) {
     )
   }
 
-  Base.contextTypes = ConfigContext
+  Base.contextTypes = ConfigContextPropTypes
   return Base
 }
