@@ -6,7 +6,7 @@ Reflex is a React and flexbox-based layout solution. With Reflex, you can elimin
 
 or
 
-[Play with a demo](https://codesandbox.io/s/k7RvpOmN)
+[Play with a demo](https://codesandbox.io/s/1zxk60lxx4)
 
 ## 📺 Examples
 
