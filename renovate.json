@@ -1,3 +1,16 @@
 {
-  "extends": [":library"]
+  "schedule": "after 10pm on sunday",
+  "pinVersions": true,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "after 10pm on sunday"
+  },
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "devDependencies": {
+    "automerge": true
+  },
+  "rebaseStalePrs": true
 }
