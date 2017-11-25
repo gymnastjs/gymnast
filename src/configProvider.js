@@ -2,18 +2,24 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import defaults from './defaults.json'
-import type { SpacingAliases, ConfigProviderContext } from './types'
+import type {
+  SpacingAliases,
+  DisplayAliases,
+  ConfigProviderContext,
+} from './types'
 
 type Props = {|
   spacingAliases?: SpacingAliases,
+  displayAliases?: DisplayAliases,
   base?: number,
   children: React.Node,
 |}
 
 export const ConfigContextPropTypes = {
   xnReflex: PropTypes.shape({
-    spacingAliases: PropTypes.shape({}),
     base: PropTypes.number,
+    displayAliases: PropTypes.shape({}),
+    spacingAliases: PropTypes.shape({}),
   }),
 }
 
@@ -22,10 +28,10 @@ export default class ConfigProvider extends React.Component<Props> {
   static childContextTypes = ConfigContextPropTypes
 
   getChildContext(): ConfigProviderContext {
-    const { spacingAliases, base } = this.props
+    const { spacingAliases, displayAliases, base } = this.props
 
     return {
-      xnReflex: { ...defaults, spacingAliases, base },
+      xnReflex: { ...defaults, spacingAliases, displayAliases, base },
     }
   }
   render() {

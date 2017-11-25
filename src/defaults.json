@@ -12,5 +12,10 @@
     "2XL/2": 3,
     "2XL": 6
   },
+  "displayAliases": {
+    "small": "-599",
+    "medium": "600-899",
+    "large": "900-"
+  },
   "base": 8
 }

@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import Grid from '../grid'
-import type { Props } from '../grid/asGrid'
+import type { GridProps } from '../types'
 
 const defaults = {
   marginTop: 0,
@@ -10,7 +10,7 @@ const defaults = {
   marginLeft: 1.5,
 }
 
-export default function Col(props: Props) {
+export default function Col(props: GridProps) {
   if (typeof props.margin === 'undefined') {
     return <Grid {...defaults} {...props} />
   }
