@@ -1,7 +1,6 @@
 // @flow
 import { memoize } from 'lodash'
-import type { SpacingProps, Noop, SpacingValues } from './types'
-import type { SpacingAliases } from './configProvider'
+import type { SpacingProps, Noop, SpacingValues, SpacingAliases } from './types'
 
 const isProd = process.env.NODE_ENV === 'production'
 const isObjPropNumber = keys => key => typeof keys[key] === 'number'

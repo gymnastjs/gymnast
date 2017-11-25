@@ -1,8 +1,10 @@
 // @flow
 import * as React from 'react'
+import { number } from '@storybook/addon-knobs'
 import { Grid, ConfigProvider } from 'reflex'
 
 export default function() {
+  const base = number('base', 24, { range: true, min: 8, max: 24, step: 8 })
   const spacingAliases = {
     XS: 0.5,
     'S/2': 0.5,
@@ -18,7 +20,7 @@ export default function() {
   }
   return (
     <Grid>
-      <ConfigProvider spacingAliases={spacingAliases}>
+      <ConfigProvider spacingAliases={spacingAliases} base={base}>
         <Grid dev={1} margin="L" size={6}>
           <Grid dev={2}>My margins are set using aliases!</Grid>
         </Grid>

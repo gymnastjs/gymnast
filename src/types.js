@@ -1,12 +1,30 @@
 // @flow
 type zeroThroughElevenNumbers = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
-type zeroThroughElevenStrings = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11'
+type zeroThroughElevenStrings =
+  | '1'
+  | '2'
+  | '3'
+  | '4'
+  | '5'
+  | '6'
+  | '7'
+  | '8'
+  | '9'
+  | '10'
+  | '11'
 
 export type Noop = (...params: any[]) => null
 
 export type Offset = zeroThroughElevenNumbers | zeroThroughElevenStrings | void
 
-export type Size = zeroThroughElevenNumbers | zeroThroughElevenStrings | 12 | '12' | 'fit' | 'auto' | void
+export type Size =
+  | zeroThroughElevenNumbers
+  | zeroThroughElevenStrings
+  | 12
+  | '12'
+  | 'fit'
+  | 'auto'
+  | void
 
 export type Dev = 1 | 2 | 3 | 4 | 5 | void
 
@@ -36,3 +54,14 @@ export type SpacingProps = {
   marginBottom?: SpacingValues,
   marginLeft?: SpacingValues,
 }
+
+export type SpacingAliases = {
+  +[spacingAlias: string]: number,
+}
+
+export type ConfigProviderContext = {|
+  +xnReflex: {|
+    +spacingAliases: SpacingAliases,
+    +base: number,
+  |},
+|}
