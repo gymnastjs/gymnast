@@ -32,7 +32,7 @@
     "@storybook/addon-storyshots": "3.2.16",
     "@storybook/channels": "3.2.16",
     "@storybook/react": "3.2.16",
-    "all-contributors-cli": "4.9.1",
+    "all-contributors-cli": "4.10.0",
     "babel-cli": "6.26.0",
     "babel-eslint": "8.0.2",
     "babel-jest": "21.2.0",
