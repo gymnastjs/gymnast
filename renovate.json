@@ -1,6 +1,7 @@
 {
   "schedule": "after 10pm on sunday",
   "pinVersions": true,
+  "groupName": "All",
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": "after 10pm on sunday"
