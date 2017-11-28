@@ -1,8 +1,9 @@
 // @flow
 import * as React from 'react'
-import { Grid, Layout, Root } from 'reflex'
+import { Root } from 'reflex'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
+import { Grid, Layout } from '../../shared'
 import styles from '../../shared/layout.css'
 
 function getStaticSection(index) {

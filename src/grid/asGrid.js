@@ -4,8 +4,7 @@ import { compact, get } from 'lodash'
 import type { ConfigProviderContext, OneResolutionGrid } from '../types'
 import withResolution from '../withResolution'
 import { base as defaultBase } from '../defaults.json'
-import styles from './grid.css'
-import devStyles from '../dev.css'
+import styles from './grid.styles'
 import { combineSpacing } from '../utils'
 import { ConfigContextPropTypes } from '../configProvider'
 
@@ -32,7 +31,6 @@ export default function asGrid(Component: *) {
       base = defaultBase,
       children,
       className,
-      dev,
       innerRef,
       justify,
       margin,
@@ -53,11 +51,7 @@ export default function asGrid(Component: *) {
   ) {
     const classes = compact([
       className,
-      size && styles.col,
-      size && styles[`col-${String(size)}`],
-      dev &&
-        process.env.NODE_ENV !== 'production' &&
-        devStyles[`colors${String(dev)}`],
+      size ? styles.col(size) : styles.fraction,
       styles.grid,
       align && styles[`${align}Align`],
       justify && styles[`${justify}Justify`],

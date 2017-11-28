@@ -2,8 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Col, Grid } from 'reflex'
-import { RootLayout } from '../../shared'
+import { RootLayout, Grid, Col } from '../../shared'
 
 type ItemProps = {
   text: string,

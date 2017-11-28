@@ -1,8 +1,7 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { Grid } from 'reflex'
-import { RootLayout, Box } from '../../../shared'
+import { RootLayout, Box, Grid } from '../../../shared'
 
 export default () => {
   const size = number('Size', 12, { range: true, min: 7, max: 12 })

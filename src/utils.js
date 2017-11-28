@@ -1,7 +1,7 @@
 // @flow
 import { spacingAliases as defaultSpacingAliases } from './defaults.json'
 import type { SpacingProps, Noop, SpacingValues, SpacingAliases } from './types'
-import errors from './errors'
+import errors from /* preval */ './errors'
 
 const isProd = process.env.NODE_ENV === 'production'
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'

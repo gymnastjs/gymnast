@@ -2,8 +2,8 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Layout, Root } from 'reflex'
-import { loremIpsum } from '../../shared'
+import { Root } from 'reflex'
+import { loremIpsum, Grid, Layout } from '../../shared'
 import styles from '../../shared/layout.css'
 
 export default () => {

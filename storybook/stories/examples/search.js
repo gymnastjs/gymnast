@@ -1,9 +1,10 @@
 // @flow
 
 import * as React from 'react'
-import { Grid, Layout, Root } from 'reflex'
+import { Root } from 'reflex'
 import { number } from '@storybook/addon-knobs'
 import styles from './layout.css'
+import { Grid, Layout } from '../../shared'
 import Header from '../components/header/app'
 import SearchFilters from '../components/search/filters'
 import SearchNav from '../components/search/nav'
