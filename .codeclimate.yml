@@ -15,3 +15,9 @@ ratings:
   - "stories/*"
   - "stories/**/*"
   - "scripts/*"
+exclude_patterns:
+  - "**/node_modules/"
+  - "**/__screenshots__/"
+  - "**/__snapshots__/"
+  - "storybook/stories/"
+  - "flow-typed/"
