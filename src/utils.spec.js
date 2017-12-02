@@ -1,7 +1,6 @@
 import {
   combineSpacing,
   getCSS,
-  getSpacingClasses,
   log,
   parseSpacing,
   replaceAliases,
@@ -26,6 +25,33 @@ describe('combineSpacing', () => {
         borderTopWidth: 24,
       }))
   )
+
+  it('should log an error if too many arguments for spacing are provided', () => {
+    spyOn(log, 'error')
+
+    combineSpacing({
+      spacingProps: {
+        margin: [1, 2, 3, 4, 5],
+      },
+      base: 1,
+    })
+    expect(log.error).toHaveBeenCalled()
+  })
+
+  it('should invalidate spacing properties if conflicting values are passed', () => {
+    spyOn(log, 'error')
+
+    const out = combineSpacing({
+      spacingProps: {
+        margin: [1, 2, 3, 4],
+        marginTop: 0,
+      },
+      base: 1,
+    })
+
+    expect(log.error).toHaveBeenCalled()
+    expect(out).toEqual({})
+  })
   ;[
     ('1 0.5 2 0',
     '1,0.5,2,0',
@@ -96,36 +122,6 @@ describe('combineSpacing', () => {
       borderRightWidth: 0,
       borderBottomWidth: 48,
       borderLeftWidth: 0,
-    })
-  })
-})
-
-describe('getSpacingClasses', () => {
-  it('should throw if more than 4 values are passed', () => {
-    expect(() => {
-      getSpacingClasses([1, 2, 3, 4, 5], 'margin')
-    }).toThrow()
-  })
-
-  it('should return "{}" if no spacing values are requested', () => {
-    expect(getSpacingClasses([], 'padding')).toEqual({})
-  })
-
-  it('should expand shorthand values', () => {
-    expect(getSpacingClasses([1], 'margin')).toEqual({
-      marginTop: 1,
-      marginRight: 1,
-      marginBottom: 1,
-      marginLeft: 1,
-    })
-  })
-
-  it('should keep the input if it has full size', () => {
-    expect(getSpacingClasses([1, 0, 0.5, 2], 'margin')).toEqual({
-      marginTop: 1,
-      marginRight: 0,
-      marginBottom: 0.5,
-      marginLeft: 2,
     })
   })
 })
@@ -248,11 +244,6 @@ describe('parseSpacing', () => {
 })
 
 describe('replaceAliases', () => {
-  it('should return the spacingArray unchanged if spacingAliases is not defined', () => {
-    const spacingArray = ['1', '2']
-    expect(replaceAliases(spacingArray)).toBe(spacingArray)
-  })
-
   it('should replace all spacing aliases with their aliased values', () => {
     const spacingAliases = {
       XS: 0.5,

@@ -4,12 +4,6 @@ import { Grid, Root, Layout, Col } from 'reflex'
 import { loremIpsum } from '../../shared'
 import styles from './report.css'
 import { page } from './layout.css'
-import {
-  horizontal,
-  horizontalHalf,
-  allHalf,
-  verticalHalf,
-} from '../../shared/marginTypes'
 
 function P(props) {
   return (
@@ -22,12 +16,7 @@ function P(props) {
 function Li({ index }: { index: number }) {
   return (
     <li>
-      <Grid
-        size="fit"
-        dev={index % 2 ? 5 : 1}
-        padding={verticalHalf}
-        justify="center"
-      >
+      <Grid size="fit" dev={index % 2 ? 5 : 1} padding="L/2 0" justify="center">
         Item {index}
       </Grid>
     </li>
@@ -43,7 +32,7 @@ function Card({
 }): React.Element<any> {
   return (
     <Col style={{ minHeight: height }}>
-      <Grid padding={1} dev={5}>
+      <Grid padding="L" dev={5}>
         {children}
       </Grid>
     </Col>
@@ -56,40 +45,40 @@ export default function() {
       <Layout fixed="top">
         <Layout dev={1}>
           <Root>
-            <Grid margin={allHalf}>
+            <Grid margin="L/2">
               <h1>Header</h1>
             </Grid>
           </Root>
         </Layout>
         <Layout dev={4}>
           <Root>
-            <Grid margin={allHalf}>
+            <Grid margin="L/2">
               <h2>Subheader</h2>
             </Grid>
-            <Grid size={10} margin={horizontalHalf}>
-              <Grid marginRight={2} size="fit">
-                <Grid paddingTop={1} dev={3}>
+            <Grid size={10} margin="0 L/2">
+              <Grid marginRight="2XL" size="fit">
+                <Grid paddingTop="L" dev={3}>
                   Lorem
                 </Grid>
               </Grid>
-              <Grid marginRight={2} size="fit">
-                <Grid paddingTop={1} dev={3}>
+              <Grid marginRight="2XL" size="fit">
+                <Grid paddingTop="L" dev={3}>
                   ipsum
                 </Grid>
               </Grid>
-              <Grid marginRight={2} size="fit">
-                <Grid paddingTop={1} dev={3}>
+              <Grid marginRight="2XL" size="fit">
+                <Grid paddingTop="L" dev={3}>
                   dolor
                 </Grid>
               </Grid>
-              <Grid marginRight={2} size="fit">
-                <Grid paddingTop={1} dev={3}>
+              <Grid marginRight="2XL" size="fit">
+                <Grid paddingTop="L" dev={3}>
                   sit amet, consectetur
                 </Grid>
               </Grid>
             </Grid>
-            <Grid margin={horizontalHalf} size={2}>
-              <Grid paddingTop={1} dev={3}>
+            <Grid margin="0 L/2" size={2}>
+              <Grid paddingTop="L" dev={3}>
                 sit amet
               </Grid>
             </Grid>
@@ -100,7 +89,7 @@ export default function() {
         <Layout height="auto" dev={2}>
           <Root>
             <Grid>
-              <Grid size={1} align="top" paddingTop={1} margin={horizontalHalf}>
+              <Grid size={1} align="top" paddingTop="L" margin="0 L/2">
                 <Grid>
                   <ul>
                     <Li index={1} />
@@ -116,7 +105,7 @@ export default function() {
                 size={7}
                 className={styles.content}
                 align="top"
-                paddingTop={1}
+                paddingTop="L"
               >
                 <P>Text A</P>
                 <Card height={140}>First Block</Card>
@@ -134,9 +123,9 @@ export default function() {
                 <Card>Ok last one</Card>
                 <P>{loremIpsum.substr(0, 250)}...</P>
               </Grid>
-              <Grid size={4} className={styles.clippy} padding={horizontalHalf}>
-                <Grid align="top" dev={1} paddingTop={1} margin={horizontal}>
-                  <Grid marginBottom={1}>Side bar</Grid>
+              <Grid size={4} className={styles.clippy} padding="0 L/2">
+                <Grid align="top" dev={1} paddingTop="L" margin="0 L">
+                  <Grid marginBottom="L">Side bar</Grid>
                 </Grid>
               </Grid>
             </Grid>
@@ -144,7 +133,7 @@ export default function() {
         </Layout>
         <Layout dev={1}>
           <Root>
-            <Grid margin={allHalf}>
+            <Grid margin="L/2">
               <h1>Footer</h1>
             </Grid>
           </Root>

@@ -11,7 +11,7 @@ const justifyType = {
   Right: 'right',
 }
 
-export default function() {
+export default () => {
   const justify = select(
     'Horizontal Align',
     ['Default', 'Left', 'Center', 'Right'],

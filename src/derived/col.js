@@ -5,9 +5,9 @@ import type { Props } from '../withBase'
 
 const defaults = {
   marginTop: 0,
-  marginRight: 0.5,
-  marginBottom: 1,
-  marginLeft: 0.5,
+  marginRight: 1.5,
+  marginBottom: 3,
+  marginLeft: 1.5,
 }
 
 export default function Col(props: Props) {

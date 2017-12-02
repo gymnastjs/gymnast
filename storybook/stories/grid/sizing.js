@@ -5,7 +5,7 @@ import { number } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
 import { RootLayout, Box } from '../../shared'
 
-export default function() {
+export default () => {
   const size = number('Size', 12, { range: true, min: 1, max: 12 })
 
   return (

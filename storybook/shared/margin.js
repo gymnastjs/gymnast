@@ -3,13 +3,13 @@ import { select } from '@storybook/addon-knobs'
 import type { Spacing } from '../../src/types'
 
 const marginMap = {
-  Item: [0, 0.5, 1],
-  All: [1],
-  Horizontal: [0, 0.5],
-  'Double Horizontal': [0, 1],
+  Item: [0, 'L/2', 'L'],
+  All: ['L'],
+  Horizontal: [0, 'L/2'],
+  'Double Horizontal': [0, 'L'],
   None: [],
-  Vertical: [0, 0, 1],
-  'Double Vertical': [0, 0, 2],
+  Vertical: [0, 0, 'L'],
+  'Double Vertical': [0, 0, '2XL'],
 }
 
 const marginOptions = [

@@ -5,7 +5,7 @@ import { number, boolean } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
 import { Box, RootLayout, getMarginSelect } from '../../shared'
 
-export default function() {
+export default () => {
   const items = number('Items', 5, { range: true, min: 0, max: 24 })
   const height = number('Container Height', 500, {
     range: true,

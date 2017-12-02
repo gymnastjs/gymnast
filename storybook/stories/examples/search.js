@@ -8,9 +8,8 @@ import Header from '../components/header/app'
 import SearchFilters from '../components/search/filters'
 import SearchNav from '../components/search/nav'
 import SearchResults from '../components/search/results'
-import { allHalf } from '../../shared/marginTypes'
 
-export default function() {
+export default () => {
   const results = number('Results', 5, { range: true, min: 1, max: 10 })
   const pages = number('Pages', 3, { range: true, min: 1, max: 5 })
   return (
@@ -24,7 +23,7 @@ export default function() {
         <SearchNav />
         <Layout height="auto" dev={2}>
           <Root>
-            <Grid margin={[1, 0, 0, 0]}>
+            <Grid margin="L 0 0 0">
               <SearchFilters size={3} />
               <SearchResults size={9} {...{ pages, results }} />
             </Grid>
@@ -32,7 +31,7 @@ export default function() {
         </Layout>
         <Layout dev={1}>
           <Root>
-            <Grid margin={allHalf}>
+            <Grid margin="L/2">
               <h1>Footer</h1>
             </Grid>
           </Root>

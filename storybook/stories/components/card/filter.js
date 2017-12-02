@@ -3,27 +3,22 @@ import * as React from 'react'
 import { Grid, Col } from 'reflex'
 import { RootLayout, loremIpsum } from '../../../shared'
 import styles from '../../../shared/stories.css'
-import {
-  horizontal,
-  horizontalHalf,
-  xBottom,
-} from '../../../shared/marginTypes'
 
-export default function() {
+export default () => {
   function ListItem({ index }: { index: number }) {
     return (
       <Grid
         className={index % 2 ? styles.colors1 : styles.colors4}
-        paddingBottom={0.5}
-        paddingTop={index === 0 ? 0 : 0.5}
+        paddingBottom="L/2"
+        paddingTop={index === 0 ? 0 : 'L/2'}
       >
-        <Grid size={6} marginRight={0.5}>
+        <Grid size={6} marginRight="L/2">
           Selected Item Name
         </Grid>
-        <Grid margin={horizontalHalf} size={3}>
+        <Grid margin="0 L/2" size={3}>
           Some Tag
         </Grid>
-        <Grid marginLeft={0.5} size="auto" justify="right">
+        <Grid marginLeft="L/2" size="auto" justify="right">
           x
         </Grid>
       </Grid>
@@ -38,24 +33,24 @@ export default function() {
         </Col>
         <Grid justify="center">
           <Col size={6}>
-            <Grid marginBottom={1}>
-              <Grid dev={1} padding={xBottom}>
-                <Grid margin={[0, 0.5, 1, 0]} size={9}>
+            <Grid marginBottom="L">
+              <Grid dev={1} padding="L L 0">
+                <Grid margin="0 L/2 L 0" size={9}>
                   <h2>Title</h2>
                 </Grid>
                 <Grid size={3} justify="right">
                   X
                 </Grid>
               </Grid>
-              <Grid dev={4} paddingTop={1} margin={horizontalHalf}>
-                <Grid margin={horizontalHalf} paddingBottom={0.5}>
+              <Grid dev={4} paddingTop="L" margin="0 L/2">
+                <Grid margin="0 L/2" paddingBottom="L/2">
                   Filter by...
                 </Grid>
                 <Col size={6}>
                   <input type="text" />
                 </Col>
               </Grid>
-              <Grid dev={2} paddingTop={1} margin={horizontal}>
+              <Grid dev={2} paddingTop="L" margin="0 L">
                 <ListItem index={0} />
                 <ListItem index={1} />
                 <ListItem index={2} />
@@ -65,10 +60,10 @@ export default function() {
                 <Grid>
                   <p>{loremIpsum.substr(0, 100)}</p>
                 </Grid>
-                <Grid size={4} margin={[0, 0.5, 1, 0]}>
+                <Grid size={4} margin="0 L/2 L 0">
                   <button>Cancel</button>
                 </Grid>
-                <Grid size={4} margin={[0, 0, 1, 0.5]}>
+                <Grid size={4} margin="0 0 L L/2">
                   <button>Filter</button>
                 </Grid>
               </Grid>

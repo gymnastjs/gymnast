@@ -6,14 +6,14 @@ import Grid from '../grid'
 
 describe('Col', () => {
   let wrapper
-  it('should render a Grid with col margins ([0, 0.5, 1])', () => {
+  it('should render a Grid with col margins ([0, 1.5, 3])', () => {
     wrapper = shallow(<Col />)
     const gridProps = wrapper.find(Grid).props()
 
     expect(gridProps.marginTop).toBe(0)
-    expect(gridProps.marginRight).toBe(0.5)
-    expect(gridProps.marginBottom).toBe(1)
-    expect(gridProps.marginLeft).toBe(0.5)
+    expect(gridProps.marginRight).toBe(1.5)
+    expect(gridProps.marginBottom).toBe(3)
+    expect(gridProps.marginLeft).toBe(1.5)
   })
 
   it('should override defaults when passing margin prop', () => {

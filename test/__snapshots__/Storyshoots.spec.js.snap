@@ -6623,7 +6623,7 @@ exports[`Storyshots Grid Format 1`] = `
               }
             >
               <code>
-                [1,0.5]
+                ["L","L/2"]
               </code>
             </div>
             <div
@@ -6717,7 +6717,7 @@ exports[`Storyshots Grid Format 1`] = `
               }
             >
               <code>
-                "1,0.5"
+                "L,L/2"
               </code>
             </div>
             <div
@@ -6811,7 +6811,7 @@ exports[`Storyshots Grid Format 1`] = `
               }
             >
               <code>
-                "1 0.5"
+                "L L/2"
               </code>
             </div>
             <div
@@ -6905,7 +6905,7 @@ exports[`Storyshots Grid Format 1`] = `
               }
             >
               <code>
-                "1, 0.5"
+                "L, L/2"
               </code>
             </div>
             <div
@@ -6999,7 +6999,7 @@ exports[`Storyshots Grid Format 1`] = `
               }
             >
               <code>
-                "0.5"
+                "1.5"
               </code>
             </div>
             <div
@@ -7093,7 +7093,7 @@ exports[`Storyshots Grid Format 1`] = `
               }
             >
               <code>
-                0.5
+                1.5
               </code>
             </div>
             <div
@@ -11255,10 +11255,10 @@ exports[`Storyshots Layout Auto 1`] = `
               className="base"
               style={
                 Object {
-                  "borderBottomWidth": 0,
+                  "borderBottomWidth": 24,
                   "borderLeftWidth": 12,
                   "borderRightWidth": 12,
-                  "borderTopWidth": 0,
+                  "borderTopWidth": 24,
                 }
               }
             >

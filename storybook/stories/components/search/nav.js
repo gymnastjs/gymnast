@@ -4,7 +4,7 @@ import { Col, Layout, Grid, Root } from 'reflex'
 
 export default function SearchNav() {
   return (
-    <Layout dev={4} margin={[1, 0, 0, 0]}>
+    <Layout dev={4} margin="L 0 0 0">
       <Root>
         <Grid>
           <Col size={7}>

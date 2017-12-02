@@ -13,11 +13,11 @@ import {
 export default function() {
   const paddingMap = {
     None: [],
-    All: [1],
-    Horizontal: [0, 1],
-    Vertical: [1, 0],
-    'Top Left': [1, 0, 0, 1],
-    Bottom: [0, 0, 1],
+    All: ['L'],
+    Horizontal: [0, 'L'],
+    Vertical: ['L', 0],
+    'Top Left': ['L', 0, 0, 'L'],
+    Bottom: [0, 0, 'L'],
   }
   const paddingOptions = Object.keys(paddingMap)
   const items = number('Items', 6, { range: true, min: 1, max: 24 })

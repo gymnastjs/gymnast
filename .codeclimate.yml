@@ -5,9 +5,9 @@ engines:
     enabled: true
 ratings:
   paths:
-  - "**.sh"
-  - "**.css"
-  - "**.js"
+  - "**/*.sh"
+  - "**/*.css"
+  - "**/*.js"
   - "src/*"
   - "src/**/*"
   - "test/*"
@@ -21,3 +21,5 @@ exclude_patterns:
   - "**/__snapshots__/"
   - "storybook/stories/"
   - "flow-typed/"
+  - "**/*.spec.js"
+  - "test/env.js"

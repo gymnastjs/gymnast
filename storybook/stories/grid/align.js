@@ -18,7 +18,7 @@ function ReferenceColumn({ height }: { height: number }) {
   )
 }
 
-export default function() {
+export default () => {
   const stretch = boolean('Stretch', false)
   const items = number('Items', 1, { range: true, min: 1, max: 5 })
   const height = number('Height', 300, {
