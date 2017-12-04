@@ -1,13 +1,11 @@
 // @flow
-import { type Props } from './withBase'
+import { type Props } from './grid/asGrid'
 import * as srcUtils from './utils'
 
 export type GridProps = Props
 
-export { default as withGrid } from './withGrid'
-export { default as withBase } from './withBase'
+export { default as asGrid } from './grid/asGrid'
 export { default as ConfigProvider } from './configProvider'
-export { default as Base } from './base'
 export { default as Grid } from './grid'
 export { default as Layout } from './layout'
 export { version } from '../version'

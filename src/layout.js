@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { compact, get } from 'lodash'
-import { base } from './defaults.json'
+import { base as defaultBase } from './defaults.json'
 import { combineSpacing } from './utils'
 import type {
   ConfigProviderContext,
@@ -48,6 +48,7 @@ function getOverflow(overflow: Overflow): string {
 }
 
 export type Props = {
+  base?: number,
   dev?: Dev,
   devMode?: boolean,
   className?: string,
@@ -64,6 +65,7 @@ export type Props = {
 
 export default function Layout(
   {
+    base = defaultBase,
     className,
     dev,
     fixed,

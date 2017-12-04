@@ -9,14 +9,16 @@ import type {
   Size,
   Spacing,
   SpacingValues,
-} from './types'
-import styles from './base.css'
-import devStyles from './dev.css'
-import { combineSpacing } from './utils'
-import { ConfigContextPropTypes } from './configProvider'
+} from '../types'
+import { base as defaultBase } from '../defaults.json'
+import styles from './grid.css'
+import devStyles from '../dev.css'
+import { combineSpacing } from '../utils'
+import { ConfigContextPropTypes } from '../configProvider'
 
 export type Props = {
   align?: AlignGrid,
+  base?: number,
   children?: React.Node,
   className?: string,
   dev?: Dev,
@@ -35,11 +37,11 @@ export type Props = {
   style?: { [string]: string | number },
 }
 
-export default function withBase(Component: *) {
-  function Base(
+export default function asGrid(Component: *) {
+  function Grid(
     {
       align,
-      base,
+      base = defaultBase,
       children,
       className,
       dev,
@@ -57,7 +59,7 @@ export default function withBase(Component: *) {
       size,
       style = {},
       ...props
-    }: Props & { base: number },
+    }: Props,
     context: ConfigProviderContext
   ) {
     const classes = compact([
@@ -67,7 +69,7 @@ export default function withBase(Component: *) {
       dev &&
         process.env.NODE_ENV !== 'production' &&
         devStyles[`colors${String(dev)}`],
-      styles.base,
+      styles.grid,
       align && styles[`${align}Align`],
       justify && styles[`${justify}Justify`],
     ])
@@ -87,7 +89,7 @@ export default function withBase(Component: *) {
           paddingBottom,
           paddingLeft,
         },
-        base,
+        base: get(context, 'xnReflex.base', base),
         spacingAliases: get(context, 'xnReflex.spacingAliases'),
       }),
     }
@@ -99,6 +101,6 @@ export default function withBase(Component: *) {
     )
   }
 
-  Base.contextTypes = ConfigContextPropTypes
-  return Base
+  Grid.contextTypes = ConfigContextPropTypes
+  return Grid
 }

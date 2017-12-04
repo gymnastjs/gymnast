@@ -7,7 +7,7 @@ import {
   validateSpacingProps,
 } from './utils'
 
-const base = 24
+const base = 8
 
 describe('combineSpacing', () => {
   ;[1, '1'].forEach(marginTop =>
@@ -21,8 +21,8 @@ describe('combineSpacing', () => {
           base,
         })
       ).toEqual({
-        borderBottomWidth: 48,
-        borderTopWidth: 24,
+        borderBottomWidth: base * 2,
+        borderTopWidth: base,
       }))
   )
 
@@ -53,11 +53,12 @@ describe('combineSpacing', () => {
     expect(out).toEqual({})
   })
   ;[
-    ('1 0.5 2 0',
+    '1 0.5 2 0',
     '1,0.5,2,0',
     '1   0.5  2 0',
     '1, 0.5, 2, 0',
-    '1 , 0.5  , 2 ,  0'),
+    '1 , 0.5  , 2 ,  0',
+    'S , S/2 M 0',
   ].forEach(margin =>
     it(`should convert space separated strings to valid spacing props for "${
       margin
@@ -70,9 +71,9 @@ describe('combineSpacing', () => {
           base,
         })
       ).toEqual({
-        borderTopWidth: 24,
-        borderRightWidth: 12,
-        borderBottomWidth: 48,
+        borderTopWidth: base,
+        borderRightWidth: base / 2,
+        borderBottomWidth: base * 2,
         borderLeftWidth: 0,
       }))
   )
@@ -86,9 +87,9 @@ describe('combineSpacing', () => {
         base,
       })
     ).toEqual({
-      borderTopWidth: 24,
+      borderTopWidth: base,
       borderRightWidth: NaN,
-      borderBottomWidth: 48,
+      borderBottomWidth: base * 2,
       borderLeftWidth: NaN,
     })
   })
@@ -102,10 +103,10 @@ describe('combineSpacing', () => {
         base,
       })
     ).toEqual({
-      borderTopWidth: 24,
-      borderRightWidth: 24,
-      borderBottomWidth: 24,
-      borderLeftWidth: 24,
+      borderTopWidth: base,
+      borderRightWidth: base,
+      borderBottomWidth: base,
+      borderLeftWidth: base,
     })
   })
 
@@ -118,9 +119,9 @@ describe('combineSpacing', () => {
         base,
       })
     ).toEqual({
-      borderTopWidth: 24,
+      borderTopWidth: base,
       borderRightWidth: 0,
-      borderBottomWidth: 48,
+      borderBottomWidth: base * 2,
       borderLeftWidth: 0,
     })
   })
@@ -162,7 +163,7 @@ describe('getCSS', () => {
   it('should log an error if there are invalid props', () => {
     spyOn(log, 'error')
 
-    getCSS('meow', 3, 24)
+    getCSS('meow', 3, base)
 
     expect(log.error).toHaveBeenCalled()
   })
