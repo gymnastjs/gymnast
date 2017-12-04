@@ -3,8 +3,7 @@
   "pinVersions": true,
   "groupName": "All",
   "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": "after 10pm on sunday"
+    "enabled": false
   },
   "automerge": true,
   "major": {
