@@ -1,9 +1,9 @@
 // @flow
-import { memoize } from 'lodash'
+import { spacingAliases as defaultSpacingAliases } from './defaults.json'
 import type { SpacingProps, Noop, SpacingValues, SpacingAliases } from './types'
 
 const isProd = process.env.NODE_ENV === 'production'
-const isObjPropNumber = keys => key => typeof keys[key] === 'number'
+const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
 
 export const noop: Noop = () => null
 
@@ -29,8 +29,8 @@ export function validateSpacingProps(props: SpacingProps) {
   ]
 
   if (
-    (props.marginArray && margins.some(isObjPropNumber(props))) ||
-    (props.paddingArray && paddings.some(isObjPropNumber(props)))
+    (props.marginArray && margins.some(hasDefinedValues(props))) ||
+    (props.paddingArray && paddings.some(hasDefinedValues(props)))
   ) {
     log.error(
       'Cannot define margin or padding and a direction at the same time'
@@ -64,7 +64,8 @@ function getSpacing(
       allValues = values
       break
     default:
-      throw new Error('Invalid Spacing Array Size')
+      log.error('Invalid Spacing Array Size, only first 4 values used')
+      allValues = values
   }
 
   return {
@@ -74,11 +75,6 @@ function getSpacing(
     [`${type}Left`]: allValues[3],
   }
 }
-
-export const getSpacingClasses = memoize(
-  getSpacing,
-  (values, type) => type + values.toString()
-)
 
 export function getCSS(
   prop: string,
@@ -118,7 +114,7 @@ export function parseSpacing(
   spacingAliases?: SpacingAliases
 ): number[] | void {
   if (typeof spacing === 'undefined') {
-    return spacing
+    return undefined
   }
   if (typeof spacing === 'number') {
     return [spacing]
@@ -142,23 +138,34 @@ export function parseSpacing(
   return undefined
 }
 
+function replaceAlias(
+  value: SpacingValues,
+  spacingAliases: SpacingAliases = defaultSpacingAliases
+) {
+  if (spacingAliases && typeof value === 'string' && value in spacingAliases) {
+    return spacingAliases[value]
+  }
+  return value
+}
+
 export function replaceAliases(
   spacingArray: Array<SpacingValues>,
   spacingAliases?: SpacingAliases
 ): Array<SpacingValues> {
-  if (!spacingAliases) {
-    return spacingArray
-  }
-  return spacingArray.map(value => {
-    if (
-      spacingAliases &&
-      typeof value === 'string' &&
-      value in spacingAliases
-    ) {
-      return spacingAliases[value]
-    }
-    return value
-  })
+  return spacingArray.map(value => replaceAlias(value, spacingAliases))
+}
+
+function replaceAliasValues(
+  spacingObject: { [string]: SpacingValues },
+  spacingAliases?: SpacingAliases
+): { [string]: SpacingValues } {
+  return Object.keys(spacingObject).reduce(
+    (acc, key) => ({
+      ...acc,
+      [key]: replaceAlias(spacingObject[key], spacingAliases),
+    }),
+    {}
+  )
 }
 
 type CombineSpacingSettings = {
@@ -187,7 +194,7 @@ export function combineSpacing({
   }
 
   const flatProps = {
-    ...props,
+    ...replaceAliasValues(props, spacingAliases),
     ...getSpacing(marginArray, 'margin'),
     ...getSpacing(paddingArray, 'padding'),
   }

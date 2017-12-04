@@ -1,6 +1,6 @@
-@import './variables.css';
+@import '../variables.css';
 
-.base {
+.grid {
   border: 0 transparent solid;
   box-sizing: border-box;
   display: flex;
@@ -65,7 +65,7 @@
   }
 }
 
-:global(.reflex-dev-mode) .base {
+:global(.reflex-dev-mode) .grid {
   position: relative;
   outline: 1px solid var(--nomuraGray);
 

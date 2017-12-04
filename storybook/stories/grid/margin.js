@@ -5,7 +5,7 @@ import { boolean } from '@storybook/addon-knobs'
 import { Grid } from 'reflex'
 import { Box, RootLayout, getMarginSelect } from '../../shared'
 
-export default function() {
+export default () => {
   const itemMargin = getMarginSelect(
     'Yellow Item Margin',
     'Yellow Item Margin Size'

@@ -5,7 +5,7 @@ import { number } from '@storybook/addon-knobs'
 import { Grid, Col } from 'reflex'
 import { RootLayout, Box, getMarginSelect } from '../../shared'
 
-export default function() {
+export default () => {
   const items = number('Items', 0, { range: true, min: 0, max: 5 })
   const margin = getMarginSelect(undefined, 'Item')
 

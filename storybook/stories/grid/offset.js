@@ -4,7 +4,7 @@ import { number } from '@storybook/addon-knobs'
 import { Grid, Offset } from 'reflex'
 import { RootLayout, Box } from '../../shared'
 
-export default function() {
+export default () => {
   const offset = number('Offset', 0, { range: true, min: 0, max: 11 })
 
   return (

@@ -40,10 +40,10 @@ export default function SearchResults(
            * Explicitly setting height to work around cross browser font height differences
            */}
           <Col size={5}>
-            <Grid marginBottom={0.5} dev={1}>
+            <Grid marginBottom="L/2" dev={1}>
               Orci tempus venenatis
             </Grid>
-            <Grid marginBottom={0.5} dev={1}>
+            <Grid marginBottom="L/2" dev={1}>
               1/6/2017 at 14:50 - 1700 Minor Ave
             </Grid>
             <Grid>
@@ -53,7 +53,7 @@ export default function SearchResults(
             </Grid>
           </Col>
           <Col size={4} align="top">
-            <Grid marginBottom={0.5} dev={4}>
+            <Grid marginBottom="L/2" dev={4}>
               status text ipsum
             </Grid>
             <Grid dev={2}>status sub lorem</Grid>

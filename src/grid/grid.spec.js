@@ -1,20 +1,20 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import withGrid from './withGrid'
-import Grid from './grid'
+import asGrid from './asGrid'
+import Grid from './index'
 
 describe('gridHOC', () => {
   let wrapper
 
   it('should allow wrapping any element into a Grid', () => {
-    const Span = withGrid(() => <span />)
+    const Span = asGrid(() => <span />)
     wrapper = mount(<Span />)
 
     expect(wrapper.html().includes('span')).toBe(true)
   })
 
   it('should match the rendering of a Grid when using a div', () => {
-    const Div = withGrid('div')
+    const Div = asGrid('div')
     const gridWrapper = shallow(<Grid />)
     wrapper = shallow(<Div />)
 

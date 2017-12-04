@@ -29,12 +29,12 @@ export default function Box({
 }: BoxProps) {
   return (
     <Grid
-      margin={typeof margin === 'undefined' ? [0, 0.5, 1] : margin}
+      margin={typeof margin === 'undefined' ? [0, 'L/2', 'L'] : margin}
       {...props}
     >
       <Grid
         dev={typeMap[type]}
-        padding={[1, 0]}
+        padding={['L', 0]}
         align="center"
         justify="center"
         style={style}

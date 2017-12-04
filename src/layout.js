@@ -1,14 +1,16 @@
 // @flow
 import * as React from 'react'
-import { compact } from 'lodash'
+import { compact, get } from 'lodash'
+import { base as defaultBase } from './defaults.json'
 import { combineSpacing } from './utils'
 import type {
-  SpacingValues,
+  ConfigProviderContext,
   Dev,
-  Overflow,
   Fixed,
-  Spacing,
   Height,
+  Overflow,
+  Spacing,
+  SpacingValues,
 } from './types'
 import styles from './layout.css'
 import devStyles from './dev.css'
@@ -46,6 +48,7 @@ function getOverflow(overflow: Overflow): string {
 }
 
 export type Props = {
+  base?: number,
   dev?: Dev,
   devMode?: boolean,
   className?: string,
@@ -60,20 +63,24 @@ export type Props = {
   style?: { [string]: string | number },
 }
 
-export default function Layout({
-  className,
-  dev,
-  fixed,
-  height,
-  margin,
-  marginBottom,
-  marginLeft,
-  marginRight,
-  marginTop,
-  overflow,
-  style,
-  ...props
-}: Props) {
+export default function Layout(
+  {
+    base = defaultBase,
+    className,
+    dev,
+    fixed,
+    height,
+    margin,
+    marginBottom,
+    marginLeft,
+    marginRight,
+    marginTop,
+    overflow,
+    style,
+    ...props
+  }: Props,
+  context: ConfigProviderContext
+) {
   const classes = compact([
     className,
     getFixed(fixed),
@@ -99,7 +106,7 @@ export default function Layout({
             marginBottom,
             marginLeft,
           },
-          base: 24,
+          base: get(context, 'xnReflex.base', base),
         }),
       }}
     />
