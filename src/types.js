@@ -63,8 +63,18 @@ export type SpacingAliases = {
   +[spacingAlias: string]: number,
 }
 
+type ResolutionKeys =
+  | 'minWidth'
+  | 'maxWidth'
+  | 'minHeight'
+  | 'maxHeight'
+  | 'aspectRatio'
+  | 'orientation'
+
 export type DisplayAliases = {
-  +[displayAlias: string]: string,
+  +[displayAlias: string]: {
+    +[ResolutionKeys]: string,
+  },
 }
 
 export type ConfigProviderContext = {|
@@ -97,22 +107,6 @@ export type OneResolutionGrid = {
   style?: { [string]: string | number },
 }
 
-export const resolutionProperties = [
-  'align',
-  'justify',
-  'margin',
-  'marginBottom',
-  'marginLeft',
-  'marginRight',
-  'marginTop',
-  'padding',
-  'paddingBottom',
-  'paddingLeft',
-  'paddingRight',
-  'paddingTop',
-  'size',
-]
-
 export type GridProps = {
   ...OneResolutionGrid,
   align?: AlignGrid | { [string]: AlignGrid },
@@ -129,5 +123,3 @@ export type GridProps = {
   paddingTop?: SpacingValues | { [string]: SpacingValues },
   size?: Size | { [string]: Size },
 }
-
-export default undefined

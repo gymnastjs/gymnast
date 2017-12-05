@@ -18,24 +18,24 @@ class Button extends React.Component<*, { counter: number }> {
 
 export default () => (
   <Grid>
-    <Grid dev={1} padding={2} margin={[1, 0]} show="small">
+    <Grid dev={1} padding="XL" margin={['L', 0]} show="small">
       <Grid size="auto">Only visible on small screens (&lt; 600px)</Grid>
       <Button />
     </Grid>
-    <Grid dev={2} padding={2} margin={[1, 0]} show="medium">
+    <Grid dev={2} padding="XL" margin={['L', 0]} show="medium">
       <Grid size="auto">
         Only visible on medium screens (&gt; 600px &amp;&amp; &lt; 900px)
       </Grid>
       <Button />
     </Grid>
-    <Grid dev={3} padding={2} margin={[1, 0]} show="large">
+    <Grid dev={3} padding="XL" margin={['L', 0]} show="large">
       <Grid size="auto">Only visible on large screens (&gt; 900px)</Grid>
       <Button />
     </Grid>
     <Grid
       dev={4}
-      padding={2}
-      margin={[1, 0]}
+      padding="XL"
+      margin={['L', 0]}
       show={['small', 'medium']}
       size={{ small: 12, medium: 6 }}
     >
@@ -44,8 +44,8 @@ export default () => (
     </Grid>
     <Grid
       dev={2}
-      padding={2}
-      margin={[1, 0]}
+      padding="XL"
+      margin={['L', 0]}
       show={['small', 'large']}
       size={{ small: 12, large: 6 }}
     >
@@ -56,8 +56,8 @@ export default () => (
     </Grid>
     <Grid
       dev={1}
-      padding={2}
-      margin={[1, 0]}
+      padding="XL"
+      margin={['L', 0]}
       show={['medium', 'large']}
       size={{ medium: 6, large: 6 }}
     >

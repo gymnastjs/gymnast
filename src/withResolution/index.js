@@ -2,10 +2,11 @@
 import * as React from 'react'
 import { get } from 'lodash'
 import type { DisplayValues } from '../types'
-import { getMediaQueries, log } from '../utils'
+import { log } from '../utils'
 import { ConfigContextPropTypes } from '../configProvider'
 import { register, unregister, supportsMatchMedia } from './mediaQuery'
 import {
+  getMediaQueries,
   getSingleResolutionProps,
   hasTrueValues,
   type ShouldShow,

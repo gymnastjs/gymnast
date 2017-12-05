@@ -9,6 +9,22 @@ import devStyles from '../dev.css'
 import { combineSpacing } from '../utils'
 import { ConfigContextPropTypes } from '../configProvider'
 
+const resolutionProperties = [
+  'align',
+  'justify',
+  'margin',
+  'marginBottom',
+  'marginLeft',
+  'marginRight',
+  'marginTop',
+  'padding',
+  'paddingBottom',
+  'paddingLeft',
+  'paddingRight',
+  'paddingTop',
+  'size',
+]
+
 export default function asGrid(Component: *) {
   function Grid(
     {
@@ -74,5 +90,5 @@ export default function asGrid(Component: *) {
   }
 
   Grid.contextTypes = ConfigContextPropTypes
-  return withResolution(Grid)
+  return withResolution(Grid, resolutionProperties)
 }

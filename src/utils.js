@@ -1,16 +1,12 @@
 // @flow
-import {
-  spacingAliases as defaultSpacingAliases,
-  displayAliases as defaultDisplayAliases,
-} from './defaults.json'
+import { spacingAliases as defaultSpacingAliases } from './defaults.json'
 import type { SpacingProps, Noop, SpacingValues, SpacingAliases } from './types'
 
 const isProd = process.env.NODE_ENV === 'production'
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
-const toInt = (value: ?string): number => parseInt(value || 0, 10)
 // regex case examples: https://regex101.com/r/bs73rZ/1
-const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 
+export const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 export const noop: Noop = () => null
 
 /* eslint-disable no-console */
@@ -44,42 +40,6 @@ export function validateSpacingProps(props: SpacingProps) {
     return false
   }
   return true
-}
-
-function getMediaQuery(
-  range: string,
-  displayAliases: { [string]: string }
-): string {
-  const response = []
-  const [from, to] = displayAliases[range].split('-').map(toInt)
-
-  if (from) {
-    response.push(`(min-width: ${from}px)`)
-  }
-  if (to) {
-    response.push(`(max-width: ${to}px)`)
-  }
-  return response.join(' and ')
-}
-
-export function getMediaQueries(
-  show: string | Array<string> = [],
-  displayAliases: { [string]: string } = defaultDisplayAliases
-): { [string]: string } {
-  const showArray = show instanceof Array ? show : show.split(splitPattern)
-
-  return showArray
-    .filter(range => range in displayAliases)
-    .map(range => [range, getMediaQuery(range, displayAliases)])
-    .reduce((acc, [range, query]) => {
-      if (query) {
-        return {
-          ...acc,
-          [range]: query,
-        }
-      }
-      return acc
-    }, {})
 }
 
 function getSpacing(

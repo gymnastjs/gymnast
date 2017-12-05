@@ -16,7 +16,7 @@ type PerCallbackData = {
 const perCallbackData: PerCallbackData = {}
 const queryData: QueryData = {}
 
-function callCallbacks(query) {
+function getCallCallbacks(query) {
   return () => {
     perCallbackData[query].forEach(({ callback, alias }) =>
       callback(queryData[query].mediaQuery, alias)
@@ -37,7 +37,7 @@ export function register(query: string, alias: string, callback: Callback) {
     perCallbackData[query].push({ callback, alias })
   } else {
     const mediaQuery = window.matchMedia(query)
-    const allCallbacks = callCallbacks(query)
+    const allCallbacks = getCallCallbacks(query)
 
     queryData[query] = { mediaQuery, allCallbacks }
     perCallbackData[query] = [{ callback, alias }]

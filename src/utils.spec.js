@@ -5,7 +5,6 @@ import {
   parseSpacing,
   replaceSpacingAliases,
   validateSpacingProps,
-  getMediaQueries,
 } from './utils'
 
 const base = 8
@@ -258,31 +257,5 @@ describe('replaceSpacingAliases', () => {
       1,
       2,
     ])
-  })
-})
-
-describe('getMediaQueries', () => {
-  it('should return a max and min value base on the available aliases', () => {
-    const out = getMediaQueries('test', { test: '1-2' })
-
-    expect(out).toEqual({ test: '(min-width: 1px) and (max-width: 2px)' })
-  })
-
-  it('should return a max value only when no min value is provided', () => {
-    const out = getMediaQueries('test', { test: '-2' })
-
-    expect(out).toEqual({ test: '(max-width: 2px)' })
-  })
-
-  it('should return a min value only when no max value is provided', () => {
-    const out = getMediaQueries('test', { test: '1-' })
-
-    expect(out).toEqual({ test: '(min-width: 1px)' })
-  })
-
-  it('should return an empty string if an invalid value is passed', () => {
-    const out = getMediaQueries('test2', { test: '2-3' })
-
-    expect(out).toEqual({})
   })
 })

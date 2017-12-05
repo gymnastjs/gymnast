@@ -2,6 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 import { log } from '../utils'
 import withResolution from './index'
+import { getMediaQueries } from './withResolution.logic'
 
 jest.mock('./mediaQuery')
 
@@ -114,5 +115,48 @@ describe('withResolution', () => {
     if (wrapper) {
       wrapper.unmount()
     }
+  })
+})
+
+describe('getMediaQueries', () => {
+  it('should return a max and min value base on the available aliases', () => {
+    const out = getMediaQueries('test', {
+      test: {
+        minWidth: '1px',
+        maxWidth: '2px',
+      },
+    })
+
+    expect(out).toEqual({ test: '(min-width: 1px) and (max-width: 2px)' })
+  })
+
+  it('should return a max value only when no min value is provided', () => {
+    const out = getMediaQueries('test', {
+      test: {
+        maxWidth: '2px',
+      },
+    })
+
+    expect(out).toEqual({ test: '(max-width: 2px)' })
+  })
+
+  it('should return a min value only when no max value is provided', () => {
+    const out = getMediaQueries('test', {
+      test: {
+        minWidth: '1px',
+      },
+    })
+
+    expect(out).toEqual({ test: '(min-width: 1px)' })
+  })
+
+  it('should return an empty string if an invalid value is passed', () => {
+    const out = getMediaQueries('test2', {
+      test: {
+        invalidValue: 'meow',
+      },
+    })
+
+    expect(out).toEqual({})
   })
 })
