@@ -1,4 +1,5 @@
 import initStoryshots from '@storybook/addon-storyshots'
+import './env'
 
 initStoryshots({
   framework: 'react',

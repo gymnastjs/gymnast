@@ -34,5 +34,6 @@ Changing base to `24` changes the spacing values:
 | XXL/2       | 3     | 24   | 72px               |
 | XXL         | 6     | 24   | 144px              |
 
+Use the knobs to try different `base` values.
 
-Use the knobs to try different `base` values. For more information on how to use the `ConfigProvider` check the [wiki page](https://github.com/obartra/reflex/wiki/ConfigProvider).
+There are other parameters that can be customized through `ConfigProvider`. For more information check the [wiki page](https://github.com/obartra/reflex/wiki/ConfigProvider).

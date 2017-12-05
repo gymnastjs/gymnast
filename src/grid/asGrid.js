@@ -1,41 +1,29 @@
 // @flow
 import * as React from 'react'
 import { compact, get } from 'lodash'
-import type {
-  AlignGrid,
-  ConfigProviderContext,
-  Dev,
-  Justify,
-  Size,
-  Spacing,
-  SpacingValues,
-} from '../types'
+import type { ConfigProviderContext, OneResolutionGrid } from '../types'
+import withResolution from '../withResolution'
 import { base as defaultBase } from '../defaults.json'
 import styles from './grid.css'
 import devStyles from '../dev.css'
 import { combineSpacing } from '../utils'
 import { ConfigContextPropTypes } from '../configProvider'
 
-export type Props = {
-  align?: AlignGrid,
-  base?: number,
-  children?: React.Node,
-  className?: string,
-  dev?: Dev,
-  justify?: Justify,
-  margin?: Spacing,
-  marginBottom?: SpacingValues,
-  marginLeft?: SpacingValues,
-  marginRight?: SpacingValues,
-  marginTop?: SpacingValues,
-  padding?: Spacing,
-  paddingBottom?: SpacingValues,
-  paddingLeft?: SpacingValues,
-  paddingRight?: SpacingValues,
-  paddingTop?: SpacingValues,
-  size?: Size,
-  style?: { [string]: string | number },
-}
+const resolutionProperties = [
+  'align',
+  'justify',
+  'margin',
+  'marginBottom',
+  'marginLeft',
+  'marginRight',
+  'marginTop',
+  'padding',
+  'paddingBottom',
+  'paddingLeft',
+  'paddingRight',
+  'paddingTop',
+  'size',
+]
 
 export default function asGrid(Component: *) {
   function Grid(
@@ -59,7 +47,7 @@ export default function asGrid(Component: *) {
       size,
       style = {},
       ...props
-    }: Props,
+    }: OneResolutionGrid,
     context: ConfigProviderContext
   ) {
     const classes = compact([
@@ -102,5 +90,5 @@ export default function asGrid(Component: *) {
   }
 
   Grid.contextTypes = ConfigContextPropTypes
-  return Grid
+  return withResolution(Grid, resolutionProperties)
 }

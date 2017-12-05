@@ -12,5 +12,17 @@
     "2XL/2": 3,
     "2XL": 6
   },
+  "displayAliases": {
+    "small": {
+      "maxWidth": "599px"
+    },
+    "medium": {
+      "minWidth": "600px",
+      "maxWidth": "899px"
+    },
+    "large": {
+      "minWidth": "900px"
+    }
+  },
   "base": 8
 }

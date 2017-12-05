@@ -3,7 +3,7 @@ import {
   getCSS,
   log,
   parseSpacing,
-  replaceAliases,
+  replaceSpacingAliases,
   validateSpacingProps,
 } from './utils'
 
@@ -244,14 +244,14 @@ describe('parseSpacing', () => {
   })
 })
 
-describe('replaceAliases', () => {
+describe('replaceSpacingAliases', () => {
   it('should replace all spacing aliases with their aliased values', () => {
     const spacingAliases = {
       XS: 0.5,
       S: 1,
     }
 
-    expect(replaceAliases([2, 'XS', 'S', 2], spacingAliases)).toEqual([
+    expect(replaceSpacingAliases([2, 'XS', 'S', 2], spacingAliases)).toEqual([
       2,
       0.5,
       1,

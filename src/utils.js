@@ -4,7 +4,9 @@ import type { SpacingProps, Noop, SpacingValues, SpacingAliases } from './types'
 
 const isProd = process.env.NODE_ENV === 'production'
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
+// regex case examples: https://regex101.com/r/bs73rZ/1
 
+export const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 export const noop: Noop = () => null
 
 /* eslint-disable no-console */
@@ -124,12 +126,11 @@ export function parseSpacing(
   if (spacing instanceof Array) {
     spacingArray = spacing
   } else if (typeof spacing === 'string') {
-    // regex case examples: https://regex101.com/r/bs73rZ/1
-    spacingArray = spacing.split(/(?:(?:\s+)?,(?:\s+)?|\s+)/)
+    spacingArray = spacing.split(splitPattern)
   }
 
   if (spacingArray) {
-    return replaceAliases(spacingArray, spacingAliases).map(parseFloat)
+    return replaceSpacingAliases(spacingArray, spacingAliases).map(parseFloat)
   }
 
   log.error(
@@ -138,7 +139,7 @@ export function parseSpacing(
   return undefined
 }
 
-function replaceAlias(
+function replaceSpacingAlias(
   value: SpacingValues,
   spacingAliases: SpacingAliases = defaultSpacingAliases
 ) {
@@ -148,21 +149,21 @@ function replaceAlias(
   return value
 }
 
-export function replaceAliases(
+export function replaceSpacingAliases(
   spacingArray: Array<SpacingValues>,
   spacingAliases?: SpacingAliases
 ): Array<SpacingValues> {
-  return spacingArray.map(value => replaceAlias(value, spacingAliases))
+  return spacingArray.map(value => replaceSpacingAlias(value, spacingAliases))
 }
 
-function replaceAliasValues(
+function replaceSpacingAliasValues(
   spacingObject: { [string]: SpacingValues },
   spacingAliases?: SpacingAliases
 ): { [string]: SpacingValues } {
   return Object.keys(spacingObject).reduce(
     (acc, key) => ({
       ...acc,
-      [key]: replaceAlias(spacingObject[key], spacingAliases),
+      [key]: replaceSpacingAlias(spacingObject[key], spacingAliases),
     }),
     {}
   )
@@ -194,7 +195,7 @@ export function combineSpacing({
   }
 
   const flatProps = {
-    ...replaceAliasValues(props, spacingAliases),
+    ...replaceSpacingAliasValues(props, spacingAliases),
     ...getSpacing(marginArray, 'margin'),
     ...getSpacing(paddingArray, 'padding'),
   }
