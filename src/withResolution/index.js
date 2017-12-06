@@ -11,6 +11,7 @@ import {
   hasTrueValues,
   type ShouldShow,
 } from './withResolution.logic'
+import errors from /* preval */ '../errors'
 
 type Props = { show?: DisplayValues }
 type State = {
@@ -23,9 +24,7 @@ export default function withResolution(
   coercedSupport?: boolean = supportsMatchMedia
 ) {
   if (!coercedSupport) {
-    log.warn(
-      '"window.matchMedia" is not supported, media queries will not work'
-    )
+    log.warn(errors.NOMATCHMEDIA)
     return Component
   }
 

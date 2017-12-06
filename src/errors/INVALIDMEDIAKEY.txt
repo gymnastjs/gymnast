@@ -1,0 +1,1 @@
+Specified query is invalid. Only the following keys are allowed: "minWidth", "maxWidth", "minHeight", "maxHeight", "aspectRatio" and "orientation".

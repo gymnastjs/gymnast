@@ -1,0 +1,3 @@
+You cannot define margin or padding and a direction at the same time.
+
+For instance <Grid marginBottom="S" margin="L" /> is invalid because it's ambiguous (is "S" or "L" valid for margin bottom?).

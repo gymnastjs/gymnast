@@ -2,6 +2,7 @@
 import type { DisplayValues, DisplayAliases } from '../types'
 import { displayAliases as defaultDisplayAliases } from '../defaults.json'
 import { splitPattern, log } from '../utils'
+import errors from /* preval */ '../errors'
 
 export type ShouldShow = { [string]: boolean }
 
@@ -64,7 +65,7 @@ function getMediaQuery(range: string, displayAliases: DisplayAliases): string {
 
       response.push(`(${queriesMap[key]}: ${value})`)
     } else {
-      log.error(`Specified query "${key}" is invalid`)
+      log.error(errors.INVALIDMEDIAKEY, `"${key}" used`)
     }
   })
 
