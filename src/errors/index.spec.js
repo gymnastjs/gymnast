@@ -1,5 +1,5 @@
 import { size, every } from 'lodash'
-import errors from './index'
+import errors from /* preval */ './index'
 
 describe('Error Object', () => {
   it('should not include "index" or "index.spec"', () => {

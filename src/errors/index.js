@@ -1,43 +1,44 @@
-const { join } = require('path')
-const { readdirSync, readFileSync } = require('fs')
+function addDevError(acc, code, message) {
+  acc[code] = `${code}: ${message}
 
-function getCode(filename) {
-  const match = filename.match(/(.+)\.txt$/)
-
-  return match ? match[1] : undefined
-}
-
-function accumulateToObject(acc, [code, content]) {
-  return { ...acc, [code]: content }
-}
-
-function formatProd(filename) {
-  const code = getCode(filename)
-
-  return [code, code]
-}
-
-function formatDev(filename) {
-  const code = getCode(filename)
-  const message = readFileSync(join(__dirname, filename), 'utf-8')
-
-  return [
-    code,
-    `${code}: ${message}
-
-You can find more information here: https://github.com/obartra/reflex/wiki/${
+    You can find more information here: https://github.com/obartra/reflex/wiki/${
       code
-    }
-`,
-  ]
+    }`
+  return acc
 }
 
-const format = process.env.NODE_ENV === 'production' ? formatProd : formatDev
-
-function notCurrentFile(filename) {
-  return !filename.includes('index')
+function addProdError(acc, code) {
+  acc[code] = code
+  return acc
 }
-module.exports = readdirSync(__dirname)
-  .filter(notCurrentFile)
-  .map(format)
-  .reduce(accumulateToObject, {})
+const addError =
+  process.env.NODE_ENV === 'production' ? addProdError : addDevError
+const errors = {}
+
+addError(
+  errors,
+  'INVALIDMEDIAKEY',
+  `Specified query is invalid. Only the following keys are allowed: "minWidth", "maxWidth", "minHeight", "maxHeight", "aspectRatio" and "orientation".`
+)
+addError(
+  errors,
+  'INVALIDSPACING',
+  `Invalid spacing property type used, only array, undefined, string or numbers allowed.`
+)
+addError(
+  errors,
+  'MIXEDSPACING',
+  `You cannot define margin or padding and a direction at the same time.`
+)
+addError(
+  errors,
+  'NOMATCHMEDIA',
+  `"window.matchMedia" is not available in your environment, media queries will not work.`
+)
+addError(
+  errors,
+  'TOOMANYSPACEVAL',
+  `Invalid Spacing size, only first 4 values used. Spacing values follow CSS syntax, this means you can specify 1, 2, 3 or 4 values but not more.`
+)
+
+module.exports = errors

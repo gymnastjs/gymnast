@@ -50,7 +50,10 @@ describe('combineSpacing', () => {
       base: 1,
     })
 
-    expect(log.error).toHaveBeenCalledWith(errors.MIXEDSPACING)
+    expect(log.error).toHaveBeenCalledWith(
+      errors.MIXEDSPACING,
+      jasmine.any(String)
+    )
     expect(out).toEqual({})
   })
   ;[

@@ -2,7 +2,7 @@
 import type { DisplayValues, DisplayAliases } from '../types'
 import { displayAliases as defaultDisplayAliases } from '../defaults.json'
 import { splitPattern, log } from '../utils'
-import errors from /* preval */ '../errors'
+import errors from '../errors'
 
 export type ShouldShow = { [string]: boolean }
 
