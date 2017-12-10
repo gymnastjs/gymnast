@@ -1,6 +1,7 @@
 // @flow
 import { spacingAliases as defaultSpacingAliases } from './defaults.json'
 import type { SpacingProps, Noop, SpacingValues, SpacingAliases } from './types'
+import errors from './errors'
 
 const isProd = process.env.NODE_ENV === 'production'
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
@@ -34,9 +35,7 @@ export function validateSpacingProps(props: SpacingProps) {
     (props.marginArray && margins.some(hasDefinedValues(props))) ||
     (props.paddingArray && paddings.some(hasDefinedValues(props)))
   ) {
-    log.error(
-      'Cannot define margin or padding and a direction at the same time'
-    )
+    log.error(errors.MIXEDSPACING, `"${JSON.stringify(props)}" used`)
     return false
   }
   return true
@@ -66,7 +65,7 @@ function getSpacing(
       allValues = values
       break
     default:
-      log.error('Invalid Spacing Array Size, only first 4 values used')
+      log.error(errors.TOOMANYSPACEVAL, `"${JSON.stringify(values)}" used`)
       allValues = values
   }
 
@@ -89,13 +88,11 @@ export function getCSS(
     return {}
   } else if (prop.includes('padding')) {
     return { [prop]: num * base }
-  } else if (prop.includes('margin')) {
-    return {
-      [`${prop.replace('margin', 'border')}Width`]: num * base,
-    }
   }
-  log.error(`Invalid css prop: ${prop}`)
-  return {}
+
+  return {
+    [`${prop.replace('margin', 'border')}Width`]: num * base,
+  }
 }
 /**
  * parseSpacing allows using different kinds of input for spacing parameters. Instead of allowing
@@ -133,9 +130,7 @@ export function parseSpacing(
     return replaceSpacingAliases(spacingArray, spacingAliases).map(parseFloat)
   }
 
-  log.error(
-    `Invalid spacing type "${typeof spacing}" used, only array, undefined, string or numbers allowed`
-  )
+  log.error(errors.INVALIDSPACING, `"${typeof spacing}" used`)
   return undefined
 }
 

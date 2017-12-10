@@ -114,7 +114,7 @@
   "bundlesize": [
     {
       "path": "./dist/reflex.min.js",
-      "maxSize": "9.5 Kb"
+      "maxSize": "10.0 Kb"
     },
     {
       "path": "./dist/reflex.css",

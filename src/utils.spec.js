@@ -6,6 +6,7 @@ import {
   replaceSpacingAliases,
   validateSpacingProps,
 } from './utils'
+import errors from /* preval */ './errors'
 
 const base = 8
 
@@ -49,7 +50,10 @@ describe('combineSpacing', () => {
       base: 1,
     })
 
-    expect(log.error).toHaveBeenCalled()
+    expect(log.error).toHaveBeenCalledWith(
+      errors.MIXEDSPACING,
+      jasmine.any(String)
+    )
     expect(out).toEqual({})
   })
   ;[
@@ -160,14 +164,6 @@ describe('validateSpacingProps', () => {
 })
 
 describe('getCSS', () => {
-  it('should log an error if there are invalid props', () => {
-    spyOn(log, 'error')
-
-    getCSS('meow', 3, base)
-
-    expect(log.error).toHaveBeenCalled()
-  })
-
   it('should return "{}" if value is not set', () => {
     const css = getCSS('marginTop')
 
