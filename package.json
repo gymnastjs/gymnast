@@ -51,15 +51,16 @@
     "clean-webpack-plugin": "0.1.17",
     "codeclimate-test-reporter": "0.5.0",
     "commitizen": "2.9.6",
-    "condition-circle": "1.5.0",
+    "condition-circle": "1.6.0",
     "cross-env": "5.1.1",
     "css-loader": "0.28.7",
     "cssnano": "3.10.0",
+    "cxs": "6.1.0",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.2.0",
     "enzyme-adapter-react-16": "1.1.0",
     "enzyme-to-json": "3.2.2",
-    "eslint": "4.12.1",
+    "eslint": "4.13.0",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-flowtype": "2.39.1",
@@ -68,7 +69,7 @@
     "eslint-plugin-react": "7.5.1",
     "extract-text-webpack-plugin": "3.0.2",
     "find-up": "2.1.0",
-    "flow-bin": "0.60.1",
+    "flow-bin": "0.61.0",
     "flow-copy-source": "https://github.com/arahansen/flow-copy-source#29ea3c2c0c58d32182ce953a5d7fa2ab788314d4",
     "html-loader": "0.5.1",
     "husky": "0.14.3",
@@ -77,9 +78,10 @@
     "lint-staged": "6.0.0",
     "lodash": "4.17.4",
     "markdown-loader": "2.0.1",
-    "nightwatch": "0.9.16",
+    "nightwatch": "0.9.19",
     "npm-run-all": "4.1.2",
-    "picturebook": "1.0.32",
+    "picturebook": "1.0.34",
+    "polished": "1.9.0",
     "postcss-cli": "4.1.1",
     "postcss-cssnext": "3.0.2",
     "postcss-discard-comments": "2.0.4",
@@ -88,21 +90,21 @@
     "postcss-import": "11.0.0",
     "postcss-loader": "2.0.9",
     "postcss-nesting": "4.2.1",
-    "prettier": "1.8.2",
+    "prettier": "1.9.1",
     "raw-loader": "0.5.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-element-to-jsx-string": "13.1.0",
     "react-test-renderer": "16.2.0",
-    "regenerator-runtime": "0.11.0",
+    "regenerator-runtime": "0.11.1",
     "saucelabs": "1.4.0",
-    "selenium-standalone": "6.11.0",
+    "selenium-standalone": "6.12.0",
     "semantic-release": "8.2.0",
     "semantic-release-cli": "3.2.6",
     "storybook-addon-jsx": "5.0.0",
     "style-loader": "0.19.0",
     "stylelint": "8.3.1",
-    "webpack": "3.9.1",
+    "webpack": "3.10.0",
     "webpack-bundle-analyzer": "2.9.1"
   },
   "lint-staged": {
@@ -114,11 +116,7 @@
   "bundlesize": [
     {
       "path": "./dist/reflex.min.js",
-      "maxSize": "10.0 Kb"
-    },
-    {
-      "path": "./dist/reflex.css",
-      "maxSize": "1.5 Kb"
+      "maxSize": "11.0 Kb"
     }
   ],
   "jest": {
@@ -176,6 +174,5 @@
   "peerDependencies": {
     "prop-types": ">=15",
     "react": ">=15"
-  },
-  "dependencies": {}
+  }
 }

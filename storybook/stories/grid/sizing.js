@@ -2,8 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid } from 'reflex'
-import { RootLayout, Box } from '../../shared'
+import { RootLayout, Box, Grid } from '../../shared'
 
 export default () => {
   const size = number('Size', 12, { range: true, min: 1, max: 12 })

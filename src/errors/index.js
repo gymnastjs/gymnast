@@ -1,9 +1,7 @@
 function addDevError(acc, code, message) {
   acc[code] = `${code}: ${message}
 
-    You can find more information here: https://github.com/obartra/reflex/wiki/${
-      code
-    }`
+    You can find more information here: https://github.com/obartra/reflex/wiki/${code}`
   return acc
 }
 

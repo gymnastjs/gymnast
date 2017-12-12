@@ -6,4 +6,4 @@ The `JSX` tab contains the code as rendered for the current knob combination whe
 
 ## ⚙️ Dev Mode
 
-You can toggle a top level column overlay by pressing `ctrl+shift+k` or `cmd+shift+k`. Background dev colors can be togged as well with `ctrl+shift+s` or `cmd+shift+s`. These are the default reflex values but you can customize them through `initDevMode`.
+You can toggle a top level column overlay by pressing `ctrl+shift+k` or `cmd+shift+k`. These defaults can be customized through `initDevMode`.

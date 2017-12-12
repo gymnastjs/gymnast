@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react'
-import { Col, Grid, type Size } from 'reflex'
+import { type Size } from 'reflex'
 import { times } from 'lodash'
+import { Grid, Col } from '../../../shared'
 import styles from '../../../shared/stories.css'
 
 export default function SearchResults(

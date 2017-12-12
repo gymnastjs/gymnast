@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Col, Grid } from 'reflex'
+import { Grid, Col } from '../../../shared'
 import type { Size } from '../../../../src/types'
 
 export default function SearchFilters(props: { size?: Size }) {

@@ -1,4 +1,10 @@
-@import '../../src/variables.css';
+:root {
+  --axonBlack: #1d1f21;
+  --axonGold: #ffd700;
+  --bolt: #1469cc;
+  --nomuraGray: #efefef;
+  --white: #ffffff;
+}
 
 @font-face {
   font-family: 'Geometria';

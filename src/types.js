@@ -28,8 +28,6 @@ export type Size =
   | 'auto'
   | void
 
-export type Dev = 1 | 2 | 3 | 4 | 5 | void
-
 export type AlignGrid = 'bottom' | 'center' | 'top' | void
 
 export type Justify = 'left' | 'center' | 'right' | void
@@ -90,7 +88,6 @@ export type OneResolutionGrid = {
   base?: number,
   children?: React.Node,
   className?: string,
-  dev?: Dev,
   justify?: Justify,
   innerRef?: React.Ref<*>,
   margin?: Spacing,

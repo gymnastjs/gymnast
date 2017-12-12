@@ -1,8 +1,7 @@
 // @flow
 import * as React from 'react'
 import { number, select } from '@storybook/addon-knobs'
-import { Grid } from 'reflex'
-import { RootLayout, Box } from '../../shared'
+import { RootLayout, Box, Grid } from '../../shared'
 
 const justifyType = {
   Default: undefined,

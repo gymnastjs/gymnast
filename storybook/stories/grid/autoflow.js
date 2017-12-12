@@ -2,8 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number, boolean } from '@storybook/addon-knobs'
-import { Grid } from 'reflex'
-import { Box, RootLayout, getMarginSelect } from '../../shared'
+import { Box, RootLayout, Grid, getMarginSelect } from '../../shared'
 
 export default () => {
   const items = number('Items', 5, { range: true, min: 0, max: 100 })

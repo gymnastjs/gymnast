@@ -2,8 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { boolean } from '@storybook/addon-knobs'
-import { Grid } from 'reflex'
-import { Box, RootLayout, getMarginSelect } from '../../shared'
+import { Box, RootLayout, getMarginSelect, Grid } from '../../shared'
 
 export default () => {
   const itemMargin = getMarginSelect(

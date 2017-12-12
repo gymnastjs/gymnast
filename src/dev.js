@@ -1,26 +1,21 @@
 // @flow
-import styles from './dev.css'
+import styles from './dev.styles'
 import { noop } from './utils'
 
 const KEY_CODE_K = 75
-const KEY_CODE_S = 83
 const body = ((document: any).body: HTMLElement)
-
-function toggleColor(force?: boolean) {
-  body.classList.toggle('reflex-color-mode', force)
-}
 
 function toggleOverlayMode(overlay, force?: boolean) {
   const hasOverlay = body.contains(overlay)
   const set = typeof force === 'undefined' ? !hasOverlay : force
-
-  body.classList.toggle('reflex-dev-mode', set)
+  styles.reflexDevMode.split(' ').forEach(s => body.classList.toggle(s, set))
 
   if (set && !hasOverlay) {
     body.appendChild(overlay)
   } else if (!set && hasOverlay) {
     body.removeChild(overlay)
   }
+  body.setAttribute('data-reflex-overlay', String(hasOverlay))
 }
 
 function getKeyDownHandler(method, { key, useCtrl, useShift }) {
@@ -43,7 +38,7 @@ function createOverlay() {
   const overlay = document.createElement('div')
   const content = document.createElement('div')
 
-  overlay.className = 'reflex-overlay'
+  overlay.className = styles.reflexOverlay
   content.className = styles.content
   overlay.appendChild(content)
 
@@ -51,7 +46,6 @@ function createOverlay() {
 }
 
 const defaults = {
-  colorKeyCode: KEY_CODE_S,
   overlayKeyCode: KEY_CODE_K,
   useCtrl: true,
   useShift: true,
@@ -59,13 +53,11 @@ const defaults = {
 
 const disabledDevMode = {
   register: noop,
-  toggleColor: noop,
   toggleOverlay: noop,
   unregister: noop,
 }
 
 type Props = {
-  colorKeyCode?: number,
   force?: boolean,
   overlayKeyCode?: number,
   useCtrl?: boolean,
@@ -77,7 +69,7 @@ export default function initDevMode({ force, ...props }: Props = {}) {
     return disabledDevMode
   }
 
-  const { overlayKeyCode, colorKeyCode, ...options } = {
+  const { overlayKeyCode, ...options } = {
     ...defaults,
     ...props,
   }
@@ -86,30 +78,21 @@ export default function initDevMode({ force, ...props }: Props = {}) {
     key: overlayKeyCode,
     ...options,
   })
-  const colorKeyDown = getKeyDownHandler(toggleColor, {
-    key: colorKeyCode,
-    ...options,
-  })
 
   function register() {
     if (overlayKeyCode) {
       body.addEventListener('keydown', overlayKeyDown)
     }
-    if (colorKeyCode) {
-      body.addEventListener('keydown', colorKeyDown)
-    }
   }
 
   function unregister() {
     body.removeEventListener('keydown', overlayKeyDown)
-    body.removeEventListener('keydown', colorKeyDown)
   }
 
   register()
 
   return {
     register,
-    toggleColor,
     toggleOverlay,
     unregister,
   }

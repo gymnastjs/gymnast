@@ -1,9 +1,8 @@
 // @flow
 import * as React from 'react'
-import { Grid, Col } from 'reflex'
 import type { Size } from '../../../src/types'
-import { RootLayout, getMarginSelect } from '../../shared'
-import styles from '../../shared/stories.css'
+import { RootLayout, getMarginSelect, Grid, Col } from '../../shared'
+import vars from '../../../src/variables'
 
 type HeadingProps = {
   children: React.Node,
@@ -24,8 +23,13 @@ export default () => {
   const margin = getMarginSelect()
   const text = (
     <div
-      className={styles.colors1}
-      style={{ minHeight: 55, width: '100%', textAlign: 'center' }}
+      style={{
+        minHeight: 55,
+        width: '100%',
+        textAlign: 'center',
+        color: vars.axonGold,
+        backgroundColor: vars.axonBlack,
+      }}
     />
   )
 
