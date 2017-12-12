@@ -21,6 +21,13 @@ describe('gridHOC', () => {
     expect(wrapper.html()).toEqual(gridWrapper.html())
   })
 
+  it('should pass a ref to innerRef', () => {
+    const spy = jest.fn()
+    const Div = asGrid('div')
+    wrapper = mount(<Div innerRef={spy} />)
+    expect(spy).toHaveBeenCalledWith(wrapper.find('div').instance())
+  })
+
   afterEach(() => {
     if (wrapper) {
       wrapper.unmount()

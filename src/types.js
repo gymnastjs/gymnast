@@ -92,6 +92,7 @@ export type OneResolutionGrid = {
   className?: string,
   dev?: Dev,
   justify?: Justify,
+  innerRef?: React.Ref<*>,
   margin?: Spacing,
   marginBottom?: SpacingValues,
   marginLeft?: SpacingValues,

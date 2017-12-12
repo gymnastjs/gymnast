@@ -33,6 +33,7 @@ export default function asGrid(Component: *) {
       children,
       className,
       dev,
+      innerRef,
       justify,
       margin,
       marginBottom,
@@ -83,7 +84,12 @@ export default function asGrid(Component: *) {
     }
 
     return (
-      <Component {...props} className={classes.join(' ')} style={cssStyle}>
+      <Component
+        ref={innerRef}
+        {...props}
+        className={classes.join(' ')}
+        style={cssStyle}
+      >
         {children}
       </Component>
     )
