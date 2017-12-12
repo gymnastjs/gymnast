@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react'
 import { select } from '@storybook/addon-knobs'
-import { Grid, Layout, Root } from 'reflex'
+import { Root } from 'reflex'
+import { Grid, Layout } from '../../shared'
 import styles from '../../shared/layout.css'
 
 export default () => {

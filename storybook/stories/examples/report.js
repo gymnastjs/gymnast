@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
-import { Grid, Root, Layout, Col } from 'reflex'
-import { loremIpsum } from '../../shared'
+import { Root } from 'reflex'
+import { loremIpsum, Grid, Layout, Col } from '../../shared'
 import styles from './report.css'
 import { page } from './layout.css'
 

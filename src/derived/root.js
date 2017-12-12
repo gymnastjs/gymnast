@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
 import Grid from '../grid'
-import styles from './root.css'
 import type { GridProps } from '../types'
+import styles from './root.styles'
 
 export default function Root({ children, justify, ...props }: GridProps) {
   return (

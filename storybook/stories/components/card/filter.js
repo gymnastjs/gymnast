@@ -1,14 +1,12 @@
 // @flow
 import * as React from 'react'
-import { Grid, Col } from 'reflex'
-import { RootLayout, loremIpsum } from '../../../shared'
-import styles from '../../../shared/stories.css'
+import { RootLayout, loremIpsum, Grid, Col } from '../../../shared'
 
 export default () => {
   function ListItem({ index }: { index: number }) {
     return (
       <Grid
-        className={index % 2 ? styles.colors1 : styles.colors4}
+        dev={index % 2 ? 1 : 4}
         paddingBottom="L/2"
         paddingTop={index === 0 ? 0 : 'L/2'}
       >

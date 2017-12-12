@@ -2,12 +2,13 @@
 import * as React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
-import { Grid, Col } from 'reflex'
 import {
   Box,
-  RootLayout,
-  getPositionSelect,
+  Col,
   getMarginSelect,
+  getPositionSelect,
+  Grid,
+  RootLayout,
 } from '../../shared'
 
 export default function() {

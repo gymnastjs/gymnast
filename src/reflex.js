@@ -1,10 +1,11 @@
 // @flow
+import './cxs'
 import * as _utils from './utils'
 
 // Core
+export { default as ConfigProvider } from './configProvider'
 export { default as Grid } from './grid'
 export { default as Layout } from './layout'
-export { default as ConfigProvider } from './configProvider'
 
 // Derived
 export { default as Col } from './derived/col'
@@ -23,7 +24,6 @@ export { default as initDevMode } from './dev'
 // Types
 export type {
   AlignGrid,
-  Dev,
   DisplayValues,
   Fixed,
   GridProps,

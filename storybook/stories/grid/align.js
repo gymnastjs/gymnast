@@ -2,8 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { boolean, number } from '@storybook/addon-knobs'
-import { Grid, Col } from 'reflex'
-import { RootLayout, Box } from '../../shared'
+import { RootLayout, Box, Grid, Col } from '../../shared'
 
 function ReferenceColumn({ height }: { height: number }) {
   return (

@@ -6,7 +6,6 @@ import {
   replaceSpacingAliases,
   validateSpacingProps,
 } from './utils'
-import errors from /* preval */ './errors'
 
 const base = 8
 
@@ -50,10 +49,7 @@ describe('combineSpacing', () => {
       base: 1,
     })
 
-    expect(log.error).toHaveBeenCalledWith(
-      errors.MIXEDSPACING,
-      jasmine.any(String)
-    )
+    expect(log.error.calls.allArgs()[0][0].includes('MIXEDSPACING')).toBe(true)
     expect(out).toEqual({})
   })
   ;[
@@ -64,9 +60,7 @@ describe('combineSpacing', () => {
     '1 , 0.5  , 2 ,  0',
     'S , S/2 M 0',
   ].forEach(margin =>
-    it(`should convert space separated strings to valid spacing props for "${
-      margin
-    }"`, () =>
+    it(`should convert space separated strings to valid spacing props for "${margin}"`, () =>
       expect(
         combineSpacing({
           spacingProps: {

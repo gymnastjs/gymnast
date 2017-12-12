@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Offset } from 'reflex'
-import { RootLayout, Box } from '../../shared'
+import { Offset } from 'reflex'
+import { Grid, RootLayout, Box } from '../../shared'
 
 export default () => {
   const offset = number('Offset', 0, { range: true, min: 0, max: 11 })

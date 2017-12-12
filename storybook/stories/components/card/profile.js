@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Grid, Col } from 'reflex'
-import { RootLayout } from '../../../shared'
+import { RootLayout, Grid, Col } from '../../../shared'
 
 export default () => (
   <RootLayout>

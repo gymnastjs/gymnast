@@ -14,7 +14,6 @@ We have several examples [on the website](https://obartra.github.io/reflex). Her
 
 ```jsx
 import { Grid, Layout } from 'xn-reflex'
-import'xn-reflex/dist/reflex.css'
 
 <Layout dev={1} fixed="top">
   <Grid margin={[0, 1]} padding={[0, 1]}>
@@ -29,7 +28,7 @@ The `Layout` Component defines sections in the page that have full width. `Grid`
 
 ## 🖥 Install
 
-Reflex is available as the `xn-reflex` package on [npm](https://www.npmjs.com/). It is also available on the [unpkg CDN](https://unpkg.com/xn-reflex/dist/reflex.min.js) and the CSS [here](https://unpkg.com/xn-reflex/dist/reflex.css).
+Reflex is available as the `xn-reflex` package on [npm](https://www.npmjs.com/). It is also available on the [unpkg CDN](https://unpkg.com/xn-reflex/dist/reflex.min.js).
 
 You can install it with:
 
@@ -37,11 +36,11 @@ You can install it with:
 yarn add xn-reflex
 ```
 
-`React` and `PropTypes` are dependencies of the generated bundle and you'll need to make sure you include the CSS file from `xn-reflex/dist/reflex.css`.
+`React` and `PropTypes` are dependencies of the generated bundle.
 
 ## ⚙️ Dev Mode
 
-Ensuring a layout adheres to the grid can be difficult. To simplify this task, Reflex includes 2 tools to assist you: a grid overlay and a dev background color mode. You can initialize both invoking `initDevMode`.
+Ensuring a layout adheres to the grid can be difficult. To simplify this task, Reflex includes a grid overlay mode to assist you. You can initialize both invoking `initDevMode`.
 
 Learn more about dev mode in the [wiki](https://github.com/obartra/reflex/wiki/Dev-Mode).
 

@@ -5,15 +5,13 @@ import { base as defaultBase } from './defaults'
 import { combineSpacing } from './utils'
 import type {
   ConfigProviderContext,
-  Dev,
   Fixed,
   Height,
   Overflow,
   Spacing,
   SpacingValues,
 } from './types'
-import styles from './layout.css'
-import devStyles from './dev.css'
+import styles from './layout.styles'
 
 function getLayout(layout?: Height): string {
   switch (layout) {
@@ -49,7 +47,6 @@ function getOverflow(overflow: Overflow): string {
 
 export type Props = {
   base?: number,
-  dev?: Dev,
   devMode?: boolean,
   className?: string,
   fixed?: Fixed,
@@ -67,7 +64,6 @@ export default function Layout(
   {
     base = defaultBase,
     className,
-    dev,
     fixed,
     height,
     margin,
@@ -86,9 +82,6 @@ export default function Layout(
     getFixed(fixed),
     getLayout(height),
     getOverflow(overflow),
-    dev &&
-      process.env.NODE_ENV !== 'production' &&
-      devStyles[`colors${String(dev)}`],
     styles.layout,
   ])
 

@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { Grid, ConfigProvider } from 'reflex'
+import { ConfigProvider } from 'reflex'
+import { Grid } from '../../shared'
 
 export default function() {
   const base = number('base', 24, { range: true, min: 8, max: 24, step: 8 })

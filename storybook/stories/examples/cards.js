@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
-import { Grid, Layout, Root } from 'reflex'
-import { Box } from '../../shared'
+import { Root } from 'reflex'
+import { Box, Grid, Layout } from '../../shared'
 import styles from './layout.css'
 
 const SIZE = {

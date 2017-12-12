@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Grid } from 'reflex'
+import { Grid } from '../../shared'
 
 class Button extends React.Component<*, { counter: number }> {
   state = { counter: 0 }
