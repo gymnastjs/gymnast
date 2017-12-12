@@ -1,5 +1,5 @@
 // @flow
-import { spacingAliases as defaultSpacingAliases } from './defaults'
+import defaults from './defaults'
 import type { SpacingProps, Noop, SpacingValues, SpacingAliases } from './types'
 import errors from /* preval */ './errors'
 
@@ -138,7 +138,7 @@ export function parseSpacing(
 
 function replaceSpacingAlias(
   value: SpacingValues,
-  spacingAliases: SpacingAliases = defaultSpacingAliases
+  spacingAliases: SpacingAliases = defaults.spacingAliases
 ) {
   if (spacingAliases && typeof value === 'string' && value in spacingAliases) {
     return spacingAliases[value]

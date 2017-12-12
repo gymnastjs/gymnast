@@ -3,7 +3,7 @@ import * as React from 'react'
 import { compact, get } from 'lodash'
 import type { ConfigProviderContext, OneResolutionGrid } from '../types'
 import withResolution from '../withResolution'
-import { base as defaultBase } from '../defaults'
+import defaults from '../defaults'
 import styles from './grid.styles'
 import { combineSpacing } from '../utils'
 import { ConfigContextPropTypes } from '../configProvider'
@@ -28,7 +28,7 @@ export default function asGrid(Component: *) {
   function Grid(
     {
       align,
-      base = defaultBase,
+      base = defaults.base,
       children,
       className,
       innerRef,
@@ -51,7 +51,7 @@ export default function asGrid(Component: *) {
   ) {
     const classes = compact([
       className,
-      type of size !== 'undefined' ? styles.col(size) : styles.fraction,
+      typeof size !== 'undefined' ? styles.col(size) : styles.fraction,
       styles.grid,
       align && styles[`${align}Align`],
       justify && styles[`${justify}Justify`],

@@ -1,6 +1,6 @@
 // @flow
 import type { DisplayValues, DisplayAliases } from '../types'
-import { displayAliases as defaultDisplayAliases } from '../defaults'
+import defaults from '../defaults'
 import { splitPattern, log } from '../utils'
 import errors from /* preval */ '../errors'
 
@@ -74,7 +74,7 @@ function getMediaQuery(range: string, displayAliases: DisplayAliases): string {
 
 export function getMediaQueries(
   show: string | Array<string> = [],
-  displayAliases: DisplayAliases = defaultDisplayAliases
+  displayAliases: DisplayAliases = defaults.displayAliases
 ): { [string]: string } {
   const showArray = show instanceof Array ? show : show.split(splitPattern)
 

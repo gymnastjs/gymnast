@@ -1,4 +1,6 @@
-export const defaults = {
+// @flow
+
+export default {
   spacingAliases: {
     XS: 0.5,
     'S/2': 0.5,
@@ -26,5 +28,3 @@ export const defaults = {
   },
   base: 8,
 }
-
-export default defaults
