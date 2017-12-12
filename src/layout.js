@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { compact, get } from 'lodash'
-import { base as defaultBase } from './defaults.json'
+import { base as defaultBase } from './defaults'
 import { combineSpacing } from './utils'
 import type {
   ConfigProviderContext,

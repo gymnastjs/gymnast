@@ -3,7 +3,7 @@ import * as React from 'react'
 import { compact, get } from 'lodash'
 import type { ConfigProviderContext, OneResolutionGrid } from '../types'
 import withResolution from '../withResolution'
-import { base as defaultBase } from '../defaults.json'
+import { base as defaultBase } from '../defaults'
 import styles from './grid.css'
 import devStyles from '../dev.css'
 import { combineSpacing } from '../utils'
@@ -52,8 +52,8 @@ export default function asGrid(Component: *) {
   ) {
     const classes = compact([
       className,
-      size && styles.col,
-      size && styles[`col-${String(size)}`],
+      size !== undefined && styles.col,
+      size !== undefined && styles[`col-${String(size)}`],
       dev &&
         process.env.NODE_ENV !== 'production' &&
         devStyles[`colors${String(dev)}`],

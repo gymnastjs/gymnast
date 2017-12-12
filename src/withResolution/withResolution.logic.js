@@ -1,6 +1,6 @@
 // @flow
 import type { DisplayValues, DisplayAliases } from '../types'
-import { displayAliases as defaultDisplayAliases } from '../defaults.json'
+import { displayAliases as defaultDisplayAliases } from '../defaults'
 import { splitPattern, log } from '../utils'
 import errors from '../errors'
 

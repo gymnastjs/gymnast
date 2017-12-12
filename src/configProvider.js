@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import defaults from './defaults.json'
+import defaults from './defaults'
 import type {
   SpacingAliases,
   DisplayAliases,
