@@ -76,7 +76,7 @@ export type DisplayAliases = {
 }
 
 export type ConfigProviderContext = {|
-  +xnReflex: {|
+  +xnReflex?: {|
     +displayAliases: DisplayAliases,
     +spacingAliases: SpacingAliases,
     +base: number,
