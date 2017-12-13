@@ -25,6 +25,7 @@
   "license": "MIT",
   "devDependencies": {
     "@bubltechnology/customizable-commit-analyzer": "1.0.2-0",
+    "@semantic-release/npm": "2.3.1",
     "@storybook/addon-actions": "3.2.17",
     "@storybook/addon-knobs": "3.2.17",
     "@storybook/addon-notes": "3.2.17",
@@ -151,7 +152,6 @@
     "lint:js": "eslint scripts src stories storybook test",
     "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "start:storybook": "picturebook -p 9001 -s ./storybook/static -c node_modules/picturebook/config",
     "start:webpack": "yarn build:dev -- --watch",
     "start": "npm-run-all --parallel start:*",
@@ -163,7 +163,7 @@
     "test:watch": "jest --watch"
   },
   "release": {
-    "verifyConditions": "condition-circle",
+    "verifyConditions": ["@semantic-release/npm", "condition-circle"],
     "analyzeCommits": "@bubltechnology/customizable-commit-analyzer"
   },
   "config": {
