@@ -1,5 +1,5 @@
 // @flow
-import { spacingAliases as defaultSpacingAliases } from './defaults.json'
+import defaults from './defaults'
 import type { SpacingProps, Noop, SpacingValues, SpacingAliases } from './types'
 import errors from /* preval */ './errors'
 
@@ -32,8 +32,10 @@ export function validateSpacingProps(props: SpacingProps) {
   ]
 
   if (
-    (props.marginArray && margins.some(hasDefinedValues(props))) ||
-    (props.paddingArray && paddings.some(hasDefinedValues(props)))
+    (typeof props.marginArray !== 'undefined' &&
+      margins.some(hasDefinedValues(props))) ||
+    (typeof props.paddingArray !== 'undefined' &&
+      paddings.some(hasDefinedValues(props)))
   ) {
     log.error(errors.MIXEDSPACING, `"${JSON.stringify(props)}" used`)
     return false
@@ -136,7 +138,7 @@ export function parseSpacing(
 
 function replaceSpacingAlias(
   value: SpacingValues,
-  spacingAliases: SpacingAliases = defaultSpacingAliases
+  spacingAliases: SpacingAliases = defaults.spacingAliases
 ) {
   if (spacingAliases && typeof value === 'string' && value in spacingAliases) {
     return spacingAliases[value]

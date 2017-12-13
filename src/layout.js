@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { compact, get } from 'lodash'
-import { base as defaultBase } from './defaults.json'
+import defaults from './defaults'
 import { combineSpacing } from './utils'
 import type {
   ConfigProviderContext,
@@ -62,7 +62,7 @@ export type Props = {
 
 export default function Layout(
   {
-    base = defaultBase,
+    base = defaults.base,
     className,
     fixed,
     height,
