@@ -13,18 +13,18 @@ or
 We have several examples [on the website](https://obartra.github.io/reflex). Here is one of them:
 
 ```jsx
-import { Grid, Layout } from 'xn-reflex'
+import { Grid } from 'xn-reflex'
 
-<Layout dev={1} fixed="top">
-  <Grid margin={[0, 1]} padding={[0, 1]}>
-    Content here
-  </Grid>
-</Layout>
+<Grid>
+  <Grid size={5} margin="0 L">Content Here</Grid>
+  <Grid size={4} margin="0 L/2">More Content</Grid>
+  <Grid size="auto" margin="0 L">Other Content</Grid>
+</Grid>
 ```
 
-This example will add a fixed section with the text "Content here" on the page.
+This will create 3 columns of sizes 5, 4 and 3 (`"auto"` fills the remaining space, `12 - 5 - 4 = 3`).
 
-The `Layout` Component defines sections in the page that have full width. `Grid` is used for the 12-column layout. We recommend checking the examples [here](https://obartra.github.io/reflex) and following the [Getting Started](https://github.com/obartra/reflex/wiki/Getting-Started) guide for more information.
+There are additional components to assist with layout, for a deeper dive into reflex, check out the [wiki](https://github.com/obartra/reflex/wiki), the examples [here](https://obartra.github.io/reflex) or follow the [Getting Started](https://github.com/obartra/reflex/wiki/Getting-Started) guide.
 
 ## 🖥 Install
 
