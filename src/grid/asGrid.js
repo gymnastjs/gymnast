@@ -51,7 +51,9 @@ export default function asGrid(Component: *) {
   ) {
     const classes = compact([
       className,
-      typeof size !== 'undefined' ? styles.col(size) : styles.fraction,
+      typeof size !== 'undefined' && size !== 0
+        ? styles.col(size)
+        : styles.fraction,
       styles.grid,
       align && styles[`${align}Align`],
       justify && styles[`${justify}Justify`],
