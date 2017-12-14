@@ -1,6 +1,6 @@
 // @flow
-import cxs from './cxs'
-import vars from './variables'
+import cxs from '../cxs'
+import vars from '../variables'
 
 const layoutRefClassName = 'xnr_layout'
 

@@ -14,6 +14,7 @@ export { default as Offset } from './derived/offset'
 
 // HOC
 export { default as asGrid } from './grid/asGrid'
+export { default as asLayout } from './layout/asLayout'
 export { default as withResolution } from './withResolution'
 
 // Utils / Dev
@@ -29,6 +30,7 @@ export type {
   GridProps,
   Height,
   Justify,
+  LayoutProps,
   Overflow,
   Size,
   SpacingProps,
