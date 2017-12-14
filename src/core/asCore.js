@@ -22,7 +22,7 @@ const sharedResolutionProperties = [
 
 export default function asCore(
   Component: *,
-  resolutionProperties?: Array<string> = []
+  resolutionProperties: Array<string>
 ) {
   function Core(
     {
@@ -67,8 +67,8 @@ export default function asCore(
   }
 
   Core.contextTypes = ConfigContextPropTypes
-  return withResolution(Core, [
-    ...sharedResolutionProperties,
-    ...resolutionProperties,
-  ])
+  return withResolution(
+    Core,
+    sharedResolutionProperties.concat(resolutionProperties)
+  )
 }

@@ -31129,6 +31129,587 @@ exports[`Storyshots Layout Fixed 1`] = `
 </div>
 `;
 
+exports[`Storyshots Layout Margin 1`] = `
+<div>
+  <div
+    className=""
+  >
+    <div
+      className="
+  cxs({
+  > div: {
+    @media screen and (max-width: 599px): {
+      flexShrink: 0;
+      width: calc(100% + ((24px / 2) - 8px) * 2)
+    }
+  };
+  @media screen and (max-width: 599px): {
+    overflow: hidden;
+    padding: 0
+  };
+  padding: 0 36px
+}})
+   
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+   
+  cxs({
+  justifyContent: center;
+  marginLeft: auto;
+  marginRight: auto
+}})
+  "
+      style={Object {}}
+    >
+      <div
+        className="
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+        style={Object {}}
+      >
+        <div
+          className="
+  cxs({
+  flexGrow: 0;
+  flexShrink: 0
+}})
+   xnr_layout 
+  cxs({
+   > :not(.xnr_layout): {
+    maxWidth: 1224px
+  };
+  alignItems: center;
+  alignSelf: flex-start;
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: column;
+  minWidth: 400px;
+  padding: 0;
+  width: 100%
+}})
+  "
+          style={
+            Object {
+              "backgroundColor": "#efefef",
+              "color": "#1469cc",
+            }
+          }
+        >
+          <div
+            className="
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "backgroundColor": "#ffd700",
+                "color": "#1d1f21",
+              }
+            }
+          >
+            TEST
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Layout Padding 1`] = `
+<div>
+  <div
+    className=""
+  >
+    <div
+      className="
+  cxs({
+  flexGrow: 1;
+  height: 100%
+}})
+   xnr_layout 
+  cxs({
+   > :not(.xnr_layout): {
+    maxWidth: 1224px
+  };
+  alignItems: center;
+  alignSelf: flex-start;
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: column;
+  minWidth: 400px;
+  padding: 0;
+  width: 100%
+}})
+  "
+      style={Object {}}
+    >
+      <div
+        className="
+  cxs({
+  > div: {
+    @media screen and (max-width: 599px): {
+      flexShrink: 0;
+      width: calc(100% + ((24px / 2) - 8px) * 2)
+    }
+  };
+  @media screen and (max-width: 599px): {
+    overflow: hidden;
+    padding: 0
+  };
+  padding: 0 36px
+}})
+   
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+   
+  cxs({
+  justifyContent: center;
+  marginLeft: auto;
+  marginRight: auto
+}})
+  "
+        style={Object {}}
+      >
+        <div
+          className="
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+          style={Object {}}
+        >
+          <div
+            className="
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "borderBottomWidth": 24,
+                "height": 61,
+              }
+            }
+          >
+            <h1>
+              Default (No Padding)
+            </h1>
+          </div>
+          <div
+            className="
+  cxs({
+  flexGrow: 0;
+  flexShrink: 0
+}})
+   xnr_layout 
+  cxs({
+   > :not(.xnr_layout): {
+    maxWidth: 1224px
+  };
+  alignItems: center;
+  alignSelf: flex-start;
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: column;
+  minWidth: 400px;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "backgroundColor": "#efefef",
+                "color": "#1469cc",
+              }
+            }
+          >
+            <div
+              className="
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+              style={
+                Object {
+                  "backgroundColor": "#ffd700",
+                  "color": "#1d1f21",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1d1f21",
+                    "color": "#ffd700",
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <div
+            className="
+  cxs({
+  flexBasis: 50%;
+  maxWidth: 50%
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "borderBottomWidth": 24,
+                "height": 61,
+              }
+            }
+          >
+            <h1>
+              Top Right Padding
+            </h1>
+          </div>
+          <div
+            className="
+  cxs({
+  flexGrow: 0;
+  flexShrink: 0
+}})
+   xnr_layout 
+  cxs({
+   > :not(.xnr_layout): {
+    maxWidth: 1224px
+  };
+  alignItems: center;
+  alignSelf: flex-start;
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: column;
+  minWidth: 400px;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "backgroundColor": "#efefef",
+                "color": "#1469cc",
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "paddingRight": 24,
+                "paddingTop": 24,
+              }
+            }
+          >
+            <div
+              className="
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+              style={
+                Object {
+                  "backgroundColor": "#ffd700",
+                  "color": "#1d1f21",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1d1f21",
+                    "color": "#ffd700",
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <div
+            className="
+  cxs({
+  flexBasis: 50%;
+  maxWidth: 50%
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "borderBottomWidth": 24,
+                "height": 61,
+              }
+            }
+          >
+            <h1>
+              All-sides Padding
+            </h1>
+          </div>
+          <div
+            className="
+  cxs({
+  flexGrow: 0;
+  flexShrink: 0
+}})
+   xnr_layout 
+  cxs({
+   > :not(.xnr_layout): {
+    maxWidth: 1224px
+  };
+  alignItems: center;
+  alignSelf: flex-start;
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: column;
+  minWidth: 400px;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "backgroundColor": "#efefef",
+                "color": "#1469cc",
+                "paddingBottom": 24,
+                "paddingLeft": 12,
+                "paddingRight": 12,
+                "paddingTop": 24,
+              }
+            }
+          >
+            <div
+              className="
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+              style={
+                Object {
+                  "backgroundColor": "#ffd700",
+                  "color": "#1d1f21",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1d1f21",
+                    "color": "#ffd700",
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <div
+            className="
+  cxs({
+  flexBasis: 50%;
+  maxWidth: 50%
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "borderBottomWidth": 24,
+                "height": 61,
+              }
+            }
+          >
+            <h1>
+              Bottom Padding
+            </h1>
+          </div>
+          <div
+            className="
+  cxs({
+  flexGrow: 0;
+  flexShrink: 0
+}})
+   xnr_layout 
+  cxs({
+   > :not(.xnr_layout): {
+    maxWidth: 1224px
+  };
+  alignItems: center;
+  alignSelf: flex-start;
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: column;
+  minWidth: 400px;
+  padding: 0;
+  width: 100%
+}})
+  "
+            style={
+              Object {
+                "backgroundColor": "#efefef",
+                "color": "#1469cc",
+                "paddingBottom": 24,
+              }
+            }
+          >
+            <div
+              className="
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  padding: 0;
+  width: 100%
+}})
+  "
+              style={
+                Object {
+                  "backgroundColor": "#ffd700",
+                  "color": "#1d1f21",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1d1f21",
+                    "color": "#ffd700",
+                    "minHeight": 55,
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Layout Parent 1`] = `
 <div>
   <div

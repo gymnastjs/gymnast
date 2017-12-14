@@ -1,11 +1,11 @@
 // @flow
-import cxs from './cxs'
-import gridStyles from './grid/grid.styles'
-import vars from './variables'
+import cxs from '../cxs'
+import gridStyles from '../grid/grid.styles'
+import vars from '../variables'
 
 const { bolt10, gold15 } = preval`
 const { rgba } = require('polished')
-const vars = require('./variables')
+const vars = require('../variables')
 module.exports = {
   gold15: rgba(vars.axonGold, 0.15),
   bolt10: rgba(vars.bolt, 0.1)
