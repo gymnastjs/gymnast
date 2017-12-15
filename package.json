@@ -54,7 +54,6 @@
     "cross-env": "5.1.1",
     "css-loader": "0.28.7",
     "cssnano": "3.10.0",
-    "cxs": "6.1.0",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.2.0",
     "enzyme-adapter-react-16": "1.1.0",
@@ -170,5 +169,8 @@
   "peerDependencies": {
     "prop-types": ">=15",
     "react": ">=15"
+  },
+  "dependencies": {
+    "cxs": "6.1.0"
   }
 }

@@ -3,14 +3,6 @@ import cxs from '../cxs'
 import gridStyles from '../grid/grid.styles'
 import vars from '../variables'
 
-const { bolt10, gold15 } = preval`
-const { rgba } = require('polished')
-const vars = require('../variables')
-module.exports = {
-  gold15: rgba(vars.axonGold, 0.15),
-  bolt10: rgba(vars.bolt, 0.1)
-}`
-
 const colWidth = vars.pageContentWidth / 12 - vars.gutter
 const smallPageWidth = `calc(100vw - ${vars.pageMargin}px * 2)`
 
@@ -21,7 +13,7 @@ const contentBeforeAndAfter = {
   bottom: 0,
   width: `${vars.pageMargin}px`,
   height: '100%',
-  backgroundColor: gold15,
+  backgroundColor: vars.dev.gold15,
 }
 
 const styles = {
@@ -65,7 +57,7 @@ const styles = {
     backgroundImage: `linear-gradient(
       90deg,
       transparent ${colWidth}px,
-      ${bolt10} ${vars.gutter}px
+      ${vars.dev.bolt10} ${vars.gutter}px
     )`,
     backgroundSize: `${colWidth + vars.gutter}px 1px`,
 
