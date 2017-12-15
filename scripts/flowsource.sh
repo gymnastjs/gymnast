@@ -10,7 +10,7 @@ set -e
 rm -f dist/{,**/}*.flow
 
 # Generate flow source for all files
-./node_modules/.bin/flow-copy-source -v -f '**/{,**/}*.{css,js}' src dist
+./node_modules/.bin/flow-copy-source -v src dist
 
 # Remove spec files
 rm -f dist/{,**/}*.spec.js.flow
