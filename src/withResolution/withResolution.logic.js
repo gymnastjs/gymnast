@@ -1,8 +1,10 @@
 // @flow
+import preval from 'preval.macro'
 import type { DisplayValues, DisplayAliases } from '../types'
 import defaults from '../defaults'
 import { splitPattern, log } from '../utils'
-import errors from /* preval */ '../errors'
+
+const errors = preval`module.exports = require('../errors')`
 
 export type ShouldShow = { [string]: boolean }
 
