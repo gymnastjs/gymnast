@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme'
 import asGrid from './asGrid'
 import Grid from './index'
 
-describe('gridHOC', () => {
+describe('asGrid', () => {
   let wrapper
 
   it('should allow wrapping any element into a Grid', () => {
@@ -19,13 +19,6 @@ describe('gridHOC', () => {
     wrapper = shallow(<Div />)
 
     expect(wrapper.html()).toEqual(gridWrapper.html())
-  })
-
-  it('should pass a ref to innerRef', () => {
-    const spy = jest.fn()
-    const Div = asGrid('div')
-    wrapper = mount(<Div innerRef={spy} />)
-    expect(spy).toHaveBeenCalledWith(wrapper.find('div').instance())
   })
 
   afterEach(() => {

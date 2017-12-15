@@ -5,17 +5,15 @@ import { times } from 'lodash'
 import { Grid, Col } from '../../../shared'
 import styles from '../../../shared/stories.css'
 
-export default function SearchResults(
-  {
-    results = 1,
-    pages = 4,
-    size,
-  }: {
-    results?: number,
-    pages?: number,
-    size?: Size,
-  } = {}
-) {
+export default function SearchResults({
+  results = 1,
+  pages = 4,
+  size,
+}: {
+  results?: number,
+  pages?: number,
+  size?: Size,
+} = {}) {
   return (
     <Grid size={size} dev={5} align="top">
       <Grid>

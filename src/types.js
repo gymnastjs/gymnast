@@ -83,12 +83,9 @@ export type ConfigProviderContext = {|
   |},
 |}
 
-export type OneResolutionGrid = {
-  align?: AlignGrid,
+export type OneResolution = {
   base?: number,
-  children?: React.Node,
   className?: string,
-  justify?: Justify,
   innerRef?: React.Ref<*>,
   margin?: Spacing,
   marginBottom?: SpacingValues,
@@ -101,14 +98,11 @@ export type OneResolutionGrid = {
   paddingRight?: SpacingValues,
   paddingTop?: SpacingValues,
   show?: DisplayValues,
-  size?: Size,
   style?: { [string]: string | number },
 }
 
-export type GridProps = {
-  ...OneResolutionGrid,
-  align?: AlignGrid | { [string]: AlignGrid },
-  justify?: Justify | { [string]: Justify },
+type MultipleResolutionProps = {
+  ...$Exact<OneResolution>,
   margin?: Spacing | { [string]: Spacing },
   marginBottom?: SpacingValues | { [string]: SpacingValues },
   marginLeft?: SpacingValues | { [string]: SpacingValues },
@@ -119,5 +113,32 @@ export type GridProps = {
   paddingLeft?: SpacingValues | { [string]: SpacingValues },
   paddingRight?: SpacingValues | { [string]: SpacingValues },
   paddingTop?: SpacingValues | { [string]: SpacingValues },
+}
+
+export type OneResolutionGrid = {
+  ...$Exact<OneResolution>,
+  align?: AlignGrid,
+  justify?: Justify,
+  size?: Size,
+}
+
+export type OneResolutionLayout = {
+  ...$Exact<OneResolution>,
+  fixed?: Fixed,
+  height?: Height,
+  overflow?: Overflow,
+}
+
+export type GridProps = {
+  ...$Exact<MultipleResolutionProps>,
+  align?: AlignGrid | { [string]: AlignGrid },
+  justify?: Justify | { [string]: Justify },
   size?: Size | { [string]: Size },
+}
+
+export type LayoutProps = {
+  ...$Exact<MultipleResolutionProps>,
+  fixed?: Fixed | { [string]: Fixed },
+  height?: Height | { [string]: Height },
+  overflow?: Overflow | { [string]: Overflow },
 }

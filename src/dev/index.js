@@ -1,6 +1,6 @@
 // @flow
 import styles from './dev.styles'
-import { noop } from './utils'
+import { noop } from '../utils'
 
 const KEY_CODE_K = 75
 const body = ((document: any).body: HTMLElement)

@@ -5,7 +5,7 @@ import {
   parseSpacing,
   replaceSpacingAliases,
   validateSpacingProps,
-} from './utils'
+} from './index'
 
 const base = 8
 

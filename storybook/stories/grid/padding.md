@@ -1,20 +1,7 @@
 # Padding
 
-Padding can be set for any Grid or Item components. Valid values are:
+Padding can be set for any `Grid` or `Layout` components. For more information on valid values and exact formatting, check the [wiki](https://github.com/obartra/reflex/wiki/Spacing).
 
-- top
-- right
-- bottom
-- left
-- horizontal
-- vertical
-- all
-- none
+Also note that while `Grid` has no margins by default but `Col` has a `24px` bottom margin and `12px` lateral ones. These are in addition to any padding.
 
-Additional sides always take precedence so "none all" is the same than "all".
-
-"vertical top bottom" has no different meaning than just "vertical" since the same sides are affected. To define all sides but "left", for instance, one could do "top right bottom" or "vertical right"
-
-Also note that while `Grid` has no margins by default but `Item` has a `24px` bottom margin and `12px` lateral ones. These are in addition to any padding.
-
-If you have trouble visualizing the padding effects, set Margin and Items Margin to `"None"`. That will show only the effects of padding.
+If you have trouble visualizing the padding effects, set the `Margin` knob to `"None"`. That will show only the effects of padding.

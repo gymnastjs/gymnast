@@ -1,4 +1,4 @@
-import initDevMode from './dev'
+import initDevMode from './index'
 
 function keyPress(key, ctrl = true, shift = true, meta = false) {
   const event = document.createEvent('Event')
