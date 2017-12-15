@@ -21,7 +21,7 @@ const sharedResolutionProperties = [
 ]
 
 export default function asCore(
-  Component: *,
+  Component: React.ComponentType<*> | string,
   resolutionProperties: Array<string>
 ) {
   function Core(

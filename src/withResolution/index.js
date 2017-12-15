@@ -21,7 +21,7 @@ type State = {
 }
 
 export default function withResolution(
-  Component: *,
+  Component: React.ComponentType<*>,
   resolutionKeys?: Array<string>,
   coercedSupport?: boolean = supportsMatchMedia
 ) {
@@ -30,7 +30,10 @@ export default function withResolution(
     return Component
   }
 
-  class WithResolution extends React.Component<Props, State> {
+  class WithResolution extends React.Component<
+    Props & React.ElementProps<typeof Component>,
+    State
+  > {
     static contextTypes = ConfigContextPropTypes
 
     state = {
