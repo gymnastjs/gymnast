@@ -68,7 +68,7 @@
     "extract-text-webpack-plugin": "3.0.2",
     "find-up": "2.1.0",
     "flow-bin": "0.61.0",
-    "flow-copy-source": "https://github.com/arahansen/flow-copy-source#29ea3c2c0c58d32182ce953a5d7fa2ab788314d4",
+    "flow-copy-source": "1.2.1",
     "html-loader": "0.5.1",
     "husky": "0.14.3",
     "ignore-loader": "0.1.2",
@@ -171,6 +171,6 @@
     "react": ">=15"
   },
   "dependencies": {
-    "cxs": "6.1.0"
+    "cxs": "https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362",
   }
 }
