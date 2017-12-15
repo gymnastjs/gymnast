@@ -2919,9 +2919,9 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-cxs@6.1.0:
+"cxs@https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362":
   version "6.1.0"
-  resolved "https://registry.yarnpkg.com/cxs/-/cxs-6.1.0.tgz#8d6193230a79fd25f9a3c2919de913967b01c80f"
+  resolved "https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362"
   dependencies:
     objss "^1.0.3"
     tag-hoc "^1.0.0-0"
@@ -4028,14 +4028,14 @@ flow-bin@0.61.0:
   version "0.61.0"
   resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.61.0.tgz#d0473a8c35dbbf4de573823f4932124397d32d35"
 
-"flow-copy-source@https://github.com/arahansen/flow-copy-source#29ea3c2c0c58d32182ce953a5d7fa2ab788314d4":
-  version "1.2.0"
-  resolved "https://github.com/arahansen/flow-copy-source#29ea3c2c0c58d32182ce953a5d7fa2ab788314d4"
+flow-copy-source@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/flow-copy-source/-/flow-copy-source-1.2.1.tgz#705c2fa8fb29a281118e1c4b66218dec24b745ec"
   dependencies:
     chokidar "^1.7.0"
     fs-extra "^3.0.1"
     glob "^7.0.0"
-    kefir "^3.2.0"
+    kefir "^3.7.3"
     yargs "^8.0.2"
 
 follow-redirects@1.0.0:
@@ -5773,7 +5773,7 @@ jsx-ast-utils@^2.0.0:
   dependencies:
     array-includes "^3.0.3"
 
-kefir@^3.2.0:
+kefir@^3.7.3:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/kefir/-/kefir-3.8.0.tgz#63b5dce575f1a7ab3286788e771eb104b181b676"
   dependencies:
