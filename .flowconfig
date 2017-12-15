@@ -1,5 +1,4 @@
 [ignore]
-<PROJECT_ROOT>/dist
 .*/node_modules/conventional-changelog-core/test
 .*/node_modules/editions/.*
 .*/node_modules/radium/.*
