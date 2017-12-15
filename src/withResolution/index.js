@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react'
+import preval from 'preval.macro'
 import { get } from 'lodash'
 import type { DisplayValues } from '../types'
 import { log } from '../utils'
@@ -11,7 +12,8 @@ import {
   hasTrueValues,
   type ShouldShow,
 } from './withResolution.logic'
-import errors from /* preval */ '../errors'
+
+const errors = preval`module.exports = require('../errors')`
 
 type Props = { show?: DisplayValues }
 type State = {
@@ -19,7 +21,7 @@ type State = {
 }
 
 export default function withResolution(
-  Component: *,
+  Component: React.ComponentType<*>,
   resolutionKeys?: Array<string>,
   coercedSupport?: boolean = supportsMatchMedia
 ) {
@@ -28,7 +30,10 @@ export default function withResolution(
     return Component
   }
 
-  class WithResolution extends React.Component<Props, State> {
+  class WithResolution extends React.Component<
+    Props & React.ElementProps<typeof Component>,
+    State
+  > {
     static contextTypes = ConfigContextPropTypes
 
     state = {

@@ -7,7 +7,7 @@ import asCore from '../core/asCore'
 
 const resolutionProperties = ['align', 'justify', 'size']
 
-export default function asGrid(Component: *) {
+export default function asGrid(Component: React.ComponentType<*> | string) {
   function Grid({
     align,
     className,

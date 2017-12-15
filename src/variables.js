@@ -1,5 +1,4 @@
 // @flow
-
 const base = 8
 const gutter = base * 3
 const maxWidth = base * 153 /* 1224px */

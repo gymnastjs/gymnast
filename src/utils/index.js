@@ -1,4 +1,5 @@
 // @flow
+import preval from 'preval.macro'
 import defaults from '../defaults'
 import type {
   SpacingProps,
@@ -6,7 +7,8 @@ import type {
   SpacingValues,
   SpacingAliases,
 } from '../types'
-import errors from /* preval */ '../errors'
+
+const errors = preval`module.exports = require('../errors')`
 
 const isProd = process.env.NODE_ENV === 'production'
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'

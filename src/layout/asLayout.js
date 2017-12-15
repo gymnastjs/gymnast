@@ -8,7 +8,7 @@ import asCore from '../core/asCore'
 
 const resolutionProperties = ['fixed', 'height', 'overflow']
 
-export default function asLayout(Component: *) {
+export default function asLayout(Component: React.ComponentType<*> | string) {
   function Layout({
     className,
     fixed,

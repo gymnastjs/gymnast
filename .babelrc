@@ -12,6 +12,7 @@
   ],
   "plugins": [
     "preval",
+    "macros",
     "flow-react-proptypes",
     "lodash",
     "transform-object-rest-spread",

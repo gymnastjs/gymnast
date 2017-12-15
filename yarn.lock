@@ -1091,6 +1091,12 @@ babel-plugin-lodash@3.3.2:
     lodash "^4.17.4"
     require-package-name "^2.0.1"
 
+babel-plugin-macros@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.0.0.tgz#fd3aee135f7dec0b82898b7c8f1aed6fa75f9af9"
+  dependencies:
+    cosmiconfig "3.1.0"
+
 babel-plugin-minify-builtins@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-minify-builtins/-/babel-plugin-minify-builtins-0.2.0.tgz#317f824b0907210b6348671bb040ca072e2e0c82"
@@ -1166,7 +1172,7 @@ babel-plugin-module-resolver@3.0.0:
     reselect "^3.0.1"
     resolve "^1.4.0"
 
-babel-plugin-preval@1.6.2:
+babel-plugin-preval@1.6.2, babel-plugin-preval@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-preval/-/babel-plugin-preval-1.6.2.tgz#8f580a1d4579d5fc79f1cfaee6f9fe0996fdeb1f"
   dependencies:
@@ -7951,6 +7957,12 @@ prettycli@^1.4.3:
   resolved "https://registry.yarnpkg.com/prettycli/-/prettycli-1.4.3.tgz#b28ec2aad9de07ae1fd75ef294fb54cbdee07ed5"
   dependencies:
     chalk "2.1.0"
+
+preval.macro@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/preval.macro/-/preval.macro-1.0.2.tgz#1a0043f67719c0816e8526f7e3975df47d525b24"
+  dependencies:
+    babel-plugin-preval "^1.6.2"
 
 private@^0.1.6, private@^0.1.7, private@~0.1.5:
   version "0.1.8"

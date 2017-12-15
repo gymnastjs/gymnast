@@ -13,7 +13,6 @@
         "flexbugs",
         "folderpath",
         "namepath",
-        "preval",
         "repo"
     ],
     // flagWords - list of words to be always considered incorrect
