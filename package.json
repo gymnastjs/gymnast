@@ -2,9 +2,8 @@
   "name": "xn-reflex",
   "version": "0.0.0-semantically-released",
   "description": "Flexbox React 12-column layout system",
-  "module": "src/index.js",
-  "main": "dist/reflex.js",
-  "browser": "dist/reflex.js",
+  "main": "index.js",
+  "browser": "dist/reflex.min.js",
   "homepage": "https://obartra.github.io/reflex",
   "files": [
     "package.json",
@@ -12,7 +11,8 @@
     "LICENSE",
     "src",
     "dist",
-    "version.js"
+    "version.js",
+    "index.js"
   ],
   "repository": {
     "type": "git",
