@@ -14,6 +14,7 @@ export default function asLayout(Component: React.ComponentType<*> | string) {
     fixed,
     height,
     overflow,
+    innerRef,
     ...props
   }: OneResolutionLayout) {
     const classes = compact([
@@ -24,7 +25,7 @@ export default function asLayout(Component: React.ComponentType<*> | string) {
       styles.layout,
     ])
 
-    return <Component {...props} className={classes.join(' ')} />
+    return <Component ref={innerRef} {...props} className={classes.join(' ')} />
   }
   return asCore(Layout, resolutionProperties)
 }

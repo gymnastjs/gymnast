@@ -21,6 +21,12 @@ describe('asLayout', () => {
     expect(wrapper.html()).toEqual(layoutWrapper.html())
   })
 
+  it('should pass a ref to innerRef', () => {
+    const spy = jest.fn()
+    wrapper = mount(<Layout innerRef={spy} />)
+    expect(spy).toHaveBeenCalledWith(wrapper.find('div').instance())
+  })
+
   afterEach(() => {
     if (wrapper) {
       wrapper.unmount()

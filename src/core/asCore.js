@@ -27,7 +27,6 @@ export default function asCore(
   function Core(
     {
       base = defaults.base,
-      innerRef,
       margin,
       marginBottom,
       marginLeft,
@@ -63,7 +62,7 @@ export default function asCore(
       }),
     }
 
-    return <Component ref={innerRef} {...props} style={cssStyle} />
+    return <Component {...props} style={cssStyle} />
   }
 
   Core.contextTypes = ConfigContextPropTypes

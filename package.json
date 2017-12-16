@@ -90,7 +90,6 @@
     "postcss-loader": "2.0.9",
     "postcss-nesting": "4.2.1",
     "prettier": "1.9.2",
-    "preval.macro": "1.0.2",
     "raw-loader": "0.5.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -173,6 +172,7 @@
     "react": ">=15"
   },
   "dependencies": {
-    "cxs": "https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362"
+    "cxs": "https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362",
+    "preval.macro": "1.0.2"
   }
 }
