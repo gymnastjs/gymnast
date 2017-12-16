@@ -13,6 +13,7 @@ export default function asGrid(Component: React.ComponentType<*> | string) {
     className,
     justify,
     size,
+    innerRef,
     ...props
   }: OneResolutionGrid) {
     const sizeClass =
@@ -27,7 +28,7 @@ export default function asGrid(Component: React.ComponentType<*> | string) {
       justify && styles[`${justify}Justify`],
     ])
 
-    return <Component {...props} className={classes.join(' ')} />
+    return <Component ref={innerRef} {...props} className={classes.join(' ')} />
   }
 
   return asCore(Grid, resolutionProperties)

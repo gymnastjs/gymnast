@@ -63,7 +63,7 @@ export default function asCore(
       }),
     }
 
-    return <Component ref={innerRef} {...props} style={cssStyle} />
+    return <Component {...props} style={cssStyle} />
   }
 
   Core.contextTypes = ConfigContextPropTypes
