@@ -6,6 +6,12 @@ import Grid from './index'
 describe('asGrid', () => {
   let wrapper
 
+  it('should pass a ref to innerRef', () => {
+    const spy = jest.fn()
+    wrapper = mount(<Grid innerRef={spy} />)
+    expect(spy).toHaveBeenCalledWith(wrapper.find('div').instance())
+  })
+
   it('should allow wrapping any element into a Grid', () => {
     const Span = asGrid(() => <span />)
     wrapper = mount(<Span />)

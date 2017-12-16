@@ -27,7 +27,6 @@ export default function asCore(
   function Core(
     {
       base = defaults.base,
-      innerRef,
       margin,
       marginBottom,
       marginLeft,

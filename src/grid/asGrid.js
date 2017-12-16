@@ -28,7 +28,7 @@ export default function asGrid(Component: React.ComponentType<*> | string) {
       justify && styles[`${justify}Justify`],
     ])
 
-    return <Component ref={innerRef} {...props} className={classes.join(' ')} />
+    return <Component {...props} ref={innerRef} className={classes.join(' ')} />
   }
 
   return asCore(Grid, resolutionProperties)
