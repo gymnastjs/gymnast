@@ -1,9 +1,9 @@
 // @flow
 import * as React from 'react'
-import preval from 'preval.macro'
 import { get } from 'lodash'
 import type { DisplayValues } from '../types'
-import { log } from '../utils'
+import log from '../utils/log'
+import errors from '../errors'
 import { ConfigContextPropTypes } from '../configProvider'
 import { register, unregister, supportsMatchMedia } from './mediaQuery'
 import {
@@ -12,8 +12,6 @@ import {
   hasTrueValues,
   type ShouldShow,
 } from './withResolution.logic'
-
-const errors = preval`module.exports = require('../errors')`
 
 type Props = { show?: DisplayValues }
 type State = {

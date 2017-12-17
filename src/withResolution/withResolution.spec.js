@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { log } from '../utils'
+import log from '../utils/log'
 import withResolution from './index'
 import { getMediaQueries } from './withResolution.logic'
 

@@ -1,32 +1,22 @@
 // @flow
-import preval from 'preval.macro'
 import defaults from '../defaults'
 import type {
-  SpacingProps,
   Noop,
-  SpacingValues,
   SpacingAliases,
+  SpacingProps,
+  SpacingValues,
 } from '../types'
+import log from './log'
+import errors from '../errors'
 
-const errors = preval`module.exports = require('../errors')`
-
-const isProd = process.env.NODE_ENV === 'production'
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
 // regex case examples: https://regex101.com/r/bs73rZ/1
 
 export const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 export const noop: Noop = () => null
 
-/* eslint-disable no-console */
-export const log = {
-  error: isProd ? noop : console.error.bind(console),
-  warn: isProd ? noop : console.warn.bind(console),
-  info: isProd ? noop : console.log.bind(console),
-}
-/* eslint-enable no-console */
-
 export function validateSpacingProps(props: SpacingProps) {
-  if (isProd) {
+  if (process.env.NODE_ENV === 'production') {
     return true
   }
 

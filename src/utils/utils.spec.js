@@ -1,11 +1,11 @@
 import {
   combineSpacing,
   getCSS,
-  log,
   parseSpacing,
   replaceSpacingAliases,
   validateSpacingProps,
 } from './index'
+import log from './log'
 
 const base = 8
 
@@ -49,7 +49,7 @@ describe('combineSpacing', () => {
       base: 1,
     })
 
-    expect(log.error.calls.allArgs()[0][0].includes('MIXEDSPACING')).toBe(true)
+    expect(log.error).toHaveBeenCalled()
     expect(out).toEqual({})
   })
   ;[
