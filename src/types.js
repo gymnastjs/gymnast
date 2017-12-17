@@ -1,32 +1,11 @@
 // @flow
 import * as React from 'react'
 
-type zeroThroughElevenNumbers = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
-type zeroThroughElevenStrings =
-  | '1'
-  | '2'
-  | '3'
-  | '4'
-  | '5'
-  | '6'
-  | '7'
-  | '8'
-  | '9'
-  | '10'
-  | '11'
-
 export type Noop = (...params: any[]) => null
 
-export type Offset = zeroThroughElevenNumbers | zeroThroughElevenStrings | void
+export type Offset = number | string | void
 
-export type Size =
-  | zeroThroughElevenNumbers
-  | zeroThroughElevenStrings
-  | 12
-  | '12'
-  | 'fit'
-  | 'auto'
-  | void
+export type Size = string | number | void
 
 export type AlignGrid = 'bottom' | 'center' | 'top' | void
 
@@ -75,13 +54,21 @@ export type DisplayAliases = {
   },
 }
 
-export type ConfigProviderContext = {|
-  +xnReflex?: {|
-    +displayAliases: DisplayAliases,
-    +spacingAliases: SpacingAliases,
-    +base: number,
-  |},
-|}
+export type ConfigProviderContext = {
+  +xnReflex?: {
+    +base?: number,
+    +columns?: number,
+    +displayAliases?: DisplayAliases,
+    +gutter?: number,
+    +maxPageWidth?: number,
+    +minPageWidth?: number,
+    +pageMargin?: {
+      [string]: number,
+    },
+    +spacingAliases?: SpacingAliases,
+    +verticalGutter?: number,
+  },
+}
 
 export type OneResolution = {
   base?: number,

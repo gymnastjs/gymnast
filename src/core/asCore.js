@@ -1,10 +1,8 @@
 // @flow
 import * as React from 'react'
-import { get } from 'lodash'
 import type { ConfigProviderContext, OneResolution } from '../types'
 import withResolution from '../withResolution'
-import defaults from '../defaults'
-import { combineSpacing } from '../utils'
+import { combineSpacing, getValue } from '../utils'
 import { ConfigContextPropTypes } from '../configProvider'
 
 const sharedResolutionProperties = [
@@ -26,7 +24,7 @@ export default function asCore(
 ) {
   function Core(
     {
-      base = defaults.base,
+      base,
       margin,
       marginBottom,
       marginLeft,
@@ -57,8 +55,8 @@ export default function asCore(
           paddingBottom,
           paddingLeft,
         },
-        base: get(context, 'xnReflex.base', base),
-        spacingAliases: get(context, 'xnReflex.spacingAliases'),
+        base: getValue(context, 'base', base),
+        spacingAliases: getValue(context, 'spacingAliases'),
       }),
     }
 

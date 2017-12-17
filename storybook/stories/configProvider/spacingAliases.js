@@ -20,8 +20,8 @@ export default function() {
     XXL: 6,
   }
   return (
-    <Grid>
-      <ConfigProvider spacingAliases={spacingAliases} base={base}>
+    <ConfigProvider spacingAliases={spacingAliases} base={base}>
+      <Grid>
         <Grid dev={1} margin="L" size={6}>
           <Grid dev={2}>My margins are set using aliases!</Grid>
         </Grid>
@@ -34,7 +34,7 @@ export default function() {
         <Grid dev={1} padding={['M', 'S/2']} size={6}>
           <Grid dev={2}>My paddings are set using aliases!</Grid>
         </Grid>
-      </ConfigProvider>
-    </Grid>
+      </Grid>
+    </ConfigProvider>
   )
 }

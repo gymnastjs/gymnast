@@ -1,7 +1,7 @@
 {
   "name": "xn-reflex",
   "version": "0.0.0-semantically-released",
-  "description": "Flexbox React 12-column layout system",
+  "description": "Configurable grid and layout engine for React",
   "main": "index.js",
   "browser": "dist/reflex.min.js",
   "homepage": "https://obartra.github.io/reflex",

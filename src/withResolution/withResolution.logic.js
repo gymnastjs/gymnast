@@ -58,7 +58,10 @@ const queriesMap = {
   orientation: 'orientation',
 }
 
-function getMediaQuery(range: string, displayAliases: DisplayAliases): string {
+export function getMediaQuery(
+  range: string,
+  displayAliases: DisplayAliases
+): string {
   const response = []
   Object.keys(displayAliases[range]).forEach(key => {
     if (key in queriesMap) {

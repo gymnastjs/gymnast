@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import asLayout from './asLayout'
-import Layout from './index'
+import asLayout from './index'
+import Layout from '../layout'
 
 describe('asLayout', () => {
   let wrapper

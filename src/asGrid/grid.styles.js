@@ -1,15 +1,13 @@
 // @flow
 import cxs from '../cxs'
+import { toCXS } from '../utils/index'
 
-const styles = {}
-
-export const raw = {
+export const styles = toCXS({
   grid: {
     border: '0 transparent solid',
     boxSizing: 'border-box',
     display: 'flex',
     flexFlow: 'row wrap',
-    padding: 0,
     width: '100%',
   },
   fraction: {
@@ -52,29 +50,23 @@ export const raw = {
     width: 'auto',
     whiteSpace: 'nowrap',
   },
-}
-
-styles.grid = 'xnr_grid'
-
-Object.keys(raw).forEach(style => {
-  styles[style] = cxs(raw[style])
 })
 
-function getCol(size: string | number) {
+export function getCol(size: string | number | void, columns: number) {
   if (size === 'auto') {
-    return raw.colAuto
+    return styles.colAuto
   }
 
   if (size === 'fit') {
-    return raw.colFit
+    return styles.colFit
   }
 
-  return {
-    flexBasis: `${parseInt(size, 10) / 12 * 100}%`,
-    maxWidth: `${parseInt(size, 10) / 12 * 100}%`,
+  if (typeof size === 'undefined' || size === 0) {
+    return styles.fraction
   }
+
+  return cxs({
+    flexBasis: `${parseInt(size, 10) / columns * 100}%`,
+    maxWidth: `${parseInt(size, 10) / columns * 100}%`,
+  })
 }
-
-styles.col = (size: string | number) => cxs(getCol(size))
-
-export default styles

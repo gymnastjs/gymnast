@@ -2,7 +2,7 @@
 import * as React from 'react'
 import type { Size } from '../../../src/types'
 import { RootLayout, getMarginSelect, Grid, Col } from '../../shared'
-import vars from '../../../src/variables'
+import { axonBlack, axonGold } from '../../../src/dev/colors'
 
 type HeadingProps = {
   children: React.Node,
@@ -27,8 +27,8 @@ export default () => {
         minHeight: 55,
         width: '100%',
         textAlign: 'center',
-        color: vars.axonGold,
-        backgroundColor: vars.axonBlack,
+        color: axonGold,
+        backgroundColor: axonBlack,
       }}
     />
   )

@@ -1,16 +1,20 @@
 // @flow
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-import styles from './dev.styles'
+import { ConfigContextPropTypes } from '../configProvider'
+import getStyles from './dev.styles'
 import {
   body,
   appendDevContainer,
   removeDevContainer,
   getDevContainer,
 } from './dev.logic'
+import Grid from '../grid'
+import Root from '../root'
+import Layout from '../layout'
+import { getValues, times } from '../utils'
 
-const KEY_CODE_K = 75
-
+const KEY_CODE_K = 'K'.charCodeAt(0)
 type Props = {|
   keyCode: number,
   useCtrl: boolean,
@@ -27,6 +31,8 @@ export default class Dev extends React.Component<Props, State> {
     useCtrl: true,
     useShift: true,
   }
+
+  static contextTypes = ConfigContextPropTypes
 
   state = {
     showOverlay: false,
@@ -61,11 +67,23 @@ export default class Dev extends React.Component<Props, State> {
     if (!this.state.showOverlay) {
       return null
     }
-
+    const values = getValues(this.context)
+    const styles = getStyles(values)
     const content = (
-      <div className={styles.reflexOverlay}>
-        <div className={styles.content} />
-      </div>
+      <Layout className={styles.reflexOverlay}>
+        <div className={styles.leftMargin} />
+        <Root>
+          {times(values.columns).map(key => (
+            <Grid
+              margin={[0, values.gutter / 2]}
+              key={key}
+              size={1}
+              className={styles.col}
+            />
+          ))}
+        </Root>
+        <div className={styles.rightMargin} />
+      </Layout>
     )
 
     return ReactDOM.createPortal(content, getDevContainer())

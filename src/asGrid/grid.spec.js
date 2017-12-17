@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import asGrid from './asGrid'
-import Grid from './index'
+import asGrid from './index'
+import Grid from '../grid'
 
 describe('asGrid', () => {
   let wrapper

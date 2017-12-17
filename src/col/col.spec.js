@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import log from './../utils/log'
-import Col from './col'
+import Col from './index'
 import Grid from '../grid'
 
 describe('Col', () => {
