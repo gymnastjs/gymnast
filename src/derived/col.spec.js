@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import { log } from './../utils'
+import log from './../utils/log'
 import Col from './col'
 import Grid from '../grid'
 

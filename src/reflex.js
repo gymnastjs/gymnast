@@ -21,6 +21,7 @@ export { default as withResolution } from './withResolution'
 export const utils = _utils
 export { version } from '../version'
 export { default as initDevMode } from './dev'
+export { default as log } from './utils/log'
 
 // Types
 export type {
