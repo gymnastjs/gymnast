@@ -1,4 +1,6 @@
-import initDevMode from './index'
+import * as React from 'react'
+import { mount } from 'enzyme'
+import Dev from './dev'
 
 function keyPress(key, ctrl = true, shift = true, meta = false) {
   const event = document.createEvent('Event')
@@ -12,70 +14,56 @@ function keyPress(key, ctrl = true, shift = true, meta = false) {
   document.body.dispatchEvent(event)
 }
 
-describe('dev mode', () => {
+describe('Dev', () => {
   const overlayKey = 75
-  const inputEnv = process.env.NODE_ENV
   let wrapper
 
-  describe('default behavior', () => {
-    let devMode
+  it('should append a container to attach the overlay', () => {
+    wrapper = mount(<Dev />)
 
-    beforeEach(() => {
-      devMode = initDevMode()
-    })
+    expect(document.querySelector('#xn-reflex-dev-overlay')).toBeTruthy()
+  })
 
-    it('should return methods to toggle overlay', () => {
-      expect(typeof devMode.toggleOverlay).toEqual('function')
-    })
+  it('should call toggleOverlay when pressing ctrl+shift+k', () => {
+    wrapper = mount(<Dev />)
 
-    it('should call toggleOverlay when pressing ctrl+shift+k', () => {
-      keyPress(overlayKey)
+    keyPress(overlayKey)
 
-      expect(document.body.attributes['data-reflex-overlay'].value).toBe(
-        'false'
-      )
+    expect(wrapper.state().showOverlay).toBe(true)
 
-      keyPress(overlayKey)
+    keyPress(overlayKey)
 
-      expect(document.body.attributes['data-reflex-overlay'].value).toBe('true')
-    })
+    expect(wrapper.state().showOverlay).toBe(false)
+  })
 
-    it('should call toggleOverlay when pressing cmd+shift+k', () => {
-      keyPress(overlayKey, false, true, true)
+  it('should call toggleOverlay when pressing cmd+shift+k', () => {
+    wrapper = mount(<Dev />)
 
-      expect(document.body.attributes['data-reflex-overlay'].value).toBe(
-        'false'
-      )
+    keyPress(overlayKey, false, true, true)
 
-      keyPress(overlayKey, false, true, true)
+    expect(wrapper.state().showOverlay).toBe(true)
 
-      expect(document.body.attributes['data-reflex-overlay'].value).toBe('true')
-    })
+    keyPress(overlayKey, false, true, true)
 
-    it('should toggle overlay when "toggleOverlay" is invoked', () => {
-      devMode.toggleOverlay()
+    expect(wrapper.state().showOverlay).toBe(false)
+  })
 
-      expect(document.body.attributes['data-reflex-overlay'].value).toBe(
-        'false'
-      )
+  it('should allow modifying the trigger keys', () => {
+    const aKey = 'A'.charCodeAt(0)
+    wrapper = mount(<Dev useCtrl={false} useShift={false} keyCode={aKey} />)
 
-      devMode.toggleOverlay()
+    keyPress(aKey, false, false)
 
-      expect(document.body.attributes['data-reflex-overlay'].value).toBe('true')
-    })
+    expect(wrapper.state().showOverlay).toBe(true)
 
-    afterEach(() => {
-      devMode.unregister()
-    })
+    keyPress(aKey, false, false)
+
+    expect(wrapper.state().showOverlay).toBe(false)
   })
 
   afterEach(() => {
     if (wrapper) {
       wrapper.unmount()
     }
-  })
-
-  afterAll(() => {
-    process.env.NODE_ENV = inputEnv
   })
 })

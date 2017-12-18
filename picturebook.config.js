@@ -12,6 +12,7 @@ module.exports = {
   storiesUrl:
     'https://github.com/obartra/reflex/tree/master/storybook/stories/',
   storyPath: 'storybook/stories',
+  wrapStory: 'storybook/shared/wrapStory.js',
   image: {
     selenium: 'saucelabs',
     username: process.env[`SAUCE_USERNAME${suffix}`],

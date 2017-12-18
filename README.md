@@ -13,16 +13,16 @@ or
 We have several examples [on the website](https://obartra.github.io/reflex). Here is one of them:
 
 ```jsx
+import * as React from 'react'
 import { Grid } from 'xn-reflex'
 
 <Grid>
-  <Grid size={5} margin="0 L">Content Here</Grid>
-  <Grid size={4} margin="0 L/2">More Content</Grid>
-  <Grid size="auto" margin="0 L">Other Content</Grid>
+  <Grid size={5} margin={2}>Content Here</Grid>
+  <Grid size={7}>More Content</Grid>
 </Grid>
 ```
 
-This will create 3 columns of sizes 5, 4 and 3 (`"auto"` fills the remaining space, `12 - 5 - 4 = 3`).
+This will create 2 columns of sizes 5, 7 (defaults to a 12-column grid).
 
 There are additional components to assist with layout, for a deeper dive into reflex, check out the [wiki](https://github.com/obartra/reflex/wiki), the examples [here](https://obartra.github.io/reflex) or follow the [Getting Started](https://github.com/obartra/reflex/wiki/Getting-Started) guide.
 
@@ -36,20 +36,26 @@ You can install it with:
 yarn add xn-reflex
 ```
 
-`React` and `PropTypes` are dependencies of the generated bundle.
+`React` and `PropTypes` are [peer dependencies](https://docs.npmjs.com/files/package.json#peerdependencies) of the generated bundle.
 
 ## ⚙️ Dev Mode
 
-Ensuring a layout adheres to the grid can be difficult. To simplify this task, Reflex includes a grid overlay mode to assist you. You can initialize both invoking `initDevMode`.
+Ensuring a layout adheres to the grid can be difficult. To simplify this task, Reflex includes an overlay Component to assist you. During development, import and append `<Dev/>` to your pages. It doesn't render anything by default but pressing `CTRL+SHIFT+K` will toggle it.
 
-Learn more about dev mode in the [wiki](https://github.com/obartra/reflex/wiki/Dev-Mode).
+Learn more about `<Dev />` mode in the [wiki](https://github.com/obartra/reflex/wiki/Dev).
 
-<img src="/img/devMode.png" width="300px" alt="Dev Mode Example" />
+<img src="/img/devMode.png" width="300px" alt="Dev Example" />
 
-```js
-import { initDevMode } from 'xn-reflex'
+```jsx
+import * as React from 'react'
+import { Dev } from 'xn-reflex'
 
-const { toggleColor, toggleOverlay } = initDevMode()
+export default function MyPage() {
+  return (<>
+    <Dev />
+    {/* other components */}
+  </>)
+}
 ```
 
 ## 👥 Contributors
@@ -73,7 +79,7 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 | Code Quality  | [![CircleCI](https://circleci.com/gh/obartra/reflex/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/reflex/tree/master) [![Test Coverage](https://codeclimate.com/github/obartra/reflex/badges/coverage.svg)](https://codeclimate.com/github/obartra/reflex/coverage) [![Code Climate](https://codeclimate.com/github/obartra/reflex/badges/gpa.svg)](https://codeclimate.com/github/obartra/reflex) [![codebeat badge](https://codebeat.co/badges/d3b5abcd-60b2-4ab3-96b6-b3ab392b789d)](https://codebeat.co/projects/github-com-obartra-reflex-master) [![Package Quality](http://npm.packagequality.com/shield/xn-reflex.svg)](http://npm.packagequality.com/#?package=xn-reflex) [![Sauce Test Status](https://saucelabs.com/buildstatus/reflex)](https://saucelabs.com/u/reflex) |
 | Versioning    | [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm](https://img.shields.io/npm/v/xn-reflex.svg)](https://www.npmjs.com/package/xn-reflex) |
 | Dependencies  | [![Known Vulnerabilities](https://snyk.io/test/github/obartra/reflex/badge.svg)](https://snyk.io/test/github/obartra/reflex) [![DavidDM](https://david-dm.org/obartra/reflex.svg)](https://david-dm.org/obartra/reflex) [![bitHound Overall Score](https://www.bithound.io/github/obartra/reflex/badges/score.svg)](https://www.bithound.io/github/obartra/reflex) |
-| File Size     | ![max gzipped bundle size](https://img.shields.io/badge/gzip-11.5kb-brightgreen.svg) |
+| File Size     | ![gzipped bundle size](http://img.badgesize.io/https://unpkg.com/xn-reflex?compression=gzip) |
 | Questions     | [![Join the chat at https://gitter.im/react-reflex/Lobby](https://badges.gitter.im/react-reflex/Lobby.svg)](https://gitter.im/react-reflex/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![xn-reflex StackOverflow tags](https://img.shields.io/badge/stackoverflow-xn--reflex-f48024.svg)](https://stackoverflow.com/questions/tagged/xn-reflex)|
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/reflex.svg)](https://saucelabs.com/u/reflex)
