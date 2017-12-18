@@ -1,7 +1,6 @@
 // @flow
 import preval from 'preval.macro'
 import cxs from '../cxs'
-import gridStyles from '../grid/grid.styles'
 import vars from '../variables'
 
 const { bolt10, gold15 } = preval`
@@ -26,27 +25,6 @@ const contentBeforeAndAfter = {
 }
 
 const styles = {
-  reflexDevMode: cxs({
-    [` .${gridStyles.grid}`]: {
-      position: 'relative',
-      outline: `1px solid ${vars.nomuraGray}`,
-
-      ':before': {
-        content: "''",
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: `linear-gradient(90deg, transparent 1px, ${
-          vars.axonBlack
-        } 1px, transparent 2px) calc((${1 /
-          11} * 100%) - 1px) 0px, transparent`,
-        backgroundSize: 'calc(1 / 12 * 100% + 0.5px) 2px',
-        backgroundRepeat: 'repeat-x',
-      },
-    },
-  }),
   reflexOverlay: cxs({
     position: 'fixed',
     top: 0,
