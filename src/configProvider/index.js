@@ -45,6 +45,7 @@ export default class ConfigProvider extends React.Component<Props> {
     const {
       gutter = defaults.gutter,
       verticalGutter = gutter,
+      children,
       ...props
     } = this.props
 

@@ -5,7 +5,7 @@ import {
   Grid as ReflexGrid,
   Layout as ReflexLayout,
   Root,
-} from 'reflex'
+} from 'xn-reflex'
 import type { Spacing, Height } from '../../src/types'
 import {
   axonBlack,

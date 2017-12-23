@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { ConfigProvider, Root, Layout } from 'reflex'
+import { ConfigProvider, Root, Layout } from 'xn-reflex'
 import { Col } from '../../shared'
 
 export default function() {

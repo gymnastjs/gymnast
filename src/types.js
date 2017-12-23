@@ -55,7 +55,7 @@ export type DisplayAliases = {
 }
 
 export type ConfigProviderContext = {
-  +xnReflex?: {
+  +xnReflex?: {|
     +base?: number,
     +columns?: number,
     +displayAliases?: DisplayAliases,
@@ -67,7 +67,7 @@ export type ConfigProviderContext = {
     },
     +spacingAliases?: SpacingAliases,
     +verticalGutter?: number,
-  },
+  |},
 }
 
 export type OneResolution = {

@@ -33,13 +33,11 @@ function aliasMarginQuery(query, padding) {
     leftMargin: {
       [`@media screen and ${query}`]: {
         width: `${padding}px`,
-        left: 0,
       },
     },
     rightMargin: {
       [`@media screen and ${query}`]: {
         width: `${padding}px`,
-        right: 0,
       },
     },
   }
@@ -60,8 +58,14 @@ export default function getStyles({
       return aliasMarginQuery(query, padding)
     })
     .reduce(accumulateStyles, {
-      leftMargin: margin,
-      rightMargin: margin,
+      leftMargin: {
+        left: 0,
+        ...margin,
+      },
+      rightMargin: {
+        right: 0,
+        ...margin,
+      },
     })
 
   return toCXS({
