@@ -5,9 +5,15 @@ import {
   Grid as ReflexGrid,
   Layout as ReflexLayout,
   Root,
-} from 'reflex'
+} from 'xn-reflex'
 import type { Spacing, Height } from '../../src/types'
-import vars from '../../src/variables'
+import {
+  axonBlack,
+  axonGold,
+  nomuraGray,
+  bolt,
+  white,
+} from '../../src/dev/colors'
 
 const typeMap = {
   A: 1,
@@ -19,24 +25,24 @@ const typeMap = {
 
 const colors = {
   colors1: {
-    color: vars.axonGold,
-    backgroundColor: vars.axonBlack,
+    color: axonGold,
+    backgroundColor: axonBlack,
   },
   colors2: {
-    color: vars.bolt,
-    backgroundColor: vars.nomuraGray,
+    color: bolt,
+    backgroundColor: nomuraGray,
   },
   colors3: {
-    color: vars.axonBlack,
-    backgroundColor: vars.axonGold,
+    color: axonBlack,
+    backgroundColor: axonGold,
   },
   colors4: {
-    color: vars.nomuraGray,
-    backgroundColor: vars.bolt,
+    color: nomuraGray,
+    backgroundColor: bolt,
   },
   colors5: {
-    color: vars.axonBlack,
-    backgroundColor: vars.white,
+    color: axonBlack,
+    backgroundColor: white,
   },
 }
 

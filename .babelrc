@@ -29,7 +29,7 @@
       "module-resolver",
       {
         "alias": {
-          "reflex": "./dist/reflex"
+          "xn-reflex": "./dist/reflex"
         }
       }
     ]
@@ -41,7 +41,7 @@
           "module-resolver",
           {
             "alias": {
-              "reflex": "./src/reflex"
+              "xn-reflex": "./src/reflex"
             }
           }
         ]

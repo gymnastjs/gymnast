@@ -1,8 +1,14 @@
+import { size } from 'lodash'
+import defaults from '../defaults'
 import {
+  accumulateOver,
   combineSpacing,
   getCSS,
+  getValue,
+  getValues,
   parseSpacing,
   replaceSpacingAliases,
+  toCXS,
   validateSpacingProps,
 } from './index'
 import log from './log'
@@ -247,5 +253,103 @@ describe('replaceSpacingAliases', () => {
       1,
       2,
     ])
+  })
+})
+
+describe('toCXS', () => {
+  it('should return an object with the same keys', () => {
+    const out = toCXS({
+      a: { background: 'red', color: 'blue' },
+      b: { fontSize: '3px' },
+    })
+
+    expect(out).toEqual(
+      jasmine.objectContaining({
+        a: jasmine.any(String),
+        b: jasmine.any(String),
+      })
+    )
+
+    expect(size(out)).toBe(2)
+  })
+})
+
+describe('getValue', () => {
+  it('should read the value specified by context', () => {
+    const out = getValue({ xnReflex: { columns: 14 } }, 'columns')
+
+    expect(out).toBe(14)
+  })
+
+  it('should prefer the override value when provided', () => {
+    const out = getValue({ xnReflex: { columns: 14 } }, 'columns', 20)
+
+    expect(out).toBe(20)
+  })
+
+  it('should use the default value when context or overrides are not set', () => {
+    const out = getValue({}, 'columns')
+
+    expect(out).toBe(defaults.columns)
+  })
+})
+
+describe('getValues', () => {
+  it('should return an object', () => {
+    const out = getValues({ xnReflex: {} })
+
+    expect(out).toEqual(jasmine.any(Object))
+  })
+
+  it('should merge context, overrides and defaults', () => {
+    const out = getValues({ xnReflex: { A: 2 } })
+
+    expect(out.A).toBe(2)
+    expect(size(out)).toBeGreaterThan(1)
+  })
+
+  it('should favor overrides when all are specified', () => {
+    const out = getValues({ xnReflex: { columns: 2 } }, { columns: 4 })
+
+    expect(out.columns).toBe(4)
+  })
+
+  it('should favor context when only context and defaults are set', () => {
+    const out = getValues({ xnReflex: { columns: 2 } })
+
+    expect(out.columns).toBe(2)
+  })
+
+  it('should fall back to defaults when no properties are set', () => {
+    const out = getValues()
+
+    expect(out).toEqual(defaults)
+  })
+})
+
+describe('accumulateOver', () => {
+  it('should return a function', () => {
+    const out = accumulateOver([])
+
+    expect(out).toEqual(jasmine.any(Function))
+  })
+
+  it('should accumulate values to the first parameter', () => {
+    const out = accumulateOver(['test', 'foo'])
+    const acc = { test: {}, foo: {} }
+
+    out(acc, { test: { a: 2 }, foo: { b: 3 } })
+    out(acc, { test: { c: 2 }, foo: { d: 3 } })
+
+    expect(acc).toEqual({
+      test: {
+        a: 2,
+        c: 2,
+      },
+      foo: {
+        b: 3,
+        d: 3,
+      },
+    })
   })
 })

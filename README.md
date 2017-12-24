@@ -1,6 +1,6 @@
 # ☁️ [Reflex](https://obartra.github.io/reflex) &middot; [![CircleCI](https://circleci.com/gh/obartra/reflex/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/reflex/tree/master) [![Test Coverage](https://codeclimate.com/github/obartra/reflex/badges/coverage.svg)](https://codeclimate.com/github/obartra/reflex/coverage) [![npm](https://img.shields.io/npm/v/xn-reflex.svg)](https://www.npmjs.com/package/xn-reflex) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shield)](http://makeapullrequest.com)
 
-Reflex is a React and flexbox-based layout solution. With Reflex, you can eliminate your layout css or reduce it to just a few lines.
+Reflex is a configurable grid and layout engine for React. With Reflex, you can eliminate your layout css or reduce it to just a few lines.
 
 [Learn how to use Reflex in your own project](https://github.com/obartra/reflex/wiki/Getting-Started).
 

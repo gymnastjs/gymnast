@@ -1,4 +1,6 @@
 // @flow
+import { get } from 'lodash'
+import cxs from '../cxs'
 import defaults from '../defaults'
 import type {
   Noop,
@@ -10,10 +12,13 @@ import log from './log'
 import errors from '../errors'
 
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
+const isDefined = val => typeof val !== 'undefined'
 // regex case examples: https://regex101.com/r/bs73rZ/1
 
 export const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 export const noop: Noop = () => null
+export const times = (n: number) =>
+  new Array(n).fill(undefined).map((val, index) => index)
 
 export function validateSpacingProps(props: SpacingProps) {
   if (process.env.NODE_ENV === 'production') {
@@ -198,4 +203,37 @@ export function combineSpacing({
     (acc, prop) => ({ ...acc, ...getCSS(prop, flatProps[prop], base) }),
     {}
   )
+}
+
+export function toCXS<A>(raw: {
+  +[A: string]: string | number | {},
+}): { +[A]: string } {
+  const styles = {}
+
+  Object.keys(raw).forEach(style => {
+    styles[style] = cxs(raw[style])
+  })
+
+  return styles
+}
+
+export function getValue<A: *>(context: *, property: string, override?: A): A {
+  const contextValue = get(context, `xnReflex["${property}"]`)
+
+  return ([override, contextValue, defaults[property]].find(isDefined): any)
+}
+
+export function getValues(context: *, overrides?: * = {}) {
+  const contextValues = get(context, 'xnReflex', {})
+
+  return { ...defaults, ...contextValues, ...overrides }
+}
+
+export function accumulateOver(props: Array<string>) {
+  return (acc: *, current: *) => {
+    props.forEach(prop => {
+      acc[prop] = Object.assign(acc[prop], current[prop])
+    })
+    return acc
+  }
 }

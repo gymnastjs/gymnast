@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { Root } from 'reflex'
+import { Root } from 'xn-reflex'
 import { Grid, Layout } from '../../shared'
 import styles from '../../shared/layout.css'
 

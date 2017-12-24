@@ -2,19 +2,17 @@
 import './cxs'
 import * as _utils from './utils'
 
-// Core
+// Components
+export { default as Col } from './col'
 export { default as ConfigProvider } from './configProvider'
 export { default as Grid } from './grid'
 export { default as Layout } from './layout'
-
-// Derived
-export { default as Col } from './derived/col'
-export { default as Root } from './derived/root'
-export { default as Offset } from './derived/offset'
+export { default as Offset } from './offset'
+export { default as Root } from './root'
 
 // HOC
-export { default as asGrid } from './grid/asGrid'
-export { default as asLayout } from './layout/asLayout'
+export { default as asGrid } from './asGrid'
+export { default as asLayout } from './asLayout'
 export { default as withResolution } from './withResolution'
 
 // Utils / Dev
@@ -34,6 +32,7 @@ export type {
   LayoutProps,
   Overflow,
   Size,
+  Spacing,
   SpacingProps,
   SpacingValues,
 } from './types'

@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
-import { get } from 'lodash'
 import type { DisplayValues } from '../types'
 import log from '../utils/log'
+import { getValue } from '../utils'
 import errors from '../errors'
 import { ConfigContextPropTypes } from '../configProvider'
 import { register, unregister, supportsMatchMedia } from './mediaQuery'
@@ -28,7 +28,7 @@ export default function withResolution(
     return Component
   }
 
-  class WithResolution extends React.Component<
+  return class WithResolution extends React.Component<
     Props & React.ElementProps<typeof Component>,
     State
   > {
@@ -67,7 +67,7 @@ export default function withResolution(
     }
 
     getQueries = (show?: DisplayValues) => {
-      const { displayAliases } = get(this.context, 'xnReflex', {})
+      const displayAliases = getValue(this.context, 'displayAliases')
 
       return getMediaQueries(show, displayAliases)
     }
@@ -102,8 +102,4 @@ export default function withResolution(
       return <Component {...props} />
     }
   }
-
-  WithResolution.contextTypes = ConfigContextPropTypes
-
-  return WithResolution
 }

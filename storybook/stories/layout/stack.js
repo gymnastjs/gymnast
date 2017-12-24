@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'reflex'
+import { Root } from 'xn-reflex'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
 import { Grid, Layout } from '../../shared'
