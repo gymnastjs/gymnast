@@ -1,6 +1,12 @@
 import initStoryshots from '@storybook/addon-storyshots'
 import './env'
 
+jest.mock('react-dom', () => ({
+  render: () => null,
+  unmountComponentAtNode: () => null,
+  findDOMNode: () => null,
+}))
+
 jest.mock('../src/cxs', () => i => {
   function sortObject(object) {
     const sorted = {}
