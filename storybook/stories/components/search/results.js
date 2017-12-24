@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
-import { type Size } from 'gymnast'
+import { type Size, Grid, Col } from 'gymnast'
 import { times } from 'lodash'
-import { Grid, Col } from '../../../shared'
+import { colors } from '../../../shared'
 import styles from '../../../shared/stories.css'
 
 export default function SearchResults({
@@ -15,20 +15,20 @@ export default function SearchResults({
   size?: Size,
 } = {}) {
   return (
-    <Grid size={size} dev={5} align="top">
+    <Grid size={size} style={colors.colors5} align="top">
       <Grid>
         <Col size={4}>
           <input placeholder="Sort by..." />
         </Col>
         <Col size={5} />
         <Col size={3} align="center" justify="right">
-          <Grid dev={4} size={2}>
+          <Grid style={colors.colors4} size={2}>
             <Grid justify="center">&lt;</Grid>
           </Grid>
           <Grid size={7}>
             <Grid justify="center">Page 1 of 12</Grid>
           </Grid>
-          <Grid dev={4} size={2}>
+          <Grid style={colors.colors4} size={2}>
             <Grid justify="center">&gt;</Grid>
           </Grid>
         </Col>
@@ -39,10 +39,10 @@ export default function SearchResults({
            * Explicitly setting height to work around cross browser font height differences
            */}
           <Col size={5}>
-            <Grid marginBottom="L/2" dev={1}>
+            <Grid marginBottom="L/2" style={colors.colors1}>
               Orci tempus venenatis
             </Grid>
-            <Grid marginBottom="L/2" dev={1}>
+            <Grid marginBottom="L/2" style={colors.colors1}>
               1/6/2017 at 14:50 - 1700 Minor Ave
             </Grid>
             <Grid>
@@ -52,10 +52,10 @@ export default function SearchResults({
             </Grid>
           </Col>
           <Col size={4} align="top">
-            <Grid marginBottom="L/2" dev={4}>
+            <Grid marginBottom="L/2" style={colors.colors4}>
               status text ipsum
             </Grid>
-            <Grid dev={2}>status sub lorem</Grid>
+            <Grid style={colors.colors2}>status sub lorem</Grid>
           </Col>
           <Col size="auto">
             <Grid justify="center" align="center" className={styles.image}>

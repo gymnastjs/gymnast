@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'gymnast'
-import { Box, Grid, Layout } from '../../shared'
+import { Root, Grid, Layout } from 'gymnast'
+import { Box, colors } from '../../shared'
 import styles from './layout.css'
 
 const SIZE = {
@@ -13,14 +13,14 @@ const SIZE = {
 export default () => (
   <Layout height="parent" className={`${styles.page} ${styles.hasSubheader}`}>
     <Layout fixed="top">
-      <Layout dev={1}>
+      <Layout style={colors.colors1}>
         <Root>
           <Grid padding="L/2">
             <h1>Header</h1>
           </Grid>
         </Root>
       </Layout>
-      <Layout className={styles.subheader} marginTop="L" dev={2}>
+      <Layout className={styles.subheader} marginTop="L" style={colors.colors2}>
         <Root>
           <Box size={2} type="D" />
           <Box size={2} type="D" />
@@ -49,7 +49,7 @@ export default () => (
           </Grid>
         </Root>
       </Layout>
-      <Layout dev={1}>
+      <Layout style={colors.colors1}>
         <Root>
           <Grid padding="L/2">
             <h1>Footer</h1>

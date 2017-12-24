@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'gymnast'
-import { Layout, getMarginSelect, Grid } from '../../shared'
+import { Root, Layout, Grid } from 'gymnast'
+import { getMarginSelect, colors } from '../../shared'
 
 export default () => {
   const layoutMargin = getMarginSelect('Layout Margin', 'None')
@@ -9,8 +9,8 @@ export default () => {
 
   return (
     <Root>
-      <Layout margin={layoutMargin} dev={2}>
-        <Grid margin={gridMargin} dev={3}>
+      <Layout margin={layoutMargin} style={colors.colors2}>
+        <Grid margin={gridMargin} style={colors.colors3}>
           TEST
         </Grid>
       </Layout>

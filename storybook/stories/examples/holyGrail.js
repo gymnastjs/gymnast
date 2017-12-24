@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Root } from 'gymnast'
-import { loremIpsum, Grid, Layout } from '../../shared'
+import { Root, Grid, Layout } from 'gymnast'
+import { loremIpsum, colors } from '../../shared'
 import styles from './layout.css'
 
 export default () => {
@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <Layout height="parent" className={styles.page}>
-      <Layout dev={1} fixed="top">
+      <Layout style={colors.colors1} fixed="top">
         <Root>
           <Grid padding="L/2">
             <h1>Header</h1>
@@ -20,7 +20,7 @@ export default () => {
       <Layout height="auto" className={styles.main}>
         <Root>
           <Grid margin="0 L/2">
-            <Grid size={2} dev={4} paddingTop="L" margin="0 L">
+            <Grid size={2} style={colors.colors4} paddingTop="L" margin="0 L">
               <Grid>
                 <h2>Nav</h2>
               </Grid>
@@ -37,7 +37,7 @@ export default () => {
               </Grid>
               <Grid>{includeText && <p>{loremIpsum}</p>}</Grid>
             </Grid>
-            <Grid size={2} dev={3} paddingTop="L" margin="0 L">
+            <Grid size={2} style={colors.colors3} paddingTop="L" margin="0 L">
               <Grid>
                 <h2>Ads</h2>
               </Grid>
@@ -45,7 +45,7 @@ export default () => {
           </Grid>
         </Root>
       </Layout>
-      <Layout dev={1}>
+      <Layout style={colors.colors1}>
         <Root>
           <Grid padding="L/2">
             <h1>Footer</h1>

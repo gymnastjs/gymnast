@@ -1,11 +1,11 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'gymnast'
-import { Grid, Col, Layout } from '../../../shared'
+import { Root, Grid, Col, Layout } from 'gymnast'
+import { colors } from '../../../shared'
 
 export default function SearchNav() {
   return (
-    <Layout dev={4} margin="L 0 0 0">
+    <Layout style={colors.colors4} margin="L 0 0 0">
       <Root>
         <Grid>
           <Col size={7}>
@@ -17,8 +17,7 @@ export default function SearchNav() {
                 marginLeft={0}
                 marginBottom={0}
                 size="auto"
-                style={{ whiteSpace: 'nowrap' }}
-                dev={1}
+                style={{ whiteSpace: 'nowrap', ...colors.colors1 }}
               >
                 Lorem
               </Col>
@@ -26,31 +25,28 @@ export default function SearchNav() {
                 size="auto"
                 marginLeft={0}
                 marginBottom={0}
-                dev={2}
-                style={{ whiteSpace: 'nowrap' }}
+                style={{ whiteSpace: 'nowrap', ...colors.colors2 }}
               >
                 ipsum
               </Col>
               <Col
-                style={{ whiteSpace: 'nowrap' }}
+                style={{ whiteSpace: 'nowrap', ...colors.colors1 }}
                 size="auto"
                 marginBottom={0}
                 marginLeft={0}
-                dev={1}
               >
                 dolor
               </Col>
               <Col
                 size="auto"
-                style={{ whiteSpace: 'nowrap' }}
+                style={{ whiteSpace: 'nowrap', ...colors.colors2 }}
                 marginBottom={0}
                 marginLeft={0}
-                dev={2}
               >
                 sit amet
               </Col>
             </Grid>
-            <Grid size="auto" justify="right" dev={1}>
+            <Grid size="auto" justify="right" style={colors.colors1}>
               <Grid size="fit">First View &nbsp;| </Grid>
               <Grid size="fit">&nbsp; Second View</Grid>
             </Grid>

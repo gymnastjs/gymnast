@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
-import { Grid } from '../../shared'
+import { Grid } from 'gymnast'
+import { colors } from '../../shared'
 
 class Button extends React.Component<*, { counter: number }> {
   state = { counter: 0 }
@@ -18,22 +19,22 @@ class Button extends React.Component<*, { counter: number }> {
 
 export default () => (
   <Grid>
-    <Grid dev={1} padding="XL" margin={['L', 0]} show="small">
+    <Grid style={colors.colors1} padding="XL" margin={['L', 0]} show="small">
       <Grid size="auto">Only visible on small screens (&lt; 600px)</Grid>
       <Button />
     </Grid>
-    <Grid dev={2} padding="XL" margin={['L', 0]} show="medium">
+    <Grid style={colors.colors2} padding="XL" margin={['L', 0]} show="medium">
       <Grid size="auto">
         Only visible on medium screens (&gt; 600px &amp;&amp; &lt; 900px)
       </Grid>
       <Button />
     </Grid>
-    <Grid dev={3} padding="XL" margin={['L', 0]} show="large">
+    <Grid style={colors.colors3} padding="XL" margin={['L', 0]} show="large">
       <Grid size="auto">Only visible on large screens (&gt; 900px)</Grid>
       <Button />
     </Grid>
     <Grid
-      dev={4}
+      style={colors.colors4}
       padding="XL"
       margin={['L', 0]}
       show={['small', 'medium']}
@@ -43,7 +44,7 @@ export default () => (
       <Button />
     </Grid>
     <Grid
-      dev={2}
+      style={colors.colors2}
       padding="XL"
       margin={['L', 0]}
       show={['small', 'large']}
@@ -55,7 +56,7 @@ export default () => (
       <Button />
     </Grid>
     <Grid
-      dev={1}
+      style={colors.colors1}
       padding="XL"
       margin={['L', 0]}
       show={['medium', 'large']}
@@ -65,7 +66,7 @@ export default () => (
       <Button />
     </Grid>
     <Grid
-      dev={3}
+      style={colors.colors3}
       padding="XL"
       margin={['L', 0]}
       size={{ small: 12, medium: 9, large: 6 }}
