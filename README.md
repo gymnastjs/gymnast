@@ -6,7 +6,7 @@ Reflex is a configurable grid and layout engine for React. With Reflex, you can 
 
 or
 
-[Play with a demo](https://codesandbox.io/s/1zxk60lxx4)
+[Play with a demo](https://codesandbox.io/s/github/obartra/reflex-playground)
 
 ## 📺 Examples
 
