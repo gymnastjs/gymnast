@@ -21,7 +21,7 @@ describe('Dev', () => {
   it('should append a container to attach the overlay', () => {
     wrapper = mount(<Dev />)
 
-    expect(document.querySelector('#xn-reflex-dev-overlay')).toBeTruthy()
+    expect(document.querySelector('#gymnast-dev-overlay')).toBeTruthy()
   })
 
   it('should call toggleOverlay when pressing ctrl+shift+k', () => {

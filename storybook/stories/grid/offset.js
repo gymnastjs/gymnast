@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { Offset } from 'xn-reflex'
+import { Offset } from 'gymnast'
 import { Grid, RootLayout, Box } from '../../shared'
 
 export default () => {

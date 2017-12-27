@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'xn-reflex'
+import { Root } from 'gymnast'
 import { Box, Grid, Layout } from '../../shared'
 import styles from './layout.css'
 

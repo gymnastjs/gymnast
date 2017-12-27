@@ -1,4 +1,4 @@
-const projectName = 'Reflex'
+const projectName = 'gymnast'
 const isCIMaster = process.env.CI && process.env.CIRCLE_BRANCH === 'master'
 const suffix = isCIMaster ? '_MASTER' : ''
 
@@ -8,9 +8,9 @@ module.exports = {
   postcssConfig: 'scripts/postcss.config',
   babelConfig: '.babelrc',
   projectName,
-  projectUrl: 'https://github.com/obartra/reflex',
+  projectUrl: 'https://github.com/gymnastjs/gymnast',
   storiesUrl:
-    'https://github.com/obartra/reflex/tree/master/storybook/stories/',
+    'https://github.com/gymnastjs/gymnast/tree/master/storybook/stories/',
   storyPath: 'storybook/stories',
   wrapStory: 'storybook/shared/wrapStory.js',
   image: {

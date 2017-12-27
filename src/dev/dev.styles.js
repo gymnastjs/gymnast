@@ -10,7 +10,7 @@ const margin = {
   bottom: 0,
   backgroundColor: gold15,
 }
-const reflexOverlay = {
+const gymnastOverlay = {
   position: 'fixed',
   top: 0,
   left: 0,
@@ -70,7 +70,7 @@ export default function getStyles({
 
   return toCXS({
     ...css,
-    reflexOverlay,
+    gymnastOverlay,
     col,
   })
 }

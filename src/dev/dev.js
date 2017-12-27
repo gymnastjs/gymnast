@@ -70,7 +70,7 @@ export default class Dev extends React.Component<Props, State> {
     const values = getValues(this.context)
     const styles = getStyles(values)
     const content = (
-      <Layout className={styles.reflexOverlay}>
+      <Layout className={styles.gymnastOverlay}>
         <div className={styles.leftMargin} />
         <Root>
           {times(values.columns).map(key => (

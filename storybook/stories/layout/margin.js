@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'xn-reflex'
+import { Root } from 'gymnast'
 import { Layout, getMarginSelect, Grid } from '../../shared'
 
 export default () => {
