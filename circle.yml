@@ -1,6 +1,6 @@
 machine:
   environment:
-    TARGET_URL: "https://obartra.github.io/reflex/branch/$CIRCLE_BRANCH"
+    TARGET_URL: "https://gymnastjs.github.io/gymnast/branch/$CIRCLE_BRANCH"
   node:
     version: 9.3.0
 general:

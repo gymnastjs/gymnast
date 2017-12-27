@@ -29,7 +29,7 @@
       "module-resolver",
       {
         "alias": {
-          "xn-reflex": "./dist/reflex"
+          "gymnast": "./dist/gymnast"
         }
       }
     ]
@@ -41,7 +41,7 @@
           "module-resolver",
           {
             "alias": {
-              "xn-reflex": "./src/reflex"
+              "gymnast": "./src/gymnast"
             }
           }
         ]

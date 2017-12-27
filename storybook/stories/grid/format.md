@@ -6,4 +6,4 @@ The margin / padding format example shows the different values that can be used 
 - **Number**: which applies that spacing equally to all sides. `margin={number}` is equivalent to `margin={[number]}`.
 - **String**: parsed as either a comma-separated or space-separated list.
 
-You can read more about spacing values on the [wiki](https://github.com/obartra/reflex/wiki/Spacing).
+You can read more about spacing values on the [wiki](https://github.com/gymnastjs/gymnast/wiki/Spacing).

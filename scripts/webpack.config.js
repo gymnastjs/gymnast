@@ -10,11 +10,11 @@ const isProd = process.env.NODE_ENV === 'production'
 const root = resolve(__dirname, '../dist')
 
 module.exports = {
-  entry: resolve(__dirname, '../src/reflex.js'),
+  entry: resolve(__dirname, '../src/gymnast.js'),
   output: {
     path: root,
-    filename: isProd ? 'reflex.min.js' : 'reflex.js',
-    library: 'reflex',
+    filename: isProd ? 'gymnast.min.js' : 'gymnast.js',
+    library: 'gymnast',
     libraryTarget: 'umd',
   },
   target: 'web',

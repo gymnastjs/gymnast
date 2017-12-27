@@ -1,10 +1,10 @@
 {
-  "name": "xn-reflex",
+  "name": "gymnast",
   "version": "0.0.0-semantically-released",
   "description": "Configurable grid and layout engine for React",
   "main": "index.js",
-  "browser": "dist/reflex.min.js",
-  "homepage": "https://obartra.github.io/reflex",
+  "browser": "dist/gymnast.min.js",
+  "homepage": "https://gymnastjs.github.io/gymnast",
   "files": [
     "package.json",
     "README.md",
@@ -16,10 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/obartra/reflex"
+    "url": "https://github.com/gymnastjs/gymnast"
   },
   "bugs": {
-    "url": "https://github.com/obartra/reflex/issues"
+    "url": "https://github.com/gymnastjs/gymnast/issues"
   },
   "author": "Oscar Bartra",
   "license": "MIT",
@@ -113,7 +113,7 @@
   },
   "bundlesize": [
     {
-      "path": "./dist/reflex.min.js",
+      "path": "./dist/gymnast.min.js",
       "maxSize": "11.0 Kb"
     }
   ],
@@ -152,7 +152,7 @@
     "start:storybook": "picturebook -p 9001 -s ./static -c node_modules/picturebook/config",
     "start:webpack": "yarn build:dev -- --watch",
     "start": "npm-run-all --parallel start:*",
-    "test:bithound": "bithound check git@github.com:obartra/reflex.git",
+    "test:bithound": "bithound check git@github.com:gymnastjs/gymnast.git",
     "test:image": "picturebook-image --env iphone7,ie11,safari,firefox,edge,chrome --suiteRetries 3",
     "test:size": "bundlesize",
     "test": "jest",

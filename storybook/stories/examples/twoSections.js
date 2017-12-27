@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Root } from 'xn-reflex'
+import { Root } from 'gymnast'
 import { loremIpsum, Grid, Layout, Col } from '../../shared'
 import styles from './layout.css'
 
