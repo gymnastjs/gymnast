@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'xn-reflex'
+import { Root } from 'xflex'
 import { Grid, Col, Layout } from '../../../shared'
 
 export default function SearchNav() {

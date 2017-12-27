@@ -1,7 +1,7 @@
 // @flow
 import cxs from '../cxs'
 
-const layoutRefClassName = 'xnr_layout'
+const layoutRefClassName = 'xf_layout'
 const fixed = {
   position: 'fixed',
   left: '50%',

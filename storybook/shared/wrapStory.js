@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Dev } from 'xn-reflex'
+import { Dev } from 'xflex'
 
 export default function WrappedStory(story: React.Node) {
   return (

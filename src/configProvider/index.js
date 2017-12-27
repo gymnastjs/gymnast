@@ -24,7 +24,7 @@ type Props = {
 }
 
 export const ConfigContextPropTypes = {
-  xnReflex: PropTypes.shape({
+  xflex: PropTypes.shape({
     base: PropTypes.number,
     columns: PropTypes.number,
     displayAliases: PropTypes.shape({}),
@@ -50,7 +50,7 @@ export default class ConfigProvider extends React.Component<Props> {
     } = this.props
 
     return {
-      xnReflex: {
+      xflex: {
         gutter,
         verticalGutter,
         ...props,

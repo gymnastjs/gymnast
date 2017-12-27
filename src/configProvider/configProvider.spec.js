@@ -25,11 +25,11 @@ describe('ConfigProvider', () => {
     grid.unmount()
   })
 
-  it('should define xnReflex context', () => {
+  it('should define xflex context', () => {
     wrapper = mount(<ConfigProvider />)
 
     expect(wrapper.context()).toEqual({
-      xnReflex: undefined,
+      xflex: undefined,
     })
   })
 

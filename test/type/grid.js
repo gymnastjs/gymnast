@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-unused-expressions */
 import * as React from 'react'
-import { Col, Grid, asGrid, Root } from 'xn-reflex'
+import { Col, Grid, asGrid, Root } from 'xflex'
 
 const components = [asGrid('span'), asGrid(() => <div />), Col, Grid, Root]
 

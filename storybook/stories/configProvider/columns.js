@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { ConfigProvider } from 'xn-reflex'
+import { ConfigProvider } from 'xflex'
 import { Grid } from '../../shared'
 
 export default function() {

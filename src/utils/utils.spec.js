@@ -276,13 +276,13 @@ describe('toCXS', () => {
 
 describe('getValue', () => {
   it('should read the value specified by context', () => {
-    const out = getValue({ xnReflex: { columns: 14 } }, 'columns')
+    const out = getValue({ xflex: { columns: 14 } }, 'columns')
 
     expect(out).toBe(14)
   })
 
   it('should prefer the override value when provided', () => {
-    const out = getValue({ xnReflex: { columns: 14 } }, 'columns', 20)
+    const out = getValue({ xflex: { columns: 14 } }, 'columns', 20)
 
     expect(out).toBe(20)
   })
@@ -296,26 +296,26 @@ describe('getValue', () => {
 
 describe('getValues', () => {
   it('should return an object', () => {
-    const out = getValues({ xnReflex: {} })
+    const out = getValues({ xflex: {} })
 
     expect(out).toEqual(jasmine.any(Object))
   })
 
   it('should merge context, overrides and defaults', () => {
-    const out = getValues({ xnReflex: { A: 2 } })
+    const out = getValues({ xflex: { A: 2 } })
 
     expect(out.A).toBe(2)
     expect(size(out)).toBeGreaterThan(1)
   })
 
   it('should favor overrides when all are specified', () => {
-    const out = getValues({ xnReflex: { columns: 2 } }, { columns: 4 })
+    const out = getValues({ xflex: { columns: 2 } }, { columns: 4 })
 
     expect(out.columns).toBe(4)
   })
 
   it('should favor context when only context and defaults are set', () => {
-    const out = getValues({ xnReflex: { columns: 2 } })
+    const out = getValues({ xflex: { columns: 2 } })
 
     expect(out.columns).toBe(2)
   })
