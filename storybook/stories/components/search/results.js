@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { type Size } from 'xn-reflex'
+import { type Size } from 'xflex'
 import { times } from 'lodash'
 import { Grid, Col } from '../../../shared'
 import styles from '../../../shared/stories.css'

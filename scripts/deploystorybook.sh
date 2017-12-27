@@ -40,7 +40,7 @@ fi
 TARGET_URL=$(./scripts/getTargetUrl.sh)
 
 # Set git user
-git config user.email "$USER@reflex.ci" && git config user.name "Reflex CI ($BRANCH)"
+git config user.email "$USER@xflex.ci" && git config user.name "xflex CI ($BRANCH)"
 
 # Build StoryBook in the `../temp` folder
 yarn

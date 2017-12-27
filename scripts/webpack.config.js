@@ -10,11 +10,11 @@ const isProd = process.env.NODE_ENV === 'production'
 const root = resolve(__dirname, '../dist')
 
 module.exports = {
-  entry: resolve(__dirname, '../src/reflex.js'),
+  entry: resolve(__dirname, '../src/xflex.js'),
   output: {
     path: root,
-    filename: isProd ? 'reflex.min.js' : 'reflex.js',
-    library: 'reflex',
+    filename: isProd ? 'xflex.min.js' : 'xflex.js',
+    library: 'xflex',
     libraryTarget: 'umd',
   },
   target: 'web',

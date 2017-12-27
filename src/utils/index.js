@@ -218,13 +218,13 @@ export function toCXS<A>(raw: {
 }
 
 export function getValue<A: *>(context: *, property: string, override?: A): A {
-  const contextValue = get(context, `xnReflex["${property}"]`)
+  const contextValue = get(context, `xflex["${property}"]`)
 
   return ([override, contextValue, defaults[property]].find(isDefined): any)
 }
 
 export function getValues(context: *, overrides?: * = {}) {
-  const contextValues = get(context, 'xnReflex', {})
+  const contextValues = get(context, 'xflex', {})
 
   return { ...defaults, ...contextValues, ...overrides }
 }

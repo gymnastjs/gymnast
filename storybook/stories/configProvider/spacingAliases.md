@@ -36,4 +36,4 @@ Changing base to `24` changes the spacing values:
 
 Use the knobs to try different `base` values.
 
-There are other parameters that can be customized through `ConfigProvider`. For more information check the [wiki page](https://github.com/obartra/reflex/wiki/ConfigProvider).
+There are other parameters that can be customized through `ConfigProvider`. For more information check the [wiki page](https://github.com/xflex/xflex/wiki/ConfigProvider).
