@@ -17,7 +17,6 @@ export { default as withResolution } from './withResolution'
 
 // Utils / Dev
 export const utils = _utils
-export { version } from '../version'
 export { default as Dev } from './dev'
 export { default as log } from './utils/log'
 
