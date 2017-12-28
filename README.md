@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  configurable grid and layout engine for React.
+  <b>gymnast</b> is a configurable grid and layout engine for React
 </p>
 
 <p align="center">
