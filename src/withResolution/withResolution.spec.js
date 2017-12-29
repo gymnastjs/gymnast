@@ -24,7 +24,7 @@ describe('withResolution', () => {
   })
 
   it('should render when `shouldShow` is not set', done => {
-    const FruitWithResolution = withResolution(Fruit)
+    const FruitWithResolution = withResolution(Fruit, [])
     const fruitWithResolution = mount(<FruitWithResolution />)
 
     fruitWithResolution.setState({ shouldShow: undefined }, () => {
@@ -33,9 +33,9 @@ describe('withResolution', () => {
     })
   })
 
-  it('should render the input when `shouldShow` is true', done => {
-    const FruitWithResolution = withResolution(Fruit)
-    const fruitWithResolution = mount(<FruitWithResolution />)
+  it('should render the input when `shouldShow` is true and `show` is set', done => {
+    const FruitWithResolution = withResolution(Fruit, [])
+    const fruitWithResolution = mount(<FruitWithResolution show="large" />)
 
     fruitWithResolution.setState({ shouldShow: { short: true } }, () => {
       expect(fruitWithResolution.find(Fruit).length).toBe(1)
@@ -43,12 +43,23 @@ describe('withResolution', () => {
     })
   })
 
-  it('should NOT render the input when `shouldShow` is false', done => {
-    const FruitWithResolution = withResolution(Fruit)
-    const fruitWithResolution = mount(<FruitWithResolution />)
+  it('should NOT render the input when `shouldShow` is false and show is set', done => {
+    const FruitWithResolution = withResolution(Fruit, [])
+    const fruitWithResolution = mount(<FruitWithResolution show="small" />)
 
     fruitWithResolution.setState({ shouldShow: { short: false } }, () => {
       expect(fruitWithResolution.find(Fruit).length).toBe(0)
+      done()
+    })
+  })
+
+  it('should always render the input when `show` is not set', done => {
+    const FruitWithResolution = withResolution(Fruit, [])
+    const fruitWithResolution = mount(<FruitWithResolution />)
+
+    expect(fruitWithResolution.find(Fruit).length).toBe(1)
+    fruitWithResolution.setState({ shouldShow: { short: false } }, () => {
+      expect(fruitWithResolution.find(Fruit).length).toBe(1)
       done()
     })
   })

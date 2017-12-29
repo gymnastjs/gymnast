@@ -10,6 +10,7 @@ import {
   getMediaQueries,
   getSingleResolutionProps,
   hasTrueValues,
+  isObject,
   type ShouldShow,
 } from './withResolution.logic'
 
@@ -20,7 +21,7 @@ type State = {
 
 export default function withResolution(
   Component: React.ComponentType<*>,
-  resolutionKeys?: Array<string>,
+  resolutionKeys: Array<string>,
   coercedSupport?: boolean = supportsMatchMedia
 ) {
   if (!coercedSupport) {
@@ -68,9 +69,17 @@ export default function withResolution(
 
     getQueries = (show?: DisplayValues) => {
       const displayAliases = getValue(this.context, 'displayAliases')
+      let queries = show
 
-      return getMediaQueries(show, displayAliases)
+      if (!show && this.anyPropsUseResolutionFormat()) {
+        queries = Object.keys(displayAliases)
+      }
+
+      return getMediaQueries(queries, displayAliases)
     }
+
+    anyPropsUseResolutionFormat = () =>
+      resolutionKeys.some(key => isObject(this.props[key]))
 
     removeMediaQueryListener = (show?: DisplayValues) => {
       const queries = this.getQueries(show)
@@ -89,7 +98,11 @@ export default function withResolution(
     }
 
     render() {
-      if (this.state.shouldShow && !hasTrueValues(this.state.shouldShow)) {
+      if (
+        this.props.show &&
+        this.state.shouldShow &&
+        !hasTrueValues(this.state.shouldShow)
+      ) {
         return null
       }
 

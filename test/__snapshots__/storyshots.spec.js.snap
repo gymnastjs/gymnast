@@ -28917,7 +28917,58 @@ exports[`Storyshots Grid Resolution 1`] = `
 }})
   "
       style={Object {}}
-    />
+    >
+      <div
+        className="
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  width: 100%
+}})
+   
+  cxs({
+  flexGrow: 1
+}})
+  "
+        style={
+          Object {
+            "backgroundColor": "#ffd700",
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 0,
+            "borderRightWidth": 0,
+            "borderTopWidth": 24,
+            "color": "#1d1f21",
+            "paddingBottom": 32,
+            "paddingLeft": 32,
+            "paddingRight": 32,
+            "paddingTop": 32,
+          }
+        }
+      >
+        <div
+          className="
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  width: 100%
+}})
+   
+  cxs({
+  flexBasis: 0%;
+  flexGrow: 1;
+  flexShrink: 1
+}})
+  "
+          style={Object {}}
+        >
+          Always visible, but changes in size
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
