@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'gymnast'
-import { loremIpsum, Grid, Layout, Col } from '../../shared'
+import { Root, Grid, Layout, Col } from 'gymnast'
+import { loremIpsum, colors } from '../../shared'
 import styles from './report.css'
 import { page } from './layout.css'
 
@@ -16,7 +16,12 @@ function P(props) {
 function Li({ index }: { index: number }) {
   return (
     <li>
-      <Grid size="fit" dev={index % 2 ? 5 : 1} padding="L/2 0" justify="center">
+      <Grid
+        size="fit"
+        style={colors[`colors${index % 2 ? 5 : 1}`]}
+        padding="L/2 0"
+        justify="center"
+      >
         Item {index}
       </Grid>
     </li>
@@ -32,7 +37,7 @@ function Card({
 }): React.Element<any> {
   return (
     <Col style={{ minHeight: height }}>
-      <Grid padding="L" dev={5}>
+      <Grid padding="L" style={colors.colors5}>
         {children}
       </Grid>
     </Col>
@@ -43,42 +48,42 @@ export default function() {
   return (
     <Layout height="parent" className={page}>
       <Layout fixed="top">
-        <Layout dev={1}>
+        <Layout style={colors.colors1}>
           <Root>
             <Grid margin="L/2">
               <h1>Header</h1>
             </Grid>
           </Root>
         </Layout>
-        <Layout dev={4}>
+        <Layout style={colors.colors4}>
           <Root>
             <Grid margin="L/2">
               <h2>Subheader</h2>
             </Grid>
             <Grid size={10} margin="0 L/2">
               <Grid marginRight="2XL" size="fit">
-                <Grid paddingTop="L" dev={3}>
+                <Grid paddingTop="L" style={colors.colors3}>
                   Lorem
                 </Grid>
               </Grid>
               <Grid marginRight="2XL" size="fit">
-                <Grid paddingTop="L" dev={3}>
+                <Grid paddingTop="L" style={colors.colors3}>
                   ipsum
                 </Grid>
               </Grid>
               <Grid marginRight="2XL" size="fit">
-                <Grid paddingTop="L" dev={3}>
+                <Grid paddingTop="L" style={colors.colors3}>
                   dolor
                 </Grid>
               </Grid>
               <Grid marginRight="2XL" size="fit">
-                <Grid paddingTop="L" dev={3}>
+                <Grid paddingTop="L" style={colors.colors3}>
                   sit amet, consectetur
                 </Grid>
               </Grid>
             </Grid>
             <Grid margin="0 L/2" size={2}>
-              <Grid paddingTop="L" dev={3}>
+              <Grid paddingTop="L" style={colors.colors3}>
                 sit amet
               </Grid>
             </Grid>
@@ -86,7 +91,7 @@ export default function() {
         </Layout>
       </Layout>
       <Layout height="parent" className={styles.reportMain}>
-        <Layout height="auto" dev={2}>
+        <Layout height="auto" style={colors.colors2}>
           <Root>
             <Grid>
               <Grid size={1} align="top" paddingTop="L" margin="0 L/2">
@@ -124,14 +129,19 @@ export default function() {
                 <P>{loremIpsum.substr(0, 250)}...</P>
               </Grid>
               <Grid size={4} className={styles.clippy} padding="0 L/2">
-                <Grid align="top" dev={1} paddingTop="L" margin="0 L">
+                <Grid
+                  align="top"
+                  style={colors.colors1}
+                  paddingTop="L"
+                  margin="0 L"
+                >
                   <Grid marginBottom="L">Side bar</Grid>
                 </Grid>
               </Grid>
             </Grid>
           </Root>
         </Layout>
-        <Layout dev={1}>
+        <Layout style={colors.colors1}>
           <Root>
             <Grid margin="L/2">
               <h1>Footer</h1>

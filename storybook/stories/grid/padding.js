@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
-import type { Size } from '../../../src/types'
-import { RootLayout, getMarginSelect, Grid, Col } from '../../shared'
+import { type Size, Root, Layout, Grid, Col } from 'gymnast'
+import { getMarginSelect, colors } from '../../shared'
 import { axonBlack, axonGold } from '../../../src/dev/colors'
 
 type HeadingProps = {
@@ -34,109 +34,108 @@ export default () => {
   )
 
   return (
-    <RootLayout>
-      <Col>
-        <Heading>Default (No Padding)</Heading>
-        <Grid size={6} dev={2}>
-          <Grid margin={margin} dev={3}>
-            {text}
+    <Layout height="parent">
+      <Root>
+        <Col>
+          <Heading>Default (No Padding)</Heading>
+          <Grid size={6} style={colors.colors2}>
+            <Grid margin={margin} style={colors.colors3}>
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-      </Col>
-      <Col>
-        <Heading size={6}>Top Right Padding</Heading>
-        <Heading size={6}>Item Top Right Padding</Heading>
-        <Grid size={6} dev={2} padding="L L 0 0">
-          <Grid margin={margin} dev={3}>
-            {text}
+        </Col>
+        <Col>
+          <Heading size={6}>Top Right Padding</Heading>
+          <Heading size={6}>Item Top Right Padding</Heading>
+          <Grid size={6} style={colors.colors2} padding="L L 0 0">
+            <Grid margin={margin} style={colors.colors3}>
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid size={6} dev={2}>
-          <Grid margin={margin} dev={3} padding="L L 0 0">
-            {text}
+          <Grid size={6} style={colors.colors2}>
+            <Grid margin={margin} style={colors.colors3} padding="L L 0 0">
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-      </Col>
-      <Col>
-        <Heading size={6}>All-sides Padding</Heading>
-        <Heading size={6}>Item All-sides Padding</Heading>
-        <Grid size={6} dev={2} padding="L L/2">
-          <Grid margin={margin} dev={3}>
-            {text}
+        </Col>
+        <Col>
+          <Heading size={6}>All-sides Padding</Heading>
+          <Heading size={6}>Item All-sides Padding</Heading>
+          <Grid size={6} style={colors.colors2} padding="L L/2">
+            <Grid margin={margin} style={colors.colors3}>
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid size={6} dev={2}>
-          <Grid margin={margin} dev={3} padding="L L/2">
-            {text}
+          <Grid size={6} style={colors.colors2}>
+            <Grid margin={margin} style={colors.colors3} padding="L L/2">
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-      </Col>
-      <Col>
-        <Heading size={6}>Bottom Padding</Heading>
-        <Heading size={6}>Item Bottom Padding</Heading>
-        <Grid size={6} dev={2} paddingBottom="L">
-          <Grid margin={margin} dev={3}>
-            {text}
+        </Col>
+        <Col>
+          <Heading size={6}>Bottom Padding</Heading>
+          <Heading size={6}>Item Bottom Padding</Heading>
+          <Grid size={6} style={colors.colors2} paddingBottom="L">
+            <Grid margin={margin} style={colors.colors3}>
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid size={6} dev={2}>
-          <Grid margin={margin} dev={3} paddingBottom="L">
-            {text}
+          <Grid size={6} style={colors.colors2}>
+            <Grid margin={margin} style={colors.colors3} paddingBottom="L">
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-      </Col>
-      <Col>
-        <Heading size={6}>Top-Right-Left Padding</Heading>
-        <Heading size={6}>Item Top-Right-Left Padding</Heading>
-        <Grid size={6} dev={2} padding="L L 0">
-          <Grid margin={margin} dev={3}>
-            {text}
+        </Col>
+        <Col>
+          <Heading size={6}>Top-Right-Left Padding</Heading>
+          <Heading size={6}>Item Top-Right-Left Padding</Heading>
+          <Grid size={6} style={colors.colors2} padding="L L 0">
+            <Grid margin={margin} style={colors.colors3}>
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid size={6} dev={2}>
-          <Grid margin={margin} dev={3} padding="L L 0">
-            {text}
+          <Grid size={6} style={colors.colors2}>
+            <Grid margin={margin} style={colors.colors3} padding="L L 0">
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-      </Col>
+        </Col>
 
-      <Col>
-        <Heading>With Justify / Alignment</Heading>
-        <Grid size={6} marginBottom="L">
-          <h2>Container Padding</h2>
-        </Grid>
-        <Grid size={6} marginBottom="L">
-          <h2>Item Padding</h2>
-        </Grid>
-        <Grid
-          size={6}
-          dev={2}
-          paddingTop="L"
-          justify="center"
-          align="center"
-          style={{ height: 300 }}
-        >
-          <Grid margin={margin} dev={3} style={{ maxWidth: 200 }}>
-            {text}
+        <Col>
+          <Heading>With Justify / Alignment</Heading>
+          <Grid size={6} marginBottom="L">
+            <h2>Container Padding</h2>
           </Grid>
-        </Grid>
-        <Grid
-          size={6}
-          dev={2}
-          justify="center"
-          align="center"
-          style={{ height: 300 }}
-        >
+          <Grid size={6} marginBottom="L">
+            <h2>Item Padding</h2>
+          </Grid>
           <Grid
-            margin={margin}
-            dev={3}
+            size={6}
             paddingTop="L"
-            style={{ maxWidth: 200 }}
+            justify="center"
+            align="center"
+            style={{ height: 300, ...colors.colors2 }}
           >
-            {text}
+            <Grid margin={margin} style={{ maxWidth: 200, ...colors.colors3 }}>
+              {text}
+            </Grid>
           </Grid>
-        </Grid>
-      </Col>
-    </RootLayout>
+          <Grid
+            size={6}
+            justify="center"
+            align="center"
+            style={{ height: 300, ...colors.colors2 }}
+          >
+            <Grid
+              margin={margin}
+              paddingTop="L"
+              style={{ maxWidth: 200, ...colors.colors3 }}
+            >
+              {text}
+            </Grid>
+          </Grid>
+        </Col>
+      </Root>
+    </Layout>
   )
 }

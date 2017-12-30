@@ -9069,6 +9069,102 @@ exports[`Storyshots Config Provider Columns 1`] = `
 </div>
 `;
 
+exports[`Storyshots Config Provider Fallback Display Key 1`] = `
+<div>
+  <div
+    className=""
+  >
+    <div
+      className="
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  width: 100%
+}})
+   
+  cxs({
+  flexGrow: 1
+}})
+  "
+      style={
+        Object {
+          "paddingBottom": 0,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 0,
+        }
+      }
+    >
+      <div
+        className="
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  width: 100%
+}})
+   
+  cxs({
+  flexBasis: 83.33333333333334%;
+  maxWidth: 83.33333333333334%
+}})
+  "
+        style={
+          Object {
+            "paddingBottom": 24,
+            "paddingLeft": 12,
+            "paddingRight": 12,
+            "paddingTop": 0,
+          }
+        }
+      >
+        <div
+          className="
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  width: 100%
+}})
+   
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  alignContent: center;
+  alignItems: center
+}})
+   
+  cxs({
+  justifyContent: center;
+  marginLeft: auto;
+  marginRight: auto
+}})
+  "
+          style={
+            Object {
+              "backgroundColor": "#1d1f21",
+              "color": "#ffd700",
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            }
+          }
+        >
+          Only size on large screens is specified, all others use the fallback size
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Config Provider Gutter 1`] = `
 <div>
   <div

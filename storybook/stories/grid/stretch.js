@@ -1,8 +1,9 @@
 // @flow
 import * as React from 'react'
 import { times } from 'lodash'
+import { Root, Layout, Grid } from 'gymnast'
 import { number, boolean } from '@storybook/addon-knobs'
-import { Box, Grid, RootLayout, getMarginSelect } from '../../shared'
+import { Box, getMarginSelect, colors } from '../../shared'
 
 export default () => {
   const items = number('Items', 5, { range: true, min: 0, max: 24 })
@@ -18,18 +19,20 @@ export default () => {
   const margin = getMarginSelect()
 
   return (
-    <RootLayout style={{ height }} align={alignContainer}>
-      <Grid align={align} dev={2}>
-        {times(items, index => (
-          <Box
-            size={2}
-            margin={margin}
-            key={index}
-            type="A"
-            value={`${index + 1}`}
-          />
-        ))}
-      </Grid>
-    </RootLayout>
+    <Layout height="parent">
+      <Root style={{ height }} align={alignContainer}>
+        <Grid align={align} style={colors.colors2}>
+          {times(items, index => (
+            <Box
+              size={2}
+              margin={margin}
+              key={index}
+              type="A"
+              value={`${index + 1}`}
+            />
+          ))}
+        </Grid>
+      </Root>
+    </Layout>
   )
 }

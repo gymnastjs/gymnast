@@ -106,11 +106,12 @@ export default function withResolution(
         return null
       }
 
-      const props = getSingleResolutionProps(
-        this.props,
-        this.state.shouldShow,
-        resolutionKeys
-      )
+      const props = getSingleResolutionProps({
+        props: this.props,
+        shouldShow: this.state.shouldShow,
+        resolutionKeys,
+        fallbackDisplayKey: getValue(this.context, 'fallbackDisplayKey'),
+      })
 
       return <Component {...props} />
     }
