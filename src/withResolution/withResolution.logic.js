@@ -3,6 +3,7 @@ import type { DisplayValues, DisplayAliases } from '../types'
 import { splitPattern } from '../utils'
 import log from '../utils/log'
 import errors from '../errors'
+import defaults from '../defaults'
 
 export type ShouldShow = { [string]: boolean }
 
@@ -14,10 +15,14 @@ function getActiveResolutionName(shouldShow: ShouldShow) {
   return Object.keys(shouldShow).find(isTrue(shouldShow))
 }
 
-function extractObjectValue(value: any, shouldShow?: ShouldShow = {}) {
+function extractObjectValue(
+  value: any,
+  shouldShow?: ShouldShow = {},
+  fallbackKey: string
+) {
   const active = getActiveResolutionName(shouldShow)
 
-  return active && active in value ? value[active] : value.default
+  return active && active in value ? value[active] : value[fallbackKey]
 }
 
 export function isObject(value: any) {
@@ -28,11 +33,17 @@ export function hasTrueValues(obj: {} = {}) {
   return Object.keys(obj).some(isTrue(obj))
 }
 
-export function getSingleResolutionProps(
-  props: { show?: DisplayValues },
-  shouldShow?: ShouldShow,
-  resolutionKeys: Array<string> = []
-) {
+export function getSingleResolutionProps({
+  props,
+  shouldShow,
+  resolutionKeys = [],
+  fallbackDisplayKey = defaults.fallbackDisplayKey,
+}: {|
+  +props: { show?: DisplayValues },
+  +shouldShow?: ShouldShow,
+  +resolutionKeys: Array<string>,
+  +fallbackDisplayKey: string,
+|}) {
   const { ...propsCopy } = props
 
   delete propsCopy.show
@@ -41,7 +52,7 @@ export function getSingleResolutionProps(
     const value = propsCopy[key]
 
     if (isObject(value) && resolutionKeys.includes(key)) {
-      propsCopy[key] = extractObjectValue(value, shouldShow)
+      propsCopy[key] = extractObjectValue(value, shouldShow, fallbackDisplayKey)
     }
   })
 
