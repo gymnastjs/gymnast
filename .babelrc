@@ -13,7 +13,6 @@
   "plugins": [
     "preval",
     "macros",
-    "flow-react-proptypes",
     "lodash",
     "transform-object-rest-spread",
     "transform-class-properties",
@@ -29,19 +28,22 @@
       "module-resolver",
       {
         "alias": {
-          "xn-reflex": "./dist/reflex"
+          "gymnast": "./dist/gymnast"
         }
       }
     ]
   ],
   "env": {
+    "development": {
+      "plugins": ["flow-react-proptypes"]
+    },
     "test": {
       "plugins": [
         [
           "module-resolver",
           {
             "alias": {
-              "xn-reflex": "./src/reflex"
+              "gymnast": "./src/gymnast"
             }
           }
         ]

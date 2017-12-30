@@ -7815,8 +7815,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -7878,8 +7878,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -7941,8 +7941,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8004,8 +8004,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8067,8 +8067,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8130,8 +8130,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8193,8 +8193,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8256,8 +8256,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8319,8 +8319,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8382,8 +8382,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8445,8 +8445,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8508,8 +8508,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8571,8 +8571,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8634,8 +8634,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8697,8 +8697,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8760,8 +8760,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8823,8 +8823,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8886,8 +8886,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -8949,8 +8949,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -9012,8 +9012,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 10%;
-  maxWidth: 10%
+  flexBasis: 8.333333333333332%;
+  maxWidth: 8.333333333333332%
 }})
   "
         style={
@@ -9114,9 +9114,9 @@ exports[`Storyshots Config Provider Gutter 1`] = `
   "
         style={
           Object {
-            "borderBottomWidth": 16,
-            "borderLeftWidth": 8,
-            "borderRightWidth": 8,
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 12,
+            "borderRightWidth": 12,
             "borderTopWidth": 0,
           }
         }
@@ -9177,9 +9177,9 @@ exports[`Storyshots Config Provider Gutter 1`] = `
   "
         style={
           Object {
-            "borderBottomWidth": 16,
-            "borderLeftWidth": 8,
-            "borderRightWidth": 8,
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 12,
+            "borderRightWidth": 12,
             "borderTopWidth": 0,
           }
         }
@@ -9240,9 +9240,9 @@ exports[`Storyshots Config Provider Gutter 1`] = `
   "
         style={
           Object {
-            "borderBottomWidth": 16,
-            "borderLeftWidth": 8,
-            "borderRightWidth": 8,
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 12,
+            "borderRightWidth": 12,
             "borderTopWidth": 0,
           }
         }
@@ -9303,9 +9303,9 @@ exports[`Storyshots Config Provider Gutter 1`] = `
   "
         style={
           Object {
-            "borderBottomWidth": 16,
-            "borderLeftWidth": 8,
-            "borderRightWidth": 8,
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 12,
+            "borderRightWidth": 12,
             "borderTopWidth": 0,
           }
         }
@@ -9366,9 +9366,9 @@ exports[`Storyshots Config Provider Gutter 1`] = `
   "
         style={
           Object {
-            "borderBottomWidth": 16,
-            "borderLeftWidth": 8,
-            "borderRightWidth": 8,
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 12,
+            "borderRightWidth": 12,
             "borderTopWidth": 0,
           }
         }
@@ -9429,9 +9429,9 @@ exports[`Storyshots Config Provider Gutter 1`] = `
   "
         style={
           Object {
-            "borderBottomWidth": 16,
-            "borderLeftWidth": 8,
-            "borderRightWidth": 8,
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 12,
+            "borderRightWidth": 12,
             "borderTopWidth": 0,
           }
         }
@@ -9494,7 +9494,7 @@ exports[`Storyshots Config Provider Page Width 1`] = `
    xnr_layout 
   cxs({
    > :not(.xnr_layout): {
-    maxWidth: 800px
+    maxWidth: 1224px
   };
   alignItems: center;
   alignSelf: flex-start;
@@ -9502,7 +9502,7 @@ exports[`Storyshots Config Provider Page Width 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 40px;
+  minWidth: 400px;
   padding: 0;
   width: 100%
 }})
@@ -9525,8 +9525,9 @@ exports[`Storyshots Config Provider Page Width 1`] = `
    
   cxs({
   @media screen and (max-width: 599px): {
-    paddingLeft: 36px;
-    paddingRight: 36px
+    overflow: hidden;
+    paddingLeft: 0;
+    paddingRight: 0
   };
   @media screen and (min-width: 600px) and (max-width: 899px): {
     paddingLeft: 36px;
@@ -9560,7 +9561,12 @@ exports[`Storyshots Config Provider Page Width 1`] = `
   flexGrow: 1
 }})
    
-  cxs({}})
+  cxs({
+  @media screen and (max-width: 599px): {
+    flexShrink: 0;
+    width: calc(100% + 8px)
+  }
+}})
   "
           style={Object {}}
         >
@@ -28911,7 +28917,58 @@ exports[`Storyshots Grid Resolution 1`] = `
 }})
   "
       style={Object {}}
-    />
+    >
+      <div
+        className="
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  width: 100%
+}})
+   
+  cxs({
+  flexGrow: 1
+}})
+  "
+        style={
+          Object {
+            "backgroundColor": "#ffd700",
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 0,
+            "borderRightWidth": 0,
+            "borderTopWidth": 24,
+            "color": "#1d1f21",
+            "paddingBottom": 32,
+            "paddingLeft": 32,
+            "paddingRight": 32,
+            "paddingTop": 32,
+          }
+        }
+      >
+        <div
+          className="
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  width: 100%
+}})
+   
+  cxs({
+  flexBasis: 0%;
+  flexGrow: 1;
+  flexShrink: 1
+}})
+  "
+          style={Object {}}
+        >
+          Always visible, but changes in size
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

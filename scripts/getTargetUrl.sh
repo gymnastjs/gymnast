@@ -4,7 +4,7 @@ set -e
 
 # Ensure all required variables are defined
 DEFAULT_BRANCH='default'
-BASE_URL='https://obartra.github.io/reflex'
+BASE_URL='https://gymnastjs.github.io/gymnast'
 BRANCH=${CIRCLE_BRANCH:-$DEFAULT_BRANCH}
 
 if [ "$CIRCLE_BRANCH" = 'master' ]; then

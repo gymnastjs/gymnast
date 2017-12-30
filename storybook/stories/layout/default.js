@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Root } from 'xn-reflex'
+import { Root } from 'gymnast'
 import { loremIpsum, Grid, Layout } from '../../shared'
 import styles from '../../shared/layout.css'
 

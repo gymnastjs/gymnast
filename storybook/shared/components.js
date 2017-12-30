@@ -1,11 +1,11 @@
 // @flow
 import * as React from 'react'
 import {
-  Col as ReflexCol,
-  Grid as ReflexGrid,
-  Layout as ReflexLayout,
+  Col as GymnastCol,
+  Grid as GymnastGrid,
+  Layout as GymnastLayout,
   Root,
-} from 'xn-reflex'
+} from 'gymnast'
 import type { Spacing, Height } from '../../src/types'
 import {
   axonBlack,
@@ -70,9 +70,9 @@ function withDev(Component: *) {
   }
 }
 
-export const Col = withDev(ReflexCol)
-export const Grid = withDev(ReflexGrid)
-export const Layout = withDev(ReflexLayout)
+export const Col = withDev(GymnastCol)
+export const Grid = withDev(GymnastGrid)
+export const Layout = withDev(GymnastLayout)
 export function Box({
   children,
   margin,

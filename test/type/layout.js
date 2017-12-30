@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-unused-expressions */
 import * as React from 'react'
-import { Layout, asLayout } from 'xn-reflex'
+import { Layout, asLayout } from 'gymnast'
 
 const components = [asLayout('span'), asLayout(() => <div />), Layout]
 

@@ -1,4 +1,4 @@
-const overlayId = 'xn-reflex-dev-overlay'
+const overlayId = 'gymnast-dev-overlay'
 
 export function getDevContainer() {
   return document.querySelector(`#${overlayId}`)

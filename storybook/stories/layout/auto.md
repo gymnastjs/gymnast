@@ -8,4 +8,4 @@ Set or unset `auto` see how the `<Layout />` toggles between filling the parent 
 
 ## Examples
 
-The [Cards](https://obartra.github.io/reflex/?selectedKind=%20Examples&selectedStory=Cards) and [Holy Grail](https://obartra.github.io/reflex/?selectedKind=%20Examples&selectedStory=Holy%20Grail) Examples show how combining `parent`, `auto` and `fit` (default height), we can generate page layouts.
+The [Cards](https://gymnastjs.github.io/gymnast/?selectedKind=%20Examples&selectedStory=Cards) and [Holy Grail](https://gymnastjs.github.io/gymnast/?selectedKind=%20Examples&selectedStory=Holy%20Grail) Examples show how combining `parent`, `auto` and `fit` (default height), we can generate page layouts.

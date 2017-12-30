@@ -1,20 +1,36 @@
-# ☁️ [Reflex](https://obartra.github.io/reflex) &middot; [![CircleCI](https://circleci.com/gh/obartra/reflex/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/reflex/tree/master) [![Test Coverage](https://codeclimate.com/github/obartra/reflex/badges/coverage.svg)](https://codeclimate.com/github/obartra/reflex/coverage) [![npm](https://img.shields.io/npm/v/xn-reflex.svg)](https://www.npmjs.com/package/xn-reflex) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shield)](http://makeapullrequest.com)
+<p align="center">
+  <a href="https://gymnastjs.github.io/gymnast">
+    <img alt="gymnast" src="https://github.com/gymnastjs/gymnast/blob/master/img/gymnast.png?raw=true" width="160">
+  </a>
+</p>
 
-Reflex is a configurable grid and layout engine for React. With Reflex, you can eliminate your layout css or reduce it to just a few lines.
+<p align="center">
+  <b>gymnast</b> is a configurable grid and layout engine for React
+</p>
 
-[Learn how to use Reflex in your own project](https://github.com/obartra/reflex/wiki/Getting-Started).
+<p align="center">
+  <a href="https://circleci.com/gh/gymnastjs/gymnast"><img alt="Circle Status" src="https://circleci.com/gh/gymnastjs/gymnast/tree/master.svg?style=shield"></a>
+  <a href="https://codeclimate.com/github/gymnastjs/gymnast/coverage"><img alt="Test Coverage" src="https://codeclimate.com/github/gymnastjs/gymnast/badges/coverage.svg"></a>
+  <a href="http://makeapullrequest.com"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shield"></a>
+</p>
+
+---
+
+With gymnast, you can eliminate your layout css or reduce it to just a few lines.
+
+[Learn how to use gymnast in your own project](https://github.com/gymnastjs/gymnast/wiki/Getting-Started).
 
 or
 
-[Play with a demo](https://codesandbox.io/s/github/obartra/reflex-playground)
+[Play with a demo](https://codesandbox.io/s/github/gymnastjs/playground)
 
 ## 📺 Examples
 
-We have several examples [on the website](https://obartra.github.io/reflex). Here is one of them:
+We have several examples [on the website](https://gymnastjs.github.io/gymnast). Here is one of them:
 
 ```jsx
 import * as React from 'react'
-import { Grid } from 'xn-reflex'
+import { Grid } from 'gymnast'
 
 <Grid>
   <Grid size={5} margin={2}>Content Here</Grid>
@@ -22,33 +38,33 @@ import { Grid } from 'xn-reflex'
 </Grid>
 ```
 
-This will create 2 columns of sizes 5, 7 (defaults to a 12-column grid).
+This will create 2 columns of sizes 5, 7, respectively.
 
-There are additional components to assist with layout, for a deeper dive into reflex, check out the [wiki](https://github.com/obartra/reflex/wiki), the examples [here](https://obartra.github.io/reflex) or follow the [Getting Started](https://github.com/obartra/reflex/wiki/Getting-Started) guide.
+There are additional components to assist with layout, for a deeper dive into gymnast, check out the [wiki](https://github.com/gymnastjs/gymnast/wiki), the examples [here](https://gymnastjs.github.io/gymnast) or follow the [Getting Started](https://github.com/gymnastjs/gymnast/wiki/Getting-Started) guide.
 
 ## 🖥 Install
 
-Reflex is available as the `xn-reflex` package on [npm](https://www.npmjs.com/). It is also available on the [unpkg CDN](https://unpkg.com/xn-reflex/dist/reflex.min.js).
+gymnast is available as the `gymnast` package on [npm](https://www.npmjs.com/). It is also available on the [unpkg CDN](https://unpkg.com/gymnast).
 
 You can install it with:
 
 ```bash
-yarn add xn-reflex
+yarn add gymnast
 ```
 
 `React` and `PropTypes` are [peer dependencies](https://docs.npmjs.com/files/package.json#peerdependencies) of the generated bundle.
 
 ## ⚙️ Dev Mode
 
-Ensuring a layout adheres to the grid can be difficult. To simplify this task, Reflex includes an overlay Component to assist you. During development, import and append `<Dev/>` to your pages. It doesn't render anything by default but pressing `CTRL+SHIFT+K` will toggle it.
+Ensuring a layout adheres to the grid can be difficult. To simplify this task, gymnast includes an overlay Component to assist you. During development, import and append `<Dev/>` to your pages. It doesn't render anything by default but pressing `CTRL+SHIFT+K` will toggle it.
 
-Learn more about `<Dev />` mode in the [wiki](https://github.com/obartra/reflex/wiki/Dev).
+Learn more about `<Dev />` mode in the [wiki](https://github.com/gymnastjs/gymnast/wiki/Dev).
 
 <img src="/img/devMode.png" width="300px" alt="Dev Example" />
 
 ```jsx
 import * as React from 'react'
-import { Dev } from 'xn-reflex'
+import { Dev } from 'gymnast'
 
 export default function MyPage() {
   return (<>
@@ -60,13 +76,13 @@ export default function MyPage() {
 
 ## 👥 Contributors
 
-The main purpose of this repository is to continue to evolve Reflex, making it more capable and easier to use. Development of Reflex happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Check the [contributing.md](./CONTRIBUTING.md) to learn how you can take part in improving Reflex.
+The main purpose of this repository is to continue to evolve gymnast, making it more capable and easier to use. Development of gymnast happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Check the [contributing.md](./CONTRIBUTING.md) to learn how you can take part in improving gymnast.
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/3877773?v=3" width="100px;"/><br /><sub><b>Oscar Bartra</b></sub>](http://obartra.github.io)<br />[🐛](https://github.com/obartra/reflex/issues?q=author%3Aobartra "Bug reports") [💻](https://github.com/obartra/reflex/commits?author=obartra "Code") [📖](https://github.com/obartra/reflex/commits?author=obartra "Documentation") [👀](#review-obartra "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/8746094?v=3" width="100px;"/><br /><sub><b>Andrew Hansen</b></sub>](https://github.com/arahansen)<br />[💬](#question-arahansen "Answering Questions") [🐛](https://github.com/obartra/reflex/issues?q=author%3Aarahansen "Bug reports") [💻](https://github.com/obartra/reflex/commits?author=arahansen "Code") [👀](#review-arahansen "Reviewed Pull Requests") | [<img src="https://avatars0.githubusercontent.com/u/17904507?v=3" width="100px;"/><br /><sub><b>Stephen Nomura</b></sub>](http://stephennomura.com/)<br />[🎨](#design-snomu "Design") | [<img src="https://avatars3.githubusercontent.com/u/1621615?v=4" width="100px;"/><br /><sub><b>Andrew Toy</b></sub>](https://github.com/andrewmtoy)<br />[🐛](https://github.com/obartra/reflex/issues?q=author%3Aandrewmtoy "Bug reports") [💻](https://github.com/obartra/reflex/commits?author=andrewmtoy "Code") [💡](#example-andrewmtoy "Examples") |
+| [<img src="https://avatars3.githubusercontent.com/u/3877773?v=3" width="100px;"/><br /><sub><b>Oscar Bartra</b></sub>](http://obartra.github.io)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aobartra "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=obartra "Code") [📖](https://github.com/gymnastjs/gymnast/commits?author=obartra "Documentation") [👀](#review-obartra "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/8746094?v=3" width="100px;"/><br /><sub><b>Andrew Hansen</b></sub>](https://github.com/arahansen)<br />[💬](#question-arahansen "Answering Questions") [🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aarahansen "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=arahansen "Code") [👀](#review-arahansen "Reviewed Pull Requests") | [<img src="https://avatars0.githubusercontent.com/u/17904507?v=3" width="100px;"/><br /><sub><b>Stephen Nomura</b></sub>](http://stephennomura.com/)<br />[🎨](#design-snomu "Design") | [<img src="https://avatars3.githubusercontent.com/u/1621615?v=4" width="100px;"/><br /><sub><b>Andrew Toy</b></sub>](https://github.com/andrewmtoy)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aandrewmtoy "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=andrewmtoy "Code") [💡](#example-andrewmtoy "Examples") |
 | :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
@@ -76,10 +92,10 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 
 | Process       | Status    |
 |---------------|-----------|
-| Code Quality  | [![CircleCI](https://circleci.com/gh/obartra/reflex/tree/master.svg?style=shield)](https://circleci.com/gh/obartra/reflex/tree/master) [![Test Coverage](https://codeclimate.com/github/obartra/reflex/badges/coverage.svg)](https://codeclimate.com/github/obartra/reflex/coverage) [![Code Climate](https://codeclimate.com/github/obartra/reflex/badges/gpa.svg)](https://codeclimate.com/github/obartra/reflex) [![codebeat badge](https://codebeat.co/badges/d3b5abcd-60b2-4ab3-96b6-b3ab392b789d)](https://codebeat.co/projects/github-com-obartra-reflex-master) [![Package Quality](http://npm.packagequality.com/shield/xn-reflex.svg)](http://npm.packagequality.com/#?package=xn-reflex) [![Sauce Test Status](https://saucelabs.com/buildstatus/reflex)](https://saucelabs.com/u/reflex) |
-| Versioning    | [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm](https://img.shields.io/npm/v/xn-reflex.svg)](https://www.npmjs.com/package/xn-reflex) |
-| Dependencies  | [![Known Vulnerabilities](https://snyk.io/test/github/obartra/reflex/badge.svg)](https://snyk.io/test/github/obartra/reflex) [![DavidDM](https://david-dm.org/obartra/reflex.svg)](https://david-dm.org/obartra/reflex) [![bitHound Overall Score](https://www.bithound.io/github/obartra/reflex/badges/score.svg)](https://www.bithound.io/github/obartra/reflex) |
-| File Size     | ![gzipped bundle size](http://img.badgesize.io/https://unpkg.com/xn-reflex?compression=gzip) |
-| Questions     | [![Join the chat at https://gitter.im/react-reflex/Lobby](https://badges.gitter.im/react-reflex/Lobby.svg)](https://gitter.im/react-reflex/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![xn-reflex StackOverflow tags](https://img.shields.io/badge/stackoverflow-xn--reflex-f48024.svg)](https://stackoverflow.com/questions/tagged/xn-reflex)|
+| Code Quality  | [![CircleCI](https://circleci.com/gh/gymnastjs/gymnast/tree/master.svg?style=shield)](https://circleci.com/gh/gymnastjs/gymnast/tree/master) [![Test Coverage](https://codeclimate.com/github/gymnastjs/gymnast/badges/coverage.svg)](https://codeclimate.com/github/gymnastjs/gymnast/coverage) [![Code Climate](https://codeclimate.com/github/gymnastjs/gymnast/badges/gpa.svg)](https://codeclimate.com/github/gymnastjs/gymnast) [![codebeat badge](https://codebeat.co/badges/d3b5abcd-60b2-4ab3-96b6-b3ab392b789d)](https://codebeat.co/projects/github-com-gymnastjs-gymnast-master) [![Package Quality](http://npm.packagequality.com/shield/gymnast.svg)](http://npm.packagequality.com/#?package=gymnast) [![Sauce Test Status](https://saucelabs.com/buildstatus/reflex)](https://saucelabs.com/u/reflex) |
+| Versioning    | [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm](https://img.shields.io/npm/v/gymnast.svg)](https://www.npmjs.com/package/gymnast) |
+| Dependencies  | [![Known Vulnerabilities](https://snyk.io/test/github/gymnastjs/gymnast/badge.svg)](https://snyk.io/test/github/gymnastjs/gymnast) [![DavidDM](https://david-dm.org/gymnastjs/gymnast.svg)](https://david-dm.org/gymnastjs/gymnast) [![bitHound Overall Score](https://www.bithound.io/github/gymnastjs/gymnast/badges/score.svg)](https://www.bithound.io/github/gymnastjs/gymnast) |
+| File Size     | ![gzipped bundle size](http://img.badgesize.io/https://unpkg.com/gymnast?compression=gzip) |
+| Questions     | [![Join the chat at https://gitter.im/react-reflex/Lobby](https://badges.gitter.im/react-reflex/Lobby.svg)](https://gitter.im/react-reflex/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![gymnast StackOverflow tags](https://img.shields.io/badge/stackoverflow-gymnast-f48024.svg)](https://stackoverflow.com/questions/tagged/gymnast)|
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/reflex.svg)](https://saucelabs.com/u/reflex)

@@ -1,6 +1,5 @@
 // @flow
 import type { DisplayValues, DisplayAliases } from '../types'
-import defaults from '../defaults'
 import { splitPattern } from '../utils'
 import log from '../utils/log'
 import errors from '../errors'
@@ -11,10 +10,6 @@ function isTrue(obj) {
   return (key: string) => obj[key] === true
 }
 
-function isObject(value: any) {
-  return Object.prototype.toString.call(value) === '[object Object]'
-}
-
 function getActiveResolutionName(shouldShow: ShouldShow) {
   return Object.keys(shouldShow).find(isTrue(shouldShow))
 }
@@ -23,6 +18,10 @@ function extractObjectValue(value: any, shouldShow?: ShouldShow = {}) {
   const active = getActiveResolutionName(shouldShow)
 
   return active && active in value ? value[active] : value.default
+}
+
+export function isObject(value: any) {
+  return Object.prototype.toString.call(value) === '[object Object]'
 }
 
 export function hasTrueValues(obj: {} = {}) {
@@ -78,7 +77,7 @@ export function getMediaQuery(
 
 export function getMediaQueries(
   show: string | Array<string> = [],
-  displayAliases: DisplayAliases = defaults.displayAliases
+  displayAliases: DisplayAliases
 ): { [string]: string } {
   const showArray = show instanceof Array ? show : show.split(splitPattern)
 

@@ -64,5 +64,13 @@ export default () => (
       <Grid size="auto">Visible on medium and large screens (&gt; 600px)</Grid>
       <Button />
     </Grid>
+    <Grid
+      dev={3}
+      padding="XL"
+      margin={['L', 0]}
+      size={{ small: 12, medium: 9, large: 6 }}
+    >
+      <Grid size="auto">Always visible, but changes in size</Grid>
+    </Grid>
   </Grid>
 )

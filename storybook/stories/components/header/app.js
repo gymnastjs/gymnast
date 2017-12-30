@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Offset, Root } from 'xn-reflex'
+import { Offset, Root } from 'gymnast'
 import { Grid, Col, Layout } from '../../../shared'
 import styles from '../../../shared/stories.css'
 
