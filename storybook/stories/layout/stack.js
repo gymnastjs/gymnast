@@ -1,16 +1,16 @@
 // @flow
 import * as React from 'react'
-import { Root } from 'gymnast'
+import { Root, Grid, Layout } from 'gymnast'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { Grid, Layout } from '../../shared'
+import { colors } from '../../shared'
 import styles from '../../shared/layout.css'
 
 function getStaticSection(index) {
   return (
     <Layout key={index}>
       <Root>
-        <Grid dev={3} margin="L/2 0">
+        <Grid style={colors.colors3} margin="L/2 0">
           <h1>{`Section ${index + 1}`}</h1>
         </Grid>
       </Root>

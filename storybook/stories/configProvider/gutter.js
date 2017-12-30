@@ -2,8 +2,8 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { ConfigProvider } from 'gymnast'
-import { Grid, Col } from '../../shared'
+import { ConfigProvider, Grid, Col } from 'gymnast'
+import { colors } from '../../shared'
 
 export default function() {
   const gutter = number('Gutter', 2, { range: true, min: 1, max: 24 })
@@ -25,7 +25,7 @@ export default function() {
         {times(6, key => (
           <Col key={key} size={4}>
             <Grid
-              dev={1}
+              style={colors.colors1}
               padding={innerPadding}
               align="center"
               justify="center"

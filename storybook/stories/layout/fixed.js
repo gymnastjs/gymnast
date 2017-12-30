@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
 import { select } from '@storybook/addon-knobs'
-import { Root } from 'gymnast'
-import { Grid, Layout } from '../../shared'
+import { Root, Grid, Layout } from 'gymnast'
+import { colors } from '../../shared'
 import styles from '../../shared/layout.css'
 
 export default () => {
@@ -14,7 +14,7 @@ export default () => {
 
   return (
     <Layout height="parent" className={styles.page}>
-      <Layout fixed={options[fixed]} dev={2}>
+      <Layout fixed={options[fixed]} style={colors.colors2}>
         <Root>
           <Grid margin="0 L/2">
             <h1>Fixed to the {fixed}</h1>

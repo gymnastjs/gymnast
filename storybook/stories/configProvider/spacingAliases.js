@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { ConfigProvider } from 'gymnast'
-import { Grid } from '../../shared'
+import { ConfigProvider, Grid } from 'gymnast'
+import { colors } from '../../shared'
 
 export default function() {
   const base = number('base', 24, { range: true, min: 8, max: 24, step: 8 })
@@ -22,17 +22,17 @@ export default function() {
   return (
     <ConfigProvider spacingAliases={spacingAliases} base={base}>
       <Grid>
-        <Grid dev={1} margin="L" size={6}>
-          <Grid dev={2}>My margins are set using aliases!</Grid>
+        <Grid style={colors.colors1} margin="L" size={6}>
+          <Grid style={colors.colors2}>My margins are set using aliases!</Grid>
         </Grid>
-        <Grid dev={2} padding="L/2,L" size={6}>
-          <Grid dev={1}>My paddings are set using aliases!</Grid>
+        <Grid style={colors.colors2} padding="L/2,L" size={6}>
+          <Grid style={colors.colors1}>My paddings are set using aliases!</Grid>
         </Grid>
-        <Grid dev={2} margin={['M', 'S/2']} size={6}>
-          <Grid dev={1}>My margins are set using aliases!</Grid>
+        <Grid style={colors.colors2} margin={['M', 'S/2']} size={6}>
+          <Grid style={colors.colors1}>My margins are set using aliases!</Grid>
         </Grid>
-        <Grid dev={1} padding={['M', 'S/2']} size={6}>
-          <Grid dev={2}>My paddings are set using aliases!</Grid>
+        <Grid style={colors.colors1} padding={['M', 'S/2']} size={6}>
+          <Grid style={colors.colors2}>My paddings are set using aliases!</Grid>
         </Grid>
       </Grid>
     </ConfigProvider>

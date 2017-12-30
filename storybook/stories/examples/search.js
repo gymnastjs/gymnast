@@ -1,10 +1,10 @@
 // @flow
 
 import * as React from 'react'
-import { Root } from 'gymnast'
+import { Root, Grid, Layout } from 'gymnast'
 import { number } from '@storybook/addon-knobs'
 import styles from './layout.css'
-import { Grid, Layout } from '../../shared'
+import { colors } from '../../shared'
 import Header from '../components/header/app'
 import SearchFilters from '../components/search/filters'
 import SearchNav from '../components/search/nav'
@@ -22,7 +22,7 @@ export default () => {
         style={{ marginTop: 40 }}
       >
         <SearchNav />
-        <Layout height="auto" dev={2}>
+        <Layout height="auto" style={colors.colors2}>
           <Root>
             <Grid margin="L 0 0 0">
               <SearchFilters size={3} />
@@ -30,7 +30,7 @@ export default () => {
             </Grid>
           </Root>
         </Layout>
-        <Layout dev={1}>
+        <Layout style={colors.colors1}>
           <Root>
             <Grid margin="L/2">
               <h1>Footer</h1>

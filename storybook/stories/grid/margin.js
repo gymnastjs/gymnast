@@ -2,7 +2,8 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { boolean } from '@storybook/addon-knobs'
-import { Box, RootLayout, getMarginSelect, Grid } from '../../shared'
+import { Root, Layout, Grid } from 'gymnast'
+import { Box, getMarginSelect } from '../../shared'
 
 export default () => {
   const itemMargin = getMarginSelect(
@@ -24,16 +25,24 @@ export default () => {
   )
 
   return (
-    <RootLayout>
-      <Grid>
-        {times(6, getBox)}
+    <Layout height="parent">
+      <Root>
+        <Grid>
+          {times(6, getBox)}
 
-        {times(2, getBox)}
-        <Box size={4} type="C" align={align} value="Item" margin={itemMargin} />
-        {times(2, getBox)}
+          {times(2, getBox)}
+          <Box
+            size={4}
+            type="C"
+            align={align}
+            value="Item"
+            margin={itemMargin}
+          />
+          {times(2, getBox)}
 
-        {times(6, getBox)}
-      </Grid>
-    </RootLayout>
+          {times(6, getBox)}
+        </Grid>
+      </Root>
+    </Layout>
   )
 }

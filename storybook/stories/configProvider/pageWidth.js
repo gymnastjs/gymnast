@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { ConfigProvider, Root, Layout } from 'gymnast'
-import { Col } from '../../shared'
+import { ConfigProvider, Col, Root, Layout } from 'gymnast'
+import { colors } from '../../shared'
 
 export default function() {
   const max = number('Max Page Width', 100, { range: true, min: 50, max: 200 })
@@ -19,7 +19,7 @@ export default function() {
     >
       <Layout height="parent">
         <Root>
-          <Col dev={1}>Full Width</Col>
+          <Col style={colors.colors1}>Full Width</Col>
         </Root>
       </Layout>
     </ConfigProvider>

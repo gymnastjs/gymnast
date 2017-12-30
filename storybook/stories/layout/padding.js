@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
-import type { Size } from '../../../src/types'
-import { RootLayout, getMarginSelect, Grid, Layout } from '../../shared'
+import { type Size, Root, Grid, Layout } from 'gymnast'
+import { getMarginSelect, colors } from '../../shared'
 import { axonBlack, axonGold } from '../../../src/dev/colors'
 
 type HeadingProps = {
@@ -34,23 +34,25 @@ export default () => {
   )
 
   return (
-    <RootLayout>
-      <Heading>Default (No Padding)</Heading>
-      <Layout dev={2} margin={margin}>
-        <Grid dev={3}>{text}</Grid>
-      </Layout>
-      <Heading size={6}>Top Right Padding</Heading>
-      <Layout dev={2} padding="L L 0 0" margin={margin}>
-        <Grid dev={3}>{text}</Grid>
-      </Layout>
-      <Heading size={6}>All-sides Padding</Heading>
-      <Layout dev={2} padding="L L/2" margin={margin}>
-        <Grid dev={3}>{text}</Grid>
-      </Layout>
-      <Heading size={6}>Bottom Padding</Heading>
-      <Layout dev={2} paddingBottom="L" margin={margin}>
-        <Grid dev={3}>{text}</Grid>
-      </Layout>
-    </RootLayout>
+    <Layout height="parent">
+      <Root>
+        <Heading>Default (No Padding)</Heading>
+        <Layout style={colors.colors2} margin={margin}>
+          <Grid style={colors.colors3}>{text}</Grid>
+        </Layout>
+        <Heading size={6}>Top Right Padding</Heading>
+        <Layout style={colors.colors2} padding="L L 0 0" margin={margin}>
+          <Grid style={colors.colors3}>{text}</Grid>
+        </Layout>
+        <Heading size={6}>All-sides Padding</Heading>
+        <Layout style={colors.colors2} padding="L L/2" margin={margin}>
+          <Grid style={colors.colors3}>{text}</Grid>
+        </Layout>
+        <Heading size={6}>Bottom Padding</Heading>
+        <Layout style={colors.colors2} paddingBottom="L" margin={margin}>
+          <Grid style={colors.colors3}>{text}</Grid>
+        </Layout>
+      </Root>
+    </Layout>
   )
 }

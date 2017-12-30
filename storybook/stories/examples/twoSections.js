@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
 import { boolean } from '@storybook/addon-knobs'
-import { Root } from 'gymnast'
-import { loremIpsum, Grid, Layout, Col } from '../../shared'
+import { Root, Grid, Layout, Col } from 'gymnast'
+import { loremIpsum, colors } from '../../shared'
 import styles from './layout.css'
 
 export default () => {
@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <Layout height="parent" className={styles.page}>
-      <Layout dev={1} fixed="top">
+      <Layout style={colors.colors1} fixed="top">
         <Root>
           <Grid margin="L/2">
             <h1>Header</h1>
@@ -18,7 +18,7 @@ export default () => {
         </Root>
       </Layout>
       <Layout height="parent" className={styles.main}>
-        <Layout className={styles.top} dev={4}>
+        <Layout className={styles.top} style={colors.colors4}>
           <Root>
             <Grid justify="center" padding="2XL 0">
               <Grid margin="0 L/2" size={6}>
@@ -40,7 +40,7 @@ export default () => {
             </Grid>
           </Root>
         </Layout>
-        <Layout dev={1}>
+        <Layout style={colors.colors1}>
           <Root>
             <Grid margin="L/2">
               <h1>Footer</h1>
