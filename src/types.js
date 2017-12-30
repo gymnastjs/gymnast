@@ -59,6 +59,7 @@ export type ConfigProviderContext = {
     +base?: number,
     +columns?: number,
     +displayAliases?: DisplayAliases,
+    +fallbackDisplayKey?: string,
     +gutter?: number,
     +maxPageWidth?: number,
     +minPageWidth?: number,
