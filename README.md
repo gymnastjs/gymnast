@@ -9,6 +9,7 @@
 </p>
 
 <p align="center">
+  <a href="https://gymnast.readme.io/docs"><img alt="docs" src="https://img.shields.io/badge/readme.io-docs-1469cc.svg"></a>
   <a href="https://circleci.com/gh/gymnastjs/gymnast"><img alt="Circle Status" src="https://circleci.com/gh/gymnastjs/gymnast/tree/master.svg?style=shield"></a>
   <a href="https://codeclimate.com/github/gymnastjs/gymnast/coverage"><img alt="Test Coverage" src="https://codeclimate.com/github/gymnastjs/gymnast/badges/coverage.svg"></a>
   <a href="http://makeapullrequest.com"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shield"></a>
@@ -18,7 +19,7 @@
 
 With gymnast, you can eliminate your layout css or reduce it to just a few lines.
 
-[Learn how to use gymnast in your own project](https://github.com/gymnastjs/gymnast/wiki/Getting-Started).
+[Learn how to use gymnast in your own project](https://gymnast.readme.io/docs/getting-started).
 
 or
 
@@ -40,7 +41,7 @@ import { Grid } from 'gymnast'
 
 This will create 2 columns of sizes 5, 7, respectively.
 
-There are additional components to assist with layout, for a deeper dive into gymnast, check out the [wiki](https://github.com/gymnastjs/gymnast/wiki), the examples [here](https://gymnastjs.github.io/gymnast) or follow the [Getting Started](https://github.com/gymnastjs/gymnast/wiki/Getting-Started) guide.
+There are additional components to assist with layout, for a deeper dive into gymnast, check out the [docs](https://gymnast.readme.io), the examples [here](https://gymnastjs.github.io/gymnast) or follow the [Getting Started](https://gymnast.readme.io/docs/getting-started) guide.
 
 ## 🖥 Install
 
@@ -58,7 +59,7 @@ yarn add gymnast
 
 Ensuring a layout adheres to the grid can be difficult. To simplify this task, gymnast includes an overlay Component to assist you. During development, import and append `<Dev/>` to your pages. It doesn't render anything by default but pressing `CTRL+SHIFT+K` will toggle it.
 
-Learn more about `<Dev />` mode in the [wiki](https://github.com/gymnastjs/gymnast/wiki/Dev).
+Learn more about `<Dev />` mode in the [docs](https://gymnast.readme.io/docs/dev).
 
 <img src="/img/devMode.png" width="300px" alt="Dev Example" />
 
@@ -96,6 +97,6 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 | Versioning    | [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm](https://img.shields.io/npm/v/gymnast.svg)](https://www.npmjs.com/package/gymnast) |
 | Dependencies  | [![Known Vulnerabilities](https://snyk.io/test/github/gymnastjs/gymnast/badge.svg)](https://snyk.io/test/github/gymnastjs/gymnast) [![DavidDM](https://david-dm.org/gymnastjs/gymnast.svg)](https://david-dm.org/gymnastjs/gymnast) [![bitHound Overall Score](https://www.bithound.io/github/gymnastjs/gymnast/badges/score.svg)](https://www.bithound.io/github/gymnastjs/gymnast) |
 | File Size     | ![gzipped bundle size](http://img.badgesize.io/https://unpkg.com/gymnast?compression=gzip) |
-| Questions     | [![Join the chat at https://gitter.im/react-reflex/Lobby](https://badges.gitter.im/react-reflex/Lobby.svg)](https://gitter.im/react-reflex/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![gymnast StackOverflow tags](https://img.shields.io/badge/stackoverflow-gymnast-f48024.svg)](https://stackoverflow.com/questions/tagged/gymnast)|
+| Questions     | [![Join the discussion at https://gymnast.readme.io/discuss](https://img.shields.io/badge/readme.io-discuss-1469cc.svg)](https://gymnast.readme.io/discuss) [![gymnast StackOverflow tags](https://img.shields.io/badge/stackoverflow-gymnast-f48024.svg)](https://stackoverflow.com/questions/tagged/gymnast)|
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/reflex.svg)](https://saucelabs.com/u/reflex)
