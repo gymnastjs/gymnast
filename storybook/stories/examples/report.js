@@ -30,13 +30,13 @@ function Li({ index }: { index: number }) {
 
 function Card({
   children,
-  height = 70,
+  height = 88,
 }: {
   children?: any,
   height?: number,
 }): React.Element<any> {
   return (
-    <Col style={{ minHeight: height }}>
+    <Col style={{ height }}>
       <Grid padding="L" style={colors.colors5}>
         {children}
       </Grid>

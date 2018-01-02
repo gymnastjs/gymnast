@@ -13,6 +13,7 @@ module.exports = {
     'https://github.com/gymnastjs/gymnast/tree/master/storybook/stories/',
   storyPath: 'storybook/stories',
   wrapStory: 'storybook/shared/wrapStory.js',
+  browserThreshold: 3.7,
   image: {
     selenium: 'saucelabs',
     username: process.env[`SAUCE_USERNAME${suffix}`],

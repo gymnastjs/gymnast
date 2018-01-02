@@ -13148,7 +13148,7 @@ exports[`Storyshots Examples Report 1`] = `
                         "borderLeftWidth": 12,
                         "borderRightWidth": 12,
                         "borderTopWidth": 0,
-                        "minHeight": 140,
+                        "height": 140,
                       }
                     }
                   >
@@ -13200,7 +13200,7 @@ exports[`Storyshots Examples Report 1`] = `
                         "borderLeftWidth": 12,
                         "borderRightWidth": 12,
                         "borderTopWidth": 0,
-                        "minHeight": 70,
+                        "height": 88,
                       }
                     }
                   >
@@ -13279,7 +13279,7 @@ exports[`Storyshots Examples Report 1`] = `
                         "borderLeftWidth": 12,
                         "borderRightWidth": 12,
                         "borderTopWidth": 0,
-                        "minHeight": 70,
+                        "height": 88,
                       }
                     }
                   >
@@ -13358,7 +13358,7 @@ exports[`Storyshots Examples Report 1`] = `
                         "borderLeftWidth": 12,
                         "borderRightWidth": 12,
                         "borderTopWidth": 0,
-                        "minHeight": 70,
+                        "height": 88,
                       }
                     }
                   >
@@ -13437,7 +13437,7 @@ exports[`Storyshots Examples Report 1`] = `
                         "borderLeftWidth": 12,
                         "borderRightWidth": 12,
                         "borderTopWidth": 0,
-                        "minHeight": 70,
+                        "height": 88,
                       }
                     }
                   >
@@ -13516,7 +13516,7 @@ exports[`Storyshots Examples Report 1`] = `
                         "borderLeftWidth": 12,
                         "borderRightWidth": 12,
                         "borderTopWidth": 0,
-                        "minHeight": 70,
+                        "height": 88,
                       }
                     }
                   >
@@ -13595,7 +13595,7 @@ exports[`Storyshots Examples Report 1`] = `
                         "borderLeftWidth": 12,
                         "borderRightWidth": 12,
                         "borderTopWidth": 0,
-                        "minHeight": 210,
+                        "height": 210,
                       }
                     }
                   >
@@ -13647,7 +13647,7 @@ exports[`Storyshots Examples Report 1`] = `
                         "borderLeftWidth": 12,
                         "borderRightWidth": 12,
                         "borderTopWidth": 0,
-                        "minHeight": 70,
+                        "height": 88,
                       }
                     }
                   >
