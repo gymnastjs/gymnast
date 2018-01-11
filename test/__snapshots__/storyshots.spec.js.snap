@@ -3,7 +3,7 @@
 exports[`Storyshots Components.Card Base 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -829,7 +829,7 @@ exports[`Storyshots Components.Card Base 1`] = `
 exports[`Storyshots Components.Card Composite 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -2363,7 +2363,7 @@ exports[`Storyshots Components.Card Composite 1`] = `
 exports[`Storyshots Components.Card Filter 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -3345,7 +3345,7 @@ exports[`Storyshots Components.Card Filter 1`] = `
 exports[`Storyshots Components.Card Profile 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -4041,7 +4041,7 @@ exports[`Storyshots Components.Card Profile 1`] = `
 exports[`Storyshots Components.Header App 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -4496,7 +4496,7 @@ exports[`Storyshots Components.Header App 1`] = `
 exports[`Storyshots Components.Header Basic 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -5340,7 +5340,7 @@ exports[`Storyshots Components.Header Basic 1`] = `
 exports[`Storyshots Components.Pagination Pagination 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -6216,7 +6216,7 @@ exports[`Storyshots Components.Pagination Pagination 1`] = `
 exports[`Storyshots Components.Search Filters 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -6549,7 +6549,7 @@ exports[`Storyshots Components.Search Filters 1`] = `
 exports[`Storyshots Components.Search Nav 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -6933,7 +6933,7 @@ exports[`Storyshots Components.Search Nav 1`] = `
 exports[`Storyshots Components.Search Results 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -7779,7 +7779,7 @@ exports[`Storyshots Components.Search Results 1`] = `
 exports[`Storyshots Config Provider Columns 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -9072,7 +9072,7 @@ exports[`Storyshots Config Provider Columns 1`] = `
 exports[`Storyshots Config Provider Fallback Display Key 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -9168,7 +9168,7 @@ exports[`Storyshots Config Provider Fallback Display Key 1`] = `
 exports[`Storyshots Config Provider Gutter 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -9579,7 +9579,7 @@ exports[`Storyshots Config Provider Gutter 1`] = `
 exports[`Storyshots Config Provider Page Width 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -9703,7 +9703,7 @@ exports[`Storyshots Config Provider Page Width 1`] = `
 exports[`Storyshots Config Provider Spacing Aliases 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -9929,7 +9929,7 @@ exports[`Storyshots Config Provider Spacing Aliases 1`] = `
 exports[`Storyshots Examples Cards 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page hasSubheader 
@@ -11541,7 +11541,7 @@ exports[`Storyshots Examples Cards 1`] = `
 exports[`Storyshots Examples Holy Grail 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 
@@ -12097,7 +12097,7 @@ exports[`Storyshots Examples Holy Grail 1`] = `
 exports[`Storyshots Examples Report 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 
@@ -13920,7 +13920,7 @@ exports[`Storyshots Examples Report 1`] = `
 exports[`Storyshots Examples Search 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 
@@ -17153,7 +17153,7 @@ exports[`Storyshots Examples Search 1`] = `
 exports[`Storyshots Examples Two Sections 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 
@@ -17806,7 +17806,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
 exports[`Storyshots Grid Align 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -18593,7 +18593,7 @@ exports[`Storyshots Grid Align 1`] = `
 exports[`Storyshots Grid Autoflow 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -19338,7 +19338,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
 exports[`Storyshots Grid Fit 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -19573,7 +19573,7 @@ exports[`Storyshots Grid Fit 1`] = `
 exports[`Storyshots Grid Format 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -20990,7 +20990,7 @@ exports[`Storyshots Grid Format 1`] = `
 exports[`Storyshots Grid Fraction 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -24099,7 +24099,7 @@ exports[`Storyshots Grid Fraction 1`] = `
 exports[`Storyshots Grid Justify 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -24617,7 +24617,7 @@ exports[`Storyshots Grid Justify 1`] = `
 exports[`Storyshots Grid Margin 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -25802,7 +25802,7 @@ exports[`Storyshots Grid Margin 1`] = `
 exports[`Storyshots Grid Nested 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -26529,7 +26529,7 @@ exports[`Storyshots Grid Nested 1`] = `
 exports[`Storyshots Grid Offset 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -27733,7 +27733,7 @@ exports[`Storyshots Grid Offset 1`] = `
 exports[`Storyshots Grid Padding 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -28996,7 +28996,7 @@ exports[`Storyshots Grid Padding 1`] = `
 exports[`Storyshots Grid Resolution 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -29072,7 +29072,7 @@ exports[`Storyshots Grid Resolution 1`] = `
 exports[`Storyshots Grid Sizing 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -31114,7 +31114,7 @@ exports[`Storyshots Grid Sizing 1`] = `
 exports[`Storyshots Grid Stretch 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -31552,7 +31552,7 @@ exports[`Storyshots Grid Stretch 1`] = `
 exports[`Storyshots Layout Auto 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 
@@ -31733,7 +31733,7 @@ exports[`Storyshots Layout Auto 1`] = `
 exports[`Storyshots Layout Default 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 
@@ -32332,7 +32332,7 @@ exports[`Storyshots Layout Default 1`] = `
 exports[`Storyshots Layout Fixed 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 
@@ -32494,7 +32494,7 @@ exports[`Storyshots Layout Fixed 1`] = `
 exports[`Storyshots Layout Margin 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -32619,7 +32619,7 @@ exports[`Storyshots Layout Margin 1`] = `
 exports[`Storyshots Layout Padding 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="
@@ -33080,7 +33080,7 @@ exports[`Storyshots Layout Padding 1`] = `
 exports[`Storyshots Layout Parent 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 
@@ -33232,7 +33232,7 @@ exports[`Storyshots Layout Parent 1`] = `
 exports[`Storyshots Layout Stack 1`] = `
 <div>
   <div
-    className=""
+    data-picturebook-test-id="root"
   >
     <div
       className="page 

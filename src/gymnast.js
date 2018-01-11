@@ -1,5 +1,6 @@
 // @flow
 import './cxs'
+import * as _defaults from './defaults'
 import * as _utils from './utils'
 
 // Components
@@ -16,9 +17,10 @@ export { default as asLayout } from './asLayout'
 export { default as withResolution } from './withResolution'
 
 // Utils / Dev
-export const utils = _utils
 export { default as Dev } from './dev'
 export { default as log } from './utils/log'
+export const defaults = _defaults
+export const utils = _utils
 
 // Types
 export type {
