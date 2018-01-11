@@ -22,7 +22,6 @@ test:
   override:
     - yarn build
     - scripts/citests.sh:
-        timeout: 1200
         parallel: true
 deployment:
   publish:
