@@ -1,6 +1,7 @@
 import {
   getMediaQueries,
   getSingleResolutionProps,
+  checkShouldShow,
 } from './withResolution.logic'
 
 describe('getMediaQueries', () => {
@@ -137,6 +138,34 @@ describe('getSingleResolutionProps', () => {
         small: 5,
         large: 6,
       },
+    })
+  })
+})
+
+describe('checkShouldShow', () => {
+  const queries = {
+    short: '@media (max-width: 12450px)',
+    medium: '@media (min-width: 12451px)',
+  }
+
+  it('should return an object with the same keys', () => {
+    const out = checkShouldShow(queries)
+
+    expect(Object.keys(out)).toEqual(Object.keys(queries))
+  })
+
+  it('should return undefined if no queries are passed', () => {
+    const out = checkShouldShow({})
+
+    expect(out).not.toBeDefined()
+  })
+
+  it('should set booleans for matching queries', () => {
+    const out = checkShouldShow(queries)
+
+    expect(out).toEqual({
+      short: false,
+      medium: false,
     })
   })
 })

@@ -105,3 +105,17 @@ export function getMediaQueries(
       return acc
     }, {})
 }
+
+export function checkShouldShow(queries: { [alias: string]: string }) {
+  if (Object.keys(queries).length === 0) {
+    return undefined
+  }
+
+  const shouldShow = {}
+
+  Object.keys(queries).forEach(alias => {
+    shouldShow[alias] = window.matchMedia(queries[alias]).matches
+  })
+
+  return shouldShow
+}
