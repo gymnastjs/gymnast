@@ -7,6 +7,7 @@ import errors from '../errors'
 import { ConfigContextPropTypes } from '../configProvider'
 import { register, unregister, supportsMatchMedia } from './mediaQuery'
 import {
+  checkShouldShow,
   getMediaQueries,
   getSingleResolutionProps,
   hasTrueValues,
@@ -35,8 +36,13 @@ export default function withResolution(
   > {
     static contextTypes = ConfigContextPropTypes
 
-    state = {
-      shouldShow: undefined,
+    constructor(props: Props) {
+      super(props)
+      const queries = this.getQueries(props.show)
+
+      this.state = {
+        shouldShow: checkShouldShow(queries),
+      }
     }
 
     componentDidMount() {
@@ -56,7 +62,6 @@ export default function withResolution(
 
     onMediaQueryChange = (mq?: any = {}, alias: string) => {
       const show = this.state.shouldShow || {}
-
       if (show[alias] !== mq.matches) {
         this.setState({
           shouldShow: {
