@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import log from '../utils/log'
+import log from '../log'
 import withResolution from './index'
 
 jest.mock('./mediaQuery')

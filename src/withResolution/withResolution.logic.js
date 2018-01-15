@@ -1,7 +1,7 @@
 // @flow
 import type { DisplayValues, DisplayAliases } from '../types'
 import { splitPattern } from '../utils'
-import log from '../utils/log'
+import log from '../log'
 import errors from '../errors'
 import defaults from '../defaults'
 
