@@ -43,7 +43,7 @@
           "module-resolver",
           {
             "alias": {
-              "gymnast": "./src/gymnast"
+              "gymnast": "./src"
             }
           }
         ]

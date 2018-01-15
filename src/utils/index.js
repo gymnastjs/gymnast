@@ -8,7 +8,7 @@ import type {
   SpacingProps,
   SpacingValues,
 } from '../types'
-import log from './log'
+import log from '../log'
 import errors from '../errors'
 
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
@@ -236,4 +236,19 @@ export function accumulateOver(props: Array<string>) {
     })
     return acc
   }
+}
+
+export default {
+  accumulateOver,
+  combineSpacing,
+  getCSS,
+  getValue,
+  getValues,
+  noop,
+  parseSpacing,
+  replaceSpacingAliases,
+  splitPattern,
+  times,
+  toCXS,
+  validateSpacingProps,
 }

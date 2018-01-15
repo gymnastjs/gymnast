@@ -1,7 +1,5 @@
 // @flow
 import './cxs'
-import * as _defaults from './defaults'
-import * as _utils from './utils'
 
 // Components
 export { default as Col } from './col'
@@ -18,9 +16,9 @@ export { default as withResolution } from './withResolution'
 
 // Utils / Dev
 export { default as Dev } from './dev'
-export { default as log } from './utils/log'
-export const defaults = _defaults
-export const utils = _utils
+export { default as log } from './log'
+export { default as defaults } from './defaults'
+export { default as utils } from './utils'
 
 // Types
 export type {

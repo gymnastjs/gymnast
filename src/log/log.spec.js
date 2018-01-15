@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import log from './log'
+import log from './index'
 
 describe('log', () => {
   beforeEach(() => {

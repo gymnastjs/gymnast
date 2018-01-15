@@ -11,7 +11,7 @@ import {
   toCXS,
   validateSpacingProps,
 } from './index'
-import log from './log'
+import log from '../log'
 
 const base = 8
 

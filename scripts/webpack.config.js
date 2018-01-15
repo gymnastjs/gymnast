@@ -10,7 +10,7 @@ const isProd = process.env.NODE_ENV === 'production'
 const root = resolve(__dirname, '../dist')
 
 module.exports = {
-  entry: resolve(__dirname, '../src/gymnast.js'),
+  entry: resolve(__dirname, '../src'),
   output: {
     path: root,
     filename: isProd ? 'gymnast.min.js' : 'gymnast.js',

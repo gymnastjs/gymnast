@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import type { DisplayValues } from '../types'
-import log from '../utils/log'
+import log from '../log'
 import { getValue } from '../utils'
 import errors from '../errors'
 import { ConfigContextPropTypes } from '../configProvider'

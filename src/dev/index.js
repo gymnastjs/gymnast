@@ -1,8 +1,11 @@
 // @flow
-/* eslint-disable global-require */
+/* eslint-disable global-require, import/no-mutable-exports */
+let dev
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = require('../utils').noop
+  dev = require('../utils').noop
 } else {
-  module.exports = require('./dev').default
+  dev = require('./dev').default
 }
+
+export default dev
