@@ -34,9 +34,6 @@
     ]
   ],
   "env": {
-    "development": {
-      "plugins": ["flow-react-proptypes"]
-    },
     "test": {
       "plugins": [
         [

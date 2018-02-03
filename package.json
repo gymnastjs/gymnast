@@ -33,7 +33,6 @@
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.6",
     "babel-jest": "23.4.2",
-    "babel-plugin-flow-react-proptypes": "24.1.1",
     "babel-plugin-lodash": "3.3.4",
     "babel-plugin-macros": "2.4.0",
     "babel-plugin-module-resolver": "3.1.1",
@@ -51,7 +50,7 @@
     "cross-env": "5.2.0",
     "css-loader": "0.28.11",
     "enzyme": "3.4.4",
-    "enzyme-adapter-react-16": "1.2.0",
+    "enzyme-adapter-react-16.3": "1.0.0",
     "enzyme-to-json": "3.3.4",
     "eslint": "4.17.0",
     "eslint-config-airbnb": "16.1.0",
@@ -141,9 +140,7 @@
     "verifyConditions": "condition-circle"
   },
   "peerDependencies": {
-    "prop-types": ">=15",
-    "react": ">=15",
-    "react-dom": ">=15"
+    "react": ">=16.3"
   },
   "dependencies": {
     "cxs": "https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362",

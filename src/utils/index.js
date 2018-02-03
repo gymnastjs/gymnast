@@ -1,5 +1,4 @@
 // @flow
-import { get } from 'lodash'
 import cxs from '../cxs'
 import defaults from '../defaults'
 import type {
@@ -243,16 +242,18 @@ export function toCXS<A>(raw: {
   return styles
 }
 
-export function getValue<A: *>(context: *, property: string, override?: A): A {
-  const contextValue = get(context, `gymnast["${property}"]`)
-
-  return ([override, contextValue, defaults[property]].find(isDefined): any)
+export function getValue<A: *>(
+  context: * = {},
+  property: string,
+  override?: A
+): A {
+  return ([override, context[property], defaults[property]].find(
+    isDefined
+  ): any)
 }
 
-export function getValues(context: *, overrides?: * = {}) {
-  const contextValues = get(context, 'gymnast', {})
-
-  return { ...defaults, ...contextValues, ...overrides }
+export function getValues(context: *, overrides?: *) {
+  return { ...defaults, ...context, ...overrides }
 }
 
 export function accumulateOver(props: Array<string>) {
