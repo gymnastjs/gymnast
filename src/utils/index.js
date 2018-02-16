@@ -19,6 +19,10 @@ export const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 export const noop: Noop = () => null
 export const times = (n: number) =>
   new Array(n).fill(undefined).map((val, index) => index)
+export const kebabCase = (str: string) =>
+  str
+    .replace(/^[A-Z]/, match => match.toLowerCase())
+    .replace(/[A-Z]/g, match => `-${match.toLowerCase()}`)
 
 export function validateSpacingProps(props: SpacingProps) {
   if (process.env.NODE_ENV === 'production') {

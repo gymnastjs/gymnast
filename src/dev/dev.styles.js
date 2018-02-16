@@ -31,12 +31,12 @@ function aliasMarginQuery(query, padding) {
   }
   return {
     leftMargin: {
-      [`@media screen and ${query}`]: {
+      [query]: {
         width: `${padding}px`,
       },
     },
     rightMargin: {
-      [`@media screen and ${query}`]: {
+      [query]: {
         width: `${padding}px`,
       },
     },

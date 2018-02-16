@@ -1,6 +1,6 @@
 // @flow
 import cxs from 'cxs/monolithic'
 
-cxs.prefix('xnr_')
+cxs.prefix('gym_')
 
 export default cxs

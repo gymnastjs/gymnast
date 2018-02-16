@@ -5,7 +5,7 @@ import { number } from '@storybook/addon-knobs'
 import { ConfigProvider, Grid, Col } from 'gymnast'
 import { colors } from '../../shared'
 
-export default function() {
+export default () => {
   const gutter = number('Gutter', 2, { range: true, min: 1, max: 24 })
   const verticalGutter = number('Vertical Gutter', 2, {
     range: true,

@@ -12,7 +12,7 @@ const smallRoot = {
 function addRootPadding(query, padding) {
   return {
     root: {
-      [`@media screen and ${query}`]: {
+      [query]: {
         paddingLeft: padding,
         paddingRight: padding,
       },
@@ -24,10 +24,10 @@ function addRootPadding(query, padding) {
 function addChildPadding(query, padding) {
   return {
     root: {
-      [`@media screen and ${query}`]: smallRoot,
+      [query]: smallRoot,
     },
     child: {
-      [`@media screen and ${query}`]: {
+      [query]: {
         flexShrink: 0,
         width: `calc(100% + ${padding}px)`,
       },

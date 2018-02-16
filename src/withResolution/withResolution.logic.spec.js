@@ -1,5 +1,6 @@
 import {
   getMediaQueries,
+  getMediaQuery,
   getSingleResolutionProps,
   checkShouldShow,
 } from './withResolution.logic'
@@ -16,6 +17,17 @@ describe('getMediaQueries', () => {
     expect(out).toEqual({ test: '(min-width: 1px) and (max-width: 2px)' })
   })
 
+  it('should return the same output when using array syntax', () => {
+    const test = {
+      minWidth: '1px',
+      maxWidth: '2px',
+    }
+    const out1 = getMediaQueries('test', { test })
+    const out2 = getMediaQueries('test', { test: [test] })
+
+    expect(out1).toEqual(out2)
+  })
+
   it('should return a max value only when no min value is provided', () => {
     const out = getMediaQueries('test', {
       test: {
@@ -24,6 +36,21 @@ describe('getMediaQueries', () => {
     })
 
     expect(out).toEqual({ test: '(max-width: 2px)' })
+  })
+
+  it('should concatenate multiple queries with commas', () => {
+    const out = getMediaQueries('test', {
+      test: [
+        {
+          maxWidth: '2px',
+        },
+        {
+          minWidth: '1px',
+        },
+      ],
+    })
+
+    expect(out).toEqual({ test: '(max-width: 2px), (min-width: 1px)' })
   })
 
   it('should return a min value only when no max value is provided', () => {
@@ -36,14 +63,52 @@ describe('getMediaQueries', () => {
     expect(out).toEqual({ test: '(min-width: 1px)' })
   })
 
-  it('should return an empty string if an invalid value is passed', () => {
+  it('should kebab case keys', () => {
     const out = getMediaQueries('test2', {
-      test: {
+      test2: {
+        MaxAspectRatio: '1/2',
+      },
+    })
+
+    expect(out).toEqual({ test2: '(max-aspect-ratio: 1/2)' })
+  })
+
+  it('should include invalid keys', () => {
+    const out = getMediaQueries('test2', {
+      test2: {
         invalidValue: 'meow',
       },
     })
 
-    expect(out).toEqual({})
+    expect(out).toEqual({ test2: '(invalid-value: meow)' })
+  })
+})
+
+describe('getMediaQuery', () => {
+  let sampleDisplayAliases
+
+  beforeEach(() => {
+    sampleDisplayAliases = {
+      test: [{ something: '3px' }, { somethingElse: '4px' }],
+    }
+  })
+
+  it('should include the prefix on every response', () => {
+    const out = getMediaQuery('test', sampleDisplayAliases, 'prefix ')
+
+    expect(out).toBe('prefix (something: 3px), prefix (something-else: 4px)')
+  })
+
+  it('should default to "@media " prefix', () => {
+    const out = getMediaQuery('test', sampleDisplayAliases)
+
+    expect(out).toBe('@media (something: 3px), @media (something-else: 4px)')
+  })
+
+  it('should remove prefix when "" is set', () => {
+    const out = getMediaQuery('test', sampleDisplayAliases, '')
+
+    expect(out).toBe('(something: 3px), (something-else: 4px)')
   })
 })
 

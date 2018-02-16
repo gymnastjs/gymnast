@@ -15,11 +15,6 @@ const errors = {}
 
 addError(
   errors,
-  'INVALIDMEDIAKEY',
-  `Specified query is invalid. Only the following keys are allowed: "minWidth", "maxWidth", "minHeight", "maxHeight", "aspectRatio" and "orientation".`
-)
-addError(
-  errors,
   'INVALIDSPACING',
   `Invalid spacing property type used, only array, undefined, string or numbers allowed.`
 )

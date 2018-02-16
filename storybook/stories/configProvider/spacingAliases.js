@@ -4,7 +4,7 @@ import { number } from '@storybook/addon-knobs'
 import { ConfigProvider, Grid } from 'gymnast'
 import { colors } from '../../shared'
 
-export default function() {
+export default () => {
   const base = number('base', 24, { range: true, min: 8, max: 24, step: 8 })
   const spacingAliases = {
     XS: 0.5,
