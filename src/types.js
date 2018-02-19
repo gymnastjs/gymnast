@@ -40,18 +40,12 @@ export type SpacingAliases = {
   +[spacingAlias: string]: number,
 }
 
-type ResolutionKeys =
-  | 'minWidth'
-  | 'maxWidth'
-  | 'minHeight'
-  | 'maxHeight'
-  | 'aspectRatio'
-  | 'orientation'
+type DisplayProperties = {
+  +[resolutionKey: string]: string,
+}
 
 export type DisplayAliases = {
-  +[displayAlias: string]: {
-    +[ResolutionKeys]: string,
-  },
+  +[displayAlias: string]: DisplayProperties | Array<DisplayProperties>,
 }
 
 export type ConfigProviderContext = {

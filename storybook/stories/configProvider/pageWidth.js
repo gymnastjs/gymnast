@@ -4,7 +4,7 @@ import { number } from '@storybook/addon-knobs'
 import { ConfigProvider, Col, Root, Layout } from 'gymnast'
 import { colors } from '../../shared'
 
-export default function() {
+export default () => {
   const max = number('Max Page Width', 100, { range: true, min: 50, max: 200 })
   const min = number('Min Page Width', 5, { range: true, min: 0, max: 50 })
   const pageMargin = number('Page Margin', 6, { range: true, min: 0, max: 10 })

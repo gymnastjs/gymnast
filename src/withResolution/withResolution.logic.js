@@ -1,8 +1,6 @@
 // @flow
 import type { DisplayValues, DisplayAliases } from '../types'
-import { splitPattern } from '../utils'
-import log from '../log'
-import errors from '../errors'
+import { splitPattern, kebabCase } from '../utils'
 import defaults from '../defaults'
 
 export type ShouldShow = { [string]: boolean }
@@ -59,31 +57,25 @@ export function getSingleResolutionProps({
   return propsCopy
 }
 
-const queriesMap = {
-  minWidth: 'min-width',
-  maxWidth: 'max-width',
-  minHeight: 'min-height',
-  maxHeight: 'max-height',
-  aspectRatio: 'aspect-ratio',
-  orientation: 'orientation',
-}
-
 export function getMediaQuery(
   range: string,
-  displayAliases: DisplayAliases
+  displayAliases: DisplayAliases,
+  prefix: string = '@media '
 ): string {
-  const response = []
-  Object.keys(displayAliases[range]).forEach(key => {
-    if (key in queriesMap) {
-      const value = displayAliases[range][key]
+  const displayPropertiesArray =
+    displayAliases[range] instanceof Array
+      ? displayAliases[range]
+      : [displayAliases[range]]
+  const response = displayPropertiesArray
+    .map(
+      displayProperties =>
+        `${prefix}${Object.keys(displayProperties)
+          .map(key => `(${kebabCase(key)}: ${displayProperties[key]})`)
+          .join(' and ')}`
+    )
+    .join(', ')
 
-      response.push(`(${queriesMap[key]}: ${value})`)
-    } else {
-      log.error(errors.INVALIDMEDIAKEY, `"${key}" used`)
-    }
-  })
-
-  return response.join(' and ')
+  return response
 }
 
 export function getMediaQueries(
@@ -94,7 +86,7 @@ export function getMediaQueries(
 
   return showArray
     .filter(range => range in displayAliases)
-    .map(range => [range, getMediaQuery(range, displayAliases)])
+    .map(range => [range, getMediaQuery(range, displayAliases, '')])
     .reduce((acc, [range, query]) => {
       if (query) {
         return {

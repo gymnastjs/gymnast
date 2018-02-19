@@ -15,21 +15,37 @@ Object {
     "base": 8,
     "columns": 12,
     "displayAliases": Object {
-      "large": Object {
-        "minWidth": "900px",
-      },
-      "medium": Object {
-        "maxWidth": "899px",
-        "minWidth": "600px",
-      },
-      "small": Object {
-        "maxWidth": "599px",
-      },
+      "large": Array [
+        Object {
+          "minWidth": "900px",
+        },
+        Object {
+          "minDeviceWidth": "900px",
+        },
+      ],
+      "medium": Array [
+        Object {
+          "maxWidth": "899px",
+          "minWidth": "600px",
+        },
+        Object {
+          "maxDeviceWidth": "899px",
+          "minDeviceWidth": "600px",
+        },
+      ],
+      "small": Array [
+        Object {
+          "maxWidth": "599px",
+        },
+        Object {
+          "maxDeviceWidth": "599px",
+        },
+      ],
     },
     "fallbackDisplayKey": "default",
     "gutter": 3,
     "maxPageWidth": 153,
-    "minPageWidth": 50,
+    "minPageWidth": 40,
     "pageMargin": Object {
       "large": 6,
       "medium": 6,

@@ -5,7 +5,7 @@ import { number } from '@storybook/addon-knobs'
 import { ConfigProvider, Grid } from 'gymnast'
 import { colors } from '../../shared'
 
-export default function() {
+export default () => {
   const columns = number('Columns', 10, { range: true, min: 1, max: 24 })
   const items = number('Items', 20, { range: true, min: 1, max: 48 })
 

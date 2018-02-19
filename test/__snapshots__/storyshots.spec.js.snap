@@ -22,7 +22,7 @@ exports[`Storyshots Components.Card Base 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -44,16 +44,16 @@ exports[`Storyshots Components.Card Base 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -82,7 +82,7 @@ exports[`Storyshots Components.Card Base 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -848,7 +848,7 @@ exports[`Storyshots Components.Card Composite 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -870,16 +870,16 @@ exports[`Storyshots Components.Card Composite 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -908,7 +908,7 @@ exports[`Storyshots Components.Card Composite 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -2382,7 +2382,7 @@ exports[`Storyshots Components.Card Filter 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -2404,16 +2404,16 @@ exports[`Storyshots Components.Card Filter 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -2442,7 +2442,7 @@ exports[`Storyshots Components.Card Filter 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -3364,7 +3364,7 @@ exports[`Storyshots Components.Card Profile 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -3386,16 +3386,16 @@ exports[`Storyshots Components.Card Profile 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -3424,7 +3424,7 @@ exports[`Storyshots Components.Card Profile 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -4067,7 +4067,7 @@ exports[`Storyshots Components.Header App 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -4094,16 +4094,16 @@ exports[`Storyshots Components.Header App 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -4137,7 +4137,7 @@ exports[`Storyshots Components.Header App 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -4515,7 +4515,7 @@ exports[`Storyshots Components.Header Basic 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -4537,16 +4537,16 @@ exports[`Storyshots Components.Header Basic 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -4575,7 +4575,7 @@ exports[`Storyshots Components.Header Basic 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -5359,7 +5359,7 @@ exports[`Storyshots Components.Pagination Pagination 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -5381,16 +5381,16 @@ exports[`Storyshots Components.Pagination Pagination 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -5419,7 +5419,7 @@ exports[`Storyshots Components.Pagination Pagination 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -6568,7 +6568,7 @@ exports[`Storyshots Components.Search Nav 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -6599,16 +6599,16 @@ exports[`Storyshots Components.Search Nav 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -6637,7 +6637,7 @@ exports[`Storyshots Components.Search Nav 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -9069,6 +9069,37 @@ exports[`Storyshots Config Provider Columns 1`] = `
 </div>
 `;
 
+exports[`Storyshots Config Provider Display Aliases 1`] = `
+<div>
+  <div
+    data-picturebook-test-id="root"
+  >
+    <div
+      className="
+  cxs({
+  border: 0 transparent solid;
+  boxSizing: border-box;
+  display: flex;
+  flexFlow: row wrap;
+  width: 100%
+}})
+   
+  cxs({
+  flexGrow: 1
+}})
+   
+  cxs({
+  justifyContent: center;
+  marginLeft: auto;
+  marginRight: auto
+}})
+  "
+      style={Object {}}
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Config Provider Fallback Display Key 1`] = `
 <div>
   <div
@@ -9598,7 +9629,7 @@ exports[`Storyshots Config Provider Page Width 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -9620,16 +9651,16 @@ exports[`Storyshots Config Provider Page Width 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -9658,7 +9689,7 @@ exports[`Storyshots Config Provider Page Width 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -9948,7 +9979,7 @@ exports[`Storyshots Examples Cards 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -9979,7 +10010,7 @@ exports[`Storyshots Examples Cards 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -10003,7 +10034,7 @@ exports[`Storyshots Examples Cards 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -10030,16 +10061,16 @@ exports[`Storyshots Examples Cards 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -10068,7 +10099,7 @@ exports[`Storyshots Examples Cards 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -10123,7 +10154,7 @@ exports[`Storyshots Examples Cards 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -10151,16 +10182,16 @@ exports[`Storyshots Examples Cards 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -10189,7 +10220,7 @@ exports[`Storyshots Examples Cards 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -10596,7 +10627,7 @@ exports[`Storyshots Examples Cards 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -10620,7 +10651,7 @@ exports[`Storyshots Examples Cards 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -10642,16 +10673,16 @@ exports[`Storyshots Examples Cards 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -10680,7 +10711,7 @@ exports[`Storyshots Examples Cards 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -11429,7 +11460,7 @@ exports[`Storyshots Examples Cards 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -11456,16 +11487,16 @@ exports[`Storyshots Examples Cards 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -11494,7 +11525,7 @@ exports[`Storyshots Examples Cards 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -11560,7 +11591,7 @@ exports[`Storyshots Examples Holy Grail 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -11591,7 +11622,7 @@ exports[`Storyshots Examples Holy Grail 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -11618,16 +11649,16 @@ exports[`Storyshots Examples Holy Grail 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -11656,7 +11687,7 @@ exports[`Storyshots Examples Holy Grail 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -11711,7 +11742,7 @@ exports[`Storyshots Examples Holy Grail 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -11733,16 +11764,16 @@ exports[`Storyshots Examples Holy Grail 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -11771,7 +11802,7 @@ exports[`Storyshots Examples Holy Grail 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -11986,7 +12017,7 @@ exports[`Storyshots Examples Holy Grail 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -12013,16 +12044,16 @@ exports[`Storyshots Examples Holy Grail 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -12051,7 +12082,7 @@ exports[`Storyshots Examples Holy Grail 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -12116,7 +12147,7 @@ exports[`Storyshots Examples Report 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -12147,7 +12178,7 @@ exports[`Storyshots Examples Report 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -12171,7 +12202,7 @@ exports[`Storyshots Examples Report 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -12198,16 +12229,16 @@ exports[`Storyshots Examples Report 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -12236,7 +12267,7 @@ exports[`Storyshots Examples Report 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -12291,7 +12322,7 @@ exports[`Storyshots Examples Report 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -12318,16 +12349,16 @@ exports[`Storyshots Examples Report 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -12356,7 +12387,7 @@ exports[`Storyshots Examples Report 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -12678,7 +12709,7 @@ exports[`Storyshots Examples Report 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -12702,7 +12733,7 @@ exports[`Storyshots Examples Report 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -12729,16 +12760,16 @@ exports[`Storyshots Examples Report 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -12767,7 +12798,7 @@ exports[`Storyshots Examples Report 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -13808,7 +13839,7 @@ exports[`Storyshots Examples Report 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -13835,16 +13866,16 @@ exports[`Storyshots Examples Report 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -13873,7 +13904,7 @@ exports[`Storyshots Examples Report 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -13939,7 +13970,7 @@ exports[`Storyshots Examples Search 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -13970,7 +14001,7 @@ exports[`Storyshots Examples Search 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -13997,16 +14028,16 @@ exports[`Storyshots Examples Search 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -14040,7 +14071,7 @@ exports[`Storyshots Examples Search 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -14409,7 +14440,7 @@ exports[`Storyshots Examples Search 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -14437,7 +14468,7 @@ exports[`Storyshots Examples Search 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -14468,16 +14499,16 @@ exports[`Storyshots Examples Search 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -14506,7 +14537,7 @@ exports[`Storyshots Examples Search 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -14812,7 +14843,7 @@ exports[`Storyshots Examples Search 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -14839,16 +14870,16 @@ exports[`Storyshots Examples Search 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -14877,7 +14908,7 @@ exports[`Storyshots Examples Search 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -17041,7 +17072,7 @@ exports[`Storyshots Examples Search 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -17068,16 +17099,16 @@ exports[`Storyshots Examples Search 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -17106,7 +17137,7 @@ exports[`Storyshots Examples Search 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -17172,7 +17203,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -17203,7 +17234,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -17230,16 +17261,16 @@ exports[`Storyshots Examples Two Sections 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -17268,7 +17299,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -17323,7 +17354,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -17347,7 +17378,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -17374,16 +17405,16 @@ exports[`Storyshots Examples Two Sections 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -17412,7 +17443,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -17527,7 +17558,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -17549,16 +17580,16 @@ exports[`Storyshots Examples Two Sections 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -17587,7 +17618,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -17694,7 +17725,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -17721,16 +17752,16 @@ exports[`Storyshots Examples Two Sections 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -17759,7 +17790,7 @@ exports[`Storyshots Examples Two Sections 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -17825,7 +17856,7 @@ exports[`Storyshots Grid Align 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -17847,16 +17878,16 @@ exports[`Storyshots Grid Align 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -17885,7 +17916,7 @@ exports[`Storyshots Grid Align 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -18612,7 +18643,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -18634,16 +18665,16 @@ exports[`Storyshots Grid Autoflow 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -18672,7 +18703,7 @@ exports[`Storyshots Grid Autoflow 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -19357,7 +19388,7 @@ exports[`Storyshots Grid Fit 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -19379,16 +19410,16 @@ exports[`Storyshots Grid Fit 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -19417,7 +19448,7 @@ exports[`Storyshots Grid Fit 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -19592,7 +19623,7 @@ exports[`Storyshots Grid Format 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -19614,16 +19645,16 @@ exports[`Storyshots Grid Format 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -19652,7 +19683,7 @@ exports[`Storyshots Grid Format 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -21009,7 +21040,7 @@ exports[`Storyshots Grid Fraction 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -21031,16 +21062,16 @@ exports[`Storyshots Grid Fraction 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -21069,7 +21100,7 @@ exports[`Storyshots Grid Fraction 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -24118,7 +24149,7 @@ exports[`Storyshots Grid Justify 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -24140,16 +24171,16 @@ exports[`Storyshots Grid Justify 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -24178,7 +24209,7 @@ exports[`Storyshots Grid Justify 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -24636,7 +24667,7 @@ exports[`Storyshots Grid Margin 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -24658,16 +24689,16 @@ exports[`Storyshots Grid Margin 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -24696,7 +24727,7 @@ exports[`Storyshots Grid Margin 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -25821,7 +25852,7 @@ exports[`Storyshots Grid Nested 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -25843,16 +25874,16 @@ exports[`Storyshots Grid Nested 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -25881,7 +25912,7 @@ exports[`Storyshots Grid Nested 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -26548,7 +26579,7 @@ exports[`Storyshots Grid Offset 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -26570,16 +26601,16 @@ exports[`Storyshots Grid Offset 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -26608,7 +26639,7 @@ exports[`Storyshots Grid Offset 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -27752,7 +27783,7 @@ exports[`Storyshots Grid Padding 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -27774,16 +27805,16 @@ exports[`Storyshots Grid Padding 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -27812,7 +27843,7 @@ exports[`Storyshots Grid Padding 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -29091,7 +29122,7 @@ exports[`Storyshots Grid Sizing 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -29113,16 +29144,16 @@ exports[`Storyshots Grid Sizing 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -29151,7 +29182,7 @@ exports[`Storyshots Grid Sizing 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -31133,7 +31164,7 @@ exports[`Storyshots Grid Stretch 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -31155,16 +31186,16 @@ exports[`Storyshots Grid Stretch 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -31197,7 +31228,7 @@ exports[`Storyshots Grid Stretch 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -31571,7 +31602,7 @@ exports[`Storyshots Layout Auto 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -31600,7 +31631,7 @@ exports[`Storyshots Layout Auto 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -31627,16 +31658,16 @@ exports[`Storyshots Layout Auto 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -31665,7 +31696,7 @@ exports[`Storyshots Layout Auto 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -31752,7 +31783,7 @@ exports[`Storyshots Layout Default 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -31781,7 +31812,7 @@ exports[`Storyshots Layout Default 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -31803,16 +31834,16 @@ exports[`Storyshots Layout Default 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -31841,7 +31872,7 @@ exports[`Storyshots Layout Default 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -31921,7 +31952,7 @@ exports[`Storyshots Layout Default 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -31943,16 +31974,16 @@ exports[`Storyshots Layout Default 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -31981,7 +32012,7 @@ exports[`Storyshots Layout Default 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -32061,7 +32092,7 @@ exports[`Storyshots Layout Default 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -32083,16 +32114,16 @@ exports[`Storyshots Layout Default 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -32121,7 +32152,7 @@ exports[`Storyshots Layout Default 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -32201,7 +32232,7 @@ exports[`Storyshots Layout Default 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -32223,16 +32254,16 @@ exports[`Storyshots Layout Default 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -32261,7 +32292,7 @@ exports[`Storyshots Layout Default 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -32351,7 +32382,7 @@ exports[`Storyshots Layout Fixed 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -32382,7 +32413,7 @@ exports[`Storyshots Layout Fixed 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -32409,16 +32440,16 @@ exports[`Storyshots Layout Fixed 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -32447,7 +32478,7 @@ exports[`Storyshots Layout Fixed 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -32511,16 +32542,16 @@ exports[`Storyshots Layout Margin 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -32549,7 +32580,7 @@ exports[`Storyshots Layout Margin 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -32574,7 +32605,7 @@ exports[`Storyshots Layout Margin 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -32638,7 +32669,7 @@ exports[`Storyshots Layout Padding 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -32660,16 +32691,16 @@ exports[`Storyshots Layout Padding 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -32698,7 +32729,7 @@ exports[`Storyshots Layout Padding 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -32748,7 +32779,7 @@ exports[`Storyshots Layout Padding 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -32837,7 +32868,7 @@ exports[`Storyshots Layout Padding 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -32930,7 +32961,7 @@ exports[`Storyshots Layout Padding 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -33023,7 +33054,7 @@ exports[`Storyshots Layout Padding 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -33099,7 +33130,7 @@ exports[`Storyshots Layout Parent 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -33126,16 +33157,16 @@ exports[`Storyshots Layout Parent 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -33164,7 +33195,7 @@ exports[`Storyshots Layout Parent 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -33251,7 +33282,7 @@ exports[`Storyshots Layout Stack 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -33275,7 +33306,7 @@ exports[`Storyshots Layout Stack 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -33297,16 +33328,16 @@ exports[`Storyshots Layout Stack 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -33335,7 +33366,7 @@ exports[`Storyshots Layout Stack 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }
@@ -33397,7 +33428,7 @@ exports[`Storyshots Layout Stack 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 400px;
+  minWidth: 320px;
   padding: 0;
   width: 100%
 }})
@@ -33419,16 +33450,16 @@ exports[`Storyshots Layout Stack 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     overflow: hidden;
     paddingLeft: 0;
     paddingRight: 0
   };
-  @media screen and (min-width: 600px) and (max-width: 899px): {
+  @media (min-width: 600px) and (max-width: 899px); @media (min-device-width: 600px) and (max-device-width: 899px): {
     paddingLeft: 36px;
     paddingRight: 36px
   };
-  @media screen and (min-width: 900px): {
+  @media (min-width: 900px); @media (min-device-width: 900px): {
     paddingLeft: 36px;
     paddingRight: 36px
   }
@@ -33462,7 +33493,7 @@ exports[`Storyshots Layout Stack 1`] = `
 }})
    
   cxs({
-  @media screen and (max-width: 599px): {
+  @media (max-width: 599px); @media (max-device-width: 599px): {
     flexShrink: 0;
     width: calc(100% + 8px)
   }

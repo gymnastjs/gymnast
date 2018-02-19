@@ -6,6 +6,7 @@ import {
   getCSS,
   getValue,
   getValues,
+  kebabCase,
   parseSpacing,
   replaceSpacingAliases,
   toCXS,
@@ -351,5 +352,29 @@ describe('accumulateOver', () => {
         d: 3,
       },
     })
+  })
+})
+
+describe('kebabCase', () => {
+  it('should work with empty strings', () => {
+    expect(kebabCase('')).toEqual('')
+  })
+
+  it('should not modify strings without upper case characters', () => {
+    const sample = 'this-is-a-test1#'
+
+    expect(kebabCase(sample)).toEqual(sample)
+  })
+
+  it('should lower case upper case letters and add a preceding dash', () => {
+    const sample = 'thisWillHaveDashes'
+
+    expect(kebabCase(sample)).toEqual('this-will-have-dashes')
+  })
+
+  it('should not add an additional dash if the first letter is capitalize', () => {
+    const sample = 'Lowercase'
+
+    expect(kebabCase(sample)).toEqual('lowercase')
   })
 })
