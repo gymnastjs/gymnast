@@ -14,7 +14,7 @@
 [libs]
 
 [options]
-module.name_mapper='gymnast' -> '<PROJECT_ROOT>/src'
+module.name_mapper='gymnast' -> '<PROJECT_ROOT>/dist/gymnast'
 module.name_mapper.extension='txt' -> '<PROJECT_ROOT>/test/stringStub.js'
 module.name_mapper.extension='md' -> '<PROJECT_ROOT>/test/stringStub.js'
 module.ignore_non_literal_requires=true
