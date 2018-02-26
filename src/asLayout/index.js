@@ -10,7 +10,6 @@ import getStyles from './layout.styles'
 import { getCoreStyles, sharedResolutionProperties } from '../core'
 import { getValues } from '../utils/index'
 import withResolution from '../withResolution'
-import { ConfigContextPropTypes } from '../configProvider'
 
 const resolutionProperties = ['fixed', 'height', 'overflow']
 
@@ -50,8 +49,6 @@ export default function asLayout(
       />
     )
   }
-
-  Layout.contextTypes = ConfigContextPropTypes
 
   return withResolution(
     Layout,

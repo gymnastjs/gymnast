@@ -10,7 +10,6 @@ import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
 import { sharedResolutionProperties, getCoreStyles } from '../core'
 import withResolution from '../withResolution'
-import { ConfigContextPropTypes } from '../configProvider'
 
 const resolutionProperties = ['align', 'justify', 'size']
 
@@ -42,8 +41,6 @@ export default function asGrid(
       />
     )
   }
-
-  Grid.contextTypes = ConfigContextPropTypes
 
   return withResolution(
     Grid,
