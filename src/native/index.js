@@ -16,7 +16,19 @@ const allStyles = StyleSheet.create({
   colFit,
 })
 
-export const Grid = (asGrid(View, {
+const TextView = ({ children, ...props }) => {
+  if (typeof children === 'string') {
+    return (
+      <View {...props}>
+        <Text>{children}</Text>
+      </View>
+    )
+  }
+
+  return <View {...props}>{children}</View>
+}
+
+export const Grid = (asGrid(TextView, {
   styles: allStyles,
   getStylesProp: ({ classes, styles }) => ({
     style: classes.concat(styles),
