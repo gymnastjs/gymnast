@@ -7,8 +7,10 @@ import type {
   LayoutProps,
 } from '../types'
 import getStyles from './layout.styles'
-import asCore from '../core/asCore'
+import { getCoreStyles, sharedResolutionProperties } from '../core'
 import { getValues } from '../utils/index'
+import withResolution from '../withResolution'
+import { ConfigContextPropTypes } from '../configProvider'
 
 const resolutionProperties = ['fixed', 'height', 'overflow']
 
@@ -26,6 +28,11 @@ export default function asLayout(
     }: OneResolutionLayout,
     context: ConfigProviderContext
   ) {
+    console.log(context)
+    const { styles: coreStyles, props: restProps } = getCoreStyles(
+      props,
+      context
+    )
     const styles = getStyles(getValues(context, props))
     const classes = compact([
       className,
@@ -35,7 +42,20 @@ export default function asLayout(
       styles.layout,
     ])
 
-    return <Component ref={innerRef} {...props} className={classes.join(' ')} />
+    return (
+      <Component
+        ref={innerRef}
+        {...restProps}
+        style={coreStyles}
+        className={classes.join(' ')}
+      />
+    )
   }
-  return asCore(Layout, resolutionProperties)
+
+  Layout.contextTypes = ConfigContextPropTypes
+
+  return withResolution(
+    Layout,
+    sharedResolutionProperties.concat(resolutionProperties)
+  )
 }

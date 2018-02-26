@@ -7815,8 +7815,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -7878,8 +7878,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -7941,8 +7941,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8004,8 +8004,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8067,8 +8067,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8130,8 +8130,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8193,8 +8193,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8256,8 +8256,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8319,8 +8319,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8382,8 +8382,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8445,8 +8445,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8508,8 +8508,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8571,8 +8571,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8634,8 +8634,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8697,8 +8697,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8760,8 +8760,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8823,8 +8823,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8886,8 +8886,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -8949,8 +8949,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -9012,8 +9012,8 @@ exports[`Storyshots Config Provider Columns 1`] = `
 }})
    
   cxs({
-  flexBasis: 8.333333333333332%;
-  maxWidth: 8.333333333333332%
+  flexBasis: 10%;
+  maxWidth: 10%
 }})
   "
         style={
@@ -9621,7 +9621,7 @@ exports[`Storyshots Config Provider Page Width 1`] = `
    xnr_layout 
   cxs({
    > :not(.xnr_layout): {
-    maxWidth: 1224px
+    maxWidth: 800px
   };
   alignItems: center;
   alignSelf: flex-start;
@@ -9629,7 +9629,7 @@ exports[`Storyshots Config Provider Page Width 1`] = `
   boxSizing: border-box;
   display: flex;
   flexFlow: column;
-  minWidth: 320px;
+  minWidth: 40px;
   padding: 0;
   width: 100%
 }})

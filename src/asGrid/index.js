@@ -8,7 +8,9 @@ import type {
 } from '../types'
 import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
-import asCore from '../core/asCore'
+import { sharedResolutionProperties, getCoreStyles } from '../core'
+import withResolution from '../withResolution'
+import { ConfigContextPropTypes } from '../configProvider'
 
 const resolutionProperties = ['align', 'justify', 'size']
 
@@ -19,6 +21,10 @@ export default function asGrid(
     { align, className, justify, size, innerRef, ...props }: OneResolutionGrid,
     context: ConfigProviderContext
   ) {
+    const { styles: coreStyles, props: restProps } = getCoreStyles(
+      props,
+      context
+    )
     const classes = compact([
       styles.grid,
       getCol(size, getValue(context, 'columns')),
@@ -27,8 +33,20 @@ export default function asGrid(
       justify && styles[`${justify}Justify`],
     ])
 
-    return <Component {...props} ref={innerRef} className={classes.join(' ')} />
+    return (
+      <Component
+        {...restProps}
+        ref={innerRef}
+        style={coreStyles}
+        className={classes.join(' ')}
+      />
+    )
   }
 
-  return asCore(Grid, resolutionProperties)
+  Grid.contextTypes = ConfigContextPropTypes
+
+  return withResolution(
+    Grid,
+    sharedResolutionProperties.concat(resolutionProperties)
+  )
 }
