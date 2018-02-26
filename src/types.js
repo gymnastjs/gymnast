@@ -80,7 +80,7 @@ export type OneResolution = {
   paddingRight?: SpacingValues,
   paddingTop?: SpacingValues,
   show?: DisplayValues,
-  style?: { [string]: string | number },
+  style?: Array<{ [string]: string | number }> | { [string]: string | number },
 }
 
 type MultipleResolutionProps = {

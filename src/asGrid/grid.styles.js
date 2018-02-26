@@ -1,13 +1,16 @@
 // @flow
-import cxs from '../cxs'
-import { toCXS } from '../utils/index'
 
-export const styles = toCXS({
+const identity = arg => arg
+
+export const rawStyles = {
   grid: {
-    border: '0 transparent solid',
+    borderWidth: 0,
+    borderColor: 'transparent',
+    borderStyle: 'solid',
     boxSizing: 'border-box',
     display: 'flex',
-    flexFlow: 'row wrap',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     width: '100%',
   },
   fraction: {
@@ -50,9 +53,19 @@ export const styles = toCXS({
     width: 'auto',
     whiteSpace: 'nowrap',
   },
-})
+}
 
-export function getCol(size: string | number | void, columns: number) {
+export function getCol({
+  size,
+  columns,
+  styles,
+  transformStyles = identity,
+}: {
+  size: string | number | void,
+  columns: number,
+  styles: Object,
+  transformStyles?: (styles: Object) => any,
+}) {
   if (size === 'auto') {
     return styles.colAuto
   }
@@ -65,7 +78,7 @@ export function getCol(size: string | number | void, columns: number) {
     return styles.fraction
   }
 
-  return cxs({
+  return transformStyles({
     flexBasis: `${parseInt(size, 10) / columns * 100}%`,
     maxWidth: `${parseInt(size, 10) / columns * 100}%`,
   })

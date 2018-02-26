@@ -4,15 +4,9 @@
   "description": "Configurable grid and layout engine for React",
   "main": "index.js",
   "unpkg": "dist/gymnast.min.js",
+  "react-native": "dist/gymnast.native.js",
   "homepage": "https://gymnastjs.github.io/gymnast",
-  "files": [
-    "package.json",
-    "README.md",
-    "LICENSE",
-    "src",
-    "dist",
-    "index.js"
-  ],
+  "files": ["package.json", "README.md", "LICENSE", "src", "dist", "index.js"],
   "repository": {
     "type": "git",
     "url": "https://github.com/gymnastjs/gymnast"
@@ -104,10 +98,7 @@
     "webpack-bundle-analyzer": "2.10.0"
   },
   "lint-staged": {
-    "*.{js,css}": [
-      "format",
-      "git add"
-    ]
+    "*.{js,css}": ["format", "git add"]
   },
   "bundlesize": [
     {
@@ -116,9 +107,7 @@
     }
   ],
   "jest": {
-    "collectCoverageFrom": [
-      "src/{,**/}*.js"
-    ],
+    "collectCoverageFrom": ["src/{,**/}*.js"],
     "setupTestFrameworkScriptFile": "<rootDir>/test/env.js",
     "moduleNameMapper": {
       "^.+[.]css$": "identity-obj-proxy",
@@ -127,9 +116,7 @@
     "transform": {
       "^.+[.]js$": "babel-jest"
     },
-    "transformIgnorePatterns": [
-      "<rootDir>/node_modules\\/(?!picturebook)"
-    ]
+    "transformIgnorePatterns": ["<rootDir>/node_modules\\/(?!picturebook)"]
   },
   "scripts": {
     "build:dev": "webpack --config scripts/webpack.config.js",
@@ -148,10 +135,11 @@
     "lint": "npm-run-all --parallel lint:*",
     "precommit": "lint-staged",
     "start:storybook": "picturebook -p 9001 -s ./static -c node_modules/picturebook/config",
-    "start:webpack": "yarn build:dev -- --watch",
+    "start:webpack": "yarn build:dev --watch",
     "start": "npm-run-all --parallel start:*",
     "test:bithound": "bithound check git@github.com:gymnastjs/gymnast.git",
-    "test:image": "picturebook-image --env iphone7,ie11,safari,firefox,edge,chrome --suiteRetries 3",
+    "test:image":
+      "picturebook-image --env iphone7,ie11,safari,firefox,edge,chrome --suiteRetries 3",
     "test:size": "bundlesize",
     "test": "jest",
     "test:cover": "jest --coverage",
@@ -170,7 +158,9 @@
     "react": ">=15"
   },
   "dependencies": {
+    "babel-preset-react-native": "4.0.0",
     "cxs": "https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362",
-    "preval.macro": "1.0.2"
+    "preval.macro": "1.0.2",
+    "react-native": "0.53.3"
   }
 }

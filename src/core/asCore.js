@@ -40,25 +40,26 @@ export default function asCore(
     }: OneResolution,
     context: ConfigProviderContext
   ) {
-    const cssStyle = {
-      ...style,
-      ...combineSpacing({
-        spacingProps: {
-          margin,
-          padding,
-          marginTop,
-          marginRight,
-          marginBottom,
-          marginLeft,
-          paddingTop,
-          paddingRight,
-          paddingBottom,
-          paddingLeft,
-        },
-        base: getValue(context, 'base', base),
-        spacingAliases: getValue(context, 'spacingAliases'),
-      }),
-    }
+    const spacing = combineSpacing({
+      spacingProps: {
+        margin,
+        padding,
+        marginTop,
+        marginRight,
+        marginBottom,
+        marginLeft,
+        paddingTop,
+        paddingRight,
+        paddingBottom,
+        paddingLeft,
+      },
+      base: getValue(context, 'base', base),
+      spacingAliases: getValue(context, 'spacingAliases'),
+    })
+    console.log(style)
+    const cssStyle = Array.isArray(style)
+      ? style.concat(spacing)
+      : { ...style, ...spacing }
 
     return <Component {...props} style={cssStyle} />
   }

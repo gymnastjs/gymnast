@@ -6,29 +6,50 @@ import type {
   ConfigProviderContext,
   GridProps,
 } from '../types'
-import { styles, getCol } from './grid.styles'
+import { getCol } from './grid.styles'
 import { getValue } from '../utils'
-import asCore from '../core/asCore'
+import withResolution from '../withResolution'
+import getCoreStyles from '../core'
 
 const resolutionProperties = ['align', 'justify', 'size']
 
 export default function asGrid(
-  Component: React.ComponentType<*> | string
+  Component: React.ComponentType<*> | string,
+  {
+    getStylesProp,
+    transformStyles,
+    styles: allStyles,
+  }: {
+    getStylesProp: ({ classes: Array<string>, styles: Object }) => Object,
+    transformStyles?: (styles: Object) => any,
+    styles: Object,
+  }
 ): React.ComponentType<GridProps> {
-  function Grid(
-    { align, className, justify, size, innerRef, ...props }: OneResolutionGrid,
-    context: ConfigProviderContext
-  ) {
+  function Grid(props: OneResolutionGrid, context: ConfigProviderContext) {
+    const { align, className, justify, size, innerRef } = props
+    const { styles, props: restProps } = getCoreStyles(props, context)
+
     const classes = compact([
-      styles.grid,
-      getCol(size, getValue(context, 'columns')),
+      allStyles.grid,
+      getCol({
+        size,
+        columns: getValue(context, 'columns'),
+        styles: allStyles,
+        transformStyles,
+      }),
       className,
-      align && styles[`${align}Align`],
-      justify && styles[`${justify}Justify`],
+      align && allStyles[`${align}Align`],
+      justify && allStyles[`${justify}Justify`],
     ])
 
-    return <Component {...props} ref={innerRef} className={classes.join(' ')} />
+    return (
+      <Component
+        {...restProps}
+        ref={innerRef}
+        {...getStylesProp({ classes, styles })}
+      />
+    )
   }
 
-  return asCore(Grid, resolutionProperties)
+  return withResolution(Grid, resolutionProperties)
 }

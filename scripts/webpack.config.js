@@ -10,10 +10,13 @@ const isProd = process.env.NODE_ENV === 'production'
 const root = resolve(__dirname, '../dist')
 
 module.exports = {
-  entry: resolve(__dirname, '../src/gymnast'),
+  entry: {
+    gymnast: resolve(__dirname, '../src/gymnast'),
+    'gymnast.native': resolve(__dirname, '../src/native'),
+  },
   output: {
     path: root,
-    filename: isProd ? 'gymnast.min.js' : 'gymnast.js',
+    filename: isProd ? '[name].min.js' : '[name].js',
     library: 'gymnast',
     libraryTarget: 'umd',
   },
@@ -46,12 +49,14 @@ module.exports = {
   devtool: 'source-map',
   externals: {
     react: 'react',
+    'react-native': 'react-native',
     'prop-types': 'prop-types',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         use: 'babel-loader',
       },
     ],
