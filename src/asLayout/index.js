@@ -28,7 +28,6 @@ export default function asLayout(
     }: OneResolutionLayout,
     context: ConfigProviderContext
   ) {
-    console.log(context)
     const { styles: coreStyles, props: restProps } = getCoreStyles(
       props,
       context
