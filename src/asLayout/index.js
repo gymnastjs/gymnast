@@ -23,15 +23,12 @@ export default function asLayout(
       height,
       overflow,
       innerRef,
-      ...props
+      ...restProps
     }: OneResolutionLayout,
     context: ConfigProviderContext
   ) {
-    const { styles: coreStyles, props: restProps } = getCoreStyles(
-      props,
-      context
-    )
-    const styles = getStyles(getValues(context, props))
+    const props = getCoreStyles(restProps, context)
+    const styles = getStyles(getValues(context, restProps))
     const classes = compact([
       className,
       fixed && styles[`${fixed}Fixed`],
@@ -40,14 +37,7 @@ export default function asLayout(
       styles.layout,
     ])
 
-    return (
-      <Component
-        ref={innerRef}
-        {...restProps}
-        style={coreStyles}
-        className={classes.join(' ')}
-      />
-    )
+    return <Component ref={innerRef} {...props} className={classes.join(' ')} />
   }
 
   return withResolution(

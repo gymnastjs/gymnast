@@ -52,7 +52,7 @@ export function getCoreStyles(
     spacingAliases: getValue(context, 'spacingAliases'),
   })
 
-  const styles = { ...style, ...spacing }
+  const spacingStyles = { ...style, ...spacing }
 
-  return { styles, props: restProps }
+  return { ...restProps, style: spacingStyles }
 }
