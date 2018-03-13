@@ -9770,10 +9770,10 @@ exports[`Storyshots Config Provider Spacing Aliases 1`] = `
         style={
           Object {
             "backgroundColor": "#1d1f21",
-            "borderBottomWidth": 72,
-            "borderLeftWidth": 72,
-            "borderRightWidth": 72,
-            "borderTopWidth": 72,
+            "borderBottomWidth": 24,
+            "borderLeftWidth": 24,
+            "borderRightWidth": 24,
+            "borderTopWidth": 24,
             "color": "#ffd700",
           }
         }
@@ -9821,10 +9821,10 @@ exports[`Storyshots Config Provider Spacing Aliases 1`] = `
           Object {
             "backgroundColor": "#efefef",
             "color": "#1469cc",
-            "paddingBottom": 36,
-            "paddingLeft": 72,
-            "paddingRight": 72,
-            "paddingTop": 36,
+            "paddingBottom": 12,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 12,
           }
         }
       >
@@ -9870,10 +9870,10 @@ exports[`Storyshots Config Provider Spacing Aliases 1`] = `
         style={
           Object {
             "backgroundColor": "#efefef",
-            "borderBottomWidth": 48,
-            "borderLeftWidth": 12,
-            "borderRightWidth": 12,
-            "borderTopWidth": 48,
+            "borderBottomWidth": 16,
+            "borderLeftWidth": 4,
+            "borderRightWidth": 4,
+            "borderTopWidth": 16,
             "color": "#1469cc",
           }
         }
@@ -9921,10 +9921,10 @@ exports[`Storyshots Config Provider Spacing Aliases 1`] = `
           Object {
             "backgroundColor": "#1d1f21",
             "color": "#ffd700",
-            "paddingBottom": 48,
-            "paddingLeft": 12,
-            "paddingRight": 12,
-            "paddingTop": 48,
+            "paddingBottom": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "paddingTop": 16,
           }
         }
       >

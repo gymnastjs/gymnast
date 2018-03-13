@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getCoreStyles should allow overriding base 1`] = `
+Object {
+  "borderBottomWidth": 20,
+  "borderLeftWidth": 20,
+  "borderRightWidth": 20,
+  "borderTopWidth": 20,
+}
+`;
+
+exports[`getCoreStyles should return remaining props 1`] = `
+Object {
+  "borderBottomWidth": 16,
+  "borderLeftWidth": 16,
+  "borderRightWidth": 16,
+  "borderTopWidth": 16,
+}
+`;
+
+exports[`getCoreStyles should return styles 1`] = `
+Object {
+  "borderBottomWidth": 16,
+  "borderLeftWidth": 16,
+  "borderRightWidth": 16,
+  "borderTopWidth": 16,
+}
+`;
