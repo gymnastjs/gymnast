@@ -8,7 +8,7 @@ import type {
 } from '../types'
 import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
-import { sharedResolutionProperties, getCoreStyles } from '../core'
+import getCoreStyles from '../core'
 import withResolution from '../withResolution'
 
 const resolutionProperties = ['align', 'justify', 'size']
@@ -39,8 +39,5 @@ export default function asGrid(
     return <Component ref={innerRef} {...props} className={classes.join(' ')} />
   }
 
-  return withResolution(
-    Grid,
-    sharedResolutionProperties.concat(resolutionProperties)
-  )
+  return withResolution(Grid, resolutionProperties)
 }

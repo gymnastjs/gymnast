@@ -13,6 +13,7 @@ import {
   hasTrueValues,
   isObject,
   type ShouldShow,
+  sharedResolutionProperties,
 } from './withResolution.logic'
 
 type Props = { show?: DisplayValues }
@@ -25,6 +26,10 @@ export default function withResolution(
   resolutionKeys: Array<string>,
   coercedSupport?: boolean = supportsMatchMedia
 ) {
+  const combinedResolutionKeys = sharedResolutionProperties.concat(
+    resolutionKeys
+  )
+
   if (!coercedSupport) {
     log.warn(errors.NOMATCHMEDIA)
     return Component
@@ -84,7 +89,7 @@ export default function withResolution(
     }
 
     anyPropsUseResolutionFormat = () =>
-      resolutionKeys.some(key => isObject(this.props[key]))
+      combinedResolutionKeys.some(key => isObject(this.props[key]))
 
     removeMediaQueryListener = (show?: DisplayValues) => {
       const queries = this.getQueries(show)
@@ -114,7 +119,7 @@ export default function withResolution(
       const props = getSingleResolutionProps({
         props: this.props,
         shouldShow: this.state.shouldShow,
-        resolutionKeys,
+        resolutionKeys: combinedResolutionKeys,
         fallbackDisplayKey: getValue(this.context, 'fallbackDisplayKey'),
       })
 

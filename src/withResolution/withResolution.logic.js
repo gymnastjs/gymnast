@@ -1,7 +1,20 @@
 // @flow
-import type { DisplayValues, DisplayAliases } from '../types'
+import type { DisplayAliases } from '../types'
 import { splitPattern, kebabCase } from '../utils'
 import defaults from '../defaults'
+
+export const sharedResolutionProperties = [
+  'margin',
+  'marginBottom',
+  'marginLeft',
+  'marginRight',
+  'marginTop',
+  'padding',
+  'paddingBottom',
+  'paddingLeft',
+  'paddingRight',
+  'paddingTop',
+]
 
 export type ShouldShow = { [string]: boolean }
 
@@ -37,7 +50,7 @@ export function getSingleResolutionProps({
   resolutionKeys = [],
   fallbackDisplayKey = defaults.fallbackDisplayKey,
 }: {|
-  +props: { show?: DisplayValues },
+  +props: *,
   +shouldShow?: ShouldShow,
   +resolutionKeys: Array<string>,
   +fallbackDisplayKey: string,

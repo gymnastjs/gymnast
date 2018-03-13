@@ -2,20 +2,7 @@
 import { combineSpacing, getValue } from '../utils'
 import type { ConfigProviderContext, OneResolution } from '../types'
 
-export const sharedResolutionProperties = [
-  'margin',
-  'marginBottom',
-  'marginLeft',
-  'marginRight',
-  'marginTop',
-  'padding',
-  'paddingBottom',
-  'paddingLeft',
-  'paddingRight',
-  'paddingTop',
-]
-
-export function getCoreStyles(
+export default function getCoreStyles(
   props: $Shape<OneResolution>,
   context: ConfigProviderContext
 ) {

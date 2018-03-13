@@ -1,4 +1,4 @@
-import { getCoreStyles } from './index'
+import getCoreStyles from './index'
 import defaults from '../defaults'
 
 describe('getCoreStyles', () => {

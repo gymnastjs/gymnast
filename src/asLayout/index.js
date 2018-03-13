@@ -7,7 +7,7 @@ import type {
   LayoutProps,
 } from '../types'
 import getStyles from './layout.styles'
-import { getCoreStyles, sharedResolutionProperties } from '../core'
+import getCoreStyles from '../core'
 import { getValues } from '../utils/index'
 import withResolution from '../withResolution'
 
@@ -40,8 +40,5 @@ export default function asLayout(
     return <Component ref={innerRef} {...props} className={classes.join(' ')} />
   }
 
-  return withResolution(
-    Layout,
-    sharedResolutionProperties.concat(resolutionProperties)
-  )
+  return withResolution(Layout, resolutionProperties)
 }
