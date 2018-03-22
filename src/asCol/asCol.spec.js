@@ -1,14 +1,15 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount } from 'enzyme'
 import log from '../log'
-import Col from './index'
-import Grid from '../grid'
+import asCol from './index'
 
 describe('Col', () => {
   let wrapper
+  const Col = asCol('div')
+
   it('should render a Grid with col margins ([0, 1.5, 3])', () => {
-    wrapper = shallow(<Col />)
-    const gridProps = wrapper.find(Grid).props()
+    wrapper = mount(<Col />)
+    const gridProps = wrapper.find('Grid').props()
 
     expect(gridProps.marginTop).toBe(0)
     expect(gridProps.marginRight).toBe(1.5)
@@ -17,14 +18,21 @@ describe('Col', () => {
   })
 
   it('should override defaults when passing margin prop', () => {
-    wrapper = shallow(<Col margin={1} />)
-    const gridProps = wrapper.find(Grid).props()
+    wrapper = mount(<Col margin={1} />)
+    const gridProps = wrapper.find('Grid').props()
 
     expect(gridProps.marginTop).not.toBeDefined()
     expect(gridProps.marginRight).not.toBeDefined()
     expect(gridProps.marginBottom).not.toBeDefined()
     expect(gridProps.marginLeft).not.toBeDefined()
     expect(gridProps.margin).toEqual(1)
+  })
+
+  it('should render custom elements', () => {
+    const StrongCol = asCol('strong')
+
+    wrapper = mount(<StrongCol />)
+    expect(wrapper.find('strong').length).toBe(1)
   })
 
   it('should not error when passed valid props', () => {

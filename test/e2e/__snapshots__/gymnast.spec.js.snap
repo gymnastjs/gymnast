@@ -9,6 +9,7 @@ Object {
   "Layout": [Function],
   "Offset": [Function],
   "Root": [Function],
+  "asCol": [Function],
   "asGrid": [Function],
   "asLayout": [Function],
   "defaults": Object {
