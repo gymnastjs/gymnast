@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Col should override defaults when passing margin prop 1`] = `
+Object {
+  "margin": 1,
+}
+`;
+
+exports[`Col should render a Grid with col margins ([0, 1.5, 3]) 1`] = `
+Object {
+  "className": "{\\"border\\":\\"0 transparent solid\\",\\"boxSizing\\":\\"border-box\\",\\"display\\":\\"flex\\",\\"flexFlow\\":\\"row wrap\\",\\"width\\":\\"100%\\"} {\\"flexGrow\\":1}",
+  "style": Object {
+    "borderBottomWidth": 24,
+    "borderLeftWidth": 12,
+    "borderRightWidth": 12,
+    "borderTopWidth": 0,
+  },
+}
+`;

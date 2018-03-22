@@ -9,23 +9,14 @@ describe('Col', () => {
 
   it('should render a Grid with col margins ([0, 1.5, 3])', () => {
     wrapper = mount(<Col />)
-    const gridProps = wrapper.find('Grid').props()
-
-    expect(gridProps.marginTop).toBe(0)
-    expect(gridProps.marginRight).toBe(1.5)
-    expect(gridProps.marginBottom).toBe(3)
-    expect(gridProps.marginLeft).toBe(1.5)
+    const gridProps = wrapper.find('div').props()
+    expect(gridProps).toMatchSnapshot()
   })
 
   it('should override defaults when passing margin prop', () => {
     wrapper = mount(<Col margin={1} />)
     const gridProps = wrapper.find('Grid').props()
-
-    expect(gridProps.marginTop).not.toBeDefined()
-    expect(gridProps.marginRight).not.toBeDefined()
-    expect(gridProps.marginBottom).not.toBeDefined()
-    expect(gridProps.marginLeft).not.toBeDefined()
-    expect(gridProps.margin).toEqual(1)
+    expect(gridProps).toMatchSnapshot()
   })
 
   it('should render custom elements', () => {
