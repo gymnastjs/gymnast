@@ -27,6 +27,20 @@ describe('asLayout', () => {
     expect(spy).toHaveBeenCalledWith(wrapper.find('div').instance())
   })
 
+  it('should allow custom defaults', () => {
+    const CustomLayout = asLayout('strong', () => ({
+      marginTop: 2,
+      marginBottom: 1.5,
+    }))
+
+    wrapper = mount(<CustomLayout />)
+
+    expect(wrapper.find('strong').props().style).toEqual({
+      borderBottomWidth: 12,
+      borderTopWidth: 16,
+    })
+  })
+
   afterEach(() => {
     if (wrapper) {
       wrapper.unmount()
