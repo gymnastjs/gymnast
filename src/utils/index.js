@@ -118,7 +118,7 @@ export function getCSS(
 
 export function parseSpacing(
   spacing: any,
-  spacingAliases?: SpacingAliases
+  spacingAliases: SpacingAliases
 ): number[] | void {
   if (typeof spacing === 'undefined') {
     return undefined
@@ -133,7 +133,6 @@ export function parseSpacing(
   } else if (typeof spacing === 'string') {
     spacingArray = spacing.split(splitPattern)
   }
-
   if (spacingArray) {
     return replaceSpacingAliases(spacingArray, spacingAliases).map(parseFloat)
   }
@@ -144,7 +143,7 @@ export function parseSpacing(
 
 function replaceSpacingAlias(
   value: SpacingValues,
-  spacingAliases: SpacingAliases = defaults.spacingAliases
+  spacingAliases: SpacingAliases
 ) {
   if (spacingAliases && typeof value === 'string' && value in spacingAliases) {
     return spacingAliases[value]
@@ -154,19 +153,22 @@ function replaceSpacingAlias(
 
 export function replaceSpacingAliases(
   spacingArray: Array<SpacingValues>,
-  spacingAliases?: SpacingAliases
+  spacingAliases: SpacingAliases
 ): Array<SpacingValues> {
   return spacingArray.map(value => replaceSpacingAlias(value, spacingAliases))
 }
 
-function replaceSpacingAliasValues(
-  spacingObject: { [string]: SpacingValues },
-  spacingAliases?: SpacingAliases
-): { [string]: SpacingValues } {
-  return Object.keys(spacingObject).reduce(
+function replaceSpacingAliasValues({
+  props,
+  spacingAliases,
+}: {
+  props: { [string]: SpacingValues },
+  spacingAliases: SpacingAliases,
+}): { [string]: SpacingValues } {
+  return Object.keys(props).reduce(
     (acc, key) => ({
       ...acc,
-      [key]: replaceSpacingAlias(spacingObject[key], spacingAliases),
+      [key]: replaceSpacingAlias(props[key], spacingAliases),
     }),
     {}
   )
@@ -176,16 +178,27 @@ type CombineSpacingSettings = {
   spacingProps: SpacingProps,
   base: number,
   spacingAliases?: SpacingAliases,
+  gutter: number,
+  verticalGutter: number,
 }
 
 export function combineSpacing({
   spacingProps,
   base,
   spacingAliases,
+  gutter = defaults.gutter,
+  verticalGutter = defaults.verticalGutter,
 }: CombineSpacingSettings) {
+  const combinedSpacingAliases = {
+    ...defaults.spacingAliases,
+    ...spacingAliases,
+    gutter,
+    'gutter/2': gutter / 2,
+    verticalGutter,
+  }
   const { margin, padding, ...props } = spacingProps
-  const marginArray = parseSpacing(margin, spacingAliases)
-  const paddingArray = parseSpacing(padding, spacingAliases)
+  const marginArray = parseSpacing(margin, combinedSpacingAliases)
+  const paddingArray = parseSpacing(padding, combinedSpacingAliases)
 
   if (
     !validateSpacingProps({
@@ -198,7 +211,10 @@ export function combineSpacing({
   }
 
   const flatProps = {
-    ...replaceSpacingAliasValues(props, spacingAliases),
+    ...replaceSpacingAliasValues({
+      props,
+      spacingAliases: combinedSpacingAliases,
+    }),
     ...getSpacing(marginArray, 'margin'),
     ...getSpacing(paddingArray, 'padding'),
   }
