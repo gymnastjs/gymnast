@@ -5,6 +5,7 @@ import type {
   OneResolutionLayout,
   ConfigProviderContext,
   LayoutProps,
+  OneResolution,
 } from '../types'
 import getStyles from './layout.styles'
 import getCoreStyles from '../core'
@@ -14,7 +15,10 @@ import withResolution from '../withResolution'
 const resolutionProperties = ['fixed', 'height', 'overflow']
 
 export default function asLayout(
-  Component: React.ComponentType<*> | string
+  Component: React.ComponentType<*> | string,
+  mapDefaultProps?: (
+    props: $Shape<OneResolution>
+  ) => $Shape<OneResolution> = props => props
 ): React.ComponentType<LayoutProps> {
   function Layout(
     {
@@ -27,7 +31,7 @@ export default function asLayout(
     }: OneResolutionLayout,
     context: ConfigProviderContext
   ) {
-    const props = getCoreStyles(restProps, context)
+    const props = getCoreStyles(mapDefaultProps(restProps), context)
     const styles = getStyles(getValues(context, restProps))
     const classes = compact([
       className,

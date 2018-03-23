@@ -1,5 +1,5 @@
 // @flow
-import { combineSpacing, getValue } from '../utils'
+import { combineSpacing, getValues } from '../utils'
 import type { ConfigProviderContext, OneResolution } from '../types'
 
 export default function getCoreStyles(
@@ -22,6 +22,13 @@ export default function getCoreStyles(
     ...restProps
   } = props
 
+  const {
+    gutter,
+    verticalGutter,
+    base: contextBase,
+    spacingAliases,
+  } = getValues(context, props)
+
   const spacing = combineSpacing({
     spacingProps: {
       margin,
@@ -35,8 +42,10 @@ export default function getCoreStyles(
       paddingBottom,
       paddingLeft,
     },
-    base: getValue(context, 'base', base),
-    spacingAliases: getValue(context, 'spacingAliases'),
+    base: base === undefined ? contextBase : base,
+    spacingAliases,
+    gutter,
+    verticalGutter,
   })
 
   const spacingStyles = { ...style, ...spacing }

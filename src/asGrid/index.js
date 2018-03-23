@@ -5,6 +5,7 @@ import type {
   OneResolutionGrid,
   ConfigProviderContext,
   GridProps,
+  OneResolution,
 } from '../types'
 import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
@@ -14,7 +15,10 @@ import withResolution from '../withResolution'
 const resolutionProperties = ['align', 'justify', 'size']
 
 export default function asGrid(
-  Component: React.ComponentType<*> | string
+  Component: React.ComponentType<*> | string,
+  mapDefaultProps?: (
+    props: $Shape<OneResolution>
+  ) => $Shape<OneResolution> = props => props
 ): React.ComponentType<GridProps> {
   function Grid(
     {
@@ -27,7 +31,7 @@ export default function asGrid(
     }: OneResolutionGrid,
     context: ConfigProviderContext
   ) {
-    const props = getCoreStyles(restProps, context)
+    const props = getCoreStyles(mapDefaultProps(restProps), context)
     const classes = compact([
       styles.grid,
       getCol(size, getValue(context, 'columns')),

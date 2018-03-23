@@ -130,6 +130,24 @@ describe('combineSpacing', () => {
       borderLeftWidth: 0,
     })
   })
+
+  it('should use gutter for spacing props', () => {
+    expect(
+      combineSpacing({
+        spacingProps: {
+          margin: ['gutter', 'verticalGutter', 'gutter/2', 'verticalGutter'],
+        },
+        gutter: 3,
+        verticalGutter: 3,
+        base,
+      })
+    ).toEqual({
+      borderTopWidth: base * 3,
+      borderRightWidth: base * 3,
+      borderBottomWidth: base * 1.5,
+      borderLeftWidth: base * 3,
+    })
+  })
 })
 
 describe('validateSpacingProps', () => {
