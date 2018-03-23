@@ -24,7 +24,12 @@ export const kebabCase = (str: string) =>
     .replace(/^[A-Z]/, match => match.toLowerCase())
     .replace(/[A-Z]/g, match => `-${match.toLowerCase()}`)
 
-export function validateSpacingProps(props: SpacingProps) {
+export function validateSpacingProps(
+  props: SpacingProps & {
+    marginArray?: Array<number>,
+    paddingArray?: Array<number>,
+  }
+) {
   if (process.env.NODE_ENV === 'production') {
     return true
   }
