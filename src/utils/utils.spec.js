@@ -135,17 +135,17 @@ describe('combineSpacing', () => {
     expect(
       combineSpacing({
         spacingProps: {
-          margin: ['gutter', 'verticalGutter', 'gutter/2', 'verticalGutter'],
+          margin: ['verticalGutter/2', 'gutter', 'verticalGutter', 'gutter/2'],
         },
         gutter: 3,
-        verticalGutter: 3,
+        verticalGutter: 4,
         base,
       })
     ).toEqual({
-      borderTopWidth: base * 3,
+      borderTopWidth: base * 4 / 2,
       borderRightWidth: base * 3,
-      borderBottomWidth: base * 1.5,
-      borderLeftWidth: base * 3,
+      borderBottomWidth: base * 4,
+      borderLeftWidth: base * 3 / 2,
     })
   })
 })
