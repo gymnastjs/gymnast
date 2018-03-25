@@ -200,6 +200,7 @@ export function combineSpacing({
     gutter,
     'gutter/2': gutter / 2,
     verticalGutter,
+    'verticalGutter/2': verticalGutter / 2,
   }
   const { margin, padding, ...props } = spacingProps
   const marginArray = parseSpacing(margin, combinedSpacingAliases)
