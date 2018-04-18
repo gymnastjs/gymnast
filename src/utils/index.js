@@ -17,7 +17,7 @@ const isDefined = val => typeof val !== 'undefined'
 
 export const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 export const noop: Noop = () => null
-export const times = (n: number) =>
+export const times = (n: number): Array<*> =>
   new Array(n).fill(undefined).map((val, index) => index)
 export const kebabCase = (str: string) =>
   str
