@@ -11,17 +11,38 @@ export default () => {
   const base = number('Base', 8, { range: true, min: 1, max: 24 })
 
   return (
-    <ConfigProvider
-      base={base}
-      maxPageWidth={max}
-      minPageWidth={min}
-      pageMargin={{ small: pageMargin, medium: pageMargin, large: pageMargin }}
-    >
-      <Layout height="parent">
-        <Root>
-          <Col style={colors.colors1}>Full Width</Col>
-        </Root>
-      </Layout>
-    </ConfigProvider>
+    <React.Fragment>
+      <ConfigProvider
+        base={base}
+        maxPageWidth={max}
+        minPageWidth={min}
+        pageMargin={{
+          small: pageMargin,
+          medium: pageMargin,
+          large: pageMargin,
+        }}
+      >
+        <Layout height="parent">
+          <Root>
+            <Col style={colors.colors1}>Full Width</Col>
+          </Root>
+        </Layout>
+      </ConfigProvider>
+      <ConfigProvider
+        base={base}
+        maxPageWidth="none"
+        pageMargin={{
+          small: pageMargin,
+          medium: pageMargin,
+          large: pageMargin,
+        }}
+      >
+        <Layout height="parent">
+          <Root marginTop="L">
+            <Col style={colors.colors1}>Full Width (No Limit)</Col>
+          </Root>
+        </Layout>
+      </ConfigProvider>
+    </React.Fragment>
   )
 }

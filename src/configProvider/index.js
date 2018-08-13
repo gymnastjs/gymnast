@@ -15,7 +15,7 @@ type Props = {
   displayAliases?: DisplayAliases,
   fallbackDisplayKey?: string,
   gutter?: number,
-  maxPageWidth?: number,
+  maxPageWidth?: number | 'none',
   minPageWidth?: number,
   pageMargin?: {
     [string]: number,
@@ -31,7 +31,7 @@ export const ConfigContextPropTypes = {
     displayAliases: PropTypes.shape({}),
     fallbackDisplayKey: PropTypes.string,
     gutter: PropTypes.number,
-    maxPageWidth: PropTypes.number,
+    maxPageWidth: PropTypes.oneOf([PropTypes.number, 'none']),
     minPageWidth: PropTypes.number,
     pageMargin: PropTypes.shape({}),
     spacingAliases: PropTypes.shape({}),
