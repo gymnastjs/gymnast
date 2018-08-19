@@ -6,12 +6,14 @@ import { colors } from '../../shared'
 class Button extends React.Component<*, { counter: number }> {
   state = { counter: 0 }
 
-  onClick = () => this.setState({ counter: this.state.counter + 1 })
+  onClick = () => this.setState(({ counter }) => ({ counter: counter + 1 }))
 
   render() {
+    const { counter } = this.state
+
     return (
       <Grid onClick={this.onClick} {...this.props} size={1}>
-        {this.state.counter}
+        {counter}
       </Grid>
     )
   }

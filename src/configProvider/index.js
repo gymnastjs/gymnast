@@ -41,6 +41,7 @@ export const ConfigContextPropTypes = {
 
 export default class ConfigProvider extends React.Component<Props> {
   static contextTypes = ConfigContextPropTypes
+
   static childContextTypes = ConfigContextPropTypes
 
   getChildContext(): ConfigProviderContext {
@@ -59,7 +60,10 @@ export default class ConfigProvider extends React.Component<Props> {
       },
     }
   }
+
   render() {
-    return this.props.children || null
+    const { children = null } = this.props
+
+    return children
   }
 }

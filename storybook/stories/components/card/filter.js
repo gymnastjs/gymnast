@@ -61,10 +61,10 @@ export default () => {
                     <p>{loremIpsum.substr(0, 100)}</p>
                   </Grid>
                   <Grid size={4} margin="0 L/2 L 0">
-                    <button>Cancel</button>
+                    <button type="button">Cancel</button>
                   </Grid>
                   <Grid size={4} margin="0 0 L L/2">
-                    <button>Filter</button>
+                    <button type="button">Filter</button>
                   </Grid>
                 </Grid>
               </Grid>

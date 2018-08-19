@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Root, Grid, Layout, Col } from 'gymnast'
 import { loremIpsum, colors } from '../../shared'
 import styles from './report.css'
-import { page } from './layout.css'
+import layoutStyles from './layout.css'
 
 function P(props) {
   return (
@@ -46,7 +46,7 @@ function Card({
 
 export default function() {
   return (
-    <Layout height="parent" className={page}>
+    <Layout height="parent" className={layoutStyles.page}>
       <Layout fixed="top">
         <Layout style={colors.colors1}>
           <Root>
@@ -126,7 +126,10 @@ export default function() {
                 <P>Text F</P>
                 <Card height={210}>Final Block</Card>
                 <Card>Ok last one</Card>
-                <P>{loremIpsum.substr(0, 250)}...</P>
+                <P>
+                  {loremIpsum.substr(0, 250)}
+                  ...
+                </P>
               </Grid>
               <Grid size={4} className={styles.clippy} padding="0 L/2">
                 <Grid

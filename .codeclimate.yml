@@ -5,21 +5,20 @@ engines:
     enabled: true
 ratings:
   paths:
-  - "**/*.sh"
-  - "**/*.css"
-  - "**/*.js"
-  - "src/*"
-  - "src/**/*"
-  - "test/*"
-  - "test/**/*"
-  - "stories/*"
-  - "stories/**/*"
-  - "scripts/*"
+    - '**/*.sh'
+    - '**/*.js'
+    - 'src/*'
+    - 'src/**/*'
+    - 'test/*'
+    - 'test/**/*'
+    - 'stories/*'
+    - 'stories/**/*'
+    - 'scripts/*'
 exclude_patterns:
-  - "**/node_modules/"
-  - "**/__screenshots__/"
-  - "**/__snapshots__/"
-  - "storybook/stories/"
-  - "flow-typed/"
-  - "**/*.spec.js"
-  - "test/env.js"
+  - '**/node_modules/'
+  - '**/__screenshots__/'
+  - '**/__snapshots__/'
+  - 'storybook/stories/'
+  - 'flow-typed/'
+  - '**/*.spec.js'
+  - 'test/env.js'

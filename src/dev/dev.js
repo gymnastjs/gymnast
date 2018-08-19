@@ -59,12 +59,14 @@ export default class Dev extends React.Component<Props, State> {
       shiftKeyPressedOrNotRequired &&
       keyCode === pressedKey
     ) {
-      this.setState({ showOverlay: !this.state.showOverlay })
+      this.setState(({ showOverlay }) => ({ showOverlay: !showOverlay }))
     }
   }
 
   render() {
-    if (!this.state.showOverlay) {
+    const { showOverlay } = this.state
+
+    if (!showOverlay) {
       return null
     }
     const values = getValues(this.context)

@@ -66,7 +66,7 @@ export function getCol(size: string | number | void, columns: number) {
   }
 
   return cxs({
-    flexBasis: `${parseInt(size, 10) / columns * 100}%`,
-    maxWidth: `${parseInt(size, 10) / columns * 100}%`,
+    flexBasis: `${(parseInt(size, 10) / columns) * 100}%`,
+    maxWidth: `${(parseInt(size, 10) / columns) * 100}%`,
   })
 }

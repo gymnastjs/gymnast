@@ -13,8 +13,8 @@ import errors from '../errors'
 
 const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
 const isDefined = val => typeof val !== 'undefined'
-// regex case examples: https://regex101.com/r/bs73rZ/1
 
+// regex case examples: https://regex101.com/r/bs73rZ/1
 export const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 export const noop: Noop = () => null
 export const times = (n: number): Array<*> =>
@@ -99,7 +99,8 @@ export function getCSS(
 
   if (typeof value === 'undefined') {
     return {}
-  } else if (prop.includes('padding')) {
+  }
+  if (prop.includes('padding')) {
     return { [prop]: num * base }
   }
 

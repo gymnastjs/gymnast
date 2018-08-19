@@ -14,6 +14,3 @@ rm -f dist/{,**/}*.flow
 
 # Remove spec files
 rm -f dist/{,**/}*.spec.js.flow
-
-# Remove *.css.flow files content (but keep the files)
-ls dist | grep 'css.flow' | xargs -I file sh -c "echo '' > ./dist/file"

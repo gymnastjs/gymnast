@@ -12,19 +12,29 @@ export default () => {
     <Layout height="parent">
       <Root>
         <Grid>
-          {times(12, i => <Box key={i} size={1} type="A" value="1" />)}
+          {times(12, i => (
+            <Box key={i} size={1} type="A" value="1" />
+          ))}
         </Grid>
         <Grid>
-          {times(6, i => <Box key={i} size={2} type="A" value="2" />)}
+          {times(6, i => (
+            <Box key={i} size={2} type="A" value="2" />
+          ))}
         </Grid>
         <Grid>
-          {times(4, i => <Box key={i} size={3} type="A" value="3" />)}
+          {times(4, i => (
+            <Box key={i} size={3} type="A" value="3" />
+          ))}
         </Grid>
         <Grid>
-          {times(3, i => <Box key={i} size={4} type="A" value="4" />)}
+          {times(3, i => (
+            <Box key={i} size={4} type="A" value="4" />
+          ))}
         </Grid>
         <Grid>
-          {times(2, i => <Box key={i} size={6} type="A" value="6" />)}
+          {times(2, i => (
+            <Box key={i} size={6} type="A" value="6" />
+          ))}
         </Grid>
         <Grid>
           <Box type="A" value="Auto" />
