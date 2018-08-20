@@ -45,7 +45,6 @@
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
     "babel-runtime": "6.26.0",
-    "bithound": "1.7.0",
     "bundlesize": "0.16.0",
     "clean-webpack-plugin": "0.1.18",
     "codeclimate-test-reporter": "0.5.0",
@@ -73,7 +72,6 @@
     "husky": "0.14.3",
     "ignore-loader": "0.1.2",
     "jest": "22.3.0",
-    "lint-staged": "6.1.0",
     "lodash": "4.17.5",
     "markdown-loader": "2.0.2",
     "nightwatch": "0.9.19",
@@ -102,12 +100,6 @@
     "stylelint": "8.4.0",
     "webpack": "3.11.0",
     "webpack-bundle-analyzer": "2.10.0"
-  },
-  "lint-staged": {
-    "*.{js,css}": [
-      "format",
-      "git add"
-    ]
   },
   "bundlesize": [
     {
@@ -146,11 +138,9 @@
     "lint:flow": "flow stop && flow --show-all-errors --include-warnings",
     "lint:js": "eslint scripts src stories storybook test",
     "lint": "npm-run-all --parallel lint:*",
-    "precommit": "lint-staged",
     "start:storybook": "picturebook -p 9001 -s ./static -c node_modules/picturebook/config",
     "start:webpack": "yarn build:dev --watch",
     "start": "npm-run-all --parallel start:*",
-    "test:bithound": "bithound check git@github.com:gymnastjs/gymnast.git",
     "test:image": "picturebook-image --env iphone7,ie11,safari,firefox,edge,chrome --suiteRetries 3",
     "test:size": "bundlesize",
     "test": "jest",
