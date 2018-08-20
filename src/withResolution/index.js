@@ -45,35 +45,35 @@ export default function withResolution(
       super(props)
       const queries = this.getQueries(props.show)
 
-      this.state = {
-        shouldShow: checkShouldShow(queries),
-      }
+      this.state = { shouldShow: checkShouldShow(queries) }
     }
 
     componentDidMount() {
-      this.addMediaQueryListener(this.props.show)
+      const { show } = this.props
+
+      this.addMediaQueryListener(show)
     }
 
-    componentWillReceiveProps({ show }: Props) {
-      if (show !== this.props.show) {
-        this.removeMediaQueryListener(this.props.show)
-        this.addMediaQueryListener(show)
+    componentWillReceiveProps(nextProps: Props) {
+      const { show } = this.props
+
+      if (nextProps.show !== show) {
+        this.removeMediaQueryListener(show)
+        this.addMediaQueryListener(nextProps.show)
       }
     }
 
     componentWillUnmount() {
-      this.removeMediaQueryListener(this.props.show)
+      const { show } = this.props
+
+      this.removeMediaQueryListener(show)
     }
 
     onMediaQueryChange = (mq?: any = {}, alias: string) => {
-      const show = this.state.shouldShow || {}
-      if (show[alias] !== mq.matches) {
-        this.setState({
-          shouldShow: {
-            ...show,
-            [alias]: mq.matches,
-          },
-        })
+      const { shouldShow = {} } = this.state
+
+      if (shouldShow[alias] !== mq.matches) {
+        this.setState({ shouldShow: { ...shouldShow, [alias]: mq.matches } })
       }
     }
 
@@ -88,8 +88,10 @@ export default function withResolution(
       return getMediaQueries(queries, displayAliases)
     }
 
+    /* eslint-disable react/destructuring-assignment */
     anyPropsUseResolutionFormat = () =>
       combinedResolutionKeys.some(key => isObject(this.props[key]))
+    /* eslint-enable react/destructuring-assignment */
 
     removeMediaQueryListener = (show?: DisplayValues) => {
       const queries = this.getQueries(show)
@@ -108,17 +110,16 @@ export default function withResolution(
     }
 
     render() {
-      if (
-        this.props.show &&
-        this.state.shouldShow &&
-        !hasTrueValues(this.state.shouldShow)
-      ) {
+      const { show } = this.props
+      const { shouldShow } = this.state
+
+      if (show && shouldShow && !hasTrueValues(shouldShow)) {
         return null
       }
 
       const props = getSingleResolutionProps({
         props: this.props,
-        shouldShow: this.state.shouldShow,
+        shouldShow,
         resolutionKeys: combinedResolutionKeys,
         fallbackDisplayKey: getValue(this.context, 'fallbackDisplayKey'),
       })

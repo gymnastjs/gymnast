@@ -1,12 +1,12 @@
 machine:
   environment:
-    TARGET_URL: "https://gymnastjs.github.io/gymnast/branch/$CIRCLE_BRANCH"
+    TARGET_URL: 'https://gymnastjs.github.io/gymnast/branch/$CIRCLE_BRANCH'
   node:
-    version: 9.5.0
+    version: 10.9.0
 general:
   artifacts:
-    - "dist"
-    - "coverage"
+    - 'dist'
+    - 'coverage'
     - test/screenshot/images
   branches:
     ignore:

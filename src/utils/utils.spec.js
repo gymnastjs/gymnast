@@ -142,10 +142,10 @@ describe('combineSpacing', () => {
         base,
       })
     ).toEqual({
-      borderTopWidth: base * 4 / 2,
+      borderTopWidth: (base * 4) / 2,
       borderRightWidth: base * 3,
       borderBottomWidth: base * 4,
-      borderLeftWidth: base * 3 / 2,
+      borderLeftWidth: (base * 3) / 2,
     })
   })
 })

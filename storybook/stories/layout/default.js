@@ -19,7 +19,8 @@ export default () => {
                 style={colors[`colors${key % 2 === 0 ? 2 : 4}`]}
                 padding="L"
               >
-                {loremIpsum.slice(0, 150 * (key % 3 + 1))}...
+                {loremIpsum.slice(0, 150 * ((key % 3) + 1))}
+                ...
               </Grid>
             </Grid>
           </Root>

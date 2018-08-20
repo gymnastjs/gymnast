@@ -1,2 +1,2 @@
 // @preval
-module.exports = require('../errors')
+module.exports = require('./errors')
