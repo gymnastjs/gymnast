@@ -1,12 +1,12 @@
 machine:
   environment:
-    TARGET_URL: "https://gymnastjs.github.io/gymnast/branch/$CIRCLE_BRANCH"
+    TARGET_URL: 'https://gymnastjs.github.io/gymnast/branch/$CIRCLE_BRANCH'
   node:
     version: 9.5.0
 general:
   artifacts:
-    - "dist"
-    - "coverage"
+    - 'dist'
+    - 'coverage'
     - test/screenshot/images
   branches:
     ignore:
@@ -22,6 +22,7 @@ test:
   override:
     - yarn build
     - scripts/citests.sh:
+        timeout: 900
         parallel: true
 deployment:
   publish:
