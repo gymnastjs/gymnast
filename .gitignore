@@ -12,3 +12,4 @@ selenium-debug.log
 nohup.out
 temp.png
 package-lock.json
+*.swp
