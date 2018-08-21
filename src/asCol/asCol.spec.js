@@ -26,7 +26,7 @@ describe('Col', () => {
     expect(wrapper.find('strong').length).toBe(1)
   })
 
-  fit('should not error when passed valid props', () => {
+  it('should not error when passed valid props', () => {
     spyOn(log, 'error')
 
     wrapper = mount(<Col margin={0} />)

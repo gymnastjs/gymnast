@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { mount } from 'enzyme'
 import log from '../log'
@@ -11,7 +12,7 @@ import { unregister, register } from './mediaQuery'
 
 describe('withResolution', () => {
   let wrapper
-  const Fruit = ({ fruit }) => <div>{fruit}</div>
+  const Fruit = ({ fruit }: {| +fruit: string |}) => <div>{fruit}</div>
 
   it('should be a pass through if matchMedia is not supported', () => {
     spyOn(log, 'warn')

@@ -1,7 +1,8 @@
 // @flow
+/* eslint-disable react/no-unused-prop-types */
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import type {
+  Context,
   ConfigProviderContext,
   DisplayAliases,
   SpacingAliases,
@@ -24,42 +25,27 @@ type Props = {
   verticalGutter?: number,
 }
 
-export const ConfigContextPropTypes = {
-  gymnast: PropTypes.shape({
-    base: PropTypes.number,
-    columns: PropTypes.number,
-    displayAliases: PropTypes.shape({}),
-    fallbackDisplayKey: PropTypes.string,
-    gutter: PropTypes.number,
-    maxPageWidth: PropTypes.oneOf([PropTypes.number, 'none']),
-    minPageWidth: PropTypes.number,
-    pageMargin: PropTypes.shape({}),
-    spacingAliases: PropTypes.shape({}),
-    verticalGutter: PropTypes.number,
-  }),
-}
+/* eslint-disable flowtype/generic-spacing */
+export const configProviderContext: Context<
+  ConfigProviderContext
+> = React.createContext({})
+/* eslint-enable flowtype/generic-spacing */
 
-export default class ConfigProvider extends React.Component<Props> {
-  static contextTypes = ConfigContextPropTypes
-  static childContextTypes = ConfigContextPropTypes
-
-  getChildContext(): ConfigProviderContext {
-    const {
-      gutter = defaults.gutter,
-      verticalGutter = gutter,
-      children,
-      ...props
-    } = this.props
-
-    return {
-      gymnast: {
+export default function ConfigProvider({
+  gutter = defaults.gutter,
+  verticalGutter = gutter,
+  children,
+  ...props
+}: Props) {
+  return (
+    <configProviderContext.Provider
+      value={{
         gutter,
         verticalGutter,
         ...props,
-      },
-    }
-  }
-  render() {
-    return this.props.children || null
-  }
+      }}
+    >
+      {children}
+    </configProviderContext.Provider>
+  )
 }

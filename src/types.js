@@ -124,3 +124,16 @@ export type LayoutProps = {
   height?: Height | { [string]: Height },
   overflow?: Overflow | { [string]: Overflow },
 }
+
+type Provider<T> = React.Component<{
+  value: T,
+  children?: React.Node,
+}>
+type Consumer<T> = React.Component<{
+  children: (value: T) => React.Node,
+}>
+
+export type Context<T> = {
+  Provider: Provider<T>,
+  Consumer: Consumer<T>,
+}

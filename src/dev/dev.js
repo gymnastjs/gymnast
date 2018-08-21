@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-import { ConfigContextPropTypes } from '../configProvider'
+import { configProviderContext } from '../configProvider'
 import getStyles from './dev.styles'
 import {
   body,
@@ -31,8 +31,6 @@ export default class Dev extends React.Component<Props, State> {
     useCtrl: true,
     useShift: true,
   }
-
-  static contextTypes = ConfigContextPropTypes
 
   state = {
     showOverlay: false,
@@ -67,25 +65,32 @@ export default class Dev extends React.Component<Props, State> {
     if (!this.state.showOverlay) {
       return null
     }
-    const values = getValues(this.context)
-    const styles = getStyles(values)
-    const content = (
-      <Layout className={styles.gymnastOverlay}>
-        <div className={styles.leftMargin} />
-        <Root>
-          {times(values.columns).map(key => (
-            <Grid
-              margin={[0, values.gutter / 2]}
-              key={key}
-              size={1}
-              className={styles.col}
-            />
-          ))}
-        </Root>
-        <div className={styles.rightMargin} />
-      </Layout>
-    )
 
-    return ReactDOM.createPortal(content, getDevContainer())
+    return (
+      <configProviderContext.Consumer>
+        {context => {
+          const values = getValues(context)
+          const styles = getStyles(values)
+          const content = (
+            <Layout className={styles.gymnastOverlay}>
+              <div className={styles.leftMargin} />
+              <Root>
+                {times(values.columns).map(key => (
+                  <Grid
+                    margin={[0, values.gutter / 2]}
+                    key={key}
+                    size={1}
+                    className={styles.col}
+                  />
+                ))}
+              </Root>
+              <div className={styles.rightMargin} />
+            </Layout>
+          )
+
+          return ReactDOM.createPortal(content, getDevContainer())
+        }}
+      </configProviderContext.Consumer>
+    )
   }
 }
