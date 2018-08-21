@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
 import Grid from '../grid'
-import ConfigProvider from './index'
+import ConfigProvider, { configProviderContext } from './index'
 
 describe('ConfigProvider', () => {
   let wrapper
@@ -26,11 +26,19 @@ describe('ConfigProvider', () => {
   })
 
   it('should define gymnast context', () => {
-    wrapper = mount(<ConfigProvider />)
+    let context
 
-    expect(wrapper.context()).toEqual({
-      gymnast: undefined,
-    })
+    wrapper = mount(
+      <ConfigProvider>
+        <configProviderContext.Consumer>
+          {_context => {
+            context = _context
+          }}
+        </configProviderContext.Consumer>
+      </ConfigProvider>
+    )
+
+    expect(context).toEqual({ gutter: 3, verticalGutter: 3 })
   })
 
   afterEach(() => {
