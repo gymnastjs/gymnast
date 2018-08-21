@@ -71,7 +71,7 @@
     "markdown-loader": "2.0.2",
     "nightwatch": "0.9.19",
     "npm-run-all": "4.1.2",
-    "picturebook": "1.2.6",
+    "picturebook": "1.2.4",
     "polished": "1.9.2",
     "postcss-cssnext": "3.1.0",
     "postcss-import": "11.1.0",
