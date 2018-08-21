@@ -59,6 +59,18 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "jeffwklein",
+      "name": "Jeffrey Klein",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4695062?v=4",
+      "profile": "http://jeffwklein",
+      "contributions": [
+        "bug",
+        "code",
+        "test"
+      ]
     }
-  ]
+  ],
+  "repoType": "github"
 }

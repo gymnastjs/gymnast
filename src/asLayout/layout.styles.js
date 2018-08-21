@@ -47,12 +47,15 @@ export default function getStyles({ maxPageWidth, minPageWidth, base }: *) {
     },
   }
 
-  const layoutStyles = cxs({
-    ...raw.layout,
-    [` > :not(.${layoutRefClassName})`]: {
+  const styleObj = { ...raw.layout }
+
+  if (maxPageWidth !== 'none') {
+    styleObj[` > :not(.${layoutRefClassName})`] = {
       maxWidth: `${maxPageWidth * base}px`,
-    },
-  })
+    }
+  }
+
+  const layoutStyles = cxs(styleObj)
 
   const styles = {}
 

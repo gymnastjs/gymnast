@@ -11,3 +11,4 @@ selenium-server-standalone-*
 selenium-debug.log
 nohup.out
 temp.png
+*.swp
