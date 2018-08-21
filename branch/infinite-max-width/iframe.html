@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +8,11 @@
     <base target="_parent">
     <script>
         if (window.parent !== window) {
-            window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+            try {
+                window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+            } catch (error) {
+                // The above line can throw if we do not have access to the parent frame -- i.e. cross origin
+            }
         }
     </script>
     <title>Storybook</title>
@@ -34,8 +39,10 @@
 </style>
 
 </head>
+
 <body>
-<div id="root"></div>
-<div id="error-display"></div>
-<script type="text/javascript" src="static/preview.68f7a506cb21c4b54531.bundle.js"></script></body>
+    <div id="root"></div>
+    <div id="error-display"></div>
+<script type="text/javascript" src="static/preview.5c6982eb08eeb2cefa56.bundle.js"></script></body>
+
 </html>
