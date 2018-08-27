@@ -48,21 +48,23 @@ export type DisplayAliases = {
   +[displayAlias: string]: DisplayProperties | Array<DisplayProperties>,
 }
 
-export type ConfigProviderContext = {
-  +gymnast?: {|
-    +base?: number,
-    +columns?: number,
-    +displayAliases?: DisplayAliases,
-    +fallbackDisplayKey?: string,
-    +gutter?: number,
-    +maxPageWidth?: number | 'none',
-    +minPageWidth?: number,
-    +pageMargin?: {
-      [string]: number,
-    },
-    +spacingAliases?: SpacingAliases,
-    +verticalGutter?: number,
-  |},
+export type ConfigPropsType = {|
+  +base?: number,
+  +columns?: number,
+  +displayAliases?: DisplayAliases,
+  +fallbackDisplayKey?: string,
+  +gutter?: number,
+  +maxPageWidth?: number | 'none',
+  +minPageWidth?: number,
+  +pageMargin?: {
+    [string]: number,
+  },
+  +spacingAliases?: SpacingAliases,
+  +verticalGutter?: number,
+|}
+
+export type ConfigContextType = {
+  +gymnast?: {| ...ConfigPropsType |},
 }
 
 export type OneResolution = {
@@ -102,6 +104,7 @@ export type OneResolutionGrid = {
   align?: AlignGrid,
   justify?: Justify,
   size?: Size,
+  context?: ConfigContextType,
 }
 
 export type OneResolutionLayout = {
@@ -109,6 +112,7 @@ export type OneResolutionLayout = {
   fixed?: Fixed,
   height?: Height,
   overflow?: Overflow,
+  context?: ConfigContextType,
 }
 
 export type GridProps = {

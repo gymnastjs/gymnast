@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { ConfigProvider, Grid } from 'gymnast'
+import { ConfigContext, Grid } from 'gymnast'
 import { colors } from '../../shared'
 
 export default () => {
@@ -20,7 +20,7 @@ export default () => {
   }
 
   return (
-    <ConfigProvider displayAliases={displayAliases}>
+    <ConfigContext.Provider displayAliases={displayAliases}>
       <Grid justify="center">
         <Grid show="test" style={colors.colors1} margin="L" size={6}>
           <Grid justify="center" style={colors.colors2} padding="L">
@@ -33,6 +33,6 @@ export default () => {
           </Grid>
         </Grid>
       </Grid>
-    </ConfigProvider>
+    </ConfigContext.Provider>
   )
 }

@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { ConfigProvider, Grid } from 'gymnast'
+import { ConfigContext, Grid } from 'gymnast'
 import { colors } from '../../shared'
 
 export default () => {
@@ -10,7 +10,7 @@ export default () => {
   const items = number('Items', 20, { range: true, min: 1, max: 48 })
 
   return (
-    <ConfigProvider columns={columns}>
+    <ConfigContext.Provider columns={columns}>
       <Grid padding="0 L/2">
         {times(items, key => (
           <Grid key={key} padding="0 L/2 L" size={1}>
@@ -25,6 +25,6 @@ export default () => {
           </Grid>
         ))}
       </Grid>
-    </ConfigProvider>
+    </ConfigContext.Provider>
   )
 }
