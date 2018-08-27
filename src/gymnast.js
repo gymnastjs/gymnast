@@ -3,7 +3,7 @@ import './cxs'
 
 // Components
 export { default as Col } from './col'
-export { default as ConfigProvider } from './configProvider'
+export { default as ConfigContext } from './configContext'
 export { default as Grid } from './grid'
 export { default as Layout } from './layout'
 export { default as Offset } from './offset'

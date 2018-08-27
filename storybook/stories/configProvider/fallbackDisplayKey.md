@@ -12,10 +12,10 @@ This is fine when you have 2 or 3 breakpoints but it quickly becomes cumbersome.
 <Grid size={{ large: 2, default: 10 }}>
 ```
 
-Note that `'default'` is the default value for the `fallbackDisplayKey` prop but you can modify it using `<ConfigProvider />`. For instance:
+Note that `'default'` is the default value for the `fallbackDisplayKey` prop but you can modify it using `<ConfigContext />`. For instance:
 
 ```javascript
-<ConfigProvider fallbackDisplayKey="fallback">
+<ConfigContext.Provider fallbackDisplayKey="fallback">
   <Grid size={{ large: 2, fallback: 10 }}>
-</ConfigProvider>
+</ConfigContext.Provider>
 ```

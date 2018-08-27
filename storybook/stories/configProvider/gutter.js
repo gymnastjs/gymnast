@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
-import { ConfigProvider, Grid, Col } from 'gymnast'
+import { ConfigContext, Grid, Col } from 'gymnast'
 import { colors } from '../../shared'
 
 export default () => {
@@ -20,7 +20,11 @@ export default () => {
   })
 
   return (
-    <ConfigProvider gutter={gutter} verticalGutter={verticalGutter} base={base}>
+    <ConfigContext.Provider
+      gutter={gutter}
+      verticalGutter={verticalGutter}
+      base={base}
+    >
       <Grid padding="0 L/2">
         {times(6, key => (
           <Col key={key} size={4}>
@@ -35,6 +39,6 @@ export default () => {
           </Col>
         ))}
       </Grid>
-    </ConfigProvider>
+    </ConfigContext.Provider>
   )
 }

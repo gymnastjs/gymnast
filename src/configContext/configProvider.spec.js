@@ -1,22 +1,22 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
 import Grid from '../grid'
-import ConfigProvider from './index'
+import ConfigContext from './index'
 
-describe('ConfigProvider', () => {
+describe('ConfigContext', () => {
   let wrapper
 
   it('should not crash when empty', () => {
     expect(() => {
-      wrapper = mount(<ConfigProvider />)
+      wrapper = mount(<ConfigContext.Provider />)
     }).not.toThrow()
   })
 
   it('does not add additional DOM Elements', () => {
     wrapper = mount(
-      <ConfigProvider>
+      <ConfigContext.Provider>
         <Grid />
-      </ConfigProvider>
+      </ConfigContext.Provider>
     )
     const grid = mount(<Grid />)
 
@@ -26,7 +26,7 @@ describe('ConfigProvider', () => {
   })
 
   it('should define gymnast context', () => {
-    wrapper = mount(<ConfigProvider />)
+    wrapper = mount(<ConfigContext.Provider />)
 
     expect(wrapper.context()).toEqual({
       gymnast: undefined,
