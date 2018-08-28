@@ -13,6 +13,7 @@ import Grid from '../grid'
 import Root from '../root'
 import Layout from '../layout'
 import { getValues, times } from '../utils'
+import type { ConfigContextType } from '../types'
 
 const KEY_CODE_K = 'K'.charCodeAt(0)
 type Props = {|
@@ -61,37 +62,35 @@ export default class Dev extends React.Component<Props, State> {
     }
   }
 
+  renderDevContent = (context: ConfigContextType) => {
+    if (!this.state.showOverlay) {
+      return null
+    }
+    const values = getValues(context)
+    const styles = getStyles(values)
+    const content = (
+      <Layout className={styles.gymnastOverlay}>
+        <div className={styles.leftMargin} />
+        <Root>
+          {times(values.columns).map(key => (
+            <Grid
+              margin={[0, values.gutter / 2]}
+              key={key}
+              size={1}
+              className={styles.col}
+            />
+          ))}
+        </Root>
+        <div className={styles.rightMargin} />
+      </Layout>
+    )
+
+    return ReactDOM.createPortal(content, getDevContainer())
+  }
+
   render() {
-    const { showOverlay } = this.state
-
     return (
-      <ConfigContext.Consumer>
-        {context => {
-          if (!showOverlay) {
-            return null
-          }
-          const values = getValues(context)
-          const styles = getStyles(values)
-          const content = (
-            <Layout className={styles.gymnastOverlay}>
-              <div className={styles.leftMargin} />
-              <Root>
-                {times(values.columns).map(key => (
-                  <Grid
-                    margin={[0, values.gutter / 2]}
-                    key={key}
-                    size={1}
-                    className={styles.col}
-                  />
-                ))}
-              </Root>
-              <div className={styles.rightMargin} />
-            </Layout>
-          )
-
-          return ReactDOM.createPortal(content, getDevContainer())
-        }}
-      </ConfigContext.Consumer>
+      <ConfigContext.Consumer>{this.renderDevContent}</ConfigContext.Consumer>
     )
   }
 }

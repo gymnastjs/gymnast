@@ -6,7 +6,7 @@ import getStyles from './layout.styles'
 import getCoreStyles from '../core'
 import { getValues } from '../utils/index'
 import withResolution from '../withResolution'
-import ConfigContext from '../configContext'
+import withContext from '../withContext'
 
 const resolutionProperties = ['fixed', 'height', 'overflow']
 
@@ -40,11 +40,5 @@ export default function asLayout(
 
   const Resolution = withResolution(Layout, resolutionProperties)
 
-  const WithResolution = props => (
-    <ConfigContext.Consumer>
-      {context => <Resolution {...props} context={context} />}
-    </ConfigContext.Consumer>
-  )
-
-  return WithResolution
+  return withContext(Resolution)
 }

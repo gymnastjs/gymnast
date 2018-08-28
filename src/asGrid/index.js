@@ -6,7 +6,7 @@ import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
 import getCoreStyles from '../core'
 import withResolution from '../withResolution'
-import ConfigContext from '../configContext'
+import withContext from '../withContext'
 
 const resolutionProperties = ['align', 'justify', 'size']
 
@@ -39,11 +39,5 @@ export default function asGrid(
 
   const Resolution = withResolution(Grid, resolutionProperties)
 
-  const WithResolution = props => (
-    <ConfigContext.Consumer>
-      {context => <Resolution {...props} context={context} />}
-    </ConfigContext.Consumer>
-  )
-
-  return WithResolution
+  return withContext(Resolution)
 }

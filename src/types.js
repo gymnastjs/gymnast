@@ -83,6 +83,7 @@ export type OneResolution = {
   paddingTop?: SpacingValues,
   show?: DisplayValues,
   style?: { [string]: string | number },
+  context?: ConfigContextType,
 }
 
 type MultipleResolutionProps = {
@@ -104,7 +105,6 @@ export type OneResolutionGrid = {
   align?: AlignGrid,
   justify?: Justify,
   size?: Size,
-  context?: ConfigContextType,
 }
 
 export type OneResolutionLayout = {
@@ -112,7 +112,6 @@ export type OneResolutionLayout = {
   fixed?: Fixed,
   height?: Height,
   overflow?: Overflow,
-  context?: ConfigContextType,
 }
 
 export type GridProps = {
