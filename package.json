@@ -141,7 +141,6 @@
     "verifyConditions": "condition-circle"
   },
   "peerDependencies": {
-    "prop-types": ">=15",
     "react": ">=15",
     "react-dom": ">=15"
   },
