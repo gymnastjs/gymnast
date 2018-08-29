@@ -142,10 +142,10 @@ describe('combineSpacing', () => {
         base,
       })
     ).toEqual({
-      borderTopWidth: base * 4 / 2,
+      borderTopWidth: (base * 4) / 2,
       borderRightWidth: base * 3,
       borderBottomWidth: base * 4,
-      borderLeftWidth: base * 3 / 2,
+      borderLeftWidth: (base * 3) / 2,
     })
   })
 })
@@ -295,13 +295,13 @@ describe('toCXS', () => {
 
 describe('getValue', () => {
   it('should read the value specified by context', () => {
-    const out = getValue({ gymnast: { columns: 14 } }, 'columns')
+    const out = getValue({ columns: 14 }, 'columns')
 
     expect(out).toBe(14)
   })
 
   it('should prefer the override value when provided', () => {
-    const out = getValue({ gymnast: { columns: 14 } }, 'columns', 20)
+    const out = getValue({ columns: 14 }, 'columns', 20)
 
     expect(out).toBe(20)
   })
@@ -321,7 +321,7 @@ describe('getValues', () => {
   })
 
   it('should merge context, overrides and defaults', () => {
-    const out = getValues({ gymnast: { A: 2 } })
+    const out = getValues({ A: 2 })
 
     expect(out.A).toBe(2)
     expect(size(out)).toBeGreaterThan(1)
@@ -334,7 +334,7 @@ describe('getValues', () => {
   })
 
   it('should favor context when only context and defaults are set', () => {
-    const out = getValues({ gymnast: { columns: 2 } })
+    const out = getValues({ columns: 2 })
 
     expect(out.columns).toBe(2)
   })

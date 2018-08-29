@@ -28,14 +28,6 @@ describe('ConfigContext', () => {
     grid.unmount()
   })
 
-  it('should define gymnast context', () => {
-    wrapper = mount(<ConfigContext.Provider />)
-
-    expect(wrapper.context()).toEqual({
-      gymnast: undefined,
-    })
-  })
-
   it('should return default values if provider did not provide values', () => {
     const render = jest.fn()
 
@@ -46,9 +38,8 @@ describe('ConfigContext', () => {
     )
 
     const { calls } = render.mock
-    const { gymnast } = calls[0][0]
 
-    expect(gymnast).toEqual(defaults)
+    expect(calls[0][0]).toEqual(defaults)
   })
 
   it('should return values received from provider', () => {
@@ -61,9 +52,9 @@ describe('ConfigContext', () => {
     )
 
     const { calls } = render.mock
-    const { gymnast } = calls[0][0]
+    const { columns } = calls[0][0]
 
-    expect(gymnast.columns).toEqual(2)
+    expect(columns).toEqual(2)
   })
 
   it('should persist values coming from parent provider if child provider did not provide that value', () => {
@@ -80,11 +71,11 @@ describe('ConfigContext', () => {
     )
 
     const { calls } = render.mock
-    const { gymnast } = calls[0][0]
+    const { columns, base, gutter } = calls[0][0]
 
-    expect(gymnast.columns).toEqual(2)
-    expect(gymnast.base).toEqual(4)
-    expect(gymnast.gutter).toEqual(10)
+    expect(columns).toEqual(2)
+    expect(base).toEqual(4)
+    expect(gutter).toEqual(10)
   })
 
   it('should override parent provider value if child provider provided the same value', () => {
@@ -103,10 +94,10 @@ describe('ConfigContext', () => {
     )
 
     const { calls } = render.mock
-    const { gymnast } = calls[0][0]
+    const { columns, base } = calls[0][0]
 
-    expect(gymnast.columns).toEqual(9)
-    expect(gymnast.base).toEqual(2)
+    expect(columns).toEqual(9)
+    expect(base).toEqual(2)
   })
 
   it('should handle siblings with different override values', () => {
@@ -130,16 +121,16 @@ describe('ConfigContext', () => {
     const { calls: calls2 } = render2.mock
     const { calls: calls3 } = render3.mock
 
-    const { gymnast: gymnast1 } = calls1[0][0]
-    const { gymnast: gymnast2 } = calls2[0][0]
-    const { gymnast: gymnast3 } = calls3[0][0]
+    const { columns: columns1, base: base1 } = calls1[0][0]
+    const { columns: columns2, base: base2 } = calls2[0][0]
+    const { columns: columns3, base: base3 } = calls3[0][0]
 
-    expect(gymnast1.columns).toEqual(3)
-    expect(gymnast1.base).toEqual(5)
-    expect(gymnast2.columns).toEqual(2)
-    expect(gymnast2.base).toEqual(1)
-    expect(gymnast3.columns).toBe(2)
-    expect(gymnast3.base).toBe(4)
+    expect(columns1).toEqual(3)
+    expect(base1).toEqual(5)
+    expect(columns2).toEqual(2)
+    expect(base2).toEqual(1)
+    expect(columns3).toBe(2)
+    expect(base3).toBe(4)
   })
 
   afterEach(() => {

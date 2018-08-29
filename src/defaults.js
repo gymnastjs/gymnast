@@ -1,6 +1,7 @@
 // @flow
 
-export default {
+/* TO-DO */
+const defaults: Object = {
   base: 8, // multiplier (in pixels) that all other size units use
   columns: 12, // number of columns used in the layout
   displayAliases: {
@@ -61,3 +62,5 @@ export default {
   },
   verticalGutter: 3, // value (in base units) that separates columns vertically
 }
+
+export default defaults

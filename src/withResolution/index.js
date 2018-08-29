@@ -38,7 +38,7 @@ export default function withResolution(
     Props & React.ElementProps<typeof Component>,
     State
   > {
-    static defaultProps = { context: null }
+    static defaultProps = { context: {} }
 
     constructor(props: Props) {
       super(props)

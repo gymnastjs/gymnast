@@ -48,7 +48,7 @@ export type DisplayAliases = {
   +[displayAlias: string]: DisplayProperties | Array<DisplayProperties>,
 }
 
-export type ConfigPropsType = {|
+export type ConfigContextType = {|
   +base?: number,
   +columns?: number,
   +displayAliases?: DisplayAliases,
@@ -62,10 +62,6 @@ export type ConfigPropsType = {|
   +spacingAliases?: SpacingAliases,
   +verticalGutter?: number,
 |}
-
-export type ConfigContextType = {
-  +gymnast?: {| ...ConfigPropsType |},
-}
 
 export type OneResolution = {
   base?: number,

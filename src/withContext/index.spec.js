@@ -3,7 +3,6 @@ import * as React from 'react'
 import { mount } from 'enzyme'
 import ConfigContext from '../configContext'
 import withContext from './index'
-import defaults from '../defaults'
 
 describe('withContext', () => {
   let wrapper
@@ -21,7 +20,7 @@ describe('withContext', () => {
 
     const { calls } = render.mock
 
-    expect(calls[0][0]).toHaveProperty('context', { gymnast: defaults })
+    expect(calls[0][0]).toHaveProperty('context')
   })
 
   afterEach(() => {
