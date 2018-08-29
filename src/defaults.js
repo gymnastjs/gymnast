@@ -1,7 +1,7 @@
 // @flow
+// import type { ConfigContextType } from './types'
 
-/* TO-DO */
-const defaults: Object = {
+const defaults: $ReadOnly<Object> = {
   base: 8, // multiplier (in pixels) that all other size units use
   columns: 12, // number of columns used in the layout
   displayAliases: {
