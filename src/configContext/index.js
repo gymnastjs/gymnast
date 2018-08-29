@@ -4,18 +4,7 @@ import { omit } from 'lodash'
 import type { ConfigContextType } from '../types'
 import defaults from '../defaults'
 
-const contextDefaults: ConfigContextType = {
-  base: defaults.base,
-  columns: defaults.columns,
-  displayAliases: defaults.displayAliases,
-  fallbackDisplayKey: defaults.fallbackDisplayKey,
-  gutter: defaults.gutter,
-  maxPageWidth: defaults.maxPageWidth,
-  minPageWidth: defaults.minPageWidth,
-  pageMargin: defaults.pageMargin,
-  spacingAliases: defaults.spacingAliases,
-  verticalGutter: defaults.verticalGutter,
-}
+const contextDefaults: ConfigContextType = defaults
 
 const Context = React.createContext(contextDefaults)
 
@@ -26,6 +15,9 @@ type Props = {
 
 type State = ConfigContextType | {}
 
+// This HOC takes a Provider component and wraps it around a Consumer
+// component that provides non-defaulted values that have been set from preceding
+// Provider components.
 class ConfigProvider extends React.Component<Props, State> {
   static getDerivedStateFromProps(props: Props, state: State) {
     return {
