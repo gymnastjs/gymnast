@@ -1,6 +1,5 @@
 // @flow
 import * as React from 'react'
-import { omit } from 'lodash'
 import type { ConfigContextType } from '../types'
 import Context from './context'
 
@@ -16,9 +15,11 @@ type ProviderState = ConfigContextType | {}
 // Provider components.
 class ConfigProvider extends React.Component<ProviderProps, ProviderState> {
   static getDerivedStateFromProps(props: ProviderProps, state: ProviderState) {
+    const { children, ...restProps } = props
+
     return {
       ...state,
-      ...omit(props, 'children'),
+      ...restProps,
     }
   }
 
