@@ -140,7 +140,7 @@
     "verifyConditions": "condition-circle"
   },
   "peerDependencies": {
-    "react": ">=15",
+    "react": ">=16.3",
     "react-dom": ">=15"
   },
   "dependencies": {
