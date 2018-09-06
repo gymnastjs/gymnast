@@ -1,16 +1,12 @@
 // @flow
 import * as React from 'react'
 import { compact } from 'lodash'
-import type {
-  OneResolutionGrid,
-  ConfigProviderContext,
-  GridProps,
-  OneResolution,
-} from '../types'
+import type { OneResolutionGrid, GridProps, OneResolution } from '../types'
 import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
 import getCoreStyles from '../core'
 import withResolution from '../withResolution'
+import withContext from '../withContext'
 
 const resolutionProperties = ['align', 'justify', 'size']
 
@@ -20,17 +16,15 @@ export default function asGrid(
     props: $Shape<OneResolution>
   ) => $Shape<OneResolution> = props => props
 ): React.ComponentType<GridProps> {
-  function Grid(
-    {
-      align,
-      className,
-      justify,
-      size,
-      innerRef,
-      ...restProps
-    }: OneResolutionGrid,
-    context: ConfigProviderContext
-  ) {
+  function Grid({
+    align,
+    className,
+    justify,
+    size,
+    innerRef,
+    context,
+    ...restProps
+  }: OneResolutionGrid) {
     const props = getCoreStyles(mapDefaultProps(restProps), context)
     const classes = compact([
       styles.grid,
@@ -43,5 +37,7 @@ export default function asGrid(
     return <Component ref={innerRef} {...props} className={classes.join(' ')} />
   }
 
-  return withResolution(Grid, resolutionProperties)
+  const Resolution = withResolution(Grid, resolutionProperties)
+
+  return withContext(Resolution)
 }

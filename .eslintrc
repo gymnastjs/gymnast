@@ -18,10 +18,7 @@
     "jest": true,
     "jasmine": true
   },
-  "plugins": [
-    "react",
-    "flowtype"
-  ],
+  "plugins": ["react", "flowtype"],
   "settings": {
     "react": {
       "version": "15.5"
@@ -40,9 +37,7 @@
     "import/no-unresolved": [
       2,
       {
-        "ignore": [
-          "gymnast"
-        ]
+        "ignore": ["gymnast"]
       }
     ],
     "no-use-before-define": ["error", "nofunc"],

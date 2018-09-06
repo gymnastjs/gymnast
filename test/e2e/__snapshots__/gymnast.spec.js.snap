@@ -88,6 +88,7 @@ Object {
     "toCXS": [Function],
     "validateSpacingProps": [Function],
   },
+  "withContext": [Function],
   "withResolution": [Function],
 }
 `;

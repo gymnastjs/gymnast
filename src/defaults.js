@@ -1,6 +1,12 @@
 // @flow
+import { type ConfigContextType } from './types'
 
-export default {
+const defaults: {|
+  ...ConfigContextType,
+  gutter: number,
+  fallbackDisplayKey: string,
+  verticalGutter: number,
+|} = {
   base: 8, // multiplier (in pixels) that all other size units use
   columns: 12, // number of columns used in the layout
   displayAliases: {
@@ -61,3 +67,5 @@ export default {
   },
   verticalGutter: 3, // value (in base units) that separates columns vertically
 }
+
+export default defaults

@@ -1,10 +1,10 @@
 // @flow
 import { combineSpacing, getValues } from '../utils'
-import type { ConfigProviderContext, OneResolution } from '../types'
+import type { ConfigContextType, OneResolution } from '../types'
 
 export default function getCoreStyles(
   props: $Shape<OneResolution>,
-  context: ConfigProviderContext
+  context: ?ConfigContextType
 ) {
   const {
     base,

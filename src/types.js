@@ -48,22 +48,20 @@ export type DisplayAliases = {
   +[displayAlias: string]: DisplayProperties | Array<DisplayProperties>,
 }
 
-export type ConfigProviderContext = {
-  +gymnast?: {|
-    +base?: number,
-    +columns?: number,
-    +displayAliases?: DisplayAliases,
-    +fallbackDisplayKey?: string,
-    +gutter?: number,
-    +maxPageWidth?: number | 'none',
-    +minPageWidth?: number,
-    +pageMargin?: {
-      [string]: number,
-    },
-    +spacingAliases?: SpacingAliases,
-    +verticalGutter?: number,
-  |},
-}
+export type ConfigContextType = {|
+  +base?: number,
+  +columns?: number,
+  +displayAliases?: DisplayAliases,
+  +fallbackDisplayKey?: string,
+  +gutter?: number,
+  +maxPageWidth?: number | 'none',
+  +minPageWidth?: number,
+  +pageMargin?: {
+    [string]: number,
+  },
+  +spacingAliases?: SpacingAliases,
+  +verticalGutter?: number,
+|}
 
 export type OneResolution = {
   base?: number,
@@ -81,6 +79,7 @@ export type OneResolution = {
   paddingTop?: SpacingValues,
   show?: DisplayValues,
   style?: { [string]: string | number },
+  context?: ConfigContextType,
 }
 
 type MultipleResolutionProps = {

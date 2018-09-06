@@ -14,6 +14,7 @@ export { default as asCol } from './asCol'
 export { default as asGrid } from './asGrid'
 export { default as asLayout } from './asLayout'
 export { default as withResolution } from './withResolution'
+export { default as withContext } from './withContext'
 
 // Utils / Dev
 export { default as Dev } from './dev'

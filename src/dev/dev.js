@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-import { ConfigContextPropTypes } from '../configProvider'
+import ConfigConsumer from '../configProvider/consumer'
 import getStyles from './dev.styles'
 import {
   body,
@@ -13,6 +13,7 @@ import Grid from '../grid'
 import Root from '../root'
 import Layout from '../layout'
 import { getValues, times } from '../utils'
+import type { ConfigContextType } from '../types'
 
 const KEY_CODE_K = 'K'.charCodeAt(0)
 type Props = {|
@@ -31,8 +32,6 @@ export default class Dev extends React.Component<Props, State> {
     useCtrl: true,
     useShift: true,
   }
-
-  static contextTypes = ConfigContextPropTypes
 
   state = {
     showOverlay: false,
@@ -63,11 +62,11 @@ export default class Dev extends React.Component<Props, State> {
     }
   }
 
-  render() {
+  renderDevContent = (context: ConfigContextType) => {
     if (!this.state.showOverlay) {
       return null
     }
-    const values = getValues(this.context)
+    const values = getValues(context)
     const styles = getStyles(values)
     const content = (
       <Layout className={styles.gymnastOverlay}>
@@ -87,5 +86,9 @@ export default class Dev extends React.Component<Props, State> {
     )
 
     return ReactDOM.createPortal(content, getDevContainer())
+  }
+
+  render() {
+    return <ConfigConsumer>{this.renderDevContent}</ConfigConsumer>
   }
 }

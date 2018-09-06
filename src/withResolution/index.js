@@ -4,7 +4,6 @@ import type { DisplayValues } from '../types'
 import log from '../log'
 import { getValue } from '../utils'
 import errors from '../errors'
-import { ConfigContextPropTypes } from '../configProvider'
 import { register, unregister, supportsMatchMedia } from './mediaQuery'
 import {
   checkShouldShow,
@@ -39,7 +38,7 @@ export default function withResolution(
     Props & React.ElementProps<typeof Component>,
     State
   > {
-    static contextTypes = ConfigContextPropTypes
+    static defaultProps = { context: {} }
 
     constructor(props: Props) {
       super(props)
@@ -78,7 +77,7 @@ export default function withResolution(
     }
 
     getQueries = (show?: DisplayValues) => {
-      const displayAliases = getValue(this.context, 'displayAliases')
+      const displayAliases = getValue(this.props.context, 'displayAliases')
       let queries = show
 
       if (!show && this.anyPropsUseResolutionFormat()) {
@@ -116,14 +115,16 @@ export default function withResolution(
         return null
       }
 
+      const { context, ...restProps } = this.props
+
       const props = getSingleResolutionProps({
-        props: this.props,
+        props: restProps,
         shouldShow: this.state.shouldShow,
         resolutionKeys: combinedResolutionKeys,
-        fallbackDisplayKey: getValue(this.context, 'fallbackDisplayKey'),
+        fallbackDisplayKey: getValue(context, 'fallbackDisplayKey'),
       })
 
-      return <Component {...props} />
+      return <Component {...props} context={context} />
     }
   }
 }

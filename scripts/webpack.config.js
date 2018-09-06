@@ -47,7 +47,6 @@ module.exports = {
   externals: {
     react: 'react',
     'react-dom': 'react-dom',
-    'prop-types': 'prop-types',
   },
   module: {
     rules: [

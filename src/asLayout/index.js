@@ -1,16 +1,12 @@
 // @flow
 import * as React from 'react'
 import { compact } from 'lodash'
-import type {
-  OneResolutionLayout,
-  ConfigProviderContext,
-  LayoutProps,
-  OneResolution,
-} from '../types'
+import type { OneResolutionLayout, LayoutProps, OneResolution } from '../types'
 import getStyles from './layout.styles'
 import getCoreStyles from '../core'
 import { getValues } from '../utils/index'
 import withResolution from '../withResolution'
+import withContext from '../withContext'
 
 const resolutionProperties = ['fixed', 'height', 'overflow']
 
@@ -20,17 +16,15 @@ export default function asLayout(
     props: $Shape<OneResolution>
   ) => $Shape<OneResolution> = props => props
 ): React.ComponentType<LayoutProps> {
-  function Layout(
-    {
-      className,
-      fixed,
-      height,
-      overflow,
-      innerRef,
-      ...restProps
-    }: OneResolutionLayout,
-    context: ConfigProviderContext
-  ) {
+  function Layout({
+    className,
+    fixed,
+    height,
+    overflow,
+    innerRef,
+    context,
+    ...restProps
+  }: OneResolutionLayout) {
     const props = getCoreStyles(mapDefaultProps(restProps), context)
     const styles = getStyles(getValues(context, restProps))
     const classes = compact([
@@ -44,5 +38,7 @@ export default function asLayout(
     return <Component ref={innerRef} {...props} className={classes.join(' ')} />
   }
 
-  return withResolution(Layout, resolutionProperties)
+  const Resolution = withResolution(Layout, resolutionProperties)
+
+  return withContext(Resolution)
 }
