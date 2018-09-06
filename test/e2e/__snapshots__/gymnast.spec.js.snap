@@ -3,10 +3,7 @@
 exports[`e2e tests should export the same values from the main export than individual files 1`] = `
 Object {
   "Col": [Function],
-  "ConfigContext": Object {
-    "Consumer": [Function],
-    "Provider": [Function],
-  },
+  "ConfigProvider": [Function],
   "Dev": [Function],
   "Grid": [Function],
   "Layout": [Function],
@@ -91,6 +88,7 @@ Object {
     "toCXS": [Function],
     "validateSpacingProps": [Function],
   },
+  "withContext": [Function],
   "withResolution": [Function],
 }
 `;

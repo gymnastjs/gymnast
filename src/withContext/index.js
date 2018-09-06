@@ -1,13 +1,13 @@
 // @flow
 import * as React from 'react'
-import ConfigContext from '../configContext'
+import ConfigConsumer from '../configProvider/consumer'
 
 export default function withContext(Component: React.ComponentType<*>) {
   return function WithContext(props: React.ElementProps<typeof Component>) {
     return (
-      <ConfigContext.Consumer>
+      <ConfigConsumer>
         {context => <Component {...props} context={context} />}
-      </ConfigContext.Consumer>
+      </ConfigConsumer>
     )
   }
 }

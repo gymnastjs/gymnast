@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-import ConfigContext from '../configContext'
+import ConfigConsumer from '../configProvider/consumer'
 import getStyles from './dev.styles'
 import {
   body,
@@ -89,8 +89,6 @@ export default class Dev extends React.Component<Props, State> {
   }
 
   render() {
-    return (
-      <ConfigContext.Consumer>{this.renderDevContent}</ConfigContext.Consumer>
-    )
+    return <ConfigConsumer>{this.renderDevContent}</ConfigConsumer>
   }
 }

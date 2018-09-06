@@ -4,7 +4,7 @@ import Grid from '../grid'
 import type { GridProps } from '../types'
 import getStyles from './root.styles'
 import { getValues } from '../utils'
-import ConfigContext from '../configContext'
+import ConfigConsumer from '../configProvider/consumer'
 
 type Props = GridProps & {
   children?: React.Node,
@@ -12,7 +12,7 @@ type Props = GridProps & {
 
 export default function Root({ children, justify, ...props }: Props) {
   return (
-    <ConfigContext.Consumer>
+    <ConfigConsumer>
       {context => {
         const styles = getStyles(getValues(context, props))
 
@@ -24,6 +24,6 @@ export default function Root({ children, justify, ...props }: Props) {
           </Grid>
         )
       }}
-    </ConfigContext.Consumer>
+    </ConfigConsumer>
   )
 }

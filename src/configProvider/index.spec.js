@@ -1,25 +1,26 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
 import Grid from '../grid'
-import ConfigContext from './index'
+import ConfigProvider from './index'
+import ConfigConsumer from './consumer'
 import defaults from '../defaults'
 
-const TesterComponent = props => <ConfigContext.Consumer {...props} />
+const TesterComponent = props => <ConfigConsumer {...props} />
 
-describe('ConfigContext', () => {
+describe('ConfigProvider', () => {
   let wrapper
 
   it('should not crash when empty', () => {
     expect(() => {
-      wrapper = mount(<ConfigContext.Provider />)
+      wrapper = mount(<ConfigProvider />)
     }).not.toThrow()
   })
 
   it('does not add additional DOM Elements', () => {
     wrapper = mount(
-      <ConfigContext.Provider>
+      <ConfigProvider>
         <Grid />
-      </ConfigContext.Provider>
+      </ConfigProvider>
     )
     const grid = mount(<Grid />)
 
@@ -32,9 +33,9 @@ describe('ConfigContext', () => {
     const render = jest.fn()
 
     wrapper = mount(
-      <ConfigContext.Provider>
+      <ConfigProvider>
         <TesterComponent>{render}</TesterComponent>
-      </ConfigContext.Provider>
+      </ConfigProvider>
     )
 
     const { calls } = render.mock
@@ -46,9 +47,9 @@ describe('ConfigContext', () => {
     const render = jest.fn()
 
     wrapper = mount(
-      <ConfigContext.Provider columns={2}>
+      <ConfigProvider columns={2}>
         <TesterComponent>{render}</TesterComponent>
-      </ConfigContext.Provider>
+      </ConfigProvider>
     )
 
     const { calls } = render.mock
@@ -61,13 +62,13 @@ describe('ConfigContext', () => {
     const render = jest.fn()
 
     wrapper = mount(
-      <ConfigContext.Provider columns={2}>
-        <ConfigContext.Provider base={4}>
-          <ConfigContext.Provider gutter={10}>
+      <ConfigProvider columns={2}>
+        <ConfigProvider base={4}>
+          <ConfigProvider gutter={10}>
             <TesterComponent>{render}</TesterComponent>
-          </ConfigContext.Provider>
-        </ConfigContext.Provider>
-      </ConfigContext.Provider>
+          </ConfigProvider>
+        </ConfigProvider>
+      </ConfigProvider>
     )
 
     const { calls } = render.mock
@@ -82,15 +83,15 @@ describe('ConfigContext', () => {
     const render = jest.fn()
 
     wrapper = mount(
-      <ConfigContext.Provider columns={2}>
-        <ConfigContext.Provider base={4}>
-          <ConfigContext.Provider base={2}>
-            <ConfigContext.Provider columns={9}>
+      <ConfigProvider columns={2}>
+        <ConfigProvider base={4}>
+          <ConfigProvider base={2}>
+            <ConfigProvider columns={9}>
               <TesterComponent>{render}</TesterComponent>
-            </ConfigContext.Provider>
-          </ConfigContext.Provider>
-        </ConfigContext.Provider>
-      </ConfigContext.Provider>
+            </ConfigProvider>
+          </ConfigProvider>
+        </ConfigProvider>
+      </ConfigProvider>
     )
 
     const { calls } = render.mock
@@ -106,15 +107,15 @@ describe('ConfigContext', () => {
     const render3 = jest.fn()
 
     wrapper = mount(
-      <ConfigContext.Provider columns={2} base={4}>
-        <ConfigContext.Provider columns={3} base={5}>
+      <ConfigProvider columns={2} base={4}>
+        <ConfigProvider columns={3} base={5}>
           <TesterComponent>{render1}</TesterComponent>
-        </ConfigContext.Provider>
-        <ConfigContext.Provider base={1}>
+        </ConfigProvider>
+        <ConfigProvider base={1}>
           <TesterComponent>{render2}</TesterComponent>
-        </ConfigContext.Provider>
+        </ConfigProvider>
         <TesterComponent>{render3}</TesterComponent>
-      </ConfigContext.Provider>
+      </ConfigProvider>
     )
 
     const { calls: calls1 } = render1.mock

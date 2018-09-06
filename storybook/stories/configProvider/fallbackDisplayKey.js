@@ -1,10 +1,10 @@
 // @flow
 import * as React from 'react'
-import { ConfigContext, Grid } from 'gymnast'
+import { ConfigProvider, Grid } from 'gymnast'
 import { colors } from '../../shared'
 
 export default () => (
-  <ConfigContext.Provider fallbackDisplayKey="fallback">
+  <ConfigProvider fallbackDisplayKey="fallback">
     <Grid padding="0 L/2">
       <Grid padding="0 L/2 L" size={{ large: 2, fallback: 10 }}>
         <Grid
@@ -18,5 +18,5 @@ export default () => (
         </Grid>
       </Grid>
     </Grid>
-  </ConfigContext.Provider>
+  </ConfigProvider>
 )

@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { ConfigContext, Col, Root, Layout } from 'gymnast'
+import { ConfigProvider, Col, Root, Layout } from 'gymnast'
 import { colors } from '../../shared'
 
 export default () => {
@@ -12,7 +12,7 @@ export default () => {
 
   return (
     <React.Fragment>
-      <ConfigContext.Provider
+      <ConfigProvider
         base={base}
         maxPageWidth={max}
         minPageWidth={min}
@@ -27,8 +27,8 @@ export default () => {
             <Col style={colors.colors1}>Full Width</Col>
           </Root>
         </Layout>
-      </ConfigContext.Provider>
-      <ConfigContext.Provider
+      </ConfigProvider>
+      <ConfigProvider
         base={base}
         maxPageWidth="none"
         pageMargin={{
@@ -42,7 +42,7 @@ export default () => {
             <Col style={colors.colors1}>Full Width (No Limit)</Col>
           </Root>
         </Layout>
-      </ConfigContext.Provider>
+      </ConfigProvider>
     </React.Fragment>
   )
 }

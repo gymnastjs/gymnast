@@ -6,7 +6,7 @@ By default, all components are always rendered. You can modify this behavior by 
 - **medium**: 600-899
 - **large**: 900-
 
-You can customize these values by modifying `displayAliases` in `ConfigContext`.
+You can customize these values by modifying `displayAliases` in `ConfigProvider`.
 
 Spacing properties (`margin`, `padding` and its variants e.g. `paddingTop`), `size`, `align`, `justify` can take an object as parameter where the keys define for which resolutions it applies. E.g.
 

@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { mount } from 'enzyme'
-import ConfigContext from '../configContext'
+import ConfigProvider from '../configProvider'
 import withContext from './index'
 
 describe('withContext', () => {
@@ -13,9 +13,9 @@ describe('withContext', () => {
     const ContextComponent = withContext(render)
 
     wrapper = mount(
-      <ConfigContext.Provider>
+      <ConfigProvider>
         <ContextComponent />
-      </ConfigContext.Provider>
+      </ConfigProvider>
     )
 
     const { calls } = render.mock
