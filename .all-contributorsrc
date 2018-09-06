@@ -70,6 +70,16 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "derrickhnguyen",
+      "name": "Derrick Nguyen",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/10682341?v=4",
+      "profile": "https://github.com/derrickhnguyen",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "repoType": "github"
