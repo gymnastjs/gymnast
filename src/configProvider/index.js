@@ -2,13 +2,14 @@
 import * as React from 'react'
 import type { ConfigContextType } from '../types'
 import Context from './context'
+import defaults from '../defaults'
 
 type ProviderProps = {
   ...ConfigContextType,
   children?: React.Node,
 }
 
-type ProviderState = ConfigContextType | {}
+type ProviderState = ConfigContextType
 
 // This HOC takes a Provider component and wraps it around a Consumer
 // component that provides non-defaulted values that have been set from preceding
@@ -23,20 +24,18 @@ class ConfigProvider extends React.Component<ProviderProps, ProviderState> {
     }
   }
 
-  state = {}
+  state = defaults
 
   render() {
-    return (
-      <Context.Consumer>
-        {(context: ConfigContextType) => {
-          const { children } = this.props
-          const value = { ...context, ...this.state }
+    const { state } = this
+    const { children } = this.props
 
-          return <Context.Provider value={value}>{children}</Context.Provider>
-        }}
-      </Context.Consumer>
-    )
+    return <Context.Provider value={state}>{children}</Context.Provider>
   }
 }
 
-export default ConfigProvider
+export default (props: ProviderProps) => (
+  <Context.Consumer>
+    {context => <ConfigProvider {...context} {...props} />}
+  </Context.Consumer>
+)
