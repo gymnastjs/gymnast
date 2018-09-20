@@ -2,11 +2,11 @@
 import * as React from 'react'
 import { Dev } from 'gymnast'
 
-export default function WrappedStory(story: React.Node) {
+export default function WrapStory(storyFn: () => React.Node) {
   return (
     <React.Fragment>
       <Dev />
-      {story}
+      {storyFn()}
     </React.Fragment>
   )
 }

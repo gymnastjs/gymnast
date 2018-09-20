@@ -45,7 +45,7 @@ git config user.email "$USER@gymnast.ci" && git config user.name "gymnast CI ($B
 # Build StoryBook in the `../temp` folder
 yarn
 yarn build:dev
-./node_modules/.bin/picturebook-build -s ./static -o $TEMP_PATH
+yarn build-storybook -s ./static -c storybook -o $TEMP_PATH
 
 # Copy circle.yml to ensure last config is used
 cp circle.yml $TEMP_PATH
