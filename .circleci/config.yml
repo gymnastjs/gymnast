@@ -1,0 +1,42 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/gymnastjs/gymnast
+    parallelism: 1
+    shell: /bin/bash --login
+    environment:
+      CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
+      CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
+      TARGET_URL: https://gymnastjs.github.io/gymnast/branch/$CIRCLE_BRANCH
+    docker:
+      - image: circleci/node:10.9.0-jessie
+        command: /sbin/init
+    steps:
+      - checkout
+      - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
+      - run: sudo rm -rf /var/lib/apt/lists/*
+      - run: sudo apt-get update
+      - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
+      # Test
+      - run: scripts/citests.sh
+      # Deployment
+      - type: deploy
+        name: 'Publish to npm'
+        command: |
+          if [ "${CIRCLE_BRANCH}" == "master" ];
+            then ./scripts/deploynpm.sh;
+          fi
+      # Save test results
+      - store_test_results:
+          path: /tmp/circleci-test-results
+      # Save artifacts
+      - store_artifacts:
+          path: /tmp/circleci-artifacts
+      - store_artifacts:
+          path: dist
+      - store_artifacts:
+          path: coverage
+      - store_artifacts:
+          path: test/screenshot/images
+      - store_artifacts:
+          path: /tmp/circleci-test-results
