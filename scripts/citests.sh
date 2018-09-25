@@ -16,7 +16,7 @@ if [ "$CIRCLE_NODE_INDEX" -eq "0" ]; then
   cp -R coverage/* $CIRCLE_TEST_REPORTS   # Copy test coverage reports for CircleCI
 else
   # Run image comparison tests
-  URL=$(./scripts/getTargetUrl.sh) yarn test:image
+  yarn test:image
 
   # If there are no new images, continue with the build
   if [ -z "$(git status --porcelain)" ]; then

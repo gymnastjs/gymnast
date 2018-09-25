@@ -37,7 +37,6 @@ else
   TARGET_PATH="./branch/$BRANCH"
 fi
 
-TARGET_URL=$(./scripts/getTargetUrl.sh)
 
 # Set git user
 git config user.email "$USER@gymnast.ci" && git config user.name "gymnast CI ($BRANCH)"
@@ -79,7 +78,7 @@ if [ -z "$(git status --porcelain)" ]; then
   echo "Nothing to commit, everything is clean ✨"
 else
   git add -A -f
-  git commit -m "docs(storybook): $USER updated '$TARGET_URL'" --no-verify
+  git commit -m "docs(storybook): $USER updated '$TARGET_PATH'" --no-verify
   git fetch origin gh-pages
   git rebase origin/gh-pages
   git push origin gh-pages
