@@ -11,12 +11,12 @@ echo "Running node $CIRCLE_NODE_INDEX"
 if [ "$CIRCLE_NODE_INDEX" -eq "0" ]; then
   yarn test:size                          # Validate bundle gzipped size
   yarn lint                               # Validate linting
-  yarn test -- --coverage                 # Validate unit tests
+  yarn test:cover                         # Validate unit tests
   cat ./coverage/lcov.info | node_modules/.bin/codeclimate-test-reporter
   cp -R coverage/* $CIRCLE_TEST_REPORTS   # Copy test coverage reports for CircleCI
 else
   # Run image comparison tests
-  yarn test:image --url $(./scripts/getTargetUrl.sh)/iframe.html
+  yarn test:image
 
   # If there are no new images, continue with the build
   if [ -z "$(git status --porcelain)" ]; then

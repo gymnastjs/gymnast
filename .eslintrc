@@ -27,6 +27,7 @@
   "parser": "babel-eslint",
   "rules": {
     "no-console": 2,
+    "no-plusplus": 0,
     "jsx-a11y/href-no-hash": 0,
     "react/prop-types": 0,
     "react/no-deprecated": 2,
