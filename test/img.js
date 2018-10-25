@@ -10,12 +10,12 @@ const { isCI, URL } = process.env
 
 if (!isCI && !URL) {
   console.log(`
-ℹ️ Local tests default to the last deployed storybook for the branch.
+ℹ️  Local tests default to the last deployed storybook for the branch.
 
 You can provide URL as environment variable to overwrite the default url.`)
 } else if (URL) {
   console.log(`
-ℹ️ Running tests on ${URL}
+ℹ️  Running tests on ${URL}
 `)
 }
 
@@ -28,10 +28,20 @@ function runJest() {
     stdio: 'pipe',
     env: process.env,
   })
-  jest.stdout.on('data', data => console.log(data.toString()))
-  jest.stderr.on('data', data => console.error(data.toString()))
 
-  return new Promise(r => jest.on('close', r))
+  return new Promise((res, reject) => {
+    jest.stdout.on('data', data => console.log(data.toString()))
+    jest.stderr.on('data', data => {
+      console.error(data.toString())
+    })
+    jest.on('close', exitCode => {
+      if (exitCode === 0) {
+        res()
+      } else {
+        reject()
+      }
+    })
+  })
 }
 
 runTests({
@@ -42,4 +52,10 @@ runTests({
   overwrite,
   configPath,
   outputPath,
-}).then(runJest)
+  maxRetryAttempts: 3,
+})
+  .then(runJest)
+  .catch(e => {
+    console.error('Failed image comparison', e)
+    process.exit(1)
+  })
