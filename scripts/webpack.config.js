@@ -1,10 +1,9 @@
-const { optimize } = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const overrideGlobal = require('./overrideGlobal')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
 const { DefinePlugin } = require('webpack')
 const { compact } = require('lodash')
+const overrideGlobal = require('./overrideGlobal')
 
 const isProd = process.env.NODE_ENV === 'production'
 const root = resolve(__dirname, '../dist')
@@ -36,12 +35,6 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       },
     }),
-
-    isProd &&
-      new optimize.UglifyJsPlugin({
-        minimize: true,
-        sourceMap: true,
-      }),
   ]),
   devtool: 'source-map',
   externals: {

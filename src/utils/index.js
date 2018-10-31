@@ -98,7 +98,9 @@ export function getCSS(
 
   if (typeof value === 'undefined') {
     return {}
-  } else if (prop.includes('padding')) {
+  }
+
+  if (prop.includes('padding')) {
     return { [prop]: num * base }
   }
 
@@ -230,9 +232,9 @@ export function combineSpacing({
   )
 }
 
-export function toCXS<A>(raw: {
-  +[A: string]: string | number | {},
-}): { +[A]: string } {
+export function toCXS(raw: {
+  +[string]: string | number | {},
+}): { +[string]: string } {
   const styles = {}
 
   Object.keys(raw).forEach(style => {

@@ -14,3 +14,4 @@ temp.png
 package-lock.json
 *.swp
 picturebook-results.json
+.cache
