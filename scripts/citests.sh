@@ -23,6 +23,6 @@ if [ -z "$(git status --porcelain)" ]; then
 # otherwise commit, which will cancel this build and trigger a new one with these images
 else
   git add -A
-  git commit -m "fix(screenshots): $USER updated screenshot tests" --no-verify
+  git commit -m "fix(screenshots): updated screenshot tests" --no-verify
   git push origin HEAD:$CIRCLE_BRANCH
 fi

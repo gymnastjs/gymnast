@@ -25,7 +25,7 @@ export default () => {
                 <input type="text" placeholder="Some search here" />
               </Grid>
               <Grid margin="0 L/2" size={2}>
-                <button>Search</button>
+                <button type="button">Search</button>
               </Grid>
             </Grid>
           </Root>

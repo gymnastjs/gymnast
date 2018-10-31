@@ -1,26 +1,26 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "targets": {
           "browsers": ["last 2 versions", "ie >= 11"]
         }
       }
     ],
-    "react"
+    "@babel/preset-react",
+    "@babel/preset-flow"
   ],
   "plugins": [
     "preval",
     "macros",
     "lodash",
-    "transform-object-rest-spread",
-    "transform-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties",
     [
-      "transform-runtime",
+      "@babel/plugin-transform-runtime",
       {
         "helpers": false,
-        "polyfill": false,
         "regenerator": false
       }
     ],
