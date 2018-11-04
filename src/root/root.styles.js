@@ -1,6 +1,6 @@
 // @flow
 import { toCXS, accumulateOver } from '../utils'
-import { getMediaQuery } from '../withResolution/withResolution.logic'
+import { getMediaQuery } from '../useResolution/useResolution.logic'
 
 const accumulateStyles = accumulateOver(['root', 'child'])
 const smallRoot = {

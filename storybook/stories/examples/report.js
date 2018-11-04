@@ -126,7 +126,10 @@ export default function() {
                 <P>Text F</P>
                 <Card height={210}>Final Block</Card>
                 <Card>Ok last one</Card>
-                <P>{loremIpsum.substr(0, 250)}...</P>
+                <P>
+                  {loremIpsum.substr(0, 250)}
+                  ...
+                </P>
               </Grid>
               <Grid size={4} className={styles.clippy} padding="0 L/2">
                 <Grid

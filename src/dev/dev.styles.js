@@ -1,6 +1,6 @@
 // @flow
 import { toCXS, accumulateOver } from '../utils'
-import { getMediaQuery } from '../withResolution/withResolution.logic'
+import { getMediaQuery } from '../useResolution/useResolution.logic'
 import { gold15, bolt10 } from './colors'
 
 const accumulateStyles = accumulateOver(['leftMargin', 'rightMargin'])

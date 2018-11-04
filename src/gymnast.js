@@ -9,12 +9,13 @@ export { default as Layout } from './layout'
 export { default as Offset } from './offset'
 export { default as Root } from './root'
 
-// HOC
+// HOCs
 export { default as asCol } from './asCol'
 export { default as asGrid } from './asGrid'
 export { default as asLayout } from './asLayout'
-export { default as withResolution } from './withResolution'
-export { default as withContext } from './withContext'
+
+// Hooks
+export { default as useResolution } from './useResolution'
 
 // Utils / Dev
 export { default as Dev } from './dev'

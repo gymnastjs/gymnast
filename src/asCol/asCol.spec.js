@@ -3,7 +3,7 @@ import { render } from 'react-testing-library'
 import log from '../log'
 import asCol from './index'
 
-describe('Col', () => {
+describe('asCol', () => {
   const Col = asCol('div')
 
   it('should render a Grid with col margins ([0, 1.5, 3])', () => {

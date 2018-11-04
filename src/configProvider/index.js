@@ -34,8 +34,8 @@ class ConfigProvider extends React.Component<ProviderProps, ProviderState> {
   }
 }
 
-export default (props: ProviderProps) => (
-  <Context.Consumer>
-    {context => <ConfigProvider {...context} {...props} />}
-  </Context.Consumer>
-)
+export default (props: ProviderProps) => {
+  const context = React.useContext(Context)
+
+  return <ConfigProvider {...context} {...props} />
+}

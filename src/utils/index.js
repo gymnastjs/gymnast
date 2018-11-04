@@ -3,9 +3,9 @@ import cxs from '../cxs'
 import defaults from '../defaults'
 import type {
   Noop,
-  SpacingAliases,
-  SpacingProps,
-  SpacingValues,
+    SpacingAliases,
+    SpacingProps,
+    SpacingValues,
 } from '../types'
 import log from '../log'
 import errors from '../errors'
@@ -168,9 +168,9 @@ function replaceSpacingAliasValues({
   props,
   spacingAliases,
 }: {
-  props: { [string]: SpacingValues },
-  spacingAliases: SpacingAliases,
-}): { [string]: SpacingValues } {
+    props: { [string]: SpacingValues },
+    spacingAliases: SpacingAliases,
+  }): { [string]: SpacingValues } {
   return Object.keys(props).reduce(
     (acc, key) => ({
       ...acc,
@@ -244,7 +244,7 @@ export function toCXS(raw: {
   return styles
 }
 
-export function getValue<A: *>(context: *, property: string, override?: A): A {
+export function getValue<A: *> (context: * = { }, property: string, override ?: A): A {
   return ([override, context[property], defaults[property]].find(
     isDefined
   ): any)

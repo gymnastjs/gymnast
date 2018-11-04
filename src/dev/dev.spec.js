@@ -13,6 +13,10 @@ function keyPress(baseElement, key, { ctrl, shift, meta }) {
   })
 }
 
+jest.mock('react-dom', () => ({
+  createPortal: node => node,
+}))
+
 describe('Dev', () => {
   const overlayKey = 'K'
 
