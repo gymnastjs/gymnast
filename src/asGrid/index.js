@@ -5,8 +5,8 @@ import type { OneResolutionGrid, GridProps, OneResolution } from '../types'
 import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
 import getCoreStyles from '../core'
-import withResolution from '../withResolution'
-import withContext from '../withContext'
+import useResolution from '../useResolution'
+import ContextConfig from '../configProvider/context'
 
 const resolutionProperties = ['align', 'justify', 'size']
 
@@ -16,33 +16,32 @@ export default function asGrid(
     props: $Shape<OneResolution>
   ) => $Shape<OneResolution> = props => props
 ): React.ComponentType<GridProps> {
-  // $FlowFixMe
-  const Grid = React.forwardRef(
-    (
-      {
-        align,
-        className,
-        justify,
-        size,
-        context,
-        ...restProps
-      }: OneResolutionGrid,
-      ref: React$ElementRef<*>
-    ) => {
-      const props = getCoreStyles(mapDefaultProps(restProps), context)
-      const classes = compact([
-        styles.grid,
-        getCol(size, getValue(context, 'columns')),
-        className,
-        align && styles[`${align}Align`],
-        justify && styles[`${justify}Justify`],
-      ])
+  return function Grid(props: OneResolutionGrid) {
+    const [
+      shouldRender,
+      { align, className, justify, size, innerRef, ...restProps },
+    ] = useResolution(resolutionProperties, props)
+    const context = React.useContext(ContextConfig)
 
-      return <Component {...props} ref={ref} className={classes.join(' ')} />
+    if (!shouldRender) {
+      return null
     }
-  )
 
-  const Resolution = withResolution(Grid, resolutionProperties)
+    const coreStylesProps = getCoreStyles(mapDefaultProps(restProps), context)
+    const classes = compact([
+      styles.grid,
+      getCol(size, getValue(context, 'columns')),
+      className,
+      align && styles[`${align}Align`],
+      justify && styles[`${justify}Justify`],
+    ])
 
-  return withContext(Resolution)
+    return (
+      <Component
+        ref={innerRef}
+        {...coreStylesProps}
+        className={classes.join(' ')}
+      />
+    )
+  }
 }

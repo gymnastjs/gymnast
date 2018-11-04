@@ -1,34 +1,39 @@
 import React from 'react'
 import { render } from 'react-testing-library'
 import log from '../log'
-import withResolution from './index'
+import useResolution from './index'
 
 jest.mock('./mediaQuery')
-jest.unmock('./withResolution.logic')
+jest.unmock('./useResolution.logic')
 
-const logic = require.requireActual('./withResolution.logic')
+const logic = require.requireActual('./useResolution.logic')
 
 /* eslint-disable import/first */
 import { unregister } from './mediaQuery'
 /* eslint-enable import/first */
 
-describe('withResolution', () => {
-  const Fruit = ({ fruit }) => <div>{fruit}</div>
+function Fruit(props) {
+  const [shouldRender, { fruit }] = useResolution(['fruit'], props, true)
 
+  return shouldRender ? <div>{fruit}</div> : null
+}
+
+describe('useResolution', () => {
   it('should be a pass through if matchMedia is not supported', () => {
+    const props = { a: 2, b: 3 }
+
     spyOn(log, 'warn')
+    const [shouldRender, outProps] = useResolution(['test'], props, false)
 
-    const out = withResolution(Fruit, [], false)
-
-    expect(out).toBe(Fruit)
+    expect(outProps).toEqual(props)
+    expect(shouldRender).toBe(true)
     expect(log.warn).toHaveBeenCalled()
   })
 
   it('should render when `shouldShow` is not set', () => {
     logic.checkShouldShow = () => undefined
 
-    const FruitWithResolution = withResolution(Fruit, [])
-    const { container } = render(<FruitWithResolution fruit="🍍" />)
+    const { container } = render(<Fruit fruit="🍍" />)
 
     expect(container.innerHTML).toContain('🍍')
   })
@@ -36,10 +41,7 @@ describe('withResolution', () => {
   it('should render the input when `shouldShow` is true and `show` is set', () => {
     logic.checkShouldShow = () => ({ short: true })
 
-    const FruitWithResolution = withResolution(Fruit, [])
-    const { container } = render(
-      <FruitWithResolution show="short" fruit="🥥" />
-    )
+    const { container } = render(<Fruit show="short" fruit="🥥" />)
 
     expect(container.innerHTML).toContain('🥥')
   })
@@ -47,17 +49,13 @@ describe('withResolution', () => {
   it('should NOT render the input when `shouldShow` is false and show is set', () => {
     logic.checkShouldShow = () => ({ small: false })
 
-    const FruitWithResolution = withResolution(Fruit, [])
-    const { container } = render(
-      <FruitWithResolution show="small" fruit="🍉" />
-    )
+    const { container } = render(<Fruit show="small" fruit="🍉" />)
 
     expect(container.textContent).toBeFalsy()
   })
 
   it('should always render the input when `show` is not set', () => {
-    const FruitWithResolution = withResolution(Fruit, [])
-    const { container } = render(<FruitWithResolution fruit="🥑" />)
+    const { container } = render(<Fruit fruit="🥑" />)
 
     expect(container.innerHTML).toContain('🥑')
   })
@@ -65,9 +63,8 @@ describe('withResolution', () => {
   it('should parse object properties to the right values', () => {
     logic.checkShouldShow = () => ({ short: true })
 
-    const FruitWithResolution = withResolution(Fruit, ['fruit'])
     const { container } = render(
-      <FruitWithResolution fruit={{ short: '🍌', default: '🥝', big: '🍑' }} />
+      <Fruit fruit={{ short: '🍌', default: '🥝', big: '🍑' }} />
     )
 
     expect(container.innerHTML).toContain('🍌')
@@ -76,9 +73,8 @@ describe('withResolution', () => {
   it('should default object properties to the "default" key if available', () => {
     logic.checkShouldShow = () => ({ someOtherKey: true })
 
-    const FruitWithResolution = withResolution(Fruit, ['fruit'])
     const { container } = render(
-      <FruitWithResolution fruit={{ short: '🍌', default: '🥝' }} />
+      <Fruit fruit={{ short: '🍌', default: '🥝' }} />
     )
 
     expect(container.innerHTML).toContain('🥝')
@@ -87,10 +83,7 @@ describe('withResolution', () => {
   it('should default to undefined if "default" key is not available', () => {
     logic.checkShouldShow = () => ({ someOtherKey: true })
 
-    const FruitWithResolution = withResolution(Fruit, ['fruit'])
-    const { container } = render(
-      <FruitWithResolution fruit={{ YetAnotherKey: '🍒' }} />
-    )
+    const { container } = render(<Fruit fruit={{ YetAnotherKey: '🍒' }} />)
 
     expect(container.textContent).toBeFalsy()
   })
@@ -98,17 +91,20 @@ describe('withResolution', () => {
   it('should unregister the current mediaQuery listener when "show" prop changes', () => {
     jest.clearAllMocks()
 
-    const FruitWithResolution = withResolution(Fruit, ['fruit'])
     const { container } = render(
-      <FruitWithResolution fruit={{ YetAnotherKey: '🍏' }} show="large" />
+      <Fruit fruit={{ YetAnotherKey: '🍏' }} show="large" />
     )
 
     expect(unregister).toHaveBeenCalledTimes(0)
 
-    render(
-      <FruitWithResolution fruit={{ YetAnotherKey: '🍏' }} show="small" />,
-      { container }
+    const { rerender } = render(
+      <Fruit fruit={{ YetAnotherKey: '🍏' }} show="small" />,
+      {
+        container,
+      }
     )
+
+    rerender()
 
     expect(unregister).toHaveBeenCalledTimes(1)
   })
@@ -116,17 +112,20 @@ describe('withResolution', () => {
   it('should register the new mediaQuery listener when "show" prop changes', () => {
     jest.clearAllMocks()
 
-    const FruitWithResolution = withResolution(Fruit, ['fruit'])
     const { container } = render(
-      <FruitWithResolution fruit={{ YetAnotherKey: '🍇' }} show="large" />
+      <Fruit fruit={{ YetAnotherKey: '🍇' }} show="large" />
     )
 
     expect(unregister).toHaveBeenCalledTimes(0)
 
-    render(
-      <FruitWithResolution fruit={{ YetAnotherKey: '🍇' }} show="small" />,
-      { container }
+    const { rerender } = render(
+      <Fruit fruit={{ YetAnotherKey: '🍇' }} show="small" />,
+      {
+        container,
+      }
     )
+
+    rerender()
 
     expect(unregister).toHaveBeenCalledTimes(1)
   })

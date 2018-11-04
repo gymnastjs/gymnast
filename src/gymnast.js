@@ -8,8 +8,9 @@ export { default as Grid } from './grid'
 
 // HOC
 export { default as asGrid } from './asGrid'
-export { default as withContext } from './withContext'
-export { default as withResolution } from './withResolution'
+
+// Hooks
+export { default as useResolution } from './useResolution'
 
 // Utils
 export { default as defaults } from './defaults'

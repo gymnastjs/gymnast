@@ -2,10 +2,11 @@ import * as React from 'react'
 import { render } from 'react-testing-library'
 import Grid from '../grid'
 import ConfigProvider from './index'
-import ConfigConsumer from './consumer'
 import defaults from '../defaults'
+import ConfigContext from './context'
 
-const TesterComponent = props => <ConfigConsumer {...props} />
+const TesterComponent = ({ children }) =>
+  children(React.useContext(ConfigContext)) || null
 
 describe('ConfigProvider', () => {
   it('should not crash when empty', () => {

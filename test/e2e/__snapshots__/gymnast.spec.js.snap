@@ -67,6 +67,7 @@ Object {
     "setLogger": [Function],
     "warn": [Function],
   },
+  "useResolution": [Function],
   "utils": Object {
     "accumulateOver": [Function],
     "combineSpacing": [Function],
@@ -81,7 +82,5 @@ Object {
     "toCXS": [Function],
     "validateSpacingProps": [Function],
   },
-  "withContext": [Function],
-  "withResolution": [Function],
 }
 `;

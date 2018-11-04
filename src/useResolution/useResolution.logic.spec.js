@@ -3,7 +3,7 @@ import {
   getMediaQuery,
   getSingleResolutionProps,
   checkShouldShow,
-} from './withResolution.logic'
+} from './useResolution.logic'
 
 describe('getMediaQueries', () => {
   it('should return a max and min value base on the available aliases', () => {
