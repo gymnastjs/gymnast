@@ -1,35 +1,28 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { render } from 'react-testing-library'
 import asGrid from './index'
 import Grid from '../grid'
 
 describe('asGrid', () => {
-  let wrapper
-
   it('should pass a ref to innerRef', () => {
     const spy = jest.fn()
-    wrapper = mount(<Grid innerRef={spy} />)
-    expect(spy).toHaveBeenCalledWith(wrapper.find('div').instance())
+    const { container } = render(<Grid innerRef={spy}>test</Grid>)
+
+    expect(spy).toHaveBeenCalledWith(container.firstChild)
   })
 
   it('should allow wrapping any element into a Grid', () => {
-    const Span = asGrid(() => <span />)
-    wrapper = mount(<Span />)
+    const Span = asGrid('span')
+    const { container } = render(<Span />)
 
-    expect(wrapper.html().includes('span')).toBe(true)
+    expect(container.firstChild.tagName).toBe('SPAN')
   })
 
   it('should match the rendering of a Grid when using a div', () => {
     const Div = asGrid('div')
-    const gridWrapper = shallow(<Grid />)
-    wrapper = shallow(<Div />)
+    const { container: gridContainer } = render(<Grid />)
+    const { container: divContainer } = render(<Div />)
 
-    expect(wrapper.html()).toEqual(gridWrapper.html())
-  })
-
-  afterEach(() => {
-    if (wrapper) {
-      wrapper.unmount()
-    }
+    expect(gridContainer).toEqual(divContainer)
   })
 })

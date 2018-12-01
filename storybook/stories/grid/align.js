@@ -50,21 +50,27 @@ export default () => {
             align={!stretch ? 'top' : undefined}
             style={{ height }}
           >
-            {times(items, i => <Box key={i} type="C" value="TOP" />)}
+            {times(items, i => (
+              <Box key={i} type="C" value="TOP" />
+            ))}
           </Grid>
           <Grid
             size={4}
             align={!stretch ? 'center' : undefined}
             style={{ height }}
           >
-            {times(items, i => <Box key={i} type="C" value="CENTER" />)}
+            {times(items, i => (
+              <Box key={i} type="C" value="CENTER" />
+            ))}
           </Grid>
           <Grid
             size={4}
             align={!stretch ? 'bottom' : undefined}
             style={{ height }}
           >
-            {times(items, i => <Box key={i} type="C" value="BOTTOM" />)}
+            {times(items, i => (
+              <Box key={i} type="C" value="BOTTOM" />
+            ))}
           </Grid>
         </Grid>
       </Root>

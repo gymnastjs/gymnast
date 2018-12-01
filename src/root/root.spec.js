@@ -1,41 +1,26 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { render } from 'react-testing-library'
 import Root from './index'
-import Grid from '../grid'
+import { styles } from '../asGrid/grid.styles'
 
 describe('Root', () => {
-  let wrapper
-
   it('should not crash when empty', () => {
-    expect(() => {
-      wrapper = mount(<Root />)
-    }).not.toThrow()
+    expect(() => render(<Root />)).not.toThrow()
   })
 
   it('should be centered', () => {
-    wrapper = mount(<Root />)
+    const { container } = render(<Root />)
 
-    expect(
-      wrapper
-        .find(Grid)
-        .first()
-        .props().justify
-    ).toBe('center')
+    expect(container.querySelector(`.${styles.grid}`)).toJustify('center')
   })
 
   it('should include any child elements', () => {
-    wrapper = mount(
+    const { container } = render(
       <Root>
         <h1>Test!</h1>
       </Root>
     )
 
-    expect(wrapper.find('h1').length).toBe(1)
-  })
-
-  afterEach(() => {
-    if (wrapper) {
-      wrapper.unmount()
-    }
+    expect(container.querySelector('h1')).not.toBeNull()
   })
 })

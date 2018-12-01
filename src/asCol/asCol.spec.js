@@ -1,42 +1,45 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { render } from 'react-testing-library'
 import log from '../log'
 import asCol from './index'
 
 describe('Col', () => {
-  let wrapper
   const Col = asCol('div')
 
   it('should render a Grid with col margins ([0, 1.5, 3])', () => {
-    wrapper = mount(<Col />)
-    const gridProps = wrapper.find('div').props()
-    expect(gridProps).toMatchSnapshot()
+    const { container } = render(<Col />)
+
+    expect(container.firstChild).toHaveMargins({
+      top: 0,
+      left: 1.5,
+      bottom: 3,
+      right: 1.5,
+    })
   })
 
   it('should override defaults when passing margin prop', () => {
-    wrapper = mount(<Col margin={1} />)
-    const gridProps = wrapper.find('Grid').props()
-    expect(gridProps).toMatchSnapshot()
+    const { container } = render(<Col margin={1} />)
+
+    expect(container.firstChild).toHaveMargins({
+      top: 1,
+      left: 1,
+      bottom: 1,
+      right: 1,
+    })
   })
 
   it('should render custom elements', () => {
     const StrongCol = asCol('strong')
+    const { container } = render(<StrongCol />)
 
-    wrapper = mount(<StrongCol />)
-    expect(wrapper.find('strong').length).toBe(1)
+    expect(container.firstChild.tagName).toBe('STRONG')
   })
 
   it('should not error when passed valid props', () => {
     spyOn(log, 'error')
 
-    wrapper = mount(<Col margin={0} />)
+    render(<Col margin={0} />)
 
     expect(log.error).not.toHaveBeenCalled()
-  })
-
-  afterEach(() => {
-    if (wrapper) {
-      wrapper.unmount()
-    }
   })
 })

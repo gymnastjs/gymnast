@@ -1,69 +1,63 @@
 import * as React from 'react'
-import { mount } from 'enzyme'
+import { render, fireEvent } from 'react-testing-library'
 import Dev from './dev'
 
-function keyPress(key, ctrl = true, shift = true, meta = false) {
-  const event = document.createEvent('Event')
-
-  event.keyCode = key
-  event.ctrlKey = ctrl
-  event.shiftKey = shift
-  event.metaKey = meta
-
-  event.initEvent('keydown', true, true)
-  document.body.dispatchEvent(event)
+function keyPress(baseElement, key, { ctrl, shift, meta }) {
+  fireEvent.keyDown(baseElement, {
+    code: key.charCodeAt(0),
+    keyCode: key.charCodeAt(0),
+    ctrlKey: ctrl,
+    key,
+    metaKey: meta,
+    shiftKey: shift,
+  })
 }
 
 describe('Dev', () => {
-  const overlayKey = 75
-  let wrapper
+  const overlayKey = 'K'
 
   it('should append a container to attach the overlay', () => {
-    wrapper = mount(<Dev />)
+    const { baseElement } = render(<Dev />)
 
-    expect(document.querySelector('#gymnast-dev-overlay')).toBeTruthy()
+    expect(baseElement.querySelector('#gymnast-dev-overlay')).not.toBeNull()
   })
 
-  it('should call toggleOverlay when pressing ctrl+shift+k', () => {
-    wrapper = mount(<Dev />)
+  it('should toggle the overlay when pressing ctrl+shift+k', () => {
+    const { baseElement } = render(<Dev />)
 
-    keyPress(overlayKey)
+    keyPress(baseElement, overlayKey, { ctrl: true, shift: true, meta: false })
 
-    expect(wrapper.state().showOverlay).toBe(true)
+    expect(baseElement.querySelector('#gymnast-dev-overlay *')).not.toBeNull()
 
-    keyPress(overlayKey)
+    keyPress(baseElement, overlayKey, { ctrl: true, shift: true, meta: false })
 
-    expect(wrapper.state().showOverlay).toBe(false)
+    expect(baseElement.querySelector('#gymnast-dev-overlay *')).toBeNull()
   })
 
-  it('should call toggleOverlay when pressing cmd+shift+k', () => {
-    wrapper = mount(<Dev />)
+  it('should call toggle the overlay when pressing cmd+shift+k', () => {
+    const { baseElement } = render(<Dev />)
 
-    keyPress(overlayKey, false, true, true)
+    keyPress(baseElement, overlayKey, { ctrl: false, shift: true, meta: true })
 
-    expect(wrapper.state().showOverlay).toBe(true)
+    expect(baseElement.querySelector('#gymnast-dev-overlay *')).not.toBeNull()
 
-    keyPress(overlayKey, false, true, true)
+    keyPress(baseElement, overlayKey, { ctrl: false, shift: true, meta: true })
 
-    expect(wrapper.state().showOverlay).toBe(false)
+    expect(baseElement.querySelector('#gymnast-dev-overlay *')).toBeNull()
   })
 
   it('should allow modifying the trigger keys', () => {
-    const aKey = 'A'.charCodeAt(0)
-    wrapper = mount(<Dev useCtrl={false} useShift={false} keyCode={aKey} />)
+    const aKey = 'A'
+    const { baseElement } = render(
+      <Dev useCtrl={false} useShift={false} keyCode={aKey.charCodeAt(0)} />
+    )
 
-    keyPress(aKey, false, false)
+    keyPress(baseElement, aKey, { ctrl: false, shift: false, meta: false })
 
-    expect(wrapper.state().showOverlay).toBe(true)
+    expect(baseElement.querySelector('#gymnast-dev-overlay *')).not.toBeNull()
 
-    keyPress(aKey, false, false)
+    keyPress(baseElement, aKey, { ctrl: false, shift: false, meta: false })
 
-    expect(wrapper.state().showOverlay).toBe(false)
-  })
-
-  afterEach(() => {
-    if (wrapper) {
-      wrapper.unmount()
-    }
+    expect(baseElement.querySelector('#gymnast-dev-overlay *')).toBeNull()
   })
 })
