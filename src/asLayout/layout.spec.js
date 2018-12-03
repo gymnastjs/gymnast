@@ -1,30 +1,29 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { render } from 'react-testing-library'
 import asLayout from './index'
 import Layout from '../layout'
 
 describe('asLayout', () => {
-  let wrapper
-
   it('should allow wrapping any element into a Layout', () => {
-    const Span = asLayout(() => <span />)
-    wrapper = mount(<Span />)
+    const Span = asLayout('span')
+    const { container } = render(<Span />)
 
-    expect(wrapper.html().includes('span')).toBe(true)
+    expect(container.firstChild.tagName).toBe('SPAN')
   })
 
   it('should match the rendering of a Layout when using a div', () => {
     const Div = asLayout('div')
-    const layoutWrapper = shallow(<Layout />)
-    wrapper = shallow(<Div />)
+    const { container: gridContainer } = render(<Layout />)
+    const { container: divContainer } = render(<Div />)
 
-    expect(wrapper.html()).toEqual(layoutWrapper.html())
+    expect(gridContainer).toEqual(divContainer)
   })
 
   it('should pass a ref to innerRef', () => {
     const spy = jest.fn()
-    wrapper = mount(<Layout innerRef={spy} />)
-    expect(spy).toHaveBeenCalledWith(wrapper.find('div').instance())
+    const { container } = render(<Layout innerRef={spy}>test</Layout>)
+
+    expect(spy).toHaveBeenCalledWith(container.firstChild)
   })
 
   it('should allow custom defaults', () => {
@@ -33,17 +32,11 @@ describe('asLayout', () => {
       marginBottom: 1.5,
     }))
 
-    wrapper = mount(<CustomLayout />)
+    const { container } = render(<CustomLayout />)
 
-    expect(wrapper.find('strong').props().style).toEqual({
-      borderBottomWidth: 12,
-      borderTopWidth: 16,
+    expect(container.firstChild).toHaveMargins({
+      top: 2,
+      bottom: 1.5,
     })
-  })
-
-  afterEach(() => {
-    if (wrapper) {
-      wrapper.unmount()
-    }
   })
 })

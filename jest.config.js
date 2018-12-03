@@ -2,7 +2,6 @@ module.exports = {
   collectCoverageFrom: ['src/{,**/}*.js'],
   setupTestFrameworkScriptFile: '<rootDir>/test/env.js',
   moduleNameMapper: {
-    '^.+[.]css$': 'identity-obj-proxy',
     '^.+[.](md|txt)$': '<rootDir>/test/stringStub.js',
   },
   transform: {

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { mount } from 'enzyme'
+import { render } from 'react-testing-library'
 import Grid from '../grid'
 import ConfigProvider from './index'
 import ConfigConsumer from './consumer'
@@ -8,135 +8,126 @@ import defaults from '../defaults'
 const TesterComponent = props => <ConfigConsumer {...props} />
 
 describe('ConfigProvider', () => {
-  let wrapper
-
   it('should not crash when empty', () => {
-    expect(() => {
-      wrapper = mount(<ConfigProvider />)
-    }).not.toThrow()
+    expect(() => render(<ConfigProvider />)).not.toThrow()
   })
 
   it('does not add additional DOM Elements', () => {
-    wrapper = mount(
+    const { container } = render(
       <ConfigProvider>
         <Grid />
       </ConfigProvider>
     )
-    const grid = mount(<Grid />)
+    const { container: grid } = render(<Grid />)
 
-    expect(grid.html()).toEqual(wrapper.html())
-
-    grid.unmount()
+    expect(grid).toEqual(container)
   })
 
   it('should return default values if provider did not provide values', () => {
-    const render = jest.fn()
+    const children = jest.fn()
 
-    wrapper = mount(
+    render(
       <ConfigProvider>
-        <TesterComponent>{render}</TesterComponent>
+        <TesterComponent>{children}</TesterComponent>
       </ConfigProvider>
     )
 
-    const { calls } = render.mock
-
-    expect(calls[0][0]).toEqual(defaults)
+    expect(children.mock.calls[0][0]).toEqual(defaults)
   })
 
   it('should return values received from provider', () => {
-    const render = jest.fn()
+    const children = jest.fn()
 
-    wrapper = mount(
+    render(
       <ConfigProvider columns={2}>
-        <TesterComponent>{render}</TesterComponent>
+        <TesterComponent>{children}</TesterComponent>
       </ConfigProvider>
     )
 
-    const { calls } = render.mock
-    const { columns } = calls[0][0]
-
-    expect(columns).toEqual(2)
+    expect(children.mock.calls[0][0].columns).toEqual(2)
   })
 
   it('should persist values coming from parent provider if child provider did not provide that value', () => {
-    const render = jest.fn()
+    const children = jest.fn()
 
-    wrapper = mount(
+    render(
       <ConfigProvider columns={2}>
         <ConfigProvider base={4}>
           <ConfigProvider gutter={10}>
-            <TesterComponent>{render}</TesterComponent>
+            <TesterComponent>{children}</TesterComponent>
           </ConfigProvider>
         </ConfigProvider>
       </ConfigProvider>
     )
 
-    const { calls } = render.mock
-    const { columns, base, gutter } = calls[0][0]
-
-    expect(columns).toEqual(2)
-    expect(base).toEqual(4)
-    expect(gutter).toEqual(10)
+    expect(children.mock.calls[0][0]).toEqual(
+      expect.objectContaining({
+        columns: 2,
+        base: 4,
+        gutter: 10,
+      })
+    )
   })
 
   it('should override parent provider value if child provider provided the same value', () => {
-    const render = jest.fn()
+    const children = jest.fn()
 
-    wrapper = mount(
+    render(
       <ConfigProvider columns={2}>
         <ConfigProvider base={4}>
           <ConfigProvider base={2}>
             <ConfigProvider columns={9}>
-              <TesterComponent>{render}</TesterComponent>
+              <TesterComponent>{children}</TesterComponent>
             </ConfigProvider>
           </ConfigProvider>
         </ConfigProvider>
       </ConfigProvider>
     )
 
-    const { calls } = render.mock
-    const { columns, base } = calls[0][0]
-
-    expect(columns).toEqual(9)
-    expect(base).toEqual(2)
+    expect(children.mock.calls[0][0]).toEqual(
+      expect.objectContaining({
+        columns: 9,
+        base: 2,
+      })
+    )
   })
 
   it('should handle siblings with different override values', () => {
-    const render1 = jest.fn()
-    const render2 = jest.fn()
-    const render3 = jest.fn()
+    const child1 = jest.fn()
+    const child2 = jest.fn()
+    const child3 = jest.fn()
 
-    wrapper = mount(
+    render(
       <ConfigProvider columns={2} base={4}>
         <ConfigProvider columns={3} base={5}>
-          <TesterComponent>{render1}</TesterComponent>
+          <TesterComponent>{child1}</TesterComponent>
         </ConfigProvider>
         <ConfigProvider base={1}>
-          <TesterComponent>{render2}</TesterComponent>
+          <TesterComponent>{child2}</TesterComponent>
         </ConfigProvider>
-        <TesterComponent>{render3}</TesterComponent>
+        <TesterComponent>{child3}</TesterComponent>
       </ConfigProvider>
     )
 
-    const { calls: calls1 } = render1.mock
-    const { calls: calls2 } = render2.mock
-    const { calls: calls3 } = render3.mock
+    expect(child1.mock.calls[0][0]).toEqual(
+      expect.objectContaining({
+        columns: 3,
+        base: 5,
+      })
+    )
 
-    const { columns: columns1, base: base1 } = calls1[0][0]
-    const { columns: columns2, base: base2 } = calls2[0][0]
-    const { columns: columns3, base: base3 } = calls3[0][0]
+    expect(child2.mock.calls[0][0]).toEqual(
+      expect.objectContaining({
+        columns: 2,
+        base: 1,
+      })
+    )
 
-    expect(columns1).toEqual(3)
-    expect(base1).toEqual(5)
-    expect(columns2).toEqual(2)
-    expect(base2).toEqual(1)
-    expect(columns3).toBe(2)
-    expect(base3).toBe(4)
-  })
-
-  afterEach(() => {
-    if (wrapper) {
-      wrapper.unmount()
-    }
+    expect(child3.mock.calls[0][0]).toEqual(
+      expect.objectContaining({
+        columns: 2,
+        base: 4,
+      })
+    )
   })
 })

@@ -1,8 +1,5 @@
-// stub for rAF until jest makes the polyfill available by default
-// https://github.com/facebook/jest/pull/4568
-global.requestAnimationFrame = jest.fn().mockImplementation(() => {
-  throw new Error('requestAnimationFrame is not supported in Node')
-})
+import { every, map } from 'lodash'
+import 'react-testing-library/cleanup-after-each'
 
 const allListeners = {}
 
@@ -27,9 +24,45 @@ global.matchMedia = function matchMedia(media) {
   }
 }
 
-const Enzyme = require('enzyme')
-const Adapter = require('enzyme-adapter-react-16')
+function stringifyCss(element) {
+  /* eslint-disable no-underscore-dangle */
+  const styles = window.getComputedStyle(element)._values
+  /* eslint-enable no-underscore-dangle */
 
-Enzyme.configure({ adapter: new Adapter() })
+  return map(styles, (value, key) => `${key}: ${value}`).join('; ')
+}
 
-jest.mock('../src/cxs', () => i => JSON.stringify(i))
+expect.extend({
+  toHaveMargins(element, margins, base = 8) {
+    const elementStyles = window.getComputedStyle(element)
+    const pass = every(margins, (value, prop) => {
+      const expected = value ? `${value * base}px` : '0'
+
+      return elementStyles[`border-${prop}-width`] === expected
+    })
+    const message = pass
+      ? ''
+      : () => new Error(`Margins don't match: ${stringifyCss(element)}`)
+
+    return {
+      pass,
+      message,
+    }
+  },
+  toJustify(element, justify) {
+    const elementStyles = window.getComputedStyle(element)
+    const elementJustify = elementStyles['justify-content']
+    const pass = justify === elementJustify
+    const message = pass
+      ? ''
+      : () =>
+          new Error(
+            `Expected justify to be "${justify}" but "${elementJustify}" found`
+          )
+
+    return {
+      pass,
+      message,
+    }
+  },
+})

@@ -57,7 +57,7 @@ export default function() {
             <Grid {...params} style={colors.colors2}>
               {times(items, index => (
                 <Box size={2} margin={margin} key={index} type="A">
-                  {`${(index * 2) % 12 + 2}`}
+                  {`${((index * 2) % 12) + 2}`}
                 </Box>
               ))}
             </Grid>

@@ -1,33 +1,23 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { render } from 'react-testing-library'
 import Offset from './index'
 import Grid from '../grid'
 
 describe('Offset', () => {
-  let wrapper
-
   it('should ignore children', () => {
-    wrapper = mount(
+    const { container } = render(
       <Offset size={1}>
         <h1>Nope</h1>
       </Offset>
     )
 
-    expect(wrapper.html().includes('h1')).toBe(false)
+    expect(container.querySelector('h1')).toBeNull()
   })
 
   it('should render like an empty grid', () => {
-    wrapper = mount(<Offset size={2} />)
-    const grid = mount(<Grid size={2} />)
+    const { container } = render(<Offset size={2} />)
+    const { container: gridContainer } = render(<Grid size={2} />)
 
-    expect(wrapper.html()).toEqual(grid.html())
-
-    grid.unmount()
-  })
-
-  afterEach(() => {
-    if (wrapper) {
-      wrapper.unmount()
-    }
+    expect(container).toEqual(gridContainer)
   })
 })
