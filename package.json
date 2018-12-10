@@ -125,8 +125,7 @@
     "verifyConditions": "condition-circle"
   },
   "peerDependencies": {
-    "react": ">=16.3",
-    "react-dom": ">=15"
+    "react": ">=16.3"
   },
   "dependencies": {
     "cxs": "https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362",
