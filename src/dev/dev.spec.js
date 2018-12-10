@@ -16,48 +16,48 @@ function keyPress(baseElement, key, { ctrl, shift, meta }) {
 describe('Dev', () => {
   const overlayKey = 'K'
 
-  it('should append a container to attach the overlay', () => {
-    const { baseElement } = render(<Dev />)
+  it('should not render the overlay by default', () => {
+    const { container } = render(<Dev />)
 
-    expect(baseElement.querySelector('#gymnast-dev-overlay')).not.toBeNull()
+    expect(container.innerHTML).toBeFalsy()
   })
 
   it('should toggle the overlay when pressing ctrl+shift+k', () => {
-    const { baseElement } = render(<Dev />)
+    const { baseElement, container } = render(<Dev />)
 
     keyPress(baseElement, overlayKey, { ctrl: true, shift: true, meta: false })
 
-    expect(baseElement.querySelector('#gymnast-dev-overlay *')).not.toBeNull()
+    expect(container.children.length).toBe(1)
 
     keyPress(baseElement, overlayKey, { ctrl: true, shift: true, meta: false })
 
-    expect(baseElement.querySelector('#gymnast-dev-overlay *')).toBeNull()
+    expect(container.children.length).toBe(0)
   })
 
   it('should call toggle the overlay when pressing cmd+shift+k', () => {
-    const { baseElement } = render(<Dev />)
+    const { baseElement, container } = render(<Dev />)
 
     keyPress(baseElement, overlayKey, { ctrl: false, shift: true, meta: true })
 
-    expect(baseElement.querySelector('#gymnast-dev-overlay *')).not.toBeNull()
+    expect(container.children.length).toBe(1)
 
     keyPress(baseElement, overlayKey, { ctrl: false, shift: true, meta: true })
 
-    expect(baseElement.querySelector('#gymnast-dev-overlay *')).toBeNull()
+    expect(container.children.length).toBe(0)
   })
 
   it('should allow modifying the trigger keys', () => {
     const aKey = 'A'
-    const { baseElement } = render(
+    const { baseElement, container } = render(
       <Dev useCtrl={false} useShift={false} keyCode={aKey.charCodeAt(0)} />
     )
 
     keyPress(baseElement, aKey, { ctrl: false, shift: false, meta: false })
 
-    expect(baseElement.querySelector('#gymnast-dev-overlay *')).not.toBeNull()
+    expect(container.children.length).toBe(1)
 
     keyPress(baseElement, aKey, { ctrl: false, shift: false, meta: false })
 
-    expect(baseElement.querySelector('#gymnast-dev-overlay *')).toBeNull()
+    expect(container.children.length).toBe(0)
   })
 })

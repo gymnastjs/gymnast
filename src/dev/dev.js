@@ -1,14 +1,7 @@
 // @flow
 import * as React from 'react'
-import ReactDOM from 'react-dom'
 import ConfigConsumer from '../configProvider/consumer'
 import getStyles from './dev.styles'
-import {
-  body,
-  appendDevContainer,
-  removeDevContainer,
-  getDevContainer,
-} from './dev.logic'
 import Grid from '../grid'
 import Root from '../root'
 import Layout from '../layout'
@@ -38,13 +31,15 @@ export default class Dev extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    appendDevContainer()
-    body().addEventListener('keydown', this.onKeyDown)
+    if (document.body) {
+      document.body.addEventListener('keydown', this.onKeyDown)
+    }
   }
 
   componentWillUnmount() {
-    removeDevContainer()
-    body().removeEventListener('keydown', this.onKeyDown)
+    if (document.body) {
+      document.body.removeEventListener('keydown', this.onKeyDown)
+    }
   }
 
   onKeyDown = (e: KeyboardEvent) => {
@@ -71,7 +66,8 @@ export default class Dev extends React.Component<Props, State> {
     }
     const values = getValues(context)
     const styles = getStyles(values)
-    const content = (
+
+    return (
       <Layout className={styles.gymnastOverlay}>
         <div className={styles.leftMargin} />
         <Root>
@@ -87,8 +83,6 @@ export default class Dev extends React.Component<Props, State> {
         <div className={styles.rightMargin} />
       </Layout>
     )
-
-    return ReactDOM.createPortal(content, getDevContainer())
   }
 
   render() {
