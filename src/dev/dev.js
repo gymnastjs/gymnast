@@ -19,8 +19,6 @@ type State = {|
   showOverlay: boolean,
 |}
 
-const body = (document.body: any)
-
 export default class Dev extends React.Component<Props, State> {
   static defaultProps = {
     keyCode: KEY_CODE_K,
@@ -33,11 +31,15 @@ export default class Dev extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    body.addEventListener('keydown', this.onKeyDown)
+    if (document.body) {
+      document.body.addEventListener('keydown', this.onKeyDown)
+    }
   }
 
   componentWillUnmount() {
-    body.removeEventListener('keydown', this.onKeyDown)
+    if (document.body) {
+      document.body.removeEventListener('keydown', this.onKeyDown)
+    }
   }
 
   onKeyDown = (e: KeyboardEvent) => {
