@@ -18,7 +18,6 @@ export { default as withContext } from './withContext'
 
 // Utils / Dev
 export { default as Dev } from './dev'
-export { default as log } from './log'
 export { default as defaults } from './defaults'
 export { default as utils } from './utils'
 

@@ -67,13 +67,6 @@ Object {
     },
     "verticalGutter": 3,
   },
-  "log": Object {
-    "error": [Function],
-    "info": [Function],
-    "setLevel": [Function],
-    "setLogger": [Function],
-    "warn": [Function],
-  },
   "utils": Object {
     "accumulateOver": [Function],
     "combineSpacing": [Function],
