@@ -1,12 +1,10 @@
-
 import * as React from 'react'
 import { ConfigContextType } from '../types'
 import Context from './context'
 import defaults from '../defaults'
 
-type ProviderProps = {
-  ...ConfigContextType,
-  children?: React.Node,
+type ProviderProps = ConfigContextType & {
+  children?: React.ReactNode
 }
 
 type ProviderState = ConfigContextType
@@ -35,7 +33,5 @@ class ConfigProvider extends React.Component<ProviderProps, ProviderState> {
 }
 
 export default (props: ProviderProps) => (
-  <Context.Consumer>
-    {context => <ConfigProvider {...context} {...props} />}
-  </Context.Consumer>
+  <Context.Consumer>{context => <ConfigProvider {...context} {...props} />}</Context.Consumer>
 )

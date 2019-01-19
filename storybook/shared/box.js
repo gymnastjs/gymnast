@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { Grid, Col } from 'gymnast'
 import { Spacing } from '../../src/types'
@@ -38,7 +37,7 @@ export const colors = {
 type BoxProps = {
   type: $Keys<typeof typeMap>,
   style?: Object,
-  children?: React.Node,
+  children?: React.ReactNode,
   value?: string,
   margin?: Spacing,
 }

@@ -1,11 +1,10 @@
-
 import * as React from 'react'
 import { type Size, Root, Layout, Grid, Col } from 'gymnast'
 import { getMarginSelect, colors } from '../../shared'
 import { axonBlack, axonGold } from '../../../src/dev/colors'
 
 type HeadingProps = {
-  children: React.Node,
+  children: React.ReactNode,
   size?: Size,
 }
 
@@ -114,23 +113,13 @@ export default () => {
             paddingTop="L"
             justify="center"
             align="center"
-            style={{ height: 300, ...colors.colors2 }}
-          >
+            style={{ height: 300, ...colors.colors2 }}>
             <Grid margin={margin} style={{ maxWidth: 200, ...colors.colors3 }}>
               {text}
             </Grid>
           </Grid>
-          <Grid
-            size={6}
-            justify="center"
-            align="center"
-            style={{ height: 300, ...colors.colors2 }}
-          >
-            <Grid
-              margin={margin}
-              paddingTop="L"
-              style={{ maxWidth: 200, ...colors.colors3 }}
-            >
+          <Grid size={6} justify="center" align="center" style={{ height: 300, ...colors.colors2 }}>
+            <Grid margin={margin} paddingTop="L" style={{ maxWidth: 200, ...colors.colors3 }}>
               {text}
             </Grid>
           </Grid>
