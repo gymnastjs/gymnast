@@ -1,4 +1,4 @@
-// @flow
+
 type Callback = (mql: MediaQueryList, alias: string) => void
 type QueryData = {
   [query: string]: {|

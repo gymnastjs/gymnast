@@ -1,4 +1,4 @@
-// @flow
+
 import * as React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'

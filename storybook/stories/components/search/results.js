@@ -1,4 +1,4 @@
-// @flow
+
 import * as React from 'react'
 import { type Size, Grid, Col } from 'gymnast'
 import { times } from 'lodash'

@@ -1,4 +1,4 @@
-// @flow
+
 import { select } from '@storybook/addon-knobs'
 
 const justifyMap = {

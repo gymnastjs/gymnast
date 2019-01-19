@@ -1,4 +1,4 @@
-// @flow
+
 
 export { default as getMarginSelect } from './margin'
 export { default as getPositionSelect } from './position'

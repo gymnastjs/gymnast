@@ -1,4 +1,4 @@
-// @flow
+
 import './cxs'
 
 // Components

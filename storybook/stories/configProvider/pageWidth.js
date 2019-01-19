@@ -1,4 +1,4 @@
-// @flow
+
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { ConfigProvider, Col, Root, Layout } from 'gymnast'

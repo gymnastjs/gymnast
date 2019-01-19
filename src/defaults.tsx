@@ -1,4 +1,4 @@
-// @flow
+
 import { type ConfigContextType } from './types'
 
 const defaults: {|

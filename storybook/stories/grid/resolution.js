@@ -1,4 +1,4 @@
-// @flow
+
 import * as React from 'react'
 import { Grid } from 'gymnast'
 import { colors } from '../../shared'

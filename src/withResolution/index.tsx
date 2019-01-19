@@ -1,6 +1,6 @@
-// @flow
+
 import * as React from 'react'
-import type { DisplayValues } from '../types'
+import { DisplayValues } from '../types'
 import log from '../log'
 import { getValue } from '../utils'
 import errors from '../errors'

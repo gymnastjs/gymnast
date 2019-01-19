@@ -1,4 +1,4 @@
-// @flow
+
 import cxs from '../cxs'
 
 const layoutRefClassName = 'xnr_layout'

@@ -1,13 +1,13 @@
-// @flow
+
 import * as React from 'react'
 import Grid from '../grid'
-import type { GridProps } from '../types'
+import { GridProps } from '../types'
 import getStyles from './root.styles'
 import { getValues } from '../utils'
 import ConfigConsumer from '../configProvider/consumer'
 
 type Props = GridProps & {
-  children?: React.Node,
+  children?: React.Node
 }
 
 export default function Root({ children, justify, ...props }: Props) {

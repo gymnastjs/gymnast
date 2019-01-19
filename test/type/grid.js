@@ -1,4 +1,4 @@
-// @flow
+
 /* eslint-disable no-unused-expressions */
 import * as React from 'react'
 import { Col, Grid, asGrid, Root } from 'gymnast'

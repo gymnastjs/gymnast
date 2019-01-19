@@ -1,4 +1,4 @@
-// @flow
+
 import { toCXS, accumulateOver } from '../utils'
 import { getMediaQuery } from '../withResolution/withResolution.logic'
 

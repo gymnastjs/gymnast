@@ -1,4 +1,4 @@
-// @flow
+
 import * as React from 'react'
 import { times } from 'lodash'
 import { Root, Layout, Grid } from 'gymnast'

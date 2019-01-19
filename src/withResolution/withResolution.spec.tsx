@@ -13,7 +13,7 @@ import { unregister } from './mediaQuery'
 /* eslint-enable import/first */
 
 describe('withResolution', () => {
-  const Fruit = ({ fruit }) => <div>{fruit}</div>
+  const Fruit = ({ fruit }: { fruit: string }) => <div>{fruit}</div>
 
   it('should be a pass through if matchMedia is not supported', () => {
     spyOn(log, 'warn')
@@ -37,9 +37,7 @@ describe('withResolution', () => {
     logic.checkShouldShow = () => ({ short: true })
 
     const FruitWithResolution = withResolution(Fruit, [])
-    const { container } = render(
-      <FruitWithResolution show="short" fruit="🥥" />
-    )
+    const { container } = render(<FruitWithResolution show="short" fruit="🥥" />)
 
     expect(container.innerHTML).toContain('🥥')
   })
@@ -48,9 +46,7 @@ describe('withResolution', () => {
     logic.checkShouldShow = () => ({ small: false })
 
     const FruitWithResolution = withResolution(Fruit, [])
-    const { container } = render(
-      <FruitWithResolution show="small" fruit="🍉" />
-    )
+    const { container } = render(<FruitWithResolution show="small" fruit="🍉" />)
 
     expect(container.textContent).toBeFalsy()
   })
@@ -77,9 +73,7 @@ describe('withResolution', () => {
     logic.checkShouldShow = () => ({ someOtherKey: true })
 
     const FruitWithResolution = withResolution(Fruit, ['fruit'])
-    const { container } = render(
-      <FruitWithResolution fruit={{ short: '🍌', default: '🥝' }} />
-    )
+    const { container } = render(<FruitWithResolution fruit={{ short: '🍌', default: '🥝' }} />)
 
     expect(container.innerHTML).toContain('🥝')
   })
@@ -88,9 +82,7 @@ describe('withResolution', () => {
     logic.checkShouldShow = () => ({ someOtherKey: true })
 
     const FruitWithResolution = withResolution(Fruit, ['fruit'])
-    const { container } = render(
-      <FruitWithResolution fruit={{ YetAnotherKey: '🍒' }} />
-    )
+    const { container } = render(<FruitWithResolution fruit={{ YetAnotherKey: '🍒' }} />)
 
     expect(container.textContent).toBeFalsy()
   })
@@ -105,10 +97,7 @@ describe('withResolution', () => {
 
     expect(unregister).toHaveBeenCalledTimes(0)
 
-    render(
-      <FruitWithResolution fruit={{ YetAnotherKey: '🍏' }} show="small" />,
-      { container }
-    )
+    render(<FruitWithResolution fruit={{ YetAnotherKey: '🍏' }} show="small" />, { container })
 
     expect(unregister).toHaveBeenCalledTimes(1)
   })
@@ -123,10 +112,7 @@ describe('withResolution', () => {
 
     expect(unregister).toHaveBeenCalledTimes(0)
 
-    render(
-      <FruitWithResolution fruit={{ YetAnotherKey: '🍇' }} show="small" />,
-      { container }
-    )
+    render(<FruitWithResolution fruit={{ YetAnotherKey: '🍇' }} show="small" />, { container })
 
     expect(unregister).toHaveBeenCalledTimes(1)
   })

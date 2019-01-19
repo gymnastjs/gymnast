@@ -1,4 +1,4 @@
-// @flow
+
 import * as React from 'react'
 import ConfigConsumer from '../configProvider/consumer'
 import getStyles from './dev.styles'
@@ -6,7 +6,7 @@ import Grid from '../grid'
 import Root from '../root'
 import Layout from '../layout'
 import { getValues, times } from '../utils'
-import type { ConfigContextType } from '../types'
+import { ConfigContextType } from '../types'
 
 const KEY_CODE_K = 'K'.charCodeAt(0)
 type Props = {|

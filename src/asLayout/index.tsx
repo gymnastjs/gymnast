@@ -1,7 +1,7 @@
-// @flow
+
 import * as React from 'react'
 import { compact } from 'lodash'
-import type { OneResolutionLayout, LayoutProps, OneResolution } from '../types'
+import { OneResolutionLayout, LayoutProps, OneResolution } from '../types'
 import getStyles from './layout.styles'
 import getCoreStyles from '../core'
 import { getValues } from '../utils/index'

@@ -1,14 +1,8 @@
-// @flow
+
 import * as React from 'react'
 import { Grid, Col } from 'gymnast'
-import type { Spacing } from '../../src/types'
-import {
-  axonBlack,
-  axonGold,
-  nomuraGray,
-  bolt,
-  white,
-} from '../../src/dev/colors'
+import { Spacing } from '../../src/types'
+import { axonBlack, axonGold, nomuraGray, bolt, white } from '../../src/dev/colors'
 
 const typeMap = {
   A: 1,
@@ -49,21 +43,14 @@ type BoxProps = {
   margin?: Spacing,
 }
 
-export function Box({
-  children,
-  style = {},
-  type,
-  value = type,
-  ...props
-}: BoxProps) {
+export function Box({ children, style = {}, type, value = type, ...props }: BoxProps) {
   return (
     <Col {...props}>
       <Grid
         padding={['L', 0]}
         align="center"
         justify="center"
-        style={{ ...style, ...colors[`colors${String(typeMap[type])}`] }}
-      >
+        style={{ ...style, ...colors[`colors${String(typeMap[type])}`] }}>
         {children || value}
       </Grid>
     </Col>

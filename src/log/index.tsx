@@ -1,4 +1,4 @@
-// @flow
+
 /* eslint-disable no-console */
 import errors from '../errors'
 

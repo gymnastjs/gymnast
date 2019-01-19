@@ -1,7 +1,7 @@
-// @flow
+
 import * as React from 'react'
 import asGrid from '../asGrid'
-import type { OneResolution } from '../types'
+import { OneResolution } from '../types'
 
 function mapProps(props): OneResolution {
   const defaultProps: OneResolution = {
@@ -19,6 +19,6 @@ function mapProps(props): OneResolution {
       }
 }
 
-export default function asCol(Component: React.ComponentType<*> | string) {
+export default function asCol<C>(Component: React.ComponentType<C> | string) {
   return asGrid(Component, mapProps)
 }

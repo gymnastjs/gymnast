@@ -1,8 +1,8 @@
-// @flow
+
 import * as React from 'react'
 import { Col, Grid } from 'gymnast'
 import { colors } from '../../../shared'
-import type { Size } from '../../../../src/types'
+import { Size } from '../../../../src/types'
 
 export default function SearchFilters(props: { size?: Size }) {
   return (

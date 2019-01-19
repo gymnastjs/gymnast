@@ -1,7 +1,7 @@
-// @flow
+
 import * as React from 'react'
 import { compact } from 'lodash'
-import type { OneResolutionGrid, GridProps, OneResolution } from '../types'
+import { OneResolutionGrid, GridProps, OneResolution } from '../types'
 import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
 import getCoreStyles from '../core'

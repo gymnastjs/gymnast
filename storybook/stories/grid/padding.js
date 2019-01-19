@@ -1,4 +1,4 @@
-// @flow
+
 import * as React from 'react'
 import { type Size, Root, Layout, Grid, Col } from 'gymnast'
 import { getMarginSelect, colors } from '../../shared'

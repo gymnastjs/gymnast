@@ -1,6 +1,6 @@
-// @flow
+
 import * as React from 'react'
-import type { ConfigContextType } from '../types'
+import { ConfigContextType } from '../types'
 import Context from './context'
 
 type Props = { children: (context: ConfigContextType) => ?React.Node }

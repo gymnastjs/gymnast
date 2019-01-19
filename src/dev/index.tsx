@@ -1,4 +1,4 @@
-// @flow
+
 /* eslint-disable global-require, import/no-mutable-exports */
 let dev
 

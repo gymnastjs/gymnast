@@ -1,7 +1,7 @@
-// @flow
+
 import cxs from '../cxs'
 import defaults from '../defaults'
-import type {
+import {
   Noop,
   SpacingAliases,
   SpacingProps,

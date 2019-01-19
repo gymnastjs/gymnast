@@ -1,5 +1,5 @@
-// @flow
-import type { DisplayAliases } from '../types'
+
+import { DisplayAliases } from '../types'
 import { splitPattern, kebabCase } from '../utils'
 import defaults from '../defaults'
 
@@ -16,7 +16,7 @@ export const sharedResolutionProperties = [
   'paddingTop',
 ]
 
-export type ShouldShow = { [string]: boolean }
+export type ShouldShow = { [key: string]: boolean }
 
 function isTrue(obj) {
   return (key: string) => obj[key] === true
@@ -26,11 +26,7 @@ function getActiveResolutionName(shouldShow: ShouldShow) {
   return Object.keys(shouldShow).find(isTrue(shouldShow))
 }
 
-function extractObjectValue(
-  value: any,
-  shouldShow?: ShouldShow = {},
-  fallbackKey: string
-) {
+function extractObjectValue(value: any, shouldShow: ShouldShow = {}, fallbackKey: string) {
   const active = getActiveResolutionName(shouldShow)
 
   return active && active in value ? value[active] : value[fallbackKey]
@@ -49,12 +45,12 @@ export function getSingleResolutionProps({
   shouldShow,
   resolutionKeys = [],
   fallbackDisplayKey = defaults.fallbackDisplayKey,
-}: {|
-  +props: *,
-  +shouldShow?: ShouldShow,
-  +resolutionKeys: Array<string>,
-  +fallbackDisplayKey: string,
-|}) {
+}: {
+  props: { show?: boolean }
+  shouldShow?: ShouldShow
+  resolutionKeys: Array<string>
+  fallbackDisplayKey: string
+}) {
   const { ...propsCopy } = props
 
   delete propsCopy.show
@@ -76,9 +72,7 @@ export function getMediaQuery(
   prefix: string = '@media '
 ): string {
   const displayPropertiesArray =
-    displayAliases[range] instanceof Array
-      ? displayAliases[range]
-      : [displayAliases[range]]
+    displayAliases[range] instanceof Array ? displayAliases[range] : [displayAliases[range]]
   const response = displayPropertiesArray
     .map(
       displayProperties =>
@@ -94,7 +88,7 @@ export function getMediaQuery(
 export function getMediaQueries(
   show: string | Array<string> = [],
   displayAliases: DisplayAliases
-): { [string]: string } {
+): { [key: string]: string } {
   const showArray = show instanceof Array ? show : show.split(splitPattern)
 
   return showArray
