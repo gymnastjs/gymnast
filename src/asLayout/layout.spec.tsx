@@ -6,7 +6,7 @@ import Layout from '../layout'
 describe('asLayout', () => {
   it('should allow wrapping any element into a Layout', () => {
     const Span = asLayout('span')
-    const { container } = render(<Span />)
+    const { container } = render(<Span />) as any
 
     expect(container.firstChild.tagName).toBe('SPAN')
   })

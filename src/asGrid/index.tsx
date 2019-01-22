@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { compact } from 'lodash'
-import { OneResolutionGrid, GridProps, OneResolution } from '../types'
+import { OneResolutionGrid, GridProps, OneResolution, ConfigContextType } from '../types'
 import { styles, getCol } from './grid.styles'
 import { getValue } from '../utils'
 import getCoreStyles from '../core'
@@ -21,7 +21,7 @@ export default function asGrid(
     innerRef,
     context,
     ...restProps
-  }: OneResolutionGrid) {
+  }: OneResolutionGrid & { context: ConfigContextType }) {
     const props = getCoreStyles(mapDefaultProps(restProps), context)
     const classes = compact([
       styles.grid,
@@ -38,3 +38,9 @@ export default function asGrid(
 
   return withContext(Resolution)
 }
+
+function Foo(props: { context: ConfigContextType }) {
+  return <div />
+}
+
+withContext(Foo)

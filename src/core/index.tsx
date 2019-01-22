@@ -3,7 +3,7 @@ import { ConfigContextType, OneResolution } from '../types'
 
 export default function getCoreStyles(
   props: Partial<OneResolution> & { [key: string]: any },
-  context: ConfigContextType | void
+  context: ConfigContextType
 ) {
   const {
     base,

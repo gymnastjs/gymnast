@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { compact } from 'lodash'
-import { OneResolutionLayout, LayoutProps, OneResolution } from '../types'
+import { OneResolutionLayout, LayoutProps, OneResolution, ConfigContextType } from '../types'
 import getStyles from './layout.styles'
 import getCoreStyles from '../core'
 import { getValues } from '../utils/index'
@@ -21,7 +21,7 @@ export default function asLayout(
     innerRef,
     context,
     ...restProps
-  }: OneResolutionLayout) {
+  }: OneResolutionLayout & { context: ConfigContextType }) {
     const props = getCoreStyles(mapDefaultProps(restProps), context)
     const styles: { [key: string]: string } = getStyles(getValues(context, restProps))
     const classes = compact([

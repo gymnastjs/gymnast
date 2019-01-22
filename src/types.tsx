@@ -78,7 +78,6 @@ export type OneResolution = {
   paddingTop?: SpacingValues
   show?: DisplayValues
   style?: { [key: string]: string | number }
-  context?: ConfigContextType
 }
 
 type MultipleResolutionProps = OneResolution & {
