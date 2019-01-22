@@ -1,6 +1,5 @@
-
 import * as React from 'react'
-import { DisplayValues } from '../types'
+import { DisplayValues, DisplayAliases, ConfigContextType } from '../types'
 import log from '../log'
 import { getValue } from '../utils'
 import errors from '../errors'
@@ -11,36 +10,31 @@ import {
   getSingleResolutionProps,
   hasTrueValues,
   isObject,
-  type ShouldShow,
+  ShouldShow,
   sharedResolutionProperties,
 } from './withResolution.logic'
 
-type Props = { show?: DisplayValues }
+type Props = { show?: DisplayValues; context: ConfigContextType }
 type State = {
-  shouldShow?: ShouldShow,
+  shouldShow?: ShouldShow
 }
 
-export default function withResolution(
-  Component: React.ComponentType<*>,
+export default function withResolution<P>(
+  Component: React.ComponentType<P>,
   resolutionKeys: Array<string>,
-  coercedSupport?: boolean = supportsMatchMedia
+  coercedSupport: boolean = supportsMatchMedia
 ) {
-  const combinedResolutionKeys = sharedResolutionProperties.concat(
-    resolutionKeys
-  )
+  const combinedResolutionKeys = sharedResolutionProperties.concat(resolutionKeys)
 
   if (!coercedSupport) {
     log.warn(errors.NOMATCHMEDIA)
     return Component
   }
 
-  return class WithResolution extends React.Component<
-    Props & React.ElementProps<typeof Component>,
-    State
-  > {
+  return class WithResolution extends React.Component<Props & P, State> {
     static defaultProps = { context: {} }
 
-    constructor(props: Props) {
+    constructor(props: Props & P) {
       super(props)
       const queries = this.getQueries(props.show)
 
@@ -67,7 +61,7 @@ export default function withResolution(
       this.removeMediaQueryListener(show)
     }
 
-    onMediaQueryChange = (mq?: any = {}, alias: string) => {
+    onMediaQueryChange = (mq: any = {}, alias: string) => {
       const { shouldShow = {} } = this.state
 
       if (shouldShow[alias] !== mq.matches) {
@@ -82,7 +76,7 @@ export default function withResolution(
 
     getQueries = (show?: DisplayValues) => {
       const { context } = this.props
-      const displayAliases = getValue(context, 'displayAliases')
+      const displayAliases: DisplayAliases = getValue(context, 'displayAliases')
       let queries = show
 
       if (!show && this.anyPropsUseResolutionFormat()) {
@@ -94,7 +88,7 @@ export default function withResolution(
 
     anyPropsUseResolutionFormat = () =>
       combinedResolutionKeys.some(key => {
-        const { [key]: prop } = this.props
+        const { [key]: prop } = this.props as any
 
         return isObject(prop)
       })
@@ -116,7 +110,7 @@ export default function withResolution(
     }
 
     render() {
-      const { context, show, ...restProps } = this.props
+      const { context, show, ...restProps } = this.props as Props
       const { shouldShow } = this.state
 
       if (show && shouldShow && !hasTrueValues(shouldShow)) {
@@ -130,7 +124,7 @@ export default function withResolution(
         fallbackDisplayKey: getValue(context, 'fallbackDisplayKey'),
       })
 
-      return <Component {...props} show={show} context={context} />
+      return <Component {...props as P} show={show} context={context} />
     }
   }
 }

@@ -1,6 +1,13 @@
 const preval = require('preval.macro')
 
-module.exports = preval`
+const colors: {
+  axonBlack: string
+  axonGold: string
+  bolt10: string
+  gold15: string
+  nomuraGray: string
+  white: string
+} = preval`
 const { rgba } = require('polished')
 const axonGold = '#ffd700'
 const bolt = '#1469cc'
@@ -14,3 +21,5 @@ module.exports = {
   nomuraGray: '#efefef',
   white: '#ffffff',
 }`
+
+export default colors

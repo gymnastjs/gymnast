@@ -1,22 +1,17 @@
-
 import cxs from '../cxs'
 import defaults from '../defaults'
-import {
-  Noop,
-  SpacingAliases,
-  SpacingProps,
-  SpacingValues,
-} from '../types'
+import { Noop, SpacingAliases, SpacingProps, SpacingValues } from '../types'
 import log from '../log'
 import errors from '../errors'
 
-const hasDefinedValues = keys => key => typeof keys[key] !== 'undefined'
-const isDefined = val => typeof val !== 'undefined'
+const hasDefinedValues = (keys: { [key: string]: any }) => (key: string) =>
+  typeof keys[key] !== 'undefined'
+const isDefined = (val: any) => typeof val !== 'undefined'
 // regex case examples: https://regex101.com/r/bs73rZ/1
 
 export const splitPattern = /(?:(?:\s+)?,(?:\s+)?|\s+)/
 export const noop: Noop = () => null
-export const times = (n: number): Array<*> =>
+export const times = (n: number): Array<number> =>
   new Array(n).fill(undefined).map((val, index) => index)
 export const kebabCase = (str: string) =>
   str
@@ -25,8 +20,8 @@ export const kebabCase = (str: string) =>
 
 export function validateSpacingProps(
   props: SpacingProps & {
-    marginArray?: Array<number>,
-    paddingArray?: Array<number>,
+    marginArray?: Array<number> | void
+    paddingArray?: Array<number> | void
   }
 ) {
   if (process.env.NODE_ENV === 'production') {
@@ -34,18 +29,11 @@ export function validateSpacingProps(
   }
 
   const margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft']
-  const paddings = [
-    'paddingTop',
-    'paddingRight',
-    'paddingBottom',
-    'paddingLeft',
-  ]
+  const paddings = ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft']
 
   if (
-    (typeof props.marginArray !== 'undefined' &&
-      margins.some(hasDefinedValues(props))) ||
-    (typeof props.paddingArray !== 'undefined' &&
-      paddings.some(hasDefinedValues(props)))
+    (typeof props.marginArray !== 'undefined' && margins.some(hasDefinedValues(props))) ||
+    (typeof props.paddingArray !== 'undefined' && paddings.some(hasDefinedValues(props)))
   ) {
     log.error(errors.MIXEDSPACING, `"${JSON.stringify(props)}" used`)
     return false
@@ -54,9 +42,9 @@ export function validateSpacingProps(
 }
 
 function getSpacing(
-  values?: Array<number> = [],
+  values: Array<number> | void = [],
   type: 'margin' | 'padding'
-): { [string]: number } {
+): { [key: string]: number } {
   if (!values || !values.length) {
     return {}
   }
@@ -91,10 +79,10 @@ function getSpacing(
 
 export function getCSS(
   prop: string,
-  value: number | string,
+  value: number | string | void,
   base: number
-): { [string]: number } {
-  const num = typeof value === 'number' ? value : parseFloat(value || 0)
+): { [key: string]: number } {
+  const num = typeof value === 'number' ? value : parseFloat(value || '0')
 
   if (typeof value === 'undefined') {
     return {}
@@ -122,10 +110,7 @@ export function getCSS(
  *   - `margin={1}` becomes `[1]`
  */
 
-export function parseSpacing(
-  spacing: any,
-  spacingAliases: SpacingAliases
-): number[] | void {
+export function parseSpacing(spacing: any, spacingAliases?: SpacingAliases): number[] | void {
   if (typeof spacing === 'undefined') {
     return undefined
   }
@@ -140,17 +125,16 @@ export function parseSpacing(
     spacingArray = spacing.split(splitPattern)
   }
   if (spacingArray) {
-    return replaceSpacingAliases(spacingArray, spacingAliases).map(parseFloat)
+    return replaceSpacingAliases(spacingArray, spacingAliases).map(value =>
+      parseFloat(String(value))
+    )
   }
 
   log.error(errors.INVALIDSPACING, `"${typeof spacing}" used`)
   return undefined
 }
 
-function replaceSpacingAlias(
-  value: SpacingValues,
-  spacingAliases: SpacingAliases
-) {
+function replaceSpacingAlias(value: SpacingValues | void, spacingAliases: SpacingAliases | void) {
   if (spacingAliases && typeof value === 'string' && value in spacingAliases) {
     return spacingAliases[value]
   }
@@ -159,7 +143,7 @@ function replaceSpacingAlias(
 
 export function replaceSpacingAliases(
   spacingArray: Array<SpacingValues>,
-  spacingAliases: SpacingAliases
+  spacingAliases: SpacingAliases | void
 ): Array<SpacingValues> {
   return spacingArray.map(value => replaceSpacingAlias(value, spacingAliases))
 }
@@ -168,24 +152,25 @@ function replaceSpacingAliasValues({
   props,
   spacingAliases,
 }: {
-  props: { [string]: SpacingValues },
-  spacingAliases: SpacingAliases,
-}): { [string]: SpacingValues } {
+  props: Partial<SpacingProps>
+  spacingAliases: SpacingAliases
+}): { [key: string]: SpacingValues } {
   return Object.keys(props).reduce(
     (acc, key) => ({
       ...acc,
-      [key]: replaceSpacingAlias(props[key], spacingAliases),
+      // @ts-ignore
+      [key]: replaceSpacingAlias(props[key] as any, spacingAliases),
     }),
     {}
   )
 }
 
 type CombineSpacingSettings = {
-  spacingProps: SpacingProps,
-  base: number,
-  spacingAliases?: SpacingAliases,
-  gutter: number,
-  verticalGutter: number,
+  spacingProps: SpacingProps
+  base: number
+  spacingAliases?: SpacingAliases
+  gutter?: number
+  verticalGutter?: number
 }
 
 export function combineSpacing({
@@ -232,10 +217,8 @@ export function combineSpacing({
   )
 }
 
-export function toCXS(raw: {
-  +[string]: string | number | {},
-}): { +[string]: string } {
-  const styles = {}
+export function toCXS(raw: { [key: string]: string | number | {} }): { [key: string]: string } {
+  const styles: { [key: string]: string } = {}
 
   Object.keys(raw).forEach(style => {
     styles[style] = cxs(raw[style])
@@ -244,18 +227,17 @@ export function toCXS(raw: {
   return styles
 }
 
-export function getValue<A: *>(context: *, property: string, override?: A): A {
-  return ([override, context[property], defaults[property]].find(
-    isDefined
-  ): any)
+export function getValue<A>(context: any, property: string, override?: A): A {
+  // @ts-ignore
+  return [override, context[property], defaults[property]].find(isDefined)
 }
 
-export function getValues(context: *, overrides?: * = {}) {
+export function getValues(context?: any, overrides: {} = {}) {
   return { ...defaults, ...context, ...overrides }
 }
 
 export function accumulateOver(props: Array<string>) {
-  return (acc: *, current: *) => {
+  return (acc: any, current: any) => {
     props.forEach(prop => {
       acc[prop] = Object.assign(acc[prop], current[prop])
     })

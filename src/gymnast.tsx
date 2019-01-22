@@ -1,4 +1,3 @@
-
 import './cxs'
 
 // Components
@@ -23,7 +22,7 @@ export { default as defaults } from './defaults'
 export { default as utils } from './utils'
 
 // Types
-export type {
+export {
   AlignGrid,
   DisplayValues,
   Fixed,

@@ -12,7 +12,7 @@ describe('Media Query Manager', () => {
 
     it('when a media query triggers, it should invoke all registered callbacks', () => {
       const callback = jest.fn()
-      const mql = global.matchMedia('query')
+      const mql = (global as any).matchMedia('query')
 
       register('query', 'alias', callback)
 
@@ -24,7 +24,7 @@ describe('Media Query Manager', () => {
     it('should call only the relevant media queries', () => {
       const callback1 = jest.fn()
       const callback2 = jest.fn()
-      const mql1 = global.matchMedia('query1')
+      const mql1 = (global as any).matchMedia('query1')
 
       register('query1', '1', callback1)
       register('query2', '2', callback2)
@@ -40,7 +40,7 @@ describe('Media Query Manager', () => {
     it('should invoke all registered callbacks per relevant media query', () => {
       const callback1 = jest.fn()
       const callback2 = jest.fn()
-      const mql = global.matchMedia('query')
+      const mql = (global as any).matchMedia('query')
 
       register('query', '1', callback1)
       register('query', '', callback2)
@@ -63,7 +63,7 @@ describe('Media Query Manager', () => {
 
     it('should remove listener when calling unregister', () => {
       const callback = jest.fn()
-      const mql = global.matchMedia('query')
+      const mql = (global as any).matchMedia('query')
 
       register('query', 'alias', callback)
 

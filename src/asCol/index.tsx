@@ -1,9 +1,8 @@
-
 import * as React from 'react'
 import asGrid from '../asGrid'
 import { OneResolution } from '../types'
 
-function mapProps(props): OneResolution {
+function mapProps(props: any): OneResolution {
   const defaultProps: OneResolution = {
     marginTop: 0,
     marginRight: 'gutter/2',

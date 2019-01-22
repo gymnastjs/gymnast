@@ -1,17 +1,16 @@
-function addDevError(acc, code, message) {
+function addDevError(acc: { [key: string]: string }, code: string, message: string) {
   acc[code] = `${code}: ${message}
 
     You can find more information here: https://github.com/gymnastjs/gymnast/wiki/${code}`
   return acc
 }
 
-function addProdError(acc, code) {
+function addProdError(acc: { [key: string]: string }, code: string) {
   acc[code] = code
   return acc
 }
-const addError =
-  process.env.NODE_ENV === 'production' ? addProdError : addDevError
-const errors = {}
+const addError = process.env.NODE_ENV === 'production' ? addProdError : addDevError
+const errors: { [key: string]: string } = {}
 
 addError(
   errors,
@@ -39,4 +38,4 @@ addError(
   'INVALIDLOGLEVEL',
   'Specified logger log level is invalid. Valid values are: "info", "warn" and "error"'
 )
-module.exports = errors
+export default errors

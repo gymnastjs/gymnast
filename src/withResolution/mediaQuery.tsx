@@ -1,22 +1,21 @@
-
 type Callback = (mql: MediaQueryList, alias: string) => void
 type QueryData = {
-  [query: string]: {|
-    +mediaQuery: MediaQueryList,
-    +allCallbacks: (mql: MediaQueryListEvent) => void,
-  |},
+  [query: string]: {
+    mediaQuery: MediaQueryList
+    allCallbacks: (mql: MediaQueryListEvent) => void
+  }
 }
 type PerCallbackData = {
-  [query: string]: Array<{|
-    +alias: string,
-    +callback: Callback,
-  |}>,
+  [query: string]: Array<{
+    alias: string
+    callback: Callback
+  }>
 }
 
 const perCallbackData: PerCallbackData = {}
 const queryData: QueryData = {}
 
-function getCallCallbacks(query) {
+function getCallCallbacks(query: string) {
   return () => {
     perCallbackData[query].forEach(({ callback, alias }) =>
       callback(queryData[query].mediaQuery, alias)
@@ -49,9 +48,7 @@ export function register(query: string, alias: string, callback: Callback) {
 
 export function unregister(query: string, cb: Callback) {
   if (supportsMatchMedia && query && query in perCallbackData) {
-    perCallbackData[query] = perCallbackData[query].filter(
-      ({ callback }) => cb !== callback
-    )
+    perCallbackData[query] = perCallbackData[query].filter(({ callback }) => cb !== callback)
 
     if (perCallbackData[query].length === 0) {
       queryData[query].mediaQuery.removeListener(queryData[query].allCallbacks)

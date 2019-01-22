@@ -1,4 +1,3 @@
-
 import { DisplayAliases } from '../types'
 import { splitPattern, kebabCase } from '../utils'
 import defaults from '../defaults'
@@ -18,7 +17,7 @@ export const sharedResolutionProperties = [
 
 export type ShouldShow = { [key: string]: boolean }
 
-function isTrue(obj) {
+function isTrue(obj: any) {
   return (key: string) => obj[key] === true
 }
 
@@ -46,7 +45,7 @@ export function getSingleResolutionProps({
   resolutionKeys = [],
   fallbackDisplayKey = defaults.fallbackDisplayKey,
 }: {
-  props: { show?: boolean }
+  props: { show?: string; [key: string]: any }
   shouldShow?: ShouldShow
   resolutionKeys: Array<string>
   fallbackDisplayKey: string
@@ -71,8 +70,8 @@ export function getMediaQuery(
   displayAliases: DisplayAliases,
   prefix: string = '@media '
 ): string {
-  const displayPropertiesArray =
-    displayAliases[range] instanceof Array ? displayAliases[range] : [displayAliases[range]]
+  const aliases = displayAliases[range]
+  const displayPropertiesArray = aliases instanceof Array ? aliases : [aliases]
   const response = displayPropertiesArray
     .map(
       displayProperties =>
@@ -110,7 +109,7 @@ export function checkShouldShow(queries: { [alias: string]: string }) {
     return undefined
   }
 
-  const shouldShow = {}
+  const shouldShow: { [key: string]: boolean } = {}
 
   Object.keys(queries).forEach(alias => {
     shouldShow[alias] = window.matchMedia(queries[alias]).matches

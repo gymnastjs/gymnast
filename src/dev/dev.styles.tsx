@@ -1,14 +1,14 @@
-
 import { toCXS, accumulateOver } from '../utils'
 import { getMediaQuery } from '../withResolution/withResolution.logic'
-import { gold15, bolt10 } from './colors'
+import colors from './colors'
+import { DisplayAliases } from '../types'
 
 const accumulateStyles = accumulateOver(['leftMargin', 'rightMargin'])
 const margin = {
   position: 'fixed',
   top: 0,
   bottom: 0,
-  backgroundColor: gold15,
+  backgroundColor: colors.gold15,
 }
 const gymnastOverlay = {
   position: 'fixed',
@@ -22,10 +22,10 @@ const gymnastOverlay = {
 const col = {
   backgroundColor: 'transparent',
   height: '100vh',
-  borderColor: bolt10,
+  borderColor: colors.bolt10,
 }
 
-function aliasMarginQuery(query, padding) {
+function aliasMarginQuery(query: string, padding: number) {
   if (padding <= 0) {
     return { leftMargin: {}, rightMargin: {} }
   }
@@ -48,7 +48,12 @@ export default function getStyles({
   pageMargin,
   gutter,
   base,
-}: *) {
+}: {
+  displayAliases: DisplayAliases
+  pageMargin: { [key: string]: number }
+  gutter: number
+  base: number
+}) {
   const css = Object.keys(displayAliases)
     .map(alias => {
       const query = getMediaQuery(alias, displayAliases)

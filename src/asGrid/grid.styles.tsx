@@ -1,4 +1,3 @@
-
 import cxs from '../cxs'
 import { toCXS } from '../utils/index'
 
@@ -66,7 +65,7 @@ export function getCol(size: string | number | void, columns: number) {
   }
 
   return cxs({
-    flexBasis: `${(parseInt(size, 10) / columns) * 100}%`,
-    maxWidth: `${(parseInt(size, 10) / columns) * 100}%`,
+    flexBasis: `${(parseInt(String(size), 10) / columns) * 100}%`,
+    maxWidth: `${(parseInt(String(size), 10) / columns) * 100}%`,
   })
 }

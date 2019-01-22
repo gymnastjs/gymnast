@@ -1,10 +1,9 @@
-
 import { combineSpacing, getValues } from '../utils'
 import { ConfigContextType, OneResolution } from '../types'
 
 export default function getCoreStyles(
-  props: $Shape<OneResolution>,
-  context: ?ConfigContextType
+  props: Partial<OneResolution> & { [key: string]: any },
+  context: ConfigContextType | void
 ) {
   const {
     base,
@@ -22,12 +21,7 @@ export default function getCoreStyles(
     ...restProps
   } = props
 
-  const {
-    gutter,
-    verticalGutter,
-    base: contextBase,
-    spacingAliases,
-  } = getValues(context, props)
+  const { gutter, verticalGutter, base: contextBase, spacingAliases } = getValues(context, props)
 
   const spacing = combineSpacing({
     spacingProps: {

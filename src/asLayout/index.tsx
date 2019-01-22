@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { compact } from 'lodash'
 import { OneResolutionLayout, LayoutProps, OneResolution } from '../types'
@@ -11,10 +10,8 @@ import withContext from '../withContext'
 const resolutionProperties = ['fixed', 'height', 'overflow']
 
 export default function asLayout(
-  Component: React.ComponentType<*> | string,
-  mapDefaultProps?: (
-    props: $Shape<OneResolution>
-  ) => $Shape<OneResolution> = props => props
+  Component: React.ComponentType<any> | string,
+  mapDefaultProps: (props: Partial<OneResolution>) => Partial<OneResolution> = props => props
 ): React.ComponentType<LayoutProps> {
   function Layout({
     className,
@@ -26,7 +23,7 @@ export default function asLayout(
     ...restProps
   }: OneResolutionLayout) {
     const props = getCoreStyles(mapDefaultProps(restProps), context)
-    const styles = getStyles(getValues(context, restProps))
+    const styles: { [key: string]: string } = getStyles(getValues(context, restProps))
     const classes = compact([
       className,
       fixed && styles[`${fixed}Fixed`],

@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { render } from 'react-testing-library'
 import asGrid from './index'
 import Grid from '../grid'
@@ -13,7 +13,7 @@ describe('asGrid', () => {
 
   it('should allow wrapping any element into a Grid', () => {
     const Span = asGrid('span')
-    const { container } = render(<Span />)
+    const { container } = render(<Span />) as any
 
     expect(container.firstChild.tagName).toBe('SPAN')
   })

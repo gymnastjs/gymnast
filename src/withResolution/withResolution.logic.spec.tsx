@@ -4,6 +4,7 @@ import {
   getSingleResolutionProps,
   checkShouldShow,
 } from './withResolution.logic'
+import { DisplayAliases } from '../types'
 
 describe('getMediaQueries', () => {
   it('should return a max and min value base on the available aliases', () => {
@@ -85,7 +86,7 @@ describe('getMediaQueries', () => {
 })
 
 describe('getMediaQuery', () => {
-  let sampleDisplayAliases
+  let sampleDisplayAliases: DisplayAliases
 
   beforeEach(() => {
     sampleDisplayAliases = {
@@ -214,7 +215,7 @@ describe('checkShouldShow', () => {
   }
 
   it('should return an object with the same keys', () => {
-    const out = checkShouldShow(queries)
+    const out: any = checkShouldShow(queries)
 
     expect(Object.keys(out)).toEqual(Object.keys(queries))
   })

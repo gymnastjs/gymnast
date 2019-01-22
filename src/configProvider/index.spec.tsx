@@ -5,7 +5,7 @@ import ConfigProvider from './index'
 import ConfigConsumer from './consumer'
 import defaults from '../defaults'
 
-const TesterComponent = props => <ConfigConsumer {...props} />
+const TesterComponent = (props: any) => <ConfigConsumer {...props} />
 
 describe('ConfigProvider', () => {
   it('should not crash when empty', () => {

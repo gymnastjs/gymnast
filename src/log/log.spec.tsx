@@ -49,7 +49,7 @@ describe('log', () => {
     }
 
     log.setLogger(logger)
-    log.setLevel('incorrect value!')
+    log.setLevel('incorrect value!' as any)
 
     expect(logger.error).toHaveBeenCalled()
   })

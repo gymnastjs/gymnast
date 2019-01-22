@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { render } from 'react-testing-library'
 import log from '../log'
 import asCol from './index'
@@ -32,7 +32,7 @@ describe('Col', () => {
     const StrongCol = asCol('strong')
     const { container } = render(<StrongCol />)
 
-    expect(container.firstChild.tagName).toBe('STRONG')
+    expect((container as any).firstChild.tagName).toBe('STRONG')
   })
 
   it('should not error when passed valid props', () => {

@@ -2,7 +2,11 @@ import * as React from 'react'
 import { render, fireEvent } from 'react-testing-library'
 import Dev from './dev'
 
-function keyPress(baseElement, key, { ctrl, shift, meta }) {
+function keyPress(
+  baseElement: Element,
+  key: string,
+  { ctrl, shift, meta }: { ctrl: boolean; shift: boolean; meta: boolean }
+) {
   fireEvent.keyDown(baseElement, {
     code: key.charCodeAt(0),
     keyCode: key.charCodeAt(0),

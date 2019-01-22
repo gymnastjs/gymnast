@@ -1,12 +1,19 @@
-
 /* eslint-disable no-console */
 import errors from '../errors'
 
+type Logger = {
+  warn: (...args: any[]) => void
+  info: (...args: any[]) => void
+  error: (...args: any[]) => void
+  setLevel: (level: LogLevels) => void
+  setLogger: (...args: any[]) => void
+}
+
 type LogLevels = 'info' | 'warn' | 'error'
-const logLevels = ['info', 'warn', 'error']
+const logLevels: LogLevels[] = ['info', 'warn', 'error']
 let logIndex = 0
 let logger = console
-const log = {}
+const log: Partial<Logger> = {}
 
 logLevels.forEach((level, index) => {
   log[level] = (...args: any[]) => {
@@ -22,12 +29,12 @@ log.setLevel = (level: LogLevels) => {
   if (index >= 0) {
     logIndex = index
   } else {
-    log.error(errors.INVALIDLOGLEVEL, level)
+    ;(log as Logger).error(errors.INVALIDLOGLEVEL, level)
   }
 }
 
-log.setLogger = (newLogger: { [LogLevels]: (...args: any[]) => void }) => {
-  logger = newLogger
+log.setLogger = (newLogger: { [level: string]: (...args: any[]) => void }) => {
+  logger = newLogger as any
 }
 
-export default log
+export default log as Logger

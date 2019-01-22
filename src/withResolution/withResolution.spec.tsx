@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { render } from 'react-testing-library'
 import log from '../log'
 import withResolution from './index'
@@ -13,7 +13,7 @@ import { unregister } from './mediaQuery'
 /* eslint-enable import/first */
 
 describe('withResolution', () => {
-  const Fruit = ({ fruit }: { fruit: string }) => <div>{fruit}</div>
+  const Fruit = ({ fruit }: any) => <div>{fruit}</div>
 
   it('should be a pass through if matchMedia is not supported', () => {
     spyOn(log, 'warn')
@@ -27,7 +27,7 @@ describe('withResolution', () => {
   it('should render when `shouldShow` is not set', () => {
     logic.checkShouldShow = () => undefined
 
-    const FruitWithResolution = withResolution(Fruit, [])
+    const FruitWithResolution: any = withResolution(Fruit, [])
     const { container } = render(<FruitWithResolution fruit="🍍" />)
 
     expect(container.innerHTML).toContain('🍍')

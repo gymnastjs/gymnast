@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { compact } from 'lodash'
 import { OneResolutionGrid, GridProps, OneResolution } from '../types'
@@ -11,10 +10,8 @@ import withContext from '../withContext'
 const resolutionProperties = ['align', 'justify', 'size']
 
 export default function asGrid(
-  Component: React.ComponentType<*> | string,
-  mapDefaultProps?: (
-    props: $Shape<OneResolution>
-  ) => $Shape<OneResolution> = props => props
+  Component: React.ComponentType<any> | string,
+  mapDefaultProps: (props: Partial<OneResolution>) => Partial<OneResolution> = props => props
 ): React.ComponentType<GridProps> {
   function Grid({
     align,

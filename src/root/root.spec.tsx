@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { render } from 'react-testing-library'
 import Root from './index'
 import { styles } from '../asGrid/grid.styles'

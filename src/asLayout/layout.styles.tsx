@@ -1,4 +1,3 @@
-
 import cxs from '../cxs'
 
 const layoutRefClassName = 'xnr_layout'
@@ -8,7 +7,15 @@ const fixed = {
   transform: 'translateX(-50%)',
 }
 
-export default function getStyles({ maxPageWidth, minPageWidth, base }: *) {
+export default function getStyles({
+  maxPageWidth,
+  minPageWidth,
+  base,
+}: {
+  maxPageWidth: number | 'none'
+  minPageWidth: number
+  base: number
+}) {
   const raw = {
     layout: {
       alignItems: 'center',
@@ -47,7 +54,9 @@ export default function getStyles({ maxPageWidth, minPageWidth, base }: *) {
     },
   }
 
-  const styleObj = { ...raw.layout }
+  const styleObj: any = {
+    ...raw.layout,
+  }
 
   if (maxPageWidth !== 'none') {
     styleObj[` > :not(.${layoutRefClassName})`] = {
@@ -57,12 +66,12 @@ export default function getStyles({ maxPageWidth, minPageWidth, base }: *) {
 
   const layoutStyles = cxs(styleObj)
 
-  const styles = {}
+  const styles: any = {}
 
   Object.keys(raw).forEach(style => {
-    styles[style] = cxs(raw[style])
+    styles[style] = cxs((raw as any)[style])
   })
 
   styles.layout = `${layoutRefClassName} ${layoutStyles}`
-  return styles
+  return styles as { [key in keyof typeof raw]: string }
 }

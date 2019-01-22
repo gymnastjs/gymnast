@@ -1,6 +1,6 @@
-
 import { toCXS, accumulateOver } from '../utils'
 import { getMediaQuery } from '../withResolution/withResolution.logic'
+import { DisplayAliases } from '../types'
 
 const accumulateStyles = accumulateOver(['root', 'child'])
 const smallRoot = {
@@ -9,7 +9,7 @@ const smallRoot = {
   paddingRight: 0,
 }
 
-function addRootPadding(query, padding) {
+function addRootPadding(query: string, padding: string) {
   return {
     root: {
       [query]: {
@@ -21,7 +21,7 @@ function addRootPadding(query, padding) {
   }
 }
 
-function addChildPadding(query, padding) {
+function addChildPadding(query: string, padding: number) {
   return {
     root: {
       [query]: smallRoot,
@@ -40,7 +40,14 @@ export default function getStyles({
   pageMargin,
   base,
   displayAliases,
-}: *) {
+}: {
+  gutter: number
+  pageMargin: {
+    [key: string]: number
+  }
+  base: number
+  displayAliases: DisplayAliases
+}) {
   const css = Object.keys(displayAliases)
     .map(alias => {
       const query = getMediaQuery(alias, displayAliases)

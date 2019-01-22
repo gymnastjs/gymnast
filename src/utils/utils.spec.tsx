@@ -184,7 +184,7 @@ describe('validateSpacingProps', () => {
 
 describe('getCSS', () => {
   it('should return "{}" if value is not set', () => {
-    const css = getCSS('marginTop')
+    const css = getCSS('marginTop', undefined, 0)
 
     expect(css).toEqual({})
   })
@@ -266,12 +266,7 @@ describe('replaceSpacingAliases', () => {
       S: 1,
     }
 
-    expect(replaceSpacingAliases([2, 'XS', 'S', 2], spacingAliases)).toEqual([
-      2,
-      0.5,
-      1,
-      2,
-    ])
+    expect(replaceSpacingAliases([2, 'XS', 'S', 2], spacingAliases)).toEqual([2, 0.5, 1, 2])
   })
 })
 
