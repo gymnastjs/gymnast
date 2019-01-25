@@ -34,10 +34,7 @@ const ciConfig = {
   username: process.env[`SAUCE_USERNAME${isMaster ? '_MASTER' : ''}`],
   access_key: process.env[`SAUCE_ACCESS_KEY${isMaster ? '_MASTER' : ''}`],
   desiredCapabilities: {
-    tags: [
-      CIRCLE_BRANCH,
-      isMaster ? projectName : `${projectName}-${CIRCLE_BRANCH}`,
-    ],
+    tags: [CIRCLE_BRANCH, isMaster ? projectName : `${projectName}-${CIRCLE_BRANCH}`],
     build: CIRCLE_BUILD_NUM,
   },
 }
@@ -57,10 +54,6 @@ module.exports = nightwatchConfig({
   ...(isCI ? ciConfig : localConfig),
   files: getFiles({
     baseUrl: `https://gymnastjs.github.io/gymnast${branchUrlSuffix}`,
-    stories: requireContext(
-      resolve(__dirname, './storybook/stories'),
-      true,
-      /\.js/
-    ),
+    stories: requireContext(resolve(__dirname, './storybook/stories'), true, /\.tsx/),
   }),
 })

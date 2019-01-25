@@ -1,5 +1,5 @@
 module.exports = {
-  collectCoverageFrom: ['src/{,**/}*.js'],
+  collectCoverageFrom: ['src/{,**/}*.tsx'],
   setupTestFrameworkScriptFile: '<rootDir>/test/env.js',
   moduleNameMapper: {
     '^.+[.](md|txt)$': '<rootDir>/test/stringStub.js',
@@ -9,8 +9,5 @@ module.exports = {
   },
   transformIgnorePatterns: ['<rootDir>/node_modules'],
   rootDir: __dirname,
-  testPathIgnorePatterns: [
-    '<rootDir>/node_modules',
-    '<rootDir>/test/img.spec.js',
-  ],
+  testPathIgnorePatterns: ['<rootDir>/node_modules', '<rootDir>/test/img.spec.js'],
 }
