@@ -7,7 +7,7 @@ ratings:
   paths:
     - '**/*.sh'
     - '**/*.css'
-    - '**/*.js'
+    - '**/*.tsx'
     - 'src/*'
     - 'src/**/*'
     - 'test/*'
@@ -20,5 +20,5 @@ exclude_patterns:
   - '**/__screenshots__/'
   - '**/__snapshots__/'
   - 'storybook/stories/'
-  - '**/*.spec.js'
+  - '**/*.spec.tsx'
   - 'test/env.js'

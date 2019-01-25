@@ -14,5 +14,5 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["src", "types"]
+  "include": ["src", "types", "storybook"]
 }
