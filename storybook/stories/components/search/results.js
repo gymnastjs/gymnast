@@ -1,6 +1,5 @@
-
 import * as React from 'react'
-import { type Size, Grid, Col } from 'gymnast'
+import { Size, Grid, Col } from 'gymnast'
 import { times } from 'lodash'
 import { colors } from '../../../shared'
 import styles from '../../../shared/stories.css'
@@ -46,9 +45,8 @@ export default function SearchResults({
               1/6/2017 at 14:50 - 1700 Minor Ave
             </Grid>
             <Grid>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum eu ipsum quis mi rhoncus luctus. Quisque eros lorem,
-              elementum et...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ipsum quis mi
+              rhoncus luctus. Quisque eros lorem, elementum et...
             </Grid>
           </Col>
           <Col size={4} align="top">

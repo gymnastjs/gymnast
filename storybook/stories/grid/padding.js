@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { type Size, Root, Layout, Grid, Col } from 'gymnast'
+import { Size, Root, Layout, Grid, Col } from 'gymnast'
 import { getMarginSelect, colors } from '../../shared'
 import { axonBlack, axonGold } from '../../../src/dev/colors'
 

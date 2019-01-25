@@ -23,6 +23,7 @@
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "7.2.2",
     "@babel/plugin-proposal-class-properties": "7.1.0",
     "@babel/plugin-proposal-object-rest-spread": "7.0.0",
     "@babel/plugin-transform-runtime": "7.1.0",
@@ -40,7 +41,7 @@
     "all-contributors-cli": "5.4.1",
     "babel-cli": "6.26.0",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "10.0.1",
+    "babel-eslint": "11.0.0-beta.0",
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-lodash": "3.3.4",
