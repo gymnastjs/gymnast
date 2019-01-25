@@ -112,7 +112,7 @@
     "format": "prettier --write --single-quote --no-semi --trailing-comma es5 \"{src,test,storybook}/**/*.js\"",
     "lint:css": "stylelint stories/*.css",
     "lint:types": "tsc",
-    "lint:js": "eslint scripts storybook src test --ext .js,.ts,.tsx",
+    "lint:code": "eslint scripts storybook src test --ext .js,.ts,.tsx",
     "lint": "npm-run-all --parallel lint:*",
     "start:storybook": "start-storybook -p 9001 -s ./static -c storybook",
     "start:webpack": "yarn build:dev --watch",

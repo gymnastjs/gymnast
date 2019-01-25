@@ -31,12 +31,7 @@
     "react/require-default-props": 0,
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
-    "import/no-unresolved": [
-      2,
-      {
-        "ignore": ["gymnast"]
-      }
-    ],
+    "import/no-unresolved": 0,
     "no-use-before-define": ["error", "nofunc"]
   }
 }

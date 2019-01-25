@@ -1,2 +1,4 @@
 // @preval
-export default require('./errors')
+import errors from './errors'
+
+export default errors
