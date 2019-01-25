@@ -1,4 +1,8 @@
-function addDevError(acc: { [key: string]: string }, code: string, message: string) {
+function addDevError(
+  acc: { [key: string]: string },
+  code: string,
+  message: string
+) {
   acc[code] = `${code}: ${message}
 
     You can find more information here: https://github.com/gymnastjs/gymnast/wiki/${code}`
@@ -9,7 +13,8 @@ function addProdError(acc: { [key: string]: string }, code: string) {
   acc[code] = code
   return acc
 }
-const addError = process.env.NODE_ENV === 'production' ? addProdError : addDevError
+const addError =
+  process.env.NODE_ENV === 'production' ? addProdError : addDevError
 const errors: { [key: string]: string } = {}
 
 addError(

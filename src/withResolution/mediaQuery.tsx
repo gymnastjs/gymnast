@@ -48,7 +48,9 @@ export function register(query: string, alias: string, callback: Callback) {
 
 export function unregister(query: string, cb: Callback) {
   if (supportsMatchMedia && query && query in perCallbackData) {
-    perCallbackData[query] = perCallbackData[query].filter(({ callback }) => cb !== callback)
+    perCallbackData[query] = perCallbackData[query].filter(
+      ({ callback }) => cb !== callback
+    )
 
     if (perCallbackData[query].length === 0) {
       queryData[query].mediaQuery.removeListener(queryData[query].allCallbacks)

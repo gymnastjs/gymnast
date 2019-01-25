@@ -25,7 +25,11 @@ function getActiveResolutionName(shouldShow: ShouldShow) {
   return Object.keys(shouldShow).find(isTrue(shouldShow))
 }
 
-function extractObjectValue(value: any, shouldShow: ShouldShow = {}, fallbackKey: string) {
+function extractObjectValue(
+  value: any,
+  shouldShow: ShouldShow = {},
+  fallbackKey: string
+) {
   const active = getActiveResolutionName(shouldShow)
 
   return active && active in value ? value[active] : value[fallbackKey]

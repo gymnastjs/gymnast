@@ -4,8 +4,8 @@ import { getMarginSelect, colors } from '../../shared'
 import { axonBlack, axonGold } from '../../../src/dev/colors'
 
 type HeadingProps = {
-  children: React.ReactNode,
-  size?: Size,
+  children: React.ReactNode
+  size?: Size
 }
 
 /**

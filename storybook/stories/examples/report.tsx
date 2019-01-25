@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { Root, Grid, Layout, Col } from 'gymnast'
 import { loremIpsum, colors } from '../../shared'
@@ -32,8 +31,8 @@ function Card({
   children,
   height = 88,
 }: {
-  children?: any,
-  height?: number,
+  children?: any
+  height?: number
 }): React.Element<any> {
   return (
     <Col style={{ height }}>

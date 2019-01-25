@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { ConfigProvider, Grid } from 'gymnast'
 import { colors } from '../../shared'

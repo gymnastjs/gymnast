@@ -21,7 +21,12 @@ export default function getCoreStyles(
     ...restProps
   } = props
 
-  const { gutter, verticalGutter, base: contextBase, spacingAliases } = getValues(context, props)
+  const {
+    gutter,
+    verticalGutter,
+    base: contextBase,
+    spacingAliases,
+  } = getValues(context, props)
 
   const spacing = combineSpacing({
     spacingProps: {

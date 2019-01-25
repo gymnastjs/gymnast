@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { times } from 'lodash'
 import { boolean, number } from '@storybook/addon-knobs'

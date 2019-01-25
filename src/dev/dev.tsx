@@ -48,7 +48,11 @@ export default class Dev extends React.Component<Props, State> {
     const ctrlKeyPressedOrNotRequired = !useCtrl || (e.ctrlKey || e.metaKey)
     const shiftKeyPressedOrNotRequired = !useShift || e.shiftKey
 
-    if (ctrlKeyPressedOrNotRequired && shiftKeyPressedOrNotRequired && keyCode === pressedKey) {
+    if (
+      ctrlKeyPressedOrNotRequired &&
+      shiftKeyPressedOrNotRequired &&
+      keyCode === pressedKey
+    ) {
       this.setState({ showOverlay: !showOverlay })
     }
   }
@@ -67,7 +71,12 @@ export default class Dev extends React.Component<Props, State> {
         <div className={styles.leftMargin} />
         <Root>
           {times(values.columns).map(key => (
-            <Grid margin={[0, values.gutter / 2]} key={key} size={1} className={styles.col} />
+            <Grid
+              margin={[0, values.gutter / 2]}
+              key={key}
+              size={1}
+              className={styles.col}
+            />
           ))}
         </Root>
         <div className={styles.rightMargin} />

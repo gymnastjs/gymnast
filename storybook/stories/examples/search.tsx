@@ -1,5 +1,3 @@
-
-
 import * as React from 'react'
 import { Root, Grid, Layout } from 'gymnast'
 import { number } from '@storybook/addon-knobs'

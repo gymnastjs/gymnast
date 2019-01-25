@@ -1,4 +1,3 @@
-
 /* eslint-disable no-console, import/no-unresolved */
 import requireContext from 'require-context'
 import { resolve } from 'path'

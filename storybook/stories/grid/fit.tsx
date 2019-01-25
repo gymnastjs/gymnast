@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { times } from 'lodash'
 import { number } from '@storybook/addon-knobs'
@@ -6,7 +5,7 @@ import { Root, Layout, Grid, Col } from 'gymnast'
 import { colors } from '../../shared'
 
 type ItemProps = {
-  text: string,
+  text: string
 }
 
 const Item = ({ text, ...props }: ItemProps) => (

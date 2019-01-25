@@ -109,7 +109,7 @@
     "clean:image": "find storybook/stories -name \"*.png\" -type f -delete && find storybook/stories -name __screenshots__ -type d -exec rm -rf {} \\;",
     "contributors:add": "all-contributors add",
     "contributors:gen": "all-contributors generate",
-    "format": "prettier --write --single-quote --no-semi --trailing-comma es5 \"{src,test,storybook}/**/*.js\"",
+    "format": "prettier --write --single-quote --no-semi --trailing-comma es5 \"{src,test,storybook}/**/*.tsx\"",
     "lint:css": "stylelint stories/*.css",
     "lint:types": "tsc",
     "lint:code": "eslint scripts storybook src test --ext .js,.ts,.tsx",

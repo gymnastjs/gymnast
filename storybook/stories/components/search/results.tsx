@@ -9,9 +9,9 @@ export default function SearchResults({
   pages = 4,
   size,
 }: {
-  results?: number,
-  pages?: number,
-  size?: Size,
+  results?: number
+  pages?: number
+  size?: Size
 } = {}) {
   return (
     <Grid size={size} style={colors.colors5} align="top">
@@ -45,8 +45,9 @@ export default function SearchResults({
               1/6/2017 at 14:50 - 1700 Minor Ave
             </Grid>
             <Grid>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu ipsum quis mi
-              rhoncus luctus. Quisque eros lorem, elementum et...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Vestibulum eu ipsum quis mi rhoncus luctus. Quisque eros lorem,
+              elementum et...
             </Grid>
           </Col>
           <Col size={4} align="top">

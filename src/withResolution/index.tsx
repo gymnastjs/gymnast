@@ -24,7 +24,9 @@ export default function withResolution<P>(
   resolutionKeys: Array<string>,
   coercedSupport: boolean = supportsMatchMedia
 ) {
-  const combinedResolutionKeys = sharedResolutionProperties.concat(resolutionKeys)
+  const combinedResolutionKeys = sharedResolutionProperties.concat(
+    resolutionKeys
+  )
 
   if (!coercedSupport) {
     log.warn(errors.NOMATCHMEDIA)

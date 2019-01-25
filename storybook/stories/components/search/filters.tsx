@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { Col, Grid } from 'gymnast'
 import { colors } from '../../../shared'

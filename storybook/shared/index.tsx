@@ -1,5 +1,3 @@
-
-
 export { default as getMarginSelect } from './margin'
 export { default as getPositionSelect } from './position'
 export { default as loremIpsum } from './loremIpsum'
