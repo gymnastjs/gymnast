@@ -1,4 +1,4 @@
 // @preval
-import errors from './errors'
+const errors = require('./errors')
 
-export default errors
+module.exports = errors

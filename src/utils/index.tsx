@@ -29,18 +29,11 @@ export function validateSpacingProps(
   }
 
   const margins = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft']
-  const paddings = [
-    'paddingTop',
-    'paddingRight',
-    'paddingBottom',
-    'paddingLeft',
-  ]
+  const paddings = ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft']
 
   if (
-    (typeof props.marginArray !== 'undefined' &&
-      margins.some(hasDefinedValues(props))) ||
-    (typeof props.paddingArray !== 'undefined' &&
-      paddings.some(hasDefinedValues(props)))
+    (typeof props.marginArray !== 'undefined' && margins.some(hasDefinedValues(props))) ||
+    (typeof props.paddingArray !== 'undefined' && paddings.some(hasDefinedValues(props)))
   ) {
     log.error(errors.MIXEDSPACING, `"${JSON.stringify(props)}" used`)
     return false
@@ -117,10 +110,7 @@ export function getCSS(
  *   - `margin={1}` becomes `[1]`
  */
 
-export function parseSpacing(
-  spacing: any,
-  spacingAliases?: SpacingAliases
-): number[] | void {
+export function parseSpacing(spacing: any, spacingAliases?: SpacingAliases): number[] | void {
   if (typeof spacing === 'undefined') {
     return undefined
   }
@@ -144,10 +134,7 @@ export function parseSpacing(
   return undefined
 }
 
-function replaceSpacingAlias(
-  value: SpacingValues | void,
-  spacingAliases: SpacingAliases | void
-) {
+function replaceSpacingAlias(value: SpacingValues | void, spacingAliases: SpacingAliases | void) {
   if (spacingAliases && typeof value === 'string' && value in spacingAliases) {
     return spacingAliases[value]
   }
@@ -230,9 +217,7 @@ export function combineSpacing({
   )
 }
 
-export function toCXS(raw: {
-  [key: string]: string | number | {}
-}): { [key: string]: string } {
+export function toCXS(raw: { [key: string]: string | number | {} }): { [key: string]: string } {
   const styles: { [key: string]: string } = {}
 
   Object.keys(raw).forEach(style => {
@@ -247,7 +232,7 @@ export function getValue<A>(context: any, property: string, override?: A): A {
   return [override, context[property], defaults[property]].find(isDefined)
 }
 
-export function getValues(context?: any, overrides: {} = {}) {
+export function getValues(context: any = {}, overrides: {} = {}) {
   return { ...defaults, ...context, ...overrides }
 }
 
