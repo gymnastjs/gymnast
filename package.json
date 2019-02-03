@@ -1,7 +1,7 @@
 {
   "name": "gymnast",
   "version": "0.0.0-semantically-released",
-  "description": "Configurable grid and layout engine for React",
+  "description": "Configurable grid for React",
   "main": "index.js",
   "unpkg": "dist/gymnast.min.js",
   "homepage": "https://gymnastjs.github.io/gymnast",
@@ -78,8 +78,8 @@
     "postcss-nesting": "7.0.0",
     "prettier": "1.15.2",
     "raw-loader": "0.5.1",
-    "react": "16.6.3",
-    "react-dom": "16.6.3",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "react-element-to-jsx-string": "14.0.2",
     "react-test-renderer": "16.6.3",
     "react-testing-library": "5.3.1",
@@ -125,7 +125,7 @@
     "verifyConditions": "condition-circle"
   },
   "peerDependencies": {
-    "react": ">=16.3"
+    "react": ">=16.8"
   },
   "dependencies": {
     "cxs": "https://github.com/arahansen/cxs#d593d14e708c4f5c17cb2105cb9435ae87ade362",

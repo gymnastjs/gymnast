@@ -2,13 +2,6 @@
 import * as React from 'react'
 import { Grid, Col } from 'gymnast'
 import type { Spacing } from '../../src/types'
-import {
-  axonBlack,
-  axonGold,
-  nomuraGray,
-  bolt,
-  white,
-} from '../../src/dev/colors'
 
 const typeMap = {
   A: 1,
@@ -18,25 +11,31 @@ const typeMap = {
   E: 5,
 }
 
+const black = '#1d1f21'
+const white = '#ffffff'
+const nomuraGray = '#efefef'
+const gold = '#ffd700'
+const blue = '#1469cc'
+
 export const colors = {
   colors1: {
-    color: axonGold,
-    backgroundColor: axonBlack,
+    color: gold,
+    backgroundColor: black,
   },
   colors2: {
-    color: bolt,
+    color: blue,
     backgroundColor: nomuraGray,
   },
   colors3: {
-    color: axonBlack,
-    backgroundColor: axonGold,
+    color: black,
+    backgroundColor: gold,
   },
   colors4: {
     color: nomuraGray,
-    backgroundColor: bolt,
+    backgroundColor: blue,
   },
   colors5: {
-    color: axonBlack,
+    color: black,
     backgroundColor: white,
   },
 }

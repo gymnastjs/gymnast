@@ -16,26 +16,31 @@ export default function asGrid(
     props: $Shape<OneResolution>
   ) => $Shape<OneResolution> = props => props
 ): React.ComponentType<GridProps> {
-  function Grid({
-    align,
-    className,
-    justify,
-    size,
-    innerRef,
-    context,
-    ...restProps
-  }: OneResolutionGrid) {
-    const props = getCoreStyles(mapDefaultProps(restProps), context)
-    const classes = compact([
-      styles.grid,
-      getCol(size, getValue(context, 'columns')),
-      className,
-      align && styles[`${align}Align`],
-      justify && styles[`${justify}Justify`],
-    ])
+  // $FlowFixMe
+  const Grid = React.forwardRef(
+    (
+      {
+        align,
+        className,
+        justify,
+        size,
+        context,
+        ...restProps
+      }: OneResolutionGrid,
+      ref: React$ElementRef<*>
+    ) => {
+      const props = getCoreStyles(mapDefaultProps(restProps), context)
+      const classes = compact([
+        styles.grid,
+        getCol(size, getValue(context, 'columns')),
+        className,
+        align && styles[`${align}Align`],
+        justify && styles[`${justify}Justify`],
+      ])
 
-    return <Component ref={innerRef} {...props} className={classes.join(' ')} />
-  }
+      return <Component {...props} ref={ref} className={classes.join(' ')} />
+    }
+  )
 
   const Resolution = withResolution(Grid, resolutionProperties)
 

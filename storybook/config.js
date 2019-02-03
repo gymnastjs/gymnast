@@ -3,7 +3,7 @@ import { withMarkdownNotes } from '@storybook/addon-notes'
 import { withKnobs } from '@storybook/addon-knobs'
 import { setOptions } from '@storybook/addon-options'
 import * as picturebook from 'picturebook'
-import { wrapStory, footer } from './shared'
+import { footer } from './shared'
 
 setOptions({
   name: 'gymnast',
@@ -11,7 +11,6 @@ setOptions({
 })
 
 addDecorator(withKnobs)
-addDecorator(wrapStory)
 
 function loadStories() {
   picturebook.loadStories({

@@ -43,14 +43,6 @@ const defaults: {|
   },
   fallbackDisplayKey: 'default', // key to use when a display alias is omitted or non matching
   gutter: 3, // value (in base units) that separates columns horizontally
-  maxPageWidth: 153, // maximum page width (in base units) 153 * base (8px) = 1224px
-  minPageWidth: 40, // minimum page width (in base units) 40 * base (8px) = 320px = iPhone5 screen width
-  pageMargin: {
-    // page margins (in base units) for each display breakpoint
-    small: 1,
-    medium: 6,
-    large: 6,
-  },
   spacingAliases: {
     // aliases used to indicate spacing values (margin/padding) in base
     XS: 0.5, // units.

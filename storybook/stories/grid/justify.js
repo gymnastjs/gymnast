@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import { number, select } from '@storybook/addon-knobs'
-import { Root, Layout, Grid } from 'gymnast'
+import { Grid } from 'gymnast'
 import { Box } from '../../shared'
 
 const justifyType = {
@@ -25,24 +25,22 @@ export default () => {
   })
 
   return (
-    <Layout height="parent">
-      <Root>
-        <Grid size={size} justify={justifyType[justify]}>
-          <Box size={2} type="C" value={justify.toUpperCase()} />
-        </Grid>
-        <Grid size={size} justify="left">
-          <Box size={2} type="A" value="LEFT" />
-        </Grid>
-        <Grid size={size} justify="center">
-          <Box size={2} type="A" value="CENTER" />
-        </Grid>
-        <Grid size={size} justify="right">
-          <Box size={2} type="A" value="RIGHT" />
-        </Grid>
-        <Grid size={size}>
-          <Box size={2} type="A" value="DEFAULT" />
-        </Grid>
-      </Root>
-    </Layout>
+    <>
+      <Grid size={size} justify={justifyType[justify]}>
+        <Box size={2} type="C" value={justify.toUpperCase()} />
+      </Grid>
+      <Grid size={size} justify="left">
+        <Box size={2} type="A" value="LEFT" />
+      </Grid>
+      <Grid size={size} justify="center">
+        <Box size={2} type="A" value="CENTER" />
+      </Grid>
+      <Grid size={size} justify="right">
+        <Box size={2} type="A" value="RIGHT" />
+      </Grid>
+      <Grid size={size}>
+        <Box size={2} type="A" value="DEFAULT" />
+      </Grid>
+    </>
   )
 }

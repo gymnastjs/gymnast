@@ -4,14 +4,8 @@ exports[`e2e tests should export the same values from the main export than indiv
 Object {
   "Col": [Function],
   "ConfigProvider": [Function],
-  "Dev": [Function],
   "Grid": [Function],
-  "Layout": [Function],
-  "Offset": [Function],
-  "Root": [Function],
-  "asCol": [Function],
   "asGrid": [Function],
-  "asLayout": [Function],
   "defaults": Object {
     "base": 8,
     "columns": 12,
@@ -45,13 +39,6 @@ Object {
     },
     "fallbackDisplayKey": "default",
     "gutter": 3,
-    "maxPageWidth": 153,
-    "minPageWidth": 40,
-    "pageMargin": Object {
-      "large": 6,
-      "medium": 6,
-      "small": 1,
-    },
     "spacingAliases": Object {
       "2XL": 6,
       "2XL/2": 3,

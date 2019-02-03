@@ -4,11 +4,17 @@ import asGrid from './index'
 import Grid from '../grid'
 
 describe('asGrid', () => {
-  it('should pass a ref to innerRef', () => {
-    const spy = jest.fn()
-    const { container } = render(<Grid innerRef={spy}>test</Grid>)
+  it('should pass a ref the underlying Grid element', () => {
+    let myRef
 
-    expect(spy).toHaveBeenCalledWith(container.firstChild)
+    function Test() {
+      myRef = React.useRef(null)
+
+      return <Grid ref={myRef}>test</Grid>
+    }
+    const { container } = render(<Test />)
+
+    expect(myRef).toEqual({ current: container.firstChild })
   })
 
   it('should allow wrapping any element into a Grid', () => {

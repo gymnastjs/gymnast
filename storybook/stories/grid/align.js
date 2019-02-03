@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { boolean, number } from '@storybook/addon-knobs'
-import { Root, Layout, Grid, Col } from 'gymnast'
+import { Grid, Col } from 'gymnast'
 import { Box } from '../../shared'
 
 function ReferenceColumn({ height }: { height: number }) {
@@ -29,51 +29,45 @@ export default () => {
   })
 
   return (
-    <Layout height="parent">
-      <Root>
-        <Col>
-          <h1>Item Align</h1>
-        </Col>
-        <Grid>
-          <ReferenceColumn height={height} />
-          <Box size="auto" type="A" value="TOP" align="top" />
-          <Box size="auto" type="A" value="CENTER" align="center" />
-          <Box size="auto" type="A" value="BOTTOM" align="bottom" />
-          <Box size="auto" type="A" value="DEFAULT" />
+    <>
+      <Col>
+        <h1>Item Align</h1>
+      </Col>
+      <Grid>
+        <ReferenceColumn height={height} />
+        <Box size="auto" type="A" value="TOP" align="top" />
+        <Box size="auto" type="A" value="CENTER" align="center" />
+        <Box size="auto" type="A" value="BOTTOM" align="bottom" />
+        <Box size="auto" type="A" value="DEFAULT" />
+      </Grid>
+      <Col>
+        <h1>Grid Align</h1>
+      </Col>
+      <Grid>
+        <Grid size={4} align={!stretch ? 'top' : undefined} style={{ height }}>
+          {times(items, i => (
+            <Box key={i} type="C" value="TOP" />
+          ))}
         </Grid>
-        <Col>
-          <h1>Grid Align</h1>
-        </Col>
-        <Grid>
-          <Grid
-            size={4}
-            align={!stretch ? 'top' : undefined}
-            style={{ height }}
-          >
-            {times(items, i => (
-              <Box key={i} type="C" value="TOP" />
-            ))}
-          </Grid>
-          <Grid
-            size={4}
-            align={!stretch ? 'center' : undefined}
-            style={{ height }}
-          >
-            {times(items, i => (
-              <Box key={i} type="C" value="CENTER" />
-            ))}
-          </Grid>
-          <Grid
-            size={4}
-            align={!stretch ? 'bottom' : undefined}
-            style={{ height }}
-          >
-            {times(items, i => (
-              <Box key={i} type="C" value="BOTTOM" />
-            ))}
-          </Grid>
+        <Grid
+          size={4}
+          align={!stretch ? 'center' : undefined}
+          style={{ height }}
+        >
+          {times(items, i => (
+            <Box key={i} type="C" value="CENTER" />
+          ))}
         </Grid>
-      </Root>
-    </Layout>
+        <Grid
+          size={4}
+          align={!stretch ? 'bottom' : undefined}
+          style={{ height }}
+        >
+          {times(items, i => (
+            <Box key={i} type="C" value="BOTTOM" />
+          ))}
+        </Grid>
+      </Grid>
+    </>
   )
 }

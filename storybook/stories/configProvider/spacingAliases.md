@@ -1,4 +1,4 @@
-You can use `ConfigProvider` to set different configuration options. `ConfigProvider` is a pass-through element. So it does not define an additional `Grid` or `Layout` element. This gives you flexibility to decide what the container should be. Note that if you are using React 15.5 or below, you'll have to make sure a single child is passed.
+You can use `ConfigProvider` to set different configuration options. `ConfigProvider` is a pass-through element. So it does not define an additional `Grid` element. This gives you flexibility to decide what the container should be. Note that if you are using React 15.5 or below, you'll have to make sure a single child is passed.
 
 Margins and paddings can be aliased for convenience with the property `spacingAliases`. These values, like all other margins and paddings, are then multiplied by their `base` value (for Grid the default is `24px`).
 

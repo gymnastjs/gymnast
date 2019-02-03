@@ -34,13 +34,16 @@ export default function withResolution(
     return Component
   }
 
-  return class WithResolution extends React.Component<
-    Props & React.ElementProps<typeof Component>,
+  type InternalProps = Props & {|
+    innerRef: React$ElementRef<*>,
+  |}
+  class WithResolution extends React.Component<
+    InternalProps & React.ElementProps<typeof Component>,
     State
   > {
     static defaultProps = { context: {} }
 
-    constructor(props: Props) {
+    constructor(props: InternalProps) {
       super(props)
       const queries = this.getQueries(props.show)
 
@@ -54,7 +57,7 @@ export default function withResolution(
       this.addMediaQueryListener(show)
     }
 
-    componentWillReceiveProps(nextProps: Props) {
+    componentWillReceiveProps(nextProps: InternalProps) {
       const { show } = this.props
       if (nextProps.show !== show) {
         this.removeMediaQueryListener(show)
@@ -116,7 +119,7 @@ export default function withResolution(
     }
 
     render() {
-      const { context, show, ...restProps } = this.props
+      const { context, show, innerRef, ...restProps } = this.props
       const { shouldShow } = this.state
 
       if (show && shouldShow && !hasTrueValues(shouldShow)) {
@@ -130,7 +133,14 @@ export default function withResolution(
         fallbackDisplayKey: getValue(context, 'fallbackDisplayKey'),
       })
 
-      return <Component {...props} show={show} context={context} />
+      return (
+        <Component {...props} ref={innerRef} show={show} context={context} />
+      )
     }
   }
+
+  // $FlowFixMe
+  return React.forwardRef((props, ref) => (
+    <WithResolution {...props} innerRef={ref} />
+  ))
 }

@@ -1,9 +1,9 @@
 // @flow
 /* eslint-disable no-unused-expressions */
 import * as React from 'react'
-import { Col, Grid, asGrid, Root } from 'gymnast'
+import { Grid, asGrid } from 'gymnast'
 
-const components = [asGrid('span'), asGrid(() => <div />), Col, Grid, Root]
+const components = [asGrid('span'), asGrid(() => <div />), Grid]
 
 components.forEach(Component => {
   // valid type permutations

@@ -3,8 +3,6 @@ import * as React from 'react'
 
 export type Noop = (...params: any[]) => null
 
-export type Offset = number | string | void
-
 export type Size = string | number | void
 
 export type AlignGrid = 'bottom' | 'center' | 'top' | void
@@ -17,11 +15,7 @@ export type DisplayValues = string | Array<string>
 
 export type Spacing = Array<SpacingValues> | SpacingValues
 
-export type Fixed = 'top' | 'bottom' | void
-
 export type Overflow = 'scrollbars' | void
-
-export type Height = 'parent' | 'auto' | 'fit'
 
 export type SpacingProps = {
   padding?: Spacing,
@@ -54,8 +48,6 @@ export type ConfigContextType = {|
   +displayAliases?: DisplayAliases,
   +fallbackDisplayKey?: string,
   +gutter?: number,
-  +maxPageWidth?: number | 'none',
-  +minPageWidth?: number,
   +pageMargin?: {
     [string]: number,
   },
@@ -66,7 +58,7 @@ export type ConfigContextType = {|
 export type OneResolution = {
   base?: number,
   className?: string,
-  innerRef?: React.Ref<*>,
+  ref?: React$ElementRef<*>,
   margin?: Spacing,
   marginBottom?: SpacingValues,
   marginLeft?: SpacingValues,
@@ -82,7 +74,14 @@ export type OneResolution = {
   context?: ConfigContextType,
 }
 
-type MultipleResolutionProps = {
+export type OneResolutionGrid = {
+  ...$Exact<OneResolution>,
+  align?: AlignGrid,
+  justify?: Justify,
+  size?: Size,
+}
+
+export type GridProps = {
   ...$Exact<OneResolution>,
   margin?: Spacing | { [string]: Spacing },
   marginBottom?: SpacingValues | { [string]: SpacingValues },
@@ -94,32 +93,7 @@ type MultipleResolutionProps = {
   paddingLeft?: SpacingValues | { [string]: SpacingValues },
   paddingRight?: SpacingValues | { [string]: SpacingValues },
   paddingTop?: SpacingValues | { [string]: SpacingValues },
-}
-
-export type OneResolutionGrid = {
-  ...$Exact<OneResolution>,
-  align?: AlignGrid,
-  justify?: Justify,
-  size?: Size,
-}
-
-export type OneResolutionLayout = {
-  ...$Exact<OneResolution>,
-  fixed?: Fixed,
-  height?: Height,
-  overflow?: Overflow,
-}
-
-export type GridProps = {
-  ...$Exact<MultipleResolutionProps>,
   align?: AlignGrid | { [string]: AlignGrid },
   justify?: Justify | { [string]: Justify },
   size?: Size | { [string]: Size },
-}
-
-export type LayoutProps = {
-  ...$Exact<MultipleResolutionProps>,
-  fixed?: Fixed | { [string]: Fixed },
-  height?: Height | { [string]: Height },
-  overflow?: Overflow | { [string]: Overflow },
 }

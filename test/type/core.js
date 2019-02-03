@@ -1,17 +1,9 @@
 // @flow
 /* eslint-disable no-unused-expressions */
 import * as React from 'react'
-import { Col, Grid, asGrid, Layout, asLayout } from 'gymnast'
+import { Grid, asGrid } from 'gymnast'
 
-const components = [
-  asGrid('span'),
-  asGrid(() => <div />),
-  asLayout('div'),
-  asLayout(() => <p />),
-  Col,
-  Grid,
-  Layout,
-]
+const components = [asGrid('span'), asGrid(() => <div />), Grid]
 
 components.forEach(Component => {
   // it should work without parameters
@@ -20,7 +12,7 @@ components.forEach(Component => {
   ;<Component A={5} />
   // valid type permutations
   ;<Component className="a" />
-  ;<Component innerRef={() => null} />
+  ;<Component ref={() => null} />
   ;<Component base={3} />
   ;<Component margin={2} />
   ;<Component margin="L" />
@@ -73,7 +65,7 @@ components.forEach(Component => {
   // $ExpectError
   ;<Component className={3} />
   // $ExpectError
-  ;<Component innerRef={3} />
+  ;<Component ref={3} />
   // $ExpectError
   ;<Component base="4" />
 })

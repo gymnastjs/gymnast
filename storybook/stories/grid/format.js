@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Root, Layout, Grid, Col } from 'gymnast'
+import { Grid, Col } from 'gymnast'
 import { Box } from '../../shared'
 
 const marginFormats = [
@@ -37,22 +37,20 @@ const marginFormats = [
 ]
 
 export default () => (
-  <Layout height="parent">
-    <Root>
-      {marginFormats.map(({ margin, title, key }) => (
-        <Grid key={key}>
-          <Col marginBottom="L/2">
-            <h1>{title}</h1>
-          </Col>
-          <Col marginBottom={0}>
-            <code>{JSON.stringify(margin)}</code>
-          </Col>
-          <Grid marginBottom="L">
-            <Box size="auto" margin={margin} type="A" />
-            <Box size="auto" margin={margin} type="A" />
-          </Grid>
+  <>
+    {marginFormats.map(({ margin, title, key }) => (
+      <Grid key={key}>
+        <Col marginBottom="L/2">
+          <h1>{title}</h1>
+        </Col>
+        <Col marginBottom={0}>
+          <code>{JSON.stringify(margin)}</code>
+        </Col>
+        <Grid marginBottom="L">
+          <Box size="auto" margin={margin} type="A" />
+          <Box size="auto" margin={margin} type="A" />
         </Grid>
-      ))}
-    </Root>
-  </Layout>
+      </Grid>
+    ))}
+  </>
 )

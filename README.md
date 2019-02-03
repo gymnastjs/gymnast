@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>gymnast</b> is a configurable grid and layout engine for React
+  <b>gymnast</b> is a configurable grid for React
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@ import { Grid } from 'gymnast'
 
 This will create 2 columns of sizes 5, 7, respectively.
 
-There are additional components to assist with layout, for a deeper dive into gymnast, check out the [docs](https://gymnast.readme.io), the examples [here](https://gymnastjs.github.io/gymnast) or follow the [Getting Started](https://gymnast.readme.io/docs/getting-started) guide.
+For a deeper dive into gymnast, check out the [docs](https://gymnast.readme.io), the examples [here](https://gymnastjs.github.io/gymnast) or follow the [Getting Started](https://gymnast.readme.io/docs/getting-started) guide.
 
 ## 🖥 Install
 
@@ -54,28 +54,6 @@ yarn add gymnast
 ```
 
 `React` and `PropTypes` are [peer dependencies](https://docs.npmjs.com/files/package.json#peerdependencies) of the generated bundle.
-
-## ⚙️ Dev Mode
-
-Ensuring a layout adheres to the grid can be difficult. To simplify this task, gymnast includes an overlay Component to assist you. During development, import and append `<Dev/>` to your pages. It doesn't render anything by default but pressing `CTRL+SHIFT+K` will toggle it.
-
-Learn more about `<Dev />` mode in the [docs](https://gymnast.readme.io/docs/dev).
-
-<img src="/img/devMode.png" width="300px" alt="Dev Example" />
-
-```jsx
-import * as React from 'react'
-import { Dev } from 'gymnast'
-
-export default function MyPage() {
-  return (
-    <>
-      <Dev />
-      {/* other components */}
-    </>
-  )
-}
-```
 
 ## 👥 Contributors
 
