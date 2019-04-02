@@ -2,9 +2,15 @@
 
 exports[`e2e tests should export the same values from the main export than individual files 1`] = `
 Object {
-  "Col": [Function],
+  "Col": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "render": [Function],
+  },
   "ConfigProvider": [Function],
-  "Grid": [Function],
+  "Grid": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "render": [Function],
+  },
   "asGrid": [Function],
   "defaults": Object {
     "base": 8,

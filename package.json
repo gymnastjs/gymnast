@@ -96,7 +96,7 @@
   "bundlesize": [
     {
       "path": "./dist/gymnast.min.js",
-      "maxSize": "11.0 Kb"
+      "maxSize": "6.0 Kb"
     }
   ],
   "scripts": {
@@ -112,7 +112,7 @@
     "lint:flow": "flow stop && flow --show-all-errors --include-warnings",
     "lint:js": "eslint scripts src storybook test",
     "lint": "npm-run-all --parallel lint:*",
-    "start:storybook": "start-storybook -p 9001 -s ./static -c storybook",
+    "start:storybook": "start-storybook -p 9001 -c storybook",
     "start:webpack": "yarn build:dev --watch",
     "start": "npm-run-all --parallel start:*",
     "test:image": "LOCAL_BRANCH=$(git rev-parse --abbrev-ref HEAD) node test/img.js --env iphone7,chrome,firefox,ie11,edge,safari",

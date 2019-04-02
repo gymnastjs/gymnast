@@ -1,6 +1,4 @@
 // @flow
-import * as React from 'react'
-
 export type Noop = (...params: any[]) => null
 
 export type Size = string | number | void
