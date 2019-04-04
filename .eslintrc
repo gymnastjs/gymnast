@@ -28,20 +28,22 @@
   "rules": {
     "no-console": 2,
     "no-plusplus": 0,
+    "no-use-before-define": ["error", "nofunc"],
+    "flowtype/define-flow-type": 2,
     "jsx-a11y/href-no-hash": 0,
     "react/prop-types": 0,
     "react/no-deprecated": 2,
     "react/jsx-filename-extension": 0,
     "react/require-default-props": 0,
-    "import/no-extraneous-dependencies": 0,
+    "react/default-props-match-prop-types": 0,
+    "react/no-multi-comp": 0,
     "import/extensions": 0,
+    "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": [
       2,
       {
         "ignore": ["gymnast"]
       }
-    ],
-    "no-use-before-define": ["error", "nofunc"],
-    "flowtype/define-flow-type": 2
+    ]
   }
 }

@@ -1,6 +1,6 @@
 module.exports = {
   collectCoverageFrom: ['src/{,**/}*.js'],
-  setupTestFrameworkScriptFile: '<rootDir>/test/env.js',
+  setupFilesAfterEnv: ['<rootDir>/test/env.js'],
   moduleNameMapper: {
     '^.+[.](md|txt)$': '<rootDir>/test/stringStub.js',
   },

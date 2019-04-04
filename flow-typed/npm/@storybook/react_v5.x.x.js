@@ -1,20 +1,24 @@
-// flow-typed signature: 04c5870b5fe5aee349b372d22630ffcc
-// flow-typed version: 43bc56fd02/@storybook/react_v4.x.x/flow_>=v0.72.x
+// flow-typed signature: 68ee88c520cb9bb70866d8812664bc7b
+// flow-typed version: 00c3a083ad/@storybook/react_v5.x.x/flow_>=v0.72.x
 
 type NodeModule = typeof module;
 
 declare module '@storybook/react' {
   declare type Context = { kind: string, story: string };
-  declare type Renderable = React$Element<*>;
+  declare type Renderable =
+    | string
+    | number
+    | React$Element<any>
+    | Iterable<?Renderable>;
   declare type RenderCallback = (
     context: Context
-  ) => Renderable | Array<Renderable>;
-  declare type RenderFunction = () => Renderable | Array<Renderable>;
+  ) => Renderable;
+  declare type RenderFunction = () => Renderable;
 
   declare type StoryDecorator = (
     story: RenderFunction,
     context: Context
-  ) => Renderable | null;
+  ) => Renderable;
 
   declare type DecoratorParameters = {
     [key: string]: any,

@@ -18,8 +18,9 @@ module.exports = {
   },
   target: 'web',
   plugins: compact([
-    new CleanWebpackPlugin([root], {
-      root,
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: root,
+      cleanStaleWebpackAssets: true,
       dry: false,
       verbose: false,
     }),
