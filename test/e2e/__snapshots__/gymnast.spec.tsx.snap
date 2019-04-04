@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`e2e tests should export the same values from the main export than individual files 1`] = `
+Object {
+  "AlignGrid": undefined,
+  "Col": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "render": [Function],
+  },
+  "ConfigProvider": [Function],
+  "DisplayValues": undefined,
+  "Grid": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "render": [Function],
+  },
+  "GridProps": undefined,
+  "Justify": undefined,
+  "Overflow": undefined,
+  "Size": undefined,
+  "Spacing": undefined,
+  "SpacingProps": undefined,
+  "SpacingValues": undefined,
+  "asGrid": [Function],
+  "defaults": Object {
+    "base": 8,
+    "columns": 12,
+    "displayAliases": Object {
+      "large": Array [
+        Object {
+          "minWidth": "900px",
+        },
+        Object {
+          "minDeviceWidth": "900px",
+        },
+      ],
+      "medium": Array [
+        Object {
+          "maxWidth": "899px",
+          "minWidth": "600px",
+        },
+        Object {
+          "maxDeviceWidth": "899px",
+          "minDeviceWidth": "600px",
+        },
+      ],
+      "small": Array [
+        Object {
+          "maxWidth": "599px",
+        },
+        Object {
+          "maxDeviceWidth": "599px",
+        },
+      ],
+    },
+    "fallbackDisplayKey": "default",
+    "gutter": 3,
+    "spacingAliases": Object {
+      "2XL": 6,
+      "2XL/2": 3,
+      "L": 3,
+      "L/2": 1.5,
+      "M": 2,
+      "M/2": 1,
+      "S": 1,
+      "S/2": 0.5,
+      "XL": 4,
+      "XL/2": 2,
+      "XS": 0.5,
+    },
+    "verticalGutter": 3,
+  },
+  "log": Object {
+    "error": [Function],
+    "info": [Function],
+    "setLevel": [Function],
+    "setLogger": [Function],
+    "warn": [Function],
+  },
+  "useGrid": [Function],
+  "useResolution": [Function],
+  "utils": Object {
+    "accumulateOver": [Function],
+    "combineSpacing": [Function],
+    "getCSS": [Function],
+    "getValue": [Function],
+    "getValues": [Function],
+    "noop": [Function],
+    "parseSpacing": [Function],
+    "replaceSpacingAliases": [Function],
+    "splitPattern": /\\(\\?:\\(\\?:\\\\s\\+\\)\\?,\\(\\?:\\\\s\\+\\)\\?\\|\\\\s\\+\\)/,
+    "times": [Function],
+    "toCXS": [Function],
+    "validateSpacingProps": [Function],
+  },
+}
+`;

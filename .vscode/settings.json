@@ -1,18 +1,28 @@
 {
+  "editor.formatOnSave": true,
   "editor.detectIndentation": false,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "files.associations": {
-    ".all-contributorsrc": "json",
-    ".babelrc": "json",
-    ".eslintrc": "json",
-    ".stylelintrc": "json"
+    "*.all-contributorsrc": "jsonc",
+    "*.babelrc": "jsonc",
+    "*.eslintrc": "jsonc",
+    "*.stylelintrc": "jsonc"
   },
+  "json.schemas": [
+    {
+      "fileMatch": ["/.babelrc"],
+      "url": "http://json.schemastore.org/babelrc"
+    }, {
+      "fileMatch": ["/.eslintrc"],
+      "url": "http://json.schemastore.org/eslintrc"
+    }, {
+      "fileMatch": ["/.stylelintrc"],
+      "url": "http://json.schemastore.org/stylelintrc"
+    }
+  ],
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "flow.enabled": true,
-  "flow.useNPMPackagedFlow": true,
-  "javascript.validate.enable": false,
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5"

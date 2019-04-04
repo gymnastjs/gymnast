@@ -60,7 +60,7 @@ module.exports = nightwatchConfig({
     stories: requireContext(
       resolve(__dirname, './storybook/stories'),
       true,
-      /\.js/
+      /\.tsx/
     ),
   }),
 })
