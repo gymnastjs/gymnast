@@ -1,18 +1,18 @@
 export type Noop = (...params: any[]) => null
 
-export type Size = string | number | void
+export type Size = string | number | undefined
 
-export type AlignGrid = 'bottom' | 'center' | 'top' | void
+export type AlignGrid = 'bottom' | 'center' | 'top' | undefined
 
-export type Justify = 'left' | 'center' | 'right' | void
+export type Justify = 'left' | 'center' | 'right' | undefined
 
-export type SpacingValues = number | string | void
+export type SpacingValues = number | string | undefined
 
 export type DisplayValues = string | Array<string>
 
-export type Spacing = Array<SpacingValues> | SpacingValues
+export type DirectionValues = 'row' | 'column'
 
-export type Overflow = 'scrollbars' | void
+export type Spacing = Array<SpacingValues> | SpacingValues
 
 export type SpacingProps = {
   padding?: Spacing
@@ -52,7 +52,6 @@ export interface ConfigContextType {
 export type NonGridProps = {
   className?: string
   children?: React.ReactNode
-  ref?: React.RefObject<HTMLElement>
   style?: React.CSSProperties
 }
 
@@ -72,6 +71,7 @@ export type OneResolutionGrid = NonGridProps & {
   paddingRight?: SpacingValues
   paddingTop?: SpacingValues
   show?: DisplayValues
+  direction?: DirectionValues
 }
 
 export type GridProps = NonGridProps & {
@@ -89,10 +89,14 @@ export type GridProps = NonGridProps & {
   justify?: Justify | { [resolution: string]: Justify }
   size?: Size | { [resolution: string]: Size }
   show?: DisplayValues
+  direction?: DirectionValues | { [resolution: string]: DirectionValues }
 }
 
 export interface ConfigDefaults extends ConfigContextType {
   gutter: number
   fallbackDisplayKey: string
   verticalGutter: number
+  base: number
 }
+
+export type GridRef = React.Ref<HTMLDivElement>

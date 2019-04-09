@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { number, select } from '@storybook/addon-knobs'
-import { Grid } from 'gymnast'
+import { Grid, Justify } from 'gymnast'
 import { Box } from '../../shared'
 
-const justifyType = {
+const justifyType: { [name: string]: Justify } = {
   Default: undefined,
   Left: 'left',
   Center: 'center',

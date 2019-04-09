@@ -215,7 +215,7 @@ describe('checkShouldShow', () => {
   }
 
   it('should return an object with the same keys', () => {
-    const out = checkShouldShow(queries)
+    const out = checkShouldShow(queries) || {}
 
     expect(Object.keys(out)).toEqual(Object.keys(queries))
   })

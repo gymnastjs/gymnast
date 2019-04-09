@@ -2,8 +2,21 @@
 import requireContext from 'require-context'
 import { resolve } from 'path'
 import { getFiles } from 'picturebook'
+import { filter } from '../storybook/shared'
 // @ts-ignore
 import data from './picturebook-results.json'
+
+type ResultItem = {
+  name: string
+  browser: string
+  platform: string
+  error: string | null
+  diffPath: string | null
+  referencePath: string | null
+  screenshotPath: string | null
+  status: 'SUCCESS' | 'CREATED' | 'FAILED'
+  diffThreshold: number
+}
 
 const storyRoot = resolve(__dirname, '../storybook/stories/')
 function getErrorMessage({
@@ -13,7 +26,7 @@ function getErrorMessage({
   screenshotPath,
   diffThreshold,
   error,
-}) {
+}: ResultItem) {
   return `Comparison failed:
     Difference: ${diffPath || '[Not available]'}
     Reference: ${referencePath || '[Not available]'}
@@ -25,12 +38,7 @@ function getErrorMessage({
 }
 
 const storyCount = getFiles({
-  filter: {
-    tests: file => file.endsWith('.spec.tsx'),
-    docs: file => file.endsWith('.md'),
-    screenshots: file => file.endsWith('.png'),
-    story: (file = '', target = '') => file.endsWith(`${target}.tsx`),
-  },
+  filter,
   stories: requireContext(storyRoot, true, /\.(tsx|png)/),
 }).length
 const browserCount = 6
@@ -47,7 +55,7 @@ describe('Image Comparison Results', () => {
     expect(data.results.length).toEqual(storyCount * browserCount)
   })
 
-  data.results.forEach(result => {
+  data.results.forEach((result: ResultItem) => {
     const { platform, browser, name, status } = result
 
     it(`should succeed for ${platform}.${browser}.${name}`, () => {

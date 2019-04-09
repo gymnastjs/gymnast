@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { ConfigProvider, Grid } from 'gymnast'
+import { ConfigProvider, Grid, DisplayAliases } from 'gymnast'
 import { colors } from '../../shared'
 
 export default () => {
-  const displayAliases = {
+  const displayAliases: DisplayAliases = {
     test: {
       minWidth: '351px',
       maxWidth: '600px',

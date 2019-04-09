@@ -5,13 +5,14 @@
   "main": "index.js",
   "unpkg": "dist/gymnast.min.js",
   "homepage": "https://gymnastjs.github.io/gymnast",
-  "types": "gymnast.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "package.json",
     "README.md",
     "LICENSE",
     "src",
     "dist",
+    "types/index.d.ts",
     "index.js"
   ],
   "repository": {
@@ -112,7 +113,7 @@
     "style-loader": "0.23.1",
     "stylelint": "9.10.1",
     "tsc": "1.20150623.0",
-    "typescript": "3.4.2",
+    "typescript": "3.4.3",
     "typesync": "0.5.1",
     "webpack": "4.29.6",
     "webpack-bundle-analyzer": "3.1.0",

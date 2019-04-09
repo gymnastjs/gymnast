@@ -58,7 +58,7 @@ export default function useGrid<A extends {}>(
       paddingBottom,
       paddingLeft,
     },
-    base: base === undefined ? contextBase : base,
+    base: contextBase,
     spacingAliases,
     gutter,
     verticalGutter,

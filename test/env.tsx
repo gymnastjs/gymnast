@@ -3,9 +3,9 @@ import { every, map } from 'lodash'
 import 'react-testing-library/cleanup-after-each'
 import { Justify } from '../src/gymnast'
 
-const allListeners = {}
+const allListeners: { [media: string]: Array<({}) => void> } = {}
 
-global.matchMedia = function matchMedia(media) {
+global.matchMedia = function matchMedia(media: string) {
   allListeners[media] = allListeners[media] || []
 
   return {
@@ -26,7 +26,7 @@ global.matchMedia = function matchMedia(media) {
   }
 }
 
-function stringifyCss(element) {
+function stringifyCss(element: HTMLElement) {
   /* eslint-disable no-underscore-dangle */
   // @ts-ignore
   const styles = window.getComputedStyle(element)._values
@@ -41,11 +41,12 @@ expect.extend({
     margins: { [direction: string]: number },
     base: number = 8
   ) {
-    const elementStyles = window.getComputedStyle(element)
-    const pass = every(margins, (value, prop) => {
+    const elementStyles: CSSStyleDeclaration = window.getComputedStyle(element)
+    const pass = every(margins, (value: number, prop: string) => {
       const expected = value ? `${value * base}px` : '0'
+      const key: keyof CSSStyleDeclaration = `border-${prop}-width` as any
 
-      return elementStyles[`border-${prop}-width`] === expected
+      return elementStyles[key] === expected
     })
     const message = pass ? '' : `Margins don't match: ${stringifyCss(element)}`
 
@@ -55,8 +56,8 @@ expect.extend({
     }
   },
   toJustify(element: HTMLElement, justify: Justify) {
-    const elementStyles = window.getComputedStyle(element)
-    const elementJustify = elementStyles['justify-content']
+    const elementStyles: CSSStyleDeclaration = window.getComputedStyle(element)
+    const elementJustify = elementStyles['justify-content' as any]
     const pass = justify === elementJustify
     const message = pass
       ? ''

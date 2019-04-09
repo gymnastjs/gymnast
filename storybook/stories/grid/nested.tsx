@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { number, select } from '@storybook/addon-knobs'
 import { times } from 'lodash'
-import { Col, Grid } from 'gymnast'
+import { Col, Grid, SpacingValues } from 'gymnast'
 import { Box, colors, getMarginSelect, getPositionSelect } from '../../shared'
 
 export default function() {
-  const paddingMap = {
+  const paddingMap: { [key: string]: SpacingValues[] } = {
     None: [],
     All: ['L'],
     Horizontal: [0, 'L'],

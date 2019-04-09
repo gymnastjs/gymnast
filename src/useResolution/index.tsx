@@ -1,5 +1,10 @@
 import * as React from 'react'
-import { DisplayAliases, GridProps, OneResolutionGrid } from '../types'
+import {
+  DisplayAliases,
+  GridProps,
+  OneResolutionGrid,
+  ConfigContextType,
+} from '../types'
 import log from '../log'
 import { getValue } from '../utils'
 import { errors } from '../errors'
@@ -16,7 +21,10 @@ import {
 } from './useResolution.logic'
 import defaults from '../defaults'
 
-function anyPropsUseResolutionFormat(combinedResolutionKeys: string[], props) {
+function anyPropsUseResolutionFormat(
+  combinedResolutionKeys: string[],
+  props: { [key: string]: any }
+) {
   return combinedResolutionKeys.some(key => {
     const { [key]: prop } = props
 
@@ -24,7 +32,19 @@ function anyPropsUseResolutionFormat(combinedResolutionKeys: string[], props) {
   })
 }
 
-function getQueries({ show, combinedResolutionKeys, context, props }) {
+type MediaProps = {
+  show: string | string[] | undefined
+  combinedResolutionKeys: string[]
+  context: ConfigContextType
+  props: {}
+}
+
+function getQueries({
+  show,
+  combinedResolutionKeys,
+  context,
+  props,
+}: MediaProps) {
   const displayAliases: DisplayAliases = getValue(context, 'displayAliases')
   let queries = show
 
@@ -35,14 +55,15 @@ function getQueries({ show, combinedResolutionKeys, context, props }) {
   return getMediaQueries(queries, displayAliases)
 }
 
-function useMedia(props) {
+function useMedia(props: MediaProps) {
   const queries = getQueries(props)
-  const [shouldShow, setShouldShow] = React.useState<ShouldShow>(
-    checkShouldShow(queries)
+  const initialState = checkShouldShow(queries)
+  const [shouldShow, setShouldShow] = React.useState<ShouldShow | undefined>(
+    initialState
   )
 
   function onMediaQueryChange(mq: any = {}, alias: string) {
-    if (shouldShow[alias] !== mq.matches) {
+    if (shouldShow && shouldShow[alias] !== mq.matches) {
       setShouldShow({
         ...shouldShow,
         [alias]: mq.matches,

@@ -25,6 +25,8 @@ or
 
 [Play with a demo](https://codesandbox.io/s/github/gymnastjs/playground)
 
+If you are migrating from gymnast 16, check the [migration guide](./migrating16to17.md).
+
 ## 📺 Examples
 
 We have several examples [on the website](https://gymnastjs.github.io/gymnast). Here is one of them:
@@ -33,8 +35,10 @@ We have several examples [on the website](https://gymnastjs.github.io/gymnast). 
 import * as React from 'react'
 import { Grid } from 'gymnast'
 
-<Grid>
-  <Grid size={5} margin={2}>Content Here</Grid>
+;<Grid>
+  <Grid size={5} margin={2}>
+    Content Here
+  </Grid>
   <Grid size={7}>More Content</Grid>
 </Grid>
 ```
@@ -65,6 +69,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- prettier-ignore -->
 | [<img src="https://avatars3.githubusercontent.com/u/3877773?v=3" width="100px;"/><br /><sub><b>Oscar Bartra</b></sub>](http://obartra.github.io)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aobartra "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=obartra "Code") [📖](https://github.com/gymnastjs/gymnast/commits?author=obartra "Documentation") [👀](#review-obartra "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/8746094?v=3" width="100px;"/><br /><sub><b>Andrew Hansen</b></sub>](https://github.com/arahansen)<br />[💬](#question-arahansen "Answering Questions") [🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aarahansen "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=arahansen "Code") [👀](#review-arahansen "Reviewed Pull Requests") | [<img src="https://avatars0.githubusercontent.com/u/17904507?v=3" width="100px;"/><br /><sub><b>Stephen Nomura</b></sub>](http://stephennomura.com/)<br />[🎨](#design-snomu "Design") | [<img src="https://avatars3.githubusercontent.com/u/1621615?v=4" width="100px;"/><br /><sub><b>Andrew Toy</b></sub>](https://github.com/andrewmtoy)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aandrewmtoy "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=andrewmtoy "Code") [💡](#example-andrewmtoy "Examples") | [<img src="https://avatars0.githubusercontent.com/u/7918955?v=4" width="100px;"/><br /><sub><b>colinlgray</b></sub>](https://github.com/colinlgray)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Acolinlgray "Bug reports") | [<img src="https://avatars0.githubusercontent.com/u/4695062?v=4" width="100px;"/><br /><sub><b>Jeffrey Klein</b></sub>](http://jeffwklein)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Ajeffwklein "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=jeffwklein "Code") [⚠️](https://github.com/gymnastjs/gymnast/commits?author=jeffwklein "Tests") | [<img src="https://avatars2.githubusercontent.com/u/10682341?v=4" width="100px;"/><br /><sub><b>Derrick Nguyen</b></sub>](https://github.com/derrickhnguyen)<br />[💻](https://github.com/gymnastjs/gymnast/commits?author=derrickhnguyen "Code") [⚠️](https://github.com/gymnastjs/gymnast/commits?author=derrickhnguyen "Tests") |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind are welcome!

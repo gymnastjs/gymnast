@@ -13,12 +13,18 @@
     {
       "fileMatch": ["/.babelrc"],
       "url": "http://json.schemastore.org/babelrc"
-    }, {
+    },
+    {
       "fileMatch": ["/.eslintrc"],
       "url": "http://json.schemastore.org/eslintrc"
-    }, {
+    },
+    {
       "fileMatch": ["/.stylelintrc"],
       "url": "http://json.schemastore.org/stylelintrc"
+    },
+    {
+      "fileMatch": ["/tsconfig.json"],
+      "url": "http://json.schemastore.org/tsconfig"
     }
   ],
   "files.insertFinalNewline": true,

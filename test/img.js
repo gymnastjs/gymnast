@@ -3,6 +3,7 @@ const { spawn } = require('child_process')
 const requireContext = require('require-context')
 const { resolve } = require('path')
 const { runTests, getFiles } = require('picturebook')
+const filter = require('../storybook/shared/filter')
 
 const storyRoot = resolve(__dirname, '../storybook/stories/')
 const overwrite = process.argv.includes('-u')
@@ -47,12 +48,7 @@ function runJest() {
 runTests({
   storyRoot,
   files: getFiles({
-    filter: {
-      tests: file => file.endsWith('.spec.tsx'),
-      docs: file => file.endsWith('.md'),
-      screenshots: file => file.endsWith('.png'),
-      story: (file = '', target = '') => file.endsWith(`${target}.tsx`),
-    },
+    filter,
     stories: requireContext(storyRoot, true, /\.(tsx|png)/),
   }),
   overwrite,
@@ -61,7 +57,7 @@ runTests({
   maxRetryAttempts: 3,
 })
   .then(runJest)
-  .catch(e => {
-    console.error('Failed image comparison', e)
+  .catch(() => {
+    console.error('Failed image comparison')
     process.exit(1)
   })

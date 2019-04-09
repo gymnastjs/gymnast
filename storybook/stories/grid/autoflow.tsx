@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { times } from 'lodash'
 import { number, boolean } from '@storybook/addon-knobs'
-import { Grid } from 'gymnast'
+import { Grid, AlignGrid } from 'gymnast'
 import { Box, getMarginSelect } from '../../shared'
 
 export default () => {
   const items = number('Items', 5, { range: true, min: 0, max: 100, step: 1 })
-  const props = {
+  const props: { align: AlignGrid; style: React.CSSProperties } = {
     align: !boolean('Stretch', true) ? 'top' : undefined,
+    style: { height: '100%' },
   }
   const margin = getMarginSelect()
 

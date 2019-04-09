@@ -1,7 +1,7 @@
 import { select } from '@storybook/addon-knobs'
 import { Spacing } from '../../src/types'
 
-const marginMap = {
+const marginMap: { [key: string]: Spacing } = {
   Item: [0, 'L/2', 'L'],
   All: ['L'],
   Horizontal: [0, 'L/2'],
@@ -11,7 +11,7 @@ const marginMap = {
   'Double Vertical': [0, 0, '2XL'],
 }
 
-const marginOptions = [
+const marginOptions: Array<keyof typeof marginMap> = [
   'Item',
   'All',
   'None',
@@ -20,13 +20,17 @@ const marginOptions = [
   'Horizontal',
   'Double Horizontal',
 ]
-const marginDefault = 'Item'
+const marginDefault: keyof typeof marginMap = 'Item'
 
 export default function getMarginSelect(
   marginTitle: string = 'Margin',
-  defaultValue: string = marginDefault
+  defaultValue: keyof typeof marginMap = marginDefault
 ): Spacing {
-  const marginStr = select(marginTitle, marginOptions, defaultValue)
+  const marginStr: keyof typeof marginMap = select(
+    marginTitle,
+    marginOptions,
+    defaultValue
+  )
 
   return marginMap[marginStr]
 }

@@ -254,11 +254,15 @@ export function getValue<A>(
   return [override, context[property], defaults[property]].find(isDefined)
 }
 
-export function getValues<C extends object, D extends Object>(
-  context: C | void,
-  overrides: D | void
-) {
-  return { ...defaults, ...(context || {}), ...(overrides || {}) }
+export function getValues<C extends object, D extends object>(
+  context?: C,
+  overrides?: D
+): ConfigDefaults {
+  return {
+    ...defaults,
+    ...(context || {}),
+    ...(overrides || {}),
+  }
 }
 
 export function accumulateOver(props: Array<string>) {

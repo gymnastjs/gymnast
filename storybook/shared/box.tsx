@@ -54,13 +54,15 @@ export function Box({
   value = type,
   ...props
 }: BoxProps & GridProps) {
+  const colorKey: keyof typeof colors = `colors${String(typeMap[type])}` as any
+
   return (
     <Col {...props}>
       <Grid
         padding={['L', 0]}
         align="center"
         justify="center"
-        style={{ ...style, ...colors[`colors${String(typeMap[type])}`] }}
+        style={{ ...style, ...colors[colorKey] }}
       >
         {children || value}
       </Grid>

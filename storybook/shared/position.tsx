@@ -1,18 +1,18 @@
 import { select } from '@storybook/addon-knobs'
+import { AlignGrid, Justify } from 'gymnast'
 
-const justifyMap = {
+const justifyMap: { [name: string]: Justify } = {
   Default: undefined,
   Center: 'center',
   Left: 'left',
   Right: 'right',
 }
 
-const alignMap = {
-  Default: undefined,
+const alignMap: { [name: string]: AlignGrid } = {
   Top: 'top',
   Center: 'center',
   Bottom: 'bottom',
-  Stretch: 'stretch',
+  Stretch: undefined,
 }
 
 export default function getMarginSelect(
@@ -26,8 +26,8 @@ export default function getMarginSelect(
   )
   const alignStr = select(
     alignTitle,
-    ['Default', 'Top', 'Center', 'Bottom', 'Stretch'],
-    'Default'
+    ['Top', 'Center', 'Bottom', 'Stretch'],
+    'Stretch'
   )
 
   return {

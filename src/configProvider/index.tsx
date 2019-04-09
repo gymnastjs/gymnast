@@ -9,9 +9,6 @@ type ProviderProps = ConfigContextType & {
 
 type ProviderState = ConfigContextType
 
-// This HOC takes a Provider component and wraps it around a Consumer
-// component that provides non-defaulted values that have been set from preceding
-// Provider components.
 class ConfigProvider extends React.Component<ProviderProps, ProviderState> {
   static getDerivedStateFromProps(props: ProviderProps, state: ProviderState) {
     const { children, ...restProps } = props

@@ -1,3 +1,8 @@
+/**
+ * @param {{ [code: string]: string }} acc
+ * @param {string} code
+ * @param {string} message
+ */
 function addDevError(acc, code, message) {
   acc[code] = `${code}: ${message}
 
@@ -5,12 +10,17 @@ function addDevError(acc, code, message) {
   return acc
 }
 
+/**
+ * @param {{ [code: string]: string }} acc
+ * @param {string} code
+ */
 function addProdError(acc, code) {
   acc[code] = code
   return acc
 }
 const addError =
   process.env.NODE_ENV === 'production' ? addProdError : addDevError
+/** @type {{ [code: string]: string }} */
 const errors = {}
 
 addError(

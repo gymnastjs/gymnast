@@ -12,7 +12,7 @@ export default () => {
   const margin = getMarginSelect('All Items Margins', 'All Items Margin Size')
   const align = !boolean('Stretch', true) ? 'top' : undefined
 
-  const getBox = index => (
+  const getBox = (index: number) => (
     <Box
       key={index}
       margin={margin}
