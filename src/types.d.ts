@@ -49,10 +49,18 @@ export interface ConfigContextType {
   verticalGutter?: number
 }
 
-export type OneResolution = {
-  base?: number
+export type NonGridProps = {
   className?: string
+  children?: React.ReactNode
   ref?: React.RefObject<HTMLElement>
+  style?: React.CSSProperties
+}
+
+export type OneResolutionGrid = NonGridProps & {
+  align?: AlignGrid
+  justify?: Justify
+  size?: Size
+  base?: number
   margin?: Spacing
   marginBottom?: SpacingValues
   marginLeft?: SpacingValues
@@ -64,17 +72,9 @@ export type OneResolution = {
   paddingRight?: SpacingValues
   paddingTop?: SpacingValues
   show?: DisplayValues
-  style?: { [CSSProp: string]: string | number }
-  context?: ConfigContextType
 }
 
-export type OneResolutionGrid = OneResolution & {
-  align?: AlignGrid
-  justify?: Justify
-  size?: Size
-}
-
-export type GridProps = OneResolution & {
+export type GridProps = NonGridProps & {
   margin?: Spacing | { [resolution: string]: Spacing }
   marginBottom?: SpacingValues | { [resolution: string]: SpacingValues }
   marginLeft?: SpacingValues | { [resolution: string]: SpacingValues }
@@ -88,6 +88,7 @@ export type GridProps = OneResolution & {
   align?: AlignGrid | { [resolution: string]: AlignGrid }
   justify?: Justify | { [resolution: string]: Justify }
   size?: Size | { [resolution: string]: Size }
+  show?: DisplayValues
 }
 
 export interface ConfigDefaults extends ConfigContextType {

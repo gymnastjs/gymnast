@@ -1,8 +1,8 @@
-import React from 'react'
+import * as React from 'react'
 import { render } from 'react-testing-library'
 import log from '../log'
 import useResolution from './index'
-import { DisplayValues, GridProps } from '../types.d'
+import { DisplayValues, GridProps } from '../types'
 
 jest.mock('./mediaQuery')
 jest.unmock('./useResolution.logic')

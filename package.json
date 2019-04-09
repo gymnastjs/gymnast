@@ -24,7 +24,6 @@
   "author": "Oscar Bartra",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.4.3",
     "@babel/plugin-proposal-class-properties": "7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "7.4.3",
     "@babel/plugin-transform-runtime": "7.4.3",
@@ -140,7 +139,7 @@
     "start:storybook": "start-storybook -p 9001 -c storybook",
     "start:webpack": "yarn build:dev --watch",
     "start": "npm-run-all --parallel start:*",
-    "test:image": "LOCAL_BRANCH=$(git rev-parse --abbrev-ref HEAD) babel-node test/img.tsx --env iphone7,chrome,firefox,ie11,edge,safari",
+    "test:image": "LOCAL_BRANCH=$(git rev-parse --abbrev-ref HEAD) node test/img.js --env iphone7,chrome,firefox,ie11,edge,safari",
     "test:size": "bundlesize",
     "test": "jest",
     "test:cover": "jest --coverage --config jest.config.js",

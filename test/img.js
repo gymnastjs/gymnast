@@ -23,7 +23,7 @@ const configPath = resolve(__dirname, '../nightwatch.config.js')
 const outputPath = resolve(__dirname, 'picturebook-results.json')
 
 function runJest() {
-  const params = ['test/img.spec.js', '--config', 'jest.img.config.js']
+  const params = ['test/img.spec.tsx', '--config', 'jest.img.config.js']
   const jest = spawn('./node_modules/.bin/jest', params, {
     stdio: 'pipe',
     env: process.env,
@@ -47,7 +47,13 @@ function runJest() {
 runTests({
   storyRoot,
   files: getFiles({
-    stories: requireContext(storyRoot, true, /\.(js|png)/),
+    filter: {
+      tests: file => file.endsWith('.spec.tsx'),
+      docs: file => file.endsWith('.md'),
+      screenshots: file => file.endsWith('.png'),
+      story: (file = '', target = '') => file.endsWith(`${target}.tsx`),
+    },
+    stories: requireContext(storyRoot, true, /\.(tsx|png)/),
   }),
   overwrite,
   configPath,

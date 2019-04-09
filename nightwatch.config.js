@@ -55,8 +55,15 @@ const localConfig = {
 
 module.exports = nightwatchConfig({
   ...(isCI ? ciConfig : localConfig),
+
   files: getFiles({
     baseUrl: `https://gymnastjs.github.io/gymnast${branchUrlSuffix}`,
+    filter: {
+      tests: file => file.endsWith('.spec.tsx'),
+      docs: file => file.endsWith('.md'),
+      screenshots: file => file.endsWith('.png'),
+      story: (file = '', target = '') => file.endsWith(`${target}.tsx`),
+    },
     stories: requireContext(
       resolve(__dirname, './storybook/stories'),
       true,

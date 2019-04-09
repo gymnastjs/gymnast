@@ -22,12 +22,11 @@ type HTMLIntrinsicElements =
 export default function asGrid<T extends React.Component, A extends {}>(
   // TODO: this crashes
   // Component: keyof JSX.IntrinsicElements | React.ComponentType<A>,
-  Component: React.ComponentType<A> | HTMLIntrinsicElements,
-  mapProps?: Function
+  Component: React.ComponentType<A> | HTMLIntrinsicElements
 ) {
   return React.forwardRef<T, A & GridProps>(
     (props: A & OneResolutionGrid, ref: React.RefObject<T>) => {
-      const [shouldShow, resolvedProps] = useGrid(props, mapProps)
+      const [shouldShow, resolvedProps] = useGrid(props)
 
       if (!shouldShow) {
         return null

@@ -25,7 +25,13 @@ function getErrorMessage({
 }
 
 const storyCount = getFiles({
-  stories: requireContext(storyRoot, true, /\.(js|png)/),
+  filter: {
+    tests: file => file.endsWith('.spec.tsx'),
+    docs: file => file.endsWith('.md'),
+    screenshots: file => file.endsWith('.png'),
+    story: (file = '', target = '') => file.endsWith(`${target}.tsx`),
+  },
+  stories: requireContext(storyRoot, true, /\.(tsx|png)/),
 }).length
 const browserCount = 6
 const validStatus = ['SUCCESS', 'CREATED']
