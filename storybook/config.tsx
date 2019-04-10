@@ -1,12 +1,15 @@
-import { storiesOf, configure, addDecorator, Story } from '@storybook/react'
-// @ts-ignore pending picturebook update
-import { withMarkdownNotes } from '@storybook/addon-notes'
+import {
+  addDecorator,
+  addParameters,
+  configure,
+  storiesOf,
+  Story,
+} from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
-import { setOptions } from '@storybook/addon-options'
 import * as picturebook from 'picturebook'
-import { footer, filter } from './shared'
+import { footer } from './shared'
 
-setOptions({
+addParameters({
   name: 'gymnast',
   url: 'https://gymnast.readme.io',
 })
@@ -17,10 +20,11 @@ function loadStories() {
   picturebook.loadStories({
     storiesOf,
     decorators: [
-      (story: Story, { doc }: { doc: string }) =>
-        doc && withMarkdownNotes(`${doc}${footer}`)(story),
+      (story: Story, { doc }: { doc?: string }) => [
+        story,
+        doc ? { notes: `${doc}${footer}` } : {},
+      ],
     ],
-    filter,
     stories: require.context('./stories', true, /\.(tsx|md)/),
   })
 }

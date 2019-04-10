@@ -9,6 +9,7 @@ test/screenshot/images/results
 tests_output/
 selenium-server-standalone-*
 selenium-debug.log
+selenium-server.log
 nohup.out
 temp.png
 package-lock.json

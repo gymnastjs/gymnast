@@ -3,7 +3,6 @@ const { spawn } = require('child_process')
 const requireContext = require('require-context')
 const { resolve } = require('path')
 const { runTests, getFiles } = require('picturebook')
-const filter = require('../storybook/shared/filter')
 
 const storyRoot = resolve(__dirname, '../storybook/stories/')
 const overwrite = process.argv.includes('-u')
@@ -48,7 +47,6 @@ function runJest() {
 runTests({
   storyRoot,
   files: getFiles({
-    filter,
     stories: requireContext(storyRoot, true, /\.(tsx|png)/),
   }),
   overwrite,

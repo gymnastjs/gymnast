@@ -1,8 +1,8 @@
 const webpack = require('webpack')
 /**
- * @param {webpack.Configuration} config
+ * @param {{ config: webpack.Configuration}} options
  */
-module.exports = config => {
+module.exports = ({ config }) => {
   if (config.module && config.module.rules) {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
