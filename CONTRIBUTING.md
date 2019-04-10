@@ -4,13 +4,13 @@ When contributing to this repository, please first discuss the change you wish t
 
 Note that we have a code of conduct, follow it in all your interactions with the project.
 
-**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+**Working on your first Pull Request?** You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
 
 ## Getting Started
 
 This project uses [Node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/en/).
 
-[Visual Studio Code](https://code.visualstudio.com/) with the [flow for vscode](https://github.com/flowtype/flow-for-vscode) and [prettier vscode](https://github.com/esbenp/prettier-vscode) plugins are recommended for development.
+[Visual Studio Code](https://code.visualstudio.com/) with [prettier vscode](https://github.com/esbenp/prettier-vscode) plugin is recommended for development.
 
 ### Setup
 

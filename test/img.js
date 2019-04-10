@@ -3,19 +3,20 @@ const { spawn } = require('child_process')
 const requireContext = require('require-context')
 const { resolve } = require('path')
 const { runTests, getFiles } = require('picturebook')
+const filter = require('../storybook/shared/filter')
 
 const storyRoot = resolve(__dirname, '../storybook/stories/')
 const overwrite = process.argv.includes('-u')
-const { isCI, URL } = process.env
+const { isCI, URL: url } = process.env
 
-if (!isCI && !URL) {
+if (!isCI && !url) {
   console.log(`
 ℹ️  Local tests default to the last deployed storybook for the branch.
 
 You can provide URL as environment variable to overwrite the default url.`)
-} else if (URL) {
+} else if (url) {
   console.log(`
-ℹ️  Running tests on ${URL}
+ℹ️  Running tests on ${url}
 `)
 }
 
@@ -23,7 +24,7 @@ const configPath = resolve(__dirname, '../nightwatch.config.js')
 const outputPath = resolve(__dirname, 'picturebook-results.json')
 
 function runJest() {
-  const params = ['test/img.spec.js', '--config', 'jest.img.config.js']
+  const params = ['test/img.spec.tsx', '--config', 'jest.img.config.js']
   const jest = spawn('./node_modules/.bin/jest', params, {
     stdio: 'pipe',
     env: process.env,
@@ -47,7 +48,8 @@ function runJest() {
 runTests({
   storyRoot,
   files: getFiles({
-    stories: requireContext(storyRoot, true, /\.(js|png)/),
+    filter,
+    stories: requireContext(storyRoot, true, /\.(tsx|png)/),
   }),
   overwrite,
   configPath,
@@ -55,7 +57,7 @@ runTests({
   maxRetryAttempts: 3,
 })
   .then(runJest)
-  .catch(e => {
-    console.error('Failed image comparison', e)
+  .catch(() => {
+    console.error('Failed image comparison')
     process.exit(1)
   })

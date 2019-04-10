@@ -8,8 +8,8 @@
         }
       }
     ],
-    "@babel/preset-react",
-    "@babel/preset-flow"
+    "@babel/preset-typescript",
+    "@babel/preset-react"
   ],
   "plugins": [
     "preval",
@@ -40,7 +40,8 @@
           "module-resolver",
           {
             "alias": {
-              "gymnast": "./src/gymnast"
+              "gymnast": "./src/gymnast",
+              "gymnast/*": "./src/gymnast/*"
             }
           }
         ]

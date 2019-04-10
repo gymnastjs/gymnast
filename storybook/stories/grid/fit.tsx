@@ -1,0 +1,46 @@
+import * as React from 'react'
+import { times } from 'lodash'
+import { number } from '@storybook/addon-knobs'
+import { Grid, Col } from 'gymnast'
+import { GridProps } from '../../../src/types'
+import { colors } from '../../shared'
+
+type ItemProps = {
+  text: string
+} & GridProps
+
+const Item = ({ text, ...props }: ItemProps) => (
+  <Col margin="L/2" {...props}>
+    <Grid padding="L/2" style={colors.colors1}>
+      {text}
+    </Grid>
+  </Col>
+)
+
+export default () => {
+  const autoItems = number('Auto Items', 1, {
+    range: true,
+    min: 0,
+    max: 5,
+    step: 1,
+  })
+  const fitItems = number('Fit Items', 1, {
+    range: true,
+    min: 0,
+    max: 5,
+    step: 1,
+  })
+
+  return (
+    <>
+      <Grid size="fit" justify="center" style={colors.colors2}>
+        {times(autoItems, i => (
+          <Item key={i} size="auto" text={`Auto ${i + 1}`} />
+        ))}
+        {times(fitItems, i => (
+          <Item key={i} size="fit" text={`Fit ${i + 1}`} />
+        ))}
+      </Grid>
+    </>
+  )
+}

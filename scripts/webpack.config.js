@@ -16,6 +16,9 @@ module.exports = {
     library: 'gymnast',
     libraryTarget: 'umd',
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+  },
   target: 'web',
   plugins: compact([
     new CleanWebpackPlugin({
@@ -44,7 +47,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },
