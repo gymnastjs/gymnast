@@ -2,7 +2,6 @@
 import requireContext from 'require-context'
 import { resolve } from 'path'
 import { getFiles } from 'picturebook'
-import { filter } from '../storybook/shared'
 // @ts-ignore
 import data from './picturebook-results.json'
 
@@ -38,7 +37,6 @@ function getErrorMessage({
 }
 
 const storyCount = getFiles({
-  filter,
   stories: requireContext(storyRoot, true, /\.(tsx|png)/),
 }).length
 const browserCount = 6

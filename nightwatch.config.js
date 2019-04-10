@@ -3,7 +3,6 @@
 const { resolve } = require('path')
 const requireContext = require('require-context')
 const { nightwatchConfig, getFiles } = require('picturebook')
-const filter = require('./storybook/shared/filter')
 
 /**
  * CircleCI defines CI and all the CIRCLE_* env variables
@@ -59,7 +58,6 @@ module.exports = nightwatchConfig({
 
   files: getFiles({
     baseUrl: `https://gymnastjs.github.io/gymnast${branchUrlSuffix}`,
-    filter,
     stories: requireContext(
       resolve(__dirname, './storybook/stories'),
       true,
