@@ -29,9 +29,3 @@ jobs:
           else
             echo "Skipping publication in non-release branch"
           fi
-      # Save test results
-      - store_test_results:
-          path: /tmp/circleci-test-results
-      # Save artifacts
-      - store_artifacts:
-          path: /tmp/circleci-artifacts
