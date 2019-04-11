@@ -17,15 +17,14 @@ import {
   hasTrueValues,
   isObject,
   ShouldShow,
-  sharedResolutionProperties,
 } from './useResolution.logic'
 import defaults from '../defaults'
 
 function anyPropsUseResolutionFormat(
-  combinedResolutionKeys: string[],
+  resolutionKeys: string[],
   props: { [key: string]: any }
 ) {
-  return combinedResolutionKeys.some(key => {
+  return resolutionKeys.some(key => {
     const { [key]: prop } = props
 
     return isObject(prop)
@@ -34,21 +33,16 @@ function anyPropsUseResolutionFormat(
 
 type MediaProps = {
   show: string | string[] | undefined
-  combinedResolutionKeys: string[]
+  resolutionKeys: string[]
   context: ConfigContextType
   props: {}
 }
 
-function getQueries({
-  show,
-  combinedResolutionKeys,
-  context,
-  props,
-}: MediaProps) {
+function getQueries({ show, resolutionKeys, context, props }: MediaProps) {
   const displayAliases: DisplayAliases = getValue(context, 'displayAliases')
   let queries = show
 
-  if (!show && anyPropsUseResolutionFormat(combinedResolutionKeys, props)) {
+  if (!show && anyPropsUseResolutionFormat(resolutionKeys, props)) {
     queries = Object.keys(displayAliases)
   }
 
@@ -106,12 +100,9 @@ export default function useResolution<A extends GridProps>(
   const fallbackDisplayKey: string = getValue(context, 'fallbackDisplayKey')
 
   const { show, ...restProps } = props
-  const combinedResolutionKeys = sharedResolutionProperties.concat(
-    resolutionKeys
-  )
   const shouldShow = useMedia({
     show,
-    combinedResolutionKeys,
+    resolutionKeys,
     context,
     props: restProps,
   })
@@ -133,7 +124,7 @@ export default function useResolution<A extends GridProps>(
     getSingleResolutionProps({
       props,
       shouldShow,
-      resolutionKeys: combinedResolutionKeys,
+      resolutionKeys,
       fallbackDisplayKey,
     }),
   ]

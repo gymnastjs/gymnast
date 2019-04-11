@@ -12,7 +12,7 @@ export const styles = toCXS({
   fraction: {
     flexGrow: 1,
   },
-  leftJustify: {
+  startJustify: {
     justifyContent: 'flex-start',
     marginRight: 'auto',
   },
@@ -21,11 +21,11 @@ export const styles = toCXS({
     marginLeft: 'auto',
     marginRight: 'auto',
   },
-  rightJustify: {
+  endJustify: {
     justifyContent: 'flex-end',
     marginLeft: 'auto',
   },
-  topAlign: {
+  startAlign: {
     alignContent: 'flex-start',
     alignItems: 'flex-start',
   },
@@ -33,7 +33,7 @@ export const styles = toCXS({
     alignContent: 'center',
     alignItems: 'center',
   },
-  bottomAlign: {
+  endAlign: {
     alignContent: 'flex-end',
     alignItems: 'flex-end',
   },
@@ -48,6 +48,12 @@ export const styles = toCXS({
     flexShrink: 0,
     width: 'auto',
     whiteSpace: 'nowrap',
+  },
+  rowDirection: {
+    flexDirection: 'row',
+  },
+  columnDirection: {
+    flexDirection: 'column',
   },
 })
 

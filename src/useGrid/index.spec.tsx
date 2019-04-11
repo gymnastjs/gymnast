@@ -10,9 +10,11 @@ function RenderGrid({
   children: jest.Mocked<any>
   passThrough?: string
 }) {
-  const [shouldRender, resolvedProps] = useGrid(props)
+  const [shouldRender, { passThrough, ...resolvedProps }] = useGrid(props)
 
-  return shouldRender ? <div>{children(resolvedProps)}</div> : null
+  return shouldRender ? (
+    <div {...resolvedProps}>{children({ passThrough, ...resolvedProps })}</div>
+  ) : null
 }
 
 describe('useGrid', () => {
@@ -22,19 +24,31 @@ describe('useGrid', () => {
     children = jest.fn(() => null)
   })
 
-  it('should resolve multi resolution props to a single one', () => {
+  it('should resolve multi resolution margin prop to a single one', () => {
     render(
       <RenderGrid margin={{ default: '0', small: '1' }}>{children}</RenderGrid>
     )
 
     expect(children.mock.calls[0][0]).toMatchObject({
-      style: {
+      style: expect.objectContaining({
         borderBottomWidth: 0,
         borderLeftWidth: 0,
-        borderRightWidth: 0,
-        borderTopWidth: 0,
-      },
+      }),
     })
+  })
+
+  it('should resolve multi resolution direction prop to a single one', () => {
+    const { container } = render(
+      <RenderGrid direction={{ default: 'row', small: 'column' }}>
+        {children}
+      </RenderGrid>
+    )
+    const child = (container || {}).firstChild as any
+    const flexDirection = (window.getComputedStyle(child) as any)[
+      'flex-direction'
+    ]
+
+    expect(flexDirection).toBe('row')
   })
 
   it('should return false as first item when the component should not be rendered', () => {

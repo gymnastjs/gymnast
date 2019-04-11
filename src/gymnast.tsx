@@ -15,13 +15,12 @@ export { default as log } from './log'
 export { default as utils } from './utils'
 
 export {
-  AlignGrid,
+  AlignValues,
   DisplayAliases,
   DisplayValues,
   DirectionValues,
   GridProps,
   GridRef,
-  Justify,
   Size,
   Spacing,
   SpacingProps,

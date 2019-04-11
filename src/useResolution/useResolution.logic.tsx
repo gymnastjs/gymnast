@@ -2,19 +2,6 @@ import { DisplayAliases, DisplayProperties } from '../types'
 import { splitPattern, kebabCase } from '../utils'
 import defaults from '../defaults'
 
-export const sharedResolutionProperties = [
-  'margin',
-  'marginBottom',
-  'marginLeft',
-  'marginRight',
-  'marginTop',
-  'padding',
-  'paddingBottom',
-  'paddingLeft',
-  'paddingRight',
-  'paddingTop',
-]
-
 export type ShouldShow = { [aliasName: string]: boolean }
 
 function isTrue(obj: ShouldShow) {

@@ -2,9 +2,7 @@ export type Noop = (...params: any[]) => null
 
 export type Size = string | number | undefined
 
-export type AlignGrid = 'bottom' | 'center' | 'top' | undefined
-
-export type Justify = 'left' | 'center' | 'right' | undefined
+export type AlignValues = 'start' | 'center' | 'end' | undefined
 
 export type SpacingValues = number | string | undefined
 
@@ -49,17 +47,12 @@ export interface ConfigContextType {
   verticalGutter?: number
 }
 
-export type NonGridProps = {
-  className?: string
-  children?: React.ReactNode
-  style?: React.CSSProperties
-}
-
 export type OneResolutionGrid = NonGridProps & {
-  align?: AlignGrid
-  justify?: Justify
-  size?: Size
+  align?: AlignValues
   base?: number
+  className?: string
+  direction?: DirectionValues
+  justify?: AlignValues
   margin?: Spacing
   marginBottom?: SpacingValues
   marginLeft?: SpacingValues
@@ -71,10 +64,15 @@ export type OneResolutionGrid = NonGridProps & {
   paddingRight?: SpacingValues
   paddingTop?: SpacingValues
   show?: DisplayValues
-  direction?: DirectionValues
+  size?: Size
+  style?: React.CSSProperties
 }
 
-export type GridProps = NonGridProps & {
+export type GridProps = {
+  align?: AlignValues | { [resolution: string]: AlignValues }
+  className?: string
+  direction?: DirectionValues | { [resolution: string]: DirectionValues }
+  justify?: AlignValues | { [resolution: string]: AlignValues }
   margin?: Spacing | { [resolution: string]: Spacing }
   marginBottom?: SpacingValues | { [resolution: string]: SpacingValues }
   marginLeft?: SpacingValues | { [resolution: string]: SpacingValues }
@@ -85,11 +83,9 @@ export type GridProps = NonGridProps & {
   paddingLeft?: SpacingValues | { [resolution: string]: SpacingValues }
   paddingRight?: SpacingValues | { [resolution: string]: SpacingValues }
   paddingTop?: SpacingValues | { [resolution: string]: SpacingValues }
-  align?: AlignGrid | { [resolution: string]: AlignGrid }
-  justify?: Justify | { [resolution: string]: Justify }
-  size?: Size | { [resolution: string]: Size }
   show?: DisplayValues
-  direction?: DirectionValues | { [resolution: string]: DirectionValues }
+  size?: Size | { [resolution: string]: Size }
+  style?: React.CSSProperties
 }
 
 export interface ConfigDefaults extends ConfigContextType {

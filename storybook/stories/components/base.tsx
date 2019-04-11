@@ -2,8 +2,6 @@ import * as React from 'react'
 import { Grid, Col } from 'gymnast'
 import { colors } from '../../shared'
 
-console.log('les colors', colors)
-
 export default () => (
   <>
     <Grid>

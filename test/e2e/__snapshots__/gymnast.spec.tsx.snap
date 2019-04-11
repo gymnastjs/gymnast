@@ -2,7 +2,7 @@
 
 exports[`e2e tests should export the same values from the main export than individual files 1`] = `
 Object {
-  "AlignGrid": undefined,
+  "AlignValues": undefined,
   "Col": Object {
     "$$typeof": Symbol(react.forward_ref),
     "displayName": "Col",
@@ -19,7 +19,6 @@ Object {
   },
   "GridProps": undefined,
   "GridRef": undefined,
-  "Justify": undefined,
   "Size": undefined,
   "Spacing": undefined,
   "SpacingProps": undefined,

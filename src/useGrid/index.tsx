@@ -1,24 +1,42 @@
 import * as React from 'react'
 import { compact } from 'lodash'
 import { combineSpacing, getValues, getValue } from '../utils'
-import { GridProps, NonGridProps } from '../types'
+import { GridProps } from '../types'
 import { styles, getCol } from './grid.styles'
 import useResolution from '../useResolution'
 import Context from '../configProvider/context'
 
-const resolutionProperties = ['align', 'justify', 'size']
+const resolutionProperties = [
+  'align',
+  'direction',
+  'justify',
+  'margin',
+  'marginBottom',
+  'marginLeft',
+  'marginRight',
+  'marginTop',
+  'padding',
+  'paddingBottom',
+  'paddingLeft',
+  'paddingRight',
+  'paddingTop',
+  'size',
+]
 
 export default function useGrid<A extends {}>(
   props: GridProps & A
-): [boolean, NonGridProps] {
+): [
+  boolean,
+  A & { className: string | undefined; style: React.CSSProperties }
+] {
   const [
     shouldRender,
     {
       align,
-      className,
-      justify,
-      size,
       base,
+      className,
+      direction,
+      justify,
       margin,
       marginBottom,
       marginLeft,
@@ -29,14 +47,16 @@ export default function useGrid<A extends {}>(
       paddingLeft,
       paddingRight,
       paddingTop,
+      size,
       style,
       ...restProps
     },
   ] = useResolution(resolutionProperties, props)
+
   const context = React.useContext(Context)
 
   if (!shouldRender) {
-    return [false, { style: {}, className, ...restProps }]
+    return [false, { style: {}, className, ...(restProps as any) }]
   }
   const {
     gutter,
@@ -74,8 +94,9 @@ export default function useGrid<A extends {}>(
         className,
         align && styles[`${align}Align`],
         justify && styles[`${justify}Justify`],
+        direction && styles[`${direction}Direction`],
       ]).join(' '),
-      ...restProps,
+      ...(restProps as any),
     },
   ]
 }

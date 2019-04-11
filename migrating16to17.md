@@ -23,3 +23,7 @@ export default function asGrid(Component, displayName = 'Grid') {
 Values `top` and `left` have been replaced with `start` and `bottom` and `right` have been replaced with `end`.
 
 This is to ensure gymnast API matches flexbox more closely. It also enables defining [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction) as either `row` or `column` through the new `direction` property.
+
+If using typescript the errors should be highlighted. If that's not the case you can look for instances of `align=` and `justify=` to ensure they have the updated values set.
+
+The new exported type `AlignValues` is used for both `align` and `justify` properties, matching the [CSS Spec terminology](https://www.w3.org/TR/css-flexbox-1/#alignment). It replaces former `AlignGrid` and `Justify` types.
