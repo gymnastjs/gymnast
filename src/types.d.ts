@@ -37,11 +37,10 @@ export type DisplayAliases = {
   readonly [displayAlias: string]: DisplayProperties | Array<DisplayProperties>
 }
 
-export interface ConfigContextType {
+export interface GymnastContextType {
   base?: number
   columns?: number
   displayAliases?: DisplayAliases
-  fallbackDisplayKey?: string
   gutter?: number
   spacingAliases?: SpacingAliases
   verticalGutter?: number
@@ -88,9 +87,8 @@ export type GridProps = {
   style?: React.CSSProperties
 }
 
-export interface ConfigDefaults extends ConfigContextType {
+export interface ConfigDefaults extends GymnastContextType {
   gutter: number
-  fallbackDisplayKey: string
   verticalGutter: number
   base: number
 }

@@ -1,8 +1,8 @@
-You can use `ConfigProvider` to set different configuration options. `ConfigProvider` is a pass-through element. So it does not define an additional `Grid` element. This gives you flexibility to decide what the container should be. Note that if you are using React 15.5 or below, you'll have to make sure a single child is passed.
+You can use `GymnastProvider` to set different configuration options. `GymnastProvider` is a pass-through element. So it does not define an additional `Grid` element. This gives you flexibility to decide what the container should be. Note that if you are using React 15.5 or below, you'll have to make sure a single child is passed.
 
 Margins and paddings can be aliased for convenience with the property `spacingAliases`. These values, like all other margins and paddings, are then multiplied by their `base` value (for Grid the default is `24px`).
 
-The default `24px` value for `base` can also be overwritten through the `ConfigProvider`. This example uses ConfigProvider with `base` `8px` and the following `spacingAliases`:
+The default `24px` value for `base` can also be overwritten through the `GymnastProvider`. This example uses GymnastProvider with `base` `8px` and the following `spacingAliases`:
 
 | Alias | Value | Base | Base x Alias Value |
 | ----- | ----- | ---- | ------------------ |
@@ -36,4 +36,4 @@ Changing base to `24` changes the spacing values:
 
 Use the knobs to try different `base` values.
 
-There are other parameters that can be customized through `ConfigProvider`. For more information check the [readme page](https://gymnast.readme.io/docs/configprovider).
+There are other parameters that can be customized through `GymnastProvider`. For more information check the [readme page](https://gymnast.readme.io/docs/configprovider).

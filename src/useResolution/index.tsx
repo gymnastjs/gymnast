@@ -3,13 +3,13 @@ import {
   DisplayAliases,
   GridProps,
   OneResolutionGrid,
-  ConfigContextType,
+  GymnastContextType,
 } from '../types'
 import log from '../log'
 import { getValue } from '../utils'
 import { errors } from '../errors'
 import { register, unregister, supportsMatchMedia } from './mediaQuery'
-import Context from '../configProvider/context'
+import Context from '../gymnastProvider/context'
 import {
   checkShouldShow,
   getMediaQueries,
@@ -18,7 +18,6 @@ import {
   isObject,
   ShouldShow,
 } from './useResolution.logic'
-import defaults from '../defaults'
 
 function anyPropsUseResolutionFormat(
   resolutionKeys: string[],
@@ -34,7 +33,7 @@ function anyPropsUseResolutionFormat(
 type MediaProps = {
   show: string | string[] | undefined
   resolutionKeys: string[]
-  context: ConfigContextType
+  context: GymnastContextType
   props: {}
 }
 
@@ -92,12 +91,10 @@ export default function useResolution<A extends GridProps>(
         props,
         shouldShow: undefined,
         resolutionKeys: [],
-        fallbackDisplayKey: defaults.fallbackDisplayKey,
       }),
     ]
   }
   const context = React.useContext(Context)
-  const fallbackDisplayKey: string = getValue(context, 'fallbackDisplayKey')
 
   const { show, ...restProps } = props
   const shouldShow = useMedia({
@@ -114,7 +111,6 @@ export default function useResolution<A extends GridProps>(
         props,
         shouldShow: undefined,
         resolutionKeys: [],
-        fallbackDisplayKey,
       }),
     ]
   }
@@ -125,7 +121,6 @@ export default function useResolution<A extends GridProps>(
       props,
       shouldShow,
       resolutionKeys,
-      fallbackDisplayKey,
     }),
   ]
 }
