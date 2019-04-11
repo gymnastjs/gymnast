@@ -123,7 +123,6 @@ describe('getSingleResolutionProps', () => {
         small: false,
         large: false,
       },
-      fallbackDisplayKey: 'default',
     })
 
     expect(out).toEqual(props)
@@ -138,7 +137,6 @@ describe('getSingleResolutionProps', () => {
         small: false,
         large: false,
       },
-      fallbackDisplayKey: 'default',
     })
 
     expect(out.show).not.toBeDefined()
@@ -153,7 +151,6 @@ describe('getSingleResolutionProps', () => {
         small: true,
         large: false,
       },
-      fallbackDisplayKey: 'default',
     })
 
     expect(out).toEqual({
@@ -175,7 +172,6 @@ describe('getSingleResolutionProps', () => {
         small: true,
         large: false,
       },
-      fallbackDisplayKey: 'default',
     })
 
     expect(out.c).toEqual(props.c)
@@ -183,9 +179,9 @@ describe('getSingleResolutionProps', () => {
 
   it('should fall back to the default resolution key when none is provided', () => {
     const props = {
-      a: { small: 1, large: 2 },
-      b: { small: 3, large: 4 },
-      c: { small: 5, large: 6 },
+      a: { small: 1, default: 2, large: 7 },
+      b: { small: 3, default: 4, large: 8 },
+      c: { small: 5, default: 6, large: 9 },
     }
     const out = getSingleResolutionProps({
       props,
@@ -194,7 +190,6 @@ describe('getSingleResolutionProps', () => {
         small: false,
         large: false,
       },
-      fallbackDisplayKey: 'large',
     })
 
     expect(out).toEqual({
@@ -202,7 +197,8 @@ describe('getSingleResolutionProps', () => {
       b: 4,
       c: {
         small: 5,
-        large: 6,
+        default: 6,
+        large: 9,
       },
     })
   })

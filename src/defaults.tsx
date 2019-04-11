@@ -1,4 +1,4 @@
-import { ConfigDefaults } from './types.d'
+import { ConfigDefaults } from './types'
 
 const defaults: ConfigDefaults = {
   base: 8, // multiplier (in pixels) that all other size units use
@@ -35,7 +35,6 @@ const defaults: ConfigDefaults = {
       },
     ],
   },
-  fallbackDisplayKey: 'default', // key to use when a display alias is omitted or non matching
   gutter: 3, // value (in base units) that separates columns horizontally
   spacingAliases: {
     // aliases used to indicate spacing values (margin/padding) in base

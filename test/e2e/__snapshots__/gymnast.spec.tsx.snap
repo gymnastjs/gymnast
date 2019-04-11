@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`e2e tests should export the same values from the main export than individual files 1`] = `
+exports[`e2e library export should export the same values from the main export than individual files 1`] = `
 Object {
   "AlignValues": undefined,
   "Col": Object {
@@ -8,7 +8,6 @@ Object {
     "displayName": "Col",
     "render": [Function],
   },
-  "ConfigProvider": [Function],
   "DirectionValues": undefined,
   "DisplayAliases": undefined,
   "DisplayValues": undefined,
@@ -19,6 +18,7 @@ Object {
   },
   "GridProps": undefined,
   "GridRef": undefined,
+  "GymnastProvider": [Function],
   "Size": undefined,
   "Spacing": undefined,
   "SpacingProps": undefined,
@@ -54,7 +54,6 @@ Object {
         },
       ],
     },
-    "fallbackDisplayKey": "default",
     "gutter": 3,
     "spacingAliases": Object {
       "2XL": 6,

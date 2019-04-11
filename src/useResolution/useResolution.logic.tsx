@@ -1,6 +1,7 @@
 import { DisplayAliases, DisplayProperties } from '../types'
 import { splitPattern, kebabCase } from '../utils'
-import defaults from '../defaults'
+
+export const fallbackDisplayKey = 'default'
 
 export type ShouldShow = { [aliasName: string]: boolean }
 
@@ -12,14 +13,10 @@ function getActiveResolutionName(shouldShow: ShouldShow) {
   return Object.keys(shouldShow).find(isTrue(shouldShow))
 }
 
-function extractObjectValue(
-  value: any,
-  shouldShow: ShouldShow = {},
-  fallbackKey: string
-) {
+function extractObjectValue(value: any, shouldShow: ShouldShow = {}) {
   const active = getActiveResolutionName(shouldShow)
 
-  return active && active in value ? value[active] : value[fallbackKey]
+  return active && active in value ? value[active] : value[fallbackDisplayKey]
 }
 
 export function isObject(value: any) {
@@ -34,12 +31,10 @@ export function getSingleResolutionProps({
   props,
   shouldShow,
   resolutionKeys = [],
-  fallbackDisplayKey = defaults.fallbackDisplayKey,
 }: {
   readonly props: any
   readonly shouldShow?: ShouldShow
   readonly resolutionKeys: string[]
-  readonly fallbackDisplayKey: string
 }) {
   const { ...propsCopy } = props
 
@@ -49,7 +44,7 @@ export function getSingleResolutionProps({
     const value = propsCopy[key]
 
     if (isObject(value) && resolutionKeys.includes(key)) {
-      propsCopy[key] = extractObjectValue(value, shouldShow, fallbackDisplayKey)
+      propsCopy[key] = extractObjectValue(value, shouldShow)
     }
   })
 

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { render } from 'react-testing-library'
 import useGrid from './index'
 import { GridProps } from '../types'
+import { getFirstChildCSSProperty } from '../../test/utils'
 
 function RenderGrid({
   children,
@@ -43,12 +44,8 @@ describe('useGrid', () => {
         {children}
       </RenderGrid>
     )
-    const child = (container || {}).firstChild as any
-    const flexDirection = (window.getComputedStyle(child) as any)[
-      'flex-direction'
-    ]
 
-    expect(flexDirection).toBe('row')
+    expect(getFirstChildCSSProperty(container, 'flexDirection')).toBe('row')
   })
 
   it('should return false as first item when the component should not be rendered', () => {

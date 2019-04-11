@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { ConfigProvider, Grid } from 'gymnast'
+import { GymnastProvider, Grid } from 'gymnast'
 import { colors } from '../../shared'
 
 export default () => {
@@ -19,7 +19,7 @@ export default () => {
     XXL: 6,
   }
   return (
-    <ConfigProvider spacingAliases={spacingAliases} base={base}>
+    <GymnastProvider spacingAliases={spacingAliases} base={base}>
       <Grid>
         <Grid style={colors.colors1} margin="L" size={6}>
           <Grid style={colors.colors2}>My margins are set using aliases!</Grid>
@@ -34,6 +34,6 @@ export default () => {
           <Grid style={colors.colors2}>My paddings are set using aliases!</Grid>
         </Grid>
       </Grid>
-    </ConfigProvider>
+    </GymnastProvider>
   )
 }

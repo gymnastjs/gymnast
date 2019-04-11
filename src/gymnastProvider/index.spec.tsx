@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-testing-library'
 import Grid from '../grid'
-import ConfigProvider from './index'
+import GymnastProvider from './index'
 import defaults from '../defaults'
 import Context from './context'
 
@@ -11,7 +11,7 @@ const TesterComponent = ({
   children: (context: React.ContextType<typeof Context>) => null
 }) => children(React.useContext(Context)) || null
 
-describe('ConfigProvider', () => {
+describe('GymnastProvider', () => {
   let spy: jest.Mocked<any>
 
   beforeEach(() => {
@@ -19,14 +19,14 @@ describe('ConfigProvider', () => {
   })
 
   it('should not crash when empty', () => {
-    expect(() => render(<ConfigProvider />)).not.toThrow()
+    expect(() => render(<GymnastProvider />)).not.toThrow()
   })
 
   it('does not add additional DOM Elements', () => {
     const { container } = render(
-      <ConfigProvider>
+      <GymnastProvider>
         <Grid />
-      </ConfigProvider>
+      </GymnastProvider>
     )
     const { container: grid } = render(<Grid />)
 
@@ -35,9 +35,9 @@ describe('ConfigProvider', () => {
 
   it('should return default values if provider did not provide values', () => {
     render(
-      <ConfigProvider>
+      <GymnastProvider>
         <TesterComponent>{spy}</TesterComponent>
-      </ConfigProvider>
+      </GymnastProvider>
     )
 
     expect(spy.mock.calls[0][0]).toEqual(defaults)
@@ -45,9 +45,9 @@ describe('ConfigProvider', () => {
 
   it('should return values received from provider', () => {
     render(
-      <ConfigProvider columns={2}>
+      <GymnastProvider columns={2}>
         <TesterComponent>{spy}</TesterComponent>
-      </ConfigProvider>
+      </GymnastProvider>
     )
 
     expect(spy.mock.calls[0][0].columns).toEqual(2)
@@ -55,13 +55,13 @@ describe('ConfigProvider', () => {
 
   it('should persist values coming from parent provider if child provider did not provide that value', () => {
     render(
-      <ConfigProvider columns={2}>
-        <ConfigProvider base={4}>
-          <ConfigProvider gutter={10}>
+      <GymnastProvider columns={2}>
+        <GymnastProvider base={4}>
+          <GymnastProvider gutter={10}>
             <TesterComponent>{spy}</TesterComponent>
-          </ConfigProvider>
-        </ConfigProvider>
-      </ConfigProvider>
+          </GymnastProvider>
+        </GymnastProvider>
+      </GymnastProvider>
     )
 
     expect(spy.mock.calls[0][0]).toEqual(
@@ -75,15 +75,15 @@ describe('ConfigProvider', () => {
 
   it('should override parent provider value if child provider provided the same value', () => {
     render(
-      <ConfigProvider columns={2}>
-        <ConfigProvider base={4}>
-          <ConfigProvider base={2}>
-            <ConfigProvider columns={9}>
+      <GymnastProvider columns={2}>
+        <GymnastProvider base={4}>
+          <GymnastProvider base={2}>
+            <GymnastProvider columns={9}>
               <TesterComponent>{spy}</TesterComponent>
-            </ConfigProvider>
-          </ConfigProvider>
-        </ConfigProvider>
-      </ConfigProvider>
+            </GymnastProvider>
+          </GymnastProvider>
+        </GymnastProvider>
+      </GymnastProvider>
     )
 
     expect(spy.mock.calls[0][0]).toEqual(
@@ -100,15 +100,15 @@ describe('ConfigProvider', () => {
     const child3 = jest.fn()
 
     render(
-      <ConfigProvider columns={2} base={4}>
-        <ConfigProvider columns={3} base={5}>
+      <GymnastProvider columns={2} base={4}>
+        <GymnastProvider columns={3} base={5}>
           <TesterComponent>{child1}</TesterComponent>
-        </ConfigProvider>
-        <ConfigProvider base={1}>
+        </GymnastProvider>
+        <GymnastProvider base={1}>
           <TesterComponent>{child2}</TesterComponent>
-        </ConfigProvider>
+        </GymnastProvider>
         <TesterComponent>{child3}</TesterComponent>
-      </ConfigProvider>
+      </GymnastProvider>
     )
 
     expect(child1.mock.calls[0][0]).toEqual(

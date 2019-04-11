@@ -4,7 +4,7 @@ import { combineSpacing, getValues, getValue } from '../utils'
 import { GridProps } from '../types'
 import { styles, getCol } from './grid.styles'
 import useResolution from '../useResolution'
-import Context from '../configProvider/context'
+import Context from '../gymnastProvider/context'
 
 const resolutionProperties = [
   'align',

@@ -1,15 +1,15 @@
 import * as React from 'react'
-import { ConfigContextType } from '../types'
+import { GymnastContextType } from '../types'
 import Context from './context'
 import defaults from '../defaults'
 
-type ProviderProps = ConfigContextType & {
+type ProviderProps = GymnastContextType & {
   children?: React.ReactNode
 }
 
-type ProviderState = ConfigContextType
+type ProviderState = GymnastContextType
 
-class ConfigProvider extends React.Component<ProviderProps, ProviderState> {
+class GymnastProvider extends React.Component<ProviderProps, ProviderState> {
   static getDerivedStateFromProps(props: ProviderProps, state: ProviderState) {
     const { children, ...restProps } = props
 
@@ -32,5 +32,5 @@ class ConfigProvider extends React.Component<ProviderProps, ProviderState> {
 export default (props: ProviderProps) => {
   const context = React.useContext(Context)
 
-  return <ConfigProvider {...context} {...props} />
+  return <GymnastProvider {...context} {...props} />
 }

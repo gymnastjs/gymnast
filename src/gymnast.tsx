@@ -2,7 +2,7 @@ import './cxs'
 
 // Components
 export { default as Col } from './col'
-export { default as ConfigProvider } from './configProvider'
+export { default as GymnastProvider } from './gymnastProvider'
 export { default as Grid } from './grid'
 
 // Hooks
