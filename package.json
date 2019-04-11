@@ -146,7 +146,18 @@
     "test:watch": "jest --watch"
   },
   "release": {
+    "branches": [
+      "master",
+      {
+        "name": "next",
+        "prerelease": "prerelease",
+        "channel": "next"
+      }
+    ],
     "verifyConditions": "condition-circle"
+  },
+  "publishConfig": {
+    "tag": "next"
   },
   "peerDependencies": {
     "react": ">=16.8"

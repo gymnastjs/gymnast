@@ -25,7 +25,7 @@ or
 
 [Play with a demo](https://codesandbox.io/s/github/gymnastjs/playground)
 
-If you are migrating from gymnast 16, check the [migration guide](./migrating16to17.md).
+If you are migrating from gymnast 16, check the [migration guide](https://gymnast.readme.io/v17/blog/migration-guide-v16-to-v17).
 
 ## 📺 Examples
 
@@ -34,7 +34,6 @@ We have several examples [on the website](https://gymnastjs.github.io/gymnast). 
 ```jsx
 import * as React from 'react'
 import { Grid } from 'gymnast'
-
 ;<Grid>
   <Grid size={5} margin={2}>
     Content Here
