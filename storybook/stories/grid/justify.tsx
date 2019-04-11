@@ -1,19 +1,19 @@
 import * as React from 'react'
 import { number, select } from '@storybook/addon-knobs'
-import { Grid, Justify } from 'gymnast'
+import { Grid, AlignValues } from 'gymnast'
 import { Box } from '../../shared'
 
-const justifyType: { [name: string]: Justify } = {
+const justifyType: { [name: string]: AlignValues } = {
   Default: undefined,
-  Left: 'left',
+  Start: 'start',
   Center: 'center',
-  Right: 'right',
+  End: 'end',
 }
 
 export default () => {
   const justify = select(
     'Horizontal Align',
-    ['Default', 'Left', 'Center', 'Right'],
+    ['Default', 'Start', 'Center', 'End'],
     'Default'
   )
   const size = number('Width', 12, {
@@ -28,14 +28,14 @@ export default () => {
       <Grid size={size} justify={justifyType[justify]}>
         <Box size={2} type="C" value={justify.toUpperCase()} />
       </Grid>
-      <Grid size={size} justify="left">
-        <Box size={2} type="A" value="LEFT" />
+      <Grid size={size} justify="start">
+        <Box size={2} type="A" value="START" />
       </Grid>
       <Grid size={size} justify="center">
         <Box size={2} type="A" value="CENTER" />
       </Grid>
-      <Grid size={size} justify="right">
-        <Box size={2} type="A" value="RIGHT" />
+      <Grid size={size} justify="end">
+        <Box size={2} type="A" value="END" />
       </Grid>
       <Grid size={size}>
         <Box size={2} type="A" value="DEFAULT" />

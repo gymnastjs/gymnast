@@ -16,7 +16,7 @@ export default () => {
         <Grid margin="0 L/2" size={3}>
           Some Tag
         </Grid>
-        <Grid marginLeft="L/2" size="auto" justify="right">
+        <Grid marginLeft="L/2" size="auto" justify="end">
           x
         </Grid>
       </Grid>
@@ -36,7 +36,7 @@ export default () => {
                 <Grid margin="0 L/2 L 0" size={9}>
                   <h2>Title</h2>
                 </Grid>
-                <Grid size={3} justify="right">
+                <Grid size={3} justify="end">
                   X
                 </Grid>
               </Grid>

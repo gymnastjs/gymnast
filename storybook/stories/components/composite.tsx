@@ -52,7 +52,7 @@ export default () => (
               <Box type="D">Box 3</Box>
             </Grid>
           </Grid>
-          <Grid size={5} style={colors.colors4} padding="L" align="top">
+          <Grid size={5} style={colors.colors4} padding="L" align="start">
             <Grid marginBottom="L">
               <h3>Subtitle here</h3>
             </Grid>
@@ -62,7 +62,7 @@ export default () => (
                   <Col size={6}>
                     <h3>Title</h3>
                   </Col>
-                  <Col size={6} justify="right">
+                  <Col size={6} justify="end">
                     test
                   </Col>
                 </Grid>

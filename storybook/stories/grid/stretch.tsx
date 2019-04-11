@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { times } from 'lodash'
-import { Grid } from 'gymnast'
-import { number, boolean } from '@storybook/addon-knobs'
+import { Grid, DirectionValues } from 'gymnast'
+import { number, boolean, select } from '@storybook/addon-knobs'
 import { Box, getMarginSelect, colors } from '../../shared'
 
 export default () => {
@@ -12,18 +12,28 @@ export default () => {
     max: 10000,
     step: 100,
   })
-  const align = boolean('Stretch Items (align)', true) ? undefined : 'top'
+  const align = boolean('Stretch Items (align)', true) ? undefined : 'start'
   const alignContainer = boolean('Stretch Container (align)', true)
     ? undefined
-    : 'top'
+    : 'start'
   const margin = getMarginSelect()
+  const direction: DirectionValues = select(
+    'Direction',
+    { Column: 'column', Row: 'row' },
+    'row'
+  )
 
   return (
     <Grid style={{ height }} align={alignContainer}>
-      <Grid align={align} style={colors.colors2}>
+      <Grid
+        align={align}
+        justify={align}
+        style={colors.colors2}
+        direction={direction}
+      >
         {times(items, index => (
           <Box
-            size={2}
+            size="auto"
             margin={margin}
             key={index}
             type="A"

@@ -8,7 +8,7 @@ export default () => {
 
   return (
     <>
-      <Grid size={size} align="top">
+      <Grid size={size} align="start">
         <Box size={1} type="B" value="<" />
         <Box size={1} type="B" value="1" />
         <Box size={1} type="A">
