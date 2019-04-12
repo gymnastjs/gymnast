@@ -10,7 +10,7 @@ const defaultProps: OneResolutionGrid = {
 }
 
 const forwardRef = React.forwardRef(function Col(
-  props: GridProps & JSX.IntrinsicElements['div'] & { ref?: GridRef },
+  props: Partial<JSX.IntrinsicElements['div'] & GridProps & { ref: GridRef }>,
   ref: GridRef
 ) {
   const colProps =

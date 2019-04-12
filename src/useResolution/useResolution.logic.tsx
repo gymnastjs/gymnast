@@ -3,7 +3,9 @@ import { splitPattern, kebabCase } from '../utils'
 
 export const fallbackDisplayKey = 'default'
 
-export type ShouldShow = { [aliasName: string]: boolean }
+export type ShouldShow = {
+  [aliasName: string]: boolean
+}
 
 function isTrue(obj: ShouldShow) {
   return (key: string) => obj[key] === true
