@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Grid } from 'gymnast'
 import { colors } from '../../shared'
 
-class Button extends React.Component<object, { counter: number }> {
+class Button extends React.Component<{}, { counter: number }> {
   state = { counter: 0 }
 
   onClick = () => this.setState(({ counter }) => ({ counter: counter + 1 }))

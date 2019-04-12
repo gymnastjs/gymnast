@@ -20,5 +20,6 @@
     }
   },
   "compileOnSave": true,
-  "include": ["src", "test", "types", "storybook"]
+  "include": ["src", "test", "types", "storybook"],
+  "exclude": ["src/flow.js"]
 }

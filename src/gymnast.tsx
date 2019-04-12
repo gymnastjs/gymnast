@@ -7,13 +7,12 @@ export { default as Grid } from './grid'
 
 // Hooks
 export { default as useGrid } from './useGrid'
-export { default as useResolution } from './useResolution'
 
-// Utils
+// Globals
 export { default as defaults } from './defaults'
 export { default as log } from './log'
-export { default as utils } from './utils'
 
+// Types
 export {
   AlignValues,
   DisplayAliases,

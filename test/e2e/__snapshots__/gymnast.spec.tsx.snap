@@ -78,20 +78,5 @@ Object {
     "warn": [Function],
   },
   "useGrid": [Function],
-  "useResolution": [Function],
-  "utils": Object {
-    "accumulateOver": [Function],
-    "combineSpacing": [Function],
-    "getCSS": [Function],
-    "getValue": [Function],
-    "getValues": [Function],
-    "noop": [Function],
-    "parseSpacing": [Function],
-    "replaceSpacingAliases": [Function],
-    "splitPattern": /\\(\\?:\\(\\?:\\\\s\\+\\)\\?,\\(\\?:\\\\s\\+\\)\\?\\|\\\\s\\+\\)/,
-    "times": [Function],
-    "toCXS": [Function],
-    "validateSpacingProps": [Function],
-  },
 }
 `;
