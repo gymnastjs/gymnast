@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import log, { Logger } from './index'
+import log from './index'
+import { Logger } from '../types'
 
 describe('log', () => {
   let logger: Logger

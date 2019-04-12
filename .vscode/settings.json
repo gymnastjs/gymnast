@@ -27,6 +27,7 @@
       "url": "http://json.schemastore.org/tsconfig"
     }
   ],
+  "javascript.validate.enable": false,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "prettier.semi": false,

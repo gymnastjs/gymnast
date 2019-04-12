@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { errors } from '../errors'
+import { Logger } from '../types'
 
-export type Logger = { info: Function; warn: Function; error: Function }
 const logLevels = ['info', 'warn', 'error']
 let logIndex = 0
 

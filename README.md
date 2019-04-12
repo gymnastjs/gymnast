@@ -25,7 +25,9 @@ or
 
 [Play with a demo](https://codesandbox.io/s/github/gymnastjs/playground)
 
-If you are migrating from gymnast 16, check the [migration guide](https://gymnast.readme.io/v17/blog/migration-guide-v16-to-v17).
+To install the development branch of gymnast, run `yarn add gymnast@next`.
+
+If you are migrating from gymnast 16, check the [migration guide](https://gymnast.readme.io/v17/blog/16-to-17-guide).
 
 ## 📺 Examples
 

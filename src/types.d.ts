@@ -94,3 +94,9 @@ export interface ConfigDefaults extends GymnastContextType {
 }
 
 export type GridRef = React.Ref<HTMLDivElement>
+
+export type Logger = {
+  info: (...args: any[]) => void
+  warn: (...args: any[]) => void
+  error: (...args: any[]) => void
+}
