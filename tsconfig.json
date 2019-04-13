@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "target": "esnext",
-    "moduleResolution": "node",
-    "allowJs": true,
-    "checkJs": true,
-    "noEmit": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "isolatedModules": false,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
     "baseUrl": ".",
+    "declaration": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
     "typeRoots": ["node_modules/@types", "types"],
     "paths": {
       "gymnast": ["src/gymnast"],
@@ -20,6 +18,5 @@
     }
   },
   "compileOnSave": true,
-  "include": ["src", "test", "types", "storybook"],
-  "exclude": ["src/flow.js"]
+  "include": ["src", "test", "types", "storybook"]
 }
