@@ -19,7 +19,6 @@ export {
   DisplayValues,
   DirectionValues,
   GridProps,
-  GridRef,
   Size,
   Spacing,
   SpacingProps,

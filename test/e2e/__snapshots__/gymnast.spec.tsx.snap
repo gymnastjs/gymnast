@@ -17,7 +17,6 @@ Object {
     "render": [Function],
   },
   "GridProps": undefined,
-  "GridRef": undefined,
   "GymnastProvider": [Function],
   "Size": undefined,
   "Spacing": undefined,
