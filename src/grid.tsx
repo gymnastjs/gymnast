@@ -1,10 +1,10 @@
 import * as React from 'react'
 import useGrid from './useGrid'
-import { GridProps, GridRef } from './types'
+import { GridDivProps } from './types'
 
-const forwardRef = React.forwardRef(function Grid(
-  props: Partial<JSX.IntrinsicElements['div'] & GridProps & { ref: GridRef }>,
-  ref: GridRef
+const forwardRef = React.forwardRef<HTMLDivElement, GridDivProps>(function Grid(
+  props,
+  ref
 ) {
   const [shouldShow, gridProps] = useGrid(props)
 

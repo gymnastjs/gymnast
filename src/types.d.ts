@@ -87,13 +87,19 @@ export type GridProps = {
   style?: React.CSSProperties
 }
 
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+type DivProps = Omit<
+  JSX.IntrinsicElements['div'],
+  'onAuxClick' | 'onAuxClickCapture'
+>
+
+export type GridDivProps = Partial<DivProps & GridProps>
+
 export interface ConfigDefaults extends GymnastContextType {
   gutter: number
   verticalGutter: number
   base: number
 }
-
-export type GridRef = React.Ref<HTMLDivElement>
 
 export type Logger = {
   info: (...args: any[]) => void

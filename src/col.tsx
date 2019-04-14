@@ -1,6 +1,6 @@
 import * as React from 'react'
 import useGrid from './useGrid'
-import { GridProps, OneResolutionGrid, GridRef } from './types'
+import { GridDivProps, OneResolutionGrid } from './types'
 
 const defaultProps: OneResolutionGrid = {
   marginTop: 0,
@@ -9,9 +9,9 @@ const defaultProps: OneResolutionGrid = {
   marginLeft: 'gutter/2',
 }
 
-const forwardRef = React.forwardRef(function Col(
-  props: Partial<JSX.IntrinsicElements['div'] & GridProps & { ref: GridRef }>,
-  ref: GridRef
+const forwardRef = React.forwardRef<HTMLDivElement, GridDivProps>(function Col(
+  props,
+  ref
 ) {
   const colProps =
     props.margin !== undefined
