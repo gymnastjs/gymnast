@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as gymnast from 'gymnast'
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 import log from '../../src/log'
 import { getFirstChildCSSProperty } from '../utils'
 
