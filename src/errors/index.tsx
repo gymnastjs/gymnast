@@ -1,4 +1,6 @@
-const jsErrors = require('./preval.js')
+import preval from 'preval.macro'
+
+const jsErrors = preval`module.exports = require('./jsErrors')`
 
 export const errorKeys = {
   INVALIDSPACING: 'INVALIDSPACING',

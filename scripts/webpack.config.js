@@ -1,4 +1,3 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
 const { DefinePlugin } = require('webpack')
@@ -21,12 +20,6 @@ module.exports = {
   },
   target: 'web',
   plugins: compact([
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: root,
-      cleanStaleWebpackAssets: true,
-      dry: false,
-      verbose: false,
-    }),
     overrideGlobal(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
