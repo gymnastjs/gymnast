@@ -36,4 +36,4 @@ Changing base to `24` changes the spacing values:
 
 Use the knobs to try different `base` values.
 
-There are other parameters that can be customized through `GymnastProvider`. For more information check the [readme page](https://gymnast.readme.io/docs/configprovider).
+There are other parameters that can be customized through `GymnastProvider`. For more information check the [readme page](https://gymnast.readme.io/docs/gymnastprovider).
