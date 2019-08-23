@@ -1,5 +1,4 @@
 import 'babel-polyfill'
-import '@testing-library/react/cleanup-after-each'
 
 const allListeners: { [media: string]: Array<({}) => void> } = {}
 
