@@ -7,10 +7,11 @@ jobs:
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
       TARGET_URL: https://gymnastjs.github.io/gymnast/branch/$CIRCLE_BRANCH
     docker:
-      - image: circleci/openjdk:8-jdk-node
+      - image: circleci/node:10
     steps:
       # Build, Test and Deploy
       - checkout
+      - run: sudo apt-get update && sudo apt-get install -qq build-essential  libpango1.0-dev  libgif-dev default-jre g++
       - run: yarn
       # Test
       - run:

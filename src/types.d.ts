@@ -41,9 +41,9 @@ export interface GymnastContextType {
   base?: number
   columns?: number
   displayAliases?: DisplayAliases
-  gutter?: number
+  gutter?: number | { [resolution: string]: number }
   spacingAliases?: SpacingAliases
-  verticalGutter?: number
+  verticalGutter?: number | { [resolution: string]: number }
 }
 
 export type OneResolutionGrid = {

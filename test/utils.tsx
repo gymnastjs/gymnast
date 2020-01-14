@@ -10,7 +10,9 @@ export function getFirstChildCSSProperty(
   const styles: any = window.getComputedStyle(el)
 
   if (!property) {
+    /* eslint-disable no-underscore-dangle */
     return styles._values
+    /* eslint-enable no-underscore-dangle */
   }
 
   return styles[property]

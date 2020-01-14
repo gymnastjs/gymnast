@@ -16,7 +16,7 @@
   "plugins": ["react", "typescript"],
   "settings": {
     "react": {
-      "version": "15.5"
+      "version": "16.12"
     },
     "import/resolver": {
       "eslint-import-resolver-typescript": true
@@ -30,6 +30,7 @@
     "no-unused-vars": 0,
     "no-use-before-define": ["error", "nofunc"],
     "import/extensions": [0, "never", { "ts": "never" }],
+    "import/prefer-default-export": 0,
     "import/no-unresolved": [
       2,
       {

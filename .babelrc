@@ -12,8 +12,6 @@
     "@babel/preset-react"
   ],
   "plugins": [
-    "preval",
-    "macros",
     "lodash",
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-proposal-class-properties",

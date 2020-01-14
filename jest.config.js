@@ -3,8 +3,8 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/test/env.tsx'],
   moduleNameMapper: {
     '^.+[.](md|txt)$': '<rootDir>/test/stringStub.js',
-    "^gymnast$": "<rootDir>/src/gymnast.tsx",
-    "^gymnast/(.*)": "<rootDir>/$1"
+    '^gymnast$': '<rootDir>/src/gymnast.tsx',
+    '^gymnast/(.*)': '<rootDir>/$1',
   },
   transform: {
     '^.+[.](j|t)sx?$': 'babel-jest',
@@ -15,5 +15,6 @@ module.exports = {
     '<rootDir>/node_modules',
     '<rootDir>/test/img.spec.tsx',
   ],
+  modulePaths: ['<rootDir>/src'],
   moduleFileExtensions: ['js', 'ts', 'tsx'],
 }
