@@ -58,7 +58,7 @@ You can install it with:
 yarn add gymnast
 ```
 
-`React` and `PropTypes` are [peer dependencies](https://docs.npmjs.com/files/package.json#peerdependencies) of the generated bundle.
+`React` is a [peer dependency](https://docs.npmjs.com/files/package.json#peerdependencies) of the generated bundle.
 
 ## 👥 Contributors
 
