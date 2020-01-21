@@ -44,21 +44,9 @@
         !*** ./src/grid.tsx ***!
         \**********************/
 
-/*!*****************************************!*\
-        !*** ./src/gymnastProvider/context.tsx ***!
-        \*****************************************/
-
-/*! ../defaults */
-
-/*!***************************************!*\
-        !*** ./src/gymnastProvider/index.tsx ***!
-        \***************************************/
-
-/*! ./context */
-
-/*!***********************!*\
-        !*** ./src/index.tsx ***!
-        \***********************/
+/*!*************************!*\
+        !*** ./src/gymnast.tsx ***!
+        \*************************/
 
 /*! exports provided: Col, GymnastProvider, Grid, useGrid, defaults, log, AlignValues, DisplayAliases, DisplayValues, DirectionValues, GridProps, Size, Spacing, SpacingProps, SpacingValues */
 
@@ -75,6 +63,18 @@
 /*! ./log */
 
 /*! ./types.d */
+
+/*!*****************************************!*\
+        !*** ./src/gymnastProvider/context.tsx ***!
+        \*****************************************/
+
+/*! ../defaults */
+
+/*!***************************************!*\
+        !*** ./src/gymnastProvider/index.tsx ***!
+        \***************************************/
+
+/*! ./context */
 
 /*!***************************!*\
         !*** ./src/log/index.tsx ***!
