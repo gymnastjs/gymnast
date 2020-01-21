@@ -134,6 +134,7 @@
     "test:watch": "jest --watch"
   },
   "release": {
+    "branches": "master",
     "verifyConditions": "condition-circle"
   },
   "peerDependencies": {
