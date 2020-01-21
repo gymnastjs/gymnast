@@ -121,7 +121,7 @@
     "contributors:add": "all-contributors add",
     "contributors:gen": "all-contributors generate",
     "format": "prettier --write \"{src,test,types,scripts,storybook}/**/*.{js,tsx,ts}\"",
-    "lint:tsc": "tsc --noEmit",
+    "lint:tsc": "tsc",
     "lint:eslint": "eslint scripts src/{**/,}*.tsx storybook test --fix",
     "lint": "npm-run-all --parallel lint:*",
     "start:storybook": "start-storybook -p 9001 -c storybook",

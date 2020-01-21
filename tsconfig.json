@@ -2,7 +2,9 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
+    "outDir": "dist",
     "declaration": true,
+    "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "isolatedModules": false,
     "jsx": "react",
