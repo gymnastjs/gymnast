@@ -1,4 +1,3 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { resolve } = require('path')
 const { DefinePlugin } = require('webpack')
@@ -16,13 +15,11 @@ module.exports = {
     library: 'gymnast',
     libraryTarget: 'umd',
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+  },
   target: 'web',
   plugins: compact([
-    new CleanWebpackPlugin([root], {
-      root,
-      dry: false,
-      verbose: false,
-    }),
     overrideGlobal(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
@@ -43,7 +40,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },

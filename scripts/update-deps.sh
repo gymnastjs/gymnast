@@ -5,7 +5,8 @@ set -eux
 # Update dependencies
 yarn upgrade --latest
 
-# Update flow definitions
-rm -rf flow-typed
-yarn flow-typed update-cache
-yarn flow-typed install --overwrite --skip
+# Lock dependencies
+yarn add --dev --exact picturebook@alpha nightwatch@0.9.21
+
+# Update TS definitions
+yarn typesync

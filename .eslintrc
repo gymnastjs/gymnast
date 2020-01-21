@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react",
-    "plugin:flowtype/recommended"
-  ],
+  "extends": ["airbnb", "prettier", "prettier/react"],
   "parserOptions": {
     "ecmaVersion": 2016,
     "sourceType": "module",
@@ -18,30 +13,39 @@
     "jest": true,
     "jasmine": true
   },
-  "plugins": ["react", "flowtype"],
+  "plugins": ["react", "typescript"],
   "settings": {
     "react": {
-      "version": "15.5"
+      "version": "16.12"
+    },
+    "import/resolver": {
+      "eslint-import-resolver-typescript": true
     }
   },
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "rules": {
     "no-console": 2,
     "no-plusplus": 0,
-    "jsx-a11y/href-no-hash": 0,
-    "react/prop-types": 0,
-    "react/no-deprecated": 2,
-    "react/jsx-filename-extension": 0,
-    "react/require-default-props": 0,
-    "import/no-extraneous-dependencies": 0,
-    "import/extensions": 0,
+    /* avoids conflicts with TS types, TSC checks for unused vars instead */
+    "no-unused-vars": 0,
+    "no-use-before-define": ["error", "nofunc"],
+    "import/extensions": [0, "never", { "ts": "never" }],
+    "import/prefer-default-export": 0,
     "import/no-unresolved": [
       2,
       {
         "ignore": ["gymnast"]
       }
     ],
-    "no-use-before-define": ["error", "nofunc"],
-    "flowtype/define-flow-type": 2
+    "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/href-no-hash": 0,
+    "react/default-props-match-prop-types": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-deprecated": 2,
+    "react/no-multi-comp": 0,
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/state-in-constructor": 0
   }
 }

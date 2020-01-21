@@ -1,16 +1,20 @@
 module.exports = {
-  collectCoverageFrom: ['src/{,**/}*.js'],
-  setupTestFrameworkScriptFile: '<rootDir>/test/env.js',
+  collectCoverageFrom: ['src/{,**/}*.{j,t}s{x,}'],
+  setupFilesAfterEnv: ['<rootDir>/test/env.tsx'],
   moduleNameMapper: {
     '^.+[.](md|txt)$': '<rootDir>/test/stringStub.js',
+    '^gymnast$': '<rootDir>/src/gymnast.tsx',
+    '^gymnast/(.*)': '<rootDir>/$1',
   },
   transform: {
-    '^.+[.]js$': 'babel-jest',
+    '^.+[.](j|t)sx?$': 'babel-jest',
   },
   transformIgnorePatterns: ['<rootDir>/node_modules'],
   rootDir: __dirname,
   testPathIgnorePatterns: [
     '<rootDir>/node_modules',
-    '<rootDir>/test/img.spec.js',
+    '<rootDir>/test/img.spec.tsx',
   ],
+  modulePaths: ['<rootDir>/src'],
+  moduleFileExtensions: ['js', 'ts', 'tsx'],
 }

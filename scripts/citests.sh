@@ -9,13 +9,13 @@ git checkout $CIRCLE_SHA1
 
 yarn --ignore-engines
 yarn build
-yarn test:size                          # Validate bundle gzipped size
-yarn lint                               # Validate linting
-yarn test --coverage                    # Validate unit tests
+yarn test:size       # Validate bundle gzipped size
+yarn lint            # Validate linting
+yarn test --coverage # Validate unit tests
 cat ./coverage/lcov.info | node_modules/.bin/codeclimate-test-reporter
-cp -R coverage/* $CIRCLE_TEST_REPORTS   # Copy test coverage reports for CircleCI
+cp -R coverage/* $CIRCLE_TEST_REPORTS # Copy test coverage reports for CircleCI
 
-yarn test:image                         # Run image comparison tests
+yarn test:image # Run image comparison tests
 
 # If there are no new images, continue with the build
 if [ -z "$(git status --porcelain)" ]; then

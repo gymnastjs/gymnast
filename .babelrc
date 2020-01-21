@@ -8,12 +8,10 @@
         }
       }
     ],
-    "@babel/preset-react",
-    "@babel/preset-flow"
+    "@babel/preset-typescript",
+    "@babel/preset-react"
   ],
   "plugins": [
-    "preval",
-    "macros",
     "lodash",
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-proposal-class-properties",
@@ -40,7 +38,8 @@
           "module-resolver",
           {
             "alias": {
-              "gymnast": "./src/gymnast"
+              "gymnast": "./src/gymnast",
+              "gymnast/*": "./src/gymnast/*"
             }
           }
         ]

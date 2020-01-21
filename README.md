@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>gymnast</b> is a configurable grid and layout engine for React
+  <b>gymnast</b> is a configurable grid for React
 </p>
 
 <p align="center">
@@ -25,6 +25,10 @@ or
 
 [Play with a demo](https://codesandbox.io/s/github/gymnastjs/playground)
 
+To install the development branch of gymnast, run `yarn add gymnast@next`.
+
+If you are migrating from gymnast 16, check the [migration guide](https://gymnast.readme.io/v17/blog/16-to-17-guide).
+
 ## 📺 Examples
 
 We have several examples [on the website](https://gymnastjs.github.io/gymnast). Here is one of them:
@@ -32,16 +36,17 @@ We have several examples [on the website](https://gymnastjs.github.io/gymnast). 
 ```jsx
 import * as React from 'react'
 import { Grid } from 'gymnast'
-
-<Grid>
-  <Grid size={5} margin={2}>Content Here</Grid>
+;<Grid>
+  <Grid size={5} margin={2}>
+    Content Here
+  </Grid>
   <Grid size={7}>More Content</Grid>
 </Grid>
 ```
 
 This will create 2 columns of sizes 5, 7, respectively.
 
-There are additional components to assist with layout, for a deeper dive into gymnast, check out the [docs](https://gymnast.readme.io), the examples [here](https://gymnastjs.github.io/gymnast) or follow the [Getting Started](https://gymnast.readme.io/docs/getting-started) guide.
+For a deeper dive into gymnast, check out the [docs](https://gymnast.readme.io), the examples [here](https://gymnastjs.github.io/gymnast) or follow the [Getting Started](https://gymnast.readme.io/docs/getting-started) guide.
 
 ## 🖥 Install
 
@@ -55,28 +60,6 @@ yarn add gymnast
 
 `React` and `PropTypes` are [peer dependencies](https://docs.npmjs.com/files/package.json#peerdependencies) of the generated bundle.
 
-## ⚙️ Dev Mode
-
-Ensuring a layout adheres to the grid can be difficult. To simplify this task, gymnast includes an overlay Component to assist you. During development, import and append `<Dev/>` to your pages. It doesn't render anything by default but pressing `CTRL+SHIFT+K` will toggle it.
-
-Learn more about `<Dev />` mode in the [docs](https://gymnast.readme.io/docs/dev).
-
-<img src="/img/devMode.png" width="300px" alt="Dev Example" />
-
-```jsx
-import * as React from 'react'
-import { Dev } from 'gymnast'
-
-export default function MyPage() {
-  return (
-    <>
-      <Dev />
-      {/* other components */}
-    </>
-  )
-}
-```
-
 ## 👥 Contributors
 
 The main purpose of this repository is to continue to evolve gymnast, making it more capable and easier to use. Development of gymnast happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Check the [contributing.md](./CONTRIBUTING.md) to learn how you can take part in improving gymnast.
@@ -87,6 +70,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- prettier-ignore -->
 | [<img src="https://avatars3.githubusercontent.com/u/3877773?v=3" width="100px;"/><br /><sub><b>Oscar Bartra</b></sub>](http://obartra.github.io)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aobartra "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=obartra "Code") [📖](https://github.com/gymnastjs/gymnast/commits?author=obartra "Documentation") [👀](#review-obartra "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/8746094?v=3" width="100px;"/><br /><sub><b>Andrew Hansen</b></sub>](https://github.com/arahansen)<br />[💬](#question-arahansen "Answering Questions") [🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aarahansen "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=arahansen "Code") [👀](#review-arahansen "Reviewed Pull Requests") | [<img src="https://avatars0.githubusercontent.com/u/17904507?v=3" width="100px;"/><br /><sub><b>Stephen Nomura</b></sub>](http://stephennomura.com/)<br />[🎨](#design-snomu "Design") | [<img src="https://avatars3.githubusercontent.com/u/1621615?v=4" width="100px;"/><br /><sub><b>Andrew Toy</b></sub>](https://github.com/andrewmtoy)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Aandrewmtoy "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=andrewmtoy "Code") [💡](#example-andrewmtoy "Examples") | [<img src="https://avatars0.githubusercontent.com/u/7918955?v=4" width="100px;"/><br /><sub><b>colinlgray</b></sub>](https://github.com/colinlgray)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Acolinlgray "Bug reports") | [<img src="https://avatars0.githubusercontent.com/u/4695062?v=4" width="100px;"/><br /><sub><b>Jeffrey Klein</b></sub>](http://jeffwklein)<br />[🐛](https://github.com/gymnastjs/gymnast/issues?q=author%3Ajeffwklein "Bug reports") [💻](https://github.com/gymnastjs/gymnast/commits?author=jeffwklein "Code") [⚠️](https://github.com/gymnastjs/gymnast/commits?author=jeffwklein "Tests") | [<img src="https://avatars2.githubusercontent.com/u/10682341?v=4" width="100px;"/><br /><sub><b>Derrick Nguyen</b></sub>](https://github.com/derrickhnguyen)<br />[💻](https://github.com/gymnastjs/gymnast/commits?author=derrickhnguyen "Code") [⚠️](https://github.com/gymnastjs/gymnast/commits?author=derrickhnguyen "Tests") |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind are welcome!

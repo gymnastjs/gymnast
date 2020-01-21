@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "typeRoots": ["node_modules/@types", "types"],
+    "paths": {
+      "gymnast": ["src/gymnast"],
+      "gymnast/*": ["src/*"]
+    }
+  },
+  "compileOnSave": true,
+  "include": ["src", "test", "types", "storybook"]
+}

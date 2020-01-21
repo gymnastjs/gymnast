@@ -1,0 +1,1 @@
+Through `GymnastProvider` you can specify the number of columns per layout. By using knobs you can switch both, the number of items present on this layout (all of size `1 column`) and the number of columns allowed per row.
