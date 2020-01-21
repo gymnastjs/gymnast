@@ -25,8 +25,6 @@ or
 
 [Play with a demo](https://codesandbox.io/s/github/gymnastjs/playground)
 
-To install the development branch of gymnast, run `yarn add gymnast@next`.
-
 If you are migrating from gymnast 16, check the [migration guide](https://gymnast.readme.io/v17/blog/16-to-17-guide).
 
 ## 📺 Examples
@@ -36,12 +34,17 @@ We have several examples [on the website](https://gymnastjs.github.io/gymnast). 
 ```jsx
 import * as React from 'react'
 import { Grid } from 'gymnast'
-;<Grid>
-  <Grid size={5} margin={2}>
-    Content Here
-  </Grid>
-  <Grid size={7}>More Content</Grid>
-</Grid>
+
+function App() {
+  return (
+    <Grid>
+      <Grid size={5} margin="XL 0">
+        Content Here
+      </Grid>
+      <Grid size={7}>More Content</Grid>
+    </Grid>
+  )
+}
 ```
 
 This will create 2 columns of sizes 5, 7, respectively.
