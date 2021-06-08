@@ -1,0 +1,143 @@
+/*!*********************************************!*\
+        !*** ./node_modules/cxs/dist/monolithic.js ***!
+        \*********************************************/
+
+/*! no static exports found */
+
+/*!****************************************!*\
+        !*** ./node_modules/cxs/monolithic.js ***!
+        \****************************************/
+
+/*! ./dist/monolithic */
+
+/*!****************************************!*\
+        !*** ./node_modules/lodash/compact.js ***!
+        \****************************************/
+
+/*!*********************!*\
+        !*** ./src/col.tsx ***!
+        \*********************/
+
+/*! exports provided: default */
+
+/*! react */
+
+/*! ./useGrid */
+
+/*!*********************!*\
+        !*** ./src/cxs.tsx ***!
+        \*********************/
+
+/*! cxs/monolithic */
+
+/*!**************************!*\
+        !*** ./src/defaults.tsx ***!
+        \**************************/
+
+/*!******************************!*\
+        !*** ./src/errors/index.tsx ***!
+        \******************************/
+
+/*! exports provided: errorKeys, errors */
+
+/*!**********************!*\
+        !*** ./src/grid.tsx ***!
+        \**********************/
+
+/*!*************************!*\
+        !*** ./src/gymnast.tsx ***!
+        \*************************/
+
+/*! exports provided: Col, GymnastProvider, Grid, useGrid, defaults, log, AlignValues, DisplayAliases, DisplayValues, DirectionValues, GridProps, Size, Spacing, SpacingProps, SpacingValues */
+
+/*! ./cxs */
+
+/*! ./col */
+
+/*! ./gymnastProvider */
+
+/*! ./grid */
+
+/*! ./defaults */
+
+/*! ./log */
+
+/*! ./types.d */
+
+/*!*****************************************!*\
+        !*** ./src/gymnastProvider/context.tsx ***!
+        \*****************************************/
+
+/*! ../defaults */
+
+/*!***************************************!*\
+        !*** ./src/gymnastProvider/index.tsx ***!
+        \***************************************/
+
+/*! ./context */
+
+/*!***************************!*\
+        !*** ./src/log/index.tsx ***!
+        \***************************/
+
+/*! ../errors */
+
+/*!************************!*\
+        !*** ./src/types.d.ts ***!
+        \************************/
+
+/*!*************************************!*\
+        !*** ./src/useGrid/grid.styles.tsx ***!
+        \*************************************/
+
+/*! exports provided: styles, getCol */
+
+/*! ../cxs */
+
+/*! ../utils/index */
+
+/*!*******************************!*\
+        !*** ./src/useGrid/index.tsx ***!
+        \*******************************/
+
+/*! lodash/compact */
+
+/*! ../utils */
+
+/*! ./grid.styles */
+
+/*! ../useResolution */
+
+/*! ../gymnastProvider/context */
+
+/*!*************************************!*\
+        !*** ./src/useResolution/index.tsx ***!
+        \*************************************/
+
+/*! ../log */
+
+/*! ./mediaQuery */
+
+/*! ./useResolution.logic */
+
+/*!******************************************!*\
+        !*** ./src/useResolution/mediaQuery.tsx ***!
+        \******************************************/
+
+/*! exports provided: supportsMatchMedia, register, unregister */
+
+/*!***************************************************!*\
+        !*** ./src/useResolution/useResolution.logic.tsx ***!
+        \***************************************************/
+
+/*! exports provided: fallbackDisplayKey, isObject, hasTrueValues, getSingleResolutionProps, getMediaQuery, getMediaQueries, checkShouldShow */
+
+/*!*****************************!*\
+        !*** ./src/utils/index.tsx ***!
+        \*****************************/
+
+/*! exports provided: splitPattern, noop, times, kebabCase, validateSpacingProps, getCSS, parseSpacing, replaceSpacingAliases, combineSpacing, toCXS, getValue, getValues, accumulateOver, default */
+
+/*!************************!*\
+        !*** external "react" ***!
+        \************************/
